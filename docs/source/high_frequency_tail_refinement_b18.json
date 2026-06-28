@@ -1,0 +1,93 @@
+{
+  "model": "endpoint_b",
+  "kind": "tilde3",
+  "omega": 0.49,
+  "L": 2.0,
+  "constraintRule": "ratio",
+  "constraintRatio": 0.625,
+  "rows": [
+    {
+      "basis": 18,
+      "constraints": 11,
+      "denseConstraints": 29,
+      "rank": 11,
+      "nullity": 7,
+      "positiveModes": 7,
+      "gamma2": 1.2168287311611528e-06,
+      "lambdaMin": 1.0052047510858405e-08,
+      "lambdaMax": 0.1543899343461991,
+      "denseTraceMax": 0.0007117329819028323,
+      "denseTraceRms": 0.00010038862941381584,
+      "tailCutoff10": 6,
+      "tailCutoff05": 6,
+      "tails": [
+        {
+          "start": 0,
+          "constant": 1.2168287311611528e-06,
+          "fraction": 1.0
+        },
+        {
+          "start": 1,
+          "constant": 1.216237149816795e-06,
+          "fraction": 0.9995138335172336
+        },
+        {
+          "start": 2,
+          "constant": 9.886543757548067e-07,
+          "fraction": 0.8124844116816573
+        },
+        {
+          "start": 3,
+          "constant": 4.220224553356778e-07,
+          "fraction": 0.34682157359398064
+        },
+        {
+          "start": 4,
+          "constant": 2.3285696718079682e-07,
+          "fraction": 0.19136379772903145
+        },
+        {
+          "start": 5,
+          "constant": 1.2469211617274513e-07,
+          "fraction": 0.10247302104196562
+        },
+        {
+          "start": 6,
+          "constant": 1.6676793923936883e-08,
+          "fraction": 0.013705128336362617
+        },
+        {
+          "start": 7,
+          "constant": 0.0,
+          "fraction": 0.0
+        }
+      ],
+      "topModes": [
+        {
+          "mode": 2,
+          "lambda": 3.1062737654730576e-06,
+          "singleConstant": 5.685121473575895e-07,
+          "singleFrac": 0.4672080242673836
+        },
+        {
+          "mode": 1,
+          "lambda": 4.7601143218701266e-08,
+          "singleConstant": 2.317790233513927e-07,
+          "singleFrac": 0.19047793449963885
+        },
+        {
+          "mode": 3,
+          "lambda": 5.2434921951632374e-05,
+          "singleConstant": 1.897201167366206e-07,
+          "singleFrac": 0.15591357425919844
+        },
+        {
+          "mode": 4,
+          "lambda": 0.0007494212978072687,
+          "singleConstant": 1.086963430563178e-07,
+          "singleFrac": 0.08932756128514065
+        }
+      ]
+    }
+  ]
+}

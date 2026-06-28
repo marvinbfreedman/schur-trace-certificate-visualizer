@@ -1,0 +1,43 @@
+{
+  "theoremName": "finite Schur Douglas repair algebra theorem",
+  "proofClass": "symbolic identity",
+  "ambientSpace": "finite-dimensional Hilbert space H=N direct-sum U",
+  "hypotheses": [
+    "K is Hermitian with blocks A=N*K*N, B=N*K*U, C=U*K*U.",
+    "A is positive semidefinite.",
+    "The Douglas range condition (I-AA^+)B=0 holds.",
+    "M is positive semidefinite and M >= B^*A^+B-C on U.",
+    "D realizes M on the finite trace image R(U)."
+  ],
+  "statuses": {
+    "finiteSchurDouglasAlgebraStatus": {
+      "label": "finite Schur/Douglas algebra",
+      "closed": true,
+      "status": "closed",
+      "reason": "Completing the square with A^+ gives <n+u,K(n+u)>+<u,Mu> = <A^{1/2}n+A^{+1/2}Bu, A^{1/2}n+A^{+1/2}Bu> + <u,(C+M-B^*A^+B)u>."
+    },
+    "finiteRangeConditionStatus": {
+      "label": "finite Douglas range condition",
+      "closed": true,
+      "status": "closed",
+      "reason": "The nullspace component of B is exactly the obstruction; (I-AA^+)B=0 is equivalent to the cross term being in Range(A^{1/2})."
+    },
+    "finiteTraceRealizationStatus": {
+      "label": "finite trace-side realization",
+      "closed": true,
+      "status": "closed",
+      "reason": "On the finite trace image, choosing D so that R_U^*DR_U=M transfers the U-block repair to the original finite form."
+    }
+  },
+  "finiteSchurDouglasAlgebraClosed": true,
+  "finiteRangeCriterionClosed": true,
+  "finiteTraceRepairRealizationClosed": true,
+  "formalProof": [
+    "Use the Moore-Penrose inverse A^+ on closure Range(A).",
+    "Apply the Douglas range condition to write B=A A^+ B.",
+    "Complete the square in the N variable.",
+    "Use C+M-B^*A^+B>=0 to obtain nonnegativity.",
+    "Pull M back through the trace image realization D."
+  ],
+  "remainingAnalyticGap": null
+}

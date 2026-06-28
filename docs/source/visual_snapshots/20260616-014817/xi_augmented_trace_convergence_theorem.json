@@ -1,0 +1,35 @@
+{
+  "theoremName": "augmented Xi trace convergence theorem",
+  "proofClass": "analytic proof",
+  "mellinSymbolicJson": "xi_mellin_boundary_symbolic_theorem.json",
+  "greenClosureJson": "continuum_green_lift_closure_theorem.json",
+  "topology": {
+    "kernelTopology": "compact-open / finite Gram entrywise topology",
+    "traceTopology": "strong graph-dual convergence in X_aug",
+    "formDomain": "completed Volterra trace-fiber graph domain"
+  },
+  "statuses": {
+    "uniformCompactConvergenceStatus": {
+      "label": "uniform compact theta-tail convergence",
+      "closed": true,
+      "status": "closed",
+      "reason": "On every compact shifted z-strip, theta mode n is bounded by C_M n^4 exp(-pi n^2/2).  The Weierstrass M-test gives Xi_N->Xi uniformly and hence K_{E,N}->K_E entrywise on finite compact evaluation sets."
+    },
+    "closedTraceConvergenceStatus": {
+      "label": "closed augmented trace convergence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The symbolic Mellin theorem gives explicit Lambda_N and Mu_N rows.  Super-exponential theta-tail bounds give uniform row convergence on compact source/evaluation windows.  Since the Green-lift theorem closes the graph/form domain containing the trace coordinates, R_aug,N converges strongly to R_aug in the transported graph-dual topology."
+    }
+  },
+  "uniformCompactConvergenceClosed": true,
+  "closedTraceConvergenceClosed": true,
+  "entrywiseConvergenceToFullDeBrangesKernel": true,
+  "augmentedTraceGraphConvergenceClosed": true,
+  "proof": [
+    "Use the theta super-exponential bound for uniform compact convergence.",
+    "Apply the symbolic Mellin boundary formulas to Lambda_N and Mu_N.",
+    "Use the closed Green-lift graph norm to pass row convergence to the completed trace domain."
+  ],
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,106 @@
+{
+  "inputs": [
+    "trace_weighted_frame_basis_scan.json",
+    "trace_weighted_frame_basis22.json"
+  ],
+  "rowCount": 5,
+  "basisRange": [
+    18,
+    22
+  ],
+  "traceCounts": [
+    9,
+    13
+  ],
+  "activeDims": [
+    2,
+    3
+  ],
+  "allFrameMinsPositive": true,
+  "observedGammaFloor": 293.11515100909196,
+  "observedGammaFloorRow": {
+    "basis": 18,
+    "traceCount": 13,
+    "activeDim": 2,
+    "frameRank": 2,
+    "frameMin": 293.11515100909196,
+    "frameMax": 2823933.1576196826,
+    "densityOperator": 955.1857996305145,
+    "maxRowDensityL2": 337.65662101012276,
+    "frameBoundOperator": 7898.23327574731,
+    "rangeResidualRelative": 2.875685188887882e-69,
+    "sourceFile": "trace_weighted_frame_basis_scan.json"
+  },
+  "maxRangeResidualRelative": 1.0928484787969945e-63,
+  "rangeResidualWithinTolerance": true,
+  "maxDensityOperator": 1687.1679168172072,
+  "maxRowDensityL2": 594.7121799054543,
+  "rows": [
+    {
+      "basis": 18,
+      "traceCount": 9,
+      "activeDim": 2,
+      "frameRank": 2,
+      "frameMin": 299.0945772131482,
+      "frameMax": 2834244.7046404444,
+      "densityOperator": 946.7270450343125,
+      "maxRowDensityL2": 334.66544339575955,
+      "frameBoundOperator": 7818.884913848875,
+      "rangeResidualRelative": 1.5314595026687327e-69,
+      "sourceFile": "trace_weighted_frame_basis_scan.json"
+    },
+    {
+      "basis": 18,
+      "traceCount": 13,
+      "activeDim": 2,
+      "frameRank": 2,
+      "frameMin": 293.11515100909196,
+      "frameMax": 2823933.1576196826,
+      "densityOperator": 955.1857996305145,
+      "maxRowDensityL2": 337.65662101012276,
+      "frameBoundOperator": 7898.23327574731,
+      "rangeResidualRelative": 2.875685188887882e-69,
+      "sourceFile": "trace_weighted_frame_basis_scan.json"
+    },
+    {
+      "basis": 20,
+      "traceCount": 9,
+      "activeDim": 2,
+      "frameRank": 2,
+      "frameMin": 7525.005560646706,
+      "frameMax": 3926243825.301133,
+      "densityOperator": 1683.3147955881116,
+      "maxRowDensityL2": 593.3539236716426,
+      "frameBoundOperator": 6829.242790948105,
+      "rangeResidualRelative": 5.037264219254215e-67,
+      "sourceFile": "trace_weighted_frame_basis_scan.json"
+    },
+    {
+      "basis": 20,
+      "traceCount": 13,
+      "activeDim": 2,
+      "frameRank": 2,
+      "frameMin": 7489.958402092469,
+      "frameMax": 3852080954.7772365,
+      "densityOperator": 1687.1679168172072,
+      "maxRowDensityL2": 594.7121799054543,
+      "frameBoundOperator": 6845.201906314824,
+      "rangeResidualRelative": 1.9848898048612863e-67,
+      "sourceFile": "trace_weighted_frame_basis_scan.json"
+    },
+    {
+      "basis": 22,
+      "traceCount": 9,
+      "activeDim": 3,
+      "frameRank": 3,
+      "frameMin": 2874982.3289243444,
+      "frameMax": 1664014566934922.8,
+      "densityOperator": 317.0151504613038,
+      "maxRowDensityL2": 111.54097096526432,
+      "frameBoundOperator": 1128.5509672506985,
+      "rangeResidualRelative": 1.0928484787969945e-63,
+      "sourceFile": "trace_weighted_frame_basis22.json"
+    }
+  ],
+  "conditionalConclusion": "If the Galerkin active spaces converge in the A graph norm, trace quadrature converges uniformly on the limiting active space, and liminf gamma_N is bounded below by the observed positive frame floor (or any positive analytic lower bound), then the continuum observability inequality holds with that lower bound."
+}

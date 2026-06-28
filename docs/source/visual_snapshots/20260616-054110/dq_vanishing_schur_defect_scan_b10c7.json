@@ -1,0 +1,93 @@
+{
+  "theoremName": "finite D_q vanishing Schur-defect scan",
+  "meaning": "Finite Galerkin test of D_q=0, equivalent to Gamma^*Gamma-C<=0 in quotient Schur coordinates.",
+  "parameters": {
+    "models": [
+      "full"
+    ],
+    "kind": "tilde3",
+    "omega": 0.49,
+    "L": 8.0,
+    "basisValues": [
+      10
+    ],
+    "constraintValues": [
+      7
+    ],
+    "zeroTol": 1e-20,
+    "dps": 50
+  },
+  "rows": [
+    {
+      "model": "full",
+      "kind": "tilde3",
+      "omega": 0.49,
+      "L": 8.0,
+      "basis": 10,
+      "quad": 20,
+      "laguerre": 24,
+      "constraints": 7,
+      "traceRank": 7,
+      "traceNullity": 3,
+      "kMin": 9.483203522472047e-06,
+      "aMin": 0.000790686258662669,
+      "bNorm": 0.07021508919632527,
+      "rangeResidual": 0.0,
+      "normalizedRangeResidual": 0.0,
+      "gamma2Min": -1.0961778289768156e-52,
+      "gamma2Max": 0.1502211066517431,
+      "schurDefectMin": -0.11678742475495175,
+      "schurDefectMax": -1.2820029525476991e-05,
+      "dqPositivePartNorm": 0.0,
+      "finiteDqZero": true,
+      "lowSchurDefect": [
+        -0.11678742475495175,
+        -0.0269232430740388,
+        -0.005229405351116928,
+        -0.0012958305420736462,
+        -0.00033892354154069616,
+        -8.484500248596337e-05
+      ]
+    }
+  ],
+  "worstRow": {
+    "model": "full",
+    "kind": "tilde3",
+    "omega": 0.49,
+    "L": 8.0,
+    "basis": 10,
+    "quad": 20,
+    "laguerre": 24,
+    "constraints": 7,
+    "traceRank": 7,
+    "traceNullity": 3,
+    "kMin": 9.483203522472047e-06,
+    "aMin": 0.000790686258662669,
+    "bNorm": 0.07021508919632527,
+    "rangeResidual": 0.0,
+    "normalizedRangeResidual": 0.0,
+    "gamma2Min": -1.0961778289768156e-52,
+    "gamma2Max": 0.1502211066517431,
+    "schurDefectMin": -0.11678742475495175,
+    "schurDefectMax": -1.2820029525476991e-05,
+    "dqPositivePartNorm": 0.0,
+    "finiteDqZero": true,
+    "lowSchurDefect": [
+      -0.11678742475495175,
+      -0.0269232430740388,
+      -0.005229405351116928,
+      -0.0012958305420736462,
+      -0.00033892354154069616,
+      -8.484500248596337e-05
+    ]
+  },
+  "allFiniteDqZero": true,
+  "finiteEvidenceStatus": {
+    "label": "finite Schur defect nonpositive",
+    "closed": true,
+    "status": "closed",
+    "reason": "Every scanned finite quotient has lambda_max(Gamma^*Gamma-C) below the zero tolerance."
+  },
+  "continuumTheoremClosed": false,
+  "nextProofTarget": "Promote the finite inequality Gamma^*Gamma-C<=0 to the completed trace range X_R, or identify a stable positive Schur-defect mode and abandon the repair-free route."
+}

@@ -1,0 +1,646 @@
+{
+  "s0": 0.2825,
+  "omega": 0.49,
+  "L": 2.0,
+  "basis": 18,
+  "constraints": 11,
+  "rank": 11,
+  "nullity": 7,
+  "positiveModes": 7,
+  "lambdaMin": 1.0052047510858405e-08,
+  "lambdaMax": 0.1543899343461991,
+  "sobolevOrders": [
+    2,
+    4,
+    6,
+    8,
+    10
+  ],
+  "topOnly": false,
+  "rows": [
+    {
+      "cutoff": 2,
+      "t": 0.08,
+      "pStarH": -107.41740043918624,
+      "aTailConstant": 849084278.4214405,
+      "aTailNorm": 29139.050746746034,
+      "graph": [
+        {
+          "order": 2,
+          "constant": 8039.1554114919645,
+          "norm": 89.66133732825963,
+          "graphMaxEigenvalue": 10512.600706563386
+        },
+        {
+          "order": 4,
+          "constant": 6585.300861279051,
+          "norm": 81.14986667443793,
+          "graphMaxEigenvalue": 188076230.23261517
+        },
+        {
+          "order": 6,
+          "constant": 752.6093082876845,
+          "norm": 27.433725745652637,
+          "graphMaxEigenvalue": 494774857579.89606
+        },
+        {
+          "order": 8,
+          "constant": 4.639943266814614,
+          "norm": 2.15405275395349,
+          "graphMaxEigenvalue": 2.0428013774563732e+16
+        },
+        {
+          "order": 10,
+          "constant": 0.0012334866064688942,
+          "norm": 0.03512102798138025,
+          "graphMaxEigenvalue": 9.344926617950357e+19
+        }
+      ]
+    },
+    {
+      "cutoff": 2,
+      "t": 0.24,
+      "pStarH": -103.17821238401122,
+      "aTailConstant": 784002128.2634394,
+      "aTailNorm": 28000.03800467848,
+      "graph": [
+        {
+          "order": 2,
+          "constant": 7422.497679937387,
+          "norm": 86.153918540815,
+          "graphMaxEigenvalue": 10512.600706563386
+        },
+        {
+          "order": 4,
+          "constant": 6080.124023280494,
+          "norm": 77.97515003692199,
+          "graphMaxEigenvalue": 188076230.23261517
+        },
+        {
+          "order": 6,
+          "constant": 694.875623965096,
+          "norm": 26.360493621423252,
+          "graphMaxEigenvalue": 494774857579.89606
+        },
+        {
+          "order": 8,
+          "constant": 4.284007314506805,
+          "norm": 2.0697843642531475,
+          "graphMaxEigenvalue": 2.0428013774563732e+16
+        },
+        {
+          "order": 10,
+          "constant": 0.0011388646908639776,
+          "norm": 0.03374706936704249,
+          "graphMaxEigenvalue": 9.344926617950357e+19
+        }
+      ]
+    },
+    {
+      "cutoff": 2,
+      "t": 0.4,
+      "pStarH": -97.7202960613159,
+      "aTailConstant": 703881136.7137218,
+      "aTailNorm": 26530.758313959323,
+      "graph": [
+        {
+          "order": 2,
+          "constant": 6663.472819037892,
+          "norm": 81.63009750721784,
+          "graphMaxEigenvalue": 10512.600706563386
+        },
+        {
+          "order": 4,
+          "constant": 5458.330279163947,
+          "norm": 73.88051352802,
+          "graphMaxEigenvalue": 188076230.23261517
+        },
+        {
+          "order": 6,
+          "constant": 623.8141380886917,
+          "norm": 24.97627150094048,
+          "graphMaxEigenvalue": 494774857579.89606
+        },
+        {
+          "order": 8,
+          "constant": 3.845903538170336,
+          "norm": 1.9610975340788985,
+          "graphMaxEigenvalue": 2.0428013774563732e+16
+        },
+        {
+          "order": 10,
+          "constant": 0.0010223991771871836,
+          "norm": 0.03197497736022941,
+          "graphMaxEigenvalue": 9.344926617950357e+19
+        }
+      ]
+    },
+    {
+      "cutoff": 2,
+      "t": 0.52,
+      "pStarH": -93.05497666991295,
+      "aTailConstant": 638743502.2365733,
+      "aTailNorm": 25273.375362950104,
+      "graph": [
+        {
+          "order": 2,
+          "constant": 6046.462678432845,
+          "norm": 77.75900384156708,
+          "graphMaxEigenvalue": 10512.600706563386
+        },
+        {
+          "order": 4,
+          "constant": 4952.882093086845,
+          "norm": 70.3767155605236,
+          "graphMaxEigenvalue": 188076230.23261517
+        },
+        {
+          "order": 6,
+          "constant": 566.048976735844,
+          "norm": 23.79178380735341,
+          "graphMaxEigenvalue": 494774857579.89606
+        },
+        {
+          "order": 8,
+          "constant": 3.4897733494206093,
+          "norm": 1.868093506605226,
+          "graphMaxEigenvalue": 2.0428013774563732e+16
+        },
+        {
+          "order": 10,
+          "constant": 0.000927725453758084,
+          "norm": 0.03045858587915867,
+          "graphMaxEigenvalue": 9.344926617950357e+19
+        }
+      ]
+    },
+    {
+      "cutoff": 3,
+      "t": 0.08,
+      "pStarH": -107.41740043918624,
+      "aTailConstant": 33378845.56648827,
+      "aTailNorm": 5777.4428224334915,
+      "graph": [
+        {
+          "order": 2,
+          "constant": 8009.659960361554,
+          "norm": 89.49670362846642,
+          "graphMaxEigenvalue": 727.2197756156257
+        },
+        {
+          "order": 4,
+          "constant": 5481.622570845227,
+          "norm": 74.03798059675336,
+          "graphMaxEigenvalue": 17463523.836091187
+        },
+        {
+          "order": 6,
+          "constant": 603.9466010009255,
+          "norm": 24.57532504364745,
+          "graphMaxEigenvalue": 199911229510.42352
+        },
+        {
+          "order": 8,
+          "constant": 4.193297320944738,
+          "norm": 2.0477542139975533,
+          "graphMaxEigenvalue": 1060159823330756.4
+        },
+        {
+          "order": 10,
+          "constant": 0.000607162947191415,
+          "norm": 0.024640676678845796,
+          "graphMaxEigenvalue": 2.427699448849502e+18
+        }
+      ]
+    },
+    {
+      "cutoff": 3,
+      "t": 0.24,
+      "pStarH": -103.17821238401122,
+      "aTailConstant": 30817166.251643367,
+      "aTailNorm": 5551.321126690777,
+      "graph": [
+        {
+          "order": 2,
+          "constant": 7395.266137748636,
+          "norm": 85.99573325315993,
+          "graphMaxEigenvalue": 727.2197756156257
+        },
+        {
+          "order": 4,
+          "constant": 5061.126189900179,
+          "norm": 71.1415925454314,
+          "graphMaxEigenvalue": 17463523.836091187
+        },
+        {
+          "order": 6,
+          "constant": 557.6170983866244,
+          "norm": 23.613917472258272,
+          "graphMaxEigenvalue": 199911229510.42352
+        },
+        {
+          "order": 8,
+          "constant": 3.8716242956924813,
+          "norm": 1.9676443519326559,
+          "graphMaxEigenvalue": 1060159823330756.4
+        },
+        {
+          "order": 10,
+          "constant": 0.0005605867553840643,
+          "norm": 0.02367671335688432,
+          "graphMaxEigenvalue": 2.427699448849502e+18
+        }
+      ]
+    },
+    {
+      "cutoff": 3,
+      "t": 0.4,
+      "pStarH": -97.7202960613159,
+      "aTailConstant": 27664611.425777584,
+      "aTailNorm": 5259.7159073259445,
+      "graph": [
+        {
+          "order": 2,
+          "constant": 6639.027418358885,
+          "norm": 81.48022716192492,
+          "graphMaxEigenvalue": 727.2197756156257
+        },
+        {
+          "order": 4,
+          "constant": 4543.5563220312115,
+          "norm": 67.40590717460312,
+          "graphMaxEigenvalue": 17463523.836091187
+        },
+        {
+          "order": 6,
+          "constant": 500.59242623275145,
+          "norm": 22.37392290665076,
+          "graphMaxEigenvalue": 199911229510.42352
+        },
+        {
+          "order": 8,
+          "constant": 3.4756929993323933,
+          "norm": 1.8643210558625338,
+          "graphMaxEigenvalue": 1060159823330756.4
+        },
+        {
+          "order": 10,
+          "constant": 0.000503258432434946,
+          "norm": 0.022433422218532464,
+          "graphMaxEigenvalue": 2.427699448849502e+18
+        }
+      ]
+    },
+    {
+      "cutoff": 3,
+      "t": 0.52,
+      "pStarH": -93.05497666991295,
+      "aTailConstant": 25102192.214638192,
+      "aTailNorm": 5010.208799505086,
+      "graph": [
+        {
+          "order": 2,
+          "constant": 6024.281889781472,
+          "norm": 77.61624758890031,
+          "graphMaxEigenvalue": 727.2197756156257
+        },
+        {
+          "order": 4,
+          "constant": 4122.8279057379505,
+          "norm": 64.20925093581103,
+          "graphMaxEigenvalue": 17463523.836091187
+        },
+        {
+          "order": 6,
+          "constant": 454.23763773494795,
+          "norm": 21.312851468889562,
+          "graphMaxEigenvalue": 199911229510.42352
+        },
+        {
+          "order": 8,
+          "constant": 3.153844374248369,
+          "norm": 1.7759066344401018,
+          "graphMaxEigenvalue": 1060159823330756.4
+        },
+        {
+          "order": 10,
+          "constant": 0.0004566568018907095,
+          "norm": 0.021369529753616702,
+          "graphMaxEigenvalue": 2.427699448849502e+18
+        }
+      ]
+    },
+    {
+      "cutoff": 4,
+      "t": 0.08,
+      "pStarH": -107.41740043918624,
+      "aTailConstant": 3644990.976385982,
+      "aTailNorm": 1909.1859459953034,
+      "graph": [
+        {
+          "order": 2,
+          "constant": 7588.668323295472,
+          "norm": 87.11296300376581,
+          "graphMaxEigenvalue": 79.9660270704284
+        },
+        {
+          "order": 4,
+          "constant": 4793.716578479153,
+          "norm": 69.2366707639756,
+          "graphMaxEigenvalue": 1834259.6837467002
+        },
+        {
+          "order": 6,
+          "constant": 473.48396619818413,
+          "norm": 21.759686721048723,
+          "graphMaxEigenvalue": 30828402806.116608
+        },
+        {
+          "order": 8,
+          "constant": 0.6391900256896913,
+          "norm": 0.7994936057841184,
+          "graphMaxEigenvalue": 186431833411906.12
+        },
+        {
+          "order": 10,
+          "constant": 0.00020276242910134522,
+          "norm": 0.014239467303988068,
+          "graphMaxEigenvalue": 4.095730737596581e+17
+        }
+      ]
+    },
+    {
+      "cutoff": 4,
+      "t": 0.24,
+      "pStarH": -103.17821238401122,
+      "aTailConstant": 3365903.758581601,
+      "aTailNorm": 1834.6399533918368,
+      "graph": [
+        {
+          "order": 2,
+          "constant": 7006.548236640878,
+          "norm": 83.70512670464622,
+          "graphMaxEigenvalue": 79.9660270704284
+        },
+        {
+          "order": 4,
+          "constant": 4425.983025982905,
+          "norm": 66.52806194368588,
+          "graphMaxEigenvalue": 1834259.6837467002
+        },
+        {
+          "order": 6,
+          "constant": 437.16235902309404,
+          "norm": 20.908427942413415,
+          "graphMaxEigenvalue": 30828402806.116608
+        },
+        {
+          "order": 8,
+          "constant": 0.5901569099499726,
+          "norm": 0.7682167076743207,
+          "graphMaxEigenvalue": 186431833411906.12
+        },
+        {
+          "order": 10,
+          "constant": 0.00018720826669972262,
+          "norm": 0.013682407196824783,
+          "graphMaxEigenvalue": 4.095730737596581e+17
+        }
+      ]
+    },
+    {
+      "cutoff": 4,
+      "t": 0.4,
+      "pStarH": -97.7202960613159,
+      "aTailConstant": 3022222.2764930455,
+      "aTailNorm": 1738.4539903296393,
+      "graph": [
+        {
+          "order": 2,
+          "constant": 6290.040475704347,
+          "norm": 79.30977541075468,
+          "graphMaxEigenvalue": 79.9660270704284
+        },
+        {
+          "order": 4,
+          "constant": 3973.358642359851,
+          "norm": 63.03458290779634,
+          "graphMaxEigenvalue": 1834259.6837467002
+        },
+        {
+          "order": 6,
+          "constant": 392.4559243313772,
+          "norm": 19.81050035540186,
+          "graphMaxEigenvalue": 30828402806.116608
+        },
+        {
+          "order": 8,
+          "constant": 0.529804510320304,
+          "norm": 0.7278767136818597,
+          "graphMaxEigenvalue": 186431833411906.12
+        },
+        {
+          "order": 10,
+          "constant": 0.000168063425265569,
+          "norm": 0.012963927848671829,
+          "graphMaxEigenvalue": 4.095730737596581e+17
+        }
+      ]
+    },
+    {
+      "cutoff": 4,
+      "t": 0.52,
+      "pStarH": -93.05497666991295,
+      "aTailConstant": 2742755.1360025937,
+      "aTailNorm": 1656.1265458903174,
+      "graph": [
+        {
+          "order": 2,
+          "constant": 5707.595592914804,
+          "norm": 75.54863064883972,
+          "graphMaxEigenvalue": 79.9660270704284
+        },
+        {
+          "order": 4,
+          "constant": 3605.4250541610777,
+          "norm": 60.04519176554504,
+          "graphMaxEigenvalue": 1834259.6837467002
+        },
+        {
+          "order": 6,
+          "constant": 356.11451863867853,
+          "norm": 18.870996757953154,
+          "graphMaxEigenvalue": 30828402806.116608
+        },
+        {
+          "order": 8,
+          "constant": 0.48074465347966305,
+          "norm": 0.6933575221194784,
+          "graphMaxEigenvalue": 186431833411906.12
+        },
+        {
+          "order": 10,
+          "constant": 0.00015250077454640016,
+          "norm": 0.012349120395655723,
+          "graphMaxEigenvalue": 4.095730737596581e+17
+        }
+      ]
+    },
+    {
+      "cutoff": 5,
+      "t": 0.08,
+      "pStarH": -107.41740043918624,
+      "aTailConstant": 942896.8343663871,
+      "aTailNorm": 971.0287505354243,
+      "graph": [
+        {
+          "order": 2,
+          "constant": 7289.589071641454,
+          "norm": 85.37909036550725,
+          "graphMaxEigenvalue": 7.0883677766522615
+        },
+        {
+          "order": 4,
+          "constant": 2460.1900373046437,
+          "norm": 49.60030279448548,
+          "graphMaxEigenvalue": 36033.75715871551
+        },
+        {
+          "order": 6,
+          "constant": 0.09618287831898366,
+          "norm": 0.31013364589960835,
+          "graphMaxEigenvalue": 106305106.77111344
+        },
+        {
+          "order": 8,
+          "constant": 3.850115253466272e-06,
+          "norm": 0.0019621710561177567,
+          "graphMaxEigenvalue": 168205121902.11288
+        },
+        {
+          "order": 10,
+          "constant": 2.332906784208821e-08,
+          "norm": 0.00015273856042953988,
+          "graphMaxEigenvalue": 3175514295834240.0
+        }
+      ]
+    },
+    {
+      "cutoff": 5,
+      "t": 0.24,
+      "pStarH": -103.17821238401122,
+      "aTailConstant": 870599.6499403851,
+      "aTailNorm": 933.0592960473547,
+      "graph": [
+        {
+          "order": 2,
+          "constant": 6730.404822611275,
+          "norm": 82.03904450084286,
+          "graphMaxEigenvalue": 7.0883677766522615
+        },
+        {
+          "order": 4,
+          "constant": 2271.4673735997358,
+          "norm": 47.659913696939654,
+          "graphMaxEigenvalue": 36033.75715871551
+        },
+        {
+          "order": 6,
+          "constant": 0.08880477625171967,
+          "norm": 0.29800130243292505,
+          "graphMaxEigenvalue": 106305106.77111344
+        },
+        {
+          "order": 8,
+          "constant": 3.5547486707207443e-06,
+          "norm": 0.0018854041133721821,
+          "graphMaxEigenvalue": 168205121902.11288
+        },
+        {
+          "order": 10,
+          "constant": 2.1539406242057077e-08,
+          "norm": 0.0001467630956407539,
+          "graphMaxEigenvalue": 3175514295834240.0
+        }
+      ]
+    },
+    {
+      "cutoff": 5,
+      "t": 0.4,
+      "pStarH": -97.7202960613159,
+      "aTailConstant": 781601.9439347319,
+      "aTailNorm": 884.082543620635,
+      "graph": [
+        {
+          "order": 2,
+          "constant": 6042.129892459203,
+          "norm": 77.7311384996978,
+          "graphMaxEigenvalue": 7.0883677766522615
+        },
+        {
+          "order": 4,
+          "constant": 2039.1775591750231,
+          "norm": 45.157253671752706,
+          "graphMaxEigenvalue": 36033.75715871551
+        },
+        {
+          "order": 6,
+          "constant": 0.07972337268727127,
+          "norm": 0.2823532763884125,
+          "graphMaxEigenvalue": 106305106.77111344
+        },
+        {
+          "order": 8,
+          "constant": 3.1912028896571945e-06,
+          "norm": 0.0017863938226654263,
+          "graphMaxEigenvalue": 168205121902.11288
+        },
+        {
+          "order": 10,
+          "constant": 1.9336620145451665e-08,
+          "norm": 0.00013905617622188404,
+          "graphMaxEigenvalue": 3175514295834240.0
+        }
+      ]
+    },
+    {
+      "cutoff": 5,
+      "t": 0.52,
+      "pStarH": -93.05497666991295,
+      "aTailConstant": 709250.7160768703,
+      "aTailNorm": 842.1702417426482,
+      "graph": [
+        {
+          "order": 2,
+          "constant": 5482.636432535205,
+          "norm": 74.0448271828303,
+          "graphMaxEigenvalue": 7.0883677766522615
+        },
+        {
+          "order": 4,
+          "constant": 1850.3512019733714,
+          "norm": 43.015708781483205,
+          "graphMaxEigenvalue": 36033.75715871551
+        },
+        {
+          "order": 6,
+          "constant": 0.07234115388732794,
+          "norm": 0.2689631087850673,
+          "graphMaxEigenvalue": 106305106.77111344
+        },
+        {
+          "order": 8,
+          "constant": 2.895683543953228e-06,
+          "norm": 0.0017016708095143516,
+          "graphMaxEigenvalue": 168205121902.11288
+        },
+        {
+          "order": 10,
+          "constant": 1.754600768903523e-08,
+          "norm": 0.00013246134413116617,
+          "graphMaxEigenvalue": 3175514295834240.0
+        }
+      ]
+    }
+  ]
+}

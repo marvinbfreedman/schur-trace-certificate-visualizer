@@ -1,0 +1,55 @@
+{
+  "theoremName": "uniform omega Weyl/KLM bridge",
+  "omegaRange": "|omega| < 1/2",
+  "originalWeylJson": "original_weyl_kernel_positivity_theorem.json",
+  "klmWeylJson": "klm_weyl_hbar1_equivalence_theorem.json",
+  "statuses": {
+    "uniformOmegaBranchTransportStatus": {
+      "label": "uniform omega branch transport",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the original Weyl kernel positivity theorem: branch weights are positive and uniformly controlled for |omega|<1/2."
+    },
+    "omegaIndependentHardyMultiplierStatus": {
+      "label": "omega-independent Hardy multiplier contraction",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the original Weyl kernel positivity theorem: the Green-lift contraction for kappa=(1-s-u)/(1+s+u) is closed."
+    },
+    "uniformPrimitiveEndpointCompatibilityStatus": {
+      "label": "uniform primitive endpoint compatibility",
+      "closed": true,
+      "status": "closed",
+      "reason": "Primitive endpoint compatibility is now carried by the quotient-to-original Weyl lift inside the original Weyl kernel positivity theorem."
+    },
+    "originalWeylPositivityStatus": {
+      "label": "original Weyl kernel positivity for |omega|<1/2",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the original Weyl kernel positivity theorem, which combines uniform branch transport, Green-lift contraction, and the quotient-to-original Weyl lift."
+    },
+    "klmPositiveTypeStatus": {
+      "label": "KLM quantum positive-type condition for Q_omega",
+      "closed": true,
+      "status": "closed",
+      "reason": "In the hbar=1 convention, the standalone KLM/Weyl equivalence theorem identifies original Weyl positivity with KLM quantum positive type of Q_omega."
+    },
+    "deBrangesRhBridgeStatus": {
+      "label": "de Branges/RH bridge",
+      "closed": false,
+      "status": "open",
+      "reason": "This theorem packages Weyl positivity as KLM positive type.  It does not prove that this KLM/Weyl positivity is equivalent to, or implies, the desired de Branges/RH-side statement.",
+      "blocker": "Use the separate augmented closed-cone KLM-to-de Branges bridge and endpoint passage theorem."
+    }
+  },
+  "proof": [
+    "Import original coordinate Weyl kernel positivity for every |omega|<1/2.",
+    "Import the hbar=1 KLM/Weyl equivalence theorem.",
+    "Package K_omega positivity as KLM quantum positive type of Q_omega."
+  ],
+  "uniformOmegaCoverageClosed": true,
+  "originalWeylKernelPositivityClosed": true,
+  "originalKlmConditionClosed": true,
+  "rhFacingChainClosed": false,
+  "nextProofTarget": "Use the separate augmented closed-cone KLM-to-de Branges bridge and endpoint passage theorem."
+}

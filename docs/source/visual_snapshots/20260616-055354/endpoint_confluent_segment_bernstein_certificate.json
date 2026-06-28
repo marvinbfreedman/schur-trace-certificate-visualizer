@@ -1,0 +1,1377 @@
+{
+  "theoremName": "endpoint confluent segment Bernstein quadrature certificate",
+  "traceTailJson": "endpoint_confluent_trace_tail_certificate.json",
+  "coefficientJson": "endpoint_coefficient_interval_enclosure.json",
+  "kind": "kb",
+  "quadratureOrder": 200,
+  "segmentCount": 48,
+  "segmentStep": "0.25",
+  "segments": [
+    [
+      0.0,
+      0.25
+    ],
+    [
+      0.25,
+      0.5
+    ],
+    [
+      0.5,
+      0.75
+    ],
+    [
+      0.75,
+      1.0
+    ],
+    [
+      1.0,
+      1.25
+    ],
+    [
+      1.25,
+      1.5
+    ],
+    [
+      1.5,
+      1.75
+    ],
+    [
+      1.75,
+      2.0
+    ],
+    [
+      2.0,
+      2.25
+    ],
+    [
+      2.25,
+      2.5
+    ],
+    [
+      2.5,
+      2.75
+    ],
+    [
+      2.75,
+      3.0
+    ],
+    [
+      3.0,
+      3.25
+    ],
+    [
+      3.25,
+      3.5
+    ],
+    [
+      3.5,
+      3.75
+    ],
+    [
+      3.75,
+      4.0
+    ],
+    [
+      4.0,
+      4.25
+    ],
+    [
+      4.25,
+      4.5
+    ],
+    [
+      4.5,
+      4.75
+    ],
+    [
+      4.75,
+      5.0
+    ],
+    [
+      5.0,
+      5.25
+    ],
+    [
+      5.25,
+      5.5
+    ],
+    [
+      5.5,
+      5.75
+    ],
+    [
+      5.75,
+      6.0
+    ],
+    [
+      6.0,
+      6.25
+    ],
+    [
+      6.25,
+      6.5
+    ],
+    [
+      6.5,
+      6.75
+    ],
+    [
+      6.75,
+      7.0
+    ],
+    [
+      7.0,
+      7.25
+    ],
+    [
+      7.25,
+      7.5
+    ],
+    [
+      7.5,
+      7.75
+    ],
+    [
+      7.75,
+      8.0
+    ],
+    [
+      8.0,
+      8.25
+    ],
+    [
+      8.25,
+      8.5
+    ],
+    [
+      8.5,
+      8.75
+    ],
+    [
+      8.75,
+      9.0
+    ],
+    [
+      9.0,
+      9.25
+    ],
+    [
+      9.25,
+      9.5
+    ],
+    [
+      9.5,
+      9.75
+    ],
+    [
+      9.75,
+      10.0
+    ],
+    [
+      10.0,
+      10.25
+    ],
+    [
+      10.25,
+      10.5
+    ],
+    [
+      10.5,
+      10.75
+    ],
+    [
+      10.75,
+      11.0
+    ],
+    [
+      11.0,
+      11.25
+    ],
+    [
+      11.25,
+      11.5
+    ],
+    [
+      11.5,
+      11.75
+    ],
+    [
+      11.75,
+      12.0
+    ]
+  ],
+  "collocationNodeCount": 21,
+  "neededTraceQ": 8,
+  "bigOrder": 17,
+  "arcs": 64,
+  "evalMode": "majorant",
+  "arcMode": "rect",
+  "rhoCap": 2.0,
+  "maxImag": 0.2,
+  "ivDps": 50,
+  "totalEntryQuadratureError": 2.0029657523172474e-61,
+  "totalEntryQuadratureErrorText": "2.002965752317247e-61",
+  "totalRowQuadratureError": 2.043025041180725e-61,
+  "totalFrobeniusQuadratureError": 2.003736122772779e-61,
+  "centerTaylorAmplificationMax": 1081575.0,
+  "centerTaylorEntryErrorBound": 2.1663576835625268e-55,
+  "centerTaylorEntryErrorBoundText": "2.166357683562527e-55",
+  "centerTaylorSpectralErrorBound": 1.9497219152062742e-54,
+  "eigenAmplificationBudget": 1e+60,
+  "traceDerivativeErrorBudget": 1949721.915206274,
+  "traceDerivativeErrorBudgetText": "1949721.915206274",
+  "traceDerivativeRefinementRadius": 5.72755256198824e-42,
+  "traceDerivativeRefinementRadiusText": "5.72755256198824e-42",
+  "traceRadiusTarget": 1e-25,
+  "coefficientRadiusScale": 7.750705213816742e-51,
+  "quadratureBelowTraceRefinementRadius": true,
+  "quadratureBelowTraceTarget": true,
+  "quadratureBelowCoefficientScale": true,
+  "centerTaylorSpectralBelowTraceTarget": true,
+  "centerTaylorSpectralBelowCoefficientScale": true,
+  "declaredEigenAmplifiedBelowTraceRefinementRadius": false,
+  "declaredEigenAmplifiedBelowTraceTarget": false,
+  "declaredEigenAmplifiedBelowCoefficientScale": false,
+  "segmentRows": [
+    {
+      "segmentIndex": 0,
+      "segment": [
+        0.0,
+        0.25
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 1.0497465237768645e+59,
+      "mrhoRow": 1.0707414405300636e+59,
+      "mrhoFrobenius": 1.0501502719222233e+59,
+      "entryErrorBound": 8.130479801238926e-62,
+      "entryErrorBoundText": "8.130479801238927e-62",
+      "rowErrorBound": 8.293089290981673e-62,
+      "frobeniusErrorBound": 8.13360690484563e-62,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": -0.03502297255156666
+        }
+      }
+    },
+    {
+      "segmentIndex": 1,
+      "segment": [
+        0.25,
+        0.5
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 9.748128029985842e+58,
+      "mrhoRow": 9.943090463157548e+58,
+      "mrhoFrobenius": 9.75187730519055e+58,
+      "entryErrorBound": 7.5501043587678365e-62,
+      "entryErrorBoundText": "7.550104358767837e-62",
+      "rowErrorBound": 7.701106347247857e-62,
+      "frobeniusErrorBound": 7.553008241336696e-62,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 0.23905502976357276
+        }
+      }
+    },
+    {
+      "segmentIndex": 2,
+      "segment": [
+        0.5,
+        0.75
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 4.4973596158628344e+58,
+      "mrhoRow": 4.5873067493903843e+58,
+      "mrhoFrobenius": 4.499089367343585e+58,
+      "entryErrorBound": 3.4832876973120497e-62,
+      "entryErrorBoundText": "3.48328769731205e-62",
+      "rowErrorBound": 3.552953405724582e-62,
+      "frobeniusErrorBound": 3.48462742163186e-62,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 0.5909781508912134
+        }
+      }
+    },
+    {
+      "segmentIndex": 3,
+      "segment": [
+        0.75,
+        1.0
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 1.0163280470018138e+58,
+      "mrhoRow": 1.0366545946563598e+58,
+      "mrhoFrobenius": 1.0167189419033532e+58,
+      "entryErrorBound": 7.871647555307644e-63,
+      "entryErrorBoundText": "7.871647555307644e-63",
+      "rowErrorBound": 8.029080403515232e-63,
+      "frobeniusErrorBound": 7.874675108178158e-63,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 1.0428563831391828
+        }
+      }
+    },
+    {
+      "segmentIndex": 4,
+      "segment": [
+        1.0,
+        1.25
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 9.819161627931893e+56,
+      "mrhoRow": 1.0015544732133964e+57,
+      "mrhoFrobenius": 9.822938223716168e+56,
+      "entryErrorBound": 7.605121186185544e-64,
+      "entryErrorBoundText": "7.605121186185543e-64",
+      "rowErrorBound": 7.757223510494734e-64,
+      "frobeniusErrorBound": 7.608046229045512e-64,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 1.6230795185935016
+        }
+      }
+    },
+    {
+      "segmentIndex": 5,
+      "segment": [
+        1.25,
+        1.5
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 3.288983624884131e+55,
+      "mrhoRow": 3.3547632543880575e+55,
+      "mrhoFrobenius": 3.290248616964204e+55,
+      "entryErrorBound": 2.5473782787596176e-65,
+      "entryErrorBoundText": "2.547378278759618e-65",
+      "rowErrorBound": 2.5983258110353557e-65,
+      "frobeniusErrorBound": 2.5483580383799455e-65,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 2.3681007718671014
+        }
+      }
+    },
+    {
+      "segmentIndex": 6,
+      "segment": [
+        1.5,
+        1.75
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 2.877274737939803e+53,
+      "mrhoRow": 2.9348201950867216e+53,
+      "mrhoFrobenius": 2.878381380650989e+53,
+      "entryErrorBound": 2.2285021773891743e-67,
+      "entryErrorBoundText": "2.228502177389174e-67",
+      "rowErrorBound": 2.2730721918058674e-67,
+      "frobeniusErrorBound": 2.2293592925123676e-67,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 3.3247269970429585
+        }
+      }
+    },
+    {
+      "segmentIndex": 7,
+      "segment": [
+        1.75,
+        2.0
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 4.538861045604286e+50,
+      "mrhoRow": 4.6296382071841565e+50,
+      "mrhoFrobenius": 4.5406067591529345e+50,
+      "entryErrorBound": 3.5154313175663364e-70,
+      "entryErrorBoundText": "3.515431317566336e-70",
+      "rowErrorBound": 3.5857398979637715e-70,
+      "frobeniusErrorBound": 3.516783404801164e-70,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 4.55305938443881
+        }
+      }
+    },
+    {
+      "segmentIndex": 8,
+      "segment": [
+        2.0,
+        2.25
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 7.995376333279114e+46,
+      "mrhoRow": 8.155283755428742e+46,
+      "mrhoFrobenius": 7.998451474080145e+46,
+      "entryErrorBound": 6.192565948886857e-74,
+      "entryErrorBoundText": "6.192565948886857e-74",
+      "rowErrorBound": 6.316417186915067e-74,
+      "frobeniusErrorBound": 6.194947701967476e-74,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 6.130269389995816
+        }
+      }
+    },
+    {
+      "segmentIndex": 9,
+      "segment": [
+        2.25,
+        2.5
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 8.483695874423097e+41,
+      "mrhoRow": 8.653369681012264e+41,
+      "mrhoFrobenius": 8.486958830191468e+41,
+      "entryErrorBound": 6.570778410266281e-79,
+      "entryErrorBoundText": "6.57077841026628e-79",
+      "rowErrorBound": 6.702193892578064e-79,
+      "frobeniusErrorBound": 6.573305629491701e-79,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 8.155447124585226
+        }
+      }
+    },
+    {
+      "segmentIndex": 10,
+      "segment": [
+        2.5,
+        2.75
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 2.4520310464124092e+35,
+      "mrhoRow": 2.501071635287571e+35,
+      "mrhoFrobenius": 2.4529741340673114e+35,
+      "entryErrorBound": 1.899143121059242e-85,
+      "entryErrorBoundText": "1.899143121059242e-85",
+      "rowErrorBound": 1.937125958654722e-85,
+      "frobeniusErrorBound": 1.8998735597847155e-85,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 10.755826809108129
+        }
+      }
+    },
+    {
+      "segmentIndex": 11,
+      "segment": [
+        2.75,
+        3.0
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 6.965035254462699e+26,
+      "mrhoRow": 7.104335868503698e+26,
+      "mrhoFrobenius": 6.967714110741448e+26,
+      "entryErrorBound": 5.394547842614542e-94,
+      "entryErrorBoundText": "5.394547842614542e-94",
+      "rowErrorBound": 5.502438728948286e-94,
+      "frobeniusErrorBound": 5.396622666047768e-94,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 14.094780417073988
+        }
+      }
+    },
+    {
+      "segmentIndex": 12,
+      "segment": [
+        3.0,
+        3.25
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 5251894121758198.0,
+      "mrhoRow": 5356931935523485.0,
+      "mrhoFrobenius": 5253914078445526.0,
+      "entryErrorBound": 4.067688542713092e-105,
+      "entryErrorBoundText": "4.067688542713092e-105",
+      "rowErrorBound": 4.1490422603812715e-105,
+      "frobeniusErrorBound": 4.06925303630023e-105,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 18.382081714843387
+        }
+      }
+    },
+    {
+      "segmentIndex": 13,
+      "segment": [
+        3.25,
+        3.5
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 19.58947871366036,
+      "mrhoRow": 19.981268030411385,
+      "mrhoFrobenius": 19.59701311884175,
+      "entryErrorBound": 1.5172411376526786e-119,
+      "entryErrorBoundText": "1.517241137652679e-119",
+      "rowErrorBound": 1.547585940460166e-119,
+      "frobeniusErrorBound": 1.5178246911844518e-119,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 23.887085550177634
+        }
+      }
+    },
+    {
+      "segmentIndex": 14,
+      "segment": [
+        3.5,
+        3.75
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 4.183951132119689e-18,
+      "mrhoRow": 4.267630093276544e-18,
+      "mrhoFrobenius": 4.18556034179491e-18,
+      "entryErrorBound": 3.240547065274272e-138,
+      "entryErrorBoundText": "3.240547065274272e-138",
+      "rowErrorBound": 3.305357958958077e-138,
+      "frobeniusErrorBound": 3.241793427749784e-138,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 30.955650393710307
+        }
+      }
+    },
+    {
+      "segmentIndex": 15,
+      "segment": [
+        3.75,
+        4.0
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 3.21578455483978e-42,
+      "mrhoRow": 3.280100100161093e-42,
+      "mrhoFrobenius": 3.217021389791237e-42,
+      "entryErrorBound": 2.4906842533939693e-162,
+      "entryErrorBoundText": "2.490684253393969e-162",
+      "rowErrorBound": 2.540497825556058e-162,
+      "frobeniusErrorBound": 2.491642204800572e-162,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 40.03186731231167
+        }
+      }
+    },
+    {
+      "segmentIndex": 16,
+      "segment": [
+        4.0,
+        4.25
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 2.5524869305647235e-73,
+      "mrhoRow": 2.6035352483150942e-73,
+      "mrhoFrobenius": 2.5534686050205485e-73,
+      "entryErrorBound": 1.9769480500127003e-193,
+      "entryErrorBoundText": "1.9769480500127e-193",
+      "rowErrorBound": 2.0164859105300492e-193,
+      "frobeniusErrorBound": 1.9777083749248287e-193,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 51.68596052316711
+        }
+      }
+    },
+    {
+      "segmentIndex": 17,
+      "segment": [
+        4.25,
+        4.5
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 2.193299254702798e-113,
+      "mrhoRow": 2.2371494537428665e-113,
+      "mrhoFrobenius": 2.1941422543094332e-113,
+      "entryErrorBound": 1.6987505921214183e-233,
+      "entryErrorBoundText": "1.698750592121418e-233",
+      "rowErrorBound": 1.7327133773748387e-233,
+      "frobeniusErrorBound": 1.6994035108135935e-233,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 66.65011241435354
+        }
+      }
+    },
+    {
+      "segmentIndex": 18,
+      "segment": [
+        4.5,
+        4.75
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 5.839968422675625e-165,
+      "mrhoRow": 5.95637175796317e-165,
+      "mrhoFrobenius": 5.842199951344677e-165,
+      "entryErrorBound": 4.52316289932579e-285,
+      "entryErrorBoundText": "4.52316289932579e-285",
+      "rowErrorBound": 4.6133194223449986e-285,
+      "frobeniusErrorBound": 4.524891259302095e-285,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 85.86446378181287
+        }
+      }
+    },
+    {
+      "segmentIndex": 19,
+      "segment": [
+        4.75,
+        5.0
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 2.5296844015110193e-231,
+      "mrhoRow": 2.5792324436518733e-231,
+      "mrhoFrobenius": 2.5306187675329279e-231,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "1.959287072082402e-351",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 110.5361793027995
+        }
+      }
+    },
+    {
+      "segmentIndex": 20,
+      "segment": [
+        5.0,
+        5.25
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 9.6083323e-317,
+      "mrhoRow": 9.785764e-317,
+      "mrhoFrobenius": 9.6114953e-317,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "7.44182991866728e-437",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 142.21528910503577
+        }
+      }
+    },
+    {
+      "segmentIndex": 21,
+      "segment": [
+        5.25,
+        5.5
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "6.449051406975202e-547",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 182.89207126914891
+        }
+      }
+    },
+    {
+      "segmentIndex": 22,
+      "segment": [
+        5.5,
+        5.75
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "7.543268646543431e-689",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 235.1220934369408
+        }
+      }
+    },
+    {
+      "segmentIndex": 23,
+      "segment": [
+        5.75,
+        6.0
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "6.929593466543313e-872",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 302.1867694145497
+        }
+      }
+    },
+    {
+      "segmentIndex": 24,
+      "segment": [
+        6.0,
+        6.25
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "9.866199913562506e-1108",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 388.2995179317274
+        }
+      }
+    },
+    {
+      "segmentIndex": 25,
+      "segment": [
+        6.25,
+        6.5
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "2.312920478680979e-1410",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 498.87047572862315
+        }
+      }
+    },
+    {
+      "segmentIndex": 26,
+      "segment": [
+        6.5,
+        6.75
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "1.932652796559843e-1797",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 640.8463958873449
+        }
+      }
+    },
+    {
+      "segmentIndex": 27,
+      "segment": [
+        6.75,
+        7.0
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "2.16676054028741e-2294",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 823.1470859287732
+        }
+      }
+    },
+    {
+      "segmentIndex": 28,
+      "segment": [
+        7.0,
+        7.25
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "1.249025891364167e-2932",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 1057.225805421681
+        }
+      }
+    },
+    {
+      "segmentIndex": 29,
+      "segment": [
+        7.25,
+        7.5
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "2.739066368434347e-3752",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 1357.7888307562946
+        }
+      }
+    },
+    {
+      "segmentIndex": 30,
+      "segment": [
+        7.5,
+        7.75
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "6.78050904205053e-4805",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 1743.7193946025002
+        }
+      }
+    },
+    {
+      "segmentIndex": 31,
+      "segment": [
+        7.75,
+        8.0
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "1.302380952167007e-6156",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 2239.2640476576594
+        }
+      }
+    },
+    {
+      "segmentIndex": 32,
+      "segment": [
+        8.0,
+        8.25
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "2.154201629159692e-7892",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 2875.5559772841925
+        }
+      }
+    },
+    {
+      "segmentIndex": 33,
+      "segment": [
+        8.25,
+        8.5
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "2.528412758363691e-10121",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 3692.5709873579485
+        }
+      }
+    },
+    {
+      "segmentIndex": 34,
+      "segment": [
+        8.5,
+        8.75
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "1.80596610198643e-12983",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 4741.639026108042
+        }
+      }
+    },
+    {
+      "segmentIndex": 35,
+      "segment": [
+        8.75,
+        9.0
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "1.110819147590834e-16658",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 6088.669051697924
+        }
+      }
+    },
+    {
+      "segmentIndex": 36,
+      "segment": [
+        9.0,
+        9.25
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "6.897031956599671e-21378",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 7818.28984159687
+        }
+      }
+    },
+    {
+      "segmentIndex": 37,
+      "segment": [
+        9.25,
+        9.5
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "1.301675406856283e-27437",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 10039.166897058645
+        }
+      }
+    },
+    {
+      "segmentIndex": 38,
+      "segment": [
+        9.5,
+        9.75
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "1.356187072769459e-35218",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 12890.829483610196
+        }
+      }
+    },
+    {
+      "segmentIndex": 39,
+      "segment": [
+        9.75,
+        10.0
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "1.026088726934029e-45209",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 16552.43672455989
+        }
+      }
+    },
+    {
+      "segmentIndex": 40,
+      "segment": [
+        10.0,
+        10.25
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "1.036468413126228e-58038",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 21254.03348786718
+        }
+      }
+    },
+    {
+      "segmentIndex": 41,
+      "segment": [
+        10.25,
+        10.5
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "1.309292176274232e-74511",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 27291.003230970553
+        }
+      }
+    },
+    {
+      "segmentIndex": 42,
+      "segment": [
+        10.5,
+        10.75
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "2.262946266322881e-95663",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 35042.62582089015
+        }
+      }
+    },
+    {
+      "segmentIndex": 43,
+      "segment": [
+        10.75,
+        11.0
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "6.490781880872702e-122823",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 44995.90624691777
+        }
+      }
+    },
+    {
+      "segmentIndex": 44,
+      "segment": [
+        11.0,
+        11.25
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "1.342021351128177e-157696",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 57776.17129335783
+        }
+      }
+    },
+    {
+      "segmentIndex": 45,
+      "segment": [
+        11.25,
+        11.5
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "1.943985388150494e-202475",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 74186.35644499281
+        }
+      }
+    },
+    {
+      "segmentIndex": 46,
+      "segment": [
+        11.5,
+        11.75
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "9.539485471865558e-259973",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 95257.4512722439
+        }
+      }
+    },
+    {
+      "segmentIndex": 47,
+      "segment": [
+        11.75,
+        12.0
+      ],
+      "rho": 2.0,
+      "mrhoEntry": 0.0,
+      "mrhoRow": 0.0,
+      "mrhoFrobenius": 0.0,
+      "entryErrorBound": 0.0,
+      "entryErrorBoundText": "6.785026199334358e-333801",
+      "rowErrorBound": 0.0,
+      "frobeniusErrorBound": 0.0,
+      "worstNodeArc": {
+        "s": 0.02,
+        "nodeIndex": 0,
+        "arc": {
+          "type": "absolute-majorant",
+          "reTauMin": 122313.27258787188
+        }
+      }
+    }
+  ],
+  "worstSegment": {
+    "segmentIndex": 0,
+    "segment": [
+      0.0,
+      0.25
+    ],
+    "rho": 2.0,
+    "mrhoEntry": 1.0497465237768645e+59,
+    "entryErrorBound": 8.130479801238926e-62,
+    "worstNodeArc": {
+      "s": 0.02,
+      "nodeIndex": 0,
+      "arc": {
+        "type": "absolute-majorant",
+        "reTauMin": -0.03502297255156666
+      }
+    }
+  },
+  "segmentBernsteinQuadratureStatus": {
+    "label": "segment Bernstein Gauss-Legendre quadrature bound",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed when the Bernstein/Chebyshev tail bound for the explicit Gauss-Legendre segments, propagated through the center Taylor map, is below the working trace target."
+  },
+  "strictQuadratureReplacementStatus": {
+    "label": "geometric quadrature-refinement replacement",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed when the deterministic segment Bernstein bound is small enough, at the displayed quadrature order and segment grid, to fit below the downstream finite Krawczyk coefficient radius scale before the separate eigenrow-formalization step."
+  },
+  "remainingEigenrowFormalizationStatus": {
+    "label": "formal interval eigenrow Taylor propagation",
+    "closed": false,
+    "status": "open",
+    "reason": "Open as a standalone theorem.  The script uses a declared eigen-amplification budget and the observed spectral gap; a fully formal proof would propagate the interval matrix through the eigenvector Taylor recurrence."
+  }
+}

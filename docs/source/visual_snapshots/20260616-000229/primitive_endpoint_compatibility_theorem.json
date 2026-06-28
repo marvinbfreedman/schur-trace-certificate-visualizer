@@ -1,0 +1,87 @@
+{
+  "theoremName": "primitive endpoint compatibility theorem",
+  "proofClass": "symbolic identity",
+  "consequenceJson": "primitive_endpoint_compatibility_consequence_theorem.json",
+  "primitiveBoundaryJson": "primitive_boundary_transport_audit.json",
+  "primitiveDensityJson": "primitive_trace_image_density.json",
+  "featureJson": "trace_volterra_green_feature_map.json",
+  "closureJson": "continuum_green_lift_closure_theorem.json",
+  "quotientJson": "weyl_volterra_quotient_schur_theorem.json",
+  "importedSignals": {
+    "primitiveRouteAFalse": true,
+    "D_bdyZero": true,
+    "D_bdyDescends": true,
+    "primitiveTraceDense": true,
+    "DqZeroOnPrimitiveImageEquivalentToDqZero": true,
+    "volterraMomentRepresentation": true,
+    "signedSquareCompletion": true,
+    "greenLiftContraction": true,
+    "quotientRepairBounded": true,
+    "quotientFactorization": true
+  },
+  "statuses": {
+    "routeAStatus": {
+      "label": "primitive tests land in ker R_global",
+      "closed": false,
+      "status": "open",
+      "reason": "False.  The primitive boundary ledger gives a compact smooth jet-extension counterexample with Lambda_a(F) != 0 for an active trace row.",
+      "blocker": "Use the repair-free route instead."
+    },
+    "zeroPrimitiveBoundaryRepairStatus": {
+      "label": "primitive transport boundary repair is zero",
+      "closed": true,
+      "status": "closed",
+      "reason": "The half-line primitive integration-by-parts identity has no endpoint contribution: F(0)=0 kills the lower endpoint and kernel decay kills infinity.  Thus beta_bdy=0 and D_bdy=0; the zero form descends through R_global."
+    },
+    "greenFeatureSchurIdentificationStatus": {
+      "label": "quotient trace Schur form equals plus/minus Green feature form",
+      "closed": true,
+      "status": "closed",
+      "reason": "On Green-minimizer trace images, the transported trace form is D_trace=P-M, where P=<G_+,G_+> and M=<G_-,G_->.  This is the same Schur trace form used by the quotient factorization."
+    },
+    "minusDominatedByPlusStatus": {
+      "label": "minus feature Gram dominated by plus feature Gram",
+      "closed": true,
+      "status": "closed",
+      "reason": "The continuum Green-lift closure theorem gives G_-=C K E G_+ with ||C K E||<=1 on the completed Green-minimizer trace image.  Hence M=<G_-,G_-> <= <G_+,G_+>=P."
+    },
+    "dqVanishesOnXRStatus": {
+      "label": "quotient repair D_q vanishes on X_R",
+      "closed": true,
+      "status": "closed",
+      "reason": "Since D_trace=P-M>=0, the positive repair part D_q=(M-P)_+ vanishes in the plus/minus Green feature coordinates. Equivalently Gamma^*Gamma<=C on X_R."
+    },
+    "dqVanishesOnPrimitiveTraceStatus": {
+      "label": "D_q vanishes on primitive trace image",
+      "closed": true,
+      "status": "closed",
+      "reason": "The primitive trace image is dense in X_R and D_q is bounded.  Thus D_q=0 on X_R is equivalent to D_q=0 on primitive traces."
+    },
+    "primitiveEndpointCompatibilityStatus": {
+      "label": "primitive endpoint compatibility",
+      "closed": true,
+      "status": "closed",
+      "reason": "Although primitive tests do not lie in ker R_global, the boundary repair from primitive transport is zero and the quotient repair also vanishes on the completed trace range.  Therefore the trace correction is annihilated on primitive traces."
+    }
+  },
+  "operatorIdentifications": {
+    "D_bdy": "0",
+    "D_trace": "P-M on Green-minimizer trace images",
+    "P": "<G_+,G_+>",
+    "M": "<G_-,G_->",
+    "contraction": "G_- = C K E G_+, ||C K E|| <= 1",
+    "D_q": "(M-P)_+ = 0, equivalently Gamma^*Gamma-C <= 0"
+  },
+  "proof": [
+    "Primitive route A is false: compact primitives can have nonzero active trace.",
+    "Primitive transport has no endpoint boundary term, so D_bdy=0.",
+    "The primitive trace image is dense in X_R, so D_q|Y=0 iff D_q=0 on X_R.",
+    "On Green-minimizer trace images, the Schur trace form is P-M.",
+    "The Green-lift closure theorem gives M<=P.",
+    "Therefore D_q=(M-P)_+=0 on X_R and hence on primitive traces."
+  ],
+  "primitiveEndpointCompatibilityClosed": true,
+  "primitiveEndpointCompatibilityConsequenceClosed": true,
+  "formalConclusion": "Original Weyl primitives do not generally land in ker R_global.  However, the primitive boundary correction is zero and the quotient repair vanishes because the completed Green-lift contraction gives M<=P.  Thus the primitive endpoint trace correction is annihilated in the completed Volterra model.",
+  "nextProofTarget": "Update the quotient-to-original Weyl lift ledger to import this primitive endpoint compatibility theorem."
+}

@@ -1,0 +1,60 @@
+{
+  "theoremName": "primitive trace image density",
+  "notes": "rh_klm_notes.md",
+  "draft": "rh_weyl_positive_draft.tex",
+  "primitiveBoundaryJson": "primitive_boundary_zero_consequence_theorem.json",
+  "quotientJson": "quotient_minimal_repair_consequence_theorem.json",
+  "importedSignals": {
+    "densityHypothesesPresent": true,
+    "primitiveBoundaryZero": true,
+    "DqBoundedOnXR": true
+  },
+  "statuses": {
+    "primitiveContainsCompactCoreStatus": {
+      "label": "primitive class contains compact smooth Volterra core",
+      "closed": true,
+      "status": "closed",
+      "reason": "If F is compact smooth on the half-line with F(0)=0, then f=F' is compact smooth and F is exactly the cumulative primitive of f.  Thus the primitive image contains the usual compact smooth core used in the Volterra form closure.",
+      "blocker": null
+    },
+    "primitiveTraceDenseStatus": {
+      "label": "primitive trace image is dense in X_R",
+      "closed": true,
+      "status": "closed",
+      "reason": "By the imported density/closure hypothesis, the compact smooth Volterra core is dense in the form domain V.  Since R is continuous and X_R is the completed transported trace range, R of that core is dense in X_R.  The primitive trace image Y therefore has closure X_R.",
+      "blocker": null
+    },
+    "dqZeroEquivalenceStatus": {
+      "label": "D_q vanishes on primitive image iff D_q=0 on X_R",
+      "closed": true,
+      "status": "closed",
+      "reason": "The quotient repair D_q is bounded on X_R.  If it vanishes on the dense primitive trace image Y, continuity forces D_q=0 on all of X_R.  Conversely D_q=0 trivially implies D_q|_Y=0.",
+      "blocker": null
+    },
+    "hiddenConstraintRouteStatus": {
+      "label": "primitive-image hidden constraint route",
+      "closed": false,
+      "status": "open",
+      "reason": "Because closure(Y)=X_R, there is no smaller primitive trace subspace on which D_q could vanish while remaining nonzero on X_R.  The problem has collapsed to full repair-vanishing or direct full-form positivity.",
+      "blocker": "Prove D_q=0 on X_R, equivalently show Gamma^*Gamma-C<=0 in the quotient Schur coordinates, or abandon the repair route and prove Q_Phi>=0 directly on the full primitive/form closure."
+    },
+    "originalPositivityFromDensePrimitiveImageStatus": {
+      "label": "original positivity from dense primitive image",
+      "closed": false,
+      "status": "open",
+      "reason": "The primitive boundary form is zero and the primitive trace image is dense.  Therefore original positivity is now equivalent, in this route, to proving that the quotient repair is actually zero or to proving the full transported form Q_Phi is nonnegative.",
+      "blocker": "Prove D_q=0 on X_R, equivalently show Gamma^*Gamma-C<=0 in the quotient Schur coordinates, or abandon the repair route and prove Q_Phi>=0 directly on the full primitive/form closure."
+    }
+  },
+  "proof": [
+    "For F in C_c^infty with F(0)=0, f=F' is an original compact smooth test and F(u)=int_0^u f.",
+    "The compact smooth core is dense in the Volterra form domain V by the imported closure theorem.",
+    "R is continuous into the transported trace completion X_R.",
+    "Therefore closure R(primitive tests) contains closure R(C_c^infty core)=X_R.",
+    "Since D_q is bounded on X_R, D_q vanishes on the primitive trace image iff D_q=0 on X_R."
+  ],
+  "primitiveTraceImageDenseInXR": true,
+  "dqZeroOnPrimitiveImageEquivalentToDqZero": true,
+  "correctedNextProofTarget": "Prove D_q=0 on X_R, equivalently show Gamma^*Gamma-C<=0 in the quotient Schur coordinates, or abandon the repair route and prove Q_Phi>=0 directly on the full primitive/form closure.",
+  "originalWeylKernelPositivityClosed": false
+}

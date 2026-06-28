@@ -1,0 +1,291 @@
+{
+  "theoremName": "finite construction attempt for z -> x_z trace map",
+  "omega": 0.49,
+  "basis": 10,
+  "constraints": 7,
+  "traceRank": 7,
+  "traceNullity": 3,
+  "plusGramRank": 7,
+  "sOrder": 24,
+  "uOrder": 50,
+  "randomTrials": 16,
+  "construction": "X is chosen so X^*P_volterra X equals the Hardy plus Gram; remaining orthonormal freedom is searched for joint Gram matching.",
+  "fullHardyTarget": {
+    "jointRelative": 0.851285626974636,
+    "plusRelative": 1.370803906512891e-45,
+    "crossRelative": 1.1782624517546336,
+    "minusRelative": 0.3596217845203095,
+    "jointFrobenius": 0.25299421268684136,
+    "trial": 10,
+    "traceCoordinateNormFrobenius": 19177.227113723893
+  },
+  "truncatedHardyTarget": {
+    "jointRelative": 0.8512856269746,
+    "plusRelative": 1.3709569325023526e-45,
+    "crossRelative": 1.1782624517546032,
+    "minusRelative": 0.35962178452016286,
+    "jointFrobenius": 0.2529942126868015,
+    "trial": 10,
+    "traceCoordinateNormFrobenius": 19177.227113725527,
+    "hardyRmax": 40.0
+  },
+  "profileFitCandidates": {
+    "plusOnlyFull": {
+      "jointRelative": 3.833716765909272,
+      "plusRelative": 5.124173115510926,
+      "crossRelative": 2.3236209599829207,
+      "minusRelative": 4.636970371511941,
+      "jointFrobenius": 1.1393451552829499
+    },
+    "combinedPlusMinusFull": {
+      "jointRelative": 6.943002897406537,
+      "plusRelative": 9.297052767092014,
+      "crossRelative": 4.3000233973961155,
+      "minusRelative": 8.279008057788593,
+      "jointFrobenius": 2.0633962280725333
+    },
+    "plusOnlyTruncated": {
+      "jointRelative": 3.833716765909787,
+      "plusRelative": 5.12417311551159,
+      "crossRelative": 2.32362095998326,
+      "minusRelative": 4.6369703715125645,
+      "jointFrobenius": 1.1393451552829716
+    },
+    "combinedPlusMinusTruncated": {
+      "jointRelative": 6.943002897407413,
+      "plusRelative": 9.297052767093152,
+      "crossRelative": 4.3000233973966875,
+      "minusRelative": 8.279008057789643,
+      "jointFrobenius": 2.0633962280725555
+    },
+    "description": "Profile fits solve least squares against sampled Hardy branch functions on the Volterra u-row grid, then check joint Grams."
+  },
+  "xFullPreview": [
+    [
+      {
+        "real": -2672.5031751239408,
+        "imag": -3471.0176454551756
+      },
+      {
+        "real": -90.55945880085521,
+        "imag": -2959.841738967192
+      },
+      {
+        "real": -655.5762686274295,
+        "imag": -202.65401863874962
+      },
+      {
+        "real": -1706.2140353930001,
+        "imag": -797.8830612243148
+      },
+      {
+        "real": -484.6556476720777,
+        "imag": -1203.0661565640655
+      }
+    ],
+    [
+      {
+        "real": -7934.99284860362,
+        "imag": -11083.031385792845
+      },
+      {
+        "real": 183.17357300080621,
+        "imag": -9489.325237078108
+      },
+      {
+        "real": -1463.2468890584037,
+        "imag": -845.2199277390567
+      },
+      {
+        "real": -4668.863738929427,
+        "imag": -2520.742825155295
+      },
+      {
+        "real": -1000.14404632575,
+        "imag": -3643.7400600147575
+      }
+    ],
+    [
+      {
+        "real": 11.075943324691742,
+        "imag": 7.243408818605422
+      },
+      {
+        "real": 3.003795991222036,
+        "imag": 6.522631563676681
+      },
+      {
+        "real": 4.836215575779542,
+        "imag": 1.3670329111495758
+      },
+      {
+        "real": 6.104327571242851,
+        "imag": 2.6199920196156503
+      },
+      {
+        "real": 3.112425774669846,
+        "imag": 3.591813946247492
+      }
+    ],
+    [
+      {
+        "real": 1265.4328405287874,
+        "imag": 2263.7148166889656
+      },
+      {
+        "real": -320.53370825633436,
+        "imag": 1962.5868198619469
+      },
+      {
+        "real": -80.17244632889677,
+        "imag": 300.7403226691584
+      },
+      {
+        "real": 477.42759510542953,
+        "imag": 502.15327937923087
+      },
+      {
+        "real": -128.45935517833203,
+        "imag": 625.3709255834598
+      }
+    ],
+    [
+      {
+        "real": 78.43352903959445,
+        "imag": 253.47464064746748
+      },
+      {
+        "real": -88.78937697621288,
+        "imag": 226.4338144495798
+      },
+      {
+        "real": -81.61850117291259,
+        "imag": 62.490157312200054
+      },
+      {
+        "real": -40.58342885557437,
+        "imag": 55.73059725389073
+      },
+      {
+        "real": -79.78563831666122,
+        "imag": 47.617272105055186
+      }
+    ]
+  ],
+  "xTruncatedPreview": [
+    [
+      {
+        "real": -2672.5031751230167,
+        "imag": -3471.0176454539755
+      },
+      {
+        "real": -90.55945880104603,
+        "imag": -2959.8417389686124
+      },
+      {
+        "real": -655.5762686269356,
+        "imag": -202.65401864121554
+      },
+      {
+        "real": -1706.2140353932773,
+        "imag": -797.883061226746
+      },
+      {
+        "real": -484.65564767311463,
+        "imag": -1203.0661565662197
+      }
+    ],
+    [
+      {
+        "real": -7934.992848600877,
+        "imag": -11083.031385789014
+      },
+      {
+        "real": 183.1735730002511,
+        "imag": -9489.325237082325
+      },
+      {
+        "real": -1463.2468890568084,
+        "imag": -845.219927746385
+      },
+      {
+        "real": -4668.863738930304,
+        "imag": -2520.7428251624356
+      },
+      {
+        "real": -1000.1440463290232,
+        "imag": -3643.7400600209835
+      }
+    ],
+    [
+      {
+        "real": 11.075943324687914,
+        "imag": 7.2434088186029175
+      },
+      {
+        "real": 3.003795991224152,
+        "imag": 6.5226315636820065
+      },
+      {
+        "real": 4.836215575779949,
+        "imag": 1.3670329111548842
+      },
+      {
+        "real": 6.104327571243385,
+        "imag": 2.6199920196218494
+      },
+      {
+        "real": 3.1124257746717245,
+        "imag": 3.5918139462532066
+      }
+    ],
+    [
+      {
+        "real": 1265.43284052835,
+        "imag": 2263.714816688183
+      },
+      {
+        "real": -320.53370825625103,
+        "imag": 1962.5868198626185
+      },
+      {
+        "real": -80.17244632923061,
+        "imag": 300.74032267031674
+      },
+      {
+        "real": 477.42759510560154,
+        "imag": 502.1532793803073
+      },
+      {
+        "real": -128.45935517768936,
+        "imag": 625.3709255843312
+      }
+    ],
+    [
+      {
+        "real": 78.43352903956733,
+        "imag": 253.47464064737986
+      },
+      {
+        "real": -88.78937697620691,
+        "imag": 226.43381444961932
+      },
+      {
+        "real": -81.61850117294941,
+        "imag": 62.49015731226023
+      },
+      {
+        "real": -40.58342885555697,
+        "imag": 55.73059725393397
+      },
+      {
+        "real": -79.78563831659534,
+        "imag": 47.61727210507214
+      }
+    ]
+  ],
+  "exactTraceMapConstructed": false,
+  "truncatedTraceMapConstructed": false,
+  "diagnosis": "Plus-Gram matching is not enough: the best finite trace coordinates still miss the Hardy minus/cross branch Grams.  The missing map must be derived from the actual Lambda_a trace action on the Hardy evaluation exponential.",
+  "nextProofTarget": "Derive x_z(a)=Lambda_a applied to the primitive/evaluation exponential associated with h_z, then test those coordinates against the joint Hardy branch Grams."
+}

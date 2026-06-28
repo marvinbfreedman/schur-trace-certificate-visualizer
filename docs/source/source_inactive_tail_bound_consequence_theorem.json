@@ -1,0 +1,43 @@
+{
+  "theoremName": "source-inactive tail bound consequence theorem",
+  "proofClass": "symbolic identity",
+  "tailConstantsJson": "source_inactive_tail_constants_consequence_theorem.json",
+  "normalizedEpsilonDelta": 0.0013454526382754603,
+  "finiteLowMidSchurBudget": 0.005730309711103612,
+  "absorptionSlack": 0.004384857072828152,
+  "epsilonOverBudget": 0.23479579745373602,
+  "absoluteTailBound": 188267340.12410972,
+  "sourceTopLower": 139928626819.16638,
+  "statement": "The source-inactive constants theorem supplies the normalized finite inactive-tail constant and proves it is absorbable by the finite low/mid Schur budget.",
+  "statuses": {
+    "finiteInactiveTailBoundStatus": {
+      "label": "finite certified inactive-tail bound",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the source-inactive constants theorem: the normalized source model has the certified inactive-tail constant epsilon_delta."
+    },
+    "lowMidAbsorptionBudgetStatus": {
+      "label": "low/mid Schur absorption budget",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the source-inactive constants theorem: epsilon_delta is below the finite low/mid Schur budget."
+    },
+    "tailBoundConsequenceStatus": {
+      "label": "source-inactive tail bound consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite inactive-tail constant and its absorption budget are both closed."
+    }
+  },
+  "minMaxProofInCertifiedSourceModel": true,
+  "sourceInactiveTailConstantsClosed": true,
+  "sourceInactiveTailDominationConstantsClosed": true,
+  "absorbableByFiniteLowMidBlock": true,
+  "tailBoundConsequenceClosed": true,
+  "proof": [
+    "Import the normalized finite inactive-tail constant.",
+    "Import the low/mid Schur absorption comparison.",
+    "Forward the epsilon, budget, and slack values needed by high-block min-max assembly."
+  ],
+  "remainingAnalyticGap": null
+}

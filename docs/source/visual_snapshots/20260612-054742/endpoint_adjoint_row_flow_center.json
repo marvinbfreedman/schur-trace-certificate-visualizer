@@ -1,0 +1,782 @@
+{
+  "theoremName": "endpoint adjoint row-flow center",
+  "interval": [
+    0.02,
+    0.545
+  ],
+  "s0": 0.2825,
+  "orders": [
+    5,
+    7,
+    9
+  ],
+  "stateScaling": "taylor",
+  "rankMargin": 2775659.55249,
+  "centers": [
+    {
+      "chebyshevOrder": 5,
+      "stateScaling": "taylor",
+      "activeDim": 2,
+      "activeIndices": [
+        3,
+        4
+      ],
+      "traceFieldMinGap": 1.1635518278617991e-05,
+      "traceFieldMinConsecutiveCos": 0.9444940623200566,
+      "endpointMapRank": 2,
+      "endpointMapGramEigenvalues": [
+        128927342.2055466,
+        857389451933519.8
+      ],
+      "endpointMapRankThreshold": 8.573894519335197e-12,
+      "sigmaMin": 11354.617660033586,
+      "sigmaMax": 29281213.293398887,
+      "endpointMap": [
+        [
+          12226525.661717657,
+          3799267.4396064407,
+          397194.0120723261,
+          85937.71937122062,
+          4574.20774009358,
+          -409.6903449765024,
+          -30.47608744174224,
+          -0.32680627671033835
+        ],
+        [
+          25125562.71991644,
+          7831324.67793759,
+          804078.6523069203,
+          178515.160282417,
+          9456.898929522971,
+          -881.5563842785554,
+          -64.99653222742272,
+          -0.6961257237006109
+        ]
+      ],
+      "endpointMapFrobenius": 29281215.49493569,
+      "transportedLeftRowsFrobenius": 18487.53615292603,
+      "transportedRightRowsFrobenius": 29291597.617130663,
+      "bestMinor": {
+        "columns": [
+          0,
+          1
+        ],
+        "determinant": 291159796478.72876,
+        "absDeterminant": 291159796478.72876
+      },
+      "topMinors": [
+        {
+          "columns": [
+            0,
+            1
+          ],
+          "determinant": 291159796478.72876,
+          "absDeterminant": 291159796478.72876
+        },
+        {
+          "columns": [
+            0,
+            2
+          ],
+          "determinant": -148634785828.56674,
+          "absDeterminant": 148634785828.56674
+        },
+        {
+          "columns": [
+            1,
+            2
+          ],
+          "determinant": -55645426078.73764,
+          "absDeterminant": 55645426078.73764
+        },
+        {
+          "columns": [
+            0,
+            3
+          ],
+          "determinant": 23386630130.4303,
+          "absDeterminant": 23386630130.4303
+        },
+        {
+          "columns": [
+            1,
+            3
+          ],
+          "determinant": 5220653459.596533,
+          "absDeterminant": 5220653459.596533
+        },
+        {
+          "columns": [
+            2,
+            3
+          ],
+          "determinant": 1804467153.9661703,
+          "absDeterminant": 1804467153.9661703
+        },
+        {
+          "columns": [
+            0,
+            4
+          ],
+          "determinant": 695473974.4343865,
+          "absDeterminant": 695473974.4343865
+        },
+        {
+          "columns": [
+            0,
+            5
+          ],
+          "determinant": -484671296.1814749,
+          "absDeterminant": 484671296.1814749
+        }
+      ],
+      "derivativeRows": [
+        {
+          "index": 0,
+          "s": 0.02,
+          "lambda0": -0.001156394863013897,
+          "lambda1": 1.3063916908516198e-05,
+          "gap": 0.0011694587799224133,
+          "e8": 0.09837783412722585
+        },
+        {
+          "index": 1,
+          "s": 0.058442234969265636,
+          "lambda0": -0.0008760712681431934,
+          "lambda1": 1.2406203722833045e-05,
+          "gap": 0.0008884774718660264,
+          "e8": 0.08552839776467763
+        },
+        {
+          "index": 2,
+          "s": 0.15125,
+          "lambda0": -0.00042137728300133885,
+          "lambda1": 1.098403106437747e-05,
+          "gap": 0.00043236131406571633,
+          "e8": 0.015180468128738052
+        },
+        {
+          "index": 3,
+          "s": 0.24405776503073437,
+          "lambda0": -0.000185635039088791,
+          "lambda1": 9.817417535637358e-06,
+          "gap": 0.00019545245662442836,
+          "e8": -0.1138579990224284
+        },
+        {
+          "index": 4,
+          "s": 0.2825,
+          "lambda0": -0.00012862612661029079,
+          "lambda1": 9.42101395763874e-06,
+          "gap": 0.00013804714056792953,
+          "e8": -0.17949627136147217
+        },
+        {
+          "index": 5,
+          "s": 0.32094223496926566,
+          "lambda0": -8.732524526953386e-05,
+          "lambda1": 9.087431593638893e-06,
+          "gap": 9.641267686317274e-05,
+          "e8": -0.24850777799765447
+        },
+        {
+          "index": 6,
+          "s": 0.41375,
+          "lambda0": -2.9524214055836293e-05,
+          "lambda1": 8.675623938984594e-06,
+          "gap": 3.8199837994820885e-05,
+          "e8": -0.4201386458243023
+        },
+        {
+          "index": 7,
+          "s": 0.5065577650307344,
+          "lambda0": -5.012703519008607e-06,
+          "lambda1": 9.661449010932056e-06,
+          "gap": 1.4674152529940662e-05,
+          "e8": -0.5975578757990808
+        },
+        {
+          "index": 8,
+          "s": 0.545,
+          "lambda0": -6.11293894185649e-07,
+          "lambda1": 1.1024224384432343e-05,
+          "gap": 1.1635518278617991e-05,
+          "e8": -0.645067899054905
+        }
+      ],
+      "statuses": {
+        "activeEndpointMapFullRowRank": {
+          "label": "active endpoint map full row rank",
+          "closed": true,
+          "status": "closed",
+          "reason": "Adjoint row-flow endpoint center has full sampled active row rank."
+        }
+      }
+    },
+    {
+      "chebyshevOrder": 7,
+      "stateScaling": "taylor",
+      "activeDim": 2,
+      "activeIndices": [
+        3,
+        4
+      ],
+      "traceFieldMinGap": 1.1635518278617991e-05,
+      "traceFieldMinConsecutiveCos": 0.9690864567965751,
+      "endpointMapRank": 2,
+      "endpointMapGramEigenvalues": [
+        10914075333196.24,
+        168850069986196.2
+      ],
+      "endpointMapRankThreshold": 1.6885006998619617e-12,
+      "sigmaMin": 3303645.7638790878,
+      "sigmaMax": 12994232.18147945,
+      "endpointMap": [
+        [
+          -8704375.764884451,
+          586057.6239097364,
+          517546.55434915033,
+          44856.70985804057,
+          4418.225624270375,
+          530.2316437460925,
+          23.406890342085145,
+          0.2253143261680952
+        ],
+        [
+          -8471998.182791423,
+          5321096.719391232,
+          1809229.6732579921,
+          149442.54229940992,
+          12935.827495126134,
+          1425.459911932352,
+          61.96796584542665,
+          0.5947958586851024
+        ]
+      ],
+      "endpointMapFrobenius": 13407615.198811175,
+      "transportedLeftRowsFrobenius": 56467.008197172225,
+      "transportedRightRowsFrobenius": 13383940.177707054,
+      "bestMinor": {
+        "columns": [
+          0,
+          1
+        ],
+        "determinant": -41351746202100.86,
+        "absDeterminant": 41351746202100.86
+      },
+      "topMinors": [
+        {
+          "columns": [
+            0,
+            1
+          ],
+          "determinant": -41351746202100.86,
+          "absDeterminant": 41351746202100.86
+        },
+        {
+          "columns": [
+            0,
+            2
+          ],
+          "determinant": -11363561453060.717,
+          "absDeterminant": 11363561453060.717
+        },
+        {
+          "columns": [
+            1,
+            2
+          ],
+          "determinant": -1693602429062.9326,
+          "absDeterminant": 1693602429062.9326
+        },
+        {
+          "columns": [
+            0,
+            3
+          ],
+          "determinant": -920778079030.3813,
+          "absDeterminant": 920778079030.3813
+        },
+        {
+          "columns": [
+            1,
+            3
+          ],
+          "determinant": -151104950417.2816,
+          "absDeterminant": 151104950417.2816
+        },
+        {
+          "columns": [
+            0,
+            4
+          ],
+          "determinant": -75167103887.32074,
+          "absDeterminant": 75167103887.32074
+        },
+        {
+          "columns": [
+            1,
+            4
+          ],
+          "determinant": -15928665549.735516,
+          "absDeterminant": 15928665549.735516
+        },
+        {
+          "columns": [
+            0,
+            5
+          ],
+          "determinant": -7915617188.962885,
+          "absDeterminant": 7915617188.962885
+        }
+      ],
+      "derivativeRows": [
+        {
+          "index": 0,
+          "s": 0.02,
+          "lambda0": -0.001156394863013897,
+          "lambda1": 1.3063916908516198e-05,
+          "gap": 0.0011694587799224133,
+          "e8": 0.09837783412722585
+        },
+        {
+          "index": 1,
+          "s": 0.037584165753292424,
+          "lambda0": -0.00102034164377973,
+          "lambda1": 1.2758264682082867e-05,
+          "gap": 0.0010330999084618127,
+          "e8": 0.09351385228824641
+        },
+        {
+          "index": 2,
+          "s": 0.085625,
+          "lambda0": -0.000713506299021744,
+          "lambda1": 1.1964882701363177e-05,
+          "gap": 0.0007254711817231073,
+          "e8": 0.07110570994115385
+        },
+        {
+          "index": 3,
+          "s": 0.15125,
+          "lambda0": -0.00042137728300133885,
+          "lambda1": 1.098403106437747e-05,
+          "gap": 0.00043236131406571633,
+          "e8": 0.015180468128738052
+        },
+        {
+          "index": 4,
+          "s": 0.216875,
+          "lambda0": -0.00023818868614637292,
+          "lambda1": 1.013029837843027e-05,
+          "gap": 0.0002483189845248032,
+          "e8": -0.0709046801156724
+        },
+        {
+          "index": 5,
+          "s": 0.26491583424670756,
+          "lambda0": -0.00015246790437591025,
+          "lambda1": 9.595231414955885e-06,
+          "gap": 0.00016206313579086612,
+          "e8": -0.14890266505354563
+        },
+        {
+          "index": 6,
+          "s": 0.2825,
+          "lambda0": -0.00012862612661029079,
+          "lambda1": 9.42101395763874e-06,
+          "gap": 0.00013804714056792953,
+          "e8": -0.17949627136147217
+        },
+        {
+          "index": 7,
+          "s": 0.30008416575329244,
+          "lambda0": -0.00010805641843449679,
+          "lambda1": 9.259845536288496e-06,
+          "gap": 0.00011731626397078528,
+          "e8": -0.21078581641783012
+        },
+        {
+          "index": 8,
+          "s": 0.348125,
+          "lambda0": -6.532603353079209e-05,
+          "lambda1": 8.898143696885102e-06,
+          "gap": 7.42241772276772e-05,
+          "e8": -0.2982418298531572
+        },
+        {
+          "index": 9,
+          "s": 0.41375,
+          "lambda0": -2.9524214055836293e-05,
+          "lambda1": 8.675623938984594e-06,
+          "gap": 3.8199837994820885e-05,
+          "e8": -0.4201386458243023
+        },
+        {
+          "index": 10,
+          "s": 0.479375,
+          "lambda0": -9.905942344237013e-06,
+          "lambda1": 9.101244042354511e-06,
+          "gap": 1.9007186386591524e-05,
+          "e8": -0.5472998848837392
+        },
+        {
+          "index": 11,
+          "s": 0.5274158342467076,
+          "lambda0": -2.294359761899303e-06,
+          "lambda1": 1.0317235327759822e-05,
+          "gap": 1.2611595089659125e-05,
+          "e8": -0.6283577574158663
+        },
+        {
+          "index": 12,
+          "s": 0.545,
+          "lambda0": -6.11293894185649e-07,
+          "lambda1": 1.1024224384432343e-05,
+          "gap": 1.1635518278617991e-05,
+          "e8": -0.645067899054905
+        }
+      ],
+      "statuses": {
+        "activeEndpointMapFullRowRank": {
+          "label": "active endpoint map full row rank",
+          "closed": true,
+          "status": "closed",
+          "reason": "Adjoint row-flow endpoint center has full sampled active row rank."
+        }
+      }
+    },
+    {
+      "chebyshevOrder": 9,
+      "stateScaling": "taylor",
+      "activeDim": 2,
+      "activeIndices": [
+        3,
+        4
+      ],
+      "traceFieldMinGap": 1.1635518278617991e-05,
+      "traceFieldMinConsecutiveCos": 0.9820331474027991,
+      "endpointMapRank": 2,
+      "endpointMapGramEigenvalues": [
+        10029618958.273787,
+        438838924501863.0
+      ],
+      "endpointMapRankThreshold": 4.38838924501863e-12,
+      "sigmaMin": 100147.98529313401,
+      "sigmaMax": 20948482.63005851,
+      "endpointMap": [
+        [
+          5753332.304224443,
+          1290821.3812446028,
+          110318.3738456759,
+          9730.309748498796,
+          282.9078619110262,
+          -52.076032088607725,
+          -3.2820284446784544,
+          -0.033952525791075175
+        ],
+        [
+          19530955.922161117,
+          4730752.41061325,
+          479008.0830883619,
+          43884.163089475514,
+          2145.230596664573,
+          -70.6520256411878,
+          -7.186894761630082,
+          -0.07935838582222515
+        ]
+      ],
+      "endpointMapFrobenius": 20948722.016410004,
+      "transportedLeftRowsFrobenius": 48987.03431076061,
+      "transportedRightRowsFrobenius": 20995231.06488079,
+      "bestMinor": {
+        "columns": [
+          0,
+          1
+        ],
+        "determinant": 2006615166797.4006,
+        "absDeterminant": 2006615166797.4006
+      },
+      "topMinors": [
+        {
+          "columns": [
+            0,
+            1
+          ],
+          "determinant": 2006615166797.4006,
+          "absDeterminant": 2006615166797.4006
+        },
+        {
+          "columns": [
+            0,
+            2
+          ],
+          "determinant": 601269381432.5106,
+          "absDeterminant": 601269381432.5106
+        },
+        {
+          "columns": [
+            1,
+            2
+          ],
+          "determinant": 96424962434.08372,
+          "absDeterminant": 96424962434.08372
+        },
+        {
+          "columns": [
+            0,
+            3
+          ],
+          "determinant": 62437922339.6288,
+          "absDeterminant": 62437922339.6288
+        },
+        {
+          "columns": [
+            1,
+            3
+          ],
+          "determinant": 10614929715.195911,
+          "absDeterminant": 10614929715.195911
+        },
+        {
+          "columns": [
+            0,
+            4
+          ],
+          "determinant": 6816763510.783868,
+          "absDeterminant": 6816763510.783868
+        },
+        {
+          "columns": [
+            1,
+            4
+          ],
+          "determinant": 1430742472.1577196,
+          "absDeterminant": 1430742472.1577196
+        },
+        {
+          "columns": [
+            0,
+            5
+          ],
+          "determinant": 610610105.843306,
+          "absDeterminant": 610610105.843306
+        }
+      ],
+      "derivativeRows": [
+        {
+          "index": 0,
+          "s": 0.02,
+          "lambda0": -0.001156394863013897,
+          "lambda1": 1.3063916908516198e-05,
+          "gap": 0.0011694587799224133,
+          "e8": 0.09837783412722585
+        },
+        {
+          "index": 1,
+          "s": 0.029990811357893613,
+          "lambda0": -0.001077411662430505,
+          "lambda1": 1.2889271624785538e-05,
+          "gap": 0.0010903009340552906,
+          "e8": 0.09581306161482925
+        },
+        {
+          "index": 2,
+          "s": 0.058442234969265636,
+          "lambda0": -0.0008760712681431934,
+          "lambda1": 1.2406203722833045e-05,
+          "gap": 0.0008884774718660264,
+          "e8": 0.08552839776467763
+        },
+        {
+          "index": 3,
+          "s": 0.10102279950208197,
+          "lambda0": -0.000633068563684634,
+          "lambda1": 1.1723855471081055e-05,
+          "gap": 0.0006447924191557151,
+          "e8": 0.0607485461239759
+        },
+        {
+          "index": 4,
+          "s": 0.15125,
+          "lambda0": -0.00042137728300133885,
+          "lambda1": 1.098403106437747e-05,
+          "gap": 0.00043236131406571633,
+          "e8": 0.015180468128738052
+        },
+        {
+          "index": 5,
+          "s": 0.20147720049791804,
+          "lambda0": -0.0002733732890489718,
+          "lambda1": 1.0318517031089812e-05,
+          "gap": 0.0002836918060800616,
+          "e8": -0.048262177878267434
+        },
+        {
+          "index": 6,
+          "s": 0.24405776503073437,
+          "lambda0": -0.000185635039088791,
+          "lambda1": 9.817417535637358e-06,
+          "gap": 0.00019545245662442836,
+          "e8": -0.1138579990224284
+        },
+        {
+          "index": 7,
+          "s": 0.2725091886421064,
+          "lambda0": -0.00014174215039295106,
+          "lambda1": 9.518469681299493e-06,
+          "gap": 0.00015126062007425056,
+          "e8": -0.16201312802275092
+        },
+        {
+          "index": 8,
+          "s": 0.2825,
+          "lambda0": -0.00012862612661029079,
+          "lambda1": 9.42101395763874e-06,
+          "gap": 0.00013804714056792953,
+          "e8": -0.17949627136147217
+        },
+        {
+          "index": 9,
+          "s": 0.2924908113578936,
+          "lambda0": -0.00011656554277433156,
+          "lambda1": 9.327765274103966e-06,
+          "gap": 0.00012589330804843552,
+          "e8": -0.1972035017148469
+        },
+        {
+          "index": 10,
+          "s": 0.32094223496926566,
+          "lambda0": -8.732524526953386e-05,
+          "lambda1": 9.087431593638893e-06,
+          "gap": 9.641267686317274e-05,
+          "e8": -0.24850777799765447
+        },
+        {
+          "index": 11,
+          "s": 0.363522799502082,
+          "lambda0": -5.4982558216424415e-05,
+          "lambda1": 8.811945424944e-06,
+          "gap": 6.379450364136842e-05,
+          "e8": -0.3265896367393258
+        },
+        {
+          "index": 12,
+          "s": 0.41375,
+          "lambda0": -2.9524214055836293e-05,
+          "lambda1": 8.675623938984594e-06,
+          "gap": 3.8199837994820885e-05,
+          "e8": -0.4201386458243023
+        },
+        {
+          "index": 13,
+          "s": 0.463977200497918,
+          "lambda0": -1.343396039865767e-05,
+          "lambda1": 8.906120422585792e-06,
+          "gap": 2.2340080821243462e-05,
+          "e8": -0.517138220262644
+        },
+        {
+          "index": 14,
+          "s": 0.5065577650307344,
+          "lambda0": -5.012703519008607e-06,
+          "lambda1": 9.661449010932056e-06,
+          "gap": 1.4674152529940662e-05,
+          "e8": -0.5975578757990808
+        },
+        {
+          "index": 15,
+          "s": 0.5350091886421063,
+          "lambda0": -1.5045115461286998e-06,
+          "lambda1": 1.060653574356342e-05,
+          "gap": 1.211104728969212e-05,
+          "e8": -0.6367491559890242
+        },
+        {
+          "index": 16,
+          "s": 0.545,
+          "lambda0": -6.11293894185649e-07,
+          "lambda1": 1.1024224384432343e-05,
+          "gap": 1.1635518278617991e-05,
+          "e8": -0.645067899054905
+        }
+      ],
+      "statuses": {
+        "activeEndpointMapFullRowRank": {
+          "label": "active endpoint map full row rank",
+          "closed": true,
+          "status": "closed",
+          "reason": "Adjoint row-flow endpoint center has full sampled active row rank."
+        }
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "leftOrder": 5,
+      "rightOrder": 7,
+      "frobeniusDifference": 39806432.38714999,
+      "rankMargin": 2775659.55249,
+      "differenceOverMargin": 14.341251740127952,
+      "passesRankMargin": false,
+      "leftBestMinor": {
+        "columns": [
+          0,
+          1
+        ],
+        "determinant": 291159796478.72876,
+        "absDeterminant": 291159796478.72876
+      },
+      "rightBestMinor": {
+        "columns": [
+          0,
+          1
+        ],
+        "determinant": -41351746202100.86,
+        "absDeterminant": 41351746202100.86
+      },
+      "sameBestMinor": true,
+      "bestMinorDetAbsDiff": 41642905998579.586,
+      "bestMinorRelativeDiff": 1.0070410520285098
+    },
+    {
+      "leftOrder": 7,
+      "rightOrder": 9,
+      "frobeniusDifference": 31559210.959691823,
+      "rankMargin": 2775659.55249,
+      "differenceOverMargin": 11.3699862547554,
+      "passesRankMargin": false,
+      "leftBestMinor": {
+        "columns": [
+          0,
+          1
+        ],
+        "determinant": -41351746202100.86,
+        "absDeterminant": 41351746202100.86
+      },
+      "rightBestMinor": {
+        "columns": [
+          0,
+          1
+        ],
+        "determinant": 2006615166797.4006,
+        "absDeterminant": 2006615166797.4006
+      },
+      "sameBestMinor": true,
+      "bestMinorDetAbsDiff": 43358361368898.26,
+      "bestMinorRelativeDiff": 21.60771137701461
+    }
+  ],
+  "frobeniusStabilityStatus": {
+    "label": "row-flow Frobenius stability",
+    "closed": false,
+    "status": "open",
+    "reason": "Closed if successive row-flow endpoint maps differ below the old rank margin."
+  },
+  "minorStabilityStatus": {
+    "label": "row-flow best-minor stability",
+    "closed": false,
+    "status": "open",
+    "reason": "Closed if the same best 2x2 minor persists and its relative change is below 25 percent across refinements."
+  },
+  "nextTarget": "If a stable minor emerges, build a ball certificate for that minor instead of a Frobenius certificate for all of M."
+}

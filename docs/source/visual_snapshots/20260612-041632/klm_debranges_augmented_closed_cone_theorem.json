@@ -1,0 +1,68 @@
+{
+  "theoremName": "augmented closed-cone KLM-to-de Branges bridge theorem",
+  "hardyJson": "klm_debranges_canonical_hardy_image.json",
+  "pullbackTheoremJson": "augmented_pullback_limit_theorem.json",
+  "augmentedContinuumJson": "xi_augmented_trace_continuum_lift.json",
+  "uniformKlmJson": "uniform_omega_weyl_klm_bridge.json",
+  "statuses": {
+    "canonicalHardyStatus": {
+      "label": "canonical Hardy/de Branges identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The shifted-Xi de Branges kernel equals the signed Hardy branch Gram K_E=<h^+,h^+>-<h^-,h^->."
+    },
+    "finiteThetaAugmentedPullbackStatus": {
+      "label": "finite theta augmented pullbacks",
+      "closed": true,
+      "status": "closed",
+      "reason": "The analytic augmented pullback theorem proves that, for each finite theta truncation Xi_N, the exact Mellin split gives h_{z,N}^\\pm as a Mu-boundary primitive plus diagonal Volterra tail.  This is the augmented pullback through R_aug=(Lambda,Mu), and its signed Hardy Gram is exactly K_{E,N}."
+    },
+    "continuumAugmentedRepairStatus": {
+      "label": "continuum augmented trace repair",
+      "closed": true,
+      "status": "closed",
+      "reason": "The continuum augmented repair theorem proves Mu is a closed trace coordinate, D_aug is bounded and nonnegative in the transported trace norm, and K+R_aug^*D_aug R_aug is a closed positive form."
+    },
+    "uniformThetaTailStatus": {
+      "label": "uniform compact theta-tail convergence",
+      "closed": true,
+      "status": "closed",
+      "reason": "For |Im z|<=M, the n-th theta atom is bounded by C_M n^4 exp(-pi n^2/2).  Indeed, for v>=0, exp(-pi n^2 e^v)<=exp(-pi n^2/2)exp(-pi e^v/2), and the remaining v-integral is finite uniformly on the compact strip.  The Weierstrass M-test gives Xi_N->Xi uniformly on compact shifted z-sets, hence the branch Gram entries converge uniformly on finite test sets."
+    },
+    "closedPositiveConeStatus": {
+      "label": "closed positive-cone limit",
+      "closed": true,
+      "status": "closed",
+      "reason": "For each finite test set, positive semidefinite Gram matrices form a closed cone.  Entrywise convergence of the finite augmented KLM pullback Grams to K_E therefore preserves positivity."
+    },
+    "allOmegaKlmInputStatus": {
+      "label": "all-omega KLM/Weyl positivity input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from uniform_omega_weyl_klm_bridge.json."
+    },
+    "klmToDeBrangesBridgeStatus": {
+      "label": "KLM-to-de Branges closed-cone bridge",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite augmented KLM pullbacks converge entrywise to the shifted-Xi de Branges kernel.  Since each finite pullback is in the KLM positive cone and the cone is closed on finite Gram matrices, K_E is positive on every finite evaluation set."
+    }
+  },
+  "pullbackLimitTheorem": {
+    "closed": true,
+    "proofClass": "analytic proof",
+    "signedHardyGramEqualsFiniteDeBrangesKernel": true,
+    "entrywiseConvergenceToFullDeBrangesKernel": true
+  },
+  "formalProof": [
+    "For finite theta truncation N, define Xi_N from modes n<=N and E_{omega,N}(z)=Xi_N(z+i omega).",
+    "The canonical Hardy identity gives K_{E,N}=<h_{z,N}^+,h_{w,N}^+>-<h_{z,N}^-,h_{w,N}^->.",
+    "The exact Mellin split writes each h_{z,N}^\u00b1 as a sum of a Mu-boundary primitive and a diagonal Volterra tail.  This is the augmented pullback through R_aug=(Lambda,Mu).",
+    "The continuum augmented repair theorem puts these finite pullbacks in the KLM positive cone on the completed augmented trace-fiber domain.",
+    "Uniform compact convergence Xi_N->Xi implies K_{E,N}(w,z)->K_E(w,z) entrywise for every finite evaluation set in the upper half-plane.",
+    "The finite positive semidefinite cone is closed; hence K_E is positive on every finite evaluation set."
+  ],
+  "bridgeClosed": true,
+  "transformClosed": true,
+  "nextProofTarget": "Apply the de Branges/Hermite-Biehler conclusion for E_omega(z)=Xi(z+i omega) and record the RH-side endpoint passage."
+}

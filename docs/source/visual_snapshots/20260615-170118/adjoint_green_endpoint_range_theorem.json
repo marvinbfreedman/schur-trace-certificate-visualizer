@@ -1,0 +1,140 @@
+{
+  "theoremName": "exact adjoint Green endpoint range theorem",
+  "endpointSelectionJson": "adjoint_green_endpoint_selection.json",
+  "jumpJson": "adjoint_green_jump_conditions.json",
+  "activeRangeJson": "global_trace_active_range_inclusion.json",
+  "continuumActiveRangeJson": "continuum_active_trace_range_theorem.json",
+  "exactFundamentalMatrixEndpointMapStatus": {
+    "label": "exact fundamental-matrix endpoint map",
+    "closed": true,
+    "status": "closed",
+    "reason": "For analytic coefficients with nonzero leading coefficient, P^*K=0 has a unique fundamental matrix Phi(a,t), and the endpoint concomitant is exactly Pi_delta Beta_z=Mz+b(d)."
+  },
+  "endpointFredholmRangeAlternativeStatus": {
+    "label": "endpoint Fredholm range alternative",
+    "closed": true,
+    "status": "closed",
+    "reason": "The exact endpoint equation Mz=-b(d) is solvable iff b(d) is orthogonal to ker(M^T); the minimum-norm solution is z=-M^+b(d)."
+  },
+  "uniformTraceDualBoundFromCompactnessStatus": {
+    "label": "uniform trace-dual bound from compactness",
+    "closed": true,
+    "status": "closed",
+    "reason": "If rank M is constant, b(d_u) lies in Range(M), and d_u is continuous on the compact source window, then ||M^+b(d_u)|| and the trace-dual norm of the piecewise homogeneous Green solution are uniformly bounded."
+  },
+  "finiteEndpointCompatibilityEvidenceStatus": {
+    "label": "finite endpoint compatibility evidence",
+    "closed": true,
+    "status": "closed",
+    "reason": "The sampled-flow diagnostic has rank one on the two active modes, but the actual endpoint right-hand sides lie in its range and are killed by the Moore-Penrose z choice."
+  },
+  "continuumActiveRangeCompatibilityStatus": {
+    "label": "continuum active range compatibility",
+    "closed": false,
+    "status": "open",
+    "reason": "Open until the compactness/Mosco passage and the closed-trace active unique-continuation lemma are proved."
+  },
+  "exactEndpointReductionClosed": true,
+  "unconditionalContinuumEndpointClosed": false,
+  "finiteEndpointEvidence": {
+    "source": "sampled-flow diagnostic, not the continuum definition",
+    "activeDim": 2,
+    "endpointMapRank": 1,
+    "endpointMapGramEigenvalues": [
+      7704285951341.06,
+      5.4067419733088444e+51
+    ],
+    "endpointMapRankThreshold": 5.406741973308844e+25,
+    "endpointMapFrobenius": 7.353055129202313e+25,
+    "flowLeftFrobenius": 1.188781293335011e+29,
+    "flowRightFrobenius": 4325523736.791256,
+    "maxEndpointResidualNorm": 4.904278671755176e-27,
+    "maxSelectedZNorm": 2.791429837949141,
+    "actualEndpointRhsInRange": {
+      "label": "actual endpoint RHS in Range(M)",
+      "closed": true,
+      "status": "closed",
+      "reason": "For the actual source rows, the endpoint vectors b(d) are in the finite endpoint-map range."
+    },
+    "activeEndpointKilled": {
+      "label": "active endpoint concomitant killed",
+      "closed": true,
+      "status": "closed",
+      "reason": "Minimum-norm z solves Mz=-b(d) on the active two-dimensional source space."
+    },
+    "uniformTraceDualBoundClosed": {
+      "label": "uniform trace-dual bound",
+      "closed": false,
+      "status": "open",
+      "reason": "Still needs a rigorous continuum bound for the exact fundamental matrix and M^+ over the source window."
+    }
+  },
+  "finiteActiveRangeEvidence": {
+    "source": "finite active range inclusion certificate",
+    "rows": 1,
+    "allRanksMatch": true,
+    "maxRangeResidualRelative": 2.2573105615124823e-69,
+    "interpretation": "Finite evidence for the continuum compatibility condition b(d_u) in Range(M)."
+  },
+  "continuumActiveRangeTheorem": {
+    "hilbertAnnihilatorRangeCriterionStatus": {
+      "label": "Hilbert annihilator range criterion",
+      "closed": true,
+      "status": "closed",
+      "reason": "For a densely defined closed trace map R between Hilbert spaces, closure Ran(R^*)=(ker R)^perp.  Hence E_active factors through the interval trace iff ker R is annihilated by E_active."
+    },
+    "finiteActiveBlockFactorizationStatus": {
+      "label": "finite active block factorization",
+      "closed": true,
+      "status": "closed",
+      "reason": "Current Galerkin active blocks satisfy E_active=C_sample R_global to roundoff.  This is finite evidence for, not proof of, the continuum annihilator condition."
+    },
+    "compactnessContradictionReductionStatus": {
+      "label": "compactness contradiction reduction",
+      "closed": true,
+      "status": "closed",
+      "reason": "Failure of ker R subset ker E_active is equivalent to an A-normalized sequence with R f_n -> 0 and active source bounded below.  The high-block elliptic/Mosco theorem is the compactness mechanism needed to pass such a sequence to a continuum limit."
+    },
+    "closedTraceActiveUniqueContinuationStatus": {
+      "label": "closed-trace active unique continuation",
+      "closed": false,
+      "status": "open",
+      "reason": "Closed if the exact Green annihilation implication is available for every scalar active source row.  The remaining open part is endpoint/Fredholm compatibility in the continuum exact Green BVP."
+    },
+    "continuumActiveTraceRangeCompatibilityStatus": {
+      "label": "continuum active trace range compatibility",
+      "closed": false,
+      "status": "open",
+      "reason": "Open until the compactness/Mosco passage and the closed-trace active unique-continuation lemma are proved."
+    }
+  },
+  "jumpConditionEvidence": {
+    "interiorSourceSolved": true,
+    "jumpMatrixInvertible": true,
+    "maxJumpSolveResidual": 0.0,
+    "maxJumpNorm": 24129022.585577942
+  },
+  "definitions": {
+    "state": "Y=(K,K',...,K^(7))^T",
+    "fundamentalMatrix": "d/da Phi(a,t)=A(a)Phi(a,t), Phi(t,t)=I",
+    "piecewiseGreen": "Y_-(a)=Phi(a,s0)z, Y_+(a)=Phi(a,s0)(z+Delta(d))",
+    "endpointMap": "Pi_delta Beta_z=M z+b(d)",
+    "compatibility": "b(d) in Range(M), equivalently ker(M^T) annihilates b(d)",
+    "solution": "z(d)=-M^+b(d) for the minimum-norm endpoint choice"
+  },
+  "traceDualBoundFormula": [
+    "C_Delta = sup_u ||Delta(d_u)|| <= ||J^-1|| sup_u ||rhs(d_u)||.",
+    "C_b <= ||Pi_delta E_+|| ||Phi(a_+,s0)|| C_Delta.",
+    "C_z <= ||M^+|| C_b on the compatible source family.",
+    "sup_a ||Y(a)|| <= C_Phi (C_z + C_Delta).",
+    "The endpoint trace-dual norm is bounded by the endpoint Sobolev trace constant times sup_a ||Y(a)|| and coefficient sup norms."
+  ],
+  "formalProof": [
+    "Write P^*K=sum_{m=0}^8 c_m(a)K^(m) with c_8 nonzero on I. The first-order system Y'=A(a)Y has an exact fundamental matrix Phi by the standard linear ODE theorem.",
+    "The distributional source law fixes the jump Delta(d).  Thus the only remaining degrees of freedom are the eight entries of z=Y(s0-).",
+    "The Lagrange concomitant is bilinear in the endpoint jets of K and f.  After restricting f to the active source space and substituting the exact endpoint states, it becomes Mz+b(d).",
+    "Solvability of Mz=-b(d) is the finite-dimensional Fredholm alternative.  The Moore-Penrose solution gives the canonical choice and the sharp bound ||z||<=||M^+|| ||b(d)||.",
+    "For the actual source family d=d_u, continuity in u and compactness of the source window turn the pointwise bound into a uniform trace-dual bound, once the compatibility b(d_u) in Range(M) is supplied by the active trace range theorem."
+  ],
+  "interpretation": "The sampled ODE endpoint map has been demoted to finite evidence. The proof now uses the exact fundamental matrix and a precise range/compactness theorem.  The remaining global dependency is active trace range compatibility, not endpoint ODE sampling."
+}

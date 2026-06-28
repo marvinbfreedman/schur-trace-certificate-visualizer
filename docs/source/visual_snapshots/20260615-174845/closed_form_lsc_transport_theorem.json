@@ -1,0 +1,45 @@
+{
+  "theoremName": "closed-form lower semicontinuity transport theorem",
+  "proofClass": "analytic proof",
+  "limsupJson": "augmented_mosco_limsup_theorem.json",
+  "liminfJson": "augmented_mosco_liminf_theorem.json",
+  "quotientJson": "augmented_trace_quotient_compatibility_theorem.json",
+  "statement": "Nonnegative finite repaired forms pass to a nonnegative closed lower-semicontinuous form on the completed augmented trace-fiber domain and transported trace quotient X_aug.",
+  "statuses": {
+    "moscoLimsupInputStatus": {
+      "label": "Mosco limsup input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Recovery sequences give the correct upper envelope on the dense graph core."
+    },
+    "moscoLiminfInputStatus": {
+      "label": "Mosco liminf input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Weak graph compactness and lower semicontinuity give the closed lower envelope."
+    },
+    "traceQuotientCompatibilityInputStatus": {
+      "label": "trace quotient compatibility input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Finite trace repairs descend to the same transported quotient space X_aug."
+    },
+    "closedFormLowerSemicontinuityStatus": {
+      "label": "closed-form lower semicontinuity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Mosco limsup/liminf pair identifies the closed-form limit, and quotient compatibility places the trace repair on X_aug without losing nonnegativity."
+    }
+  },
+  "lowerSemicontinuityClosed": true,
+  "closedFormTransportClosed": true,
+  "moscoTransportFormClosed": true,
+  "traceQuotientCompatibilityClosed": true,
+  "proof": [
+    "Apply Mosco limsup to identify the correct closed envelope on recovery sequences.",
+    "Apply Mosco liminf to preserve nonnegativity under weak graph limits.",
+    "Use trace quotient compatibility to interpret the limiting trace form as D_aug on X_aug.",
+    "Conclude the closed lower-semicontinuous repaired form is nonnegative."
+  ],
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,38 @@
+{
+  "theoremName": "finite augmented Xi/KLM pullback identity theorem",
+  "proofClass": "symbolic identity",
+  "hardyJson": "klm_debranges_canonical_hardy_image_hardened_theorem.json",
+  "mellinSymbolicJson": "xi_mellin_boundary_symbolic_theorem.json",
+  "statuses": {
+    "hardyBranchIdentityStatus": {
+      "label": "finite shifted-Xi Hardy branch identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The hardened canonical Hardy theorem gives the signed Hardy branch Gram for every finite Xi_N by applying the same identity to E_{omega,N}(z)=Xi_N(z+i omega)."
+    },
+    "mellinVolterraSplitStatus": {
+      "label": "finite atom Mellin-to-Volterra split",
+      "closed": true,
+      "status": "closed",
+      "reason": "The symbolic Mellin theorem splits every retained atom into a diagonal Volterra/KLM tail and the primitive Mu boundary trace."
+    },
+    "finiteAugmentedPullbackStatus": {
+      "label": "finite augmented pullback identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "Summing the atomwise tail identities gives T_N^*KLM_NT_N; summing the primitive prefixes gives the augmented trace repair R_aug,N^*D_aug,N R_aug,N."
+    }
+  },
+  "finiteThetaAugmentedPullbackClosed": true,
+  "finiteThetaPullbackIdentityClosed": true,
+  "signedHardyGramEqualsFiniteDeBrangesKernel": true,
+  "finitePullbackFormula": "K_{E,N}=T_N^*KLM_NT_N+R_{aug,N}^*D_{aug,N}R_{aug,N}",
+  "proof": [
+    "Apply the canonical Hardy identity to E_{omega,N}.",
+    "Expand Xi_N into finitely many Mellin atoms.",
+    "Apply the symbolic moving-boundary split to each atom.",
+    "Collect diagonal Volterra tails into T_N^*KLM_NT_N.",
+    "Collect primitive prefixes into the augmented trace repair."
+  ],
+  "remainingAnalyticGap": null
+}

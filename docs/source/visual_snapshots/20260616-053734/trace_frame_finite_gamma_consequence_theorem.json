@@ -1,0 +1,33 @@
+{
+  "theoremName": "trace-frame finite gamma consequence theorem",
+  "proofClass": "symbolic identity",
+  "finiteFrameJson": "trace_frame_interval_lower_bound_certificate.json",
+  "gammaFiniteLower": 293.1151510088239,
+  "gammaFiniteLowerString": "293.115151008823886513710021973",
+  "observedGammaFloor": 293.1151510088239,
+  "maxRangeResidualRelative": null,
+  "activeDimension": 2,
+  "statement": "The finite weighted trace-frame matrix has a certified positive lower eigenvalue gamma_N^- > 0.",
+  "statuses": {
+    "finiteTraceFrameInputStatus": {
+      "label": "finite interval trace-frame input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite interval certificate proves gammaFiniteLowerPositive."
+    },
+    "finiteGammaPositiveConsequenceStatus": {
+      "label": "finite gamma positive consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Therefore gamma_N^- is a positive finite trace-frame lower bound."
+    }
+  },
+  "gammaFiniteLowerPositive": true,
+  "finiteTraceFrameLowerBoundClosed": true,
+  "proof": [
+    "Import the finite trace-frame interval lower-bound certificate.",
+    "Read off gammaFiniteLower and the finite lower-bound status.",
+    "Expose only the positive finite gamma consequence to the continuum theorem."
+  ],
+  "remainingAnalyticGap": null
+}

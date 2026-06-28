@@ -1,0 +1,53 @@
+{
+  "theoremName": "augmented Xi repair positive consequence theorem",
+  "proofClass": "analytic proof",
+  "transportJson": "xi_augmented_repair_transport_theorem.json",
+  "transportedTraceSpace": {
+    "name": "X_aug",
+    "definition": "closure Ran(R_aug) with quotient norm inf{||f||_V:R_aug f=x}",
+    "formDomain": "completed Volterra/Mellin graph-form domain V"
+  },
+  "exportedConsequence": {
+    "operator": "D_aug",
+    "space": "X_aug = closure Ran(R_aug)",
+    "norm": "transported quotient trace norm",
+    "claim": "D_aug >= 0 as a bounded nonnegative trace-side form"
+  },
+  "statuses": {
+    "DaugNonnegativeOnTransportedTraceSpaceStatus": {
+      "label": "D_aug nonnegative on transported augmented trace space",
+      "closed": true,
+      "status": "closed",
+      "reason": "The continuum transport theorem constructs a bounded nonnegative trace-side form D_aug on X_aug=closure Ran(R_aug), equipped with the quotient trace norm."
+    },
+    "closedRepairedAugmentedFormStatus": {
+      "label": "closed repaired augmented form",
+      "closed": true,
+      "status": "closed",
+      "reason": "The repaired form K+R_aug^*D_aug R_aug is the closed lower-semicontinuous limit of nonnegative finite repaired forms."
+    },
+    "positiveRepairConsequenceStatus": {
+      "label": "positive repair consequence used by closed cone",
+      "closed": true,
+      "status": "closed",
+      "reason": "Only the narrow consequence D_aug>=0 on X_aug, together with the closed repaired form, is exported to the de Branges closed-cone layer."
+    }
+  },
+  "DaugNonnegativeOnTransportedTraceSpaceClosed": true,
+  "DaugBoundedNonnegativeClosed": true,
+  "augmentedRepairPositiveConsequenceClosed": true,
+  "continuumAugmentedRepairClosed": true,
+  "closedAugmentedPositiveFormClosed": true,
+  "proof": [
+    "Import the continuum transported-repair theorem.",
+    "Project away its construction details and retain only D_aug>=0 on X_aug.",
+    "Retain the closed repaired-form conclusion needed for cone closure."
+  ],
+  "notExportedHere": [
+    "finite augmented Schur construction",
+    "trace convergence proof",
+    "Volterra tail positivity proof",
+    "Galerkin transport machinery"
+  ],
+  "remainingAnalyticGap": null
+}

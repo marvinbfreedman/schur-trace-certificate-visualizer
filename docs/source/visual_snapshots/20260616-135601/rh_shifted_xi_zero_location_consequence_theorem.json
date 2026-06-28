@@ -1,0 +1,37 @@
+{
+  "theoremName": "RH shifted-Xi zero-location consequence theorem",
+  "proofClass": "analytic proof",
+  "zeroDescentJson": "shifted_xi_zero_descent_endpoint_theorem.json",
+  "kernelPositivityJson": "shifted_xi_debranges_kernel_positivity_consequence_theorem.json",
+  "statement": "The shifted-Xi positive kernel family gives the endpoint zero-location consequence: all zeros of Xi(z)=xi(1/2+i z) are real.",
+  "statuses": {
+    "shiftedXiKernelPositiveInputStatus": {
+      "label": "shifted-Xi positive-kernel input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The shifted-Xi de Branges kernel is positive on every finite upper-half-plane evaluation set."
+    },
+    "zeroLocationInputStatus": {
+      "label": "zero-location endpoint input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The zero-descent endpoint theorem excludes non-real zeros of Xi."
+    },
+    "rhZeroLocationConsequenceStatus": {
+      "label": "RH-side zero-location consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "All Xi zeros are real in the z-normalization."
+    }
+  },
+  "shiftedXiKernelPositiveInputClosed": true,
+  "endpointZeroLocationClosed": true,
+  "conditionalRhClosed": true,
+  "formalRhClosed": true,
+  "proof": [
+    "Import shifted-Xi positive-kernel input.",
+    "Import the zero-location endpoint theorem.",
+    "Translate real zeros of Xi(z)=xi(1/2+i z) to the critical line for xi(s)."
+  ],
+  "remainingAnalyticGap": null
+}

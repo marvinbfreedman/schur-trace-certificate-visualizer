@@ -1,0 +1,89 @@
+{
+  "id": "20260604-224544",
+  "label": "source-envelope theorem checkpoint",
+  "createdAt": "2026-06-04T22:45:44",
+  "entry": "20260604-224544/visual_explainer.html",
+  "screenshot": "20260604-224544/screenshot.png",
+  "files": [
+    {
+      "path": "visual_explainer.html",
+      "bytes": 39731,
+      "sha256": "5c916a0d7f8ef4c833a827d5db7f06310f65c2a64660e63ce0756907fc9bc70e"
+    },
+    {
+      "path": "visual_data.json",
+      "bytes": 9284,
+      "sha256": "74dbc9b3b27756c77bc3010d595b5f616a9b6430726ea874a8471e1eb76fb690"
+    },
+    {
+      "path": "douglas_top_vector.json",
+      "bytes": 20222,
+      "sha256": "75dfb3cdd8dfb93d1f2abcea2aed20bc1c4ca76c4aaaa6ab02b7f6e7a5b906c8"
+    },
+    {
+      "path": "douglas_top_vector_scan.json",
+      "bytes": 19499,
+      "sha256": "23d2f11b59f2461c3fa6dde56abc1d9464ff0506c0d3935bf0bfb102d4440e81"
+    },
+    {
+      "path": "hardy_witness_profile.json",
+      "bytes": 2088,
+      "sha256": "dd0fa685b2a8d558931a6aab9b93c6595e9c09c89145f594b65632291f48aa36"
+    },
+    {
+      "path": "riesz_spectral_profile.json",
+      "bytes": 7531,
+      "sha256": "b30eecd6fb9803741b4f9d4660d29add608e5348474de2c9178ff873d5a83d59"
+    },
+    {
+      "path": "riesz_spectral_scan.json",
+      "bytes": 6503,
+      "sha256": "40d0b653d08fb65884d71f7efb0c923237d6885341e96965a104c27ab67c82e6"
+    },
+    {
+      "path": "windowed_hardy_green_scan.json",
+      "bytes": 16369,
+      "sha256": "d8c741378fc651f112e2189d7d929877e7c501a27ff6c5d856b0951ced726204"
+    },
+    {
+      "path": "three_part_hardy_green_certificate.json",
+      "bytes": 21243,
+      "sha256": "e76ba6f9a5f06bcf576acccc983ed665a2bf189c790c6344be36c6703c137842"
+    },
+    {
+      "path": "three_part_hardy_green_basis16_low8.json",
+      "bytes": 6868,
+      "sha256": "1ae4687fa2205efaebd3b0bce1ca545387b07692a5e0433ace6dc089d3498bbd"
+    },
+    {
+      "path": "endpoint_trace_refinement_scan.json",
+      "bytes": 16190,
+      "sha256": "621a37bee77ef2e492e9e7de70fa03a400361028637a4bd0cc64e615d7b3bfe9"
+    },
+    {
+      "path": "lambda_field_derivative_bounds.json",
+      "bytes": 1777,
+      "sha256": "0cac2fd797358baed648c190cfa4583c8d25216af6b150c64a4730997d832826"
+    },
+    {
+      "path": "trace_resolution_certificate.json",
+      "bytes": 2220,
+      "sha256": "3b60329395e295be9da1ccdaa56cbb40b7c96eca7a9894475e86e72f4922f053"
+    },
+    {
+      "path": "high_frequency_tail_refinement.json",
+      "bytes": 8078,
+      "sha256": "e4fc5a6632e05be1f049d7c8332419955498164494435ed7a0fe54d982058c7a"
+    },
+    {
+      "path": "spectral_tail_moment_certificate.json",
+      "bytes": 15236,
+      "sha256": "e00089a70d21a8e7e42130dfc12c326631f4d9e6437301f020df2a6a36c77e9d"
+    },
+    {
+      "path": "source_envelope_tail_certificate.json",
+      "bytes": 13481,
+      "sha256": "cea34cbff1a0c93db25fd2154d4c79b73400e04a929d2850c876d012a3de85fa"
+    }
+  ]
+}

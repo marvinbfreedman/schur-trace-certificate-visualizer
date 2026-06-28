@@ -1,0 +1,41 @@
+{
+  "theoremName": "high-block compact-compression consequence theorem",
+  "proofClass": "symbolic identity",
+  "statement": "The high-block compact-compression input theorem supplies the compact source compression consequences needed by the continuum high-block tail estimate passage.",
+  "statuses": {
+    "highBlockCompactCompressionStatus": {
+      "label": "high-block compact compression",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the high-block compact-compression input theorem."
+    },
+    "compactCompressionNormConvergenceStatus": {
+      "label": "compact-compression norm convergence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the high-block compact-compression input theorem."
+    },
+    "compactSourceNormConvergenceStatus": {
+      "label": "compact source norm convergence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the high-block compact-compression input theorem."
+    },
+    "compactCompressionConsequenceStatus": {
+      "label": "compact-compression consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Together these consequences give the compact source compression input used by the high-block continuum tail passage."
+    }
+  },
+  "highBlockCompactCompressionClosed": true,
+  "compactCompressionNormConvergenceClosed": true,
+  "compactSourceNormConvergenceClosed": true,
+  "highBlockCompactCompressionConsequenceClosed": true,
+  "proof": [
+    "Import the high-block compact-compression input theorem.",
+    "Extract the three compact-compression consequences used upstream.",
+    "Expose only these consequences to the high-block tail-passage theorem."
+  ],
+  "remainingAnalyticGap": null
+}

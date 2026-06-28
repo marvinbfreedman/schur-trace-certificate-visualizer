@@ -1,0 +1,71 @@
+{
+  "theoremName": "augmented finite Schur constants theorem",
+  "proofClass": "deterministic high-precision finite certificate",
+  "sourceCertificate": {
+    "path": "xi_augmented_trace_repair_schur.json",
+    "sha256": "ac9009ec03f14d5beae1d77c342b606d5a7e07a1b69041a358a634e94c52d005"
+  },
+  "finiteTraceDimensions": {
+    "traceRank": 10,
+    "traceNullity": 0,
+    "lambdaRows": 7,
+    "muRows": 10,
+    "augmentedRows": 17,
+    "basis": 10,
+    "constraints": 7
+  },
+  "certificateConstants": {
+    "dMin": -5.537301291337967e-69,
+    "pMin": 9.483221247842344e-06,
+    "constructedSchurMin": 9.483221245850071e-06,
+    "normalizedRangeResidual": 0.0,
+    "augmentedMuActionOnAugmentedNullspace": 0.0,
+    "eigTolerance": 1e-20
+  },
+  "statuses": {
+    "finiteTraceQuotientConstantStatus": {
+      "label": "finite trace quotient dimensions",
+      "closed": true,
+      "status": "closed",
+      "reason": "The augmented finite trace model has a resolved positive trace rank."
+    },
+    "finiteRangeResidualConstantStatus": {
+      "label": "finite Schur range residual",
+      "closed": true,
+      "status": "closed",
+      "reason": "The normalized Douglas range residual is below the certificate tolerance."
+    },
+    "finiteDaugNonnegativeConstantStatus": {
+      "label": "finite D_aug,N nonnegative constant",
+      "closed": true,
+      "status": "closed",
+      "reason": "The computed lower spectral endpoint of D_aug,N is nonnegative up to the stated tolerance."
+    },
+    "finiteSchurGapConstantStatus": {
+      "label": "finite Schur complement gap",
+      "closed": true,
+      "status": "closed",
+      "reason": "The repaired Schur complement lower endpoint is nonnegative up to tolerance."
+    },
+    "finiteRepairedFormConstantStatus": {
+      "label": "finite repaired form lower endpoint",
+      "closed": true,
+      "status": "closed",
+      "reason": "The repaired finite form lower endpoint is nonnegative up to tolerance."
+    },
+    "finiteMuAnnihilationConstantStatus": {
+      "label": "finite Mu kernel annihilation constant",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Mu rows vanish on the augmented finite trace kernel up to tolerance."
+    }
+  },
+  "finiteSchurConstantsClosed": true,
+  "finiteTraceQuotientConstantsClosed": true,
+  "finiteSchurRangeConstantsClosed": true,
+  "finiteRepairOperatorNonnegativeConstantsClosed": true,
+  "finiteSchurGapConstantsClosed": true,
+  "finiteRepairedFormPositiveConstantsClosed": true,
+  "finiteMuKernelAnnihilationConstantsClosed": true,
+  "remainingAnalyticGap": null
+}

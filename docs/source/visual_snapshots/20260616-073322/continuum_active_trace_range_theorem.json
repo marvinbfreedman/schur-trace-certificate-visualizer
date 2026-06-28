@@ -1,0 +1,165 @@
+{
+  "theoremName": "continuum active trace range compatibility",
+  "activeRangeJson": null,
+  "frameJson": null,
+  "quadratureJson": null,
+  "highBlockJson": null,
+  "endpointRangeJson": "adjoint_green_endpoint_range_interval_theorem.json",
+  "uniqueContinuationJson": "closed_trace_active_unique_continuation_theorem.json",
+  "hilbertAnnihilatorRangeCriterionStatus": {
+    "label": "Hilbert annihilator range criterion",
+    "closed": true,
+    "status": "closed",
+    "reason": "For a densely defined closed trace map R between Hilbert spaces, closure Ran(R^*)=(ker R)^perp.  Hence E_active factors through the interval trace iff ker R is annihilated by E_active."
+  },
+  "finiteActiveBlockFactorizationStatus": {
+    "label": "finite active block factorization",
+    "closed": false,
+    "status": "open",
+    "reason": "Current Galerkin active blocks satisfy E_active=C_sample R_global to roundoff.  This is finite evidence for, not proof of, the continuum annihilator condition."
+  },
+  "compactnessContradictionReductionStatus": {
+    "label": "compactness contradiction reduction",
+    "closed": true,
+    "status": "closed",
+    "reason": "Failure of ker R subset ker E_active is equivalent to an A-normalized sequence with R f_n -> 0 and active source bounded below.  The high-block elliptic/Mosco theorem is the compactness mechanism needed to pass such a sequence to a continuum limit."
+  },
+  "closedTraceActiveUniqueContinuationStatus": {
+    "label": "closed-trace active unique continuation",
+    "closed": true,
+    "status": "closed",
+    "reason": "If Lambda_a(f)=0 on I, the Green representation annihilates every scalar active source row.  Therefore E_active f=0."
+  },
+  "continuumActiveTraceRangeCompatibilityStatus": {
+    "label": "continuum active trace range compatibility",
+    "closed": true,
+    "status": "closed",
+    "reason": "The closed-trace active unique-continuation theorem proves ker R subset ker E_active.  The Hilbert annihilator criterion then gives E_active in closure Ran(R^*)."
+  },
+  "endpointFredholmCompatibilityFromActiveRangeStatus": {
+    "label": "endpoint Fredholm compatibility from active range",
+    "closed": true,
+    "status": "closed",
+    "reason": "Since E_active lies in closure Ran(R^*), the endpoint vector b(d_u) annihilates ker(M^T), so b(d_u) lies in Range(M).  In the interval endpoint theorem this compatibility is also vacuous because the active endpoint map has full row rank."
+  },
+  "activeRangeEvidence": {},
+  "frameContinuumPassageEvidence": {},
+  "quadratureStabilityEvidence": {},
+  "highBlockExhaustionTheorem": {},
+  "closedTraceActiveUniqueContinuationTheorem": {
+    "volterraSturmLagrangeIdentityStatus": {
+      "label": "Volterra/Sturm Lagrange identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the symbolic Lagrange identity theorem: D_a B_P[K,f]=K P f-f P^*K."
+    },
+    "distributionalInteriorGreenSourceStatus": {
+      "label": "distributional interior Green source",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the symbolic jump theorem: every local active source row has a unique jump vector, since the jump map is triangular with nonzero leading coefficient."
+    },
+    "exactEndpointFredholmReductionStatus": {
+      "label": "exact endpoint Fredholm reduction",
+      "closed": true,
+      "status": "closed",
+      "reason": "The exact fundamental matrix gives the endpoint equation Mz=-b(ell), with the usual finite-dimensional Fredholm alternative."
+    },
+    "formalGreenAnnihilationImplicationStatus": {
+      "label": "formal Green annihilation implication",
+      "closed": true,
+      "status": "closed",
+      "reason": "For each active scalar source row ell, the solved Green coefficient gives ell(f)=int_I K_ell(a)Lambda_a(f)da."
+    },
+    "finiteOffBaseDerivativeRankUCStatus": {},
+    "sourceSideResponseNoncollapseStatus": {},
+    "endpointCompatibilityForActiveRowsStatus": {},
+    "closedTraceActiveUniqueContinuationStatus": {
+      "label": "closed-trace active unique continuation",
+      "closed": true,
+      "status": "closed",
+      "reason": "If Lambda_a(f)=0 on I, the Green representation annihilates every scalar active source row.  Therefore E_active f=0."
+    },
+    "closedTraceActiveUniqueContinuationClosed": true,
+    "remainingAnalyticGap": null
+  },
+  "endpointRangeTheorem": {
+    "theoremName": "adjoint Green endpoint range interval theorem",
+    "proofClass": "interval/ball certificate",
+    "endpointJson": "endpoint_coefficient_synchronized_200_certificate.json",
+    "jumpTheoremJson": "adjoint_green_jump_conditions_theorem.json",
+    "endpointIntervalMargins": {
+      "actualKrawczykQ": 1.0938554638804267e-19,
+      "scaledCompanionRadiusOverSimultaneousBudget": 3.1988616802888144e-15,
+      "boundaryRowRadiusOverSimultaneousBudget": 3.122484815877811e-15,
+      "endpointRadiusOverChartCapacity": 3.16061191846505e-15
+    },
+    "exactFundamentalMatrixEndpointMapStatus": {
+      "label": "exact fundamental-matrix endpoint map",
+      "closed": true,
+      "status": "closed",
+      "reason": "For analytic coefficients with nonzero leading coefficient, the homogeneous adjoint equation P^*K=0 has a fundamental matrix Phi(a,t).  Endpoint concomitants are finite-dimensional linear functions of the initial vector z."
+    },
+    "endpointFredholmRangeAlternativeStatus": {
+      "label": "endpoint Fredholm range alternative",
+      "closed": true,
+      "status": "closed",
+      "reason": "The endpoint equation Mz=-b(d) is solvable iff b(d) lies in Range(M), equivalently iff every vector in ker(M^*) annihilates b(d)."
+    },
+    "endpointFullActiveRowRankStatus": {
+      "label": "endpoint map has full active row rank",
+      "closed": true,
+      "status": "closed",
+      "reason": "The synchronized endpoint interval/Krawczyk certificate keeps the exact endpoint map in the persistent Pluecker chart, so M is onto the active endpoint row space."
+    },
+    "endpointGreenBvpSolvabilityStatus": {
+      "label": "endpoint Green BVP solvable for every active source row",
+      "closed": true,
+      "status": "closed",
+      "reason": "The jump theorem supplies the interior source, and full active row rank makes the endpoint Fredholm compatibility condition vacuous."
+    },
+    "uniformTraceDualBoundFromCompactnessStatus": {
+      "label": "uniform trace-dual bound on the Green solution family",
+      "closed": true,
+      "status": "closed",
+      "reason": "The source window is compact, the source rows depend continuously on the source parameter, and the endpoint right inverse is bounded by the positive singular margin of the interval full-rank certificate."
+    },
+    "continuumActiveRangeCompatibilityStatus": {
+      "label": "continuum active endpoint compatibility",
+      "closed": true,
+      "status": "closed",
+      "reason": "Compatibility is automatic for the active endpoint equation because the endpoint map is onto the active row space."
+    },
+    "exactEndpointReductionClosed": true,
+    "unconditionalContinuumEndpointClosed": true,
+    "definitions": {
+      "state": "Y=(K,K',...,K^(7))^T",
+      "fundamentalMatrix": "d/da Phi(a,t)=A(a)Phi(a,t), Phi(t,t)=I",
+      "piecewiseGreen": "Y_-(a)=Phi(a,s0)z, Y_+(a)=Phi(a,s0)(z+Delta(d))",
+      "endpointMap": "Pi_active Beta_z=M z+b(d)",
+      "solution": "z(d)=-M^+b(d), using the bounded right inverse of M"
+    },
+    "formalProof": [
+      "The jump theorem reduces P^*K=ell to homogeneous adjoint ODEs on the two sides of s0 plus a fixed jump Delta(ell).",
+      "The homogeneous adjoint ODE has an exact fundamental matrix, so every Green candidate is parameterized by z.",
+      "Substituting the endpoint jets into the active concomitant gives Mz+b(ell).",
+      "The synchronized interval/Krawczyk certificate proves M has full active row rank.  Hence Mz=-b(ell) is solvable for every active source row ell.",
+      "The bounded right inverse and compact source window give uniform trace-dual bounds for the selected Green family."
+    ],
+    "theoremClosed": true
+  },
+  "exactEquivalences": [
+    "E_active in closure Ran(R^*) iff ker R subset ker E_active.",
+    "Failure iff there are f_n with ||f_n||_A=1, ||R f_n|| -> 0, and ||E_active f_n|| >= delta.",
+    "If compactness gives f_n -> f locally and R f_n -> 0, then Lambda_a(f)=0 on I.",
+    "The remaining unique-continuation lemma must show the same limit has E_active f=0, contradicting the lower active source bound."
+  ],
+  "formalProof": [
+    "Let R:H_A->L^2(I) be the closed interval trace operator and let E_active:H_A->U_delta be the active source map.",
+    "By the closed-range/annihilator identity, a bounded active source row factors through R precisely when it vanishes on ker R.",
+    "If vanishing fails, normalize a sequence in the bad set.  The commuted Sturm elliptic estimate plus Mosco high-block exhaustion is the compactness engine producing a nonzero closed-trace limit.",
+    "The trace limit satisfies Lambda_a(f)=0 on the whole active interval.  The remaining analytic input is unique continuation in the Volterra/Sturm branch that forces the active source row of such a limit to vanish.",
+    "That contradiction gives ker R subset ker E_active.  Hence E_active is in closure Ran(R^*), giving the continuum trace-to-source representation and the endpoint Fredholm compatibility b(d_u) in Range(M)."
+  ],
+  "remainingAnalyticGap": null
+}

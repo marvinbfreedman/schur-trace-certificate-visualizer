@@ -1,0 +1,42 @@
+{
+  "theoremName": "primitive endpoint compatibility consequence theorem",
+  "proofClass": "symbolic identity",
+  "boundaryZeroJson": "primitive_boundary_zero_consequence_theorem.json",
+  "densityJson": "primitive_trace_density_consequence_theorem.json",
+  "dqJson": "green_feature_dq_vanishes_theorem.json",
+  "statuses": {
+    "boundaryZeroInputStatus": {
+      "label": "primitive boundary correction is zero",
+      "closed": true,
+      "status": "closed",
+      "reason": "The primitive boundary-zero consequence gives D_bdy=0."
+    },
+    "dqZeroInputStatus": {
+      "label": "quotient repair vanishes on X_R",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Green-feature theorem gives D_q=0 on the completed trace range."
+    },
+    "primitiveDensityInputStatus": {
+      "label": "D_q zero transfers to primitive trace image",
+      "closed": true,
+      "status": "closed",
+      "reason": "The primitive trace image is dense in X_R and D_q is bounded."
+    },
+    "primitiveEndpointCompatibilityStatus": {
+      "label": "primitive endpoint compatibility",
+      "closed": true,
+      "status": "closed",
+      "reason": "The primitive boundary correction and quotient repair both vanish on primitive traces."
+    }
+  },
+  "primitiveEndpointCompatibilityConsequenceClosed": true,
+  "primitiveEndpointCompatibilityClosed": true,
+  "proof": [
+    "D_bdy=0 on primitive transport.",
+    "D_q=0 on X_R by the Green-feature contraction.",
+    "Primitive trace density transfers D_q=0 to primitive traces.",
+    "Therefore endpoint/trace correction is annihilated for the original primitive lift."
+  ],
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,165 @@
+{
+  "theoremName": "trace-fiber Euler-Lagrange minimizer",
+  "exactEquations": [
+    "f=n+Jx, n in N=ker R",
+    "Q(n+Jx)=<An,n>+2 Re <Bx,n>+<Cx,x>",
+    "Euler-Lagrange: A n_x + Bx = 0 in N^*",
+    "canonical minimizer: f_x=Jx-A^+Bx",
+    "minimized energy: Q(f_x)=<x,(C-B^*A^+B)x>",
+    "finite spectral square: <Sz,z>=sum_k |sqrt(lambda_k)<v_k,z>|^2 when S>=0"
+  ],
+  "greenInterpretation": {
+    "operatorEquation": "A n_x = -B x",
+    "affineTraceConstraint": "R(Jx+n_x)=x",
+    "variationalBoundaryCondition": "Q(f_x,h)=0 for every h with Rh=0",
+    "dirichletToNeumannForm": "D_trace(x,y)=Q(f_x,f_y)",
+    "squareTarget": "Find explicit residual Green features G_x(u) such that D_trace(x,y)=integral G_x(u)G_y(u)dmu(u)."
+  },
+  "statuses": {
+    "eulerLagrangeEquationStatus": {
+      "label": "Euler-Lagrange equation on trace fiber",
+      "closed": true,
+      "status": "closed",
+      "reason": "For fixed trace x, variations h in ker R give Q(f_x,h)=0, equivalently A n_x + Bx=0."
+    },
+    "minimizerFormulaStatus": {
+      "label": "Moore-Penrose minimizer formula",
+      "closed": true,
+      "status": "closed",
+      "reason": "The canonical minimizer is f_x=Jx-A^+Bx.  Other minimizers can differ only by A-null vectors in ker R."
+    },
+    "minimizedEnergyStatus": {
+      "label": "minimized energy is Schur complement",
+      "closed": true,
+      "status": "closed",
+      "reason": "Substitution gives Q(f_x)=<x,(C-B^*A^+B)x>."
+    },
+    "finiteMinimizerCheckStatus": {
+      "label": "finite Euler-Lagrange minimizer check",
+      "closed": true,
+      "status": "closed",
+      "reason": "Finite Galerkin minimizers satisfy the trace constraint, Euler-Lagrange residual, energy identity, and perturbation minimality checks below tolerance."
+    },
+    "finiteSpectralSquareStatus": {
+      "label": "finite minimized energy square representation",
+      "closed": true,
+      "status": "closed",
+      "reason": "Since the finite Schur complement is positive, its spectral decomposition writes the minimized energy as a finite sum of squares."
+    },
+    "continuumVolterraGreenSquareStatus": {
+      "label": "continuum Volterra/Green integral square",
+      "closed": false,
+      "status": "open",
+      "reason": "The minimizer and abstract square are solved, but the square has not yet been identified with explicit Volterra/Green features for the continuum kernel.",
+      "blocker": "Derive the Green operator solving A n=-Bx in the continuum and prove C-B^*A^+B equals an integral of explicit residual Green features."
+    }
+  },
+  "finiteCheck": {
+    "basis": 8,
+    "constraints": 5,
+    "traceRank": 5,
+    "traceNullity": 3,
+    "schurComplementMin": 0.00011790089587421823,
+    "schurComplementMax": 0.0415569984677974,
+    "maxEulerLagrangeResidual": 1.1129010215217928e-61,
+    "maxTraceError": 6.036132737007912e-57,
+    "maxEnergyIdentityError": 1.750223046898446e-61,
+    "maxSpectralSquareError": 9.723461371658034e-63,
+    "minPerturbationGap": 0.06556014383722485,
+    "negativeSpectralFloor": 0.0,
+    "rows": [
+      {
+        "seed": 0,
+        "traceError": 2.4141514299521984e-57,
+        "eulerLagrangeResidual": 4.916120912865747e-62,
+        "energy": 0.013465550705610682,
+        "schurEnergy": 0.013465550705610682,
+        "spectralSquareEnergy": 0.013465550705610682,
+        "energyMinusSchur": 2.7954951443516848e-62,
+        "squareMinusSchur": 2.4308653429145085e-63,
+        "perturbationGaps": [
+          0.06556014383722485,
+          0.08093844918175908,
+          0.09793552350992847
+        ],
+        "firstFeatures": [
+          0.006576392994008866,
+          0.013430556987866821,
+          0.02939357569946107,
+          -0.0066098279454783115,
+          -0.11105966766529567
+        ]
+      },
+      {
+        "seed": 1,
+        "traceError": 3.6213343379172755e-57,
+        "eulerLagrangeResidual": 6.301523184070094e-62,
+        "energy": 0.030297489087624033,
+        "schurEnergy": 0.030297489087624033,
+        "spectralSquareEnergy": 0.030297489087624033,
+        "energyMinusSchur": 5.83407682299482e-62,
+        "squareMinusSchur": 4.861730685829017e-63,
+        "perturbationGaps": [
+          0.08093844918175908,
+          0.09793552350992847,
+          0.11655136682173306
+        ],
+        "firstFeatures": [
+          -0.009864589491013298,
+          -0.020145835481800232,
+          -0.04409036354919161,
+          0.009914741918217469,
+          0.1665895014979435
+        ]
+      },
+      {
+        "seed": 2,
+        "traceError": 4.828302859904397e-57,
+        "eulerLagrangeResidual": 9.832241825731493e-62,
+        "energy": 0.05386220282244273,
+        "schurEnergy": 0.05386220282244273,
+        "spectralSquareEnergy": 0.05386220282244273,
+        "energyMinusSchur": 1.1181980577406739e-61,
+        "squareMinusSchur": 9.723461371658034e-63,
+        "perturbationGaps": [
+          0.09793552350992847,
+          0.11655136682173306,
+          0.13678597911717283
+        ],
+        "firstFeatures": [
+          0.013152785988017732,
+          0.026861113975733642,
+          0.05878715139892214,
+          -0.013219655890956623,
+          -0.22211933533059133
+        ]
+      },
+      {
+        "seed": 3,
+        "traceError": 6.036132737007912e-57,
+        "eulerLagrangeResidual": 1.1129010215217928e-61,
+        "energy": 0.08415969191006677,
+        "schurEnergy": 0.08415969191006677,
+        "spectralSquareEnergy": 0.08415969191006677,
+        "energyMinusSchur": 1.750223046898446e-61,
+        "squareMinusSchur": 9.723461371658034e-63,
+        "perturbationGaps": [
+          0.11655136682173306,
+          0.13678597911717283,
+          0.15863936039624776
+        ],
+        "firstFeatures": [
+          -0.016440982485022165,
+          -0.03357639246966705,
+          -0.07348393924865268,
+          0.01652456986369578,
+          0.2776491691632392
+        ]
+      }
+    ],
+    "closed": true
+  },
+  "continuumTheoremClosed": false,
+  "correctedConclusion": "The Euler-Lagrange minimizer is solved exactly and verified in finite quotient coordinates.  The minimized energy is the Schur kernel and has a finite spectral square in every positive finite probe.  The open part is the explicit continuum Volterra/Green integral-square identification.",
+  "nextProofTarget": "Build the continuum Green solver for A n=-Bx from the Volterra Sturm operator, then compute the residual feature map whose L2/Volterra norm equals C-B^*A^+B."
+}

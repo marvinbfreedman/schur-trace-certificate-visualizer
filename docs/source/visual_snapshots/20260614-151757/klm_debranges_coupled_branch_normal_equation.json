@@ -1,0 +1,201 @@
+{
+  "theoremName": "coupled signed-branch Weyl/Volterra normal equation",
+  "normalEquation": "(G_+^*G_+ + G_-^*G_-)f_z = G_+^*T_+h_z + G_-^*T_-h_z",
+  "basis": 8,
+  "constraints": 5,
+  "omega": 0.49,
+  "sOrder": 16,
+  "laguerreOrder": 40,
+  "rhsLaguerreOrder": 60,
+  "traceRank": 5,
+  "traceLiftSkipped": false,
+  "variants": [
+    "same",
+    "apply_sigma_u"
+  ],
+  "pairTransforms": [
+    "direct",
+    "swap"
+  ],
+  "results": [
+    {
+      "variant": "same",
+      "pairTransform": "direct",
+      "normalEquationResidualMax": 4.133432149310409e-29,
+      "normalEquationResidualMean": 3.8055262469325034e-29,
+      "coefficientNormFrobenius": 6.715570425434331,
+      "directContinuousGram": {
+        "jointRelative": 0.5470113722037986,
+        "plusRelative": 0.766185807338985,
+        "crossRelative": 0.4634196437282608,
+        "minusRelative": 0.4013457070073378,
+        "jointFrobenius": 0.16256671915544052,
+        "globalScale": 0.793480921200744,
+        "scaledJointRelative": 0.49829820524490265,
+        "mappedJointNorm": 0.3247287598366808
+      },
+      "rawTraceNormFrobenius": 142.65091527053687,
+      "traceCoordinateNormFrobenius": 6.4434061347269695,
+      "greenTraceGram": {
+        "jointRelative": 8.300986733992884,
+        "plusRelative": 7.875729931674074,
+        "crossRelative": 8.469629661245381,
+        "minusRelative": 8.397330776527342,
+        "jointFrobenius": 2.4669764609487723,
+        "globalScale": 0.007038831314289404,
+        "scaledJointRelative": 0.9982923062983778,
+        "mappedJointNorm": 2.466432445496461
+      }
+    },
+    {
+      "variant": "apply_sigma_u",
+      "pairTransform": "direct",
+      "normalEquationResidualMax": 4.1735558108356936e-29,
+      "normalEquationResidualMean": 3.841499200952333e-29,
+      "coefficientNormFrobenius": 6.855764511880191,
+      "directContinuousGram": {
+        "jointRelative": 0.5572030778137932,
+        "plusRelative": 0.7982369795897222,
+        "crossRelative": 0.4644202325538474,
+        "minusRelative": 0.38909483436960707,
+        "jointFrobenius": 0.16559559977439345,
+        "globalScale": 0.7735521132642633,
+        "scaledJointRelative": 0.49583053954846995,
+        "mappedJointNorm": 0.3336377428129552
+      },
+      "rawTraceNormFrobenius": 145.6790301539667,
+      "traceCoordinateNormFrobenius": 6.579892379268421,
+      "greenTraceGram": {
+        "jointRelative": 8.512727035753509,
+        "plusRelative": 8.101178379351158,
+        "crossRelative": 8.662463329106204,
+        "minusRelative": 8.635162553904275,
+        "jointFrobenius": 2.5299037197213434,
+        "globalScale": 0.006910735268129841,
+        "scaledJointRelative": 0.9982680239752193,
+        "mappedJointNorm": 2.5299319319742923
+      }
+    },
+    {
+      "variant": "same",
+      "pairTransform": "swap",
+      "normalEquationResidualMax": 4.189045894335471e-29,
+      "normalEquationResidualMean": 3.8246338058263784e-29,
+      "coefficientNormFrobenius": 6.651970921571318,
+      "directContinuousGram": {
+        "jointRelative": 0.5219607863020068,
+        "plusRelative": 0.7193648961640838,
+        "crossRelative": 0.4424235875604102,
+        "minusRelative": 0.4060271601339703,
+        "jointFrobenius": 0.15512191678036563,
+        "globalScale": 0.8216027882247697,
+        "scaledJointRelative": 0.4862548964069458,
+        "mappedJointNorm": 0.3160777160010689
+      },
+      "rawTraceNormFrobenius": 141.33190517808825,
+      "traceCoordinateNormFrobenius": 6.381659184689509,
+      "greenTraceGram": {
+        "jointRelative": 7.726583143640218,
+        "plusRelative": 7.272227141652259,
+        "crossRelative": 7.9424234654504255,
+        "minusRelative": 7.751138733622616,
+        "jointFrobenius": 2.2962690279779845,
+        "globalScale": 0.0077381567086012475,
+        "scaledJointRelative": 0.9982133241517315,
+        "mappedJointNorm": 2.29478273581871
+      }
+    },
+    {
+      "variant": "apply_sigma_u",
+      "pairTransform": "swap",
+      "normalEquationResidualMax": 4.2289195325231655e-29,
+      "normalEquationResidualMean": 3.858611170445135e-29,
+      "coefficientNormFrobenius": 6.787674013178214,
+      "directContinuousGram": {
+        "jointRelative": 0.5302030441909391,
+        "plusRelative": 0.749643743252849,
+        "crossRelative": 0.44125226491905994,
+        "minusRelative": 0.3932794913225824,
+        "jointFrobenius": 0.157571439571891,
+        "globalScale": 0.8012158417586913,
+        "scaledJointRelative": 0.48369582652398213,
+        "mappedJointNorm": 0.32464671558167135
+      },
+      "rawTraceNormFrobenius": 144.26111385066935,
+      "traceCoordinateNormFrobenius": 6.513705386917232,
+      "greenTraceGram": {
+        "jointRelative": 7.917041216092437,
+        "plusRelative": 7.475477474448146,
+        "crossRelative": 8.115870528225791,
+        "minusRelative": 7.9653032726248165,
+        "jointFrobenius": 2.352871405092168,
+        "globalScale": 0.007605573375067894,
+        "scaledJointRelative": 0.9981868829967288,
+        "mappedJointNorm": 2.3519836179834765
+      }
+    }
+  ],
+  "bestDirectContinuousGram": {
+    "variant": "apply_sigma_u",
+    "pairTransform": "swap",
+    "normalEquationResidualMax": 4.2289195325231655e-29,
+    "normalEquationResidualMean": 3.858611170445135e-29,
+    "coefficientNormFrobenius": 6.787674013178214,
+    "directContinuousGram": {
+      "jointRelative": 0.5302030441909391,
+      "plusRelative": 0.749643743252849,
+      "crossRelative": 0.44125226491905994,
+      "minusRelative": 0.3932794913225824,
+      "jointFrobenius": 0.157571439571891,
+      "globalScale": 0.8012158417586913,
+      "scaledJointRelative": 0.48369582652398213,
+      "mappedJointNorm": 0.32464671558167135
+    },
+    "rawTraceNormFrobenius": 144.26111385066935,
+    "traceCoordinateNormFrobenius": 6.513705386917232,
+    "greenTraceGram": {
+      "jointRelative": 7.917041216092437,
+      "plusRelative": 7.475477474448146,
+      "crossRelative": 8.115870528225791,
+      "minusRelative": 7.9653032726248165,
+      "jointFrobenius": 2.352871405092168,
+      "globalScale": 0.007605573375067894,
+      "scaledJointRelative": 0.9981868829967288,
+      "mappedJointNorm": 2.3519836179834765
+    }
+  },
+  "bestGreenTraceGram": {
+    "variant": "apply_sigma_u",
+    "pairTransform": "swap",
+    "normalEquationResidualMax": 4.2289195325231655e-29,
+    "normalEquationResidualMean": 3.858611170445135e-29,
+    "coefficientNormFrobenius": 6.787674013178214,
+    "directContinuousGram": {
+      "jointRelative": 0.5302030441909391,
+      "plusRelative": 0.749643743252849,
+      "crossRelative": 0.44125226491905994,
+      "minusRelative": 0.3932794913225824,
+      "jointFrobenius": 0.157571439571891,
+      "globalScale": 0.8012158417586913,
+      "scaledJointRelative": 0.48369582652398213,
+      "mappedJointNorm": 0.32464671558167135
+    },
+    "rawTraceNormFrobenius": 144.26111385066935,
+    "traceCoordinateNormFrobenius": 6.513705386917232,
+    "greenTraceGram": {
+      "jointRelative": 7.917041216092437,
+      "plusRelative": 7.475477474448146,
+      "crossRelative": 8.115870528225791,
+      "minusRelative": 7.9653032726248165,
+      "jointFrobenius": 2.352871405092168,
+      "globalScale": 0.007605573375067894,
+      "scaledJointRelative": 0.9981868829967288,
+      "mappedJointNorm": 2.3519836179834765
+    }
+  },
+  "coupledNormalEquationSolved": true,
+  "directContinuousMapConstructed": false,
+  "traceMapConstructed": false,
+  "diagnosis": "The coupled signed-branch normal equations test the obvious missing normalizations: direct, swapped, and phase-rotated branch targets. If residuals remain large, the missing transform is not a scalar branch renormalization; it must mix the Hardy half-line variable with the Volterra endpoint variable more substantially.",
+  "nextProofTarget": "If the coupled branch system fails, derive an integral Hardy-to-Volterra transmutation kernel U(r;s,u,sigma) rather than a scalar branch normalization."
+}

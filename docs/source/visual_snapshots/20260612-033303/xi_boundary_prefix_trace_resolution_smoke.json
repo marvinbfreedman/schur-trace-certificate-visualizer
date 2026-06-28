@@ -1,0 +1,173 @@
+{
+  "theoremName": "Mellin boundary-prefix endpoint trace resolution",
+  "kind": "tilde3",
+  "omega": 0.49,
+  "L": 8.0,
+  "basis": 8,
+  "constraints": 5,
+  "ampKind": "positive",
+  "fourierScale": 0.5,
+  "traceRank": 5,
+  "traceNullity": 3,
+  "traceRankTolerance": 6.09219157766776e-22,
+  "maxRowSpanResidualRelative": 0.792738432341822,
+  "maxRowSpanResidualNorm": 0.21907529228318023,
+  "maxNullEnergyOpMax": 0.7089858335395551,
+  "maxNullEnergyOpL2": 0.9261340540087061,
+  "rows": [
+    {
+      "nodeIndex": 0,
+      "branch": "plus",
+      "z": {
+        "real": 0.0,
+        "imag": 0.84
+      },
+      "rowNorm": 0.23680856445584203,
+      "rowSpanResidualNorm": 0.18712751052503762,
+      "rowSpanResidualRelative": 0.7902058397044651,
+      "traceCoefficientNorm": 638.6433895935985,
+      "nullEnergyOpMax": 0.6000162453993999,
+      "nullEnergyOpL2": 0.7870556456506148,
+      "positiveNullModes": 3
+    },
+    {
+      "nodeIndex": 0,
+      "branch": "minus",
+      "z": {
+        "real": 0.0,
+        "imag": -0.14
+      },
+      "rowNorm": 0.2784012746683166,
+      "rowSpanResidualNorm": 0.21907529228318023,
+      "rowSpanResidualRelative": 0.7869047745711061,
+      "traceCoefficientNorm": 744.2543493694455,
+      "nullEnergyOpMax": 0.7089858335395551,
+      "nullEnergyOpL2": 0.9261340540087061,
+      "positiveNullModes": 3
+    },
+    {
+      "nodeIndex": 1,
+      "branch": "plus",
+      "z": {
+        "real": 0.45,
+        "imag": 0.89
+      },
+      "rowNorm": 0.2346157653493187,
+      "rowSpanResidualNorm": 0.18543861998539285,
+      "rowSpanResidualRelative": 0.7903928353207375,
+      "traceCoefficientNorm": 633.0426240720892,
+      "nullEnergyOpMax": 0.5942701495330607,
+      "nullEnergyOpL2": 0.7797124440347893,
+      "positiveNullModes": 3
+    },
+    {
+      "nodeIndex": 1,
+      "branch": "minus",
+      "z": {
+        "real": 0.45,
+        "imag": -0.08999999999999998
+      },
+      "rowNorm": 0.27557083489502276,
+      "rowSpanResidualNorm": 0.21690346714528783,
+      "rowSpanResidualRelative": 0.7871060347439017,
+      "traceCoefficientNorm": 737.0700384586008,
+      "nullEnergyOpMax": 0.7015302600086631,
+      "nullEnergyOpL2": 0.9166428704291288,
+      "positiveNullModes": 3
+    },
+    {
+      "nodeIndex": 2,
+      "branch": "plus",
+      "z": {
+        "real": 0.95,
+        "imag": 1.04
+      },
+      "rowNorm": 0.2280839266384619,
+      "rowSpanResidualNorm": 0.1804055452298747,
+      "rowSpanResidualRelative": 0.7909612390873879,
+      "traceCoefficientNorm": 616.3459812758882,
+      "nullEnergyOpMax": 0.5771589106835036,
+      "nullEnergyOpL2": 0.7578378533722513,
+      "positiveNullModes": 3
+    },
+    {
+      "nodeIndex": 2,
+      "branch": "minus",
+      "z": {
+        "real": 0.95,
+        "imag": 0.060000000000000046
+      },
+      "rowNorm": 0.2671520574500673,
+      "rowSpanResidualNorm": 0.21044045000944822,
+      "rowSpanResidualRelative": 0.7877178713054871,
+      "traceCoefficientNorm": 715.6824287116648,
+      "nullEnergyOpMax": 0.6793621917194437,
+      "nullEnergyOpL2": 0.8884115813929843,
+      "positiveNullModes": 3
+    },
+    {
+      "nodeIndex": 3,
+      "branch": "plus",
+      "z": {
+        "real": 1.55,
+        "imag": 1.24
+      },
+      "rowNorm": 0.21898223850799747,
+      "rowSpanResidualNorm": 0.1733860687083753,
+      "rowSpanResidualRelative": 0.7917814243279054,
+      "traceCoefficientNorm": 593.040109415595,
+      "nullEnergyOpMax": 0.553307868738356,
+      "nullEnergyOpL2": 0.7273376518170723,
+      "positiveNullModes": 3
+    },
+    {
+      "nodeIndex": 3,
+      "branch": "minus",
+      "z": {
+        "real": 1.55,
+        "imag": 0.26
+      },
+      "rowNorm": 0.25544126499078734,
+      "rowSpanResidualNorm": 0.20144053374882984,
+      "rowSpanResidualRelative": 0.7885982468654581,
+      "traceCoefficientNorm": 685.8659967986268,
+      "nullEnergyOpMax": 0.6485196013289184,
+      "nullEnergyOpL2": 0.849115174302815,
+      "positiveNullModes": 3
+    },
+    {
+      "nodeIndex": 4,
+      "branch": "plus",
+      "z": {
+        "real": 2.25,
+        "imag": 1.44
+      },
+      "rowNorm": 0.20886205519498177,
+      "rowSpanResidualNorm": 0.16557297821096095,
+      "rowSpanResidualRelative": 0.792738432341822,
+      "traceCoefficientNorm": 567.0770186977785,
+      "nullEnergyOpMax": 0.5267653863029317,
+      "nullEnergyOpL2": 0.693389448686504,
+      "positiveNullModes": 3
+    },
+    {
+      "nodeIndex": 4,
+      "branch": "minus",
+      "z": {
+        "real": 2.25,
+        "imag": 0.45999999999999996
+      },
+      "rowNorm": 0.24243866170160164,
+      "rowSpanResidualNorm": 0.1914346785059624,
+      "rowSpanResidualRelative": 0.789621082554828,
+      "traceCoefficientNorm": 652.6738978649391,
+      "nullEnergyOpMax": 0.6142519179203738,
+      "nullEnergyOpL2": 0.8054375972702124,
+      "positiveNullModes": 3
+    }
+  ],
+  "boundaryPrefixTraceResolved": false,
+  "boundaryPrefixKilledOnTraceNullspace": false,
+  "diagnosis": "This tests whether the incomplete-gamma boundary prefix lies in the finite sampled endpoint-trace row span.  The null-energy residual is the relevant quotient diagnostic: if it vanishes, the prefix is zero on ker R even if the Euclidean row-span residual is not tiny.",
+  "nextProofTarget": "If the boundary prefix is not killed on the trace nullspace, enlarge the trace family to include the Mellin boundary primitive or derive the missing endpoint concomitant that pairs with B_i(s,z)."
+}

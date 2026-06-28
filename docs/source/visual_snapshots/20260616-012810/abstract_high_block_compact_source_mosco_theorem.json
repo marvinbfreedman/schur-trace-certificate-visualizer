@@ -1,0 +1,40 @@
+{
+  "theoremName": "abstract high-block compact-source Mosco theorem",
+  "proofClass": "symbolic identity",
+  "projectionJson": "abstract_mosco_projection_convergence_theorem.json",
+  "compressionJson": "abstract_compact_compression_norm_convergence_theorem.json",
+  "spectralJson": "abstract_compact_source_spectral_projection_theorem.json",
+  "minmaxJson": "abstract_minmax_tail_passage_theorem.json",
+  "statement": "Mosco convergence of closed A-Hilbert subspaces plus compactness of the source operator implies source-operator norm convergence, Riesz spectral projection convergence, and min-max tail passage.",
+  "statuses": {
+    "moscoProjectionConvergencePrincipleStatus": {
+      "label": "Mosco projection convergence principle",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the abstract Mosco projection convergence theorem."
+    },
+    "compactSourceNormConvergencePrincipleStatus": {
+      "label": "compact source norm convergence principle",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the abstract compact-compression norm convergence theorem."
+    },
+    "spectralMinmaxPassagePrincipleStatus": {
+      "label": "spectral min-max passage principle",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the abstract compact-source spectral projection theorem and abstract min-max tail passage theorem."
+    }
+  },
+  "abstractHighBlockCompactSourceMoscoClosed": true,
+  "moscoProjectionConvergenceClosed": true,
+  "compactSourceNormConvergenceClosed": true,
+  "compactSourceRieszProjectionConvergenceClosed": true,
+  "spectralMinmaxPassageClosed": true,
+  "noModelSpecificInputClaimed": true,
+  "proof": [
+    "This file is now a legacy wrapper over the split abstract functional-analysis lemmas.",
+    "The Mosco-to-projection, compact-compression, Riesz projection, and min-max steps are audited separately."
+  ],
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,70 @@
+{
+  "theoremName": "primitive boundary transport audit",
+  "notes": "rh_klm_notes.md",
+  "draft": "rh_weyl_positive_draft.tex",
+  "quotientJson": "weyl_volterra_quotient_schur_theorem.json",
+  "boundaryComparisonJson": "canonical_boundary_repair_comparison.json",
+  "importedSignals": {
+    "primitiveIdentityRecorded": true,
+    "quotientSchurClosed": true,
+    "minimalDqDefined": true
+  },
+  "statuses": {
+    "primitiveTransportNoEndpointStatus": {
+      "label": "primitive transport has no endpoint boundary term",
+      "closed": true,
+      "status": "closed",
+      "reason": "For compact smooth half-line tests, F(0)=G(0)=0.  Since the parity kernels decay as either variable tends to infinity, integration by parts in the identity H=P_xy gives no lower or upper endpoint contribution.  Hence the coordinate form equals the mixed Volterra form exactly.",
+      "blocker": null
+    },
+    "canonicalPrimitiveBoundaryZeroStatus": {
+      "label": "canonical primitive boundary form is zero",
+      "closed": true,
+      "status": "closed",
+      "reason": "With Q_Phi defined as the mixed/Volterra transport of the original coordinate form, beta_bdy=Q_original-Q_Phi is identically zero.  Thus D_bdy is the zero operator on the completed trace range.",
+      "blocker": null
+    },
+    "zeroBoundaryDescendsStatus": {
+      "label": "zero boundary form descends through R_global",
+      "closed": true,
+      "status": "closed",
+      "reason": "The zero form annihilates ker R_global and is bounded in every transported trace norm, so it descends trivially with D_bdy=0.",
+      "blocker": null
+    },
+    "comparisonReducesToDqZeroStatus": {
+      "label": "D_bdy >= D_q reduces to D_q=0",
+      "closed": true,
+      "status": "closed",
+      "reason": "Because D_bdy=0, the sufficient comparison D_bdy>=D_q is equivalent to D_q=0 on the relevant completed primitive trace range.  A positive hidden boundary repair cannot be supplied by the primitive Green identity.",
+      "blocker": null
+    },
+    "dqZeroOnPrimitiveImageStatus": {
+      "label": "minimal quotient repair vanishes on the primitive trace image",
+      "closed": false,
+      "status": "open",
+      "reason": "This has not been proved.  It is now the exact replacement for the failed boundary-repair route.  One must either prove D_q R F=0 for every primitive image F, or prove Q_Phi>=0 directly on that primitive image.",
+      "blocker": "Characterize the primitive trace image Y=R({F: F'=original test}) inside X_R and prove D_q|_Y=0, or prove the equivalent direct positivity of Q_Phi on the primitive image."
+    },
+    "originalPositivityFromPrimitiveTransportStatus": {
+      "label": "original positivity from primitive transport",
+      "closed": false,
+      "status": "open",
+      "reason": "The primitive transport is exact, but the quotient Schur theorem only gives automatic positivity on ker R_global.  Since primitive images are not contained in ker R_global and D_bdy=0, original positivity still requires D_q to vanish on the primitive trace image or a direct primitive-image positivity theorem.",
+      "blocker": "Characterize the primitive trace image Y=R({F: F'=original test}) inside X_R and prove D_q|_Y=0, or prove the equivalent direct positivity of Q_Phi on the primitive image."
+    }
+  },
+  "integrationByPartsProof": [
+    "Start from P(x,y)=int_x^inf int_y^inf H(u,v)dudv, so H=P_xy.",
+    "Let F(u)=int_0^u f(x)dx and G(v)=int_0^v g(y)dy.",
+    "Then int int HFG = [P_yFG]_{u=0}^{inf}-int int P_y f G.",
+    "The boundary term vanishes because F(0)=0 and P_y(inf,v)=0.",
+    "A second integration by parts gives int int P f g; the v-boundary vanishes because G(0)=0 and P(x,inf)=0."
+  ],
+  "operators": {
+    "Dbdy": "0 on X_R for the primitive transport already identified with Q_Phi",
+    "Dq": "minimal quotient/Douglas repair from the closed Schur theorem"
+  },
+  "correctedNextProofTarget": "Characterize the primitive trace image Y=R({F: F'=original test}) inside X_R and prove D_q|_Y=0, or prove the equivalent direct positivity of Q_Phi on the primitive image.",
+  "primitiveBoundaryTransportAuditClosed": true,
+  "originalWeylKernelPositivityClosed": false
+}

@@ -1,0 +1,63 @@
+{
+  "theoremName": "augmented Mosco transport form theorem",
+  "proofClass": "analytic proof",
+  "traceConvergenceJson": "xi_augmented_trace_convergence_theorem.json",
+  "greenClosureJson": "continuum_green_lift_closure_theorem.json",
+  "transportedTraceSpace": {
+    "name": "X_aug",
+    "definition": "closure Ran(R_aug) with quotient norm inf{||f||_V:R_aug f=x}",
+    "formDomain": "completed Volterra/Mellin graph-form domain V"
+  },
+  "moscoStatement": {
+    "limsup": "for every f in V there are finite core f_N with f_N -> f in graph norm and R_aug,N f_N -> R_aug f",
+    "liminf": "bounded finite graph-energy sequences have weak graph-form subsequential limits in V",
+    "quotient": "R_aug,N trace-image quotient norms converge to the quotient norm on X_aug",
+    "lowerSemicontinuity": "closed nonnegative finite repaired forms pass to the lower-semicontinuous envelope"
+  },
+  "statuses": {
+    "coreDensityStatus": {
+      "label": "smooth/Galerkin core density in V",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Green closure theorem defines V as the graph-form closure of the smooth lifted core, giving the density input for recovery sequences."
+    },
+    "moscoLimsupStatus": {
+      "label": "Mosco limsup recovery",
+      "closed": true,
+      "status": "closed",
+      "reason": "Core density gives graph-form recovery sequences, and strong graph-dual trace convergence transports their R_aug,N coordinates to R_aug."
+    },
+    "moscoLiminfStatus": {
+      "label": "Mosco liminf compactness",
+      "closed": true,
+      "status": "closed",
+      "reason": "The completed Volterra graph norm is Hilbert.  Bounded graph-energy sequences therefore have weakly convergent subsequences, and closed graph forms are weakly lower semicontinuous."
+    },
+    "traceQuotientCompatibilityStatus": {
+      "label": "trace quotient compatibility",
+      "closed": true,
+      "status": "closed",
+      "reason": "The transported quotient norm on X_aug is defined by R_aug, and strong graph-dual convergence identifies the finite trace quotients with the completed trace quotient."
+    },
+    "closedFormLowerSemicontinuityStatus": {
+      "label": "closed-form lower semicontinuity",
+      "closed": true,
+      "status": "closed",
+      "reason": "Mosco limsup/liminf and quotient compatibility imply that nonnegative finite repaired forms have a nonnegative closed lower-semicontinuous envelope on V and X_aug."
+    }
+  },
+  "coreDensityClosed": true,
+  "moscoLimsupClosed": true,
+  "moscoLiminfClosed": true,
+  "traceQuotientCompatibilityClosed": true,
+  "lowerSemicontinuityClosed": true,
+  "moscoTransportFormClosed": true,
+  "proof": [
+    "Use the Green closure theorem to define V as the graph-form closure of the smooth core.",
+    "Use augmented trace convergence for strong graph-dual convergence of R_aug,N.",
+    "Apply Mosco limsup recovery and liminf compactness in the Hilbert graph norm.",
+    "Use quotient norm compatibility to move the limit form to X_aug.",
+    "Apply lower semicontinuity to preserve nonnegativity in the closed form limit."
+  ],
+  "remainingAnalyticGap": null
+}

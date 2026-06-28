@@ -1,0 +1,295 @@
+{
+  "theoremName": "Xi Mellin atom to Volterra mode matching probe",
+  "ansatz": "spectral atom split of Xi matched term-by-term to Volterra ratio atoms in A_s(u)",
+  "kind": "tilde3",
+  "omega": 0.49,
+  "basis": 4,
+  "constraints": 3,
+  "ampKind": "even",
+  "atomCount": 6,
+  "atomRecords": [
+    {
+      "mode": 1,
+      "term": "quartic",
+      "coeff": 39.47841760435743,
+      "beta": 2.25,
+      "c": 3.141592653589793
+    },
+    {
+      "mode": 1,
+      "term": "quadratic",
+      "coeff": -18.84955592153876,
+      "beta": 1.25,
+      "c": 3.141592653589793
+    },
+    {
+      "mode": 2,
+      "term": "quartic",
+      "coeff": 631.6546816697189,
+      "beta": 2.25,
+      "c": 12.566370614359172
+    },
+    {
+      "mode": 2,
+      "term": "quadratic",
+      "coeff": -75.39822368615503,
+      "beta": 1.25,
+      "c": 12.566370614359172
+    },
+    {
+      "mode": 3,
+      "term": "quartic",
+      "coeff": 3197.7518313373967,
+      "beta": 2.25,
+      "c": 28.274333882308138
+    },
+    {
+      "mode": 3,
+      "term": "quadratic",
+      "coeff": -169.6460035795025,
+      "beta": 1.25,
+      "c": 28.274333882308138
+    }
+  ],
+  "xiAtomDiagnostics": [
+    {
+      "z": {
+        "real": 0.0,
+        "imag": 0.35
+      },
+      "exactReal": 0.49852966386045283,
+      "exactImag": 0.0,
+      "numericReal": 0.49852966386045283,
+      "numericImag": 0.0,
+      "relativeError": 1.0578829655732272e-20
+    },
+    {
+      "z": {
+        "real": 0.45,
+        "imag": 0.4
+      },
+      "exactReal": 0.49661686172663777,
+      "exactImag": -0.00413113516561254,
+      "numericReal": 0.49661686172663777,
+      "numericImag": -0.00413113516561254,
+      "relativeError": 1.0619629731390835e-20
+    },
+    {
+      "z": {
+        "real": 0.95,
+        "imag": 0.55
+      },
+      "exactReal": 0.49014027709946595,
+      "exactImag": -0.011848028911988209,
+      "numericReal": 0.49014027709946595,
+      "numericImag": -0.011848028911988209,
+      "relativeError": 1.075846437283282e-20
+    },
+    {
+      "z": {
+        "real": 1.55,
+        "imag": 0.75
+      },
+      "exactReal": 0.4757565895321536,
+      "exactImag": -0.025657959141125664,
+      "numericReal": 0.4757565895321536,
+      "numericImag": -0.025657959141125664,
+      "relativeError": 1.107138052081475e-20
+    },
+    {
+      "z": {
+        "real": 2.25,
+        "imag": 0.95
+      },
+      "exactReal": 0.44934432953879333,
+      "exactImag": -0.04483148984626938,
+      "numericReal": 0.44934432953879333,
+      "numericImag": -0.04483148984626938,
+      "relativeError": 1.1669826710822006e-20
+    }
+  ],
+  "maxXiAtomDiagnosticRelativeError": 1.1669826710822006e-20,
+  "traceRank": null,
+  "traceLiftSkipped": true,
+  "integratedFormsSkipped": false,
+  "results": [
+    {
+      "pairTransform": "swap",
+      "targetKind": "atom",
+      "normalResidualMax": 0.0,
+      "normalResidualMean": 0.0,
+      "coefficientNormFrobenius": 1.0169705796931507,
+      "liftedTriangleGram": {
+        "jointRelative": 0.847613834766942,
+        "plusRelative": 0.6974072878316433,
+        "crossRelative": 0.8714228128688918,
+        "minusRelative": 0.9416342660621545,
+        "jointFrobenius": 0.25190299001221844,
+        "globalScale": 2.525868207829576,
+        "scaledJointRelative": 0.7460964965926534,
+        "mappedJointNorm": 0.07834171351684127
+      },
+      "integratedVolterraGram": {
+        "jointRelative": 0.9174274175135131,
+        "plusRelative": 0.6143027422019719,
+        "crossRelative": 1.0477004345428196,
+        "minusRelative": 0.9022548419563562,
+        "jointFrobenius": 0.2726509409256933,
+        "globalScale": 0.8673691721028003,
+        "scaledJointRelative": 0.9153591859829272,
+        "mappedJointNorm": 0.1379578233246126
+      },
+      "rawTraceNormFrobenius": 0.6255040859628902,
+      "greenTraceGram": null
+    },
+    {
+      "pairTransform": "swap",
+      "targetKind": "atom_coarea",
+      "normalResidualMax": 0.0,
+      "normalResidualMean": 0.0,
+      "coefficientNormFrobenius": 1.8301039206295064,
+      "liftedTriangleGram": {
+        "jointRelative": 0.7425533781278751,
+        "plusRelative": 0.6673443271660864,
+        "crossRelative": 0.7168290421119565,
+        "minusRelative": 0.8636461178090432,
+        "jointFrobenius": 0.2206799942635628,
+        "globalScale": 1.0611007191869393,
+        "scaledJointRelative": 0.7415477634306767,
+        "mappedJointNorm": 0.18790421374231628
+      },
+      "integratedVolterraGram": {
+        "jointRelative": 1.3414107624051341,
+        "plusRelative": 1.6549567719959621,
+        "crossRelative": 1.3961449368623873,
+        "minusRelative": 0.6770572134416845,
+        "jointFrobenius": 0.3986548685550096,
+        "globalScale": 0.25075441918337943,
+        "scaledJointRelative": 0.9482451636788899,
+        "mappedJointNorm": 0.37634310470228893
+      },
+      "rawTraceNormFrobenius": 1.1632301831789678,
+      "greenTraceGram": null
+    },
+    {
+      "pairTransform": "direct",
+      "targetKind": "atom",
+      "normalResidualMax": 0.0,
+      "normalResidualMean": 0.0,
+      "coefficientNormFrobenius": 1.021864280767671,
+      "liftedTriangleGram": {
+        "jointRelative": 0.8474485775931822,
+        "plusRelative": 0.6985850583066253,
+        "crossRelative": 0.8708103796808255,
+        "minusRelative": 0.9412417780600162,
+        "jointFrobenius": 0.2518538771090501,
+        "globalScale": 2.4487497043303668,
+        "scaledJointRelative": 0.7525941278841969,
+        "mappedJointNorm": 0.07991652053891211
+      },
+      "integratedVolterraGram": {
+        "jointRelative": 0.9200025005383523,
+        "plusRelative": 0.6317831228462083,
+        "crossRelative": 1.0467573770135967,
+        "minusRelative": 0.9023157732749645,
+        "jointFrobenius": 0.27341623177735225,
+        "globalScale": 0.8414524029651107,
+        "scaledJointRelative": 0.9169246648647584,
+        "mappedJointNorm": 0.14094325742292435
+      },
+      "rawTraceNormFrobenius": 0.6255943123412819,
+      "greenTraceGram": null
+    },
+    {
+      "pairTransform": "direct",
+      "targetKind": "atom_coarea",
+      "normalResidualMax": 0.0,
+      "normalResidualMean": 0.0,
+      "coefficientNormFrobenius": 1.8401086896208367,
+      "liftedTriangleGram": {
+        "jointRelative": 0.7479879751547204,
+        "plusRelative": 0.6889630047947847,
+        "crossRelative": 0.7177589010553905,
+        "minusRelative": 0.8630915542777735,
+        "jointFrobenius": 0.22229510622188783,
+        "globalScale": 1.0306548355700076,
+        "scaledJointRelative": 0.747727199727959,
+        "mappedJointNorm": 0.1914670637450494
+      },
+      "integratedVolterraGram": {
+        "jointRelative": 1.3567367126591126,
+        "plusRelative": 1.7017690317415606,
+        "crossRelative": 1.3960607771440294,
+        "minusRelative": 0.6783063244496702,
+        "jointFrobenius": 0.4032095991828045,
+        "globalScale": 0.24572926861454822,
+        "scaledJointRelative": 0.9487746832808122,
+        "mappedJointNorm": 0.3821215568005951
+      },
+      "rawTraceNormFrobenius": 1.168974648202175,
+      "greenTraceGram": null
+    }
+  ],
+  "bestLiftedTriangleGram": {
+    "pairTransform": "swap",
+    "targetKind": "atom_coarea",
+    "normalResidualMax": 0.0,
+    "normalResidualMean": 0.0,
+    "coefficientNormFrobenius": 1.8301039206295064,
+    "liftedTriangleGram": {
+      "jointRelative": 0.7425533781278751,
+      "plusRelative": 0.6673443271660864,
+      "crossRelative": 0.7168290421119565,
+      "minusRelative": 0.8636461178090432,
+      "jointFrobenius": 0.2206799942635628,
+      "globalScale": 1.0611007191869393,
+      "scaledJointRelative": 0.7415477634306767,
+      "mappedJointNorm": 0.18790421374231628
+    },
+    "integratedVolterraGram": {
+      "jointRelative": 1.3414107624051341,
+      "plusRelative": 1.6549567719959621,
+      "crossRelative": 1.3961449368623873,
+      "minusRelative": 0.6770572134416845,
+      "jointFrobenius": 0.3986548685550096,
+      "globalScale": 0.25075441918337943,
+      "scaledJointRelative": 0.9482451636788899,
+      "mappedJointNorm": 0.37634310470228893
+    },
+    "rawTraceNormFrobenius": 1.1632301831789678,
+    "greenTraceGram": null
+  },
+  "bestIntegratedVolterraGram": {
+    "pairTransform": "swap",
+    "targetKind": "atom",
+    "normalResidualMax": 0.0,
+    "normalResidualMean": 0.0,
+    "coefficientNormFrobenius": 1.0169705796931507,
+    "liftedTriangleGram": {
+      "jointRelative": 0.847613834766942,
+      "plusRelative": 0.6974072878316433,
+      "crossRelative": 0.8714228128688918,
+      "minusRelative": 0.9416342660621545,
+      "jointFrobenius": 0.25190299001221844,
+      "globalScale": 2.525868207829576,
+      "scaledJointRelative": 0.7460964965926534,
+      "mappedJointNorm": 0.07834171351684127
+    },
+    "integratedVolterraGram": {
+      "jointRelative": 0.9174274175135131,
+      "plusRelative": 0.6143027422019719,
+      "crossRelative": 1.0477004345428196,
+      "minusRelative": 0.9022548419563562,
+      "jointFrobenius": 0.2726509409256933,
+      "globalScale": 0.8673691721028003,
+      "scaledJointRelative": 0.9153591859829272,
+      "mappedJointNorm": 0.1379578233246126
+    },
+    "rawTraceNormFrobenius": 0.6255040859628902,
+    "greenTraceGram": null
+  },
+  "bestGreenTraceGram": null,
+  "modeMatchedBridgeConstructed": false,
+  "diagnosis": "The exact finite-core Xi atom expansion is matched to the exact Volterra ratio atoms.  If the Xi atom diagnostic is small but the Gram residual remains large, the missing transmutation is not a simple diagonal spectral mode split; it must also mix modes or carry another boundary/Hardy factor.",
+  "nextProofTarget": "If mode matching does not close the joint Gram, derive the actual mode-mixing matrix between the Xi incomplete-gamma atoms and the Volterra ratio atoms, rather than a diagonal atom dictionary."
+}

@@ -1,0 +1,53 @@
+{
+  "theoremName": "closed-form lower semicontinuity transport theorem",
+  "proofClass": "analytic proof",
+  "limsupJson": "augmented_mosco_limsup_theorem.json",
+  "liminfJson": "augmented_mosco_liminf_theorem.json",
+  "repairDescentJson": "augmented_trace_repair_descends_theorem.json",
+  "statement": "The Mosco limsup/liminf pair identifies the closed lower-semicontinuous envelope of the augmented repaired core forms on the completed trace-fiber domain, and trace repair descent transports that closed envelope to the quotient space X_aug.",
+  "statuses": {
+    "moscoLimsupInputStatus": {
+      "label": "Mosco limsup input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Recovery sequences give the correct upper envelope on the dense graph core."
+    },
+    "moscoLiminfInputStatus": {
+      "label": "Mosco liminf input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Weak graph compactness and lower semicontinuity give the closed lower envelope."
+    },
+    "traceRepairDescentInputStatus": {
+      "label": "trace repair descent input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Finite trace repairs descend to a well-defined closed repair form on X_aug."
+    },
+    "closedLowerEnvelopeIdentificationStatus": {
+      "label": "closed lower-envelope identification",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Mosco limsup and liminf inequalities identify the closed lower-semicontinuous envelope of the core forms."
+    },
+    "closedFormLowerSemicontinuityStatus": {
+      "label": "closed-form lower semicontinuity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Mosco envelope theorem identifies the closed form, and the trace repair descent theorem places the repair on X_aug with the transported quotient topology."
+    }
+  },
+  "closedLowerEnvelopeIdentifiedClosed": true,
+  "closedLowerEnvelopeLscClosed": true,
+  "lowerSemicontinuityClosed": true,
+  "closedFormTransportClosed": true,
+  "moscoTransportFormClosed": true,
+  "traceRepairDescendsClosed": true,
+  "proof": [
+    "Apply Mosco limsup to identify the correct closed envelope on recovery sequences.",
+    "Apply Mosco liminf to identify the lower envelope under weak graph limits.",
+    "Use trace repair descent to interpret the limiting trace form as D_aug on X_aug.",
+    "Conclude the transported repaired form is a closed lower-semicontinuous form on X_aug."
+  ],
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,134 @@
+{
+  "omega": 0.49,
+  "L": 2.0,
+  "basis": 18,
+  "constraints": 11,
+  "rank": 11,
+  "nullity": 7,
+  "positiveModes": 7,
+  "lambdaMin": 1.0052047510858405e-08,
+  "lambdaMax": 0.1543899343461991,
+  "rows": [
+    {
+      "cutoff": 2,
+      "constants": [
+        {
+          "order": 2,
+          "constant": 3301068538.723084,
+          "norm": 57454.92614844339
+        },
+        {
+          "order": 4,
+          "constant": 55719964624802.086,
+          "norm": 7464580.673072137
+        },
+        {
+          "order": 6,
+          "constant": 1.2529981380554944e+17,
+          "norm": 353977137.4051571
+        },
+        {
+          "order": 8,
+          "constant": 6.260869122361386e+21,
+          "norm": 79125654009.05945
+        },
+        {
+          "order": 10,
+          "constant": 2.934419258881594e+25,
+          "norm": 5417028021786.11
+        }
+      ]
+    },
+    {
+      "cutoff": 3,
+      "constants": [
+        {
+          "order": 2,
+          "constant": 13701332.379193245,
+          "norm": 3701.5310858066887
+        },
+        {
+          "order": 4,
+          "constant": 300753835696.9161,
+          "norm": 548410.2804442273
+        },
+        {
+          "order": 6,
+          "constant": 3266493259911037.0,
+          "norm": 57153243.65170394
+        },
+        {
+          "order": 8,
+          "constant": 1.6912008161659582e+19,
+          "norm": 4112421204.31013
+        },
+        {
+          "order": 10,
+          "constant": 3.903253980303663e+22,
+          "norm": 197566545252.5721
+        }
+      ]
+    },
+    {
+      "cutoff": 4,
+      "constants": [
+        {
+          "order": 2,
+          "constant": 105637.72455699586,
+          "norm": 325.01957565198416
+        },
+        {
+          "order": 4,
+          "constant": 2404569749.0041103,
+          "norm": 49036.41248097285
+        },
+        {
+          "order": 6,
+          "constant": 41024293228465.32,
+          "norm": 6405020.938956041
+        },
+        {
+          "order": 8,
+          "constant": 2.4864653182382378e+17,
+          "norm": 498644694.97210515
+        },
+        {
+          "order": 10,
+          "constant": 5.427519854257716e+20,
+          "norm": 23297038125.602394
+        }
+      ]
+    },
+    {
+      "cutoff": 5,
+      "constants": [
+        {
+          "order": 2,
+          "constant": 741.482269973969,
+          "norm": 27.230172051861313
+        },
+        {
+          "order": 4,
+          "constant": 3731917.950781974,
+          "norm": 1931.817266405385
+        },
+        {
+          "order": 6,
+          "constant": 10887827010.988983,
+          "norm": 104344.75075914928
+        },
+        {
+          "order": 8,
+          "constant": 17610503039996.312,
+          "norm": 4196486.987945549
+        },
+        {
+          "order": 10,
+          "constant": 3.3265986147102106e+17,
+          "norm": 576766730.5514605
+        }
+      ]
+    }
+  ],
+  "interpretation": "These constants test whether endpoint energy A alone controls Sobolev graph norms on H_M. Large constants mean the analytic proof needs a commuted Sturm graph energy."
+}

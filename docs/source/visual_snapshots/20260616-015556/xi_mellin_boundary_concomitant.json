@@ -1,0 +1,587 @@
+{
+  "theoremName": "Mellin-boundary trace/concomitant derivation",
+  "kind": "tilde3",
+  "omega": 0.49,
+  "L": 8.0,
+  "basis": 10,
+  "constraints": 7,
+  "ampKind": "positive",
+  "fourierScale": 0.5,
+  "concomitantIdentity": {
+    "prefixDerivative": "d_s B_i(s,z)=1/2 a_i exp(beta_i s-c_i exp(s)) exp(i z s/2)",
+    "trace": "Mu_z(f)=int_0^L B(s,z) f(s) ds",
+    "primitiveForm": "Mu_z(f)=int_0^L B'(s,z) F(s) ds, F(s)=int_s^L f(t)dt",
+    "endpointTerms": "B(0,z)=0 and F(L)=0, so the integration-by-parts boundary term vanishes."
+  },
+  "maxDerivativeFiniteDifferenceRelativeError": 6.67839596924801e-06,
+  "maxBoundaryPrefixAtZeroAbs": 0.0,
+  "derivativeRows": [
+    {
+      "nodeIndex": 0,
+      "branch": "plus",
+      "s": 0.0,
+      "z": {
+        "real": 0.0,
+        "imag": 0.84
+      },
+      "finiteDifferenceRelativeError": 2.1000750885278314e-06,
+      "exactDerivativeAbs": 0.44669690046712346
+    },
+    {
+      "nodeIndex": 0,
+      "branch": "plus",
+      "s": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.84
+      },
+      "finiteDifferenceRelativeError": 7.366135150524337e-11,
+      "exactDerivativeAbs": 0.442545765856898
+    },
+    {
+      "nodeIndex": 0,
+      "branch": "plus",
+      "s": 0.1,
+      "z": {
+        "real": 0.0,
+        "imag": 0.84
+      },
+      "finiteDifferenceRelativeError": 6.55803886332117e-11,
+      "exactDerivativeAbs": 0.41839855049253494
+    },
+    {
+      "nodeIndex": 0,
+      "branch": "plus",
+      "s": 0.3,
+      "z": {
+        "real": 0.0,
+        "imag": 0.84
+      },
+      "finiteDifferenceRelativeError": 2.6684991939103226e-11,
+      "exactDerivativeAbs": 0.31805010044897714
+    },
+    {
+      "nodeIndex": 0,
+      "branch": "plus",
+      "s": 0.545,
+      "z": {
+        "real": 0.0,
+        "imag": 0.84
+      },
+      "finiteDifferenceRelativeError": 7.210561367053113e-11,
+      "exactDerivativeAbs": 0.17166635274262906
+    },
+    {
+      "nodeIndex": 0,
+      "branch": "minus",
+      "s": 0.0,
+      "z": {
+        "real": 0.0,
+        "imag": -0.14
+      },
+      "finiteDifferenceRelativeError": 3.49922052855181e-07,
+      "exactDerivativeAbs": 0.44669690046712346
+    },
+    {
+      "nodeIndex": 0,
+      "branch": "minus",
+      "s": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": -0.14
+      },
+      "finiteDifferenceRelativeError": 7.8049243389256e-11,
+      "exactDerivativeAbs": 0.44690403500047426
+    },
+    {
+      "nodeIndex": 0,
+      "branch": "minus",
+      "s": 0.1,
+      "z": {
+        "real": 0.0,
+        "imag": -0.14
+      },
+      "finiteDifferenceRelativeError": 7.610984124967554e-11,
+      "exactDerivativeAbs": 0.4394106724473894
+    },
+    {
+      "nodeIndex": 0,
+      "branch": "minus",
+      "s": 0.3,
+      "z": {
+        "real": 0.0,
+        "imag": -0.14
+      },
+      "finiteDifferenceRelativeError": 5.313338691471747e-11,
+      "exactDerivativeAbs": 0.3684145942971162
+    },
+    {
+      "nodeIndex": 0,
+      "branch": "minus",
+      "s": 0.545,
+      "z": {
+        "real": 0.0,
+        "imag": -0.14
+      },
+      "finiteDifferenceRelativeError": 2.3755679212330595e-11,
+      "exactDerivativeAbs": 0.2242144103961953
+    },
+    {
+      "nodeIndex": 1,
+      "branch": "plus",
+      "s": 0.0,
+      "z": {
+        "real": 0.45,
+        "imag": 0.89
+      },
+      "finiteDifferenceRelativeError": 2.4933067983642913e-06,
+      "exactDerivativeAbs": 0.44669690046712346
+    },
+    {
+      "nodeIndex": 1,
+      "branch": "plus",
+      "s": 0.02,
+      "z": {
+        "real": 0.45,
+        "imag": 0.89
+      },
+      "finiteDifferenceRelativeError": 7.417673789249355e-11,
+      "exactDerivativeAbs": 0.44232454828297174
+    },
+    {
+      "nodeIndex": 1,
+      "branch": "plus",
+      "s": 0.1,
+      "z": {
+        "real": 0.45,
+        "imag": 0.89
+      },
+      "finiteDifferenceRelativeError": 6.602965222653461e-11,
+      "exactDerivativeAbs": 0.417353860522875
+    },
+    {
+      "nodeIndex": 1,
+      "branch": "plus",
+      "s": 0.3,
+      "z": {
+        "real": 0.45,
+        "imag": 0.89
+      },
+      "finiteDifferenceRelativeError": 2.9579517570360635e-11,
+      "exactDerivativeAbs": 0.31567364753365484
+    },
+    {
+      "nodeIndex": 1,
+      "branch": "plus",
+      "s": 0.545,
+      "z": {
+        "real": 0.45,
+        "imag": 0.89
+      },
+      "finiteDifferenceRelativeError": 7.781087355110273e-11,
+      "exactDerivativeAbs": 0.16934326068936745
+    },
+    {
+      "nodeIndex": 1,
+      "branch": "minus",
+      "s": 0.0,
+      "z": {
+        "real": 0.45,
+        "imag": -0.08999999999999998
+      },
+      "finiteDifferenceRelativeError": 1.1472642624237655e-06,
+      "exactDerivativeAbs": 0.44669690046712346
+    },
+    {
+      "nodeIndex": 1,
+      "branch": "minus",
+      "s": 0.02,
+      "z": {
+        "real": 0.45,
+        "imag": -0.08999999999999998
+      },
+      "finiteDifferenceRelativeError": 7.886371531016919e-11,
+      "exactDerivativeAbs": 0.44668063883666903
+    },
+    {
+      "nodeIndex": 1,
+      "branch": "minus",
+      "s": 0.1,
+      "z": {
+        "real": 0.45,
+        "imag": -0.08999999999999998
+      },
+      "finiteDifferenceRelativeError": 7.667630054976326e-11,
+      "exactDerivativeAbs": 0.43831351778103855
+    },
+    {
+      "nodeIndex": 1,
+      "branch": "minus",
+      "s": 0.3,
+      "z": {
+        "real": 0.45,
+        "imag": -0.08999999999999998
+      },
+      "finiteDifferenceRelativeError": 5.3853939200100676e-11,
+      "exactDerivativeAbs": 0.3656618206446988
+    },
+    {
+      "nodeIndex": 1,
+      "branch": "minus",
+      "s": 0.545,
+      "z": {
+        "real": 0.45,
+        "imag": -0.08999999999999998
+      },
+      "finiteDifferenceRelativeError": 3.250613839397873e-11,
+      "exactDerivativeAbs": 0.22118020650768458
+    },
+    {
+      "nodeIndex": 2,
+      "branch": "plus",
+      "s": 0.0,
+      "z": {
+        "real": 0.95,
+        "imag": 1.04
+      },
+      "finiteDifferenceRelativeError": 3.5215036225908134e-06,
+      "exactDerivativeAbs": 0.44669690046712346
+    },
+    {
+      "nodeIndex": 2,
+      "branch": "plus",
+      "s": 0.02,
+      "z": {
+        "real": 0.95,
+        "imag": 1.04
+      },
+      "finiteDifferenceRelativeError": 7.616520718912404e-11,
+      "exactDerivativeAbs": 0.4416615588269498
+    },
+    {
+      "nodeIndex": 2,
+      "branch": "plus",
+      "s": 0.1,
+      "z": {
+        "real": 0.95,
+        "imag": 1.04
+      },
+      "finiteDifferenceRelativeError": 6.803760961512481e-11,
+      "exactDerivativeAbs": 0.4142354153560271
+    },
+    {
+      "nodeIndex": 2,
+      "branch": "plus",
+      "s": 0.3,
+      "z": {
+        "real": 0.95,
+        "imag": 1.04
+      },
+      "finiteDifferenceRelativeError": 3.932410474332193e-11,
+      "exactDerivativeAbs": 0.30865029942536426
+    },
+    {
+      "nodeIndex": 2,
+      "branch": "plus",
+      "s": 0.545,
+      "z": {
+        "real": 0.95,
+        "imag": 1.04
+      },
+      "finiteDifferenceRelativeError": 9.492448622511883e-11,
+      "exactDerivativeAbs": 0.1625609134142214
+    },
+    {
+      "nodeIndex": 2,
+      "branch": "minus",
+      "s": 0.0,
+      "z": {
+        "real": 0.95,
+        "imag": 0.060000000000000046
+      },
+      "finiteDifferenceRelativeError": 2.3797368092599085e-06,
+      "exactDerivativeAbs": 0.44669690046712346
+    },
+    {
+      "nodeIndex": 2,
+      "branch": "minus",
+      "s": 0.02,
+      "z": {
+        "real": 0.95,
+        "imag": 0.060000000000000046
+      },
+      "finiteDifferenceRelativeError": 8.158766369934599e-11,
+      "exactDerivativeAbs": 0.44601112014296906
+    },
+    {
+      "nodeIndex": 2,
+      "branch": "minus",
+      "s": 0.1,
+      "z": {
+        "real": 0.95,
+        "imag": 0.060000000000000046
+      },
+      "finiteDifferenceRelativeError": 7.876968497611538e-11,
+      "exactDerivativeAbs": 0.435038463204148
+    },
+    {
+      "nodeIndex": 2,
+      "branch": "minus",
+      "s": 0.3,
+      "z": {
+        "real": 0.95,
+        "imag": 0.060000000000000046
+      },
+      "finiteDifferenceRelativeError": 5.7132434034479935e-11,
+      "exactDerivativeAbs": 0.35752629752972215
+    },
+    {
+      "nodeIndex": 2,
+      "branch": "minus",
+      "s": 0.545,
+      "z": {
+        "real": 0.95,
+        "imag": 0.060000000000000046
+      },
+      "finiteDifferenceRelativeError": 5.329368953797428e-11,
+      "exactDerivativeAbs": 0.21232174373321752
+    },
+    {
+      "nodeIndex": 3,
+      "branch": "plus",
+      "s": 0.0,
+      "z": {
+        "real": 1.55,
+        "imag": 1.24
+      },
+      "finiteDifferenceRelativeError": 4.962459772484584e-06,
+      "exactDerivativeAbs": 0.44669690046712346
+    },
+    {
+      "nodeIndex": 3,
+      "branch": "plus",
+      "s": 0.02,
+      "z": {
+        "real": 1.55,
+        "imag": 1.24
+      },
+      "finiteDifferenceRelativeError": 8.16883321444122e-11,
+      "exactDerivativeAbs": 0.44077911844382583
+    },
+    {
+      "nodeIndex": 3,
+      "branch": "plus",
+      "s": 0.1,
+      "z": {
+        "real": 1.55,
+        "imag": 1.24
+      },
+      "finiteDifferenceRelativeError": 7.451470552235607e-11,
+      "exactDerivativeAbs": 0.4101137041062522
+    },
+    {
+      "nodeIndex": 3,
+      "branch": "plus",
+      "s": 0.3,
+      "z": {
+        "real": 1.55,
+        "imag": 1.24
+      },
+      "finiteDifferenceRelativeError": 5.831626546735656e-11,
+      "exactDerivativeAbs": 0.2995283045057544
+    },
+    {
+      "nodeIndex": 3,
+      "branch": "plus",
+      "s": 0.545,
+      "z": {
+        "real": 1.55,
+        "imag": 1.24
+      },
+      "finiteDifferenceRelativeError": 1.2172158695227795e-10,
+      "exactDerivativeAbs": 0.15393844016529712
+    },
+    {
+      "nodeIndex": 3,
+      "branch": "minus",
+      "s": 0.0,
+      "z": {
+        "real": 1.55,
+        "imag": 0.26
+      },
+      "finiteDifferenceRelativeError": 3.929149152379172e-06,
+      "exactDerivativeAbs": 0.44669690046712346
+    },
+    {
+      "nodeIndex": 3,
+      "branch": "minus",
+      "s": 0.02,
+      "z": {
+        "real": 1.55,
+        "imag": 0.26
+      },
+      "finiteDifferenceRelativeError": 8.742646198505873e-11,
+      "exactDerivativeAbs": 0.44511998933053915
+    },
+    {
+      "nodeIndex": 3,
+      "branch": "minus",
+      "s": 0.1,
+      "z": {
+        "real": 1.55,
+        "imag": 0.26
+      },
+      "finiteDifferenceRelativeError": 8.422605220951155e-11,
+      "exactDerivativeAbs": 0.4307097581697603
+    },
+    {
+      "nodeIndex": 3,
+      "branch": "minus",
+      "s": 0.3,
+      "z": {
+        "real": 1.55,
+        "imag": 0.26
+      },
+      "finiteDifferenceRelativeError": 6.705587715412408e-11,
+      "exactDerivativeAbs": 0.3469597985638539
+    },
+    {
+      "nodeIndex": 3,
+      "branch": "minus",
+      "s": 0.545,
+      "z": {
+        "real": 1.55,
+        "imag": 0.26
+      },
+      "finiteDifferenceRelativeError": 8.202809412730192e-11,
+      "exactDerivativeAbs": 0.2010598818437009
+    },
+    {
+      "nodeIndex": 4,
+      "branch": "plus",
+      "s": 0.0,
+      "z": {
+        "real": 2.25,
+        "imag": 1.44
+      },
+      "finiteDifferenceRelativeError": 6.67839596924801e-06,
+      "exactDerivativeAbs": 0.44669690046712346
+    },
+    {
+      "nodeIndex": 4,
+      "branch": "plus",
+      "s": 0.02,
+      "z": {
+        "real": 2.25,
+        "imag": 1.44
+      },
+      "finiteDifferenceRelativeError": 9.325159824405223e-11,
+      "exactDerivativeAbs": 0.4398984411777633
+    },
+    {
+      "nodeIndex": 4,
+      "branch": "plus",
+      "s": 0.1,
+      "z": {
+        "real": 2.25,
+        "imag": 1.44
+      },
+      "finiteDifferenceRelativeError": 8.836581020159891e-11,
+      "exactDerivativeAbs": 0.4060330045686505
+    },
+    {
+      "nodeIndex": 4,
+      "branch": "plus",
+      "s": 0.3,
+      "z": {
+        "real": 2.25,
+        "imag": 1.44
+      },
+      "finiteDifferenceRelativeError": 8.573694978368682e-11,
+      "exactDerivativeAbs": 0.29067590527896686
+    },
+    {
+      "nodeIndex": 4,
+      "branch": "plus",
+      "s": 0.545,
+      "z": {
+        "real": 2.25,
+        "imag": 1.44
+      },
+      "finiteDifferenceRelativeError": 1.5629726759929078e-10,
+      "exactDerivativeAbs": 0.14577331575482927
+    },
+    {
+      "nodeIndex": 4,
+      "branch": "minus",
+      "s": 0.0,
+      "z": {
+        "real": 2.25,
+        "imag": 0.45999999999999996
+      },
+      "finiteDifferenceRelativeError": 5.741363420308548e-06,
+      "exactDerivativeAbs": 0.44669690046712346
+    },
+    {
+      "nodeIndex": 4,
+      "branch": "minus",
+      "s": 0.02,
+      "z": {
+        "real": 2.25,
+        "imag": 0.45999999999999996
+      },
+      "finiteDifferenceRelativeError": 9.815972891871892e-11,
+      "exactDerivativeAbs": 0.44423063899866005
+    },
+    {
+      "nodeIndex": 4,
+      "branch": "minus",
+      "s": 0.1,
+      "z": {
+        "real": 2.25,
+        "imag": 0.45999999999999996
+      },
+      "finiteDifferenceRelativeError": 9.538640144038703e-11,
+      "exactDerivativeAbs": 0.4264241244701156
+    },
+    {
+      "nodeIndex": 4,
+      "branch": "minus",
+      "s": 0.3,
+      "z": {
+        "real": 2.25,
+        "imag": 0.45999999999999996
+      },
+      "finiteDifferenceRelativeError": 8.614641314472339e-11,
+      "exactDerivativeAbs": 0.3367055868371821
+    },
+    {
+      "nodeIndex": 4,
+      "branch": "minus",
+      "s": 0.545,
+      "z": {
+        "real": 2.25,
+        "imag": 0.45999999999999996
+      },
+      "finiteDifferenceRelativeError": 1.173259889771133e-10,
+      "exactDerivativeAbs": 0.1903953659018415
+    }
+  ],
+  "lambdaTraceRank": 7,
+  "lambdaTraceNullity": 3,
+  "augmentedTraceRank": 10,
+  "augmentedTraceNullity": 0,
+  "lambdaTraceRankTolerance": 1.396722084042964e-20,
+  "augmentedTraceRankTolerance": 1.3967220963624097e-20,
+  "boundaryRows": 10,
+  "oldTraceBoundaryNullEnergyOpMax": 0.7292534075194816,
+  "oldTraceBoundaryNullEnergyOpL2": 1.0097971470110396,
+  "oldTracePositiveNullModes": 3,
+  "augmentedTraceBoundaryNullEnergyOpMax": 0.0,
+  "augmentedTraceBoundaryNullEnergyOpL2": 0.0,
+  "augmentedTracePositiveNullModes": 0,
+  "mellinBoundaryConcomitantDerived": true,
+  "augmentedTraceKillsBoundaryPrefix": true,
+  "diagnosis": "The missing boundary object is the Volterra primitive trace Mu_z, not another Lambda_a row.  Adding Mu_z to the finite trace matrix kills the boundary prefix on the augmented nullspace by construction; the remaining hard step is proving the augmented trace repair is positive or annihilated in the KLM/de Branges pullback.",
+  "nextProofTarget": "Prove positivity/annihilation of the augmented trace repair (Lambda_a, Mu_z): combine the diagonal Volterra tail identity with the new Mellin-boundary concomitant without introducing a negative Schur defect."
+}

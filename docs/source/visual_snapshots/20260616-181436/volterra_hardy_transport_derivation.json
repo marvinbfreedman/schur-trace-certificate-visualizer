@@ -1,0 +1,82 @@
+{
+  "theoremName": "Hardy multiplier reduction for signed Volterra transport",
+  "explicitMultiplier": "kappa(s,u)=(1-s-u)/(1+s+u)",
+  "compressedOperator": "T = C K E on the Green-minimizer plus-profile range",
+  "statuses": {
+    "pointwiseHardyMultiplierStatus": {
+      "label": "pointwise Hardy multiplier",
+      "closed": true,
+      "status": "closed",
+      "reason": "For s,u>=0, |(1-s-u)/(1+s+u)|<=1 exactly."
+    },
+    "compressedIdentityStatus": {
+      "label": "compressed multiplier identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The integrated minus profiles equal C K applied to the lifted plus profiles."
+    },
+    "greenMinimalLiftStatus": {
+      "label": "Green-minimizer minimal lift",
+      "closed": false,
+      "status": "open",
+      "reason": "This is the remaining analytic theorem: the Euler-Lagrange Green lift must be shown to be the minimal contraction lift for the compressed Hardy multiplier.",
+      "blocker": "Use the trace-fiber Euler-Lagrange equation to show the boundary concomitant from integrating C K E by parts vanishes on the completed trace image."
+    }
+  },
+  "basis": 12,
+  "constraints": 9,
+  "traceRank": 9,
+  "traceNullity": 3,
+  "kappaMin": -0.8947189798500027,
+  "kappaMax": 0.9935735361670877,
+  "kappaAbsMax": 0.9935735361670877,
+  "compressedIdentityFrobenius": 2.473587219832653e-13,
+  "compressedIdentityRelative": 1.502567255743202e-12,
+  "transport": {
+    "rank": 9,
+    "cutoff": 1e-12,
+    "rangeResidual": 3.4868138393415956e-13,
+    "relativeRangeResidual": 2.1180463174536326e-12,
+    "operatorNorm": 0.983005311093415,
+    "singularValues": [
+      0.983005311093415,
+      0.7842382968094123,
+      0.7531678030728509,
+      0.6691940870370354,
+      0.6357883954655413,
+      0.5902884454668411,
+      0.5750311620476988,
+      0.5474802604559232,
+      0.5377336581815185,
+      2.494121969187107e-12,
+      1.5995791962546888e-12,
+      1.2659250402879593e-12
+    ]
+  },
+  "endpointDiagnostics": [
+    {
+      "sigma": -1,
+      "firstU": 0.0004437570020077164,
+      "lastU": 9.999556242997992,
+      "firstPlusNorm": 0.002865114278385968,
+      "firstMinusNorm": 0.005448859069769686,
+      "lastPlusNorm": 0.0,
+      "lastMinusNorm": 0.0,
+      "firstPairingTrace": -1.5095678685819138e-05,
+      "lastPairingTrace": 0.0
+    },
+    {
+      "sigma": 1,
+      "firstU": 0.0004437570020077164,
+      "lastU": 9.999556242997992,
+      "firstPlusNorm": 0.041767294662972236,
+      "firstMinusNorm": 0.033287022919116505,
+      "lastPlusNorm": 0.0,
+      "lastMinusNorm": 0.0,
+      "firstPairingTrace": -0.0013900467392400243,
+      "lastPairingTrace": 0.0
+    }
+  ],
+  "correctedConclusion": "The explicit pointwise Hardy multiplier is identified and exactly reproduces the integrated minus features from the lifted plus features.  The remaining step is not algebraic identification of T; it is proving that the Green-minimizer right inverse E makes the compression C K E contractive, with boundary terms killed by the Euler-Lagrange trace equations.",
+  "nextProofTarget": "Write the integration-by-parts formula for C K E in the lifted (s,u) variables and express its boundary concomitant as the Euler-Lagrange trace-fiber residual Q(f_x,h), which is zero for all h in ker R."
+}

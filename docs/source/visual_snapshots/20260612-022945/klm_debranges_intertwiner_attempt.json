@@ -1,0 +1,125 @@
+{
+  "theoremName": "KLM-to-de Branges transform/intertwiner audit",
+  "uniformOmegaJson": "uniform_omega_weyl_klm_bridge.json",
+  "bridgeJson": "rh_debranges_bridge_ledger.json",
+  "pullbackProbeJson": "klm_debranges_pullback_probe.json",
+  "hardyJson": "klm_debranges_canonical_hardy_image.json",
+  "bridgeAttemptJson": "klm_debranges_bridge_attempt.json",
+  "klmInputClosed": true,
+  "bridgeStillOpen": true,
+  "candidateTransform": {
+    "XiConvention": "Xi is real entire on the z-line, Xi(z)=xi(1/2+iz) up to the fixed normalization.",
+    "Eomega": "E_omega(z)=Xi(z+i omega), 0<omega<1/2",
+    "sharp": "E_omega#(z)=conj(E_omega(conj z))=Xi(z-i omega)",
+    "deBrangesKernel": "K_E(w,z)=(E_omega(z)conj(E_omega(w))-E_omega#(z)conj(E_omega#(w)))/(2*pi*i*(conj(w)-z))",
+    "requiredHermiteBiehlerInequality": "|Xi(z-i omega)| < |Xi(z+i omega)| for Im z>0"
+  },
+  "positiveConeClosureProof": [
+    "Fix finitely many endpoint test vectors phi_1,...,phi_N.",
+    "Let G_n=(K_n(phi_i,phi_j)) and assume each G_n is positive semidefinite.",
+    "If K_n(phi_i,phi_j)->K_*(phi_i,phi_j) for every i,j, then G_n->G_* entrywise.",
+    "For every c in C^N, c^*G_*c=lim_n c^*G_nc>=0, hence G_* is positive semidefinite.",
+    "The same argument on a dense core, followed by form closure, gives the endpoint form theorem."
+  ],
+  "requiredNonCircularIdentity": "K_Eomega = T_omega^* KLM_omega T_omega, or K_Eomega is an endpoint/closed-cone limit of such pullback kernels with locally uniform or form-core convergence.",
+  "finitePullbackProbe": {
+    "available": true,
+    "foundExactFinitePullback": false,
+    "foundPositiveResidualDomination": false,
+    "bestCandidate": {
+      "kind": "anti_bargmann",
+      "scaleReal": 0.0002583382834445313,
+      "scaleImag": -5.350744544643644e-22,
+      "targetFrobenius": 0.008549621932844566,
+      "scaledPullbackFrobenius": 0.00730599087149802,
+      "residualFrobenius": 0.004440555435997218,
+      "relativeResidualFrobenius": 0.5193861753042207,
+      "targetEigenMin": 1.9559884861477345e-12,
+      "targetEigenMax": 0.008549615777960767,
+      "scaledPullbackEigenMin": 3.458222474197581e-07,
+      "scaledPullbackEigenMax": 0.007229516297742407,
+      "residualEigenMin": -0.002799094323400739,
+      "residualEigenMax": 0.0034171697928052796,
+      "residualLooksPositive": false,
+      "residualLooksZero": false,
+      "width": 0.85
+    },
+    "diagnosis": "This finite coherent-grid ansatz did not find the exact bridge; the next analytic target is to replace the ad hoc Gaussian vectors by the Weyl image of the de Branges evaluation functional or to derive a boundary/weight correction from the residual."
+  },
+  "canonicalHardyImage": {
+    "available": true,
+    "closed": true,
+    "exactRelativeError": 1.5801908504997367e-15,
+    "branchContraction": {
+      "available": true,
+      "plusEigenCutoff": 0.0,
+      "resolvedRank": 5,
+      "maxGeneralizedEigenvalue": 0.9999999999996788,
+      "minGeneralizedEigenvalue": 0.7612087818302057,
+      "eigenvalues": [
+        0.7612087818302057,
+        0.7612087818302063,
+        0.9982835161182477,
+        0.9982835161182482,
+        0.9999966591027046,
+        0.9999966591027062,
+        0.9999999981731462,
+        0.9999999981731469,
+        0.999999999999678,
+        0.9999999999996788
+      ],
+      "sampleContractionHolds": true,
+      "sampleMargin": 3.211875210240578e-13
+    }
+  },
+  "directAndClosedConeBridgeAttempt": {
+    "available": true,
+    "directKlmPullbackClosed": false,
+    "closedPositiveConeBridgeClosed": false,
+    "nextProofTarget": "Derive U from the exact Xi Mellin transform by matching the Volterra mode exponentials term-by-term, rather than using a generic resolvent/heat dictionary."
+  },
+  "statuses": {
+    "klmInputStatus": {
+      "label": "all-omega KLM input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from uniform_omega_weyl_klm_bridge.json."
+    },
+    "candidateTransformStatus": {
+      "label": "shifted-Xi de Branges candidate written explicitly",
+      "closed": true,
+      "status": "closed",
+      "reason": "The natural Hermite--Biehler candidate is E_omega(z)=Xi(z+i omega), with E_omega#(z)=Xi(z-i omega), and its reproducing kernel is explicit."
+    },
+    "candidateCircularityStatus": {
+      "label": "candidate alone is not a non-circular proof",
+      "closed": true,
+      "status": "closed",
+      "reason": "Positivity of the shifted-Xi de Branges kernel is equivalent to the Hermite--Biehler inequality for Xi.  That is the RH-facing statement itself unless it is obtained as a pullback or positive-cone limit of the already proved KLM/Weyl kernels."
+    },
+    "positiveConeEndpointClosureStatus": {
+      "label": "endpoint positive-cone closure",
+      "closed": true,
+      "status": "closed",
+      "reason": "For any finite test set, positive kernels give positive semidefinite Gram matrices.  If those matrices converge entrywise to the endpoint Gram matrix, the endpoint matrix remains positive because the finite positive semidefinite cone is closed.  Equivalently, if nonnegative forms q_n converge on a dense form core to q_*, then q_* is nonnegative on that core and on the closed form domain by lower semicontinuity."
+    },
+    "nonCircularIntertwinerStatus": {
+      "label": "non-circular KLM-to-de Branges intertwiner",
+      "closed": false,
+      "status": "open",
+      "reason": "The current files do not yet construct T_omega, or an equivalent positive-cone limiting map, satisfying K_E=T_omega^* KLM_omega T_omega. The finite coherent-packet probe did not find such a map among the tested Gaussian/Bargmann ansatzes.  The canonical Hardy image is now closed, so the missing map is the branch transport from Hardy features to Volterra/KLM features.",
+      "blocker": "Derive U from the exact Xi Mellin transform by matching the Volterra mode exponentials term-by-term, rather than using a generic resolvent/heat dictionary."
+    },
+    "rhConclusionStatus": {
+      "label": "RH/de Branges conclusion",
+      "closed": false,
+      "status": "open",
+      "reason": "The endpoint closure theorem is available, but the necessary intertwiner identity remains open.  Therefore the RH/de Branges conclusion is not closed.",
+      "blocker": "Close the non-circular intertwiner identity."
+    }
+  },
+  "transformClosed": false,
+  "endpointClosureClosed": true,
+  "rhClosed": false,
+  "nextProofTarget": "Derive U from the exact Xi Mellin transform by matching the Volterra mode exponentials term-by-term, rather than using a generic resolvent/heat dictionary."
+}

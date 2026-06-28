@@ -1,0 +1,65 @@
+{
+  "omega": 0.49,
+  "L": 2.0,
+  "s0": 0.2825,
+  "sourceMin": 0.08,
+  "sourceMax": 0.52,
+  "sourceGrid": 9,
+  "bases": [
+    18
+  ],
+  "globalConstraintRatios": [
+    0.625
+  ],
+  "activeTols": [
+    1e-08
+  ],
+  "cutoff": 6,
+  "jetOrder": 9,
+  "maxTraceQ": 16,
+  "lambda0": -0.00012862612661029079,
+  "lambda1": 9.42101395763874e-06,
+  "gap": 0.00013804714056792953,
+  "e8AtS0": -0.17949627136147217,
+  "lambdaDerivatives": [
+    -0.00012862612661029079,
+    0.0012586353561607226,
+    -0.010569790654668558,
+    0.08131470927283976,
+    -0.48480406794895253,
+    0.3262134539749114,
+    33.05440359008409,
+    -172.53886154243878,
+    -11867.497399991053,
+    225121.96880967333,
+    3735520.511510404,
+    -308912314.588315,
+    3399472962.8393655,
+    369400519027.39575,
+    -16726614828278.037,
+    -133545146978831.05,
+    5.480905836994158e+16
+  ],
+  "rows": [
+    {
+      "basis": 18,
+      "ratio": 0.625,
+      "globalTraceConstraints": 11,
+      "globalTraceMin": 0.02,
+      "globalTraceMax": 0.545,
+      "activeTol": 1e-08,
+      "activeFloor": 182.85135401773348,
+      "activeDim": 2,
+      "traceRankOnActive": 2,
+      "traceGramMin": 6746.882562520208,
+      "traceGramMax": 61716774.728149824,
+      "traceGramTol": 6.171677472814983e-19,
+      "sourceActiveFrob": 135223.37765241103,
+      "coefficientFrob": 201.4153360841363,
+      "coefficientOp": 201.41472755309704,
+      "rangeResidualFrob": 3.052411585381784e-64,
+      "rangeResidualRelative": 2.2573105615124823e-69
+    }
+  ],
+  "interpretation": "Finite construction of E_active=C_sample R_global on the source-active block.  The residual should be roundoff when the trace map has full column rank on the active subspace."
+}

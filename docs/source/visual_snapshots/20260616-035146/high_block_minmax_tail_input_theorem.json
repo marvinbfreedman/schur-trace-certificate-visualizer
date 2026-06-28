@@ -1,0 +1,52 @@
+{
+  "theoremName": "high-block min-max tail input theorem",
+  "proofClass": "symbolic identity",
+  "tailConstantsJson": "source_inactive_tail_constants_theorem.json",
+  "sourceSplitJson": "high_block_active_source_split_consequence_theorem.json",
+  "minmaxPassageJson": "abstract_minmax_tail_passage_consequence_theorem.json",
+  "normalizedEpsilonDelta": 0.0013454526382754603,
+  "finiteLowMidSchurBudget": 0.005730309711103612,
+  "absorptionSlack": 0.004384857072828152,
+  "statement": "The high-block source model satisfies the finite inactive-tail inequality and spectral-projection hypotheses needed by the abstract min-max tail passage theorem.",
+  "statuses": {
+    "finiteTailConstantInputStatus": {
+      "label": "finite certified inactive-tail constant",
+      "closed": true,
+      "status": "closed",
+      "reason": "The source-inactive constants theorem supplies the finite certified source-model tail bound."
+    },
+    "lowMidAbsorptionInputStatus": {
+      "label": "finite low/mid absorption budget",
+      "closed": true,
+      "status": "closed",
+      "reason": "The same constants theorem verifies epsilon_delta is absorbable by the finite low/mid Schur budget."
+    },
+    "spectralProjectionInputStatus": {
+      "label": "high-block spectral projection input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The high-block spectral theorem identifies the stable active/inactive source split."
+    },
+    "abstractMinmaxInputStatus": {
+      "label": "abstract min-max passage input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The abstract min-max theorem passes the finite inactive-tail bound through the convergent source model."
+    },
+    "highBlockMinmaxTailInputStatus": {
+      "label": "high-block min-max tail passage",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite tail constant, spectral split, and abstract min-max theorem match."
+    }
+  },
+  "highBlockMinmaxTailPassageClosed": true,
+  "abstractMinmaxTailPassageClosed": true,
+  "tailEstimatePassesToContinuum": true,
+  "proof": [
+    "Use the source-inactive constants theorem for the finite inactive-tail quadratic inequality.",
+    "Use the high-block spectral projection theorem to identify the active two-dimensional source subspace and its inactive complement.",
+    "Apply the abstract min-max tail passage theorem to transport the finite bound to the continuum closed high block."
+  ],
+  "remainingAnalyticGap": null
+}

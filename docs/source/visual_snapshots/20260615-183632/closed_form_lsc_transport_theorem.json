@@ -1,0 +1,45 @@
+{
+  "theoremName": "closed-form lower semicontinuity transport theorem",
+  "proofClass": "analytic proof",
+  "limsupJson": "augmented_mosco_limsup_theorem.json",
+  "liminfJson": "augmented_mosco_liminf_theorem.json",
+  "repairDescentJson": "augmented_trace_repair_descends_theorem.json",
+  "statement": "Nonnegative finite repaired forms pass to a nonnegative closed lower-semicontinuous form on the completed augmented trace-fiber domain and transported trace quotient X_aug.",
+  "statuses": {
+    "moscoLimsupInputStatus": {
+      "label": "Mosco limsup input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Recovery sequences give the correct upper envelope on the dense graph core."
+    },
+    "moscoLiminfInputStatus": {
+      "label": "Mosco liminf input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Weak graph compactness and lower semicontinuity give the closed lower envelope."
+    },
+    "traceRepairDescentInputStatus": {
+      "label": "trace repair descent input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Finite trace repairs descend to a well-defined closed repair form on X_aug."
+    },
+    "closedFormLowerSemicontinuityStatus": {
+      "label": "closed-form lower semicontinuity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Mosco limsup/liminf pair identifies the closed-form limit, and the trace repair descent theorem places the repair on X_aug without losing nonnegativity."
+    }
+  },
+  "lowerSemicontinuityClosed": true,
+  "closedFormTransportClosed": true,
+  "moscoTransportFormClosed": true,
+  "traceRepairDescendsClosed": true,
+  "proof": [
+    "Apply Mosco limsup to identify the correct closed envelope on recovery sequences.",
+    "Apply Mosco liminf to preserve nonnegativity under weak graph limits.",
+    "Use trace repair descent to interpret the limiting trace form as D_aug on X_aug.",
+    "Conclude the closed lower-semicontinuous repaired form is nonnegative."
+  ],
+  "remainingAnalyticGap": null
+}

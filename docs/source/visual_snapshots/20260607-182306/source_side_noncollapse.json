@@ -1,0 +1,219 @@
+{
+  "omega": 0.49,
+  "L": 2.0,
+  "s0": 0.2825,
+  "point": 0.545,
+  "orders": [
+    7,
+    8
+  ],
+  "bases": [
+    18,
+    20,
+    22,
+    24
+  ],
+  "activeTol": 1e-06,
+  "lambda0AtS0": -0.00012862612661029079,
+  "lambda1AtS0": 9.42101395763874e-06,
+  "gapAtS0": 0.00013804714056792953,
+  "lambdaDerivativesAtS0": [
+    -0.00012862612661029079,
+    0.0012586353561607226,
+    -0.010569790654668558,
+    0.08131470927283976,
+    -0.48480406794895253,
+    0.3262134539749114,
+    33.05440359008409,
+    -172.53886154243878,
+    -11867.497399991053,
+    225121.96880967333,
+    3735520.511510404,
+    -308912314.588315,
+    3399472962.8393655,
+    369400519027.39575,
+    -16726614828278.037,
+    -133545146978831.05,
+    5.480905836994158e+16
+  ],
+  "minSourceSideNormalizedSingularValue": 0.002852926559754717,
+  "rows": [
+    {
+      "basis": 18,
+      "sourceSideDim": 18,
+      "activeDim": 2,
+      "activeFloor": 18285.13540177335,
+      "rightActiveEigenvalues": [
+        226461.95322692656,
+        18285135401.77335
+      ],
+      "sourceSideActiveEigenvalues": [
+        226461.95322692656,
+        18285135401.77335
+      ],
+      "rightResponseColumnNorms": [
+        11192523319026.836,
+        9562558930574.95
+      ],
+      "sourceResponseColumnNorms": [
+        5326300100029986.0,
+        1.2930735102401603e+18
+      ],
+      "rightNormalizedMinSingularValue": 0.5526780369411572,
+      "sourceNormalizedMinSingularValue": 0.5526780369411572,
+      "rightNormalizedColumns": [
+        [
+          0.049294294994778866,
+          -0.6843355067786342
+        ],
+        [
+          0.9987842972739248,
+          0.7291672744727576
+        ]
+      ],
+      "sourceNormalizedColumns": [
+        [
+          -0.049294294994778866,
+          0.6843355067786342
+        ],
+        [
+          -0.9987842972739248,
+          -0.7291672744727576
+        ]
+      ]
+    },
+    {
+      "basis": 20,
+      "sourceSideDim": 18,
+      "activeDim": 2,
+      "activeFloor": 350955.40150085674,
+      "rightActiveEigenvalues": [
+        8128880.388973607,
+        350955401500.85675
+      ],
+      "sourceSideActiveEigenvalues": [
+        8128880.388973607,
+        350955401500.85675
+      ],
+      "rightResponseColumnNorms": [
+        1161770543152744.8,
+        3678534256081659.5
+      ],
+      "sourceResponseColumnNorms": [
+        3.3123462397148037e+18,
+        2.1792184654581523e+21
+      ],
+      "rightNormalizedMinSingularValue": 0.002852926559754717,
+      "sourceNormalizedMinSingularValue": 0.002852926559754717,
+      "rightNormalizedColumns": [
+        [
+          -0.0001491365773460958,
+          -0.0038855038151969
+        ],
+        [
+          0.9999999888791405,
+          -0.9999924514015603
+        ]
+      ],
+      "sourceNormalizedColumns": [
+        [
+          -0.0001491365773460958,
+          -0.0038855038151969
+        ],
+        [
+          0.9999999888791405,
+          -0.9999924514015603
+        ]
+      ]
+    },
+    {
+      "basis": 22,
+      "sourceSideDim": 18,
+      "activeDim": 2,
+      "activeFloor": 3661655.9399730274,
+      "rightActiveEigenvalues": [
+        274587561456.9068,
+        3661655939973.0273
+      ],
+      "sourceSideActiveEigenvalues": [
+        274587561456.9068,
+        3661655939973.0273
+      ],
+      "rightResponseColumnNorms": [
+        3.6305317285807885e+17,
+        3.9431922294682976e+17
+      ],
+      "sourceResponseColumnNorms": [
+        1.9024386771067628e+23,
+        7.545477292370536e+23
+      ],
+      "rightNormalizedMinSingularValue": 0.0031970980488948567,
+      "sourceNormalizedMinSingularValue": 0.0031970980488948567,
+      "rightNormalizedColumns": [
+        [
+          -0.09025575770962915,
+          0.08575192071812834
+        ],
+        [
+          -0.9959186202698797,
+          0.9963165200342469
+        ]
+      ],
+      "sourceNormalizedColumns": [
+        [
+          -0.09025575770962915,
+          -0.08575192071812834
+        ],
+        [
+          -0.9959186202698797,
+          -0.9963165200342469
+        ]
+      ]
+    },
+    {
+      "basis": 24,
+      "sourceSideDim": 18,
+      "activeDim": 2,
+      "activeFloor": 9315123458837.074,
+      "rightActiveEigenvalues": [
+        2.029688362787111e+16,
+        9.315123458837074e+18
+      ],
+      "sourceSideActiveEigenvalues": [
+        2.029688362787111e+16,
+        9.315123458837074e+18
+      ],
+      "rightResponseColumnNorms": [
+        3.974588332592988e+19,
+        5.634677487427291e+21
+      ],
+      "sourceResponseColumnNorms": [
+        5.662481996147887e+27,
+        1.719742289488143e+31
+      ],
+      "rightNormalizedMinSingularValue": 0.06451730039469201,
+      "sourceNormalizedMinSingularValue": 0.06451730039469201,
+      "rightNormalizedColumns": [
+        [
+          0.05618552358178488,
+          0.03505061237054434
+        ],
+        [
+          -0.9984203458162503,
+          0.9993855385047603
+        ]
+      ],
+      "sourceNormalizedColumns": [
+        [
+          -0.05618552358178488,
+          -0.03505061237054434
+        ],
+        [
+          0.9984203458162503,
+          -0.9993855385047603
+        ]
+      ]
+    }
+  ],
+  "interpretation": "Positive source-side response rank proves finite noncollapse for positive source eigenvectors because v_j = mu_j^{-1/2} E^*u_j."
+}

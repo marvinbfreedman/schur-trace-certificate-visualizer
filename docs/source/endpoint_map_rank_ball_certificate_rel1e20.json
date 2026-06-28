@@ -1,0 +1,131 @@
+{
+  "theoremName": "endpoint map rank ball certificate",
+  "endpointJson": "adjoint_green_endpoint_selection.json",
+  "variantJson": [],
+  "radiusModel": {
+    "entryRelRadius": "1e-20",
+    "entryAbsRadius": "0",
+    "frobeniusRadius": "0",
+    "assumeRigorousEntryBall": false,
+    "interpretation": "The rank conclusion is rigorous only if these radii enclose the exact endpoint fundamental-matrix map."
+  },
+  "activeDim": 2,
+  "endpointColumns": 8,
+  "centerGramEigenvalues": [
+    7704285951341.06,
+    5.4067419733088444e+51
+  ],
+  "centerSigmaMin": 2775659.552492175,
+  "centerSigmaMax": 7.353055129202313e+25,
+  "centerConditionNumber": 2.649119962352819e+19,
+  "centerFrobeniusNorm": 7.353055129202313e+25,
+  "centerMaxEntry": 6.064144529198774e+25,
+  "entryBallFrobeniusRadius": 735305.5129202313,
+  "totalFrobeniusRadius": 735305.5129202313,
+  "lowerSigmaMin": 2040354.0395719435,
+  "lowerGramEigenvalue": 4163044606797.548,
+  "pinvNormUpperBound": 4.901110202471505e-07,
+  "conditionNumberUpperBound": 3.6038133513068884e+19,
+  "maxAllowedFrobeniusRadiusForRank": 2775659.552492175,
+  "maxAllowedUniformEntryRadiusForRank": 693914.8881230437,
+  "maxAllowedRelativeFrobeniusRadiusForRank": 3.7748384905598945e-20,
+  "variantSummaries": [],
+  "leastStableLeftDirection": [
+    0.9921554436481675,
+    -0.12501030213269598
+  ],
+  "leastStableSourcePairings": {
+    "maxAbsPairing": 7748058.894815218,
+    "maxRelativePairing": 0.2699578977341352,
+    "rows": [
+      {
+        "sourceNode": 0.08,
+        "component": "boundary",
+        "endpointVectorNorm": 1853384.370791592,
+        "leftDirectionPairing": -495000.5509070053,
+        "leftDirectionRelativePairing": 0.2670792733056163
+      },
+      {
+        "sourceNode": 0.08,
+        "component": "adjointEval",
+        "endpointVectorNorm": 28700989.894527186,
+        "leftDirectionPairing": 7748058.894815218,
+        "leftDirectionRelativePairing": 0.2699578977341352
+      },
+      {
+        "sourceNode": 0.24,
+        "component": "boundary",
+        "endpointVectorNorm": 1931530.4100874055,
+        "leftDirectionPairing": -516166.3513693202,
+        "leftDirectionRelativePairing": 0.2672318016188845
+      },
+      {
+        "sourceNode": 0.24,
+        "component": "adjointEval",
+        "endpointVectorNorm": 27568315.923316523,
+        "leftDirectionPairing": 7442284.610729014,
+        "leftDirectionRelativePairing": 0.2699578977341352
+      },
+      {
+        "sourceNode": 0.4,
+        "component": "boundary",
+        "endpointVectorNorm": 1992569.1553473515,
+        "leftDirectionPairing": -532774.3795895893,
+        "leftDirectionRelativePairing": 0.2673806217263833
+      },
+      {
+        "sourceNode": 0.4,
+        "component": "adjointEval",
+        "endpointVectorNorm": 26110008.418364953,
+        "leftDirectionPairing": 7048602.982442376,
+        "leftDirectionRelativePairing": 0.2699578977341352
+      },
+      {
+        "sourceNode": 0.52,
+        "component": "boundary",
+        "endpointVectorNorm": 2023694.52190102,
+        "leftDirectionPairing": -541309.6996637647,
+        "leftDirectionRelativePairing": 0.2674858748717018
+      },
+      {
+        "sourceNode": 0.52,
+        "component": "adjointEval",
+        "endpointVectorNorm": 24863475.881178815,
+        "leftDirectionPairing": 6712091.679246408,
+        "leftDirectionRelativePairing": 0.2699578977341352
+      }
+    ]
+  },
+  "conditionalBallFullRowRankStatus": {
+    "label": "conditional ball full active row rank",
+    "closed": true,
+    "status": "closed",
+    "reason": "Weyl perturbation gives sigma_min(M_exact)>=sigma_min(M0)-delta for the supplied endpoint-map ball."
+  },
+  "rigorousEndpointMapFullRowRankStatus": {
+    "label": "rigorous endpoint map full active row rank",
+    "closed": false,
+    "status": "open",
+    "reason": "Closed only if the supplied endpoint-map ball is a rigorous interval enclosure of the exact fundamental-matrix endpoint map."
+  },
+  "kernelMStarZeroStatus": {
+    "label": "ker M^* is zero",
+    "closed": false,
+    "status": "open",
+    "reason": "If the rigorous full-row-rank status is closed, then the left Fredholm obstruction space is trivial and endpoint compatibility is vacuous."
+  },
+  "moorePenroseEndpointBoundStatus": {
+    "label": "Moore-Penrose endpoint bound",
+    "closed": true,
+    "status": "closed",
+    "reason": "On the supplied ball, ||M^+|| <= 1/(sigma_min(M0)-delta).  This becomes a rigorous continuum bound only with a rigorous endpoint map enclosure."
+  },
+  "proof": [
+    "Let M_exact=M0+E with ||E||_2<=||E||_F<=delta.",
+    "Weyl's singular-value inequality gives sigma_min(M_exact)>=sigma_min(M0)-delta.",
+    "If this lower bound is positive, M_exact has full active row rank.",
+    "Full active row rank implies ker(M^*)={0}, so the endpoint Fredholm compatibility condition is vacuous.",
+    "The same lower bound gives ||M^+||<=1/(sigma_min(M0)-delta)."
+  ],
+  "remainingAnalyticGap": "Produce a rigorous interval enclosure for the exact endpoint fundamental-matrix map with Frobenius radius below the displayed maxAllowedFrobeniusRadiusForRank."
+}

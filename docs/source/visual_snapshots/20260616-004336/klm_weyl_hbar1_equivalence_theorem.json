@@ -1,0 +1,26 @@
+{
+  "theoremName": "hbar=1 KLM/Weyl equivalence theorem",
+  "proofClass": "symbolic identity",
+  "normalization": "hbar=1",
+  "statuses": {
+    "klmWeylConventionStatus": {
+      "label": "hbar=1 Weyl/KLM convention fixed",
+      "closed": true,
+      "status": "closed",
+      "reason": "The ledger uses the hbar=1 symplectic phase convention.  In this normalization the KLM quantum positive-type matrix is the quantum-Bochner positivity condition for the Weyl symbol."
+    },
+    "klmWeylEquivalenceStatus": {
+      "label": "KLM positive type equals Weyl operator positivity",
+      "closed": true,
+      "status": "closed",
+      "reason": "For the symplectic Fourier pair (Q,sigma) in the fixed hbar=1 normalization, Q is KLM positive type if and only if Op^W(sigma) is positive semidefinite on the Weyl test domain."
+    }
+  },
+  "klmWeylHbar1EquivalenceClosed": true,
+  "proof": [
+    "Fix the hbar=1 symplectic Fourier convention used in the ledger.",
+    "Use the KLM quantum-Bochner theorem in that convention.",
+    "Identify KLM positivity of Q with positivity of Op^W(sigma)."
+  ],
+  "remainingAnalyticGap": null
+}

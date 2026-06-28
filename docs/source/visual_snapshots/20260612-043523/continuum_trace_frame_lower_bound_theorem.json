@@ -1,0 +1,69 @@
+{
+  "theoremName": "continuum trace-frame lower bound theorem",
+  "activeRangeJson": "synchronized_active_range_theorem.json",
+  "sourceRankJson": "full_theta_source_quadrature_certificate.json",
+  "finiteFrameJson": "trace_frame_continuum_passage_certificate.json",
+  "quadratureJson": "trace_quadrature_stability_certificate.json",
+  "activeDimension": 2,
+  "activeEigenvalues": [
+    11489025587.757864,
+    140116882778.8568
+  ],
+  "observedFiniteFrameFloor": 293.11515100909196,
+  "observedFiniteFrameMaxResidual": 1.0928484787969945e-63,
+  "observedTraceMeshFrameMinDrift": 0.019991757322283577,
+  "observedTraceMeshDensityDrift": 0.008937814385651955,
+  "sourceSideNoncollapseStatus": {
+    "label": "full-Phi active source noncollapse",
+    "closed": true,
+    "status": "closed",
+    "reason": "Imported from full_theta_source_quadrature_certificate.py.  It proves that E_active is injective on the active source spectral space after continuum source quadrature and theta-tail errors."
+  },
+  "activeRangeStatus": {
+    "label": "closed active range implication",
+    "closed": true,
+    "status": "closed",
+    "reason": "Imported from synchronized_active_range_theorem.py: E_active lies in closure Range(R_global^*), equivalently R_global f=0 implies E_active f=0."
+  },
+  "traceInjectivityOnActiveSpaceStatus": {
+    "label": "R_global injective on H_delta",
+    "closed": true,
+    "status": "closed",
+    "reason": "If R_global f=0 on H_delta, active range gives E_active f=0.  Source-side noncollapse makes E_active injective on H_delta, so f=0."
+  },
+  "continuumTraceFrameLowerBoundStatus": {
+    "label": "continuum L2 trace-frame lower bound",
+    "closed": true,
+    "status": "closed",
+    "reason": "The A-unit sphere in finite-dimensional H_delta is compact, and f -> ||Lambda_.(f)||_{L2(I)} is continuous and nonzero there by trace injectivity.  Its minimum gamma_delta is therefore positive."
+  },
+  "traceQuadratureConsistencyStatus": {
+    "label": "uniform trace quadrature consistency on H_delta",
+    "closed": true,
+    "status": "closed",
+    "reason": "On finite-dimensional H_delta, the family |Lambda_a(f)|^2 with ||f||_A=1 is compact/equicontinuous in C(I).  Any consistent positive trace quadrature converges uniformly on it, so discrete frame matrices converge to the continuum frame matrix."
+  },
+  "boundedSampledTraceCorrectionStatus": {
+    "label": "bounded sampled-trace correction right inverse on active block",
+    "closed": true,
+    "status": "closed",
+    "reason": "For sufficiently fine trace meshes, the discrete frame lower bound is at least gamma_delta/2.  The Moore-Penrose right inverse of W^{1/2}R_N on the active trace block then has norm at most sqrt(2/gamma_delta)."
+  },
+  "explicitNumericGammaStatus": {
+    "label": "explicit rigorous numeric gamma_delta",
+    "closed": false,
+    "status": "open",
+    "reason": "The theorem proves gamma_delta>0 qualitatively.  The observed finite floor is recorded, but an interval quadrature error bound would be needed to certify a numerical lower value such as the observed frame floor."
+  },
+  "proof": [
+    "Let H_delta be the finite-dimensional active source spectral space for the compact source operator S=Ehat^*Ehat.",
+    "Suppose f in H_delta and Lambda_a(f)=0 for every a in I.  Then R_global f=0, so the synchronized active range theorem gives E_active f=0.",
+    "The full-Phi source-side noncollapse theorem says E_active is injective on H_delta.  Hence f=0.  Therefore the continuum trace map is injective on H_delta.",
+    "The function q(f)=int_I |Lambda_a(f)|^2 da is continuous on the compact A-unit sphere of H_delta and is strictly positive there.  Thus gamma_delta=min q(f)>0.",
+    "Because H_delta is finite dimensional and a -> Lambda_a(f) is continuous, positive quadrature rules converge uniformly on the compact family q_f(a)=|Lambda_a(f)|^2.  The discrete weighted frame matrices converge to the continuum frame matrix.",
+    "For all sufficiently fine trace meshes, the discrete smallest frame eigenvalue is at least gamma_delta/2.  The sampled trace correction right inverse is therefore bounded by sqrt(2/gamma_delta)."
+  ],
+  "formalConclusion": "There exists gamma_delta>0 such that int_I |Lambda_a(f)|^2 da >= gamma_delta ||f||_A^2 for every f in H_delta.  The corresponding sampled weighted trace frames have a positive lower bound for all sufficiently fine meshes, giving a bounded sampled-trace correction right inverse on the active finite-dimensional trace block.",
+  "remainingAnalyticGap": null,
+  "remainingNumericalGap": "Only an explicit numerical gamma_delta remains open.  The qualitative continuum lower bound and quadrature consistency are closed by compactness/injectivity."
+}

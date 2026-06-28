@@ -1,0 +1,56 @@
+{
+  "theoremName": "Hermite-Biehler/de Branges endpoint passage for shifted Xi",
+  "augmentedClosedConeJson": "klm_debranges_augmented_closed_cone_theorem.json",
+  "uniformOmegaJson": "uniform_omega_weyl_klm_bridge.json",
+  "statuses": {
+    "shiftedKernelPositivityStatus": {
+      "label": "shifted-Xi de Branges kernel positivity for all 0<omega<1/2",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the augmented closed-cone bridge and the all-omega KLM/Weyl theorem.  For every 0<omega<1/2, the kernel K_{E_omega} is positive on finite evaluation sets in the upper half-plane."
+    },
+    "diagonalInequalityStatus": {
+      "label": "diagonal de Branges inequality",
+      "closed": true,
+      "status": "closed",
+      "reason": "For z in C_+, K_E(z,z)>=0 and 2*pi*i*(conj(z)-z)=4*pi*Im(z)>0 give |Xi(z-i omega)|<=|Xi(z+i omega)|."
+    },
+    "zeroDescentContradictionStatus": {
+      "label": "zero-descent contradiction",
+      "closed": true,
+      "status": "closed",
+      "reason": "If Xi(rho)=0 with Im(rho)=b>0, then for every 0<omega<min(b,1/2), z=rho-i omega lies in C_+ and the diagonal inequality forces Xi(rho-2i omega)=0.  This gives a continuum of zeros accumulating at rho, contradicting that Xi is a nonzero entire function."
+    },
+    "lowerHalfPlaneExclusionStatus": {
+      "label": "lower-half-plane exclusion",
+      "closed": true,
+      "status": "closed",
+      "reason": "Xi is real entire in the z-normalization, so Xi(conj z)=conj Xi(z).  Any lower-half-plane zero would conjugate to an upper-half-plane zero, already excluded."
+    },
+    "rhSideZeroLocationStatus": {
+      "label": "RH-side zero-location conclusion in z-normalization",
+      "closed": true,
+      "status": "closed",
+      "reason": "All zeros of Xi(z)=xi(1/2+i z) are real.  This is equivalent to the nontrivial zeros of xi(s) lying on Re(s)=1/2."
+    }
+  },
+  "normalization": {
+    "Xi": "Xi(z)=xi(1/2+i z), real entire",
+    "Eomega": "E_omega(z)=Xi(z+i omega)",
+    "EomegaSharp": "E_omega#(z)=Xi(z-i omega)",
+    "omegaRange": "0<omega<1/2",
+    "kernel": "K_E(w,z)=(E(z)conj(E(w))-E#(z)conj(E#(w)))/(2*pi*i*(conj(w)-z))"
+  },
+  "proof": [
+    "Kernel positivity gives K_{E_omega}(z,z)>=0 for every z in C_+ and every 0<omega<1/2.",
+    "Since K_{E_omega}(z,z)=(|Xi(z+i omega)|^2-|Xi(z-i omega)|^2)/(4*pi*Im z), we have |Xi(z-i omega)|<=|Xi(z+i omega)|.",
+    "Assume Xi(rho)=0 with Im rho=b>0.  For each 0<omega<min(b,1/2), let z=rho-i omega.  Then z in C_+ and the inequality gives |Xi(rho-2i omega)|<=0.",
+    "Thus Xi vanishes on the vertical continuum {rho-2i omega: 0<omega<min(b,1/2)}, which has accumulation points in C.  A nonzero entire function cannot do this.",
+    "Therefore Xi has no upper-half-plane zeros.  Since Xi is real entire, conjugation excludes lower-half-plane zeros.  Hence all Xi zeros are real."
+  ],
+  "endpointPassageClosed": true,
+  "conditionalRhClosed": true,
+  "independentRhProofVetted": false,
+  "caution": "This ledger closes the endpoint implication conditional on the imported KLM/Weyl and augmented closed-cone bridge certificates.  It is not an external peer-review validation of those hard inputs.",
+  "nextProofTarget": "Audit every imported theorem for publication-grade rigor and normalization consistency."
+}

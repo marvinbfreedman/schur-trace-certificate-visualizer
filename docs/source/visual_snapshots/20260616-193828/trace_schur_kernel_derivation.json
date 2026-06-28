@@ -1,0 +1,103 @@
+{
+  "theoremName": "continuum trace-side Schur kernel derivation",
+  "definitions": {
+    "V": "completed Weyl/Volterra form domain",
+    "R": "completed trace map V -> X_R",
+    "N": "ker R",
+    "J": "arbitrary section X_R -> V with R J = I",
+    "A": "closed nonnegative form operator for Q restricted to N",
+    "GammaJ": "Douglas representative b(n,x)=<A^(1/2)n,Gamma_J x>",
+    "DTrace": "D_trace(x,y)=Q(Jx,Jy)-<Gamma_J x,Gamma_J y>"
+  },
+  "exactIdentities": [
+    "D_trace is independent of the section J.",
+    "D_trace(x,x)=inf{Q(f): Rf=x}.",
+    "D_trace>=0 on X_R iff Q>=0 on the completed form domain.",
+    "In finite sampled trace coordinates RU=W Sigma, D_sample=W Sigma^{-1}(C-Gamma^*Gamma)Sigma^{-1}W^*."
+  ],
+  "statuses": {
+    "kernelDefinitionStatus": {
+      "label": "intrinsic trace-side Schur kernel definition",
+      "closed": true,
+      "status": "closed",
+      "reason": "For any section J of R, define D_trace(x,y)=Q(Jx,Jy)-<Gamma_J x,Gamma_J y>."
+    },
+    "sectionIndependenceStatus": {
+      "label": "section independence",
+      "closed": true,
+      "status": "closed",
+      "reason": "If J'=J+h with h:X_R->N, then Gamma' = Gamma + A^(1/2)h and the terms in c'-Gamma'^*Gamma' cancel algebraically. The finite section-change check also closes below tolerance."
+    },
+    "infimumFormulaStatus": {
+      "label": "constrained-energy infimum formula",
+      "closed": true,
+      "status": "closed",
+      "reason": "Completing the square gives D_trace(x,x)=inf{Q(f): Rf=x} under the already imported Douglas range condition."
+    },
+    "finiteTraceKernelStatus": {
+      "label": "finite repair-free Schur kernels positive",
+      "closed": true,
+      "status": "closed",
+      "reason": "All imported finite probes have min eig(C-Gamma^*Gamma)>0, including the 12/9 stress point."
+    },
+    "volterraGreenGramStatus": {
+      "label": "continuum Volterra/Green Gram positivity",
+      "closed": false,
+      "status": "open",
+      "reason": "The exact intrinsic kernel has been derived, but no explicit continuum Volterra/Green feature map has yet been constructed.",
+      "blocker": "Derive functions G_x(u) and a positive measure/operator dmu(u) such that D_trace(x,y)=integral G_x(u) G_y(u) dmu(u) in the transported X_R norm."
+    }
+  },
+  "finiteSectionInvarianceCheck": {
+    "basis": 6,
+    "constraints": 3,
+    "traceRank": 3,
+    "traceNullity": 3,
+    "sectionChangeFrobeniusError": 7.25769543412147e-63,
+    "traceTransportQuadraticMaxError": 3.123823375103913e-56,
+    "schurComplementMin": 0.0014084315519562395,
+    "schurComplementMax": 0.036900312628838174,
+    "closed": true
+  },
+  "finiteEvidenceRows": [
+    {
+      "basis": 6,
+      "constraints": 3,
+      "traceRank": 3,
+      "schurComplementMin": 0.0014084315519562395,
+      "traceKernelMin": 0.00010286564513465137,
+      "weakModeDecay": 4.360646793987184,
+      "repairFreeFiniteClosed": true
+    },
+    {
+      "basis": 8,
+      "constraints": 5,
+      "traceRank": 5,
+      "schurComplementMin": 0.00011790089587421823,
+      "traceKernelMin": 4.687682255694923e-07,
+      "weakModeDecay": 4.438786208478917,
+      "repairFreeFiniteClosed": true
+    },
+    {
+      "basis": 10,
+      "constraints": 7,
+      "traceRank": 7,
+      "schurComplementMin": 1.2820029525476991e-05,
+      "traceKernelMin": 2.690222591742659e-09,
+      "weakModeDecay": 4.561574205909827,
+      "repairFreeFiniteClosed": true
+    },
+    {
+      "basis": 12,
+      "constraints": 9,
+      "traceRank": 9,
+      "schurComplementMin": 1.0811969351961145e-06,
+      "traceKernelMin": 1.8605439321845638e-11,
+      "weakModeDecay": 4.766458099186302,
+      "repairFreeFiniteClosed": true
+    }
+  ],
+  "continuumTheoremClosed": false,
+  "correctedConclusion": "The exact continuum trace-side Schur kernel is now identified. The algebraic derivation and section invariance are closed. The positivity theorem remains the explicit Volterra/Green Gram factorization of this intrinsic kernel in the transported X_R norm.",
+  "nextProofTarget": "Construct an explicit Green feature map for D_trace, probably by solving the Euler-Lagrange minimizer for inf{Q(f):Rf=x} and expressing the minimized energy as an integral of squares."
+}

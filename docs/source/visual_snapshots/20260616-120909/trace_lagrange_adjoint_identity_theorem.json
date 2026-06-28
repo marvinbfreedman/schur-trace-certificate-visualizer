@@ -1,0 +1,21 @@
+{
+  "theoremName": "trace Lagrange adjoint identity theorem",
+  "proofClass": "symbolic identity",
+  "operatorOrder": 8,
+  "traceOperator": "P f=sum_{k=0}^m a_k(s)D^k f(s)",
+  "formalAdjoint": "P^*h=sum_{k=0}^m (-1)^k D^k(a_k h)",
+  "concomitant": "B_P[h,f]=sum_{k=1}^m sum_{j=0}^{k-1} (-1)^(k-1-j) D^(k-1-j)(a_k h) D^j f",
+  "lagrangeIdentityStatus": {
+    "label": "symbolic Lagrange identity",
+    "closed": true,
+    "status": "closed",
+    "reason": "Expanding D_s B_P telescopes the product-rule terms and leaves h P f - f P^*h.  No quadrature, sampling, or Galerkin limit is used."
+  },
+  "formalProof": [
+    "Differentiate each summand (-1)^(k-1-j)D^(k-1-j)(a_kh)D^j f.",
+    "The derivative landing on D^j f cancels the derivative landing on the previous j+1 summand.",
+    "Only the boundary terms j=k-1 and j=0 remain, giving a_k h D^k f and -(-1)^k D^k(a_k h)f.",
+    "Summing over k gives hPf-fP^*h."
+  ],
+  "theoremClosed": true
+}

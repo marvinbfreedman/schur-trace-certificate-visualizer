@@ -1,0 +1,122 @@
+{
+  "theoremName": "synchronized active range theorem",
+  "endpointJson": "endpoint_coefficient_synchronized_200_certificate.json",
+  "activeRangeJson": "continuum_active_trace_range_theorem.json",
+  "inactiveTailJson": "source_inactive_minmax_tail_theorem.json",
+  "endpointInputSummary": {
+    "conditionMatrixOrder": 200,
+    "controlledQuadratureOrder": 200,
+    "scaledCompanionAnalyticRadius": 2.0389874331769852e-24,
+    "boundaryRowAnalyticRadius": 9.062300137770981e-25,
+    "scaledCompanionRadiusOverSimultaneousBudget": 3.1988616802888144e-15,
+    "boundaryRowRadiusOverSimultaneousBudget": 3.122484815877811e-15,
+    "endpointRadiusOverChartCapacity": 3.16061191846505e-15,
+    "actualKrawczykQ": 1.0938554638804267e-19
+  },
+  "activeRangeImportedStatus": {
+    "hilbertAnnihilatorRangeCriterionStatus": {
+      "label": "Hilbert annihilator range criterion",
+      "closed": true,
+      "status": "closed",
+      "reason": "For a densely defined closed trace map R between Hilbert spaces, closure Ran(R^*)=(ker R)^perp.  Hence E_active factors through the interval trace iff ker R is annihilated by E_active."
+    },
+    "finiteActiveBlockFactorizationStatus": {
+      "label": "finite active block factorization",
+      "closed": false,
+      "status": "open",
+      "reason": "Current Galerkin active blocks satisfy E_active=C_sample R_global to roundoff.  This is finite evidence for, not proof of, the continuum annihilator condition."
+    },
+    "compactnessContradictionReductionStatus": {
+      "label": "compactness contradiction reduction",
+      "closed": true,
+      "status": "closed",
+      "reason": "Failure of ker R subset ker E_active is equivalent to an A-normalized sequence with R f_n -> 0 and active source bounded below.  The high-block elliptic/Mosco theorem is the compactness mechanism needed to pass such a sequence to a continuum limit."
+    },
+    "oldContinuumActiveTraceRangeCompatibilityStatus": {
+      "label": "continuum active trace range compatibility",
+      "closed": true,
+      "status": "closed",
+      "reason": "The closed-trace active unique-continuation theorem proves ker R subset ker E_active.  The Hilbert annihilator criterion then gives E_active in closure Ran(R^*)."
+    }
+  },
+  "inactiveTailConstants": {
+    "normalizedEpsilonDelta": 0.0013454526382754603,
+    "finiteLowMidSchurBudget": 0.005730309711103612,
+    "absorptionSlack": 0.004384857072828152,
+    "epsilonOverBudget": 0.23479579745373602,
+    "absoluteTailBound": 188267340.12410972,
+    "sourceTopLower": 139928626819.16638
+  },
+  "synchronizedEndpointKrawczykInputStatus": {
+    "label": "synchronized endpoint Krawczyk input",
+    "closed": true,
+    "status": "closed",
+    "reason": "Imported from the synchronized 200-point coefficient input certificate.  It proves the finite endpoint map stays inside the persistent active Pluecker chart."
+  },
+  "endpointGreenBvpSolvabilityStatus": {
+    "label": "endpoint Green BVP solvable for active source rows",
+    "closed": true,
+    "status": "closed",
+    "reason": "Full active endpoint row rank removes every Fredholm compatibility obstruction, so the endpoint free vector z can be chosen for every active source row."
+  },
+  "closedTraceActiveAnnihilationStatus": {
+    "label": "closed trace annihilates active source",
+    "closed": true,
+    "status": "closed",
+    "reason": "With the endpoint Green BVP solvable, the Volterra/Sturm Green representation has only the interval trace term.  If Lambda_a(f)=0 on I, that term vanishes and E_active f=0."
+  },
+  "activeRangeInclusionStatus": {
+    "label": "E_active in closure Range(R_global^*)",
+    "closed": true,
+    "status": "closed",
+    "reason": "By the Hilbert annihilator criterion, ker R_global subset ker E_active is equivalent to E_active lying in closure Range(R_global^*)."
+  },
+  "sourceInactiveTailDominationStatus": {
+    "label": "source-inactive min-max tail domination",
+    "closed": true,
+    "status": "closed",
+    "reason": "Imported min-max theorem gives ||(I-P_active)Ehat f||^2 <= epsilon_delta <A f,f> in the certified normalized source model, and epsilon_delta is below the finite low/mid Schur budget."
+  },
+  "certifiedModelCombinedSourceBoundStatus": {
+    "label": "active range plus inactive tail in certified source model",
+    "closed": true,
+    "status": "closed",
+    "reason": "On ker R_global, the active source component vanishes; the inactive component is bounded by epsilon_delta and absorbed by the finite low/mid Schur block."
+  },
+  "fullContinuumCombinedSourceBoundStatus": {
+    "label": "full continuum active range plus inactive tail",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed: active range inclusion is proved by the synchronized endpoint Green theorem, and the inactive-tail theorem imports the Galerkin-to-continuum high-block exhaustion passage."
+  },
+  "proofChain": [
+    {
+      "step": 1,
+      "statement": "synchronized endpoint Krawczyk input closed implies the active endpoint map has full row rank.",
+      "closed": true
+    },
+    {
+      "step": 2,
+      "statement": "full active endpoint row rank implies the endpoint Green BVP is solvable for every active source row.",
+      "closed": true
+    },
+    {
+      "step": 3,
+      "statement": "the solved Green representation gives R_global f=0 implies E_active f=0.",
+      "closed": true
+    },
+    {
+      "step": 4,
+      "statement": "ker R_global subset ker E_active implies E_active in closure Range(R_global^*).",
+      "closed": true
+    },
+    {
+      "step": 5,
+      "statement": "source-inactive min-max tail gives ||(I-P_active)Ehat f||^2 <= epsilon_delta <A f,f>.",
+      "closed": true,
+      "epsilonDelta": 0.0013454526382754603
+    }
+  ],
+  "formalConclusion": "For f in ker R_global, P_active Ehat f=0 and ||(I-P_active)Ehat f||^2 <= 1.345452638275e-03 <A f,f> in the certified normalized source model. The finite low/mid Schur budget is 5.730309711104e-03, leaving slack 4.384857072828e-03.",
+  "remainingAnalyticGap": null
+}

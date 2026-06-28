@@ -1,0 +1,141 @@
+{
+  "theoremName": "endpoint coefficient interval enclosure",
+  "sourceKrawczykJson": "endpoint_riccati_krawczyk_consequence_theorem.json",
+  "order": 11,
+  "stateScaling": "taylor",
+  "constraintInterval": [
+    0.02,
+    0.545
+  ],
+  "s0": 0.2825,
+  "levels": [
+    {
+      "dps": 70,
+      "matrixOrder": 70,
+      "tag": "base"
+    },
+    {
+      "dps": 80,
+      "matrixOrder": 80,
+      "tag": "level_80_80"
+    },
+    {
+      "dps": 90,
+      "matrixOrder": 90,
+      "tag": "strict"
+    }
+  ],
+  "strictestLevel": {
+    "dps": 90,
+    "matrixOrder": 90,
+    "tag": "strict"
+  },
+  "activeCoordinatePolicy": "fixed from the first/base Krawczyk active source basis; strict boundary rows are projected into the same active coordinates before entrywise comparison",
+  "safetyFactor": 16.0,
+  "tailMode": "geometric",
+  "tailRatioCap": 1e-06,
+  "activeIndices": [
+    3,
+    4
+  ],
+  "strictTraceFieldMinGap": 1.1635518278617991e-05,
+  "strictTraceFieldMinConsecutiveCos": 0.9881718063973355,
+  "refinementDiffs": [
+    {
+      "from": {
+        "dps": 70,
+        "matrixOrder": 70,
+        "tag": "base"
+      },
+      "to": {
+        "dps": 80,
+        "matrixOrder": 80,
+        "tag": "level_80_80"
+      },
+      "leftCompanionMaxDiff": 1.7539637490692398e-42,
+      "rightCompanionMaxDiff": 2.1762721077497307e-52,
+      "scaledCompanionMaxDiff": 1.7539637490692398e-42,
+      "leftBoundaryRowMaxDiff": 3.5026932463659023e-38,
+      "rightBoundaryRowMaxDiff": 1.505863501677598e-47,
+      "boundaryRowMaxDiff": 3.5026932463659023e-38,
+      "scaledCompanionMaxAbs": 679.9784268707629,
+      "boundaryRowMaxAbs": 12802769.13612685
+    },
+    {
+      "from": {
+        "dps": 80,
+        "matrixOrder": 80,
+        "tag": "level_80_80"
+      },
+      "to": {
+        "dps": 90,
+        "matrixOrder": 90,
+        "tag": "strict"
+      },
+      "leftCompanionMaxDiff": 4.844185914444705e-52,
+      "rightCompanionMaxDiff": 4.588323323212716e-63,
+      "scaledCompanionMaxDiff": 4.844185914444705e-52,
+      "leftBoundaryRowMaxDiff": 9.675084866189567e-48,
+      "rightBoundaryRowMaxDiff": 1.4227721659524001e-58,
+      "boundaryRowMaxDiff": 9.675084866189567e-48,
+      "scaledCompanionMaxAbs": 679.9784268707629,
+      "boundaryRowMaxAbs": 12802769.13612685
+    }
+  ],
+  "scaledCompanionIntervalRadius": 7.750705213816742e-51,
+  "scaledCompanionTailAllowance": 4.8441907586354636e-58,
+  "scaledCompanionObservedTailRatio": 2.761850646579968e-10,
+  "scaledCompanionCapacity": 1.2748331615480036e-09,
+  "scaledCompanionRadiusOverCapacity": 6.079780043064789e-42,
+  "boundaryRowIntervalRadius": 1.5480151266054574e-46,
+  "boundaryRowTailAllowance": 9.675094541284108e-54,
+  "boundaryRowObservedTailRatio": 2.7621844636916507e-10,
+  "boundaryRowCapacity": 5.804600980653483e-10,
+  "boundaryRowRadiusOverCapacity": 2.6668760381031077e-37,
+  "simultaneousCapacityFraction": 0.49999508549087535,
+  "simultaneousCoefficientFractionUsed": 6.079780043064789e-42,
+  "simultaneousBoundaryFractionUsed": 2.6668760381031077e-37,
+  "scaledCompanionIntervalStatus": {
+    "label": "scaled companion interval below Krawczyk capacity",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed when the safety-inflated refinement interval radius for every scaled companion entry is smaller than the Krawczyk coefficient capacity."
+  },
+  "boundaryRowIntervalStatus": {
+    "label": "active boundary-row interval below Krawczyk capacity",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed when the safety-inflated refinement interval radius for every active endpoint boundary-row entry is smaller than the Krawczyk boundary-row capacity."
+  },
+  "simultaneousKrawczykInputStatus": {
+    "label": "simultaneous Krawczyk input below half-chart budget",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed when both coefficient and boundary intervals fit inside the simultaneous fraction reported by the finite Krawczyk certificate."
+  },
+  "refinementTailModelStatus": {
+    "label": "refinement tail model",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed only with tail-mode=geometric when the last two refinement differences support a convergent geometric tail. With tail-mode=none the Krawczyk budget comparison is still valid for the displayed finite refinement radius, but this status remains open as an analytic infinite-tail proof."
+  },
+  "finiteKrawczykBudgetStatus": {
+    "label": "finite Krawczyk budget comparison",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed when the displayed finite/refinement radii for the fixed-active-coordinate coefficients fit inside both the independent and simultaneous Krawczyk budgets."
+  },
+  "exactFiniteKrawczykCoefficientInputStatus": {
+    "label": "exact finite Krawczyk coefficient input",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed only after the finite Krawczyk budget comparison and the refinement tail model are both closed.  The remaining external proof obligation is to justify the refinement tail from analytic quadrature/eigenrow perturbation estimates."
+  },
+  "fullRankShortcutStatus": {
+    "label": "endpoint full-rank shortcut from coefficient enclosure",
+    "closed": true,
+    "status": "closed",
+    "reason": "If the coefficient intervals are exact, the Krawczyk theorem keeps the endpoint map in the persistent p_01 chart, so the active endpoint map has full row rank and the Green BVP has no active compatibility obstruction."
+  },
+  "remainingFormalItem": "Replace the refinement/tail model by a theorem bounding the confluent quadrature, r-tail, and eigenrow perturbation errors for every node used in the order-11 collocation system."
+}

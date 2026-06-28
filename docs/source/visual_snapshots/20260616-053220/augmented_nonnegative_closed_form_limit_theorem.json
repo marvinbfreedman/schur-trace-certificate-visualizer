@@ -1,0 +1,44 @@
+{
+  "theoremName": "augmented nonnegative closed-form limit theorem",
+  "proofClass": "analytic proof",
+  "pointwiseNonnegativeJson": "augmented_pointwise_repaired_form_nonnegative_certificate.json",
+  "closedFormLscJson": "closed_form_lsc_transport_consequence_theorem.json",
+  "conePrincipleJson": "closed_lsc_nonnegative_cone_consequence_theorem.json",
+  "legacyFiniteSequenceJson": null,
+  "statement": "Pointwise nonnegative augmented repaired core forms, together with an identified closed lower-semicontinuous transported envelope, produce a nonnegative completed repaired form by the abstract closed-LSC cone principle.",
+  "statuses": {
+    "pointwiseNonnegativeCoreInputStatus": {
+      "label": "pointwise nonnegative core input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The pointwise certificate proves q_N^rep>=0 for each fixed augmented trace-core index N and makes no continuum promotion claim."
+    },
+    "closedFormLscInputStatus": {
+      "label": "closed lower-envelope transport input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The closed-form LSC transport theorem identifies the completed lower envelope and transports it to X_aug."
+    },
+    "closedLscConePrincipleInputStatus": {
+      "label": "closed LSC cone principle input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The abstract cone principle says a closed LSC lower envelope of nonnegative core forms is nonnegative."
+    },
+    "nonnegativeClosedFormLimitStatus": {
+      "label": "nonnegative closed-form limit",
+      "closed": true,
+      "status": "closed",
+      "reason": "The pointwise core certificate supplies nonnegative core forms; the transport theorem identifies the closed lower envelope; the abstract cone principle keeps that envelope inside the nonnegative cone."
+    }
+  },
+  "nonnegativeClosedFormLimitClosed": true,
+  "completedRepairedFormNonnegativeClosed": true,
+  "proof": [
+    "Import pointwise nonnegativity on each fixed augmented trace core.",
+    "Import the closed-form LSC transport theorem to identify the completed lower envelope on X_aug.",
+    "Apply the abstract closed-LSC nonnegative cone principle to the transported envelope.",
+    "Conclude the completed repaired form is nonnegative."
+  ],
+  "remainingAnalyticGap": null
+}

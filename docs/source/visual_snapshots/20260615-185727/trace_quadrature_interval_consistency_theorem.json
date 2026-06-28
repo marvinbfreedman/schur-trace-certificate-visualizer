@@ -1,0 +1,264 @@
+{
+  "theoremName": "trace quadrature interval consistency theorem",
+  "proofClass": "interval/ball certificate",
+  "basis": 18,
+  "traceCount": 13,
+  "activeDimension": 2,
+  "activeIndices": [
+    3,
+    4
+  ],
+  "activeSourceEigenvalues": [
+    226461.95322692656,
+    18285135401.77335
+  ],
+  "interval": [
+    0.02,
+    0.545
+  ],
+  "meshStep": 0.04375,
+  "coverCount": 6,
+  "derivativeOrder": 3,
+  "derivativeSafety": 6.0,
+  "trapezoidFactor": 8.3740234375e-05,
+  "supFSecondOperatorBound": 2004444009.9567046,
+  "supMetricFSecondOperatorBound": 8563.73344298828,
+  "traceQuadratureErrorBound": 167852.61118533928,
+  "metricRelativeTraceQuadratureErrorBound": 0.7171290456408642,
+  "frameJson": "trace_frame_interval_lower_bound_certificate.json",
+  "frameGammaComparable": true,
+  "frameMetricEigenvalues": [
+    293.11515100909196,
+    2823933.1576196826
+  ],
+  "gammaFiniteLower": 293.1151510088239,
+  "lambdaMinCenter": 293.11515100909196,
+  "frameRadiusOperatorBound": 2.8239405983465517e-39,
+  "gammaAfterTraceQuadrature": -167559.49603433046,
+  "gammaAfterMetricTraceQuadrature": 82.91376250306405,
+  "traceQuadratureClosed": true,
+  "traceQuadratureAbsorbedByFiniteGamma": true,
+  "requiredTraceCountForErrorBelowGamma": 289,
+  "requiredTraceCountForErrorBelowHalfGamma": 408,
+  "traceQuadratureConsistencyStatus": {
+    "label": "active trace-frame composite trapezoid consistency",
+    "closed": true,
+    "status": "closed",
+    "reason": "The exact active trace derivative rows give a Taylor-ball enclosure of sup ||(R(a)^*R(a))''|| on the trace interval.  The composite trapezoid formula gives an explicit operator error bound for Gamma-Gamma_h."
+  },
+  "finiteGammaAbsorptionStatus": {
+    "label": "current finite gamma absorbs this quadrature error",
+    "closed": true,
+    "status": "closed",
+    "reason": "The trace quadrature error is controlled either absolutely below the imported finite interval frame lower bound, or relatively in the finite frame metric with relative error below one."
+  },
+  "segments": [
+    {
+      "left": 0.02,
+      "mid": 0.06375,
+      "right": 0.1075,
+      "halfWidth": 0.04375,
+      "rowNormSamples": [
+        3923.1897975646716,
+        7738.258635415084,
+        22745.444025669123,
+        667657.6444680606
+      ],
+      "midpointFSecondOperatorNorm": 100875013.50370073,
+      "sampledFSecondOperatorNorm": 149042797.4757149,
+      "r3InflatedBound": 4005945.8668083632,
+      "r2TaylorBallBound": 178134.9275503092,
+      "r1TaylorBallBound": 15531.661715741111,
+      "r0TaylorBallBound": 4271.98360136989,
+      "fSecondTaylorBallBound": 2004444009.9567046,
+      "fSecondSegmentBound": 2004444009.9567046,
+      "metricRowNormSamples": [
+        3.5474967150980166,
+        22.71227981098114,
+        69.52496239915484,
+        552.1397644024473
+      ],
+      "metricMidpointFSecondOperatorNorm": 1057.9326270505437,
+      "metricSampledFSecondOperatorNorm": 1427.2889071647132,
+      "metricR3InflatedBound": 3312.838586414684,
+      "metricR2TaylorBallBound": 202.49861027868099,
+      "metricR1TaylorBallBound": 28.982104609567557,
+      "metricR0TaylorBallBound": 4.0347595942962124,
+      "metricFSecondTaylorBallBound": 3313.991196506949,
+      "metricFSecondSegmentBound": 8563.73344298828
+    },
+    {
+      "left": 0.1075,
+      "mid": 0.15125,
+      "right": 0.195,
+      "halfWidth": 0.04375,
+      "rowNormSamples": [
+        3254.672355842175,
+        7658.968214141647,
+        7329.225021787852,
+        88522.42482354242
+      ],
+      "midpointFSecondOperatorNorm": 149571051.0245884,
+      "sampledFSecondOperatorNorm": 149571051.0245884,
+      "r3InflatedBound": 531134.5489412545,
+      "r2TaylorBallBound": 30167.045561781593,
+      "r1TaylorBallBound": 8710.444407621175,
+      "r0TaylorBallBound": 3306.4113608663856,
+      "fSecondTaylorBallBound": 351233007.89501506,
+      "fSecondSegmentBound": 897426306.1475304,
+      "metricRowNormSamples": [
+        2.1586039783580255,
+        17.748252642928943,
+        55.637380858586155,
+        56.26605987751446
+      ],
+      "metricMidpointFSecondOperatorNorm": 564.0389667359894,
+      "metricSampledFSecondOperatorNorm": 787.9936069390104,
+      "metricR3InflatedBound": 337.59635926508673,
+      "metricR2TaylorBallBound": 69.6004136428172,
+      "metricR1TaylorBallBound": 18.453516414548496,
+      "metricR0TaylorBallBound": 2.566692554488083,
+      "metricFSecondTaylorBallBound": 1038.350263096641,
+      "metricFSecondSegmentBound": 4727.961641634062
+    },
+    {
+      "left": 0.195,
+      "mid": 0.23875,
+      "right": 0.2825,
+      "halfWidth": 0.04375,
+      "rowNormSamples": [
+        2608.931867018314,
+        7078.10885081842,
+        7617.514845375326,
+        4275.901395316427
+      ],
+      "midpointFSecondOperatorNorm": 125589936.49337102,
+      "sampledFSecondOperatorNorm": 138243488.3697646,
+      "r3InflatedBound": 25655.40837189856,
+      "r2TaylorBallBound": 8601.982418405156,
+      "r1TaylorBallBound": 7132.036612850673,
+      "r0TaylorBallBound": 2618.473180490336,
+      "fSecondTaylorBallBound": 146780013.0173716,
+      "fSecondSegmentBound": 829460930.2185875,
+      "metricRowNormSamples": [
+        1.70162993365348,
+        13.057059372515871,
+        57.424217333531836,
+        20.504858477345813
+      ],
+      "metricMidpointFSecondOperatorNorm": 230.13393915743998,
+      "metricSampledFSecondOperatorNorm": 376.62200095792105,
+      "metricR3InflatedBound": 123.02915086407488,
+      "metricR2TaylorBallBound": 61.9106936482865,
+      "metricR1TaylorBallBound": 13.405802313864191,
+      "metricR0TaylorBallBound": 2.1884037676755,
+      "metricFSecondTaylorBallBound": 630.4022618354406,
+      "metricFSecondSegmentBound": 2259.7320057475263
+    },
+    {
+      "left": 0.2825,
+      "mid": 0.32625,
+      "right": 0.37,
+      "halfWidth": 0.04375,
+      "rowNormSamples": [
+        2018.1822970733228,
+        6427.329622079606,
+        7881.307669493496,
+        3155.8780431970517
+      ],
+      "midpointFSecondOperatorNorm": 101135091.60609275,
+      "sampledFSecondOperatorNorm": 113184236.70780435,
+      "r3InflatedBound": 18935.26825918231,
+      "r2TaylorBallBound": 8584.072044895285,
+      "r1TaylorBallBound": 6468.703264929414,
+      "r0TaylorBallBound": 2027.3982210400304,
+      "fSecondTaylorBallBound": 118494908.64561725,
+      "fSecondSegmentBound": 679105420.2468262,
+      "metricRowNormSamples": [
+        1.8577658623203526,
+        8.354972228974637,
+        59.224161298591746,
+        20.77099023987422
+      ],
+      "metricMidpointFSecondOperatorNorm": 163.38022403232534,
+      "metricSampledFSecondOperatorNorm": 197.9927658198204,
+      "metricR3InflatedBound": 124.62594143924532,
+      "metricR2TaylorBallBound": 63.774581799499735,
+      "metricR1TaylorBallBound": 8.889083530013377,
+      "metricR0TaylorBallBound": 2.1928785674583313,
+      "metricFSecondTaylorBallBound": 437.73143916059246,
+      "metricFSecondSegmentBound": 1187.9565949189223
+    },
+    {
+      "left": 0.37,
+      "mid": 0.41375,
+      "right": 0.4575,
+      "halfWidth": 0.04375,
+      "rowNormSamples": [
+        1485.3268673658324,
+        5753.323286355486,
+        7881.307669493496,
+        102582.64322747057
+      ],
+      "midpointFSecondOperatorNorm": 77608597.69130936,
+      "sampledFSecondOperatorNorm": 89447369.13860023,
+      "r3InflatedBound": 615495.8593648234,
+      "r2TaylorBallBound": 34658.23530452492,
+      "r1TaylorBallBound": 6928.388423846112,
+      "r0TaylorBallBound": 1544.293925812609,
+      "fSecondTaylorBallBound": 203050136.8236935,
+      "fSecondSegmentBound": 536684214.83160144,
+      "metricRowNormSamples": [
+        1.8577658623203526,
+        4.203390270613971,
+        60.417787090329476,
+        70.0872831190776
+      ],
+      "metricMidpointFSecondOperatorNorm": 206.55911039094931,
+      "metricSampledFSecondOperatorNorm": 206.55911039094931,
+      "metricR3InflatedBound": 420.5236987144656,
+      "metricR2TaylorBallBound": 78.54519399546689,
+      "metricR1TaylorBallBound": 6.667621057285381,
+      "metricR0TaylorBallBound": 2.126574019310298,
+      "metricFSecondTaylorBallBound": 422.9786789120051,
+      "metricFSecondSegmentBound": 1239.354662345696
+    },
+    {
+      "left": 0.4575,
+      "mid": 0.50125,
+      "right": 0.545,
+      "halfWidth": 0.04375,
+      "rowNormSamples": [
+        1011.3685334706279,
+        5111.023832035345,
+        11261.140145181189,
+        606774.9239618755
+      ],
+      "midpointFSecondOperatorNorm": 49075746.5689285,
+      "sampledFSecondOperatorNorm": 63309491.434342064,
+      "r3InflatedBound": 3640649.543771253,
+      "r2TaylorBallBound": 160293.3426182704,
+      "r1TaylorBallBound": 12016.562405526402,
+      "r0TaylorBallBound": 1316.8912236777517,
+      "fSecondTaylorBallBound": 710973336.3077633,
+      "fSecondSegmentBound": 710973336.3077633,
+      "metricRowNormSamples": [
+        1.719295324165455,
+        6.771639905634608,
+        60.417787090329476,
+        1703.8732967446258
+      ],
+      "metricMidpointFSecondOperatorNorm": 77.06218768300327,
+      "metricSampledFSecondOperatorNorm": 178.39117774145993,
+      "metricR3InflatedBound": 10223.239780467755,
+      "metricR2TaylorBallBound": 494.12034798318894,
+      "metricR1TaylorBallBound": 27.75700706734219,
+      "metricR0TaylorBallBound": 2.717630735197753,
+      "metricFSecondTaylorBallBound": 4226.576171804415,
+      "metricFSecondSegmentBound": 4226.576171804415
+    }
+  ],
+  "formula": "||Gamma-Gamma_h|| <= (b-a) h^2/12 sup_a ||d_a^2(R(a)^*R(a))||, with ||d_a^2(R^*R)|| <= 2||R''||||R||+2||R'||^2.  The metric version applies the same estimate to R(a) C_h^{-1/2}, where C_h is the certified finite frame center.",
+  "scope": "This certifies trace quadrature consistency on the finite active Galerkin block.  The remaining separate layer is projection/Galerkin transport to the continuum active space.",
+  "nextProofTarget": "Either certify the finite trace frame on a finer trace mesh or sharpen the F'' envelope enough that gammaFiniteLower exceeds the quadrature error, then add the projector transport bound."
+}

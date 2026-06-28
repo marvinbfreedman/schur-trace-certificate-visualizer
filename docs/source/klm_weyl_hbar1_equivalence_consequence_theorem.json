@@ -1,0 +1,21 @@
+{
+  "theoremName": "hbar=1 KLM/Weyl equivalence consequence theorem",
+  "proofClass": "symbolic identity",
+  "normalization": "hbar=1",
+  "statuses": {
+    "klmWeylEquivalenceConsequenceStatus": {
+      "label": "hbar=1 KLM/Weyl equivalence consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The fixed hbar=1 symplectic Fourier convention identifies KLM quantum positive type of Q with positivity of the Weyl operator Op^W(sigma), for the paired objects used in the ledger."
+    }
+  },
+  "klmWeylHbar1EquivalenceClosed": true,
+  "klmPositiveTypeEqualsWeylOperatorPositiveClosed": true,
+  "proof": [
+    "Import the full hbar=1 KLM/Weyl convention theorem.",
+    "Export only the terminal equivalence consequence needed by the uniform-omega bridge."
+  ],
+  "remainingAnalyticGap": null,
+  "nextProofTarget": null
+}

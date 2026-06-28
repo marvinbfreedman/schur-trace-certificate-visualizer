@@ -1,0 +1,38 @@
+{
+  "theoremName": "high-block source spectral-gap theorem",
+  "proofClass": "interval/ball certificate",
+  "sourceRankJson": "full_theta_source_noncollapse_interval_theorem.json",
+  "tailConstantsJson": "source_inactive_tail_constants_consequence_theorem.json",
+  "statement": "The full-theta source operator has a certified isolated top-two active spectral cluster separated from the inactive complement.",
+  "spectralGapToComplement": 11489014207.3242,
+  "lowerBoundAfterContinuumAndTail": 15164652572018.725,
+  "sourceTopLower": 139928626819.16638,
+  "statuses": {
+    "sourceRankInputStatus": {
+      "label": "full-theta source noncollapse interval theorem",
+      "closed": true,
+      "status": "closed",
+      "reason": "The interval theorem proves the active two-dimensional source rank persists."
+    },
+    "projectorGapInputStatus": {
+      "label": "source Riesz projector gap input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The source noncollapse theorem records a positive gap to the complement and a positive lower bound after continuum and theta-tail errors."
+    },
+    "highBlockSourceSpectralGapStatus": {
+      "label": "high-block source spectral gap",
+      "closed": true,
+      "status": "closed",
+      "reason": "The certified source gap supplies the contour separation required by the abstract Riesz theorem."
+    }
+  },
+  "highBlockSourceSpectralGapClosed": true,
+  "sourceSpectralGapClosed": true,
+  "proof": [
+    "Import the full-theta source noncollapse interval theorem.",
+    "Use its certified positive spectral gap to the complement and positive post-tail lower bound.",
+    "Declare the active contour gap for the top-two source cluster in the completed high-block source model."
+  ],
+  "remainingAnalyticGap": null
+}

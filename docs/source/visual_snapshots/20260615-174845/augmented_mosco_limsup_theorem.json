@@ -1,0 +1,37 @@
+{
+  "theoremName": "augmented Mosco limsup theorem",
+  "proofClass": "analytic proof",
+  "coreDensityJson": "augmented_core_density_theorem.json",
+  "traceConvergenceJson": "xi_augmented_trace_convergence_theorem.json",
+  "statement": "For every f in V there are finite core functions f_N with f_N -> f in the augmented graph norm and R_aug,N f_N -> R_aug f in the transported graph-dual trace topology.",
+  "statuses": {
+    "coreDensityInputStatus": {
+      "label": "core density input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The smooth/Galerkin core is dense in the completed augmented graph space V."
+    },
+    "traceConvergenceInputStatus": {
+      "label": "augmented trace convergence input",
+      "closed": true,
+      "status": "closed",
+      "reason": "R_aug,N converges strongly to R_aug in graph-dual trace topology."
+    },
+    "moscoLimsupStatus": {
+      "label": "Mosco limsup recovery",
+      "closed": true,
+      "status": "closed",
+      "reason": "Choose smooth core approximants by density, then choose finite sections large enough that the graph norm and trace rows converge."
+    }
+  },
+  "moscoLimsupClosed": true,
+  "graphRecoverySequenceClosed": true,
+  "traceRecoverySequenceClosed": true,
+  "proof": [
+    "Approximate f in V by a smooth lifted core element g using core density.",
+    "Approximate g by finite Galerkin/core sections f_N in graph norm.",
+    "Use strong graph-dual convergence of R_aug,N to pass trace coordinates.",
+    "Diagonalize the two approximations to obtain f_N -> f and R_aug,N f_N -> R_aug f."
+  ],
+  "remainingAnalyticGap": null
+}

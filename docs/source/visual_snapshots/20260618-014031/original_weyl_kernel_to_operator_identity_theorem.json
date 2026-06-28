@@ -1,0 +1,30 @@
+{
+  "theoremName": "original Weyl kernel-to-operator identity theorem",
+  "proofClass": "symbolic identity",
+  "kernelJson": "original_weyl_kernel_positivity_theorem.json",
+  "normalization": "hbar=1 Weyl convention",
+  "statement": "In the fixed hbar=1 Weyl convention, nonnegativity of the original coordinate Weyl kernel quadratic form is exactly nonnegativity of Op^W(sigma_omega).",
+  "statuses": {
+    "kernelPositivityInputStatus": {
+      "label": "original Weyl kernel positivity input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The original Weyl kernel quadratic form is nonnegative for every |omega|<1/2."
+    },
+    "kernelToOperatorIdentityStatus": {
+      "label": "kernel-to-operator identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The coordinate kernel is the integral kernel of Op^W(sigma_omega) in the fixed normalization."
+    }
+  },
+  "originalWeylKernelToOperatorIdentityClosed": true,
+  "originalWeylOperatorPositiveClosed": true,
+  "originalWeylKernelPositivityClosed": true,
+  "proof": [
+    "Import original Weyl kernel positivity.",
+    "Use the fixed hbar=1 Weyl convention identifying the coordinate kernel with Op^W(sigma_omega).",
+    "A nonnegative integral-kernel quadratic form is exactly positivity of the corresponding Weyl operator."
+  ],
+  "remainingAnalyticGap": null
+}

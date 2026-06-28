@@ -1,0 +1,48 @@
+{
+  "theoremName": "Green-feature D_q vanishing theorem",
+  "proofClass": "analytic proof",
+  "featureJson": "trace_volterra_green_feature_map.json",
+  "closureJson": "green_lift_contractivity_consequence_theorem.json",
+  "quotientJson": "weyl_volterra_quotient_schur_theorem.json",
+  "statuses": {
+    "greenFeatureIdentificationStatus": {
+      "label": "D_trace equals P-M on Green-minimizer traces",
+      "closed": true,
+      "status": "closed",
+      "reason": "The feature-map and quotient factorization identify the trace Schur form as the plus Gram minus the minus Gram."
+    },
+    "greenLiftContractionStatus": {
+      "label": "minus feature Gram is dominated by plus feature Gram",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Green-lift contractivity consequence gives G_-=CKE G_+ and ||CKE||<=1, hence M<=P."
+    },
+    "quotientRepairBoundedStatus": {
+      "label": "trace-side repair is bounded",
+      "closed": true,
+      "status": "closed",
+      "reason": "The quotient Schur theorem exports the bounded trace-side repair form."
+    },
+    "dqVanishesOnXRStatus": {
+      "label": "D_q vanishes on X_R",
+      "closed": true,
+      "status": "closed",
+      "reason": "Since P-M>=0, the positive repair part D_q=(M-P)_+ vanishes on the completed trace range."
+    }
+  },
+  "greenFeatureDqVanishesClosed": true,
+  "DqVanishesOnXR": true,
+  "operatorIdentifications": {
+    "D_trace": "P-M",
+    "P": "<G_+,G_+>",
+    "M": "<G_-,G_->",
+    "contraction": "G_-=C K E G_+, ||C K E||<=1",
+    "D_q": "(M-P)_+=0"
+  },
+  "proof": [
+    "Use the Volterra/Green feature-map identity to write the trace Schur form as P-M.",
+    "Use the continuum Green-lift contraction to prove M<=P.",
+    "Conclude the quotient repair D_q=(M-P)_+ is zero on X_R."
+  ],
+  "remainingAnalyticGap": null
+}

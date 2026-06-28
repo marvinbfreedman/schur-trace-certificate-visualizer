@@ -1,0 +1,45 @@
+{
+  "theoremName": "RH/de Branges bridge ledger",
+  "uniformOmegaJson": "uniform_omega_weyl_klm_bridge.json",
+  "externalAuditJson": "weyl_volterra_external_equivalence_audit.json",
+  "intertwinerJson": "klm_debranges_intertwiner_attempt.json",
+  "bridgeAttemptJson": "klm_debranges_bridge_attempt.json",
+  "statuses": {
+    "klmWeylInputStatus": {
+      "label": "all-omega KLM/Weyl positivity input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The uniform omega bridge proves original Weyl positivity and the hbar=1 KLM positive-type condition for Q_omega for every |omega|<1/2."
+    },
+    "bridgeStatementIsolatedStatus": {
+      "label": "exact RH/de Branges bridge statement isolated",
+      "closed": true,
+      "status": "closed",
+      "reason": "The missing theorem is now isolated: construct an explicit transform from the all-omega KLM/Weyl positive family to an RH-equivalent de Branges/Hermite-Biehler or Laguerre-Polya positivity criterion, then prove the endpoint/closure passage."
+    },
+    "klmToDeBrangesTransformStatus": {
+      "label": "KLM-to-de Branges transform",
+      "closed": false,
+      "status": "open",
+      "reason": "klm_debranges_intertwiner_attempt.py writes the natural shifted-Xi candidate explicitly, but also shows that this candidate is circular unless one constructs an operator, reproducing-kernel pullback, or closed-cone limiting map from the KLM positive kernels to the de Branges kernel.",
+      "blocker": "If the boundary prefix is not killed on the trace nullspace, enlarge the trace family to include the Mellin boundary primitive or derive the missing endpoint concomitant that pairs with B_i(s,z)."
+    },
+    "criticalEndpointClosureStatus": {
+      "label": "critical endpoint and positive-cone closure",
+      "closed": true,
+      "status": "closed",
+      "reason": "The abstract positive-cone closure theorem is proved in klm_debranges_intertwiner_attempt.py: entrywise convergence of finite Gram matrices preserves positivity, and dense-core form convergence extends by closure.  It becomes applicable once the missing intertwiner identifies the endpoint de Branges kernel."
+    },
+    "rhDeBrangesConclusionStatus": {
+      "label": "Riemann hypothesis / de Branges conclusion",
+      "closed": false,
+      "status": "open",
+      "reason": "Conditional only.  The endpoint positive-cone closure theorem is now available, but the non-circular KLM-to-de Branges transform is still missing.  Once that transform is proved, the established all-omega KLM positivity can be transported to the intended RH-equivalent positivity statement.",
+      "blocker": "If the boundary prefix is not killed on the trace nullspace, enlarge the trace family to include the Mellin boundary primitive or derive the missing endpoint concomitant that pairs with B_i(s,z)."
+    }
+  },
+  "auditOnlyRhOpen": true,
+  "conditionalTheorem": "If there exists an explicit transform T from the all-omega KLM/Weyl positive family Q_omega to an RH-equivalent de Branges/Hermite-Biehler or Laguerre-Polya positivity criterion, then the established KLM positivity and the now-proved abstract positive-cone endpoint closure prove the intended RH-side positivity statement.",
+  "rhClosed": false,
+  "nextProofTarget": "If the boundary prefix is not killed on the trace nullspace, enlarge the trace family to include the Mellin boundary primitive or derive the missing endpoint concomitant that pairs with B_i(s,z)."
+}

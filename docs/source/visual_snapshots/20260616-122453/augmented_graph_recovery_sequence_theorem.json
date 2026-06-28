@@ -1,0 +1,29 @@
+{
+  "theoremName": "augmented graph recovery sequence theorem",
+  "proofClass": "analytic proof",
+  "coreDensityJson": "augmented_core_density_theorem.json",
+  "statement": "For every f in the completed augmented graph space V there are finite smooth core functions f_N with f_N -> f in the augmented graph norm.",
+  "statuses": {
+    "coreDensityInputStatus": {
+      "label": "core density input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The smooth core is dense in the completed augmented graph space V."
+    },
+    "graphRecoverySequenceStatus": {
+      "label": "graph-norm recovery sequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "By density, choose smooth core approximants and then a diagonal finite-section sequence converging in the V graph norm."
+    }
+  },
+  "graphRecoverySequenceClosed": true,
+  "finiteCoreRecoveryClosed": true,
+  "proof": [
+    "Use the definition of V as the completion of the smooth lifted core.",
+    "Choose a core approximant within epsilon in graph norm.",
+    "Choose a finite core section of that core approximant within epsilon.",
+    "Diagonalize epsilon -> 0 to obtain f_N -> f in V."
+  ],
+  "remainingAnalyticGap": null
+}

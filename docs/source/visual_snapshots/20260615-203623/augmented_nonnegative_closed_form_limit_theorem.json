@@ -1,0 +1,37 @@
+{
+  "theoremName": "augmented nonnegative closed-form limit theorem",
+  "proofClass": "analytic proof",
+  "pointwiseNonnegativeJson": "augmented_pointwise_repaired_form_nonnegative_certificate.json",
+  "closedFormLscJson": "closed_form_lsc_transport_theorem.json",
+  "legacyFiniteSequenceJson": null,
+  "statement": "Pointwise nonnegative augmented repaired core forms whose closed lower-semicontinuous transport envelope is identified by the Mosco/quotient theorem produce a nonnegative completed repaired form.",
+  "statuses": {
+    "pointwiseNonnegativeCoreInputStatus": {
+      "label": "pointwise nonnegative core input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The pointwise certificate proves q_N^rep>=0 for each fixed augmented trace-core index N and makes no continuum promotion claim."
+    },
+    "closedFormLscInputStatus": {
+      "label": "closed lower-semicontinuity input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The closed-form LSC theorem identifies the completed transport limit."
+    },
+    "nonnegativeClosedFormLimitStatus": {
+      "label": "nonnegative closed-form limit",
+      "closed": true,
+      "status": "closed",
+      "reason": "Lower semicontinuity prevents a negative vector in the completed form domain from being approximated by nonnegative finite repaired forms."
+    }
+  },
+  "nonnegativeClosedFormLimitClosed": true,
+  "completedRepairedFormNonnegativeClosed": true,
+  "proof": [
+    "Assume a completed-domain vector had negative repaired-form value.",
+    "Use the closed-form LSC transport theorem to choose core recovery sequences with the same closed envelope.",
+    "The pointwise repaired core forms are nonnegative along the recovery sequence.",
+    "Lower semicontinuity contradicts the negative completed value."
+  ],
+  "remainingAnalyticGap": null
+}

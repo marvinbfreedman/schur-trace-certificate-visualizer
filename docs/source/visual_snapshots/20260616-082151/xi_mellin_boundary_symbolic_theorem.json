@@ -1,0 +1,57 @@
+{
+  "theoremName": "symbolic Mellin boundary theorem",
+  "proofClass": "symbolic identity",
+  "symbols": {
+    "atom": "f(v)=a exp(beta v-c exp(v)), v>=0",
+    "alpha": "alpha=beta+i tau z",
+    "total": "X(z)=1/2 a c^{-alpha} Gamma(alpha,c)",
+    "prefix": "B(s,z)=1/2 a c^{-alpha} int_c^{c exp(s)} y^{alpha-1} exp(-y) dy",
+    "tail": "T(s,z)=X(z)-B(s,z)",
+    "mu": "Mu_z(f)=int_0^L B(s,z)f(s)ds"
+  },
+  "statuses": {
+    "mellinTotalStatus": {
+      "label": "Xi atom Mellin integral",
+      "closed": true,
+      "status": "closed",
+      "reason": "With y=c exp(v), dv=dy/y and exp(beta v)exp(i tau z v) =(y/c)^(beta+i tau z).  This gives X(z)=1/2 a c^{-alpha} Gamma(alpha,c)."
+    },
+    "movingBoundarySplitStatus": {
+      "label": "moving boundary split",
+      "closed": true,
+      "status": "closed",
+      "reason": "Splitting the y-integral at c exp(s) gives the incomplete-gamma prefix B(s,z) plus the tail integral from c exp(s) to infinity."
+    },
+    "diagonalVolterraTailStatus": {
+      "label": "diagonal Volterra tail transport",
+      "closed": true,
+      "status": "closed",
+      "reason": "In the tail use v=s+u.  The factor exp(beta(s+u)-c exp(s+u)) separates into the base value at s times exp(beta u-c exp(s)(exp(u)-1)), exactly the Volterra ratio atom."
+    },
+    "boundaryConcomitantStatus": {
+      "label": "Mellin boundary concomitant",
+      "closed": true,
+      "status": "closed",
+      "reason": "Differentiating the prefix endpoint c exp(s) gives B'(s,z)=1/2 a exp(beta s-c exp(s))exp(i tau z s), and B(0,z)=0."
+    },
+    "primitiveMuTraceStatus": {
+      "label": "primitive Mu trace",
+      "closed": true,
+      "status": "closed",
+      "reason": "For F(s)=int_s^L f(t)dt, integration by parts gives int_0^L B(s,z)f(s)ds=int_0^L B'(s,z)F(s)ds because B(0,z)=0 and F(L)=0."
+    }
+  },
+  "exactMellinSplitClosed": true,
+  "mellinBoundaryConcomitantClosed": true,
+  "primitiveMuTraceClosed": true,
+  "finiteAtomTransportClosed": true,
+  "proof": [
+    "Substitute y=c exp(v) in the half-line Mellin atom integral.",
+    "Split the resulting incomplete-gamma integral at y=c exp(s).",
+    "Use v=s+u in the tail to identify the normalized Volterra ratio atom.",
+    "Differentiate the moving upper endpoint to obtain B'(s,z).",
+    "Integrate by parts against F(s)=int_s^L f(t)dt to get the Mu trace."
+  ],
+  "scope": "This theorem proves only the exact symbolic atom identities.  Trace closure, repair positivity, and positive-cone limits are handled by separate theorem objects.",
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,48 @@
+{
+  "theoremName": "original Weyl kernel positivity theorem",
+  "proofClass": "analytic proof",
+  "omegaRange": "|omega| < 1/2",
+  "assemblyJson": "original_weyl_kernel_positivity_assembly_theorem.json",
+  "legacyInputs": {
+    "greenClosureJson": null,
+    "formTransportJson": null,
+    "liftJson": null
+  },
+  "statuses": {
+    "positivityAssemblyInputStatus": {
+      "label": "original Weyl positivity assembly input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The assembly theorem packages branch weights, Green contraction, and the exact quadratic-form identity."
+    },
+    "omegaIndependentHardyMultiplierStatus": {
+      "label": "Green multiplier contraction input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported through the original Weyl positivity assembly theorem."
+    },
+    "quotientToOriginalLiftStatus": {
+      "label": "exact original Weyl form identity input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported through the original Weyl positivity assembly theorem."
+    },
+    "originalWeylPositivityStatus": {
+      "label": "original Weyl kernel positivity for |omega|<1/2",
+      "closed": true,
+      "status": "closed",
+      "reason": "The assembly theorem gives positivity of K_omega for every |omega|<1/2."
+    }
+  },
+  "uniformOmegaBranchTransportClosed": true,
+  "greenLiftContractionClosed": true,
+  "originalWeylFormTransportClosed": true,
+  "quotientToOriginalWeylLiftClosed": true,
+  "originalWeylKernelPositivityClosed": true,
+  "proof": [
+    "Import the original Weyl positivity assembly theorem.",
+    "Read off branch weights, Green contraction, and exact quadratic-form identity.",
+    "Export only original coordinate Weyl kernel positivity for every |omega|<1/2."
+  ],
+  "remainingAnalyticGap": null
+}

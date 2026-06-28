@@ -1,0 +1,70 @@
+{
+  "theoremName": "exact adjoint Green endpoint range theorem",
+  "proofClass": "interval/ball certificate",
+  "intervalEndpointJson": "adjoint_green_endpoint_range_interval_theorem.json",
+  "legacyInputs": {
+    "endpointSelectionJson": null,
+    "jumpJson": null,
+    "activeRangeJson": null,
+    "continuumActiveRangeJson": null
+  },
+  "endpointIntervalMargins": {
+    "actualKrawczykQ": 1.0938554638804267e-19,
+    "scaledCompanionRadiusOverSimultaneousBudget": 3.1988616802888144e-15,
+    "boundaryRowRadiusOverSimultaneousBudget": 3.122484815877811e-15,
+    "endpointRadiusOverChartCapacity": 3.16061191846505e-15
+  },
+  "exactFundamentalMatrixEndpointMapStatus": {
+    "label": "exact fundamental-matrix endpoint map",
+    "closed": true,
+    "status": "closed",
+    "reason": "Imported from the synchronized interval endpoint theorem."
+  },
+  "endpointFredholmRangeAlternativeStatus": {
+    "label": "endpoint Fredholm range alternative",
+    "closed": true,
+    "status": "closed",
+    "reason": "Imported from the synchronized interval endpoint theorem."
+  },
+  "endpointFullActiveRowRankStatus": {
+    "label": "endpoint map has full active row rank",
+    "closed": true,
+    "status": "closed",
+    "reason": "The interval/Krawczyk certificate keeps the exact endpoint map inside the persistent Pluecker chart, so it is onto the active endpoint row space."
+  },
+  "endpointGreenBvpSolvabilityStatus": {
+    "label": "endpoint Green BVP solvable for every active source row",
+    "closed": true,
+    "status": "closed",
+    "reason": "Because the active endpoint map is onto, Mz=-b(d) is solvable for every active source row.  No separate continuum active trace range compatibility is needed at this endpoint layer."
+  },
+  "uniformTraceDualBoundFromCompactnessStatus": {
+    "label": "uniform trace-dual bound on Green solution family",
+    "closed": true,
+    "status": "closed",
+    "reason": "Imported from the interval theorem: bounded right inverse plus compact source window."
+  },
+  "continuumActiveRangeCompatibilityStatus": {
+    "label": "continuum active endpoint compatibility",
+    "closed": true,
+    "status": "closed",
+    "reason": "Compatibility is automatic because the active endpoint map has full row rank."
+  },
+  "exactEndpointReductionClosed": true,
+  "unconditionalContinuumEndpointClosed": true,
+  "theoremClosed": true,
+  "definitions": {
+    "state": "Y=(K,K',...,K^(7))^T",
+    "fundamentalMatrix": "d/da Phi(a,t)=A(a)Phi(a,t), Phi(t,t)=I",
+    "piecewiseGreen": "Y_-(a)=Phi(a,s0)z, Y_+(a)=Phi(a,s0)(z+Delta(d))",
+    "endpointMap": "Pi_active Beta_z=M z+b(d)",
+    "solution": "z(d)=-M^+b(d), using the bounded right inverse of M"
+  },
+  "formalProof": [
+    "Import the synchronized interval endpoint theorem.",
+    "Use its exact fundamental-matrix endpoint map and Fredholm alternative.",
+    "Use its full active row-rank certificate to make the endpoint compatibility condition vacuous.",
+    "Use the bounded right inverse and compact source window for uniform trace-dual bounds."
+  ],
+  "remainingAnalyticGap": null
+}

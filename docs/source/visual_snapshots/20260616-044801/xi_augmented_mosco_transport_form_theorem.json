@@ -1,0 +1,70 @@
+{
+  "theoremName": "augmented Mosco transport form theorem",
+  "proofClass": "analytic proof wrapper",
+  "coreDensityJson": "augmented_core_density_theorem.json",
+  "limsupJson": "augmented_mosco_limsup_theorem.json",
+  "liminfJson": "augmented_mosco_liminf_theorem.json",
+  "quotientJson": "augmented_trace_quotient_compatibility_theorem.json",
+  "lscJson": "closed_form_lsc_transport_theorem.json",
+  "legacyInputs": {
+    "traceConvergenceJson": null,
+    "greenClosureJson": null
+  },
+  "transportedTraceSpace": {
+    "name": "X_aug",
+    "definition": "closure Ran(R_aug) with quotient norm inf{||f||_V:R_aug f=x}",
+    "formDomain": "completed Volterra/Mellin graph-form domain V"
+  },
+  "moscoStatement": {
+    "limsup": "for every f in V there are finite core f_N with f_N -> f in graph norm and R_aug,N f_N -> R_aug f",
+    "liminf": "bounded finite graph-energy sequences have weak graph-form subsequential limits in V",
+    "quotient": "R_aug,N trace-image quotient norms converge to the quotient norm on X_aug",
+    "lowerSemicontinuity": "closed nonnegative finite repaired forms pass to the lower-semicontinuous envelope"
+  },
+  "statuses": {
+    "coreDensityStatus": {
+      "label": "smooth/Galerkin core density in V",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the narrow core-density theorem."
+    },
+    "moscoLimsupStatus": {
+      "label": "Mosco limsup recovery",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the narrow Mosco limsup theorem."
+    },
+    "moscoLiminfStatus": {
+      "label": "Mosco liminf compactness",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the narrow Mosco liminf theorem."
+    },
+    "traceQuotientCompatibilityStatus": {
+      "label": "trace quotient compatibility",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the narrow trace quotient compatibility theorem."
+    },
+    "closedFormLowerSemicontinuityStatus": {
+      "label": "closed-form lower semicontinuity",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the narrow closed-form lower-semicontinuity theorem."
+    }
+  },
+  "coreDensityClosed": true,
+  "moscoLimsupClosed": true,
+  "moscoLiminfClosed": true,
+  "traceQuotientCompatibilityClosed": true,
+  "lowerSemicontinuityClosed": true,
+  "moscoTransportFormClosed": true,
+  "proof": [
+    "Import core density in V.",
+    "Import Mosco limsup recovery.",
+    "Import Mosco liminf compactness.",
+    "Import trace quotient compatibility.",
+    "Import closed-form lower semicontinuity."
+  ],
+  "remainingAnalyticGap": null
+}

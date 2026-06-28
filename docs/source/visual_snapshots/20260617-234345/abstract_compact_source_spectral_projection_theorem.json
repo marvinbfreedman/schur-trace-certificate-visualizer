@@ -1,0 +1,39 @@
+{
+  "theoremName": "abstract compact source spectral projection theorem",
+  "proofClass": "abstract functional analytic lemma",
+  "statement": "For compact self-adjoint positive operators S_N -> S in norm, isolated spectral clusters have convergent Riesz projections and stable finite-rank active/inactive splittings.",
+  "hypotheses": [
+    "S_N and S are compact self-adjoint positive operators.",
+    "||S_N-S|| -> 0.",
+    "The selected source cluster is separated from the complement by a positive contour gap."
+  ],
+  "statuses": {
+    "normConvergenceInputStatus": {
+      "label": "compact-source norm convergence input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The compact compression theorem gives norm convergence after subspace compression."
+    },
+    "rieszProjectionStabilityStatus": {
+      "label": "Riesz spectral projection stability",
+      "closed": true,
+      "status": "closed",
+      "reason": "The abstract Riesz projection continuity theorem gives norm convergence of the spectral projections once a contour gap is supplied."
+    },
+    "activeInactiveSplittingStabilityStatus": {
+      "label": "active/inactive splitting stability",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite active rank and inactive orthogonal complement are stable under norm-small compact self-adjoint perturbations."
+    }
+  },
+  "compactSourceRieszProjectionConvergenceClosed": true,
+  "sourceActiveInactiveSplittingStabilityClosed": true,
+  "proof": [
+    "Choose a contour enclosing the isolated source cluster and no other spectral point of S.",
+    "For N large, ||S_N-S|| is smaller than the contour distance, so the resolvents exist on the same contour.",
+    "Integrate the resolvent identity to obtain Riesz projection norm convergence.",
+    "The rank is constant for large N and the active/inactive projections converge in norm."
+  ],
+  "remainingAnalyticGap": null
+}

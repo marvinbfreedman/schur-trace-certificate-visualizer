@@ -1,0 +1,28 @@
+{
+  "theoremName": "full-theta source-inactive Schur-tail terminal consequence theorem",
+  "proofClass": "symbolic identity",
+  "inactiveTailJson": "full_theta_source_inactive_schur_tail_certificate.json",
+  "globalSchurTailTheoremClosed": false,
+  "sampledActiveKernelExclusionPasses": true,
+  "finiteBudgetDiagnosticPasses": true,
+  "worstContinuumInactiveFracUpper": 0.0013454526382754603,
+  "worstActiveTraceKernelSourceFrac": 0.0,
+  "worstFullTraceKernelSourceFrac": 1.2741783685754282e-07,
+  "continuumErrorBound": 188255959.690444,
+  "sourceGrid": 257,
+  "activeCount": 2,
+  "fullNmax": 8,
+  "sourceInactiveSchurTailSummaryStatus": {
+    "label": "source-inactive Schur-tail summary consequence",
+    "closed": true,
+    "status": "closed",
+    "reason": "The detailed inactive-tail certificate supplies active-kernel exclusion, finite budget comparison, and a nonnegative continuum inactive/top upper bound."
+  },
+  "sourceInactiveSchurTailSummaryClosed": true,
+  "proof": [
+    "Import the detailed full-theta source-inactive Schur-tail certificate.",
+    "Read off only the diagnostic fields summarized by the global bridge.",
+    "Export no source-matrix rows, trace rows, or raw quadrature dependencies upstream."
+  ],
+  "remainingAnalyticGap": null
+}

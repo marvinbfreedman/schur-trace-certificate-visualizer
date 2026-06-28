@@ -1,0 +1,822 @@
+{
+  "model": "endpoint_b",
+  "kind": "tilde3",
+  "omega": 0.49,
+  "L": 2.0,
+  "moments": [
+    0.0,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "thresholds": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1
+  ],
+  "constraintRule": "ratio",
+  "constraintRatio": 0.625,
+  "rows": [
+    {
+      "basis": 12,
+      "constraints": 8,
+      "rank": 8,
+      "nullity": 4,
+      "positiveModes": 4,
+      "gamma2": 3.751400988508445e-05,
+      "lambdaMin": 3.985122915998644e-05,
+      "lambdaMax": 0.15438797516622305,
+      "moments": [
+        {
+          "moment": 0.0,
+          "operatorNorm2": 5.186127579062407e-07,
+          "operatorFrac": 0.013824508750061422,
+          "hilbertSchmidt2": 5.226435017841934e-07,
+          "hilbertSchmidtFrac": 0.013931955111841993,
+          "tailBounds": [
+            {
+              "lambdaThreshold": 0.0001,
+              "start": 1,
+              "actualTailFrac": 0.7067919682367362,
+              "operatorBoundFrac": 138.2450875006142,
+              "hsBoundFrac": 139.31955111841992
+            },
+            {
+              "lambdaThreshold": 0.001,
+              "start": 2,
+              "actualTailFrac": 0.6530254950082283,
+              "operatorBoundFrac": 13.824508750061423,
+              "hsBoundFrac": 13.931955111841992
+            },
+            {
+              "lambdaThreshold": 0.01,
+              "start": 3,
+              "actualTailFrac": 0.052657067120514475,
+              "operatorBoundFrac": 1.3824508750061422,
+              "hsBoundFrac": 1.3931955111841994
+            },
+            {
+              "lambdaThreshold": 0.1,
+              "start": 3,
+              "actualTailFrac": 0.052657067120514475,
+              "operatorBoundFrac": 0.1382450875006142,
+              "hsBoundFrac": 0.13931955111841993
+            }
+          ]
+        },
+        {
+          "moment": 0.5,
+          "operatorNorm2": 1.4043300606581043e-07,
+          "operatorFrac": 0.00374348160849759,
+          "hilbertSchmidt2": 1.408426988099204e-07,
+          "hilbertSchmidtFrac": 0.00375440266826606,
+          "tailBounds": [
+            {
+              "lambdaThreshold": 0.0001,
+              "start": 1,
+              "actualTailFrac": 0.7067919682367362,
+              "operatorBoundFrac": 3743.4816084975896,
+              "hsBoundFrac": 3754.4026682660597
+            },
+            {
+              "lambdaThreshold": 0.001,
+              "start": 2,
+              "actualTailFrac": 0.6530254950082283,
+              "operatorBoundFrac": 118.3792826180312,
+              "hsBoundFrac": 118.72463685134316
+            },
+            {
+              "lambdaThreshold": 0.01,
+              "start": 3,
+              "actualTailFrac": 0.052657067120514475,
+              "operatorBoundFrac": 3.74348160849759,
+              "hsBoundFrac": 3.75440266826606
+            },
+            {
+              "lambdaThreshold": 0.1,
+              "start": 3,
+              "actualTailFrac": 0.052657067120514475,
+              "operatorBoundFrac": 0.1183792826180312,
+              "hsBoundFrac": 0.11872463685134316
+            }
+          ]
+        },
+        {
+          "moment": 1.0,
+          "operatorNorm2": 4.9087108824191635e-08,
+          "operatorFrac": 0.0013085007167871073,
+          "hilbertSchmidt2": 4.9128869038095145e-08,
+          "hilbertSchmidtFrac": 0.0013096139066068955,
+          "tailBounds": [
+            {
+              "lambdaThreshold": 0.0001,
+              "start": 1,
+              "actualTailFrac": 0.7067919682367362,
+              "operatorBoundFrac": 130850.07167871072,
+              "hsBoundFrac": 130961.39066068955
+            },
+            {
+              "lambdaThreshold": 0.001,
+              "start": 2,
+              "actualTailFrac": 0.6530254950082283,
+              "operatorBoundFrac": 1308.5007167871074,
+              "hsBoundFrac": 1309.6139066068956
+            },
+            {
+              "lambdaThreshold": 0.01,
+              "start": 3,
+              "actualTailFrac": 0.052657067120514475,
+              "operatorBoundFrac": 13.085007167871073,
+              "hsBoundFrac": 13.096139066068956
+            },
+            {
+              "lambdaThreshold": 0.1,
+              "start": 3,
+              "actualTailFrac": 0.052657067120514475,
+              "operatorBoundFrac": 0.13085007167871074,
+              "hsBoundFrac": 0.13096139066068954
+            }
+          ]
+        },
+        {
+          "moment": 2.0,
+          "operatorNorm2": 7.2882994855953966e-09,
+          "operatorFrac": 0.0001942820697633078,
+          "hilbertSchmidt2": 7.28870296103725e-09,
+          "hilbertSchmidtFrac": 0.00019429282509026671,
+          "tailBounds": [
+            {
+              "lambdaThreshold": 0.0001,
+              "start": 1,
+              "actualTailFrac": 0.7067919682367362,
+              "operatorBoundFrac": 194282069.76330778,
+              "hsBoundFrac": 194292825.09026667
+            },
+            {
+              "lambdaThreshold": 0.001,
+              "start": 2,
+              "actualTailFrac": 0.6530254950082283,
+              "operatorBoundFrac": 194282.0697633078,
+              "hsBoundFrac": 194292.8250902667
+            },
+            {
+              "lambdaThreshold": 0.01,
+              "start": 3,
+              "actualTailFrac": 0.052657067120514475,
+              "operatorBoundFrac": 194.28206976330782,
+              "hsBoundFrac": 194.2928250902667
+            },
+            {
+              "lambdaThreshold": 0.1,
+              "start": 3,
+              "actualTailFrac": 0.052657067120514475,
+              "operatorBoundFrac": 0.19428206976330778,
+              "hsBoundFrac": 0.19429282509026669
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "basis": 14,
+      "constraints": 9,
+      "rank": 9,
+      "nullity": 5,
+      "positiveModes": 5,
+      "gamma2": 3.724994952481239e-06,
+      "lambdaMin": 1.907883806550173e-06,
+      "lambdaMax": 0.15438986306522187,
+      "moments": [
+        {
+          "moment": 0.0,
+          "operatorNorm2": 2.69070678774766e-08,
+          "operatorFrac": 0.007223383714803066,
+          "hilbertSchmidt2": 2.8994484549629935e-08,
+          "hilbertSchmidtFrac": 0.007783764788813084,
+          "tailBounds": [
+            {
+              "lambdaThreshold": 0.0001,
+              "start": 2,
+              "actualTailFrac": 0.586110747614899,
+              "operatorBoundFrac": 72.23383714803064,
+              "hsBoundFrac": 77.83764788813083
+            },
+            {
+              "lambdaThreshold": 0.001,
+              "start": 3,
+              "actualTailFrac": 0.4295971652824259,
+              "operatorBoundFrac": 7.223383714803065,
+              "hsBoundFrac": 7.783764788813084
+            },
+            {
+              "lambdaThreshold": 0.01,
+              "start": 4,
+              "actualTailFrac": 0.023612393361949976,
+              "operatorBoundFrac": 0.7223383714803066,
+              "hsBoundFrac": 0.7783764788813083
+            },
+            {
+              "lambdaThreshold": 0.1,
+              "start": 4,
+              "actualTailFrac": 0.023612393361949976,
+              "operatorBoundFrac": 0.07223383714803065,
+              "hsBoundFrac": 0.07783764788813083
+            }
+          ]
+        },
+        {
+          "moment": 0.5,
+          "operatorNorm2": 6.5378276221863026e-09,
+          "operatorFrac": 0.0017551238875723632,
+          "hilbertSchmidt2": 6.7812254816307335e-09,
+          "hilbertSchmidtFrac": 0.0018204656833464225,
+          "tailBounds": [
+            {
+              "lambdaThreshold": 0.0001,
+              "start": 2,
+              "actualTailFrac": 0.586110747614899,
+              "operatorBoundFrac": 1755.123887572363,
+              "hsBoundFrac": 1820.4656833464223
+            },
+            {
+              "lambdaThreshold": 0.001,
+              "start": 3,
+              "actualTailFrac": 0.4295971652824259,
+              "operatorBoundFrac": 55.50189060497962,
+              "hsBoundFrac": 57.56817961549554
+            },
+            {
+              "lambdaThreshold": 0.01,
+              "start": 4,
+              "actualTailFrac": 0.023612393361949976,
+              "operatorBoundFrac": 1.7551238875723632,
+              "hsBoundFrac": 1.8204656833464223
+            },
+            {
+              "lambdaThreshold": 0.1,
+              "start": 4,
+              "actualTailFrac": 0.023612393361949976,
+              "operatorBoundFrac": 0.05550189060497961,
+              "hsBoundFrac": 0.05756817961549554
+            }
+          ]
+        },
+        {
+          "moment": 1.0,
+          "operatorNorm2": 2.2102193344775782e-09,
+          "operatorFrac": 0.0005933482763527879,
+          "hilbertSchmidt2": 2.2361380982238827e-09,
+          "hilbertSchmidtFrac": 0.0006003063431627952,
+          "tailBounds": [
+            {
+              "lambdaThreshold": 0.0001,
+              "start": 2,
+              "actualTailFrac": 0.586110747614899,
+              "operatorBoundFrac": 59334.82763527878,
+              "hsBoundFrac": 60030.63431627952
+            },
+            {
+              "lambdaThreshold": 0.001,
+              "start": 3,
+              "actualTailFrac": 0.4295971652824259,
+              "operatorBoundFrac": 593.3482763527878,
+              "hsBoundFrac": 600.3063431627952
+            },
+            {
+              "lambdaThreshold": 0.01,
+              "start": 4,
+              "actualTailFrac": 0.023612393361949976,
+              "operatorBoundFrac": 5.933482763527879,
+              "hsBoundFrac": 6.003063431627951
+            },
+            {
+              "lambdaThreshold": 0.1,
+              "start": 4,
+              "actualTailFrac": 0.023612393361949976,
+              "operatorBoundFrac": 0.05933482763527878,
+              "hsBoundFrac": 0.06003063431627951
+            }
+          ]
+        },
+        {
+          "moment": 2.0,
+          "operatorNorm2": 3.2475606480903354e-10,
+          "operatorFrac": 8.718295432661237e-05,
+          "hilbertSchmidt2": 3.250105749784628e-10,
+          "hilbertSchmidtFrac": 8.725127929689447e-05,
+          "tailBounds": [
+            {
+              "lambdaThreshold": 0.0001,
+              "start": 2,
+              "actualTailFrac": 0.586110747614899,
+              "operatorBoundFrac": 87182954.32661237,
+              "hsBoundFrac": 87251279.29689446
+            },
+            {
+              "lambdaThreshold": 0.001,
+              "start": 3,
+              "actualTailFrac": 0.4295971652824259,
+              "operatorBoundFrac": 87182.95432661237,
+              "hsBoundFrac": 87251.27929689447
+            },
+            {
+              "lambdaThreshold": 0.01,
+              "start": 4,
+              "actualTailFrac": 0.023612393361949976,
+              "operatorBoundFrac": 87.18295432661237,
+              "hsBoundFrac": 87.25127929689447
+            },
+            {
+              "lambdaThreshold": 0.1,
+              "start": 4,
+              "actualTailFrac": 0.023612393361949976,
+              "operatorBoundFrac": 0.08718295432661236,
+              "hsBoundFrac": 0.08725127929689445
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "basis": 16,
+      "constraints": 10,
+      "rank": 10,
+      "nullity": 6,
+      "positiveModes": 6,
+      "gamma2": 1.020331191370662e-06,
+      "lambdaMin": 4.686435916226444e-08,
+      "lambdaMax": 0.1543899451762793,
+      "moments": [
+        {
+          "moment": 0.0,
+          "operatorNorm2": 1.3087873286291585e-09,
+          "operatorFrac": 0.001282708339897949,
+          "hilbertSchmidt2": 1.338977257427558e-09,
+          "hilbertSchmidtFrac": 0.0013122967020432286,
+          "tailBounds": [
+            {
+              "lambdaThreshold": 0.0001,
+              "start": 3,
+              "actualTailFrac": 0.16492869301168286,
+              "operatorBoundFrac": 12.82708339897949,
+              "hsBoundFrac": 13.122967020432284
+            },
+            {
+              "lambdaThreshold": 0.001,
+              "start": 4,
+              "actualTailFrac": 0.03821667068670987,
+              "operatorBoundFrac": 1.282708339897949,
+              "hsBoundFrac": 1.3122967020432286
+            },
+            {
+              "lambdaThreshold": 0.01,
+              "start": 5,
+              "actualTailFrac": 0.005730309711103612,
+              "operatorBoundFrac": 0.1282708339897949,
+              "hsBoundFrac": 0.13122967020432286
+            },
+            {
+              "lambdaThreshold": 0.1,
+              "start": 5,
+              "actualTailFrac": 0.005730309711103612,
+              "operatorBoundFrac": 0.01282708339897949,
+              "hsBoundFrac": 0.013122967020432285
+            }
+          ]
+        },
+        {
+          "moment": 0.5,
+          "operatorNorm2": 3.875507498819163e-10,
+          "operatorFrac": 0.0003798283862725984,
+          "hilbertSchmidt2": 3.885470292361125e-10,
+          "hilbertSchmidtFrac": 0.00038080481369402985,
+          "tailBounds": [
+            {
+              "lambdaThreshold": 0.0001,
+              "start": 3,
+              "actualTailFrac": 0.16492869301168286,
+              "operatorBoundFrac": 379.8283862725983,
+              "hsBoundFrac": 380.80481369402986
+            },
+            {
+              "lambdaThreshold": 0.001,
+              "start": 4,
+              "actualTailFrac": 0.03821667068670987,
+              "operatorBoundFrac": 12.011228206076437,
+              "hsBoundFrac": 12.042105552292124
+            },
+            {
+              "lambdaThreshold": 0.01,
+              "start": 5,
+              "actualTailFrac": 0.005730309711103612,
+              "operatorBoundFrac": 0.37982838627259835,
+              "hsBoundFrac": 0.38080481369402985
+            },
+            {
+              "lambdaThreshold": 0.1,
+              "start": 5,
+              "actualTailFrac": 0.005730309711103612,
+              "operatorBoundFrac": 0.012011228206076436,
+              "hsBoundFrac": 0.012042105552292123
+            }
+          ]
+        },
+        {
+          "moment": 1.0,
+          "operatorNorm2": 1.4241241925234805e-10,
+          "operatorFrac": 0.00013957469932977183,
+          "hilbertSchmidt2": 1.4246468646718597e-10,
+          "hilbertSchmidtFrac": 0.00013962592506439603,
+          "tailBounds": [
+            {
+              "lambdaThreshold": 0.0001,
+              "start": 3,
+              "actualTailFrac": 0.16492869301168286,
+              "operatorBoundFrac": 13957.469932977181,
+              "hsBoundFrac": 13962.592506439601
+            },
+            {
+              "lambdaThreshold": 0.001,
+              "start": 4,
+              "actualTailFrac": 0.03821667068670987,
+              "operatorBoundFrac": 139.57469932977182,
+              "hsBoundFrac": 139.62592506439603
+            },
+            {
+              "lambdaThreshold": 0.01,
+              "start": 5,
+              "actualTailFrac": 0.005730309711103612,
+              "operatorBoundFrac": 1.3957469932977182,
+              "hsBoundFrac": 1.3962592506439602
+            },
+            {
+              "lambdaThreshold": 0.1,
+              "start": 5,
+              "actualTailFrac": 0.005730309711103612,
+              "operatorBoundFrac": 0.013957469932977182,
+              "hsBoundFrac": 0.013962592506439601
+            }
+          ]
+        },
+        {
+          "moment": 2.0,
+          "operatorNorm2": 2.1545245344393757e-11,
+          "operatorFrac": 2.1115933264228597e-05,
+          "hilbertSchmidt2": 2.154560007272445e-11,
+          "hilbertSchmidtFrac": 2.1116280924217522e-05,
+          "tailBounds": [
+            {
+              "lambdaThreshold": 0.0001,
+              "start": 3,
+              "actualTailFrac": 0.16492869301168286,
+              "operatorBoundFrac": 21115933.264228594,
+              "hsBoundFrac": 21116280.92421752
+            },
+            {
+              "lambdaThreshold": 0.001,
+              "start": 4,
+              "actualTailFrac": 0.03821667068670987,
+              "operatorBoundFrac": 21115.933264228595,
+              "hsBoundFrac": 21116.28092421752
+            },
+            {
+              "lambdaThreshold": 0.01,
+              "start": 5,
+              "actualTailFrac": 0.005730309711103612,
+              "operatorBoundFrac": 21.115933264228595,
+              "hsBoundFrac": 21.11628092421752
+            },
+            {
+              "lambdaThreshold": 0.1,
+              "start": 5,
+              "actualTailFrac": 0.005730309711103612,
+              "operatorBoundFrac": 0.021115933264228594,
+              "hsBoundFrac": 0.02111628092421752
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "basis": 18,
+      "constraints": 11,
+      "rank": 11,
+      "nullity": 7,
+      "positiveModes": 7,
+      "gamma2": 1.2168287311611528e-06,
+      "lambdaMin": 1.0052047510858405e-08,
+      "lambdaMax": 0.1543899343461991,
+      "moments": [
+        {
+          "moment": 0.0,
+          "operatorNorm2": 3.6972878068710257e-09,
+          "operatorFrac": 0.0030384619562219797,
+          "hilbertSchmidt2": 3.698188810878198e-09,
+          "hilbertSchmidtFrac": 0.003039202408829729,
+          "tailBounds": [
+            {
+              "lambdaThreshold": 0.0001,
+              "start": 4,
+              "actualTailFrac": 0.19136379772903145,
+              "operatorBoundFrac": 30.384619562219797,
+              "hsBoundFrac": 30.39202408829729
+            },
+            {
+              "lambdaThreshold": 0.001,
+              "start": 5,
+              "actualTailFrac": 0.10247302104196562,
+              "operatorBoundFrac": 3.0384619562219797,
+              "hsBoundFrac": 3.039202408829729
+            },
+            {
+              "lambdaThreshold": 0.01,
+              "start": 6,
+              "actualTailFrac": 0.013705128336362617,
+              "operatorBoundFrac": 0.303846195622198,
+              "hsBoundFrac": 0.3039202408829729
+            },
+            {
+              "lambdaThreshold": 0.1,
+              "start": 6,
+              "actualTailFrac": 0.013705128336362617,
+              "operatorBoundFrac": 0.030384619562219797,
+              "hsBoundFrac": 0.03039202408829729
+            }
+          ]
+        },
+        {
+          "moment": 0.5,
+          "operatorNorm2": 1.1145452030210156e-09,
+          "operatorFrac": 0.0009159425434978563,
+          "hilbertSchmidt2": 1.114598039165953e-09,
+          "hilbertSchmidtFrac": 0.0009159859646824358,
+          "tailBounds": [
+            {
+              "lambdaThreshold": 0.0001,
+              "start": 4,
+              "actualTailFrac": 0.19136379772903145,
+              "operatorBoundFrac": 915.9425434978563,
+              "hsBoundFrac": 915.9859646824358
+            },
+            {
+              "lambdaThreshold": 0.001,
+              "start": 5,
+              "actualTailFrac": 0.10247302104196562,
+              "operatorBoundFrac": 28.96464643301075,
+              "hsBoundFrac": 28.96601953143049
+            },
+            {
+              "lambdaThreshold": 0.01,
+              "start": 6,
+              "actualTailFrac": 0.013705128336362617,
+              "operatorBoundFrac": 0.9159425434978563,
+              "hsBoundFrac": 0.9159859646824359
+            },
+            {
+              "lambdaThreshold": 0.1,
+              "start": 6,
+              "actualTailFrac": 0.013705128336362617,
+              "operatorBoundFrac": 0.02896464643301075,
+              "hsBoundFrac": 0.02896601953143049
+            }
+          ]
+        },
+        {
+          "moment": 1.0,
+          "operatorNorm2": 4.0739587522688684e-10,
+          "operatorFrac": 0.00033480132807032863,
+          "hilbertSchmidt2": 4.0740028720427445e-10,
+          "hilbertSchmidtFrac": 0.0003348049538701431,
+          "tailBounds": [
+            {
+              "lambdaThreshold": 0.0001,
+              "start": 4,
+              "actualTailFrac": 0.19136379772903145,
+              "operatorBoundFrac": 33480.13280703286,
+              "hsBoundFrac": 33480.49538701431
+            },
+            {
+              "lambdaThreshold": 0.001,
+              "start": 5,
+              "actualTailFrac": 0.10247302104196562,
+              "operatorBoundFrac": 334.8013280703286,
+              "hsBoundFrac": 334.80495387014304
+            },
+            {
+              "lambdaThreshold": 0.01,
+              "start": 6,
+              "actualTailFrac": 0.013705128336362617,
+              "operatorBoundFrac": 3.3480132807032863,
+              "hsBoundFrac": 3.3480495387014306
+            },
+            {
+              "lambdaThreshold": 0.1,
+              "start": 6,
+              "actualTailFrac": 0.013705128336362617,
+              "operatorBoundFrac": 0.03348013280703286,
+              "hsBoundFrac": 0.0334804953870143
+            }
+          ]
+        },
+        {
+          "moment": 2.0,
+          "operatorNorm2": 6.146561950729888e-11,
+          "operatorFrac": 5.051295875356725e-05,
+          "hilbertSchmidt2": 6.146565917037463e-11,
+          "hilbertSchmidtFrac": 5.05129913490137e-05,
+          "tailBounds": [
+            {
+              "lambdaThreshold": 0.0001,
+              "start": 4,
+              "actualTailFrac": 0.19136379772903145,
+              "operatorBoundFrac": 50512958.75356724,
+              "hsBoundFrac": 50512991.3490137
+            },
+            {
+              "lambdaThreshold": 0.001,
+              "start": 5,
+              "actualTailFrac": 0.10247302104196562,
+              "operatorBoundFrac": 50512.95875356725,
+              "hsBoundFrac": 50512.991349013704
+            },
+            {
+              "lambdaThreshold": 0.01,
+              "start": 6,
+              "actualTailFrac": 0.013705128336362617,
+              "operatorBoundFrac": 50.51295875356725,
+              "hsBoundFrac": 50.5129913490137
+            },
+            {
+              "lambdaThreshold": 0.1,
+              "start": 6,
+              "actualTailFrac": 0.013705128336362617,
+              "operatorBoundFrac": 0.05051295875356724,
+              "hsBoundFrac": 0.05051299134901369
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "basis": 20,
+      "constraints": 12,
+      "rank": 12,
+      "nullity": 8,
+      "positiveModes": 8,
+      "gamma2": 1.4055348674882143e-07,
+      "lambdaMin": 4.410511401245314e-11,
+      "lambdaMax": 0.1543899487639319,
+      "moments": [
+        {
+          "moment": 0.0,
+          "operatorNorm2": 5.55536125724918e-10,
+          "operatorFrac": 0.003952489109841141,
+          "hilbertSchmidt2": 5.776371213344793e-10,
+          "hilbertSchmidtFrac": 0.0041097317092300654,
+          "tailBounds": [
+            {
+              "lambdaThreshold": 0.0001,
+              "start": 5,
+              "actualTailFrac": 0.18393072671922817,
+              "operatorBoundFrac": 39.524891098411416,
+              "hsBoundFrac": 41.097317092300656
+            },
+            {
+              "lambdaThreshold": 0.001,
+              "start": 6,
+              "actualTailFrac": 0.17326927992764532,
+              "operatorBoundFrac": 3.9524891098411414,
+              "hsBoundFrac": 4.109731709230066
+            },
+            {
+              "lambdaThreshold": 0.01,
+              "start": 7,
+              "actualTailFrac": 0.016073525195118066,
+              "operatorBoundFrac": 0.3952489109841142,
+              "hsBoundFrac": 0.41097317092300656
+            },
+            {
+              "lambdaThreshold": 0.1,
+              "start": 7,
+              "actualTailFrac": 0.016073525195118066,
+              "operatorBoundFrac": 0.03952489109841142,
+              "hsBoundFrac": 0.041097317092300654
+            }
+          ]
+        },
+        {
+          "moment": 0.5,
+          "operatorNorm2": 1.5701732345003896e-10,
+          "operatorFrac": 0.0011171357401516442,
+          "hilbertSchmidt2": 1.5812633984550474e-10,
+          "hilbertSchmidtFrac": 0.0011250260915126721,
+          "tailBounds": [
+            {
+              "lambdaThreshold": 0.0001,
+              "start": 5,
+              "actualTailFrac": 0.18393072671922817,
+              "operatorBoundFrac": 1117.1357401516443,
+              "hsBoundFrac": 1125.026091512672
+            },
+            {
+              "lambdaThreshold": 0.001,
+              "start": 6,
+              "actualTailFrac": 0.17326927992764532,
+              "operatorBoundFrac": 35.32693394457212,
+              "hsBoundFrac": 35.5764487629707
+            },
+            {
+              "lambdaThreshold": 0.01,
+              "start": 7,
+              "actualTailFrac": 0.016073525195118066,
+              "operatorBoundFrac": 1.1171357401516442,
+              "hsBoundFrac": 1.1250260915126722
+            },
+            {
+              "lambdaThreshold": 0.1,
+              "start": 7,
+              "actualTailFrac": 0.016073525195118066,
+              "operatorBoundFrac": 0.03532693394457212,
+              "hsBoundFrac": 0.0355764487629707
+            }
+          ]
+        },
+        {
+          "moment": 1.0,
+          "operatorNorm2": 5.579337694492092e-11,
+          "operatorFrac": 0.0003969547695720096,
+          "hilbertSchmidt2": 5.587890418577392e-11,
+          "hilbertSchmidtFrac": 0.00039756327273213286,
+          "tailBounds": [
+            {
+              "lambdaThreshold": 0.0001,
+              "start": 5,
+              "actualTailFrac": 0.18393072671922817,
+              "operatorBoundFrac": 39695.47695720095,
+              "hsBoundFrac": 39756.32727321328
+            },
+            {
+              "lambdaThreshold": 0.001,
+              "start": 6,
+              "actualTailFrac": 0.17326927992764532,
+              "operatorBoundFrac": 396.9547695720096,
+              "hsBoundFrac": 397.5632727321329
+            },
+            {
+              "lambdaThreshold": 0.01,
+              "start": 7,
+              "actualTailFrac": 0.016073525195118066,
+              "operatorBoundFrac": 3.969547695720096,
+              "hsBoundFrac": 3.9756327273213286
+            },
+            {
+              "lambdaThreshold": 0.1,
+              "start": 7,
+              "actualTailFrac": 0.016073525195118066,
+              "operatorBoundFrac": 0.03969547695720096,
+              "hsBoundFrac": 0.039756327273213286
+            }
+          ]
+        },
+        {
+          "moment": 2.0,
+          "operatorNorm2": 8.332501675621625e-12,
+          "operatorFrac": 5.9283493197947964e-05,
+          "hilbertSchmidt2": 8.333242902216393e-12,
+          "hilbertSchmidtFrac": 5.9288766824464914e-05,
+          "tailBounds": [
+            {
+              "lambdaThreshold": 0.0001,
+              "start": 5,
+              "actualTailFrac": 0.18393072671922817,
+              "operatorBoundFrac": 59283493.19794796,
+              "hsBoundFrac": 59288766.8244649
+            },
+            {
+              "lambdaThreshold": 0.001,
+              "start": 6,
+              "actualTailFrac": 0.17326927992764532,
+              "operatorBoundFrac": 59283.49319794796,
+              "hsBoundFrac": 59288.76682446491
+            },
+            {
+              "lambdaThreshold": 0.01,
+              "start": 7,
+              "actualTailFrac": 0.016073525195118066,
+              "operatorBoundFrac": 59.28349319794796,
+              "hsBoundFrac": 59.28876682446491
+            },
+            {
+              "lambdaThreshold": 0.1,
+              "start": 7,
+              "actualTailFrac": 0.016073525195118066,
+              "operatorBoundFrac": 0.05928349319794795,
+              "hsBoundFrac": 0.059288766824464906
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

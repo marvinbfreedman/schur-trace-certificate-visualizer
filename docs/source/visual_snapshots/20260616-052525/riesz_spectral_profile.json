@@ -1,0 +1,242 @@
+{
+  "model": "endpoint_b",
+  "kind": "tilde3",
+  "omega": 0.49,
+  "L": 2.0,
+  "basis": 16,
+  "constraints": 8,
+  "rank": 8,
+  "nullity": 8,
+  "kMin": -1.7980435201778928e-13,
+  "kerMin": 1.8483932225723395e-10,
+  "gamma2Top": 6.900309694881411e-08,
+  "energyTotal": 6.900309694881411e-08,
+  "witnessTotal": 5.377585378489062,
+  "sourceTotal": 5.727500645438851e-10,
+  "rows": [
+    {
+      "mode": 0,
+      "lambda": 1.8483932225723395e-10,
+      "sourceCoeff": 4.069279879157152e-10,
+      "witnessCoeff": 2.2015228304581687,
+      "sourceFrac": 2.8911456776701015e-10,
+      "witnessFrac": 0.9012786282140482,
+      "energyFrac": 0.012982913743906232,
+      "modePeakS": 2.0,
+      "modePeakValue": 6.663074797017946
+    },
+    {
+      "mode": 1,
+      "lambda": 1.0899009282853936e-08,
+      "sourceCoeff": 7.407314710507697e-09,
+      "witnessCoeff": 0.6796319296801324,
+      "sourceFrac": 9.57980009381555e-08,
+      "witnessFrac": 0.08589348700782883,
+      "energyFrac": 0.07295683546181614,
+      "modePeakS": 1.9666666666666666,
+      "modePeakValue": -1.7105241924386583
+    },
+    {
+      "mode": 2,
+      "lambda": 2.2816259002224282e-07,
+      "sourceCoeff": 5.705963184315248e-08,
+      "witnessCoeff": 0.25008320530368244,
+      "sourceFrac": 5.6845067117869095e-06,
+      "witnessFrac": 0.011630054229382793,
+      "energyFrac": 0.2067973215081744,
+      "modePeakS": 2.0,
+      "modePeakValue": 2.7195717499528698
+    },
+    {
+      "mode": 3,
+      "lambda": 3.685395491719195e-06,
+      "sourceCoeff": -2.953252047050124e-07,
+      "witnessCoeff": -0.08013392466794562,
+      "sourceFrac": 0.00015227754990043265,
+      "witnessFrac": 0.0011941132368394336,
+      "energyFrac": 0.34296384876655606,
+      "modePeakS": 0.0,
+      "modePeakValue": 1.7388020134806614
+    },
+    {
+      "mode": 4,
+      "lambda": 5.262690985815006e-05,
+      "sourceCoeff": 1.759512512531481e-07,
+      "witnessCoeff": 0.0033433703732065017,
+      "sourceFrac": 5.405297132913083e-05,
+      "witnessFrac": 2.0786514142850667e-06,
+      "energyFrac": 0.008525272438203208,
+      "modePeakS": 0.0,
+      "modePeakValue": 1.8012931770508704
+    },
+    {
+      "mode": 5,
+      "lambda": 0.0007495248467460908,
+      "sourceCoeff": -1.990670691660364e-06,
+      "witnessCoeff": -0.0026559102080504137,
+      "sourceFrac": 0.006918846540491169,
+      "witnessFrac": 1.3117149309135304e-06,
+      "energyFrac": 0.07662036697815781,
+      "modePeakS": 0.0,
+      "modePeakValue": 1.5019250075192268
+    },
+    {
+      "mode": 6,
+      "lambda": 0.009537787625483933,
+      "sourceCoeff": -1.2584693255665337e-05,
+      "witnessCoeff": -0.0013194562250516467,
+      "sourceFrac": 0.2765159083226148,
+      "witnessFrac": 3.2374469344393737e-07,
+      "energyFrac": 0.24064067543041598,
+      "modePeakS": 0.0,
+      "modePeakValue": 1.1534878112278557
+    },
+    {
+      "mode": 7,
+      "lambda": 0.1543899483613016,
+      "sourceCoeff": 2.0255648687396352e-05,
+      "witnessCoeff": 0.00013119797566091748,
+      "sourceFrac": 0.7163531340218372,
+      "witnessFrac": 3.200862023758142e-09,
+      "energyFrac": 0.03851276567277019,
+      "modePeakS": 0.21666666666666667,
+      "modePeakValue": 0.8094998016194396
+    }
+  ],
+  "topEnergyModes": [
+    {
+      "mode": 3,
+      "lambda": 3.685395491719195e-06,
+      "sourceCoeff": -2.953252047050124e-07,
+      "witnessCoeff": -0.08013392466794562,
+      "sourceFrac": 0.00015227754990043265,
+      "witnessFrac": 0.0011941132368394336,
+      "energyFrac": 0.34296384876655606,
+      "modePeakS": 0.0,
+      "modePeakValue": 1.7388020134806614
+    },
+    {
+      "mode": 6,
+      "lambda": 0.009537787625483933,
+      "sourceCoeff": -1.2584693255665337e-05,
+      "witnessCoeff": -0.0013194562250516467,
+      "sourceFrac": 0.2765159083226148,
+      "witnessFrac": 3.2374469344393737e-07,
+      "energyFrac": 0.24064067543041598,
+      "modePeakS": 0.0,
+      "modePeakValue": 1.1534878112278557
+    },
+    {
+      "mode": 2,
+      "lambda": 2.2816259002224282e-07,
+      "sourceCoeff": 5.705963184315248e-08,
+      "witnessCoeff": 0.25008320530368244,
+      "sourceFrac": 5.6845067117869095e-06,
+      "witnessFrac": 0.011630054229382793,
+      "energyFrac": 0.2067973215081744,
+      "modePeakS": 2.0,
+      "modePeakValue": 2.7195717499528698
+    },
+    {
+      "mode": 5,
+      "lambda": 0.0007495248467460908,
+      "sourceCoeff": -1.990670691660364e-06,
+      "witnessCoeff": -0.0026559102080504137,
+      "sourceFrac": 0.006918846540491169,
+      "witnessFrac": 1.3117149309135304e-06,
+      "energyFrac": 0.07662036697815781,
+      "modePeakS": 0.0,
+      "modePeakValue": 1.5019250075192268
+    },
+    {
+      "mode": 1,
+      "lambda": 1.0899009282853936e-08,
+      "sourceCoeff": 7.407314710507697e-09,
+      "witnessCoeff": 0.6796319296801324,
+      "sourceFrac": 9.57980009381555e-08,
+      "witnessFrac": 0.08589348700782883,
+      "energyFrac": 0.07295683546181614,
+      "modePeakS": 1.9666666666666666,
+      "modePeakValue": -1.7105241924386583
+    },
+    {
+      "mode": 7,
+      "lambda": 0.1543899483613016,
+      "sourceCoeff": 2.0255648687396352e-05,
+      "witnessCoeff": 0.00013119797566091748,
+      "sourceFrac": 0.7163531340218372,
+      "witnessFrac": 3.200862023758142e-09,
+      "energyFrac": 0.03851276567277019,
+      "modePeakS": 0.21666666666666667,
+      "modePeakValue": 0.8094998016194396
+    }
+  ],
+  "topWitnessModes": [
+    {
+      "mode": 0,
+      "lambda": 1.8483932225723395e-10,
+      "sourceCoeff": 4.069279879157152e-10,
+      "witnessCoeff": 2.2015228304581687,
+      "sourceFrac": 2.8911456776701015e-10,
+      "witnessFrac": 0.9012786282140482,
+      "energyFrac": 0.012982913743906232,
+      "modePeakS": 2.0,
+      "modePeakValue": 6.663074797017946
+    },
+    {
+      "mode": 1,
+      "lambda": 1.0899009282853936e-08,
+      "sourceCoeff": 7.407314710507697e-09,
+      "witnessCoeff": 0.6796319296801324,
+      "sourceFrac": 9.57980009381555e-08,
+      "witnessFrac": 0.08589348700782883,
+      "energyFrac": 0.07295683546181614,
+      "modePeakS": 1.9666666666666666,
+      "modePeakValue": -1.7105241924386583
+    },
+    {
+      "mode": 2,
+      "lambda": 2.2816259002224282e-07,
+      "sourceCoeff": 5.705963184315248e-08,
+      "witnessCoeff": 0.25008320530368244,
+      "sourceFrac": 5.6845067117869095e-06,
+      "witnessFrac": 0.011630054229382793,
+      "energyFrac": 0.2067973215081744,
+      "modePeakS": 2.0,
+      "modePeakValue": 2.7195717499528698
+    },
+    {
+      "mode": 3,
+      "lambda": 3.685395491719195e-06,
+      "sourceCoeff": -2.953252047050124e-07,
+      "witnessCoeff": -0.08013392466794562,
+      "sourceFrac": 0.00015227754990043265,
+      "witnessFrac": 0.0011941132368394336,
+      "energyFrac": 0.34296384876655606,
+      "modePeakS": 0.0,
+      "modePeakValue": 1.7388020134806614
+    },
+    {
+      "mode": 4,
+      "lambda": 5.262690985815006e-05,
+      "sourceCoeff": 1.759512512531481e-07,
+      "witnessCoeff": 0.0033433703732065017,
+      "sourceFrac": 5.405297132913083e-05,
+      "witnessFrac": 2.0786514142850667e-06,
+      "energyFrac": 0.008525272438203208,
+      "modePeakS": 0.0,
+      "modePeakValue": 1.8012931770508704
+    },
+    {
+      "mode": 5,
+      "lambda": 0.0007495248467460908,
+      "sourceCoeff": -1.990670691660364e-06,
+      "witnessCoeff": -0.0026559102080504137,
+      "sourceFrac": 0.006918846540491169,
+      "witnessFrac": 1.3117149309135304e-06,
+      "energyFrac": 0.07662036697815781,
+      "modePeakS": 0.0,
+      "modePeakValue": 1.5019250075192268
+    }
+  ]
+}

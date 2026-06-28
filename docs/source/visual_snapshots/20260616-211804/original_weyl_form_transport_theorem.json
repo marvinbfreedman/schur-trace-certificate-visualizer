@@ -1,0 +1,29 @@
+{
+  "theoremName": "original Weyl form transport theorem",
+  "proofClass": "symbolic identity",
+  "liftJson": "quotient_to_original_weyl_lift_theorem.json",
+  "statuses": {
+    "liftInputStatus": {
+      "label": "quotient-to-original lift input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The imported lift theorem proves that the transported normalized Volterra form and the original coordinate Weyl form have the same quadratic values on the completed test class."
+    },
+    "originalFormTransportStatus": {
+      "label": "original Weyl form transport",
+      "closed": true,
+      "status": "closed",
+      "reason": "The original coordinate Weyl quadratic form is the pullback of the nonnegative normalized Volterra quotient form."
+    }
+  },
+  "originalWeylFormTransportClosed": true,
+  "originalWeylKernelPositivityTransportClosed": true,
+  "defectFreePullbackClosed": true,
+  "proof": [
+    "Import the quotient-to-original Weyl lift theorem.",
+    "Read off equality of the original coordinate Weyl form with the transported normalized quotient form.",
+    "Expose only the defect-free pullback statement to the original Weyl positivity theorem."
+  ],
+  "notClaimedHere": "This theorem does not repackage the Volterra Schur proof or the Green contraction.  It only records the defect-free transport of the already-proved quotient form to original Weyl coordinates.",
+  "remainingAnalyticGap": null
+}

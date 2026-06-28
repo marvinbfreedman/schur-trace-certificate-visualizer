@@ -1,0 +1,302 @@
+{
+  "theoremName": "endpoint Riccati flow enclosure",
+  "sourceGrassmannJson": "endpoint_grassmann_flow_center.json",
+  "sourceChartBallJson": "endpoint_grassmann_chart_ball_certificate.json",
+  "sourceRowFlowJson": "endpoint_adjoint_row_flow_center_7_9_11.json",
+  "chartCoordinate": [
+    0,
+    1
+  ],
+  "chartIndex": 0,
+  "orders": [
+    7,
+    9,
+    11
+  ],
+  "nodeCount": 41,
+  "coefficientInflation": 1e-10,
+  "traceFieldMinGap": 1.1635518278617991e-05,
+  "traceFieldMinConsecutiveCos": 0.9933352044496803,
+  "centerOrder": 11,
+  "centerPivotAbs": 0.9643323749252883,
+  "certifiedProjectiveRadius": 0.125,
+  "radiusCapacityForThreshold": 0.46433237492528834,
+  "latestProjectiveDistance": 0.029201772270012555,
+  "fourTimesLatestProjectiveDistance": 0.11680708908005022,
+  "ratioBoundsFromChartBall": [
+    1.0,
+    0.4599277985689161,
+    0.17437877790316636,
+    0.15105135772977654,
+    0.14914692230343612,
+    0.14893718374927828,
+    0.14892797904161692,
+    0.19438114228893463,
+    0.15271670654282904,
+    0.14932494826660986,
+    0.14898085162799096,
+    0.1489302990238468,
+    0.14892791383251536,
+    0.14894659995930384,
+    0.14895136143414803,
+    0.14893356115255557,
+    0.14892817477802683,
+    0.14892789328917774,
+    0.14892968348533656,
+    0.14892834135649283,
+    0.14892791317659018,
+    0.14892789069450757,
+    0.14892791265755134,
+    0.14892789170891596,
+    0.14892789048161983,
+    0.14892789049983174,
+    0.14892789046942004,
+    0.14892789046905217
+  ],
+  "exteriorGeneratorInfNormBound": 1405760832895.681,
+  "riccatiRhsInfBoundOnChartTube": 418714069656.92194,
+  "riccatiLipschitzInfBoundOnChartTube": 3020878700619.8228,
+  "intervalLength": 0.525,
+  "flatResidualBudgetForRadius": 0.23809523809523808,
+  "gronwallResidualBudgetForRadius": 0.0,
+  "gronwallResidualBudgetForRadiusText": "9.850126094406126e-688774248833",
+  "generatorSamples": [
+    {
+      "s": 0.02,
+      "riccatiRhsInfAtCenter": 0.2733255907234112,
+      "exteriorGeneratorInfNorm": 284030920.19598734
+    },
+    {
+      "s": 0.026423832236261095,
+      "riccatiRhsInfAtCenter": 0.1168735846856498,
+      "exteriorGeneratorInfNorm": 339314038.309439
+    },
+    {
+      "s": 0.029990811357893613,
+      "riccatiRhsInfAtCenter": 0.05024569029688344,
+      "exteriorGeneratorInfNorm": 371583644.32370615
+    },
+    {
+      "s": 0.037584165753292424,
+      "riccatiRhsInfAtCenter": 0.23383462494431181,
+      "exteriorGeneratorInfNorm": 457010615.152283
+    },
+    {
+      "s": 0.04506651948828815,
+      "riccatiRhsInfAtCenter": 0.5357964836968705,
+      "exteriorGeneratorInfNorm": 556517191.3260636
+    },
+    {
+      "s": 0.058442234969265636,
+      "riccatiRhsInfAtCenter": 1.2373847791920034,
+      "exteriorGeneratorInfNorm": 741405022.0645032
+    },
+    {
+      "s": 0.0741031856366129,
+      "riccatiRhsInfAtCenter": 2.369650187557526,
+      "exteriorGeneratorInfNorm": 937018066.5484561
+    },
+    {
+      "s": 0.085625,
+      "riccatiRhsInfAtCenter": 3.441255513590874,
+      "exteriorGeneratorInfNorm": 1030542606.8104012
+    },
+    {
+      "s": 0.10102279950208197,
+      "riccatiRhsInfAtCenter": 5.190379018814958,
+      "exteriorGeneratorInfNorm": 1017208013.8429978
+    },
+    {
+      "s": 0.11069151948828815,
+      "riccatiRhsInfAtCenter": 6.454758376256729,
+      "exteriorGeneratorInfNorm": 877583821.194848
+    },
+    {
+      "s": 0.15125,
+      "riccatiRhsInfAtCenter": 13.352054687376917,
+      "exteriorGeneratorInfNorm": 6442827893.955128
+    },
+    {
+      "s": 0.19180848051171184,
+      "riccatiRhsInfAtCenter": 10.582418282332775,
+      "exteriorGeneratorInfNorm": 3392240253.1678157
+    },
+    {
+      "s": 0.20147720049791804,
+      "riccatiRhsInfAtCenter": 10.439714911329473,
+      "exteriorGeneratorInfNorm": 2345391214.7724752
+    },
+    {
+      "s": 0.216875,
+      "riccatiRhsInfAtCenter": 9.388725034064912,
+      "exteriorGeneratorInfNorm": 1314598636.2980154
+    },
+    {
+      "s": 0.2283968143633871,
+      "riccatiRhsInfAtCenter": 8.185769290751493,
+      "exteriorGeneratorInfNorm": 810967757.5515127
+    },
+    {
+      "s": 0.24405776503073437,
+      "riccatiRhsInfAtCenter": 6.266773993700808,
+      "exteriorGeneratorInfNorm": 357795967.2676908
+    },
+    {
+      "s": 0.25743348051171183,
+      "riccatiRhsInfAtCenter": 4.568125251973759,
+      "exteriorGeneratorInfNorm": 381981160.40200627
+    },
+    {
+      "s": 0.26491583424670756,
+      "riccatiRhsInfAtCenter": 3.6491563006024434,
+      "exteriorGeneratorInfNorm": 399802897.49404866
+    },
+    {
+      "s": 0.2725091886421064,
+      "riccatiRhsInfAtCenter": 2.7617740514603604,
+      "exteriorGeneratorInfNorm": 390589749.5980038
+    },
+    {
+      "s": 0.2760761677637389,
+      "riccatiRhsInfAtCenter": 2.3642964649040628,
+      "exteriorGeneratorInfNorm": 378000074.73631585
+    },
+    {
+      "s": 0.2825,
+      "riccatiRhsInfAtCenter": 1.6837415554893707,
+      "exteriorGeneratorInfNorm": 343384637.3029956
+    },
+    {
+      "s": 0.2889238322362611,
+      "riccatiRhsInfAtCenter": 1.051900120535286,
+      "exteriorGeneratorInfNorm": 294531011.68613195
+    },
+    {
+      "s": 0.2924908113578936,
+      "riccatiRhsInfAtCenter": 0.7230808750576477,
+      "exteriorGeneratorInfNorm": 261555175.21460432
+    },
+    {
+      "s": 0.30008416575329244,
+      "riccatiRhsInfAtCenter": 0.14168155074030855,
+      "exteriorGeneratorInfNorm": 177659061.18282685
+    },
+    {
+      "s": 0.30756651948828817,
+      "riccatiRhsInfAtCenter": 0.4880934375638831,
+      "exteriorGeneratorInfNorm": 146623611.98931044
+    },
+    {
+      "s": 0.32094223496926566,
+      "riccatiRhsInfAtCenter": 1.3236958920466422,
+      "exteriorGeneratorInfNorm": 387260184.0532062
+    },
+    {
+      "s": 0.3366031856366129,
+      "riccatiRhsInfAtCenter": 2.036392485404616,
+      "exteriorGeneratorInfNorm": 859318593.2564846
+    },
+    {
+      "s": 0.348125,
+      "riccatiRhsInfAtCenter": 2.393427252406361,
+      "exteriorGeneratorInfNorm": 1392779292.7992797
+    },
+    {
+      "s": 0.363522799502082,
+      "riccatiRhsInfAtCenter": 2.6399474955010955,
+      "exteriorGeneratorInfNorm": 2460885118.8330913
+    },
+    {
+      "s": 0.37319151948828816,
+      "riccatiRhsInfAtCenter": 2.596801172803972,
+      "exteriorGeneratorInfNorm": 3394409424.515542
+    },
+    {
+      "s": 0.41375,
+      "riccatiRhsInfAtCenter": 7.439118241767005,
+      "exteriorGeneratorInfNorm": 6515655805.099278
+    },
+    {
+      "s": 0.45430848051171185,
+      "riccatiRhsInfAtCenter": 128.5983757372409,
+      "exteriorGeneratorInfNorm": 85358549191.05212
+    },
+    {
+      "s": 0.463977200497918,
+      "riccatiRhsInfAtCenter": 149.04606428365545,
+      "exteriorGeneratorInfNorm": 146920170129.39807
+    },
+    {
+      "s": 0.479375,
+      "riccatiRhsInfAtCenter": 126.48070439442449,
+      "exteriorGeneratorInfNorm": 167244363654.13113
+    },
+    {
+      "s": 0.4908968143633871,
+      "riccatiRhsInfAtCenter": 861.2084881065625,
+      "exteriorGeneratorInfNorm": 153870245323.0499
+    },
+    {
+      "s": 0.5065577650307344,
+      "riccatiRhsInfAtCenter": 1646.7175647860277,
+      "exteriorGeneratorInfNorm": 808600754911.538
+    },
+    {
+      "s": 0.5199334805117118,
+      "riccatiRhsInfAtCenter": 790.719544288046,
+      "exteriorGeneratorInfNorm": 527098108149.1487
+    },
+    {
+      "s": 0.5274158342467076,
+      "riccatiRhsInfAtCenter": 3098.7265604106237,
+      "exteriorGeneratorInfNorm": 496433305006.3367
+    },
+    {
+      "s": 0.5350091886421063,
+      "riccatiRhsInfAtCenter": 4219.304585364668,
+      "exteriorGeneratorInfNorm": 1205209257025.1377
+    },
+    {
+      "s": 0.538576167763739,
+      "riccatiRhsInfAtCenter": 3913.9037506931045,
+      "exteriorGeneratorInfNorm": 1321073242451.9194
+    },
+    {
+      "s": 0.545,
+      "riccatiRhsInfAtCenter": 2066.2454778142082,
+      "exteriorGeneratorInfNorm": 1172945797175.3447
+    }
+  ],
+  "exteriorEquationStatus": {
+    "label": "exact exterior-square equation",
+    "closed": true,
+    "status": "closed",
+    "reason": "For row flow M'=-MA, the Pluecker vector satisfies p'=B(s)p with B constructed by the exterior-square formula in this certificate."
+  },
+  "riccatiChartEquationStatus": {
+    "label": "exact Riccati chart equation",
+    "closed": true,
+    "status": "closed",
+    "reason": "In the chart p_01 != 0, ratios z_J=p_J/p_01 satisfy the displayed Riccati equation z'=Bp/p_01-z(Bp)_01/p_01."
+  },
+  "chartTubeNoncollapseStatus": {
+    "label": "chart tube noncollapse",
+    "closed": true,
+    "status": "closed",
+    "reason": "The certified projective tube lies within the chart-ball radius needed for |p_hat_01| >= 1/2."
+  },
+  "empiricalRefinementInsideTubeStatus": {
+    "label": "empirical refinement inside chart tube",
+    "closed": true,
+    "status": "closed",
+    "reason": "The latest observed 9->11 projective movement, inflated by a factor four, is inside the certified projective radius. This is evidence, not the exact residual proof."
+  },
+  "validatedExactFlowEnclosureStatus": {
+    "label": "validated exact endpoint Riccati flow enclosure",
+    "closed": false,
+    "status": "open",
+    "reason": "Open.  The ODE and chart tube are now explicit.  To close this, prove a residual or interval-integration bound below the listed projective radius budget."
+  },
+  "conclusion": "The exact exterior/Riccati equation has been constructed in the persistent p_01 chart.  The chart tube has large noncollapse margin; the remaining proof obligation is a validated residual or interval integration bound for the exact endpoint BVP flow.",
+  "nextTarget": "Use a Chebyshev/Krawczyk or interval Taylor solve for the Riccati BVP and prove the projective enclosure radius is below the certified chart-ball radius."
+}

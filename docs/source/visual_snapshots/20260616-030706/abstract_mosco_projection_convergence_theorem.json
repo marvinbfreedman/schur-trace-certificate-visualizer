@@ -1,0 +1,39 @@
+{
+  "theoremName": "abstract Mosco projection convergence theorem",
+  "proofClass": "abstract functional analytic lemma",
+  "statement": "For closed subspaces H_N,H of a Hilbert space, Mosco convergence H_N -> H is equivalent to strong convergence of the orthogonal projections P_N -> P.",
+  "hypotheses": [
+    "H is a Hilbert space with norm induced by the closed positive A form.",
+    "H_N and H are closed subspaces.",
+    "H_N Mosco-converges to H: every h in H has a strong recovery sequence h_N in H_N, and every weak limit of bounded h_N in H_N lies in H."
+  ],
+  "statuses": {
+    "limsupRecoveryToProjectionStatus": {
+      "label": "limsup recovery gives projection upper bound",
+      "closed": true,
+      "status": "closed",
+      "reason": "Recovery sequences for points of H give limsup ||(I-P_N)h||=0 for h in H."
+    },
+    "liminfClosednessToProjectionStatus": {
+      "label": "liminf closedness gives weak projection limit",
+      "closed": true,
+      "status": "closed",
+      "reason": "If P_N x has bounded subsequences, Mosco liminf forces all weak cluster points to lie in H; Hilbert projection orthogonality identifies the limit as Px."
+    },
+    "projectionStrongConvergenceStatus": {
+      "label": "orthogonal projections converge strongly",
+      "closed": true,
+      "status": "closed",
+      "reason": "The standard Kato/Mosco theorem yields P_N x -> P x for every x in the Hilbert space."
+    }
+  },
+  "moscoProjectionConvergenceClosed": true,
+  "strongProjectionConvergenceClosed": true,
+  "proof": [
+    "Use the variational characterization of P_N x as the unique minimizer of ||x-y|| over y in H_N.",
+    "The Mosco limsup recovery sequence gives the upper bound limsup ||x-P_Nx|| <= ||x-Px||.",
+    "Bounded minimizing sequences have weak cluster points in H by the Mosco liminf condition.",
+    "Lower semicontinuity gives the matching lower bound, so P_Nx converges weakly to Px and the norms converge; Hilbert uniform convexity upgrades this to strong convergence."
+  ],
+  "remainingAnalyticGap": null
+}

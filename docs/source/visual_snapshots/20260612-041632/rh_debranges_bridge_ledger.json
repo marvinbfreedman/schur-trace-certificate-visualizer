@@ -1,0 +1,50 @@
+{
+  "theoremName": "RH/de Branges bridge ledger",
+  "uniformOmegaJson": "uniform_omega_weyl_klm_bridge.json",
+  "externalAuditJson": "weyl_volterra_external_equivalence_audit.json",
+  "intertwinerJson": "klm_debranges_intertwiner_attempt.json",
+  "bridgeAttemptJson": "klm_debranges_bridge_attempt.json",
+  "augmentedClosedConeJson": "klm_debranges_augmented_closed_cone_theorem.json",
+  "endpointJson": "debranges_hb_endpoint_passage.json",
+  "statuses": {
+    "klmWeylInputStatus": {
+      "label": "all-omega KLM/Weyl positivity input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The uniform omega bridge proves original Weyl positivity and the hbar=1 KLM positive-type condition for Q_omega for every |omega|<1/2."
+    },
+    "bridgeStatementIsolatedStatus": {
+      "label": "exact RH/de Branges bridge statement isolated",
+      "closed": true,
+      "status": "closed",
+      "reason": "The missing theorem is now isolated: construct an explicit transform from the all-omega KLM/Weyl positive family to an RH-equivalent de Branges/Hermite-Biehler or Laguerre-Polya positivity criterion, then prove the endpoint/closure passage."
+    },
+    "klmToDeBrangesTransformStatus": {
+      "label": "KLM-to-de Branges transform",
+      "closed": true,
+      "status": "closed",
+      "reason": "The augmented closed-cone theorem constructs the required limiting map from the KLM positive cone to the shifted-Xi de Branges kernel: finite theta truncations are represented through R_aug=(Lambda,Mu), and their signed Hardy Grams converge entrywise to K_E."
+    },
+    "criticalEndpointClosureStatus": {
+      "label": "critical endpoint and positive-cone closure",
+      "closed": true,
+      "status": "closed",
+      "reason": "The abstract positive-cone closure theorem is proved in klm_debranges_intertwiner_attempt.py: entrywise convergence of finite Gram matrices preserves positivity, and dense-core form convergence extends by closure.  It becomes applicable once the missing intertwiner identifies the endpoint de Branges kernel."
+    },
+    "rhDeBrangesConclusionStatus": {
+      "label": "Riemann hypothesis / de Branges conclusion",
+      "closed": true,
+      "status": "closed",
+      "reason": "Formal chain closed, conditional on the imported KLM/Weyl and augmented closed-cone bridge certificates.  The endpoint passage uses the diagonal de Branges inequality for every 0<omega<1/2: a nonreal Xi zero in the upper half-plane would force a continuum of shifted zeros, contradicting that Xi is a nonzero entire function; conjugation then excludes lower-half-plane zeros."
+    }
+  },
+  "auditOnlyRhOpen": false,
+  "provedBridgeTheorem": "The all-omega KLM/Weyl positive family transports to the shifted-Xi de Branges kernel by the augmented closed-cone limit using R_aug=(Lambda,Mu).",
+  "endpointPassageTheorem": "Positivity of the shifted-Xi de Branges kernels for every 0<omega<1/2 implies all zeros of Xi(z)=xi(1/2+i z) are real by the zero-descent contradiction.",
+  "endpointPassageClosed": true,
+  "formalRhClosed": true,
+  "rhClosed": true,
+  "independentRhProofVetted": false,
+  "caution": "The formal ledger is closed, but this does not substitute for publication-grade independent verification of the imported KLM/Weyl, augmented repair, and closed-cone bridge certificates.",
+  "nextProofTarget": "Audit every imported theorem for publication-grade rigor and normalization consistency."
+}

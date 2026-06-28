@@ -1,0 +1,53 @@
+{
+  "s0": 0.2825,
+  "omega": 0.49,
+  "L": 2.0,
+  "basis": 16,
+  "constraints": 10,
+  "rank": 10,
+  "nullity": 6,
+  "positiveModes": 6,
+  "lambdaMin": 4.686435916226444e-08,
+  "lambdaMax": 0.1543899451762793,
+  "traceLambda0": -0.00012862612661029079,
+  "traceLambda1": 9.42101395763874e-06,
+  "rows": [
+    {
+      "t": 0.08,
+      "pStarH": -107.41740043918624,
+      "boundaryNorm2": 52960224.03420278,
+      "boundaryNorm": 7277.3775519896435,
+      "adjointEvalNorm2": 5580254124.948803,
+      "adjointEvalNorm": 74701.09855248986,
+      "combinedNorm": 81978.4761044795
+    },
+    {
+      "t": 0.24,
+      "pStarH": -103.17821238401122,
+      "boundaryNorm2": 53101365.05754111,
+      "boundaryNorm": 7287.068344508723,
+      "adjointEvalNorm2": 5148499793.111068,
+      "adjointEvalNorm": 71753.04727404313,
+      "combinedNorm": 79040.11561855185
+    },
+    {
+      "t": 0.4,
+      "pStarH": -97.7202960613159,
+      "boundaryNorm2": 51977679.80197184,
+      "boundaryNorm": 7209.554757540291,
+      "adjointEvalNorm2": 4618216082.4353285,
+      "adjointEvalNorm": 67957.45788679362,
+      "combinedNorm": 75167.01264433391
+    },
+    {
+      "t": 0.52,
+      "pStarH": -93.05497666991295,
+      "boundaryNorm2": 50351602.732166246,
+      "boundaryNorm": 7095.886324636708,
+      "adjointEvalNorm2": 4187780500.071389,
+      "adjointEvalNorm": 64713.06282406504,
+      "combinedNorm": 71808.94914870175
+    }
+  ],
+  "interpretation": "Finite A^{-1} norms are the Galerkin constants for controlling the endpoint concomitant and local adjoint source by endpoint energy."
+}

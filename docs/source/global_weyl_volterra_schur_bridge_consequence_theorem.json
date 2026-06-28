@@ -1,0 +1,21 @@
+{
+  "theoremName": "global Weyl/Volterra Schur bridge consequence theorem",
+  "proofClass": "symbolic identity",
+  "statuses": {
+    "globalSchurBridgeConsequenceStatus": {
+      "label": "global Weyl/Volterra Schur bridge consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The global bridge ledger closes the full-Phi source noncollapse, active range inclusion, source-inactive tail absorption, high-block exhaustion, and quotient Schur assembly needed for the normalized Weyl/Volterra Schur certificate."
+    }
+  },
+  "globalSchurTheoremClosed": true,
+  "globalWeylVolterraSchurBridgeClosed": true,
+  "bridgePasses": true,
+  "proof": [
+    "Import the detailed global Weyl/Volterra Schur bridge ledger.",
+    "Export only the terminal Schur bridge consequence needed by the external equivalence audit."
+  ],
+  "remainingAnalyticGap": null,
+  "nextProofTarget": null
+}

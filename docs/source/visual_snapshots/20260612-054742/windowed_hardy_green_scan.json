@@ -1,0 +1,574 @@
+{
+  "model": "endpoint_b",
+  "kind": "tilde3",
+  "omega": 0.49,
+  "L": 2.0,
+  "rows": [
+    {
+      "basis": 10,
+      "constraints": 5,
+      "rank": 5,
+      "nullity": 5,
+      "gamma2Full": 1.3580683329997357e-06,
+      "positiveModes": 5,
+      "topWindows": [
+        {
+          "start": 0,
+          "stop": 5,
+          "width": 5,
+          "constant": 1.3580683329997357e-06,
+          "fractionOfFull": 1.0,
+          "lambdaStart": 2.650459226269166e-06,
+          "lambdaStop": 0.1543899431841379
+        },
+        {
+          "start": 0,
+          "stop": 4,
+          "width": 4,
+          "constant": 1.3514048727284858e-06,
+          "fractionOfFull": 0.9950934278420795,
+          "lambdaStart": 2.650459226269166e-06,
+          "lambdaStop": 0.009537779062472966
+        },
+        {
+          "start": 0,
+          "stop": 3,
+          "width": 3,
+          "constant": 1.3330852498227946e-06,
+          "fractionOfFull": 0.9816039572016543,
+          "lambdaStart": 2.650459226269166e-06,
+          "lambdaStop": 0.0007494447419391361
+        },
+        {
+          "start": 0,
+          "stop": 2,
+          "width": 2,
+          "constant": 1.248162177463479e-06,
+          "fractionOfFull": 0.9190717043718313,
+          "lambdaStart": 2.650459226269166e-06,
+          "lambdaStop": 5.2363871814367524e-05
+        },
+        {
+          "start": 0,
+          "stop": 1,
+          "width": 1,
+          "constant": 9.962101525567468e-07,
+          "fractionOfFull": 0.7335493570903702,
+          "lambdaStart": 2.650459226269166e-06,
+          "lambdaStop": 2.650459226269166e-06
+        },
+        {
+          "start": 1,
+          "stop": 5,
+          "width": 4,
+          "constant": 3.6977319116294636e-07,
+          "fractionOfFull": 0.2722787816914794,
+          "lambdaStart": 5.2363871814367524e-05,
+          "lambdaStop": 0.1543899431841379
+        }
+      ],
+      "topSingles": [
+        {
+          "mode": 0,
+          "constant": 9.962101525567468e-07,
+          "fractionOfFull": 0.7335493570903702,
+          "lambda": 2.650459226269166e-06
+        },
+        {
+          "mode": 1,
+          "constant": 2.5732977102735933e-07,
+          "fractionOfFull": 0.1894821967160981,
+          "lambda": 5.2363871814367524e-05
+        },
+        {
+          "mode": 2,
+          "constant": 8.522156357643531e-08,
+          "fractionOfFull": 0.0627520438446538,
+          "lambda": 0.0007494447419391361
+        },
+        {
+          "mode": 3,
+          "constant": 2.519080617258391e-08,
+          "fractionOfFull": 0.018548997543401825,
+          "lambda": 0.009537779062472966
+        },
+        {
+          "mode": 4,
+          "constant": 7.838911512800221e-09,
+          "fractionOfFull": 0.005772103893686582,
+          "lambda": 0.1543899431841379
+        }
+      ],
+      "tails": [
+        {
+          "start": 0,
+          "constant": 1.3580683329997357e-06,
+          "fractionOfFull": 1.0,
+          "lambdaStart": 2.650459226269166e-06
+        },
+        {
+          "start": 1,
+          "constant": 3.6977319116294636e-07,
+          "fractionOfFull": 0.2722787816914794,
+          "lambdaStart": 5.2363871814367524e-05
+        },
+        {
+          "start": 2,
+          "constant": 1.1261465709731757e-07,
+          "fractionOfFull": 0.08292267359520228,
+          "lambdaStart": 0.0007494447419391361
+        },
+        {
+          "start": 3,
+          "constant": 3.287997459218306e-08,
+          "fractionOfFull": 0.024210839611845555,
+          "lambdaStart": 0.009537779062472966
+        },
+        {
+          "start": 4,
+          "constant": 7.838911512800221e-09,
+          "fractionOfFull": 0.005772103893686582,
+          "lambdaStart": 0.1543899431841379
+        }
+      ]
+    },
+    {
+      "basis": 12,
+      "constraints": 6,
+      "rank": 6,
+      "nullity": 6,
+      "gamma2Full": 5.211494713261904e-07,
+      "positiveModes": 6,
+      "topWindows": [
+        {
+          "start": 0,
+          "stop": 6,
+          "width": 6,
+          "constant": 5.211494713261904e-07,
+          "fractionOfFull": 1.0,
+          "lambdaStart": 7.961713716783178e-08,
+          "lambdaStop": 0.15438995062404356
+        },
+        {
+          "start": 0,
+          "stop": 5,
+          "width": 5,
+          "constant": 5.21121696281872e-07,
+          "fractionOfFull": 0.9999467042646177,
+          "lambdaStart": 7.961713716783178e-08,
+          "lambdaStop": 0.009537803335562818
+        },
+        {
+          "start": 0,
+          "stop": 4,
+          "width": 4,
+          "constant": 5.210870334330768e-07,
+          "fractionOfFull": 0.9998801919668943,
+          "lambdaStart": 7.961713716783178e-08,
+          "lambdaStop": 0.0007495130562149632
+        },
+        {
+          "start": 0,
+          "stop": 3,
+          "width": 3,
+          "constant": 5.053712708392935e-07,
+          "fractionOfFull": 0.9697242320005707,
+          "lambdaStart": 7.961713716783178e-08,
+          "lambdaStop": 5.259688329139811e-05
+        },
+        {
+          "start": 0,
+          "stop": 2,
+          "width": 2,
+          "constant": 4.797889919258426e-07,
+          "fractionOfFull": 0.9206360522728803,
+          "lambdaStart": 7.961713716783178e-08,
+          "lambdaStop": 3.364562472471451e-06
+        },
+        {
+          "start": 1,
+          "stop": 6,
+          "width": 5,
+          "constant": 3.7456517250098633e-07,
+          "fractionOfFull": 0.7187288735951606,
+          "lambdaStart": 3.364562472471451e-06,
+          "lambdaStop": 0.15438995062404356
+        }
+      ],
+      "topSingles": [
+        {
+          "mode": 1,
+          "constant": 3.3013520267073196e-07,
+          "fractionOfFull": 0.6334750792908288,
+          "lambda": 3.364562472471451e-06
+        },
+        {
+          "mode": 0,
+          "constant": 1.6210876637126165e-07,
+          "fractionOfFull": 0.3110600226816633,
+          "lambda": 7.961713716783178e-08
+        },
+        {
+          "mode": 2,
+          "constant": 3.0524444571936265e-08,
+          "fractionOfFull": 0.05857138163118435,
+          "lambda": 5.259688329139811e-05
+        },
+        {
+          "mode": 3,
+          "constant": 1.706928644937302e-08,
+          "fractionOfFull": 0.032753149314219014,
+          "lambda": 0.0007495130562149632
+        },
+        {
+          "mode": 4,
+          "constant": 9.210989156954751e-10,
+          "fractionOfFull": 0.0017674371104157832,
+          "lambda": 0.009537803335562818
+        },
+        {
+          "mode": 5,
+          "constant": 3.990796966665188e-10,
+          "fractionOfFull": 0.000765768207825222,
+          "lambda": 0.15438995062404356
+        }
+      ],
+      "tails": [
+        {
+          "start": 0,
+          "constant": 5.211494713261904e-07,
+          "fractionOfFull": 1.0,
+          "lambdaStart": 7.961713716783178e-08
+        },
+        {
+          "start": 1,
+          "constant": 3.7456517250098633e-07,
+          "fractionOfFull": 0.7187288735951606,
+          "lambdaStart": 3.364562472471451e-06
+        },
+        {
+          "start": 2,
+          "constant": 4.770218624575928e-08,
+          "fractionOfFull": 0.09153263865809855,
+          "lambdaStart": 5.259688329139811e-05
+        },
+        {
+          "start": 3,
+          "constant": 1.726602275801887e-08,
+          "fractionOfFull": 0.03313065388722608,
+          "lambdaStart": 0.0007495130562149632
+        },
+        {
+          "start": 4,
+          "constant": 1.2611399720257483e-09,
+          "fractionOfFull": 0.0024199198913441734,
+          "lambdaStart": 0.009537803335562818
+        },
+        {
+          "start": 5,
+          "constant": 3.990796966665188e-10,
+          "fractionOfFull": 0.000765768207825222,
+          "lambdaStart": 0.15438995062404356
+        }
+      ]
+    },
+    {
+      "basis": 14,
+      "constraints": 7,
+      "rank": 7,
+      "nullity": 7,
+      "gamma2Full": 3.088404445845257e-07,
+      "positiveModes": 7,
+      "topWindows": [
+        {
+          "start": 0,
+          "stop": 7,
+          "width": 7,
+          "constant": 3.088404445845257e-07,
+          "fractionOfFull": 1.0,
+          "lambdaStart": 6.842608720338264e-09,
+          "lambdaStop": 0.15438994966859304
+        },
+        {
+          "start": 0,
+          "stop": 6,
+          "width": 6,
+          "constant": 3.07493875667879e-07,
+          "fractionOfFull": 0.9956399204176182,
+          "lambdaStart": 6.842608720338264e-09,
+          "lambdaStop": 0.00953780347203458
+        },
+        {
+          "start": 0,
+          "stop": 5,
+          "width": 5,
+          "constant": 3.0682888506804605e-07,
+          "fractionOfFull": 0.9934867354591924,
+          "lambdaStart": 6.842608720338264e-09,
+          "lambdaStop": 0.0007494776204364304
+        },
+        {
+          "start": 1,
+          "stop": 7,
+          "width": 6,
+          "constant": 3.0057649024308896e-07,
+          "fractionOfFull": 0.9732419944138014,
+          "lambdaStart": 2.3810896855524865e-07,
+          "lambdaStop": 0.15438994966859304
+        },
+        {
+          "start": 1,
+          "stop": 6,
+          "width": 5,
+          "constant": 2.992314465165911e-07,
+          "fractionOfFull": 0.9688868532718851,
+          "lambdaStart": 2.3810896855524865e-07,
+          "lambdaStop": 0.00953780347203458
+        },
+        {
+          "start": 1,
+          "stop": 5,
+          "width": 4,
+          "constant": 2.985701101265844e-07,
+          "fractionOfFull": 0.9667455003448214,
+          "lambdaStart": 2.3810896855524865e-07,
+          "lambdaStop": 0.0007494776204364304
+        }
+      ],
+      "topSingles": [
+        {
+          "mode": 2,
+          "constant": 1.4391764262382558e-07,
+          "fractionOfFull": 0.4659935094233979,
+          "lambda": 3.565321385842804e-06
+        },
+        {
+          "mode": 3,
+          "constant": 9.755421242943029e-08,
+          "fractionOfFull": 0.31587252945664934,
+          "lambda": 5.252979677154642e-05
+        },
+        {
+          "mode": 4,
+          "constant": 5.2497501402934256e-08,
+          "fractionOfFull": 0.16998259885798847,
+          "lambda": 0.0007494776204364304
+        },
+        {
+          "mode": 0,
+          "constant": 8.824555094446913e-09,
+          "fractionOfFull": 0.028573184792290842,
+          "lambda": 6.842608720338264e-09
+        },
+        {
+          "mode": 1,
+          "constant": 4.949967289354498e-09,
+          "fractionOfFull": 0.01602758763028446,
+          "lambda": 2.3810896855524865e-07
+        },
+        {
+          "mode": 6,
+          "constant": 1.3545277293239818e-09,
+          "fractionOfFull": 0.004385849564315287,
+          "lambda": 0.15438994966859304
+        }
+      ],
+      "tails": [
+        {
+          "start": 0,
+          "constant": 3.088404445845257e-07,
+          "fractionOfFull": 1.0,
+          "lambdaStart": 6.842608720338264e-09
+        },
+        {
+          "start": 1,
+          "constant": 3.0057649024308896e-07,
+          "fractionOfFull": 0.9732419944138014,
+          "lambdaStart": 2.3810896855524865e-07
+        },
+        {
+          "start": 2,
+          "constant": 2.957812918239899e-07,
+          "fractionOfFull": 0.9577155356769936,
+          "lambdaStart": 3.565321385842804e-06
+        },
+        {
+          "start": 3,
+          "constant": 1.520336431076261e-07,
+          "fractionOfFull": 0.4922724525673852,
+          "lambdaStart": 5.252979677154642e-05
+        },
+        {
+          "start": 4,
+          "constant": 5.4485847144406475e-08,
+          "fractionOfFull": 0.17642069910145589,
+          "lambdaStart": 0.0007494776204364304
+        },
+        {
+          "start": 5,
+          "constant": 2.0859857715734796e-09,
+          "fractionOfFull": 0.0067542506434987715,
+          "lambdaStart": 0.00953780347203458
+        },
+        {
+          "start": 6,
+          "constant": 1.3545277293239818e-09,
+          "fractionOfFull": 0.004385849564315287,
+          "lambdaStart": 0.15438994966859304
+        }
+      ]
+    },
+    {
+      "basis": 16,
+      "constraints": 8,
+      "rank": 8,
+      "nullity": 8,
+      "gamma2Full": 6.900309694881411e-08,
+      "positiveModes": 8,
+      "topWindows": [
+        {
+          "start": 0,
+          "stop": 8,
+          "width": 8,
+          "constant": 6.900309694881411e-08,
+          "fractionOfFull": 1.0,
+          "lambdaStart": 1.8483932225723395e-10,
+          "lambdaStop": 0.1543899483613016
+        },
+        {
+          "start": 1,
+          "stop": 8,
+          "width": 7,
+          "constant": 6.810863220664637e-08,
+          "fractionOfFull": 0.9870373246749891,
+          "lambdaStart": 1.0899009282853936e-08,
+          "lambdaStop": 0.1543899483613016
+        },
+        {
+          "start": 0,
+          "stop": 7,
+          "width": 7,
+          "constant": 6.634577245729527e-08,
+          "fractionOfFull": 0.9614897793139632,
+          "lambdaStart": 1.8483932225723395e-10,
+          "lambdaStop": 0.009537787625483933
+        },
+        {
+          "start": 1,
+          "stop": 7,
+          "width": 6,
+          "constant": 6.545035437382745e-08,
+          "fractionOfFull": 0.9485132880684755,
+          "lambdaStart": 1.0899009282853936e-08,
+          "lambdaStop": 0.009537787625483933
+        },
+        {
+          "start": 2,
+          "stop": 8,
+          "width": 6,
+          "constant": 6.307413059239602e-08,
+          "fractionOfFull": 0.9140768078740561,
+          "lambdaStart": 2.2816259002224282e-07,
+          "lambdaStop": 0.1543899483613016
+        },
+        {
+          "start": 2,
+          "stop": 7,
+          "width": 5,
+          "constant": 6.041740099511142e-08,
+          "fractionOfFull": 0.8755752084566366,
+          "lambdaStart": 2.2816259002224282e-07,
+          "lambdaStop": 0.009537787625483933
+        }
+      ],
+      "topSingles": [
+        {
+          "mode": 3,
+          "constant": 2.3972242141863092e-08,
+          "fractionOfFull": 0.3474082063250798,
+          "lambda": 3.685395491719195e-06
+        },
+        {
+          "mode": 6,
+          "constant": 1.663109527050793e-08,
+          "fractionOfFull": 0.2410195484826534,
+          "lambda": 0.009537787625483933
+        },
+        {
+          "mode": 2,
+          "constant": 1.4599052464080798e-08,
+          "fractionOfFull": 0.2115709744869893,
+          "lambda": 2.2816259002224282e-07
+        },
+        {
+          "mode": 5,
+          "constant": 5.28930413196499e-09,
+          "fractionOfFull": 0.07665314117551202,
+          "lambda": 0.0007495248467460908
+        },
+        {
+          "mode": 1,
+          "constant": 5.082683231915059e-09,
+          "fractionOfFull": 0.07365876977500516,
+          "lambda": 1.0899009282853936e-08
+        },
+        {
+          "mode": 7,
+          "constant": 2.6618207192679043e-09,
+          "fractionOfFull": 0.038575380482450225,
+          "lambda": 0.1543899483613016
+        }
+      ],
+      "tails": [
+        {
+          "start": 0,
+          "constant": 6.900309694881411e-08,
+          "fractionOfFull": 1.0,
+          "lambdaStart": 1.8483932225723395e-10
+        },
+        {
+          "start": 1,
+          "constant": 6.810863220664637e-08,
+          "fractionOfFull": 0.9870373246749891,
+          "lambdaStart": 1.0899009282853936e-08
+        },
+        {
+          "start": 2,
+          "constant": 6.307413059239602e-08,
+          "fractionOfFull": 0.9140768078740561,
+          "lambdaStart": 2.2816259002224282e-07
+        },
+        {
+          "start": 3,
+          "constant": 4.891444860393946e-08,
+          "fractionOfFull": 0.7088732356494633,
+          "lambdaStart": 3.685395491719195e-06
+        },
+        {
+          "start": 4,
+          "constant": 2.5143413210332255e-08,
+          "fractionOfFull": 0.36438093827851553,
+          "lambdaStart": 5.262690985815006e-05
+        },
+        {
+          "start": 5,
+          "constant": 2.4568316723807484e-08,
+          "fractionOfFull": 0.3560465806633584,
+          "lambdaStart": 0.0007495248467460908
+        },
+        {
+          "start": 6,
+          "constant": 1.9292870141738812e-08,
+          "fractionOfFull": 0.2795942645306209,
+          "lambdaStart": 0.009537787625483933
+        },
+        {
+          "start": 7,
+          "constant": 2.6618207192679043e-09,
+          "fractionOfFull": 0.038575380482450225,
+          "lambdaStart": 0.1543899483613016
+        }
+      ]
+    }
+  ]
+}

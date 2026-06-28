@@ -1,0 +1,41 @@
+{
+  "theoremName": "augmented fixed-core Schur positivity consequence",
+  "proofClass": "symbolic identity",
+  "finiteConsequenceJson": "xi_augmented_finite_schur_repair_consequence_theorem.json",
+  "statement": "For each fixed augmented trace-core index N, the finite Schur-repaired core quadratic form q_N^Schur is nonnegative.",
+  "statuses": {
+    "finiteSchurRepairInputStatus": {
+      "label": "finite Schur repair input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite augmented Schur repair consequence theorem is closed."
+    },
+    "finiteRepairOperatorInputStatus": {
+      "label": "finite repair operator input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite repair operator D_aug,N is nonnegative."
+    },
+    "finiteRepairedCoreFormInputStatus": {
+      "label": "finite repaired core form input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite repaired Schur core form is nonnegative."
+    },
+    "fixedCoreSchurPositiveConsequenceStatus": {
+      "label": "fixed-core Schur positivity consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Therefore q_N^Schur>=0 on every fixed augmented trace core."
+    }
+  },
+  "finiteSchurCorePositiveClosed": true,
+  "finiteRepairedCoreFormPositiveClosed": true,
+  "fixedCoreOnly": true,
+  "proof": [
+    "Import the finite augmented Schur repair consequence theorem.",
+    "Read off finite repaired form positivity and D_aug,N>=0.",
+    "Expose only q_N^Schur>=0 for downstream fixed-core cone summation."
+  ],
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,41 @@
+{
+  "theoremName": "augmented repair uniform quotient bound theorem",
+  "proofClass": "interval/ball certificate",
+  "finiteConstantsJson": "xi_augmented_finite_schur_interval_constants_theorem.json",
+  "traceQuotientJson": "augmented_trace_quotient_compatibility_theorem.json",
+  "statement": "The augmented repair forms are uniformly bounded in the transported trace quotient norm.",
+  "operatorBound": {
+    "normUpper": 2e-18,
+    "source": "dMaxUpper interval endpoint from finite Schur constants"
+  },
+  "statuses": {
+    "finiteRepairBoundInputStatus": {
+      "label": "finite repair bound input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The interval constants bound the finite D_aug,N spectral endpoint."
+    },
+    "traceQuotientCompatibilityInputStatus": {
+      "label": "trace quotient compatibility input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The transported quotient norm is identified by the quotient compatibility theorem."
+    },
+    "uniformQuotientBoundStatus": {
+      "label": "uniform repair quotient bound",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite D_aug,N bound, interpreted through the transported quotient norm, gives a uniform boundedness constant for the repair forms."
+    }
+  },
+  "uniformRepairQuotientBoundClosed": true,
+  "finiteRepairOperatorBoundClosed": true,
+  "traceQuotientNormIdentifiedClosed": true,
+  "repairOperatorNormUpper": 2e-18,
+  "proof": [
+    "Import the finite interval upper bound for D_aug,N.",
+    "Use quotient compatibility to interpret the bound in the transported trace quotient norm.",
+    "Conclude a uniform quotient-norm form bound for the repair sequence."
+  ],
+  "remainingAnalyticGap": null
+}

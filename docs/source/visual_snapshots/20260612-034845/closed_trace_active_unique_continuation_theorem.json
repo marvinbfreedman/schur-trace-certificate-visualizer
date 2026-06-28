@@ -1,0 +1,238 @@
+{
+  "theoremName": "closed-trace active unique continuation",
+  "lagrangeJson": "trace_lagrange_adjoint_control.json",
+  "jumpJson": "adjoint_green_jump_conditions.json",
+  "endpointRangeJson": "adjoint_green_endpoint_range_theorem.json",
+  "derivativeRankJson": "trace_active_derivative_rank_scan.json",
+  "projectiveResponseJson": "projective_response_column_convergence.json",
+  "sourceRankJson": "source_side_riesz_rank_theorem.json",
+  "endpointObstructionJson": "endpoint_obstruction_compatibility_theorem.json",
+  "volterraSturmLagrangeIdentityStatus": {
+    "label": "Volterra/Sturm Lagrange identity",
+    "closed": true,
+    "status": "closed",
+    "reason": "Green's formula D_a B_P[K,f]=K Lambda_a(f)-f P^*K is verified symbolically for the moving trace operator."
+  },
+  "distributionalInteriorGreenSourceStatus": {
+    "label": "distributional interior Green source",
+    "closed": true,
+    "status": "closed",
+    "reason": "The exact jump matrix represents each local source row as the singular part of P^*K at s0."
+  },
+  "exactEndpointFredholmReductionStatus": {
+    "label": "exact endpoint Fredholm reduction",
+    "closed": true,
+    "status": "closed",
+    "reason": "After the jump is fixed, the exact fundamental matrix gives P_delta Beta_z=M z+b(d), solvable iff b(d) lies in Range(M)."
+  },
+  "formalGreenAnnihilationImplicationStatus": {
+    "label": "formal Green annihilation implication",
+    "closed": true,
+    "status": "closed",
+    "reason": "If the endpoint Fredholm compatibility is satisfied for an active source row, the resulting Green coefficient gives ell(f)=int_I K(a)Lambda_a(f) da, so closed trace implies ell(f)=0."
+  },
+  "finiteOffBaseDerivativeRankUCStatus": {
+    "label": "finite off-base derivative-rank UC",
+    "closed": true,
+    "status": "closed",
+    "reason": "Full rank of the off-base derivative response matrix proves the finite active unique-continuation implication on Galerkin active blocks."
+  },
+  "sourceSideResponseNoncollapseStatus": {
+    "label": "source-side response noncollapse",
+    "closed": true,
+    "status": "closed",
+    "reason": "The Riesz-projector rank certificate proves noncollapse of the selected off-base derivative response on the certified source active plane."
+  },
+  "endpointCompatibilityForActiveRowsStatus": {
+    "label": "endpoint compatibility for active source rows",
+    "closed": false,
+    "status": "open",
+    "reason": "Closed either by rigorous full active row rank of M, which makes ker(M^*) trivial, or by combining the Green pairing formula with the Volterra/Sturm primal obstruction annihilation theorem."
+  },
+  "closedTraceActiveUniqueContinuationStatus": {
+    "label": "closed-trace active unique continuation",
+    "closed": false,
+    "status": "open",
+    "reason": "Closed if the exact Green annihilation implication is available for every scalar active source row.  The remaining open part is endpoint/Fredholm compatibility in the continuum exact Green BVP."
+  },
+  "closedTraceActiveUniqueContinuationClosed": false,
+  "derivativeRankEvidence": {
+    "allBestPointsFullRank": true,
+    "minBestSingularValueNormalized": 0.0028529276366790297,
+    "rows": [
+      {
+        "basis": 18,
+        "activeDim": 2,
+        "bestPoint": 0.545,
+        "bestFullRank": true,
+        "bestRank": 2,
+        "minSingularValueNormalized": 0.5526784636940486,
+        "bestDerivativeOrders": [
+          7,
+          8
+        ],
+        "bestMinorAbs": 0.719447065849795
+      },
+      {
+        "basis": 20,
+        "activeDim": 2,
+        "bestPoint": 0.545,
+        "bestFullRank": true,
+        "bestRank": 2,
+        "minSingularValueNormalized": 0.0028529276366790297,
+        "bestDerivativeOrders": [
+          7,
+          8
+        ],
+        "bestMinorAbs": 0.004034639133427284
+      },
+      {
+        "basis": 22,
+        "activeDim": 2,
+        "bestPoint": 0.348125,
+        "bestFullRank": true,
+        "bestRank": 2,
+        "minSingularValueNormalized": 0.10107808143507584,
+        "bestDerivativeOrders": [
+          6,
+          8
+        ],
+        "bestMinorAbs": 0.14123628178972353
+      },
+      {
+        "basis": 24,
+        "activeDim": 2,
+        "bestPoint": 0.545,
+        "bestFullRank": true,
+        "bestRank": 2,
+        "minSingularValueNormalized": 0.0645175323881854,
+        "bestDerivativeOrders": [
+          7,
+          8
+        ],
+        "bestMinorAbs": 0.09114624219781511
+      }
+    ],
+    "interpretation": "Stable full derivative rank at off-base points is the finite Galerkin shadow of active unique continuation.  The continuum proof must show that these confluent derivative matrices converge on the spectral active spaces in the A-graph norm."
+  },
+  "projectiveResponseEvidence": {
+    "point": 0.545,
+    "orders": [
+      7,
+      8
+    ],
+    "maxConsecutiveColumnDistance": 0.7358405726527611,
+    "rows": [
+      {
+        "basis": 18,
+        "activeDim": 2,
+        "normalizedMinSingularValue": 0.5526780369411572,
+        "columnNorms": [
+          11192523319026.836,
+          9562558930574.95
+        ]
+      },
+      {
+        "basis": 20,
+        "activeDim": 2,
+        "normalizedMinSingularValue": 0.002852926559754717,
+        "columnNorms": [
+          1161770543152744.8,
+          3678534256081659.5
+        ]
+      },
+      {
+        "basis": 22,
+        "activeDim": 2,
+        "normalizedMinSingularValue": 0.0031970980488948567,
+        "columnNorms": [
+          3.6305317285807885e+17,
+          3.9431922294682976e+17
+        ]
+      },
+      {
+        "basis": 24,
+        "activeDim": 2,
+        "normalizedMinSingularValue": 0.06451730039469201,
+        "columnNorms": [
+          3.974588332592988e+19,
+          5.634677487427291e+21
+        ]
+      }
+    ],
+    "consecutiveComparisons": [
+      {
+        "leftBasis": 18,
+        "rightBasis": 20,
+        "maxColumnDistance": 0.7358405726527611,
+        "frobeniusDistance": 0.7372413216272745
+      },
+      {
+        "leftBasis": 20,
+        "rightBasis": 22,
+        "maxColumnDistance": 0.08646627584138304,
+        "frobeniusDistance": 0.12193841250848654
+      },
+      {
+        "leftBasis": 22,
+        "rightBasis": 24,
+        "maxColumnDistance": 0.1419530351113071,
+        "frobeniusDistance": 0.1523492427656561
+      }
+    ],
+    "interpretation": "Direct projective convergence should make these normalized response columns Cauchy after sign/permutation alignment.  Large distances mean the current Galerkin active eigenlines are not yet a stable sequence in the chosen response coordinates."
+  },
+  "sourceSideNoncollapseEvidence": {
+    "rankTheoremPasses": true,
+    "projectorGapConditionPasses": true,
+    "continuumLowerBoundForUnitActiveVector": 1172635477570509.2,
+    "finiteRankMargin": 1207601475487997.8,
+    "responseOperatorNorm": 5.363298707952263e+17,
+    "projectorErrorAlpha": 6.504848447082551e-05,
+    "projectorErrorAlphaAllowed": 0.0022465437997963907,
+    "theorem": "For S=E^*E, ||S-S_N||<=eps and eps<gap/4 imply ||P-P_N||<=4eps/gap for the active top-two Riesz projectors. Since sigma_min(LP_N)=m and ||L||=ell, every unit v in Range(P) satisfies ||Lv||>=m(1-alpha)-ell alpha.  The displayed positive lower bound proves rank(L on Range(P))=2, equivalently rank(LE^*|U_delta)=2 for the positive source eigenspace."
+  },
+  "endpointObstructionCompatibilityTheorem": {
+    "endpointFredholmObstructionFormulaStatus": {
+      "label": "endpoint Fredholm obstruction formula",
+      "closed": true,
+      "status": "closed",
+      "reason": "The exact endpoint problem is Mz=-b(d); compatibility is w^*b(d)=0 for every w in ker M^*."
+    },
+    "greenPairingFormulaForObstructionStatus": {
+      "label": "Green pairing formula for obstruction",
+      "closed": true,
+      "status": "closed",
+      "reason": "Green's identity and the exact jump law give w^*b(d)=int K_d P f_w - d(f_w) for the primal endpoint test f_w."
+    },
+    "finiteSampledObstructionAnnihilationStatus": {
+      "label": "finite sampled near-obstruction annihilation",
+      "closed": false,
+      "status": "open",
+      "reason": "The resolved relative-threshold left endpoint direction must annihilate the actual source endpoint vectors.  This is stronger than solving the finite endpoint equation with the full sampled matrix."
+    },
+    "volterraSturmPrimalObstructionAnnihilationStatus": {
+      "label": "Volterra/Sturm primal obstruction annihilation",
+      "closed": false,
+      "status": "open",
+      "reason": "Still need the non-circular continuum theorem: every primal homogeneous endpoint obstruction f_w annihilates the actual active source rows d_u."
+    },
+    "continuumEndpointObstructionCompatibilityStatus": {
+      "label": "continuum endpoint obstruction compatibility",
+      "closed": false,
+      "status": "open",
+      "reason": "Closed either by rigorous full active row rank of M, which makes ker(M^*) trivial, or by combining the Green pairing formula with the Volterra/Sturm primal obstruction annihilation theorem."
+    },
+    "continuumEndpointObstructionCompatibilityClosed": false,
+    "remainingAnalyticGap": "Build a stable validated endpoint-flow solver that encloses the exact fundamental matrix Phi(a,s0) and endpoint rows with Frobenius endpoint-map radius below the rank margin."
+  },
+  "proof": [
+    "Let P f=Lambda_a(f).  The exact Lagrange identity gives d B_P[K,f]/da=K P f-f P^*K.",
+    "For a source row ell, choose K piecewise homogeneous away from s0 with the exact jump Delta(ell), so P^*K=ell as a distribution.",
+    "Integrating Green's formula over I yields ell(f)=int_I K(a)Lambda_a(f) da plus endpoint concomitants.",
+    "The exact endpoint fundamental-matrix theorem reduces those endpoint concomitants to Mz+b(ell).  If b(ell) lies in Range(M), choose z=-M^+b(ell) and the active endpoint term vanishes.",
+    "Therefore, for every closed-trace f with Lambda_a(f)=0 on I, the row ell(f) is zero.  Applying this to the active source basis gives E_active f=0.",
+    "The off-base derivative-rank and source-side noncollapse certificates support the same conclusion from the analytic trace-response side, but the exact Green proof still needs the continuum endpoint compatibility for the actual source rows."
+  ],
+  "remainingAnalyticGap": "Build a stable validated endpoint-flow solver that encloses the exact fundamental matrix Phi(a,s0) and endpoint rows with Frobenius endpoint-map radius below the rank margin."
+}

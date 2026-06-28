@@ -1,0 +1,80 @@
+{
+  "theoremName": "augmented closed-cone KLM-to-de Branges bridge theorem",
+  "hardyJson": null,
+  "finitePullbackJson": "xi_finite_augmented_pullback_identity_theorem.json",
+  "traceConvergenceJson": "xi_augmented_trace_convergence_theorem.json",
+  "repairPositiveJson": "xi_augmented_repair_positive_theorem.json",
+  "closedConeJson": "xi_augmented_closed_cone_limit_theorem.json",
+  "hardenedLiftJson": null,
+  "pullbackTheoremJson": null,
+  "augmentedContinuumJson": null,
+  "uniformKlmJson": "uniform_omega_weyl_klm_bridge.json",
+  "statuses": {
+    "canonicalHardyStatus": {
+      "label": "canonical Hardy/de Branges identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The shifted-Xi de Branges kernel equals the signed Hardy branch Gram K_E=<h^+,h^+>-<h^-,h^->.  This bridge imports that identity through the finite augmented pullback theorem by default."
+    },
+    "finiteThetaAugmentedPullbackStatus": {
+      "label": "finite theta augmented pullbacks",
+      "closed": true,
+      "status": "closed",
+      "reason": "The split finite augmented pullback theorem proves that, for each finite theta truncation, K_{E,N}=T_N^*KLM_NT_N+R_{aug,N}^*D_{aug,N}R_{aug,N}; equivalently the signed Hardy Gram is exactly K_{E,N}."
+    },
+    "continuumAugmentedRepairStatus": {
+      "label": "continuum augmented trace repair",
+      "closed": true,
+      "status": "closed",
+      "reason": "The split trace-convergence and repair-positivity theorems prove R_aug,N converges to the closed trace R_aug, D_aug is bounded and nonnegative in the transported trace norm, and K+R_aug^*D_aug R_aug is a closed positive form."
+    },
+    "uniformThetaTailStatus": {
+      "label": "uniform compact theta-tail convergence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the split trace-convergence theorem: super-exponential theta-tail estimates give uniform compact convergence Xi_N->Xi and K_{E,N}->K_E on finite evaluation sets."
+    },
+    "closedPositiveConeStatus": {
+      "label": "closed positive-cone limit",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the split closed-cone limit theorem: finite positive semidefinite Gram cones are closed under entrywise limits, so K_E lies in the closed positive cone."
+    },
+    "allOmegaKlmInputStatus": {
+      "label": "all-omega KLM/Weyl positivity input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from uniform_omega_weyl_klm_bridge.json."
+    },
+    "klmToDeBrangesBridgeStatus": {
+      "label": "KLM-to-de Branges closed-cone bridge",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite augmented KLM pullbacks converge entrywise to the shifted-Xi de Branges kernel.  Since each finite pullback is in the KLM positive cone and the cone is closed on finite Gram matrices, K_E is positive on every finite evaluation set."
+    }
+  },
+  "pullbackLimitTheorem": {
+    "closed": true,
+    "proofClass": "symbolic identity",
+    "signedHardyGramEqualsFiniteDeBrangesKernel": true,
+    "entrywiseConvergenceToFullDeBrangesKernel": true
+  },
+  "splitAugmentedXiTraceTheorems": {
+    "closed": true,
+    "finiteThetaAugmentedPullbackClosed": true,
+    "closedTraceConvergenceClosed": true,
+    "repairPositivityClosed": true,
+    "closedConeConclusionClosed": true
+  },
+  "formalProof": [
+    "For finite theta truncation N, define Xi_N from modes n<=N and E_{omega,N}(z)=Xi_N(z+i omega).",
+    "The canonical Hardy identity gives K_{E,N}=<h_{z,N}^+,h_{w,N}^+>-<h_{z,N}^-,h_{w,N}^->.",
+    "The finite augmented pullback theorem writes K_{E,N}=T_N^*KLM_NT_N+R_{aug,N}^*D_{aug,N}R_{aug,N}.",
+    "The split trace-convergence and repair-positivity theorems prove R_aug,N->R_aug, D_aug>=0 in the transported trace norm, and closure of the augmented positive form on the completed trace-fiber domain.",
+    "Uniform compact convergence Xi_N->Xi implies K_{E,N}(w,z)->K_E(w,z) entrywise for every finite evaluation set in the upper half-plane.",
+    "The finite positive semidefinite cone is closed; hence K_E is positive on every finite evaluation set."
+  ],
+  "bridgeClosed": true,
+  "transformClosed": true,
+  "nextProofTarget": "Apply the de Branges/Hermite-Biehler conclusion for E_omega(z)=Xi(z+i omega) and record the RH-side endpoint passage."
+}

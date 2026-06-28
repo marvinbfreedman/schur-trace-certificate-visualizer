@@ -1,0 +1,924 @@
+{
+  "theoremName": "KLM-to-de Branges transform/intertwiner audit",
+  "uniformOmegaJson": "uniform_omega_weyl_klm_bridge.json",
+  "bridgeJson": "rh_debranges_bridge_ledger.json",
+  "pullbackProbeJson": "klm_debranges_pullback_probe.json",
+  "hardyJson": "klm_debranges_canonical_hardy_image.json",
+  "bridgeAttemptJson": "klm_debranges_bridge_attempt.json",
+  "augmentedClosedConeJson": "klm_debranges_augmented_closed_cone_theorem.json",
+  "klmInputClosed": true,
+  "bridgeStillOpen": true,
+  "candidateTransform": {
+    "XiConvention": "Xi is real entire on the z-line, Xi(z)=xi(1/2+iz) up to the fixed normalization.",
+    "Eomega": "E_omega(z)=Xi(z+i omega), 0<omega<1/2",
+    "sharp": "E_omega#(z)=conj(E_omega(conj z))=Xi(z-i omega)",
+    "deBrangesKernel": "K_E(w,z)=(E_omega(z)conj(E_omega(w))-E_omega#(z)conj(E_omega#(w)))/(2*pi*i*(conj(w)-z))",
+    "requiredHermiteBiehlerInequality": "|Xi(z-i omega)| < |Xi(z+i omega)| for Im z>0"
+  },
+  "positiveConeClosureProof": [
+    "Fix finitely many endpoint test vectors phi_1,...,phi_N.",
+    "Let G_n=(K_n(phi_i,phi_j)) and assume each G_n is positive semidefinite.",
+    "If K_n(phi_i,phi_j)->K_*(phi_i,phi_j) for every i,j, then G_n->G_* entrywise.",
+    "For every c in C^N, c^*G_*c=lim_n c^*G_nc>=0, hence G_* is positive semidefinite.",
+    "The same argument on a dense core, followed by form closure, gives the endpoint form theorem."
+  ],
+  "requiredNonCircularIdentity": "K_Eomega = T_omega^* KLM_omega T_omega, or K_Eomega is an endpoint/closed-cone limit of such pullback kernels with locally uniform or form-core convergence.",
+  "finitePullbackProbe": {
+    "available": true,
+    "foundExactFinitePullback": false,
+    "foundPositiveResidualDomination": false,
+    "bestCandidate": {
+      "kind": "anti_bargmann",
+      "scaleReal": 0.0002583382834445313,
+      "scaleImag": -5.350744544643644e-22,
+      "targetFrobenius": 0.008549621932844566,
+      "scaledPullbackFrobenius": 0.00730599087149802,
+      "residualFrobenius": 0.004440555435997218,
+      "relativeResidualFrobenius": 0.5193861753042207,
+      "targetEigenMin": 1.9559884861477345e-12,
+      "targetEigenMax": 0.008549615777960767,
+      "scaledPullbackEigenMin": 3.458222474197581e-07,
+      "scaledPullbackEigenMax": 0.007229516297742407,
+      "residualEigenMin": -0.002799094323400739,
+      "residualEigenMax": 0.0034171697928052796,
+      "residualLooksPositive": false,
+      "residualLooksZero": false,
+      "width": 0.85
+    },
+    "diagnosis": "This finite coherent-grid ansatz did not find the exact bridge; the next analytic target is to replace the ad hoc Gaussian vectors by the Weyl image of the de Branges evaluation functional or to derive a boundary/weight correction from the residual."
+  },
+  "canonicalHardyImage": {
+    "available": true,
+    "closed": true,
+    "exactRelativeError": 1.5801908504997367e-15,
+    "branchContraction": {
+      "available": true,
+      "plusEigenCutoff": 0.0,
+      "resolvedRank": 5,
+      "maxGeneralizedEigenvalue": 0.9999999999996788,
+      "minGeneralizedEigenvalue": 0.7612087818302057,
+      "eigenvalues": [
+        0.7612087818302057,
+        0.7612087818302063,
+        0.9982835161182477,
+        0.9982835161182482,
+        0.9999966591027046,
+        0.9999966591027062,
+        0.9999999981731462,
+        0.9999999981731469,
+        0.999999999999678,
+        0.9999999999996788
+      ],
+      "sampleContractionHolds": true,
+      "sampleMargin": 3.211875210240578e-13
+    }
+  },
+  "directAndClosedConeBridgeAttempt": {
+    "available": true,
+    "directKlmPullbackClosed": false,
+    "closedPositiveConeBridgeClosed": false,
+    "nextProofTarget": "Construct the final de Branges evaluation pullback or closed-cone limit using R_aug=(Lambda,Mu), and verify that its signed Hardy Gram equals the de Branges kernel."
+  },
+  "augmentedClosedConeTheorem": {
+    "available": true,
+    "bridgeClosed": true,
+    "transformClosed": true,
+    "sampleConstants": {
+      "bestCase": {
+        "nmax": 3,
+        "atomCount": 6,
+        "maxXiRelativeErrorOnShiftedNodes": 1.0253993358717654e-15,
+        "signedHardyGramRelativeErrorVsFullDeBranges": 1.6468306344420745e-14,
+        "signedHardyGramFrobenius": 0.008549621932844408,
+        "directDeBrangesFrobenius": 0.008549621932844396,
+        "plusBranchFrobenius": 0.15192573233925002,
+        "minusBranchFrobenius": 0.145268454299407,
+        "splitDiagnostics": {
+          "maxSplitRelativeError": 1.7981891754125222e-61,
+          "maxPrefixFraction": 1.0000000345901272,
+          "minTailFraction": 7.168783798074221e-09,
+          "rows": [
+            {
+              "branch": "plus",
+              "z": {
+                "real": 0.0,
+                "imag": 0.35
+              },
+              "s": 0.0,
+              "splitRelativeError": 0.0,
+              "prefixFraction": 0.0,
+              "tailFraction": 1.0
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 0.0,
+                "imag": 0.35
+              },
+              "s": 0.02,
+              "splitRelativeError": 7.697376472536068e-62,
+              "prefixFraction": 0.035351214750820724,
+              "tailFraction": 0.9646487852491793
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 0.0,
+                "imag": 0.35
+              },
+              "s": 0.1,
+              "splitRelativeError": 7.697376472536068e-62,
+              "prefixFraction": 0.17548914884201572,
+              "tailFraction": 0.8245108511579843
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 0.0,
+                "imag": 0.35
+              },
+              "s": 0.3,
+              "splitRelativeError": 0.0,
+              "prefixFraction": 0.496382945807775,
+              "tailFraction": 0.503617054192225
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 0.0,
+                "imag": 0.35
+              },
+              "s": 0.545,
+              "splitRelativeError": 3.848688236268034e-62,
+              "prefixFraction": 0.7818657174135278,
+              "tailFraction": 0.21813428258647216
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 0.0,
+                "imag": 0.35
+              },
+              "s": 1.0,
+              "splitRelativeError": 4.329774265801538e-62,
+              "prefixFraction": 0.9816600517624636,
+              "tailFraction": 0.018339948237536347
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 0.0,
+                "imag": 0.35
+              },
+              "s": 2.0,
+              "splitRelativeError": 1.2398464425736456e-61,
+              "prefixFraction": 0.999999965425612,
+              "tailFraction": 3.457438802202027e-08
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 0.0,
+                "imag": 0.35
+              },
+              "s": 0.0,
+              "splitRelativeError": 0.0,
+              "prefixFraction": 0.0,
+              "tailFraction": 1.0
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 0.0,
+                "imag": 0.35
+              },
+              "s": 0.02,
+              "splitRelativeError": 1.5640559829192534e-61,
+              "prefixFraction": 0.03591525445787712,
+              "tailFraction": 0.9640847455421229
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 0.0,
+                "imag": 0.35
+              },
+              "s": 0.1,
+              "splitRelativeError": 1.5640559829192534e-61,
+              "prefixFraction": 0.1782405376232808,
+              "tailFraction": 0.8217594623767192
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 0.0,
+                "imag": 0.35
+              },
+              "s": 0.3,
+              "splitRelativeError": 0.0,
+              "prefixFraction": 0.5030856267963134,
+              "tailFraction": 0.4969143732036866
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 0.0,
+                "imag": 0.35
+              },
+              "s": 0.545,
+              "splitRelativeError": 3.910139957298133e-62,
+              "prefixFraction": 0.7888332482946396,
+              "tailFraction": 0.21116675170536037
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 0.0,
+                "imag": 0.35
+              },
+              "s": 1.0,
+              "splitRelativeError": 1.61293273238548e-61,
+              "prefixFraction": 0.9832216900442532,
+              "tailFraction": 0.016778309955746855
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 0.0,
+                "imag": 0.35
+              },
+              "s": 2.0,
+              "splitRelativeError": 5.821165784096845e-62,
+              "prefixFraction": 0.9999999745016346,
+              "tailFraction": 2.5498365468445108e-08
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 0.45,
+                "imag": 0.4
+              },
+              "s": 0.0,
+              "splitRelativeError": 0.0,
+              "prefixFraction": 0.0,
+              "tailFraction": 1.0
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 0.45,
+                "imag": 0.4
+              },
+              "s": 0.02,
+              "splitRelativeError": 8.24274364386841e-62,
+              "prefixFraction": 0.035445501419672364,
+              "tailFraction": 0.964560770731367
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 0.45,
+                "imag": 0.4
+              },
+              "s": 0.1,
+              "splitRelativeError": 1.5443377947348347e-61,
+              "prefixFraction": 0.17594909659124905,
+              "tailFraction": 0.8240861010979277
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 0.45,
+                "imag": 0.4
+              },
+              "s": 0.3,
+              "splitRelativeError": 7.852416091911969e-62,
+              "prefixFraction": 0.49750436013821575,
+              "tailFraction": 0.5026169493842826
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 0.45,
+                "imag": 0.4
+              },
+              "s": 0.545,
+              "splitRelativeError": 1.5447614878383455e-61,
+              "prefixFraction": 0.7830387811649561,
+              "tailFraction": 0.217154765451349
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 0.45,
+                "imag": 0.4
+              },
+              "s": 1.0,
+              "splitRelativeError": 7.170946861032564e-62,
+              "prefixFraction": 0.981937313300864,
+              "tailFraction": 0.01815678957936682
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 0.45,
+                "imag": 0.4
+              },
+              "s": 2.0,
+              "splitRelativeError": 2.723051256036741e-62,
+              "prefixFraction": 0.9999999675847702,
+              "tailFraction": 3.4200639253408386e-08
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 0.45,
+                "imag": 0.4
+              },
+              "s": 0.0,
+              "splitRelativeError": 0.0,
+              "prefixFraction": 0.0,
+              "tailFraction": 1.0
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 0.45,
+                "imag": 0.4
+              },
+              "s": 0.02,
+              "splitRelativeError": 7.859182209836067e-62,
+              "prefixFraction": 0.0360931680501255,
+              "tailFraction": 0.9639068974718402
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 0.45,
+                "imag": 0.4
+              },
+              "s": 0.1,
+              "splitRelativeError": 1.572483863061734e-61,
+              "prefixFraction": 0.179108255690996,
+              "tailFraction": 0.8208921130744391
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 0.45,
+                "imag": 0.4
+              },
+              "s": 0.3,
+              "splitRelativeError": 4.022441990764124e-62,
+              "prefixFraction": 0.5051965346424374,
+              "tailFraction": 0.4948047481347946
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 0.45,
+                "imag": 0.4
+              },
+              "s": 0.545,
+              "splitRelativeError": 4.28913626628602e-62,
+              "prefixFraction": 0.7910196786643069,
+              "tailFraction": 0.2089823987042303
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 0.45,
+                "imag": 0.4
+              },
+              "s": 1.0,
+              "splitRelativeError": 1.6475028754268788e-62,
+              "prefixFraction": 0.9837058176769482,
+              "tailFraction": 0.016295225933807726
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 0.45,
+                "imag": 0.4
+              },
+              "s": 2.0,
+              "splitRelativeError": 5.515126329913622e-62,
+              "prefixFraction": 0.9999999771725301,
+              "tailFraction": 2.2849108990716972e-08
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 0.95,
+                "imag": 0.55
+              },
+              "s": 0.0,
+              "splitRelativeError": 0.0,
+              "prefixFraction": 0.0,
+              "tailFraction": 1.0
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 0.95,
+                "imag": 0.55
+              },
+              "s": 0.02,
+              "splitRelativeError": 1.5950359555887786e-61,
+              "prefixFraction": 0.035780664593789514,
+              "tailFraction": 0.9642579241085892
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 0.95,
+                "imag": 0.55
+              },
+              "s": 0.1,
+              "splitRelativeError": 1.0352371151814916e-61,
+              "prefixFraction": 0.1775838732951166,
+              "tailFraction": 0.8226329813955752
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 0.95,
+                "imag": 0.55
+              },
+              "s": 0.3,
+              "splitRelativeError": 8.71055055370341e-62,
+              "prefixFraction": 0.5014868160956191,
+              "tailFraction": 0.49926374317036765
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 0.95,
+                "imag": 0.55
+              },
+              "s": 0.545,
+              "splitRelativeError": 1.224376641171268e-61,
+              "prefixFraction": 0.7872033363524685,
+              "tailFraction": 0.2140012592969267
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 0.95,
+                "imag": 0.55
+              },
+              "s": 1.0,
+              "splitRelativeError": 4.197604844811626e-62,
+              "prefixFraction": 0.9829341861686979,
+              "tailFraction": 0.01765583306400568
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 0.95,
+                "imag": 0.55
+              },
+              "s": 2.0,
+              "splitRelativeError": 8.346114162416922e-62,
+              "prefixFraction": 0.9999999758265913,
+              "tailFraction": 3.5047486636855994e-08
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 0.95,
+                "imag": 0.55
+              },
+              "s": 0.0,
+              "splitRelativeError": 0.0,
+              "prefixFraction": 0.0,
+              "tailFraction": 1.0
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 0.95,
+                "imag": 0.55
+              },
+              "s": 0.02,
+              "splitRelativeError": 9.922759180880011e-62,
+              "prefixFraction": 0.036685572390127985,
+              "tailFraction": 0.9633145599075568
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 0.95,
+                "imag": 0.55
+              },
+              "s": 0.1,
+              "splitRelativeError": 8.369094544555726e-62,
+              "prefixFraction": 0.18199702911331497,
+              "tailFraction": 0.8180037174614856
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 0.95,
+                "imag": 0.55
+              },
+              "s": 0.3,
+              "splitRelativeError": 5.6484631385208165e-62,
+              "prefixFraction": 0.5122140486942518,
+              "tailFraction": 0.48778857070683207
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 0.95,
+                "imag": 0.55
+              },
+              "s": 0.545,
+              "splitRelativeError": 5.491841559229188e-62,
+              "prefixFraction": 0.7982611662765554,
+              "tailFraction": 0.2017431365576045
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 0.95,
+                "imag": 0.55
+              },
+              "s": 1.0,
+              "splitRelativeError": 1.1752636641678757e-61,
+              "prefixFraction": 0.98528857014367,
+              "tailFraction": 0.014713668375075211
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 0.95,
+                "imag": 0.55
+              },
+              "s": 2.0,
+              "splitRelativeError": 4.74774562666196e-62,
+              "prefixFraction": 0.9999999854124878,
+              "tailFraction": 1.4642416974583885e-08
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 1.55,
+                "imag": 0.75
+              },
+              "s": 0.0,
+              "splitRelativeError": 0.0,
+              "prefixFraction": 0.0,
+              "tailFraction": 1.0
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 1.55,
+                "imag": 0.75
+              },
+              "s": 0.02,
+              "splitRelativeError": 1.9949117769028183e-62,
+              "prefixFraction": 0.036646620832381245,
+              "tailFraction": 0.9635034983438004
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 1.55,
+                "imag": 0.75
+              },
+              "s": 0.1,
+              "splitRelativeError": 2.992367665354227e-62,
+              "prefixFraction": 0.18180633885121994,
+              "tailFraction": 0.8190402987655213
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 1.55,
+                "imag": 0.75
+              },
+              "s": 0.3,
+              "splitRelativeError": 3.9898235538056365e-62,
+              "prefixFraction": 0.5117496650781498,
+              "tailFraction": 0.49121212121168784
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 1.55,
+                "imag": 0.75
+              },
+              "s": 0.545,
+              "splitRelativeError": 1.7981891754125222e-61,
+              "prefixFraction": 0.797894014491929,
+              "tailFraction": 0.20692868117930063
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 1.55,
+                "imag": 0.75
+              },
+              "s": 1.0,
+              "splitRelativeError": 3.8791930246214413e-62,
+              "prefixFraction": 0.9854977873873416,
+              "tailFraction": 0.01689365603749102
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 1.55,
+                "imag": 0.75
+              },
+              "s": 2.0,
+              "splitRelativeError": 2.9668766918498967e-62,
+              "prefixFraction": 0.9999999969348783,
+              "tailFraction": 4.208092671315207e-08
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 1.55,
+                "imag": 0.75
+              },
+              "s": 0.0,
+              "splitRelativeError": 0.0,
+              "prefixFraction": 0.0,
+              "tailFraction": 1.0
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 1.55,
+                "imag": 0.75
+              },
+              "s": 0.02,
+              "splitRelativeError": 9.29051262526107e-62,
+              "prefixFraction": 0.03792510279544003,
+              "tailFraction": 0.9620817744815773
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 1.55,
+                "imag": 0.75
+              },
+              "s": 0.1,
+              "splitRelativeError": 9.604219205431434e-62,
+              "prefixFraction": 0.18803897091563165,
+              "tailFraction": 0.8120000568421996
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 1.55,
+                "imag": 0.75
+              },
+              "s": 0.3,
+              "splitRelativeError": 2.8387677466075492e-62,
+              "prefixFraction": 0.5268423786223605,
+              "tailFraction": 0.4732971073122979
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 1.55,
+                "imag": 0.75
+              },
+              "s": 0.545,
+              "splitRelativeError": 6.215143692363616e-62,
+              "prefixFraction": 0.8132303302111119,
+              "tailFraction": 0.18700634474134495
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 1.55,
+                "imag": 0.75
+              },
+              "s": 1.0,
+              "splitRelativeError": 8.668418057806713e-62,
+              "prefixFraction": 0.9884751462932589,
+              "tailFraction": 0.011660274212917975
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 1.55,
+                "imag": 0.75
+              },
+              "s": 2.0,
+              "splitRelativeError": 9.321445920813807e-62,
+              "prefixFraction": 1.0000000002244174,
+              "tailFraction": 7.168783798074221e-09
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 2.25,
+                "imag": 0.95
+              },
+              "s": 0.0,
+              "splitRelativeError": 0.0,
+              "prefixFraction": 0.0,
+              "tailFraction": 1.0
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 2.25,
+                "imag": 0.95
+              },
+              "s": 0.02,
+              "splitRelativeError": 8.635768884338382e-62,
+              "prefixFraction": 0.038474361487447664,
+              "tailFraction": 0.9619768038134029
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 2.25,
+                "imag": 0.95
+              },
+              "s": 0.1,
+              "splitRelativeError": 8.635768884338382e-62,
+              "prefixFraction": 0.19071295985011943,
+              "tailFraction": 0.8118505150894648
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 2.25,
+                "imag": 0.95
+              },
+              "s": 0.3,
+              "splitRelativeError": 8.3779264161293e-62,
+              "prefixFraction": 0.5332906437369382,
+              "tailFraction": 0.47587926552562887
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 2.25,
+                "imag": 0.95
+              },
+              "s": 0.545,
+              "splitRelativeError": 4.18896320806465e-62,
+              "prefixFraction": 0.8200979800402598,
+              "tailFraction": 0.195268026105001
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 2.25,
+                "imag": 0.95
+              },
+              "s": 1.0,
+              "splitRelativeError": 7.727837101860413e-62,
+              "prefixFraction": 0.9907228121989667,
+              "tailFraction": 0.016892284108242204
+            },
+            {
+              "branch": "plus",
+              "z": {
+                "real": 2.25,
+                "imag": 0.95
+              },
+              "s": 2.0,
+              "splitRelativeError": 7.167024556635301e-62,
+              "prefixFraction": 1.0000000345901272,
+              "tailFraction": 5.8565631682607297e-08
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 2.25,
+                "imag": 0.95
+              },
+              "s": 0.0,
+              "splitRelativeError": 0.0,
+              "prefixFraction": 0.0,
+              "tailFraction": 1.0
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 2.25,
+                "imag": 0.95
+              },
+              "s": 0.02,
+              "splitRelativeError": 9.172427959787392e-62,
+              "prefixFraction": 0.04020430288901588,
+              "tailFraction": 0.9598442900479982
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 2.25,
+                "imag": 0.95
+              },
+              "s": 0.1,
+              "splitRelativeError": 2.1887247093964405e-62,
+              "prefixFraction": 0.19914031173452804,
+              "tailFraction": 0.8011383306797817
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 2.25,
+                "imag": 0.95
+              },
+              "s": 0.3,
+              "splitRelativeError": 9.350236057276106e-62,
+              "prefixFraction": 0.5535542670742879,
+              "tailFraction": 0.44747785098925713
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 2.25,
+                "imag": 0.95
+              },
+              "s": 0.545,
+              "splitRelativeError": 1.4226710611076864e-61,
+              "prefixFraction": 0.8401460316214983,
+              "tailFraction": 0.16173023863570093
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 2.25,
+                "imag": 0.95
+              },
+              "s": 1.0,
+              "splitRelativeError": 6.51790461214684e-62,
+              "prefixFraction": 0.9939375334026055,
+              "tailFraction": 0.00746318246654449
+            },
+            {
+              "branch": "minus",
+              "z": {
+                "real": 2.25,
+                "imag": 0.95
+              },
+              "s": 2.0,
+              "splitRelativeError": 5.3099128814022975e-62,
+              "prefixFraction": 1.0000000203837252,
+              "tailFraction": 2.3285239411280047e-08
+            }
+          ]
+        },
+        "finiteAugmentedPullbackConstructed": true,
+        "signedGramMatchesFullDeBrangesOnSample": true
+      },
+      "finiteAugmentedPullbackVerified": true,
+      "signedHardyGramEqualsDeBrangesKernelOnSample": true
+    },
+    "nextProofTarget": "Apply the de Branges/Hermite-Biehler conclusion for E_omega(z)=Xi(z+i omega) and record the RH-side endpoint passage."
+  },
+  "statuses": {
+    "klmInputStatus": {
+      "label": "all-omega KLM input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from uniform_omega_weyl_klm_bridge.json."
+    },
+    "candidateTransformStatus": {
+      "label": "shifted-Xi de Branges candidate written explicitly",
+      "closed": true,
+      "status": "closed",
+      "reason": "The natural Hermite--Biehler candidate is E_omega(z)=Xi(z+i omega), with E_omega#(z)=Xi(z-i omega), and its reproducing kernel is explicit."
+    },
+    "candidateCircularityStatus": {
+      "label": "candidate alone is not a non-circular proof",
+      "closed": true,
+      "status": "closed",
+      "reason": "Positivity of the shifted-Xi de Branges kernel is equivalent to the Hermite--Biehler inequality for Xi.  That is the RH-facing statement itself unless it is obtained as a pullback or positive-cone limit of the already proved KLM/Weyl kernels."
+    },
+    "positiveConeEndpointClosureStatus": {
+      "label": "endpoint positive-cone closure",
+      "closed": true,
+      "status": "closed",
+      "reason": "For any finite test set, positive kernels give positive semidefinite Gram matrices.  If those matrices converge entrywise to the endpoint Gram matrix, the endpoint matrix remains positive because the finite positive semidefinite cone is closed.  Equivalently, if nonnegative forms q_n converge on a dense form core to q_*, then q_* is nonnegative on that core and on the closed form domain by lower semicontinuity."
+    },
+    "nonCircularIntertwinerStatus": {
+      "label": "non-circular KLM-to-de Branges intertwiner",
+      "closed": true,
+      "status": "closed",
+      "reason": "The direct finite coherent-packet ansatz failed, but the augmented trace construction now provides the required closed-cone limiting map.  With R_aug=(Lambda,Mu), each finite theta truncation is represented as a KLM pullback plus the positive augmented repair, and the compact theta-tail limit converges entrywise to the shifted-Xi de Branges kernel."
+    },
+    "rhConclusionStatus": {
+      "label": "RH/de Branges conclusion",
+      "closed": false,
+      "status": "open",
+      "reason": "The KLM-to-de Branges closed-cone bridge is now available, but the final RH-side endpoint/Hermite-Biehler passage is tracked as a separate theorem.",
+      "blocker": "Apply the de Branges/Hermite-Biehler conclusion for E_omega(z)=Xi(z+i omega) and record the RH-side endpoint passage."
+    }
+  },
+  "transformClosed": true,
+  "endpointClosureClosed": true,
+  "rhClosed": false,
+  "nextProofTarget": "Apply the de Branges/Hermite-Biehler conclusion for E_omega(z)=Xi(z+i omega) and record the RH-side endpoint passage."
+}

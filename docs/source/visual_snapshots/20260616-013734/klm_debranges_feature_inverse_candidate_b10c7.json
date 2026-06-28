@@ -1,0 +1,209 @@
+{
+  "theoremName": "feature inverse candidate for primitive de Branges evaluation vector",
+  "basis": 10,
+  "constraints": 7,
+  "omega": 0.49,
+  "traceRank": 7,
+  "variants": [
+    "same",
+    "split",
+    "branch_unweighted",
+    "undo_sigma_u",
+    "apply_sigma_u"
+  ],
+  "results": [
+    {
+      "variant": "same",
+      "featureFitRelativeMax": 0.4737481596133723,
+      "featureFitRelativeMean": 0.35458136996329365,
+      "coefficientNormFrobenius": 45456292.96086733,
+      "traceCoordinateNormFrobenius": 419678.1780134061,
+      "directFeatureGram": {
+        "jointRelative": 18.56126587359874,
+        "plusRelative": 17.088636905602282,
+        "crossRelative": 11.522287420271125,
+        "minusRelative": 29.0662136950733,
+        "jointFrobenius": 5.516236498495662,
+        "globalScale": 0.0439247598200881,
+        "scaledJointRelative": 0.5228611710394249,
+        "mappedJointNorm": 5.767378143288918
+      },
+      "greenTraceGram": {
+        "jointRelative": 9089536.863197422,
+        "plusRelative": 7612585.564173889,
+        "crossRelative": 8539371.866236025,
+        "minusRelative": 11396766.693699846,
+        "jointFrobenius": 2701326.2640944016,
+        "globalScale": 5.0747083292443225e-09,
+        "scaledJointRelative": 0.9989355950499542,
+        "mappedJointNorm": 2701326.2778028282
+      }
+    },
+    {
+      "variant": "split",
+      "featureFitRelativeMax": 0.4737481596133723,
+      "featureFitRelativeMean": 0.35458136996329365,
+      "coefficientNormFrobenius": 32142453.00023162,
+      "traceCoordinateNormFrobenius": 296757.2855892945,
+      "directFeatureGram": {
+        "jointRelative": 8.86617176627238,
+        "plusRelative": 8.097125878151182,
+        "crossRelative": 5.3418715697473775,
+        "minusRelative": 14.057349777608259,
+        "jointFrobenius": 2.6349442237454994,
+        "globalScale": 0.0878495196401762,
+        "scaledJointRelative": 0.5228611710394249,
+        "mappedJointNorm": 2.883689071644459
+      },
+      "greenTraceGram": {
+        "jointRelative": 4544768.408535419,
+        "plusRelative": 3806292.318144665,
+        "crossRelative": 4269686.398979872,
+        "minusRelative": 5698382.8787319185,
+        "jointFrobenius": 1350663.1251930038,
+        "globalScale": 1.0149416658488645e-08,
+        "scaledJointRelative": 0.9989355950499542,
+        "mappedJointNorm": 1350663.1389014141
+      }
+    },
+    {
+      "variant": "branch_unweighted",
+      "featureFitRelativeMax": 0.4737481596133723,
+      "featureFitRelativeMean": 0.35458136996329365,
+      "coefficientNormFrobenius": 64284906.00046324,
+      "traceCoordinateNormFrobenius": 593514.571178589,
+      "directFeatureGram": {
+        "jointRelative": 37.963818705053406,
+        "plusRelative": 35.08021504860068,
+        "crossRelative": 23.90175536295665,
+        "minusRelative": 59.08634367809381,
+        "jointFrobenius": 11.28249569771855,
+        "globalScale": 0.02196237991004405,
+        "scaledJointRelative": 0.5228611710394249,
+        "mappedJointNorm": 11.534756286577837
+      },
+      "greenTraceGram": {
+        "jointRelative": 18179073.77252151,
+        "plusRelative": 15225172.056232352,
+        "crossRelative": 17078742.800748345,
+        "minusRelative": 22793534.32363571,
+        "jointFrobenius": 5402652.5418972215,
+        "globalScale": 2.5373541646221612e-09,
+        "scaledJointRelative": 0.9989355950499542,
+        "mappedJointNorm": 5402652.5556056565
+      }
+    },
+    {
+      "variant": "undo_sigma_u",
+      "featureFitRelativeMax": 0.6697202155310095,
+      "featureFitRelativeMean": 0.475913752022305,
+      "coefficientNormFrobenius": 46980712.95959652,
+      "traceCoordinateNormFrobenius": 433060.7268262875,
+      "directFeatureGram": {
+        "jointRelative": 19.243227857221516,
+        "plusRelative": 16.99750628610295,
+        "crossRelative": 11.61380116171768,
+        "minusRelative": 30.849901352504702,
+        "jointFrobenius": 5.718909290872246,
+        "globalScale": 0.042096805734525115,
+        "scaledJointRelative": 0.5342083149804285,
+        "mappedJointNorm": 5.967936237945491
+      },
+      "greenTraceGram": {
+        "jointRelative": 9709505.123181185,
+        "plusRelative": 8131806.172823364,
+        "crossRelative": 9121819.73306948,
+        "minusRelative": 12174103.470711725,
+        "jointFrobenius": 2885575.0953390244,
+        "globalScale": 4.7678234407352885e-09,
+        "scaledJointRelative": 0.9989278948183913,
+        "mappedJointNorm": 2885575.109096922
+      }
+    },
+    {
+      "variant": "apply_sigma_u",
+      "featureFitRelativeMax": 0.6548135268436953,
+      "featureFitRelativeMean": 0.44629289545801987,
+      "coefficientNormFrobenius": 47208858.2798519,
+      "traceCoordinateNormFrobenius": 437794.2636789688,
+      "directFeatureGram": {
+        "jointRelative": 19.294405099550392,
+        "plusRelative": 17.537947985582353,
+        "crossRelative": 11.942394427032342,
+        "minusRelative": 30.386956170618113,
+        "jointFrobenius": 5.734118693827271,
+        "globalScale": 0.04228319664105522,
+        "scaledJointRelative": 0.5243003351240263,
+        "mappedJointNorm": 5.985069091282242
+      },
+      "greenTraceGram": {
+        "jointRelative": 9803691.52790636,
+        "plusRelative": 8210587.904258279,
+        "crossRelative": 9210294.18687973,
+        "minusRelative": 12292288.301923934,
+        "jointFrobenius": 2913566.423459921,
+        "globalScale": 4.684159216832284e-09,
+        "scaledJointRelative": 0.998945026073833,
+        "mappedJointNorm": 2913566.437107515
+      }
+    }
+  ],
+  "bestDirectFeatureGram": {
+    "variant": "same",
+    "featureFitRelativeMax": 0.4737481596133723,
+    "featureFitRelativeMean": 0.35458136996329365,
+    "coefficientNormFrobenius": 45456292.96086733,
+    "traceCoordinateNormFrobenius": 419678.1780134061,
+    "directFeatureGram": {
+      "jointRelative": 18.56126587359874,
+      "plusRelative": 17.088636905602282,
+      "crossRelative": 11.522287420271125,
+      "minusRelative": 29.0662136950733,
+      "jointFrobenius": 5.516236498495662,
+      "globalScale": 0.0439247598200881,
+      "scaledJointRelative": 0.5228611710394249,
+      "mappedJointNorm": 5.767378143288918
+    },
+    "greenTraceGram": {
+      "jointRelative": 9089536.863197422,
+      "plusRelative": 7612585.564173889,
+      "crossRelative": 8539371.866236025,
+      "minusRelative": 11396766.693699846,
+      "jointFrobenius": 2701326.2640944016,
+      "globalScale": 5.0747083292443225e-09,
+      "scaledJointRelative": 0.9989355950499542,
+      "mappedJointNorm": 2701326.2778028282
+    }
+  },
+  "bestGreenTraceGram": {
+    "variant": "undo_sigma_u",
+    "featureFitRelativeMax": 0.6697202155310095,
+    "featureFitRelativeMean": 0.475913752022305,
+    "coefficientNormFrobenius": 46980712.95959652,
+    "traceCoordinateNormFrobenius": 433060.7268262875,
+    "directFeatureGram": {
+      "jointRelative": 19.243227857221516,
+      "plusRelative": 16.99750628610295,
+      "crossRelative": 11.61380116171768,
+      "minusRelative": 30.849901352504702,
+      "jointFrobenius": 5.718909290872246,
+      "globalScale": 0.042096805734525115,
+      "scaledJointRelative": 0.5342083149804285,
+      "mappedJointNorm": 5.967936237945491
+    },
+    "greenTraceGram": {
+      "jointRelative": 9709505.123181185,
+      "plusRelative": 8131806.172823364,
+      "crossRelative": 9121819.73306948,
+      "minusRelative": 12174103.470711725,
+      "jointFrobenius": 2885575.0953390244,
+      "globalScale": 4.7678234407352885e-09,
+      "scaledJointRelative": 0.9989278948183913,
+      "mappedJointNorm": 2885575.109096922
+    }
+  },
+  "directFeatureMapConstructed": false,
+  "traceMapConstructed": false,
+  "diagnosis": "Finite inversion of the coefficient-level plus feature map was tested. If residuals remain large, the missing transform is not the naive row-grid inverse of G_+; it requires the exact continuous Weyl/Volterra inverse and branch normalization.",
+  "nextProofTarget": "Derive the continuous adjoint normal equation G_+^*G_+ f_z=G_+^*h_z^+ and solve it analytically, including branch normalization and trace regularity, rather than relying on finite row-grid inversion."
+}

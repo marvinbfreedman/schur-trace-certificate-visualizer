@@ -1,0 +1,33 @@
+{
+  "theoremName": "finite PSD cone closure theorem",
+  "proofClass": "symbolic identity",
+  "statuses": {
+    "hermitianLimitStatus": {
+      "label": "Hermitian entrywise limit",
+      "closed": true,
+      "status": "closed",
+      "reason": "Entrywise limits of Hermitian matrices remain Hermitian."
+    },
+    "quadraticFormLimitStatus": {
+      "label": "quadratic-form limit",
+      "closed": true,
+      "status": "closed",
+      "reason": "For fixed c in C^N, the scalar c^*G_n c is a finite linear combination of entries of G_n, so it converges to c^*G c."
+    },
+    "finitePsdConeClosureStatus": {
+      "label": "finite PSD cone closed",
+      "closed": true,
+      "status": "closed",
+      "reason": "Since c^*G_n c>=0 for every n and every c, the limit satisfies c^*G c>=0 for every c.  Hence G is positive semidefinite."
+    }
+  },
+  "finitePsdConeClosureClosed": true,
+  "entrywiseLimitPreservesPsd": true,
+  "proof": [
+    "Fix a finite dimension N and a vector c in C^N.",
+    "Entrywise convergence G_n->G implies c^*G_n c -> c^*G c.",
+    "Each c^*G_n c is nonnegative because G_n is PSD.",
+    "Therefore c^*G c>=0 for all c, which is exactly G>=0."
+  ],
+  "remainingAnalyticGap": null
+}

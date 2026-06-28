@@ -1,0 +1,27 @@
+{
+  "theoremName": "original Weyl branch weight theorem",
+  "proofClass": "analytic proof",
+  "omegaRange": "|omega| < 1/2",
+  "statement": "The Weyl/Volterra branch weights are positive and locally uniform for every |omega|<1/2.",
+  "statuses": {
+    "branchWeightPositivityStatus": {
+      "label": "branch weight positivity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The branch factors exp(0.5*sigma*omega*(s+u)) are strictly positive."
+    },
+    "branchWeightUniformityStatus": {
+      "label": "branch weight uniformity",
+      "closed": true,
+      "status": "closed",
+      "reason": "For omega in compact subintervals of (-1/2,1/2), the branch weights are absorbed by the super-exponential theta/Phi decay already used in the Volterra estimates."
+    }
+  },
+  "originalWeylBranchWeightClosed": true,
+  "uniformOmegaBranchTransportClosed": true,
+  "proof": [
+    "The exponential branch factors are positive for real omega.",
+    "The theta/Phi tail is super-exponential, so bounded omega weights do not change the sign estimates."
+  ],
+  "remainingAnalyticGap": null
+}

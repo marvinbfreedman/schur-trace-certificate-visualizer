@@ -1,0 +1,44 @@
+{
+  "theoremName": "shifted Xi zero-descent endpoint theorem",
+  "proofClass": "analytic proof",
+  "diagonalJson": "debranges_diagonal_inequality_theorem.json",
+  "normalizationJson": "shifted_xi_debranges_normalization_theorem.json",
+  "statement": "The diagonal shifted-Xi inequality for every 0<omega<1/2 excludes all non-real zeros of Xi(z)=xi(1/2+i z).",
+  "statuses": {
+    "diagonalInequalityInputStatus": {
+      "label": "diagonal inequality input",
+      "closed": true,
+      "status": "closed",
+      "reason": "|Xi(z-i omega)| <= |Xi(z+i omega)| on C_+."
+    },
+    "zeroDescentContradictionStatus": {
+      "label": "zero-descent contradiction",
+      "closed": true,
+      "status": "closed",
+      "reason": "If Xi(rho)=0 with Im rho=b>0, then z=rho-i omega lies in C_+ for 0<omega<min(b,1/2), and the diagonal inequality forces Xi(rho-2i omega)=0 on a continuum, impossible for nonzero entire Xi."
+    },
+    "realEntireConjugationStatus": {
+      "label": "real-entire conjugation exclusion",
+      "closed": true,
+      "status": "closed",
+      "reason": "Xi is real entire, so lower-half-plane zeros conjugate to upper-half-plane zeros, already excluded."
+    },
+    "endpointZeroLocationStatus": {
+      "label": "endpoint zero-location theorem",
+      "closed": true,
+      "status": "closed",
+      "reason": "All zeros of Xi in the z-normalization are real."
+    }
+  },
+  "zeroDescentEndpointClosed": true,
+  "endpointZeroLocationClosed": true,
+  "conditionalRhClosed": true,
+  "proof": [
+    "Assume Xi(rho)=0 with Im rho=b>0.",
+    "For 0<omega<min(b,1/2), set z=rho-i omega so z lies in C_+.",
+    "The diagonal inequality gives |Xi(rho-2i omega)|<=|Xi(rho)|=0.",
+    "The resulting vertical continuum of zeros has accumulation points in C.",
+    "A nonzero entire function cannot vanish on such a set; conjugation handles the lower half-plane."
+  ],
+  "remainingAnalyticGap": null
+}

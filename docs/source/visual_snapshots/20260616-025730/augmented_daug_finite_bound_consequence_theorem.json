@@ -1,0 +1,44 @@
+{
+  "theoremName": "augmented D_aug finite bound consequence theorem",
+  "proofClass": "symbolic identity",
+  "finiteConstantsJson": "xi_augmented_finite_schur_interval_constants_theorem.json",
+  "operatorBound": {
+    "normUpper": 2e-18,
+    "source": "interval dMaxUpper from the finite Schur repair constants"
+  },
+  "statuses": {
+    "finiteRepairNonnegativeInputStatus": {
+      "label": "finite D_aug,N nonnegative constants",
+      "closed": true,
+      "status": "closed",
+      "reason": "The interval constants theorem proves finite D_aug,N is nonnegative up to the certified ball."
+    },
+    "finiteRepairBoundInputStatus": {
+      "label": "finite D_aug,N upper-bound constants",
+      "closed": true,
+      "status": "closed",
+      "reason": "The interval constants theorem exports dMaxUpper for the finite repair operator."
+    },
+    "finiteBoundConsequenceStatus": {
+      "label": "finite D_aug bound consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Only nonnegativity and dMaxUpper are exported to the continuum D_aug representation theorem."
+    }
+  },
+  "DaugFiniteBoundConsequenceClosed": true,
+  "finiteRepairOperatorNonnegativeConstantsClosed": true,
+  "finiteRepairOperatorBoundConstantsClosed": true,
+  "DaugOperatorNormUpper": 2e-18,
+  "proof": [
+    "Import the finite Schur interval constants theorem.",
+    "Project away all finite Schur details except finite repair nonnegativity and dMaxUpper."
+  ],
+  "notExportedHere": [
+    "range residual",
+    "Schur complement gap",
+    "Mu annihilation",
+    "finite repaired form positivity"
+  ],
+  "remainingAnalyticGap": null
+}

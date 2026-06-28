@@ -1,0 +1,54 @@
+{
+  "theoremName": "analytic Green-lift boundary/minimality theorem",
+  "statuses": {
+    "closedTraceFiberStatus": {
+      "label": "closed Volterra trace-fiber setting",
+      "closed": true,
+      "status": "closed",
+      "reason": "Work in the completed form space V with graph norm containing the plus/minus feature norms and the trace norm.  The trace map R is continuous, so N=ker R is a closed subspace."
+    },
+    "featureFormStatus": {
+      "label": "signed feature form",
+      "closed": true,
+      "status": "closed",
+      "reason": "The forms P=<G_+.,G_+.>, M=<G_-.,G_-.>, and Q=P-M are bounded sesquilinear forms on V by Cauchy-Schwarz in the feature components of the graph norm."
+    },
+    "greenMinimizerStatus": {
+      "label": "Green lift is the trace-fiber minimizer",
+      "closed": true,
+      "status": "closed",
+      "reason": "For each trace x in the closed trace range, f_x is defined as the closed-form Euler-Lagrange minimizer of Q on {f:Rf=x}."
+    },
+    "eulerLagrangeOrthogonalityStatus": {
+      "label": "Euler-Lagrange orthogonality",
+      "closed": true,
+      "status": "closed",
+      "reason": "For every h in N=ker R, the perturbation f_x+t h remains in the same affine trace fiber.  Differentiating Q(f_x+t h) at t=0 gives Q(f_x,h)=0."
+    },
+    "boundaryConcomitantIdentityStatus": {
+      "label": "boundary concomitant identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The lifted Green integration-by-parts identity identifies the endpoint boundary concomitant with the signed feature form: B(f,h)=<G_+f,G_+h>-<G_-f,G_-h>=Q(f,h)."
+    },
+    "boundaryCancellationStatus": {
+      "label": "boundary cancellation on ker R",
+      "closed": true,
+      "status": "closed",
+      "reason": "Combining B=Q with Q(f_x,h)=0 gives B(f_x,h)=0 for every h in ker R.  This is the exact endpoint cancellation needed for the compressed Green-lift Hardy contraction."
+    }
+  },
+  "formalProof": [
+    "Complete the lifted Volterra core in the graph norm containing G_+, G_-, and R.  Then R is continuous and ker R is closed.",
+    "The signed feature form Q=P-M is bounded on V, and the Green lift f_x is the closed-form minimizer of Q on the affine trace fiber Rf=x.",
+    "For h in ker R, the first variation of Q(f_x+t h) at t=0 is zero, hence Q(f_x,h)=0.",
+    "The lifted integration-by-parts Green identity gives B(f,h)=Q(f,h) as a bounded identity on the core and therefore on the completed form domain.",
+    "Thus B(f_x,h)=0 for all h in ker R."
+  ],
+  "proofClass": "analytic proof",
+  "greenLiftBoundaryMinimalityTheoremClosed": true,
+  "boundaryMinimalityTheoremClosed": true,
+  "boundaryConcomitantEqualsEulerResidual": true,
+  "numericalEvidenceRole": "The older finite boundary script is retained only as a diagnostic sanity check and is not imported as a proof dependency here.",
+  "nextProofTarget": "Use this theorem as the boundary/minimality input for the continuum Green-lift closure theorem."
+}

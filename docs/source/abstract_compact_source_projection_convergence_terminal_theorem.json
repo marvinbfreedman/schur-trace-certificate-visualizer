@@ -1,0 +1,23 @@
+{
+  "theoremName": "abstract compact source projection convergence terminal theorem",
+  "proofClass": "symbolic identity",
+  "statuses": {
+    "activeRieszProjectionConvergenceStatus": {
+      "label": "active Riesz projection convergence terminal fact",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the compact-source spectral projection theorem."
+    },
+    "activeInactiveSplittingStabilityStatus": {
+      "label": "active/inactive splitting stability terminal fact",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the compact-source spectral projection theorem."
+    }
+  },
+  "activeRieszProjectionConvergenceClosed": true,
+  "inactiveProjectionConvergenceClosed": true,
+  "compactSourceRieszProjectionConvergenceClosed": true,
+  "sourceActiveInactiveSplittingStabilityClosed": true,
+  "remainingAnalyticGap": null
+}

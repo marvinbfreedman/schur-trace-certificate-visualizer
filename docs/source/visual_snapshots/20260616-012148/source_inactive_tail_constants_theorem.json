@@ -1,0 +1,56 @@
+{
+  "theoremName": "source-inactive tail constants theorem",
+  "proofClass": "interval/ball certificate",
+  "inactiveJson": "full_theta_source_inactive_schur_tail_certificate.json",
+  "absorptionJson": "continuum_tail_absorption_certificate.json",
+  "basis": 22,
+  "sourceGrid": 257,
+  "sourceWindow": [
+    0.08,
+    0.52
+  ],
+  "globalTraceRatio": 0.75,
+  "finiteSourceTop": 140116882778.8568,
+  "finiteInactiveLambda3": 11380.43366571316,
+  "operatorPerturbationEta": 188255959.690444,
+  "absoluteTailBound": 188267340.12410972,
+  "sourceTopLower": 139928626819.16638,
+  "normalizedEpsilonDelta": 0.0013454526382754603,
+  "finiteLowMidSchurBudget": 0.005730309711103612,
+  "absorptionSlack": 0.004384857072828152,
+  "epsilonOverBudget": 0.23479579745373602,
+  "statuses": {
+    "inactiveSourceCertificateStatus": {
+      "label": "full-theta inactive source certificate",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full-theta source certificate gives the inactive lambda_3 upper bound and the top source lower bound after certified theta-tail and quadrature error propagation."
+    },
+    "absorptionBudgetStatus": {
+      "label": "low/mid Schur absorption budget",
+      "closed": true,
+      "status": "closed",
+      "reason": "The absorption certificate proves epsilon_delta is below the available finite low/mid Schur budget."
+    },
+    "normalizedTailConstantsStatus": {
+      "label": "normalized inactive-tail constants",
+      "closed": true,
+      "status": "closed",
+      "reason": "The normalized source model satisfies the certified inactive-tail constant and the constant is absorbable by the Schur budget."
+    }
+  },
+  "minMaxProofInCertifiedSourceModel": true,
+  "sourceInactiveTailConstantsClosed": true,
+  "sourceInactiveTailDominationConstantsClosed": true,
+  "absorbableByFiniteLowMidBlock": true,
+  "rawUnnormalizedStatement": "||(I-P_2)E_Phi f||^2 <= absoluteTailBound <A f,f> in the certified source model.",
+  "normalizedStatement": "For Ehat_Phi=E_Phi/sqrt(sourceTopLower), ||(I-P_2)Ehat_Phi f||^2 <= normalizedEpsilonDelta <A f,f>.",
+  "proof": [
+    "Read the certified full-theta inactive source bound.",
+    "Use Weyl perturbation of the source Gram matrix to bound lambda_3 and lambda_1.",
+    "Normalize by the certified top source lower bound.",
+    "Compare the normalized epsilon_delta with the low/mid Schur absorption budget."
+  ],
+  "notClaimedHere": "This theorem does not pass the estimate to the completed high block.  That continuum passage is the job of high_block_compact_exhaustion_proof.py.",
+  "remainingAnalyticGap": null
+}

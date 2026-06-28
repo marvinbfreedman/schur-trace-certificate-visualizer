@@ -1,0 +1,172 @@
+{
+  "omega": 0.49,
+  "L": 2.0,
+  "basis": 22,
+  "sourceGrid": 65,
+  "fullNmax": 8,
+  "sourceOrder": 16,
+  "sourceRmax": 10.0,
+  "sourceNodesFirstLast": [
+    0.08,
+    0.52
+  ],
+  "sourceWeightsFirstLast": [
+    0.0034375,
+    0.0034375
+  ],
+  "trace": {
+    "lambda0AtS0": -0.00012862612661029079,
+    "lambda1AtS0": 9.42101395763874e-06,
+    "gapAtS0": 0.00013804714056792953,
+    "lambdaDerivativesAtS0": [
+      -0.00012862612661029079,
+      0.0012586353561607226,
+      -0.010569790654668558,
+      0.08131470927283976,
+      -0.48480406794895253,
+      0.3262134539749114,
+      33.05440359008409,
+      -172.53886154243878,
+      -11867.497399991053,
+      225121.96880967333,
+      3735520.511510404,
+      -308912314.588315,
+      3399472962.8393655,
+      369400519027.39575,
+      -16726614828278.037,
+      -133545146978831.05,
+      5.480905836994158e+16
+    ]
+  },
+  "sourceTailObject": {
+    "definition": "S_tail = E_{Phi<=N}^* E_{Phi<=N} - E_tilde^* E_tilde",
+    "coreOperatorNorm": 140116509611.46646,
+    "tailOperatorNorm": 4.201384736071588e-07,
+    "tailRelativeToCore": 2.9984937162092755e-18,
+    "rowTailOperatorNorm": 5.725946953065274e-13,
+    "rowCoreOperatorNorm": 374321.3988158658,
+    "rowTailRelativeToCore": 1.5296873144786336e-18
+  },
+  "activePlane": {
+    "activeEigenvalues": [
+      11488992074.184015,
+      140116509611.46646
+    ],
+    "complementTopEigenvalue": 11385.319915330632,
+    "spectralGapToComplement": 11488980688.8641,
+    "coreMatrix": [
+      [
+        11488992074.184015,
+        -6.089117689962833e-46
+      ],
+      [
+        -6.089117689962833e-46,
+        140116509611.46646
+      ]
+    ],
+    "tailMatrix": [
+      [
+        6.598191518475103e-09,
+        -2.1803111690726466e-08
+      ],
+      [
+        -2.1803111690726466e-08,
+        -4.1902447582542835e-07
+      ]
+    ],
+    "tailOperatorNorm": 4.201384548647896e-07,
+    "coreOperatorNorm": 140116509611.46646,
+    "tailRelativeToCore": 2.998493582446529e-18
+  },
+  "rieszStabilityUnderFiniteTail": {
+    "tailProjectorAlpha": 1.4627528237187676e-16,
+    "tailGapConditionPasses": true,
+    "finiteActiveResponseSingularValues": [
+      1206605112115865.0,
+      5.360235439297644e+17
+    ],
+    "finiteRankMargin": 1206605112115865.0,
+    "responseOperatorNorm": 5.363298707952263e+17,
+    "lowerBoundAfterFiniteTail": 1206605112115786.2,
+    "rankPersistsForPhiTruncation": true
+  },
+  "omittedThetaTailEnvelope": {
+    "startMode": 9,
+    "stopMode": 80,
+    "vMin": 0.08,
+    "yMin": 1.0832870676749586,
+    "psiFloorSampledOnSourceWindow": 0.46191602352495165,
+    "maxDerivativeBounds": [
+      5.955901852758263e-115,
+      1.6611461140924646e-112,
+      4.6330625848467166e-110,
+      1.2921964066278624e-107,
+      3.604034345415448e-105,
+      1.0051927389340967e-102,
+      2.8035596070846274e-100,
+      7.819343196915095e-98,
+      2.1808750567726456e-95
+    ],
+    "relativeZerothDerivativeBound": 1.2893906141873728e-114,
+    "sampledModes": [
+      {
+        "mode": 9,
+        "maxDerivativeBounds": [
+          5.955901852758263e-115,
+          1.6611461140924646e-112,
+          4.6330625848467166e-110,
+          1.2921964066278624e-107,
+          3.604034345415448e-105,
+          1.0051927389340967e-102,
+          2.8035596070846274e-100,
+          7.819343196915095e-98,
+          2.1808750567726456e-95
+        ]
+      },
+      {
+        "mode": 10,
+        "maxDerivativeBounds": [
+          7.50441354671658e-143,
+          2.5782934720291985e-140,
+          8.858250458305479e-138,
+          3.0434318253243736e-135,
+          1.0456328436235909e-132,
+          3.5924842300876725e-130,
+          1.2342710440209446e-127,
+          4.240589430919081e-125,
+          1.4569408771981175e-122
+        ]
+      },
+      {
+        "mode": 11,
+        "maxDerivativeBounds": [
+          1.005356679989486e-173,
+          4.17262452817646e-171,
+          1.73180286809533e-168,
+          7.187661426283412e-166,
+          2.9831615832276377e-163,
+          1.238129161814464e-160,
+          5.138722159165102e-158,
+          2.1327715065002027e-155,
+          8.851839527761694e-153
+        ]
+      },
+      {
+        "mode": 80,
+        "maxDerivativeBounds": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "interpretation": "Conservative envelope for derivatives of the omitted theta profile on v>=v_min. This is the analytic input for the n>=tail_start source-row tail bound; the remaining formal step is interval propagation through the normalized source-row map."
+  },
+  "interpretation": "Literal finite source-tail object for h_u(s)=K_red^Psi(s,u), built in the same A-normalized high-block coordinates as the source/Riesz theorem.  The finite Phi<=N tail is measured on the source Gram S=E^*E and through the Riesz gap/margin. The omitted n>=tail_start part is bounded at the theta-profile derivative level."
+}

@@ -1,0 +1,21 @@
+{
+  "theoremName": "source-inactive continuum tail absorption",
+  "inactiveJson": "full_theta_source_inactive_schur_tail_certificate.json",
+  "continuumTailEstimateProved": false,
+  "absorptionCertificatePasses": true,
+  "epsilonDeltaUpper": 0.0013454526382754603,
+  "finiteLowMidSchurBudget": 0.005730309711103612,
+  "absorptionSlack": 0.004384857072828152,
+  "epsilonOverBudget": 0.23479579745373602,
+  "sourceGrid": 257,
+  "basis": 22,
+  "globalTraceRatio": 0.75,
+  "activeTraceKernelSourceFrac": 0.0,
+  "fullTraceKernelSourceFrac": 1.2741783685754282e-07,
+  "inactiveTraceKernelSourceFrac": 1.0231606015355223e-13,
+  "continuumInactiveTopUpper": 0.0013454526382754603,
+  "finiteInactiveTop": 8.122100235183388e-08,
+  "continuumErrorBound": 188255959.690444,
+  "conditionalTheorem": "If the continuum high-frequency Hardy/Schur estimate ||(I-P_delta)E_Phi f||^2 <= epsilon_delta <A f,f> is proved on H_M cap ker R_global with epsilon_delta <= epsilonDeltaUpper, then the finite low/mid Schur block absorbs this source-inactive tail because epsilonDeltaUpper < finiteLowMidSchurBudget.",
+  "remainingAnalyticGap": "Prove the continuum Hardy/Schur estimate itself, not just the finite spectral inactive bound.  The numerical absorption margin is positive once that theorem supplies the stated epsilon_delta."
+}

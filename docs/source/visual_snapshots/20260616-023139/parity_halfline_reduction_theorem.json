@@ -1,0 +1,32 @@
+{
+  "theoremName": "parity half-line reduction theorem",
+  "proofClass": "symbolic identity",
+  "statuses": {
+    "reflectionSymmetryStatus": {
+      "label": "full-line reflection symmetry",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Weyl kernel satisfies K(a,b)=K(-a,-b), so parity sectors are invariant."
+    },
+    "halfLineParityReductionStatus": {
+      "label": "half-line parity reduction",
+      "closed": true,
+      "status": "closed",
+      "reason": "Even and odd extensions identify the full-line quadratic form with the two half-line forms A+B and A-B."
+    },
+    "contractionFormStatus": {
+      "label": "A/B contraction formulation",
+      "closed": true,
+      "status": "closed",
+      "reason": "Positivity of both parity sectors is equivalent to A>=0 and -A<=B<=A."
+    }
+  },
+  "parityHalflineReductionClosed": true,
+  "proof": [
+    "Decompose full-line tests into even and odd parts.",
+    "Use reflection symmetry to make the even/odd sectors orthogonal for the form.",
+    "Transport each sector to the half-line to get kernels A+B and A-B.",
+    "Rewrite positivity of both sectors as the A/B contraction inequality."
+  ],
+  "remainingAnalyticGap": null
+}

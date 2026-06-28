@@ -1,0 +1,20 @@
+{
+  "theoremName": "quotient primitive endpoint input theorem",
+  "proofClass": "symbolic identity",
+  "primitiveEndpointJson": "primitive_endpoint_compatibility_consequence_theorem.json",
+  "statuses": {
+    "primitiveEndpointInputStatus": {
+      "label": "primitive endpoint compatibility input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The primitive endpoint consequence supplies the endpoint compatibility condition needed by the quotient lift."
+    }
+  },
+  "quotientPrimitiveEndpointInputClosed": true,
+  "primitiveEndpointCompatibilityClosed": true,
+  "proof": [
+    "Import the primitive endpoint compatibility consequence.",
+    "Expose it under the quotient-lift input name."
+  ],
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,61 @@
+{
+  "theoremName": "quotient minimal repair consequence theorem",
+  "proofClass": "symbolic identity",
+  "transportedTraceSpace": {
+    "name": "X_R",
+    "definition": "completed transported trace range R(U) with quotient norm"
+  },
+  "statuses": {
+    "quotientSchurInputStatus": {
+      "label": "normalized quotient Schur input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The quotient Schur theorem closes the normalized full-Phi quotient model."
+    },
+    "quotientFactorizationInputStatus": {
+      "label": "quotient factorization input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The quotient theorem gives Q_Phi=||G_q f||^2-||S Rf||^2."
+    },
+    "traceSideRepairInputStatus": {
+      "label": "bounded trace-side repair input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The quotient theorem exports a bounded trace-side repair operator on X_R."
+    },
+    "minimalRepairInputStatus": {
+      "label": "Moore-Penrose minimal repair input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The quotient theorem identifies the singular Moore-Penrose Schur repair."
+    },
+    "minimalRepairConsequenceStatus": {
+      "label": "minimal repair consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The imported quotient facts define D_q=(Gamma^*Gamma-C)_+ as a bounded repair on X_R."
+    }
+  },
+  "quotientMinimalRepairConsequenceClosed": true,
+  "minimalQuotientRepairClosed": true,
+  "quotientFactorizationClosed": true,
+  "traceSideRepairClosed": true,
+  "globalWeylVolterraSchurClosed": true,
+  "operator": {
+    "name": "D_q",
+    "definition": "(Gamma^*Gamma-C)_+",
+    "space": "X_R",
+    "claim": "bounded minimal trace repair for the fixed quotient positive part"
+  },
+  "proof": [
+    "Import the quotient Schur theorem.",
+    "Expose only the factorization and bounded minimal-repair consequences."
+  ],
+  "notExportedHere": [
+    "active range proof",
+    "source-inactive high-block proof",
+    "finite/source quadrature details"
+  ],
+  "remainingAnalyticGap": null
+}

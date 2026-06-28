@@ -1,0 +1,42 @@
+{
+  "theoremName": "Green-lift contraction consequence theorem",
+  "proofClass": "symbolic identity",
+  "greenClosureJson": "continuum_green_lift_closure_theorem.json",
+  "statement": "The continuum Green-lift closure theorem implies the compressed Hardy/Volterra Green-lift contraction on the completed trace-fiber domain.",
+  "statuses": {
+    "greenClosureInputStatus": {
+      "label": "completed Green-lift closure input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The continuum Green-lift closure theorem proves the compressed contraction on the completed Volterra trace image."
+    },
+    "integrationByPartsClosureInputStatus": {
+      "label": "integration-by-parts closure input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The same theorem passes the core integration-by-parts identity and boundary cancellation to the completed form domain."
+    },
+    "closedTraceKernelInputStatus": {
+      "label": "closed trace-kernel input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The trace kernel is closed in the completed form domain."
+    },
+    "greenLiftContractionConsequenceStatus": {
+      "label": "Green-lift contraction consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Therefore ||C K E|| <= 1 on the completed trace-fiber image."
+    }
+  },
+  "greenLiftContractionClosed": true,
+  "closedTraceFiberContractionClosed": true,
+  "completedDomainIntegrationByPartsClosed": true,
+  "proof": [
+    "Import the continuum Green-lift closure theorem.",
+    "Read off the closed trace-kernel and integration-by-parts closure statuses.",
+    "Read off the compressed Green-lift contraction status.",
+    "Expose only this contraction consequence to downstream source-range estimates."
+  ],
+  "remainingAnalyticGap": null
+}

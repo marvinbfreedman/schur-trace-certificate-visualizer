@@ -1,0 +1,228 @@
+{
+  "theoremName": "endpoint confluent trace tail certificate",
+  "coefficientJson": "endpoint_coefficient_interval_enclosure.json",
+  "levels": [
+    {
+      "dps": 70,
+      "matrixOrder": 70,
+      "tag": "base"
+    },
+    {
+      "dps": 80,
+      "matrixOrder": 80,
+      "tag": "level_80_80"
+    },
+    {
+      "dps": 90,
+      "matrixOrder": 90,
+      "tag": "strict"
+    }
+  ],
+  "collocationOrder": 11,
+  "collocationNodeCount": 21,
+  "collocationNodes": [
+    0.02,
+    0.026423832236261095,
+    0.04506651948828815,
+    0.0741031856366129,
+    0.11069151948828815,
+    0.15125,
+    0.19180848051171184,
+    0.2283968143633871,
+    0.25743348051171183,
+    0.2760761677637389,
+    0.2825,
+    0.2889238322362611,
+    0.30756651948828817,
+    0.3366031856366129,
+    0.37319151948828816,
+    0.41375,
+    0.45430848051171185,
+    0.4908968143633871,
+    0.5199334805117118,
+    0.538576167763739,
+    0.545
+  ],
+  "jetOrder": 9,
+  "maxTraceQ": 16,
+  "neededTraceQ": 8,
+  "matrixRmax": 12.0,
+  "traceSafetyFactor": 16.0,
+  "traceRadiusTarget": 1e-25,
+  "traceDerivativeDiffs": [
+    {
+      "from": {
+        "dps": 70,
+        "matrixOrder": 70,
+        "tag": "base"
+      },
+      "to": {
+        "dps": 80,
+        "matrixOrder": 80,
+        "tag": "level_80_80"
+      },
+      "maxTraceDerivativeEntryDiff": 1.4831357942884883e-09,
+      "maxTraceDerivativeRowL2Diff": 1.5867290194329666e-09,
+      "worstTraceDerivativeEntry": {
+        "s": 0.02,
+        "q": 16,
+        "k": 8,
+        "left": -2.0063488755181564e+19,
+        "right": -2.0063488755181564e+19,
+        "diff": 1.4831357942884883e-09
+      }
+    },
+    {
+      "from": {
+        "dps": 80,
+        "matrixOrder": 80,
+        "tag": "level_80_80"
+      },
+      "to": {
+        "dps": 90,
+        "matrixOrder": 90,
+        "tag": "strict"
+      },
+      "maxTraceDerivativeEntryDiff": 4.093887839626661e-19,
+      "maxTraceDerivativeRowL2Diff": 4.37545341284433e-19,
+      "worstTraceDerivativeEntry": {
+        "s": 0.02,
+        "q": 16,
+        "k": 8,
+        "left": -2.0063488755181564e+19,
+        "right": -2.0063488755181564e+19,
+        "diff": 4.093887839626661e-19
+      }
+    }
+  ],
+  "neededTraceDerivativeDiffs": [
+    {
+      "from": {
+        "dps": 70,
+        "matrixOrder": 70,
+        "tag": "base"
+      },
+      "to": {
+        "dps": 80,
+        "matrixOrder": 80,
+        "tag": "level_80_80"
+      },
+      "maxTraceDerivativeEntryDiff": 1.2960343442383467e-33,
+      "maxTraceDerivativeRowL2Diff": 1.3868666263896215e-33,
+      "worstTraceDerivativeEntry": {
+        "s": 0.02,
+        "q": 8,
+        "k": 8,
+        "left": -15271311.300109072,
+        "right": -15271311.300109072,
+        "diff": 1.2960343442383467e-33
+      }
+    },
+    {
+      "from": {
+        "dps": 80,
+        "matrixOrder": 80,
+        "tag": "level_80_80"
+      },
+      "to": {
+        "dps": 90,
+        "matrixOrder": 90,
+        "tag": "strict"
+      },
+      "maxTraceDerivativeEntryDiff": 3.5797167715222987e-43,
+      "maxTraceDerivativeRowL2Diff": 3.826791901601245e-43,
+      "worstTraceDerivativeEntry": {
+        "s": 0.02,
+        "q": 8,
+        "k": 8,
+        "left": -15271311.300109072,
+        "right": -15271311.300109072,
+        "diff": 3.5797167715222987e-43
+      }
+    }
+  ],
+  "traceDerivativeEntryLastDiff": 3.5797167715222987e-43,
+  "traceDerivativeEntryObservedRatio": 2.7620539435828195e-10,
+  "traceDerivativeEntryTailAllowance": 3.57972035124265e-49,
+  "traceDerivativeEntryRadius": 5.72755256198824e-42,
+  "traceDerivativeRowLastDiff": 3.826791901601245e-43,
+  "traceDerivativeRowObservedRatio": 2.759307801330104e-10,
+  "traceDerivativeRowTailAllowance": 3.826795728396973e-49,
+  "traceDerivativeRowRadius": 6.122873165435158e-42,
+  "traceRefinementTailStatus": {
+    "label": "trace derivative geometric refinement tail",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed when the 80:80->90:90 trace-derivative difference, plus a geometric tail inferred from the previous refinement step, is below the chosen trace-radius target at every collocation node."
+  },
+  "rTail": {
+    "bigOrder": 25,
+    "panels": [
+      [
+        12.0,
+        13.0
+      ],
+      [
+        13.0,
+        14.0
+      ],
+      [
+        14.0,
+        15.0
+      ],
+      [
+        15.0,
+        16.0
+      ]
+    ],
+    "panelRows": [],
+    "maxPanelAbsEntryIntegral": null,
+    "lastPanelAbsEntryIntegral": null,
+    "previousPanelAbsEntryIntegral": null,
+    "observedPanelRatio": null,
+    "geometricBeyondLastPanel": null,
+    "totalTailProxy": null,
+    "geometricClosed": false,
+    "worstPanel": null
+  },
+  "rTailTargetFromCoefficientRadii": 7.750705213816742e-51,
+  "rTailStatus": {
+    "label": "r>=12 confluent integral tail",
+    "closed": false,
+    "status": "open",
+    "reason": "Closed when absolute panel integrals beyond r=12, plus a geometric beyond-last-panel tail, are below the final coefficient interval radius scale."
+  },
+  "minEigenGapAcrossLevels": 1.1635518278617991e-05,
+  "minConsecutiveEigenrowCosAcrossLevels": 0.9881718063973355,
+  "eigenrowStabilityStatus": {
+    "label": "confluent eigenrow stability",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed numerically when the negative eigenvalue remains simple with a visible gap and sign alignment is stable across all collocation nodes and refinement levels."
+  },
+  "coefficientPropagationStatus": {
+    "label": "exact finite Krawczyk coefficient input",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed only after the finite Krawczyk budget comparison and the refinement tail model are both closed.  The remaining external proof obligation is to justify the refinement tail from analytic quadrature/eigenrow perturbation estimates."
+  },
+  "fullRankShortcutStatus": {
+    "label": "endpoint full-rank shortcut from coefficient enclosure",
+    "closed": true,
+    "status": "closed",
+    "reason": "If the coefficient intervals are exact, the Krawczyk theorem keeps the endpoint map in the persistent p_01 chart, so the active endpoint map has full row rank and the Green BVP has no active compatibility obstruction."
+  },
+  "finiteTraceTailCertificateStatus": {
+    "label": "finite trace-tail certificate feeding Krawczyk",
+    "closed": false,
+    "status": "open",
+    "reason": "Closed when trace refinement, r-tail, eigenrow stability, and final coefficient propagation are all closed."
+  },
+  "strictMachineRigorousStatus": {
+    "label": "strict interval/Bernstein machine proof",
+    "closed": false,
+    "status": "open",
+    "reason": "Still open.  This script supplies the finite refinement-tail certificate and the r-tail panel bound.  A strict machine proof would replace the geometric quadrature-refinement model by interval or Bernstein derivative bounds for each Gauss-Legendre segment."
+  },
+  "conclusion": "The confluent trace data, r-tail, eigenrow stability, and final Krawczyk propagation are consistent with the endpoint full-rank shortcut by a huge margin.  The remaining formal hardening is the pure quadrature-error theorem for the explicit confluent integrand."
+}

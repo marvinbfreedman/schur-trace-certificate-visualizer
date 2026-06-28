@@ -1,0 +1,72 @@
+{
+  "theoremName": "analytic augmented pullback closed-cone limit theorem",
+  "hardyJson": "klm_debranges_canonical_hardy_image.json",
+  "mellinBoundaryJson": "xi_mellin_convolution_boundary_identity.json",
+  "boundaryConcomitantJson": "xi_mellin_boundary_concomitant.json",
+  "augmentedContinuumJson": "xi_augmented_trace_continuum_lift.json",
+  "statuses": {
+    "finiteThetaTruncationStatus": {
+      "label": "finite theta truncations",
+      "closed": true,
+      "status": "closed",
+      "reason": "For N>=1, Xi_N is the entire function obtained by retaining theta modes n<=N in the Mellin/Xi atom expansion, and E_{omega,N}(z)=Xi_N(z+i omega)."
+    },
+    "canonicalHardyIdentityStatus": {
+      "label": "canonical Hardy/de Branges branch identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The imported Hardy identity gives K_{E,N}=<h_{z,N}^+,h_{w,N}^+>-<h_{z,N}^-,h_{w,N}^-> for each finite truncation, with the same normalization as the full shifted-Xi kernel."
+    },
+    "exactMellinSplitStatus": {
+      "label": "exact Mellin boundary/tail split",
+      "closed": true,
+      "status": "closed",
+      "reason": "For each retained atom, the Mellin convolution identity gives X_i(z)=B_i(s,z)+T_i(s,z), where B_i is the boundary primitive and T_i is the diagonal Volterra tail."
+    },
+    "muBoundaryTraceStatus": {
+      "label": "Mu boundary primitive is an augmented trace coordinate",
+      "closed": true,
+      "status": "closed",
+      "reason": "The boundary concomitant identifies the primitive as Mu_z and shows the augmented trace R_aug=(Lambda,Mu) kills that prefix on the augmented trace nullspace."
+    },
+    "augmentedPullbackIdentityStatus": {
+      "label": "augmented pullback identity for K_{E,N}",
+      "closed": true,
+      "status": "closed",
+      "reason": "Combining the Hardy branch identity with the exact Mellin split gives h_{z,N}^\u00b1 as a boundary primitive plus diagonal Volterra tail.  This is precisely the augmented pullback through R_aug=(Lambda,Mu), and its signed Gram is K_{E,N}."
+    },
+    "uniformCompactTailStatus": {
+      "label": "uniform compact theta-tail convergence",
+      "closed": true,
+      "status": "closed",
+      "reason": "On every compact shifted z-strip |Im z|<=M, the n-th theta mode is dominated by C_M n^4 exp(-pi n^2/2).  The Weierstrass M-test gives Xi_N->Xi uniformly on the strip."
+    },
+    "entrywiseKernelLimitStatus": {
+      "label": "entrywise de Branges kernel limit",
+      "closed": true,
+      "status": "closed",
+      "reason": "Uniform convergence of Xi_N on compact shifted z-sets implies E_{omega,N}->E_omega and E_{omega,N}#->E_omega# uniformly on finite evaluation sets, hence K_{E,N}(w,z)->K_E(w,z) entrywise for w,z in the upper half-plane."
+    },
+    "continuumAugmentedRepairInputStatus": {
+      "label": "continuum augmented repair input available",
+      "closed": true,
+      "status": "closed",
+      "reason": "The continuum augmented repair theorem supplies the closed positive Volterra/KLM form on the completed augmented trace-fiber domain into which the finite pullbacks land."
+    }
+  },
+  "formalProof": [
+    "For N>=1, define Xi_N by retaining theta modes n<=N and set E_{omega,N}(z)=Xi_N(z+i omega).",
+    "The canonical Hardy identity gives the de Branges kernel K_{E,N} as the signed Hardy branch Gram.",
+    "The exact Mellin convolution identity splits every retained branch atom into B_i(s,z)+T_i(s,z), with B_i represented by Mu_z and T_i represented by the diagonal Volterra tail.",
+    "Therefore the branch vector h_{z,N}^\u00b1 has an augmented pullback through R_aug=(Lambda,Mu), and the signed augmented pullback Gram is exactly K_{E,N}.",
+    "For each compact shifted z-strip, the theta tail is dominated by C_M n^4 exp(-pi n^2/2), so Xi_N converges uniformly to Xi by the Weierstrass M-test.",
+    "Uniform convergence of the four shifted factors appearing in the de Branges numerator gives K_{E,N}(w,z)->K_E(w,z) entrywise on every finite evaluation set."
+  ],
+  "proofClass": "analytic proof",
+  "pullbackLimitTheoremClosed": true,
+  "finiteAugmentedPullbackTheoremClosed": true,
+  "signedHardyGramEqualsFiniteDeBrangesKernel": true,
+  "entrywiseConvergenceToFullDeBrangesKernel": true,
+  "numericalEvidenceRole": "klm_debranges_augmented_pullback_limit.py is retained only as a diagnostic check and is not imported by this theorem.",
+  "nextProofTarget": "Use this analytic theorem as the pullback-limit input to the augmented closed-cone KLM-to-de Branges bridge."
+}

@@ -1,0 +1,149 @@
+{
+  "theoremName": "Weyl/Volterra external equivalence audit",
+  "quotientJson": "weyl_volterra_quotient_schur_theorem.json",
+  "bridgeJson": "global_weyl_volterra_schur_bridge.json",
+  "sourceJson": "full_theta_source_quadrature_certificate.json",
+  "liftJson": "quotient_to_original_weyl_lift_theorem.json",
+  "uniformOmegaJson": "uniform_omega_weyl_klm_bridge.json",
+  "rhLedgerJson": "rh_debranges_bridge_ledger.json",
+  "endpointJson": "debranges_hb_endpoint_passage.json",
+  "notes": "rh_klm_notes.md",
+  "draft": "rh_weyl_positive_draft.tex",
+  "sourceOmega": 0.49,
+  "normalizedSchurCertificateClosed": true,
+  "conditionalQuotientToOriginalLiftClosed": true,
+  "externalFoundationClosed": true,
+  "originalWeylKernelPositivityClosed": true,
+  "originalKlmConditionClosed": true,
+  "rhFacingChainClosed": true,
+  "auditItems": [
+    {
+      "label": "Riemann kernel formula and harmless xi normalization",
+      "kind": "external",
+      "closed": true,
+      "status": "closed",
+      "reason": "The draft states the positive-side Phi formula, its even extension, and the xi Fourier representation up to an overall conventional scalar.  Such a scalar does not affect kernel positivity.",
+      "evidence": [
+        "rh_weyl_positive_draft.tex: Riemann kernel section"
+      ],
+      "blocker": null
+    },
+    {
+      "label": "KLM convention equals Weyl positivity for hbar=1",
+      "kind": "external",
+      "closed": true,
+      "status": "closed",
+      "reason": "The notes and draft use the same hbar=1 phase convention.  This link is the standard KLM/quantum-Bochner equivalence in the chosen Weyl normalization.",
+      "evidence": [
+        "rh_weyl_positive_draft.tex: KLM test definition",
+        "rh_klm_notes.md: Symplectic Fourier transform"
+      ],
+      "blocker": null
+    },
+    {
+      "label": "phase-space symbol transported to coordinate Weyl kernel",
+      "kind": "external",
+      "closed": true,
+      "status": "closed",
+      "reason": "The draft displays the Weyl symbol sigma_omega and the associated coordinate kernel K_omega.  This closes the algebraic symbol-to-kernel transport inside the stated convention.",
+      "evidence": [
+        "rh_weyl_positive_draft.tex: equations sigma and WeylKernel"
+      ],
+      "blocker": null
+    },
+    {
+      "label": "full-line Weyl kernel reduced to even/odd half-line sectors",
+      "kind": "external",
+      "closed": true,
+      "status": "closed",
+      "reason": "The evenness K(a,b)=K(-a,-b) and the even/odd half-line kernels are explicitly recorded.  Positivity of the full-line operator is equivalent to positivity of both parity sectors.",
+      "evidence": [
+        "rh_klm_notes.md: Kernel identities found"
+      ],
+      "blocker": null
+    },
+    {
+      "label": "normalized full-Phi Weyl/Volterra quotient Schur certificate",
+      "kind": "internal",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported quotient and bridge ledgers close positivity on ker R_global, the Douglas cross-form condition, the bounded trace-side repair, and the Moore-Penrose Schur form.",
+      "evidence": [
+        "weyl_volterra_quotient_schur_theorem.json",
+        "global_weyl_volterra_schur_bridge.json"
+      ],
+      "blocker": null
+    },
+    {
+      "label": "full-Phi source tail and continuum high-block passage",
+      "kind": "internal",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full-theta source quadrature, synchronized active range, and source-inactive high-block domination are already imported by the quotient Schur theorem.",
+      "evidence": [
+        "full_theta_source_quadrature_certificate.json",
+        "source_inactive_minmax_tail_theorem.json",
+        "high_block_exhaustion_theorem.json"
+      ],
+      "blocker": null
+    },
+    {
+      "label": "omega coverage for the original target |omega|<1/2",
+      "kind": "external",
+      "closed": true,
+      "status": "closed",
+      "reason": "The uniform omega bridge proves that the final Hardy/Green contraction is omega-independent: kappa=(1-s-u)/(1+s+u) does not depend on omega, while the branch factors are positive and uniformly integrable for |omega|<1/2.",
+      "evidence": [
+        "uniform_omega_weyl_klm_bridge.json"
+      ],
+      "blocker": null
+    },
+    {
+      "label": "repair-free primitive lift / D_q=0 theorem",
+      "kind": "external",
+      "closed": true,
+      "status": "closed",
+      "reason": "The quotient-to-original Weyl lift ledger closes this link.",
+      "evidence": [
+        "weyl_volterra_quotient_schur_theorem.json",
+        "quotient_to_original_weyl_lift_theorem.json"
+      ],
+      "blocker": null
+    },
+    {
+      "label": "original Weyl kernel positivity for all test sets",
+      "kind": "external",
+      "closed": true,
+      "status": "closed",
+      "reason": "Closed by the uniform omega bridge: the quotient-to-original lift is closed, primitive endpoint correction vanishes, and the omega-independent Green-lift contraction gives positivity for every |omega|<1/2.",
+      "evidence": [],
+      "blocker": null
+    },
+    {
+      "label": "KLM quantum positive-type condition for the original Q_omega",
+      "kind": "external",
+      "closed": true,
+      "status": "closed",
+      "reason": "Closed by the hbar=1 KLM/Weyl equivalence together with uniform original Weyl positivity.",
+      "evidence": [],
+      "blocker": null
+    },
+    {
+      "label": "implication from this KLM/Weyl positivity to the RH/de Branges target",
+      "kind": "external",
+      "closed": true,
+      "status": "closed",
+      "reason": "Closed by the augmented KLM-to-de Branges closed-cone bridge and the shifted-Xi endpoint passage.  The endpoint argument uses the diagonal de Branges inequality for every 0<omega<1/2 to exclude upper-half-plane Xi zeros by a zero-descent accumulation contradiction, then uses conjugation to exclude lower-half-plane zeros.",
+      "evidence": [
+        "rh_debranges_bridge_ledger.json",
+        "debranges_hb_endpoint_passage.json"
+      ],
+      "blocker": null
+    }
+  ],
+  "closedCount": 11,
+  "openCount": 0,
+  "blockingItems": [],
+  "nextProofTarget": null,
+  "interpretation": "The normalized full-Phi quotient Schur certificate is closed, and the basic Weyl/KLM convention and kernel algebra are documented.  The quotient-to-original lift, uniform omega coverage, original Weyl positivity, and KLM positive-type packaging are closed.  The remaining external gap is the final de Branges/RH bridge theorem."
+}

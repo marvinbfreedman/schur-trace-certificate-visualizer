@@ -1,0 +1,28 @@
+{
+  "theoremName": "Volterra tail fixed-core restriction consequence",
+  "proofClass": "symbolic identity",
+  "tailPositiveJson": "volterra_tail_positive_form_theorem.json",
+  "statement": "Restricting the nonnegative Volterra tail quadratic form to any fixed augmented trace core preserves nonnegativity.",
+  "statuses": {
+    "volterraTailPositiveInputStatus": {
+      "label": "Volterra tail positivity input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full Volterra tail theorem proves T_volt=P-M>=0."
+    },
+    "fixedCoreRestrictionStatus": {
+      "label": "fixed-core tail restriction",
+      "closed": true,
+      "status": "closed",
+      "reason": "If a quadratic form is nonnegative on a completed domain, then its restriction to any fixed finite/core subspace is nonnegative."
+    }
+  },
+  "volterraTailRestrictionNonnegativeClosed": true,
+  "fixedCoreOnly": true,
+  "proof": [
+    "Import the Volterra tail positive form theorem.",
+    "Let V_N be any fixed augmented trace core contained in the form domain.",
+    "For f in V_N, t_N(f)=T_volt(f)>=0 by the full-domain positivity."
+  ],
+  "remainingAnalyticGap": null
+}

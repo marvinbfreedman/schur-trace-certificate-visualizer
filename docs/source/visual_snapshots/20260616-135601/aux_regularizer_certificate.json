@@ -1,0 +1,60 @@
+{
+  "omega": 0.49,
+  "L": 2.0,
+  "basis": 20,
+  "constraints": 12,
+  "rank": 12,
+  "nullity": 8,
+  "positiveModes": 8,
+  "cutoff": 6,
+  "sobolevOrder": 10,
+  "lambdaMinA": 4.410511401245314e-11,
+  "lambdaMaxA": 0.1543899487639319,
+  "sobolevControl": 2.939327508629707e-10,
+  "sobolevAbsorb": 4.977232064779683e+20,
+  "sobolevRouteProduct": 146297151248.4076,
+  "sourceRangeAbsorb": 3275599.591888308,
+  "sourceRangeAbsorbFull": 2743990849413.976,
+  "sourceRangeAbsorbFrac": 1.1937356105206639e-06,
+  "sourceRangeSize": 56307.61958302531,
+  "sourceRangeSizeFull": 136328.68910081292,
+  "perSource": [
+    {
+      "t": 0.08,
+      "pStarH": -107.41740043918624,
+      "sobolevControl": 8.387881587138586e-11,
+      "sourceAbsorb": 934694.7045980463,
+      "sourceAbsorbFull": 782580379048.2869,
+      "sourceAbsorbFrac": 1.1943753378212075e-06,
+      "sourceSize": 16067.842703159009
+    },
+    {
+      "t": 0.24,
+      "pStarH": -103.17821238401122,
+      "sobolevControl": 7.744408462590049e-11,
+      "sourceAbsorb": 863025.4159728597,
+      "sourceAbsorbFull": 722848920742.2125,
+      "sourceAbsorbFrac": 1.1939222584530053e-06,
+      "sourceSize": 14835.538924531822
+    },
+    {
+      "t": 0.4,
+      "pStarH": -97.7202960613159,
+      "sobolevControl": 6.952398536990213e-11,
+      "sourceAbsorb": 774800.9569182727,
+      "sourceAbsorbFull": 649229813163.4283,
+      "sourceAbsorbFrac": 1.1934155536434597e-06,
+      "sourceSize": 13318.668138894931
+    },
+    {
+      "t": 0.52,
+      "pStarH": -93.05497666991295,
+      "sobolevControl": 6.3085864995786e-11,
+      "sourceAbsorb": 703078.5145031781,
+      "sourceAbsorbFull": 589331737216.9569,
+      "sourceAbsorbFrac": 1.1930097602131113e-06,
+      "sourceSize": 12085.56982523443
+    }
+  ],
+  "interpretation": "Full Sobolev W10 controls the residual but is not absorbable by the compact positive block. The finite source-range regularizer is the viable auxiliary object; its absorption constant is the direct high-block Schur/Douglas constant."
+}

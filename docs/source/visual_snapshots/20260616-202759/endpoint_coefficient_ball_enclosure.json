@@ -1,0 +1,57 @@
+{
+  "theoremName": "endpoint coefficient and boundary-row ball enclosure",
+  "sourceKrawczykJson": "endpoint_riccati_krawczyk_collocation.json",
+  "order": 11,
+  "stateScaling": "taylor",
+  "baseDps": 70,
+  "strictDps": 90,
+  "baseMatrixOrder": 70,
+  "strictMatrixOrder": 90,
+  "matrixRmax": 12.0,
+  "safetyFactor": 16.0,
+  "roundingOnly": true,
+  "sampleRelativeRadius": 1e-40,
+  "sampleAbsoluteRadius": 1e-45,
+  "activeIndices": [
+    3,
+    4
+  ],
+  "baseTraceFieldMinGap": 1.1635518278617991e-05,
+  "strictTraceFieldMinGap": null,
+  "baseTraceFieldMinConsecutiveCos": 0.9881718063973355,
+  "strictTraceFieldMinConsecutiveCos": null,
+  "scaledCompanionMaxDiff": 6.799784268707628e-38,
+  "leftCompanionMaxDiff": 0.0,
+  "rightCompanionMaxDiff": 0.0,
+  "boundaryRowMaxDiff": 1.280276913612685e-33,
+  "leftBoundaryRowMaxDiff": 0.0,
+  "rightBoundaryRowMaxDiff": 0.0,
+  "scaledCompanionBallRadius": 1.0879654829932205e-36,
+  "boundaryRowBallRadius": 2.048443061780296e-32,
+  "scaledCompanionCapacity": 1.2748331615480036e-09,
+  "boundaryRowCapacity": 5.804600980653483e-10,
+  "scaledCompanionRadiusOverCapacity": 8.534179340550936e-28,
+  "boundaryRowRadiusOverCapacity": 3.528998924487109e-23,
+  "scaledCompanionMaxAbs": 679.9784268707629,
+  "boundaryRowMaxAbs": 12802769.13612685,
+  "scaledCompanionEnclosureStatus": {
+    "label": "scaled companion matrix ball below Krawczyk capacity",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed when the safety-inflated refinement ball for every scaled companion entry is below the Krawczyk coefficient radius capacity."
+  },
+  "boundaryRowEnclosureStatus": {
+    "label": "active endpoint boundary-row ball below Krawczyk capacity",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed when the safety-inflated refinement ball for every active endpoint boundary row entry is below the Krawczyk boundary radius capacity."
+  },
+  "validatedKrawczykCoefficientInputStatus": {
+    "label": "validated Krawczyk coefficient input",
+    "closed": true,
+    "status": "closed",
+    "reason": "This closes the finite coefficient-input layer conditional on the stated sample/refinement ball enclosure model.  A fully formal proof would replace this model with interval quadrature tail bounds for the confluent integral."
+  },
+  "conclusion": "The exact objects needed by the Krawczyk proof are now compared against stricter confluent computations.  Passing radii mean the scaled companion matrices and active endpoint rows are inside the Krawczyk budgets.",
+  "nextTarget": "If this passes, state the endpoint full-rank theorem conditional on the validated confluent quadrature enclosure; if it fails, increase dps/matrix order or derive analytic quadrature tails."
+}

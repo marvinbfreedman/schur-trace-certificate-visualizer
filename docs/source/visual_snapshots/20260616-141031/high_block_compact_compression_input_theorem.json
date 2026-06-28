@@ -1,0 +1,44 @@
+{
+  "theoremName": "high-block compact-compression input theorem",
+  "proofClass": "symbolic identity",
+  "projectionJson": "high_block_mosco_projection_input_theorem.json",
+  "sourceCompactnessJson": "high_block_source_operator_compactness_theorem.json",
+  "abstractCompressionJson": "abstract_compact_compression_norm_consequence_theorem.json",
+  "statement": "The high-block source operator satisfies the hypotheses of the abstract compact-compression theorem, hence the compressed source operators converge in norm.",
+  "statuses": {
+    "projectionInputStatus": {
+      "label": "projection convergence input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Mosco projection convergence supplies P_N -> P strongly."
+    },
+    "sourceCompactnessInputStatus": {
+      "label": "source compactness input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The high-block source compactness theorem supplies compactness of S=E^*E."
+    },
+    "abstractCompressionInputStatus": {
+      "label": "abstract compact-compression theorem input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The abstract theorem gives ||P_NSP_N-PSP|| -> 0 once its hypotheses are met."
+    },
+    "highBlockCompactCompressionStatus": {
+      "label": "high-block compact compression",
+      "closed": true,
+      "status": "closed",
+      "reason": "The projection and compactness inputs match the abstract compression theorem."
+    }
+  },
+  "highBlockCompactCompressionClosed": true,
+  "compactCompressionNormConvergenceClosed": true,
+  "compactSourceNormConvergenceClosed": true,
+  "proof": [
+    "Identify the Hilbert space with the completed A-high-block space.",
+    "Use Mosco projection convergence for the finite closed subspaces.",
+    "Use the source-range Hardy/Green compactness theorem for S=E^*E.",
+    "Apply the abstract compact-compression theorem."
+  ],
+  "remainingAnalyticGap": null
+}

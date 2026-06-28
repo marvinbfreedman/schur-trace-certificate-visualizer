@@ -1,0 +1,312 @@
+{
+  "model": "endpoint_b",
+  "kind": "tilde3",
+  "omega": 0.49,
+  "L": 2.0,
+  "constraintRule": "ratio",
+  "constraintRatio": 0.625,
+  "rows": [
+    {
+      "basis": 12,
+      "constraints": 8,
+      "denseConstraints": 20,
+      "rank": 8,
+      "nullity": 4,
+      "positiveModes": 4,
+      "gamma2": 3.751400988508445e-05,
+      "lambdaMin": 3.985122915998644e-05,
+      "lambdaMax": 0.15438797516622305,
+      "denseTraceMax": 0.00044799601211001155,
+      "denseTraceRms": 6.128896252318956e-05,
+      "tailCutoff10": 3,
+      "tailCutoff05": 4,
+      "tails": [
+        {
+          "start": 0,
+          "constant": 3.751400988508445e-05,
+          "fraction": 1.0
+        },
+        {
+          "start": 1,
+          "constant": 2.6514600883131217e-05,
+          "fraction": 0.7067919682367362
+        },
+        {
+          "start": 2,
+          "constant": 2.4497604874950843e-05,
+          "fraction": 0.6530254950082283
+        },
+        {
+          "start": 3,
+          "constant": 1.9753777364785354e-06,
+          "fraction": 0.052657067120514475
+        },
+        {
+          "start": 4,
+          "constant": 0.0,
+          "fraction": 0.0
+        }
+      ],
+      "topModes": [
+        {
+          "mode": 2,
+          "lambda": 0.009515206779150296,
+          "singleConstant": 2.256001641482425e-05,
+          "singleFrac": 0.6013757655854887
+        },
+        {
+          "mode": 0,
+          "lambda": 3.985122915998644e-05,
+          "singleConstant": 1.2244869512876105e-05,
+          "singleFrac": 0.3264079086822616
+        },
+        {
+          "mode": 1,
+          "lambda": 0.0007460987262431642,
+          "singleConstant": 3.3745381719702255e-06,
+          "singleFrac": 0.08995407801798176
+        },
+        {
+          "mode": 3,
+          "lambda": 0.15438797516622305,
+          "singleConstant": 1.9753777364785354e-06,
+          "singleFrac": 0.052657067120514475
+        }
+      ]
+    },
+    {
+      "basis": 14,
+      "constraints": 9,
+      "denseConstraints": 23,
+      "rank": 9,
+      "nullity": 5,
+      "positiveModes": 5,
+      "gamma2": 3.724994952481239e-06,
+      "lambdaMin": 1.907883806550173e-06,
+      "lambdaMax": 0.15438986306522187,
+      "denseTraceMax": 0.001152602225050435,
+      "denseTraceRms": 0.00015185735421366996,
+      "tailCutoff10": 4,
+      "tailCutoff05": 4,
+      "tails": [
+        {
+          "start": 0,
+          "constant": 3.724994952481239e-06,
+          "fraction": 1.0
+        },
+        {
+          "start": 1,
+          "constant": 2.7067066522261055e-06,
+          "fraction": 0.7266336429323625
+        },
+        {
+          "start": 2,
+          "constant": 2.183259576460504e-06,
+          "fraction": 0.586110747614899
+        },
+        {
+          "start": 3,
+          "constant": 1.6002472722772852e-06,
+          "fraction": 0.4295971652824259
+        },
+        {
+          "start": 4,
+          "constant": 8.795604608926517e-08,
+          "fraction": 0.023612393361949976
+        },
+        {
+          "start": 5,
+          "constant": 0.0,
+          "fraction": 0.0
+        }
+      ],
+      "topModes": [
+        {
+          "mode": 0,
+          "lambda": 1.907883806550173e-06,
+          "singleConstant": 1.7096361821305105e-06,
+          "singleFrac": 0.4589633553709147
+        },
+        {
+          "mode": 3,
+          "lambda": 0.009536275455865715,
+          "singleConstant": 1.5284481790524083e-06,
+          "singleFrac": 0.4103222148084525
+        },
+        {
+          "mode": 2,
+          "lambda": 0.0007484618908355779,
+          "singleConstant": 1.0669562882815192e-06,
+          "singleFrac": 0.2864316064564903
+        },
+        {
+          "mode": 1,
+          "lambda": 5.1905743060512824e-05,
+          "singleConstant": 7.209582664698998e-07,
+          "singleFrac": 0.1935461056100668
+        }
+      ]
+    },
+    {
+      "basis": 16,
+      "constraints": 10,
+      "denseConstraints": 26,
+      "rank": 10,
+      "nullity": 6,
+      "positiveModes": 6,
+      "gamma2": 1.020331191370662e-06,
+      "lambdaMin": 4.686435916226444e-08,
+      "lambdaMax": 0.1543899451762793,
+      "denseTraceMax": 0.0012686655041548667,
+      "denseTraceRms": 0.00019712165735880476,
+      "tailCutoff10": 4,
+      "tailCutoff05": 4,
+      "tails": [
+        {
+          "start": 0,
+          "constant": 1.020331191370662e-06,
+          "fraction": 1.0
+        },
+        {
+          "start": 1,
+          "constant": 8.425160269906095e-07,
+          "fraction": 0.8257279931419282
+        },
+        {
+          "start": 2,
+          "constant": 4.5490392670261984e-07,
+          "fraction": 0.44583947893578024
+        },
+        {
+          "start": 3,
+          "constant": 1.6828188983181655e-07,
+          "fraction": 0.16492869301168286
+        },
+        {
+          "start": 4,
+          "constant": 3.899366113199094e-08,
+          "fraction": 0.03821667068670987
+        },
+        {
+          "start": 5,
+          "constant": 5.846813734453223e-09,
+          "fraction": 0.005730309711103612
+        },
+        {
+          "start": 6,
+          "constant": 0.0,
+          "fraction": 0.0
+        }
+      ],
+      "topModes": [
+        {
+          "mode": 1,
+          "lambda": 3.294719577854136e-06,
+          "singleConstant": 3.9567910963463785e-07,
+          "singleFrac": 0.3877947797548973
+        },
+        {
+          "mode": 2,
+          "lambda": 5.2327877849974863e-05,
+          "singleConstant": 2.96420100036662e-07,
+          "singleFrac": 0.290513612191416
+        },
+        {
+          "mode": 0,
+          "lambda": 4.686435916226444e-08,
+          "singleConstant": 1.881184967117309e-07,
+          "singleFrac": 0.18437003426213197
+        },
+        {
+          "mode": 3,
+          "lambda": 0.0007493928601000864,
+          "singleConstant": 1.3711465884037648e-07,
+          "singleFrac": 0.13438250246587433
+        }
+      ]
+    },
+    {
+      "basis": 18,
+      "constraints": 11,
+      "denseConstraints": 29,
+      "rank": 11,
+      "nullity": 7,
+      "positiveModes": 7,
+      "gamma2": 1.2168287311611528e-06,
+      "lambdaMin": 1.0052047510858405e-08,
+      "lambdaMax": 0.1543899343461991,
+      "denseTraceMax": 0.0007117329819028323,
+      "denseTraceRms": 0.00010038862941381584,
+      "tailCutoff10": 6,
+      "tailCutoff05": 6,
+      "tails": [
+        {
+          "start": 0,
+          "constant": 1.2168287311611528e-06,
+          "fraction": 1.0
+        },
+        {
+          "start": 1,
+          "constant": 1.216237149816795e-06,
+          "fraction": 0.9995138335172336
+        },
+        {
+          "start": 2,
+          "constant": 9.886543757548067e-07,
+          "fraction": 0.8124844116816573
+        },
+        {
+          "start": 3,
+          "constant": 4.220224553356778e-07,
+          "fraction": 0.34682157359398064
+        },
+        {
+          "start": 4,
+          "constant": 2.3285696718079682e-07,
+          "fraction": 0.19136379772903145
+        },
+        {
+          "start": 5,
+          "constant": 1.2469211617274513e-07,
+          "fraction": 0.10247302104196562
+        },
+        {
+          "start": 6,
+          "constant": 1.6676793923936883e-08,
+          "fraction": 0.013705128336362617
+        },
+        {
+          "start": 7,
+          "constant": 0.0,
+          "fraction": 0.0
+        }
+      ],
+      "topModes": [
+        {
+          "mode": 2,
+          "lambda": 3.1062737654730576e-06,
+          "singleConstant": 5.685121473575895e-07,
+          "singleFrac": 0.4672080242673836
+        },
+        {
+          "mode": 1,
+          "lambda": 4.7601143218701266e-08,
+          "singleConstant": 2.317790233513927e-07,
+          "singleFrac": 0.19047793449963885
+        },
+        {
+          "mode": 3,
+          "lambda": 5.2434921951632374e-05,
+          "singleConstant": 1.897201167366206e-07,
+          "singleFrac": 0.15591357425919844
+        },
+        {
+          "mode": 4,
+          "lambda": 0.0007494212978072687,
+          "singleConstant": 1.086963430563178e-07,
+          "singleFrac": 0.08932756128514065
+        }
+      ]
+    }
+  ]
+}

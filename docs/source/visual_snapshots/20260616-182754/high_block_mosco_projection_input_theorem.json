@@ -1,0 +1,36 @@
+{
+  "theoremName": "high-block Mosco projection input theorem",
+  "proofClass": "symbolic identity",
+  "traceFrameInputJson": "trace_frame_mosco_input_consequence_theorem.json",
+  "projectionConsequenceJson": "abstract_mosco_projection_consequence_theorem.json",
+  "statement": "The high-block trace-frame correction theorem supplies the closed-subspace recovery/closure input needed to apply the abstract Mosco projection convergence theorem.",
+  "statuses": {
+    "traceFrameMoscoInputStatus": {
+      "label": "trace-frame Mosco input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The continuum trace-frame lower bound, quadrature consistency, and bounded correction right inverse provide the model-specific high-block recovery and closed-trace compatibility input."
+    },
+    "abstractProjectionInputStatus": {
+      "label": "abstract Mosco projection theorem input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The abstract theorem converts Mosco convergence into strong projection convergence."
+    },
+    "highBlockMoscoProjectionStatus": {
+      "label": "high-block projection convergence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The high-block trace-frame input matches the abstract Mosco projection theorem."
+    }
+  },
+  "highBlockMoscoProjectionClosed": true,
+  "moscoProjectionConvergenceClosed": true,
+  "strongProjectionConvergenceClosed": true,
+  "proof": [
+    "Use the continuum trace-frame lower-bound theorem to identify the sampled closed-trace high-block spaces with the completed high block through bounded correction right inverses.",
+    "This gives the required Mosco limsup recovery and liminf closed-trace compatibility in the A-Hilbert topology.",
+    "Apply the abstract Mosco projection convergence theorem to obtain strong convergence of the A-orthogonal high-block projections."
+  ],
+  "remainingAnalyticGap": null
+}

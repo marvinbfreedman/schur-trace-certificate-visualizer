@@ -1,0 +1,83 @@
+{
+  "omega": 0.49,
+  "L": 2.0,
+  "bases": [
+    20
+  ],
+  "constraintMode": "ratio",
+  "constraintRatio": 0.625,
+  "cutoffs": [
+    4,
+    5
+  ],
+  "orders": [
+    8,
+    10
+  ],
+  "results": [
+    {
+      "basis": 20,
+      "constraints": 12,
+      "rank": 12,
+      "nullity": 8,
+      "positiveModes": 8,
+      "lambdaMinA": 4.410511401245314e-11,
+      "lambdaMaxA": 0.1543899487639319,
+      "rows": [
+        {
+          "cutoff": 4,
+          "order": 8,
+          "hardyMax": 5.225607151377246,
+          "hardyWorstT": 0.08,
+          "commutedConstant": 145820.8928058485,
+          "product": 762002.7002664567,
+          "normProduct": 872.9276603857027,
+          "sMin": 6.994919200179068,
+          "sMax": 4.1690735285698536e+16,
+          "subunit": false,
+          "emptyHighBlock": false
+        },
+        {
+          "cutoff": 4,
+          "order": 10,
+          "hardyMax": 0.0007759045511954742,
+          "hardyWorstT": 0.08,
+          "commutedConstant": 183349.69732343886,
+          "product": 142.2618646135689,
+          "normProduct": 11.927357821980896,
+          "sMin": 136123.64952337116,
+          "sMax": 4.126208981279858e+20,
+          "subunit": false,
+          "emptyHighBlock": false
+        },
+        {
+          "cutoff": 5,
+          "order": 8,
+          "hardyMax": 0.6036003736518758,
+          "hardyWorstT": 0.08,
+          "commutedConstant": 15122.199493905027,
+          "product": 9127.765264959282,
+          "normProduct": 95.53933883463546,
+          "sMin": 8.782768728305857,
+          "sMax": 1339483299106037.2,
+          "subunit": false,
+          "emptyHighBlock": false
+        },
+        {
+          "cutoff": 5,
+          "order": 10,
+          "hardyMax": 0.00013640863092845675,
+          "hardyWorstT": 0.08,
+          "commutedConstant": 4775.424441374153,
+          "product": 0.6514091101501386,
+          "normProduct": 0.8070991947401128,
+          "sMin": 138307.1827438036,
+          "sMax": 1.3408978982341388e+19,
+          "subunit": true,
+          "emptyHighBlock": false
+        }
+      ]
+    }
+  ],
+  "interpretation": "Basis-refinement scan for D_{m,M}=max_u H_{m,M}(u) C_{m,M}. Subunit rows are finite high-block domination certificates."
+}

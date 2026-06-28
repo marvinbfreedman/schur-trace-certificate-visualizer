@@ -1,0 +1,44 @@
+{
+  "theoremName": "original Weyl kernel positivity theorem",
+  "proofClass": "analytic proof",
+  "omegaRange": "|omega| < 1/2",
+  "greenClosureJson": "continuum_green_lift_closure_theorem.json",
+  "liftJson": "quotient_to_original_weyl_lift_theorem.json",
+  "statuses": {
+    "uniformOmegaBranchTransportStatus": {
+      "label": "uniform omega branch transport",
+      "closed": true,
+      "status": "closed",
+      "reason": "For |omega|<1/2, the branch factors exp(0.5 sigma omega(s+u)) are positive and locally uniformly controlled by the super-exponential theta/Phi decay in the Volterra representation."
+    },
+    "omegaIndependentHardyMultiplierStatus": {
+      "label": "omega-independent Hardy multiplier contraction",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Green-lift closure theorem gives the completed-domain contraction for the multiplier kappa=(1-s-u)/(1+s+u), which is independent of omega."
+    },
+    "quotientToOriginalLiftStatus": {
+      "label": "quotient-to-original Weyl lift",
+      "closed": true,
+      "status": "closed",
+      "reason": "The quotient-to-original Weyl lift theorem transports the normalized Volterra quotient positivity back to the original coordinate Weyl kernel and includes primitive endpoint compatibility."
+    },
+    "originalWeylPositivityStatus": {
+      "label": "original Weyl kernel positivity for |omega|<1/2",
+      "closed": true,
+      "status": "closed",
+      "reason": "Uniform branch transport, the omega-independent Green contraction, and the quotient-to-original lift give positivity of K_omega for every |omega|<1/2."
+    }
+  },
+  "uniformOmegaBranchTransportClosed": true,
+  "greenLiftContractionClosed": true,
+  "quotientToOriginalWeylLiftClosed": true,
+  "originalWeylKernelPositivityClosed": true,
+  "proof": [
+    "Use positive branch factors and theta/Phi decay for uniform omega branch transport.",
+    "Use the completed-domain Green-lift contraction for the omega-independent Hardy multiplier.",
+    "Use the quotient-to-original Weyl lift, including primitive endpoint compatibility.",
+    "Conclude original coordinate Weyl kernel positivity for every |omega|<1/2."
+  ],
+  "remainingAnalyticGap": null
+}

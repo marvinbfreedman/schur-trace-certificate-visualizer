@@ -1,0 +1,47 @@
+{
+  "theoremName": "original Weyl kernel positivity assembly theorem",
+  "proofClass": "analytic proof",
+  "omegaRange": "|omega| < 1/2",
+  "branchJson": "original_weyl_branch_weight_theorem.json",
+  "greenClosureJson": "continuum_green_lift_closure_theorem.json",
+  "quadraticIdentityJson": "original_weyl_quadratic_form_identity_theorem.json",
+  "statement": "Branch-weight positivity, the Green contraction, and the exact quadratic-form identity imply nonnegativity of the original Weyl kernel form for every |omega|<1/2.",
+  "statuses": {
+    "branchWeightInputStatus": {
+      "label": "branch-weight input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The omega branch weights preserve the sign estimates."
+    },
+    "greenContractionInputStatus": {
+      "label": "Green contraction input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Green-lift theorem supplies the multiplier contraction."
+    },
+    "quadraticFormIdentityInputStatus": {
+      "label": "quadratic-form identity input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The original Weyl form is exactly the transported normalized Volterra form."
+    },
+    "originalWeylKernelPositivityAssemblyStatus": {
+      "label": "original Weyl kernel positivity assembly",
+      "closed": true,
+      "status": "closed",
+      "reason": "The transported form is nonnegative, and the exact identity transfers that sign to original Weyl coordinates."
+    }
+  },
+  "originalWeylKernelPositivityAssemblyClosed": true,
+  "originalWeylKernelPositivityClosed": true,
+  "originalWeylFormTransportClosed": true,
+  "greenLiftContractionClosed": true,
+  "uniformOmegaBranchTransportClosed": true,
+  "proof": [
+    "Import branch-weight positivity.",
+    "Import the Green multiplier contraction.",
+    "Import the exact quadratic-form identity.",
+    "Transfer nonnegativity to the original Weyl kernel form."
+  ],
+  "remainingAnalyticGap": null
+}

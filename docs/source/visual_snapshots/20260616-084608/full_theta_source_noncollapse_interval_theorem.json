@@ -1,0 +1,75 @@
+{
+  "theoremName": "full-theta source noncollapse interval theorem",
+  "proofClass": "interval/ball certificate",
+  "sourceQuadratureConsequenceJson": "full_theta_source_quadrature_consequence_theorem.json",
+  "omega": 0.49,
+  "L": 2.0,
+  "basis": 22,
+  "fullNmax": 8,
+  "activeDimension": 2,
+  "activeEigenvaluesS8": [
+    11489025587.757864,
+    140116882778.8568
+  ],
+  "finiteActiveResponseSingularValuesS8": [
+    1206605105217492.0,
+    5.360235441045838e+17
+  ],
+  "sourceQuadratureErrorBound": 188255959.690444,
+  "omittedTailDeltaSBound": 2.5985037269540472e-22,
+  "totalContinuumErrorBound": 188255959.690444,
+  "spectralGapToComplementS8": 11489014207.3242,
+  "totalProjectorAlpha": 0.0655429460851155,
+  "finiteRankMarginS8": 1206605105217492.0,
+  "angleFactorLowerBound": 0.997849749320249,
+  "complementResponseOperatorNorm": 1.8138427095631724e+16,
+  "lowerBoundAfterContinuumAndTail": 15164652572018.725,
+  "statuses": {
+    "sourceQuadratureIntervalStatus": {
+      "label": "source Gram interval quadrature bound",
+      "closed": true,
+      "status": "closed",
+      "reason": "The imported interval envelope for d_u^2(E_u^*E_u), combined with the composite trapezoid factor, gives a nonnegative operator bound for ||S_8-S_{8,h}||."
+    },
+    "thetaTailIntervalStatus": {
+      "label": "n>=9 full-theta tail interval propagation",
+      "closed": true,
+      "status": "closed",
+      "reason": "The omitted full-theta tail contributes a nonnegative operator perturbation bound that is added to the source quadrature error before the Riesz/rank comparison."
+    },
+    "totalErrorAssemblyStatus": {
+      "label": "total continuum source error assembly",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full source perturbation bound dominates the sum of the interval source quadrature error and the theta-tail operator perturbation."
+    },
+    "rieszProjectorStabilityStatus": {
+      "label": "active Riesz projector stability",
+      "closed": true,
+      "status": "closed",
+      "reason": "The total perturbation is below one quarter of the active/complement spectral gap, equivalently alpha<1, so the active two-dimensional Riesz subspace is stable."
+    },
+    "activeResponseRankStatus": {
+      "label": "active response rank survives continuum and tail perturbation",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite active response has two positive singular values, and the interval Riesz perturbation leaves a positive lower response margin."
+    },
+    "fullThetaSourceNoncollapseStatus": {
+      "label": "full-Phi active source noncollapse",
+      "closed": true,
+      "status": "closed",
+      "reason": "The interval source quadrature bound, theta-tail bound, Riesz projector stability, and positive active response margin prove rank(LE^*|U_delta)=2 for the full-Phi source window."
+    }
+  },
+  "formalProof": [
+    "Let S_full be the full-Phi continuum source Gram operator and let S_{8,h} be the certified theta-truncated source Gram.",
+    "The interval source quadrature and n>=9 theta-tail certificates give ||S_full-S_{8,h}|| <= totalContinuumErrorBound.",
+    "Since totalContinuumErrorBound < spectralGapToComplementS8/4, the active two-dimensional Riesz spectral subspace persists.",
+    "The finite active response singular margin, after the Riesz angle loss and complement-response perturbation, remains positive: lowerBoundAfterContinuumAndTail > 0.",
+    "Therefore the full-Phi active response map has rank two, equivalently the active source map is noncollapsed on U_delta."
+  ],
+  "fullThetaSourceNoncollapseIntervalTheoremClosed": true,
+  "fullPhiContinuumSourceNoncollapsePasses": true,
+  "nextProofTarget": "Use this interval theorem as the source-rank input to the continuum trace-frame theorem."
+}

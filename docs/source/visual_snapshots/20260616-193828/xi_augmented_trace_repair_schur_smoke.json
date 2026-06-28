@@ -1,0 +1,129 @@
+{
+  "theoremName": "augmented Mellin-boundary trace repair Schur certificate",
+  "kind": "tilde3",
+  "omega": 0.49,
+  "L": 8.0,
+  "basis": 8,
+  "constraints": 5,
+  "lambdaRows": 5,
+  "muRows": 10,
+  "augmentedRows": 15,
+  "oldLambdaRepair": {
+    "rank": 5,
+    "nullity": 3,
+    "rankTolerance": 6.09219157766776e-22,
+    "kMin": 9.281808381493063e-05,
+    "kMax": 0.25566881117773765,
+    "aMin": 0.004058760297109705,
+    "aMax": 0.19010217934853488,
+    "crossNorm": 0.1004023877951962,
+    "rangeResidual": 0.0,
+    "normalizedRangeResidual": 0.0,
+    "schurDefectMin": -0.04155701036758074,
+    "schurDefectMax": -0.00011799958114416256,
+    "repairAlpha": 1e-18,
+    "constructedSchurMin": 0.00011799958114416355,
+    "constructedSchurMax": 0.04155701036758075,
+    "dMin": 1e-18,
+    "dMax": 1e-18,
+    "pMin": 9.281808381504887e-05,
+    "pMax": 0.25566881117773765,
+    "lowK": [
+      9.281808381493063e-05,
+      0.0005325800192897704,
+      0.0015168053160525136,
+      0.004473941292646037,
+      0.011894471194300706,
+      0.0313240216498747
+    ],
+    "lowA": [
+      0.004058760297109705,
+      0.04857863532671496,
+      0.19010217934853488
+    ],
+    "lowSchurDefect": [
+      -0.04155701036758074,
+      -0.009130143753853532,
+      -0.002410125676576669,
+      -0.0006564801793046954,
+      -0.00011799958114416256
+    ],
+    "lowP": [
+      9.281808381504887e-05,
+      0.0005325800192902136,
+      0.0015168053160525474,
+      0.0044739412926460475,
+      0.01189447119430071,
+      0.0313240216498747
+    ],
+    "lowD": [
+      1e-18,
+      1e-18,
+      1e-18,
+      1e-18,
+      1e-18
+    ],
+    "positiveRepair": true
+  },
+  "augmentedRepair": {
+    "rank": 8,
+    "nullity": 0,
+    "rankTolerance": 6.092204213163252e-22,
+    "kMin": 9.281808381493063e-05,
+    "kMax": 0.25566881117773765,
+    "aMin": 0.0,
+    "aMax": 0.0,
+    "crossNorm": 0.0,
+    "rangeResidual": 0.0,
+    "normalizedRangeResidual": 0.0,
+    "schurDefectMin": -0.25566881117773765,
+    "schurDefectMax": -9.281808381493063e-05,
+    "repairAlpha": 1e-18,
+    "constructedSchurMin": 9.281808381493163e-05,
+    "constructedSchurMax": 0.25566881117773765,
+    "dMin": -4.069286027643852e-59,
+    "dMax": 1e-18,
+    "pMin": 9.281808381504887e-05,
+    "pMax": 0.25566881117773765,
+    "lowK": [
+      9.281808381493063e-05,
+      0.0005325800192897704,
+      0.0015168053160525136,
+      0.004473941292646037,
+      0.011894471194300706,
+      0.0313240216498747
+    ],
+    "lowA": [],
+    "lowSchurDefect": [
+      -0.25566881117773765,
+      -0.08309052410879333,
+      -0.0313240216498747,
+      -0.011894471194300706,
+      -0.004473941292646037,
+      -0.0015168053160525136
+    ],
+    "lowP": [
+      9.281808381504887e-05,
+      0.0005325800192902136,
+      0.0015168053160525474,
+      0.0044739412926460475,
+      0.01189447119430071,
+      0.0313240216498747
+    ],
+    "lowD": [
+      -4.069286027643852e-59,
+      -2.1241733759495403e-59,
+      -1.472615192325003e-59,
+      1.0294178586435173e-60,
+      1.2456643821777493e-59,
+      1.8945870255926194e-59
+    ],
+    "positiveRepair": true
+  },
+  "oldMuActionOnLambdaNullspace": 0.6131467983768496,
+  "augmentedMuActionOnAugmentedNullspace": 0.0,
+  "augmentedRepairPositive": true,
+  "augmentedMuAnnihilated": true,
+  "diagnosis": "Finite Schur repair with R_aug=(Lambda,Mu).  If P=K+R_aug^*D R_aug is positive and D>=0 while Mu vanishes on ker R_aug, the augmented repair is finite-positive; the remaining task is the continuum closure/positivity proof.",
+  "nextProofTarget": "Lift the finite augmented repair to the continuum: prove the Mu_z primitive rows are closed trace functionals, D_aug>=0 is bounded in the transported trace norm, and K+R_aug^*D_aug R_aug remains positive under Galerkin exhaustion."
+}

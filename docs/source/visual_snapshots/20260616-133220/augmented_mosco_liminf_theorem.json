@@ -1,0 +1,37 @@
+{
+  "theoremName": "augmented Mosco liminf theorem",
+  "proofClass": "analytic proof",
+  "coreDensityJson": "augmented_core_density_theorem.json",
+  "greenClosureJson": "continuum_green_lift_closure_theorem.json",
+  "statement": "Every sequence from finite augmented graph spaces with uniformly bounded graph energy has a weakly convergent graph-form subsequence in V, and closed graph forms are weakly lower semicontinuous along that subsequence.",
+  "statuses": {
+    "coreDensityInputStatus": {
+      "label": "core density input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite sections live in the dense smooth/Galerkin core of V."
+    },
+    "greenClosureInputStatus": {
+      "label": "completed Hilbert graph space input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Green closure theorem supplies the completed Hilbert graph norm and continuous feature forms."
+    },
+    "moscoLiminfStatus": {
+      "label": "Mosco liminf compactness",
+      "closed": true,
+      "status": "closed",
+      "reason": "Bounded graph-energy sequences are bounded in the Hilbert space V; reflexivity gives weak subsequential limits and closed convex quadratic forms are lower semicontinuous."
+    }
+  },
+  "moscoLiminfClosed": true,
+  "weakGraphCompactnessClosed": true,
+  "graphFormLowerSemicontinuityClosed": true,
+  "proof": [
+    "Use the completed graph norm from the Green closure theorem.",
+    "Bounded repaired/graph energy gives boundedness in Hilbert space V.",
+    "Use Hilbert reflexivity for weak subsequential compactness.",
+    "Use closed convex quadratic-form lower semicontinuity for liminf."
+  ],
+  "remainingAnalyticGap": null
+}

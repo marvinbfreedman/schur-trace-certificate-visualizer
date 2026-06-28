@@ -1,0 +1,23 @@
+{
+  "theoremName": "original Weyl positive-operator family consequence theorem",
+  "proofClass": "symbolic identity",
+  "operatorFamilySource": "original Weyl positive-operator family theorem",
+  "omegaRange": "|omega| < 1/2",
+  "normalization": "hbar=1 Weyl convention",
+  "statuses": {
+    "weylOperatorFamilyStatus": {
+      "label": "positive Weyl operator family",
+      "closed": true,
+      "status": "closed",
+      "reason": "The imported operator-family theorem proves Op^W(sigma_omega)>=0 for every |omega|<1/2."
+    }
+  },
+  "originalWeylOperatorFamilyClosed": true,
+  "originalWeylOperatorPositiveClosed": true,
+  "originalWeylKernelPositivityClosed": true,
+  "proof": [
+    "Import the original Weyl positive-operator family theorem.",
+    "Expose only the hbar=1 positive Weyl operator family consumed by the KLM bridge."
+  ],
+  "remainingAnalyticGap": null
+}

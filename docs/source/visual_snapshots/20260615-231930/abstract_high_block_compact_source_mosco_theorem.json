@@ -1,0 +1,36 @@
+{
+  "theoremName": "abstract high-block compact-source Mosco theorem",
+  "proofClass": "abstract functional analytic lemma",
+  "statement": "Mosco convergence of closed A-Hilbert subspaces plus compactness of the source operator implies source-operator norm convergence, Riesz spectral projection convergence, and min-max tail passage.",
+  "statuses": {
+    "moscoProjectionConvergencePrincipleStatus": {
+      "label": "Mosco projection convergence principle",
+      "closed": true,
+      "status": "closed",
+      "reason": "Mosco convergence of closed Hilbert subspaces is equivalent to strong convergence of their orthogonal projections."
+    },
+    "compactSourceNormConvergencePrincipleStatus": {
+      "label": "compact source norm convergence principle",
+      "closed": true,
+      "status": "closed",
+      "reason": "If Pi_N -> Pi strongly and S is compact, then ||Pi_N S Pi_N-Pi S Pi|| tends to zero in operator norm."
+    },
+    "spectralMinmaxPassagePrincipleStatus": {
+      "label": "spectral min-max passage principle",
+      "closed": true,
+      "status": "closed",
+      "reason": "Norm convergence of compact self-adjoint positive operators implies convergence of isolated spectral projections and Courant-Fischer min-max quantities."
+    }
+  },
+  "abstractHighBlockCompactSourceMoscoClosed": true,
+  "moscoProjectionConvergenceClosed": true,
+  "compactSourceNormConvergenceClosed": true,
+  "spectralMinmaxPassageClosed": true,
+  "noModelSpecificInputClaimed": true,
+  "proof": [
+    "Use the Hilbert-space equivalence between Mosco convergence of closed subspaces and strong convergence of orthogonal projections.",
+    "Approximate the compact source operator by finite-rank operators to upgrade strong projection convergence to operator-norm convergence after compression.",
+    "Apply standard norm-resolvent/Riesz projection perturbation and Courant-Fischer min-max continuity for compact positive operators."
+  ],
+  "remainingAnalyticGap": null
+}

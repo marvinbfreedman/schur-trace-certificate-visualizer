@@ -1,0 +1,28 @@
+{
+  "theoremName": "de Branges/Hermite-Biehler endpoint passage consequence theorem",
+  "proofClass": "symbolic identity",
+  "statuses": {
+    "endpointPassageConsequenceStatus": {
+      "label": "shifted-Xi de Branges endpoint consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The shifted-Xi de Branges kernel positivity theorem and the zero-descent endpoint passage imply the RH-side zero-location conclusion in the z-normalization."
+    }
+  },
+  "endpointPassageClosed": true,
+  "conditionalRhClosed": true,
+  "rhSideZeroLocationClosed": true,
+  "normalization": {
+    "Xi": "Xi(z)=xi(1/2+i z), real entire",
+    "Eomega": "E_omega(z)=Xi(z+i omega)",
+    "EomegaSharp": "E_omega#(z)=Xi(z-i omega)",
+    "omegaRange": "0<omega<1/2",
+    "kernel": "K_E(w,z)=(E(z)conj(E(w))-E#(z)conj(E#(w)))/(2*pi*i*(conj(w)-z))"
+  },
+  "proof": [
+    "Import the detailed de Branges/Hermite-Biehler endpoint passage.",
+    "Export only the terminal endpoint and RH-side zero-location consequences needed by the external audit."
+  ],
+  "remainingAnalyticGap": null,
+  "nextProofTarget": null
+}

@@ -1,0 +1,42 @@
+{
+  "theoremName": "augmented repair null-fiber compatibility theorem",
+  "proofClass": "symbolic identity with interval/ball certificate inputs",
+  "finiteConsequenceJson": "xi_augmented_finite_schur_repair_consequence_theorem.json",
+  "traceQuotientJson": "augmented_trace_quotient_compatibility_consequence_theorem.json",
+  "statement": "The augmented repair forms are compatible with the finite null fibers and hence with the transported trace quotient relation.",
+  "statuses": {
+    "finiteMuNullFiberInputStatus": {
+      "label": "finite Mu null-fiber input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite Schur consequence proves Mu annihilates ker R_aug,N."
+    },
+    "finiteSchurRangeInputStatus": {
+      "label": "finite Schur range input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite Schur range condition makes the repair depend only on augmented trace coordinates."
+    },
+    "traceQuotientCompatibilityInputStatus": {
+      "label": "trace quotient compatibility input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The quotient compatibility theorem identifies finite trace equivalence with X_aug."
+    },
+    "repairNullFiberCompatibilityStatus": {
+      "label": "repair null-fiber compatibility",
+      "closed": true,
+      "status": "closed",
+      "reason": "On the finite cores the repair vanishes on trace-null directions; quotient compatibility transports the same representative independence to X_aug."
+    }
+  },
+  "repairNullFiberCompatibilityClosed": true,
+  "finiteRepairNullFiberCompatibilityClosed": true,
+  "transportedRepairRepresentativeIndependenceClosed": true,
+  "proof": [
+    "Import finite Mu annihilation and Schur range compatibility.",
+    "Those finite identities say the repair value is unchanged by adding a vector in ker R_aug,N.",
+    "Use trace quotient compatibility to pass representative independence to the transported trace quotient."
+  ],
+  "remainingAnalyticGap": null
+}

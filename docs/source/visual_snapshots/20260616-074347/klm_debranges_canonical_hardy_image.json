@@ -1,0 +1,122 @@
+{
+  "theoremName": "canonical Hardy image of shifted-Xi de Branges kernel",
+  "omega": 0.49,
+  "xiQuadrature": {
+    "tmax": 8.0,
+    "intervals": 1200
+  },
+  "rmax": 40.0,
+  "zNodes": [
+    {
+      "real": 0.0,
+      "imag": 0.35
+    },
+    {
+      "real": 0.45,
+      "imag": 0.4
+    },
+    {
+      "real": 0.95,
+      "imag": 0.55
+    },
+    {
+      "real": 1.55,
+      "imag": 0.75
+    },
+    {
+      "real": 2.25,
+      "imag": 0.95
+    }
+  ],
+  "formula": {
+    "Eplus": "E_omega(z)=Xi(z+i omega)",
+    "Eminus": "E_omega#(z)=Xi(z-i omega)",
+    "hPlus": "(2*pi)^(-1/2) E_omega(z) exp(i z r), r>=0",
+    "hMinus": "(2*pi)^(-1/2) E_omega#(z) exp(i z r), r>=0",
+    "kernelIdentity": "K_E(w,z)=<h_z^+,h_w^+>-<h_z^-,h_w^->",
+    "halfLineIntegral": "int_0^infty exp(i(z-conj(w))r)dr=1/(i(conj(w)-z))"
+  },
+  "directKernelStats": {
+    "frobenius": 0.008549621932844437,
+    "eigenMin": 1.95598994571432e-12,
+    "eigenMax": 0.008549615777960637,
+    "eigenvalues": [
+      1.95598994571432e-12,
+      1.9559899457811394e-12,
+      2.8947918035399742e-12,
+      2.894791803854784e-12,
+      1.080089615321874e-08,
+      1.0800896153219692e-08,
+      1.0258835436208966e-05,
+      1.0258835436208969e-05,
+      0.008549615777960635,
+      0.008549615777960637
+    ]
+  },
+  "plusBranchStats": {
+    "frobenius": 0.1519257323392501,
+    "eigenMin": 0.00013983873646790496,
+    "eigenMax": 0.14846549586302157,
+    "eigenvalues": [
+      0.00013983873646790496,
+      0.00013983873646790558,
+      0.001175377714782707,
+      0.0011753777147827074,
+      0.006569410598859952,
+      0.006569410598859953,
+      0.03154150379585025,
+      0.03154150379585029,
+      0.14846549586302146,
+      0.14846549586302157
+    ]
+  },
+  "minusBranchStats": {
+    "frobenius": 0.145268454299407,
+    "eigenMin": 0.00013126634253831753,
+    "eigenMax": 0.14202953322359782,
+    "eigenvalues": [
+      0.00013126634253831753,
+      0.00013126634253831954,
+      0.0011108835777784115,
+      0.0011108835777784117,
+      0.00621647082605583,
+      0.006216470826055831,
+      0.02984358731986806,
+      0.029843587319868067,
+      0.14202953322359776,
+      0.14202953322359782
+    ]
+  },
+  "hardyBranchContraction": {
+    "available": true,
+    "plusEigenCutoff": 0.0,
+    "resolvedRank": 5,
+    "maxGeneralizedEigenvalue": 0.9999999999996788,
+    "minGeneralizedEigenvalue": 0.7612087818302057,
+    "eigenvalues": [
+      0.7612087818302057,
+      0.7612087818302063,
+      0.9982835161182477,
+      0.9982835161182482,
+      0.9999966591027046,
+      0.9999966591027062,
+      0.9999999981731462,
+      0.9999999981731469,
+      0.999999999999678,
+      0.9999999999996788
+    ],
+    "sampleContractionHolds": true,
+    "sampleMargin": 3.211875210240578e-13
+  },
+  "hardyExactErrorFrobenius": 1.3510034353512654e-17,
+  "hardyExactRelativeError": 1.5801908504997367e-15,
+  "hardyTruncatedErrorFrobenius": 1.271876746781166e-15,
+  "hardyTruncatedRelativeError": 1.4876409235069132e-13,
+  "canonicalHardyImageClosed": true,
+  "directKlmPullbackClosed": false,
+  "closedPositiveConeLimitStatus": {
+    "closed": false,
+    "reducedTo": "Identify h_z^+ and h_z^- with the completed Weyl/Volterra/KLM positive and negative branch features, or prove they are strong limits of KLM pullback features.  Then the already proved branch contraction gives K_E >= 0 by closed-cone closure."
+  },
+  "nextProofTarget": "Construct a unitary or isometric transport U from the Hardy branch features h_z^\u00b1 to the Volterra/KLM branch features G_\u00b1, and prove U h_z^- = C K E U h_z^+ on the closed evaluation span."
+}

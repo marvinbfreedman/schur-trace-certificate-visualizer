@@ -1,0 +1,38 @@
+{
+  "theoremName": "publication quotient-to-original Weyl lift theorem",
+  "quotientJson": "weyl_volterra_quotient_schur_theorem.json",
+  "transportJson": "quotient_original_transport_identity_theorem.json",
+  "primitiveEndpointJson": "quotient_primitive_endpoint_input_theorem.json",
+  "statuses": {
+    "transportIdentityStatus": {
+      "label": "quotient/original transport identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The transport identity theorem supplies parity, primitive, Volterra, and closure transport."
+    },
+    "quotientSchurStatus": {
+      "label": "normalized quotient Schur positivity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The imported Weyl/Volterra quotient Schur theorem proves the nonnegative closed quotient form in the normalized full-Phi Volterra model."
+    },
+    "primitiveEndpointCompatibilityStatus": {
+      "label": "primitive endpoint compatibility",
+      "closed": true,
+      "status": "closed",
+      "reason": "The primitive endpoint compatibility theorem proves that the endpoint compatibility condition needed by the quotient lift."
+    }
+  },
+  "formalProof": [
+    "Import the quotient/original transport identity theorem.",
+    "Import the normalized quotient Schur positivity theorem.",
+    "Import the primitive endpoint compatibility input theorem.",
+    "Assemble the original Weyl positivity lift from those three inputs."
+  ],
+  "proofClass": "symbolic identity",
+  "quotientToOriginalWeylLiftTheoremClosed": true,
+  "quotientToOriginalWeylLiftClosed": true,
+  "originalWeylKernelPositivityTransportClosed": true,
+  "numericalEvidenceRole": "Finite approximation diagnostics in older detailed lift ledgers are audit evidence only; this theorem uses the closed quotient Schur and primitive endpoint compatibility theorems as analytic inputs.",
+  "nextProofTarget": "Use this theorem as the lift input for the uniform omega Weyl/KLM bridge."
+}

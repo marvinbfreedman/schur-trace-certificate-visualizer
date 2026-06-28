@@ -1,0 +1,66 @@
+{
+  "theoremName": "boundary-repair identity",
+  "quotientJson": "weyl_volterra_quotient_schur_theorem.json",
+  "liftJson": "quotient_to_original_weyl_lift.json",
+  "normalizedSchurCertificateClosed": true,
+  "conditionalQuotientLiftClosed": true,
+  "primitiveVanishingFalse": true,
+  "primitiveVanishingRouteStatus": {
+    "label": "primitive-vanishing route is false",
+    "closed": true,
+    "status": "closed",
+    "reason": "For any active a, Lambda_a is a nonzero order-eight jet functional.  By the elementary jet-extension lemma, choose a compactly supported smooth primitive F with prescribed jet j_a^8 F and Lambda_a(F) != 0.  Then f=F' is an original compact smooth test with zero total integral, while its primitive F is not in ker R_global.",
+    "blocker": null
+  },
+  "alternativeAResolutionStatus": {
+    "label": "alternative A cannot be proved",
+    "closed": true,
+    "status": "closed",
+    "reason": "Alternative (A) asserts primitive original tests satisfy R_global F=0.  The jet-extension proof above gives a compact smooth primitive F with Lambda_a(F) != 0 for some active a.  Thus (A) is false, not merely unproved.",
+    "blocker": null
+  },
+  "abstractRepairNonuniquenessStatus": {
+    "label": "abstract quotient repair is nonunique",
+    "closed": true,
+    "status": "closed",
+    "reason": "If Q=P-R^*DR with P>=0 and D>=0, then for every positive trace operator T, Q=(P+R^*TR)-R^*(D+T)R.  Therefore the abstract S from the quotient theorem is not canonical and cannot be identified with the original Weyl boundary contribution without a separate Green/Lagrange boundary calculation.",
+    "blocker": null
+  },
+  "alternativeBAsStatedStatus": {
+    "label": "alternative B as stated is not well-defined",
+    "closed": true,
+    "status": "closed",
+    "reason": "Alternative (B) asks for the repair with 'the same S from the quotient Schur theorem.'  But the quotient theorem supplies a nonunique repair family: D can be replaced by D+T for any T>=0 if the positive part P is also replaced by P+R^*TR.  Therefore there is no distinguished 'same S' until the Weyl/Volterra Green identity constructs a canonical boundary operator D_bdy.",
+    "blocker": null
+  },
+  "canonicalBoundaryFormStatus": {
+    "label": "canonical Weyl/Volterra boundary form constructed",
+    "closed": false,
+    "status": "open",
+    "reason": "The current notes contain the Lagrange concomitant identity D_s B_P[h,f]=h P f-f P^*h and source-row constructions, but they do not yet assemble the original primitive Weyl form into a positive interior term plus a canonical trace quadratic form B_bdy(RF).",
+    "blocker": "Derive the exact primitive Weyl Green identity and isolate the boundary quadratic form B_bdy on the completed trace range."
+  },
+  "canonicalEqualsQuotientRepairStatus": {
+    "label": "canonical boundary form equals an admissible quotient repair",
+    "closed": false,
+    "status": "open",
+    "reason": "Even after B_bdy is constructed, one must prove B_bdy(RF)=||S R_global F||^2 for an S that is compatible with the Douglas/Moore-Penrose repair in the quotient Schur theorem, or at least B_bdy >= S^*S on the trace range.",
+    "blocker": "Compare the canonical boundary operator D_bdy with the quotient repair operator D_q=(Gamma^*Gamma-C)_+ on the transported trace range; prove equality or domination."
+  },
+  "boundaryRepairIdentityStatus": {
+    "label": "boundary-repair identity",
+    "closed": false,
+    "status": "open",
+    "reason": "The identity original Weyl form = Q_Phi(F)+||S R_global F||^2 is not closed.  The primitive-vanishing alternative is false, and the abstract quotient repair is nonunique.  The remaining work is to construct the canonical boundary form and identify it with an admissible quotient repair.",
+    "blocker": "Construct D_bdy from the exact Weyl/Volterra Green identity and prove D_bdy = D_q, or D_bdy >= D_q, on the completed trace range."
+  },
+  "boundaryRepairIdentityClosed": false,
+  "proofOfPrimitiveVanishingFailure": [
+    "For active a, the defect row e(a) is nonzero, hence Lambda_a is a nonzero continuous linear functional on the finite jet space J_a^8.",
+    "Choose a jet v with <e(a),v> != 0.  By the compactly supported jet-extension lemma, there is F in C_c^infty with j_a^8F=v.",
+    "Then f=F' is an admissible compact smooth original test with primitive F, but (R_global F)(a)=Lambda_a(F) != 0.  Therefore primitive original tests are not contained in ker R_global."
+  ],
+  "nonuniquenessProof": "Given any valid repair Q=P-R^*DR and any bounded T>=0 on the trace range, set P_T=P+R^*TR and D_T=D+T.  Then P_T>=0, D_T>=0, and Q=P_T-R^*D_T R.  Hence the abstract quotient repair is a family, not a canonical boundary term.",
+  "requestedAlternativesConclusion": "Neither requested alternative can be proved as stated: (A) is false, and (B) is not well-defined until a canonical boundary repair D_bdy is derived.  The corrected provable target is D_bdy = D_q, or the weaker sufficient comparison D_bdy >= D_q, on the completed trace range.",
+  "nextProofTarget": "Construct D_bdy from the exact Weyl/Volterra Green identity and prove D_bdy = D_q, or D_bdy >= D_q, on the completed trace range."
+}

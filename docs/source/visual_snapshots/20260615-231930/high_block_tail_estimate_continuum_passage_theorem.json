@@ -1,0 +1,53 @@
+{
+  "theoremName": "high-block tail estimate continuum passage theorem",
+  "proofClass": "analytic proof",
+  "activeJson": "synchronized_active_range_interval_theorem.json",
+  "tailConstantsJson": "source_inactive_tail_constants_theorem.json",
+  "traceFrameJson": "continuum_trace_frame_lower_bound_theorem.json",
+  "abstractMoscoJson": "abstract_high_block_compact_source_mosco_theorem.json",
+  "normalizedEpsilonDelta": 0.0013454526382754603,
+  "finiteLowMidSchurBudget": 0.005730309711103612,
+  "absorptionSlack": 0.004384857072828152,
+  "statuses": {
+    "activeRangeInputStatus": {
+      "label": "active range input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The active range theorem gives R_global f=0 => P_active Ehat f=0."
+    },
+    "inactiveCertifiedModelInputStatus": {
+      "label": "inactive certified source model input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The certified source model supplies the source-inactive tail constant and verifies it is absorbable by the finite low/mid Schur budget."
+    },
+    "traceFrameCorrectionInputStatus": {
+      "label": "trace-frame correction input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The continuum trace-frame theorem supplies the positive frame floor, quadrature consistency, and bounded sampled trace correction right inverses."
+    },
+    "abstractMoscoCompactSourceInputStatus": {
+      "label": "abstract Mosco compact-source input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The abstract theorem converts Mosco subspace convergence and compactness into source operator norm convergence and min-max passage."
+    },
+    "highBlockTailEstimateContinuumPassageStatus": {
+      "label": "high-block tail estimate passes to continuum",
+      "closed": true,
+      "status": "closed",
+      "reason": "The active/inactive source split, certified finite tail constant, trace-frame correction theorem, and abstract compact-source Mosco passage give the continuum high-block source-inactive tail estimate."
+    }
+  },
+  "highBlockTailEstimateContinuumPassageClosed": true,
+  "tailEstimatePassesToContinuum": true,
+  "conditionalHighBlockExhaustionClosed": true,
+  "proof": [
+    "Use active range inclusion to remove the active source component on ker R_global.",
+    "Use the certified inactive-tail constants and low/mid absorption budget in the finite source model.",
+    "Use the continuum trace-frame theorem to correct Galerkin approximants into the sampled closed-trace high blocks.",
+    "Use the abstract Mosco/compact-source theorem to pass source operator norm and min-max tail estimates to the continuum."
+  ],
+  "remainingAnalyticGap": null
+}

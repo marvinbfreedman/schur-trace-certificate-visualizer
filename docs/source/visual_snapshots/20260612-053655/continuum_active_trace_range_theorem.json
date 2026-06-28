@@ -1,0 +1,394 @@
+{
+  "theoremName": "continuum active trace range compatibility",
+  "activeRangeJson": "global_trace_active_range_inclusion.json",
+  "frameJson": "trace_frame_continuum_passage_certificate.json",
+  "quadratureJson": "trace_quadrature_stability_certificate.json",
+  "highBlockJson": "high_block_exhaustion_theorem.json",
+  "endpointRangeJson": "adjoint_green_endpoint_range_theorem.json",
+  "uniqueContinuationJson": "closed_trace_active_unique_continuation_theorem.json",
+  "hilbertAnnihilatorRangeCriterionStatus": {
+    "label": "Hilbert annihilator range criterion",
+    "closed": true,
+    "status": "closed",
+    "reason": "For a densely defined closed trace map R between Hilbert spaces, closure Ran(R^*)=(ker R)^perp.  Hence E_active factors through the interval trace iff ker R is annihilated by E_active."
+  },
+  "finiteActiveBlockFactorizationStatus": {
+    "label": "finite active block factorization",
+    "closed": true,
+    "status": "closed",
+    "reason": "Current Galerkin active blocks satisfy E_active=C_sample R_global to roundoff.  This is finite evidence for, not proof of, the continuum annihilator condition."
+  },
+  "compactnessContradictionReductionStatus": {
+    "label": "compactness contradiction reduction",
+    "closed": true,
+    "status": "closed",
+    "reason": "Failure of ker R subset ker E_active is equivalent to an A-normalized sequence with R f_n -> 0 and active source bounded below.  The high-block elliptic/Mosco theorem is the compactness mechanism needed to pass such a sequence to a continuum limit."
+  },
+  "closedTraceActiveUniqueContinuationStatus": {
+    "label": "closed-trace active unique continuation",
+    "closed": false,
+    "status": "open",
+    "reason": "Closed if the exact Green annihilation implication is available for every scalar active source row.  The remaining open part is endpoint/Fredholm compatibility in the continuum exact Green BVP."
+  },
+  "continuumActiveTraceRangeCompatibilityStatus": {
+    "label": "continuum active trace range compatibility",
+    "closed": false,
+    "status": "open",
+    "reason": "Open until the compactness/Mosco passage and the closed-trace active unique-continuation lemma are proved."
+  },
+  "endpointFredholmCompatibilityFromActiveRangeStatus": {
+    "label": "endpoint Fredholm compatibility from active range",
+    "closed": false,
+    "status": "open",
+    "reason": "Once E_active lies in closure Ran(R^*), the endpoint vector b(d_u) annihilates ker(M^T), so b(d_u) lies in Range(M).  The endpoint Fredholm theorem then supplies z=-M^+b(d_u)."
+  },
+  "activeRangeEvidence": {
+    "rows": 1,
+    "ranksMatch": true,
+    "maxRangeResidualRelative": 2.2573105615124823e-69,
+    "maxCoefficientOperator": 201.41472755309704,
+    "source": "finite active block factorization E_active=C_sample R_global"
+  },
+  "frameContinuumPassageEvidence": {
+    "rowCount": 5,
+    "observedGammaFloor": 293.11515100909196,
+    "allFrameMinsPositive": true,
+    "maxRangeResidualRelative": 1.0928484787969945e-63,
+    "maxDensityOperator": 1687.1679168172072,
+    "conditionalConclusion": "If the Galerkin active spaces converge in the A graph norm, trace quadrature converges uniformly on the limiting active space, and liminf gamma_N is bounded below by the observed positive frame floor (or any positive analytic lower bound), then the continuum observability inequality holds with that lower bound."
+  },
+  "quadratureStabilityEvidence": {
+    "inputs": [
+      "trace_weighted_frame_basis_scan.json",
+      "trace_weighted_frame_basis22.json"
+    ],
+    "groups": [
+      {
+        "basis": 18,
+        "traceCounts": [
+          9,
+          13
+        ],
+        "activeDims": [
+          2
+        ],
+        "rows": [
+          {
+            "traceCount": 9,
+            "frameMin": 299.0945772131482,
+            "frameMax": 2834244.7046404444,
+            "densityOperator": 946.7270450343125,
+            "maxRowDensityL2": 334.66544339575955,
+            "rangeResidualRelative": 1.5314595026687327e-69
+          },
+          {
+            "traceCount": 13,
+            "frameMin": 293.11515100909196,
+            "frameMax": 2823933.1576196826,
+            "densityOperator": 955.1857996305145,
+            "maxRowDensityL2": 337.65662101012276,
+            "rangeResidualRelative": 2.875685188887882e-69
+          }
+        ],
+        "firstToLastRelativeChanges": {
+          "frameMin": -0.019991757322283577,
+          "frameMax": -0.003638199271883229,
+          "densityOperator": 0.008934734293869673,
+          "maxRowDensityL2": 0.008937814385651955
+        }
+      },
+      {
+        "basis": 20,
+        "traceCounts": [
+          9,
+          13
+        ],
+        "activeDims": [
+          2
+        ],
+        "rows": [
+          {
+            "traceCount": 9,
+            "frameMin": 7525.005560646706,
+            "frameMax": 3926243825.301133,
+            "densityOperator": 1683.3147955881116,
+            "maxRowDensityL2": 593.3539236716426,
+            "rangeResidualRelative": 5.037264219254215e-67
+          },
+          {
+            "traceCount": 13,
+            "frameMin": 7489.958402092469,
+            "frameMax": 3852080954.7772365,
+            "densityOperator": 1687.1679168172072,
+            "maxRowDensityL2": 594.7121799054543,
+            "rangeResidualRelative": 1.9848898048612863e-67
+          }
+        ],
+        "firstToLastRelativeChanges": {
+          "frameMin": -0.004657426266569348,
+          "frameMax": -0.018889012966027036,
+          "densityOperator": 0.0022890081161257097,
+          "maxRowDensityL2": 0.00228911646089203
+        }
+      },
+      {
+        "basis": 22,
+        "traceCounts": [
+          9
+        ],
+        "activeDims": [
+          3
+        ],
+        "rows": [
+          {
+            "traceCount": 9,
+            "frameMin": 2874982.3289243444,
+            "frameMax": 1664014566934922.8,
+            "densityOperator": 317.0151504613038,
+            "maxRowDensityL2": 111.54097096526432,
+            "rangeResidualRelative": 1.0928484787969945e-63
+          }
+        ],
+        "firstToLastRelativeChanges": null
+      }
+    ],
+    "comparableBasisCount": 2,
+    "maxAbsFrameMinRelativeDrift": 0.019991757322283577,
+    "maxAbsMaxRowDensityL2RelativeDrift": 0.008937814385651955,
+    "interpretation": "For bases with multiple trace counts, this measures stability of the weighted trace frame under trace mesh refinement.  This is a finite diagnostic for uniform quadrature convergence on the active subspaces."
+  },
+  "highBlockExhaustionTheorem": {
+    "tailEstimatePassesToContinuum": false,
+    "conditionalTailEstimatePassage": true,
+    "ellipticTraceStatus": {
+      "label": "commuted Sturm/Volterra elliptic estimate",
+      "closed": false,
+      "status": "open",
+      "reason": "Prove the continuum source-range Hardy/Green estimate directly from the closed-trace Green identity and source-window coefficient bounds."
+    },
+    "moscoLimsupStatus": {
+      "label": "Mosco limsup/recovery sequence",
+      "closed": false,
+      "status": "open",
+      "reason": "Requires A-graph dense Galerkin recovery inside the sampled closed-trace spaces with low/mid modes removed."
+    },
+    "moscoLiminfStatus": {
+      "label": "Mosco liminf/compactness",
+      "closed": false,
+      "status": "open",
+      "reason": "Requires A-bounded Galerkin sequences with R_N f_N -> 0 to have closed-trace continuum limits after the high-block elliptic bound."
+    },
+    "sourceOperatorNormConvergenceStatus": {
+      "label": "source operator norm convergence",
+      "closed": false,
+      "status": "open",
+      "reason": "Formally follows once the direct source-row Green representers are constructed uniformly and the Galerkin spaces converge in the A graph norm."
+    }
+  },
+  "closedTraceActiveUniqueContinuationTheorem": {
+    "volterraSturmLagrangeIdentityStatus": {
+      "label": "Volterra/Sturm Lagrange identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "Green's formula D_a B_P[K,f]=K Lambda_a(f)-f P^*K is verified symbolically for the moving trace operator."
+    },
+    "distributionalInteriorGreenSourceStatus": {
+      "label": "distributional interior Green source",
+      "closed": true,
+      "status": "closed",
+      "reason": "The exact jump matrix represents each local source row as the singular part of P^*K at s0."
+    },
+    "exactEndpointFredholmReductionStatus": {
+      "label": "exact endpoint Fredholm reduction",
+      "closed": true,
+      "status": "closed",
+      "reason": "After the jump is fixed, the exact fundamental matrix gives P_delta Beta_z=M z+b(d), solvable iff b(d) lies in Range(M)."
+    },
+    "formalGreenAnnihilationImplicationStatus": {
+      "label": "formal Green annihilation implication",
+      "closed": true,
+      "status": "closed",
+      "reason": "If the endpoint Fredholm compatibility is satisfied for an active source row, the resulting Green coefficient gives ell(f)=int_I K(a)Lambda_a(f) da, so closed trace implies ell(f)=0."
+    },
+    "finiteOffBaseDerivativeRankUCStatus": {
+      "label": "finite off-base derivative-rank UC",
+      "closed": true,
+      "status": "closed",
+      "reason": "Full rank of the off-base derivative response matrix proves the finite active unique-continuation implication on Galerkin active blocks."
+    },
+    "sourceSideResponseNoncollapseStatus": {
+      "label": "source-side response noncollapse",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Riesz-projector rank certificate proves noncollapse of the selected off-base derivative response on the certified source active plane."
+    },
+    "endpointCompatibilityForActiveRowsStatus": {
+      "label": "endpoint compatibility for active source rows",
+      "closed": false,
+      "status": "open",
+      "reason": "Closed either by rigorous full active row rank of M, which makes ker(M^*) trivial, or by combining the Green pairing formula with the Volterra/Sturm primal obstruction annihilation theorem."
+    },
+    "closedTraceActiveUniqueContinuationStatus": {
+      "label": "closed-trace active unique continuation",
+      "closed": false,
+      "status": "open",
+      "reason": "Closed if the exact Green annihilation implication is available for every scalar active source row.  The remaining open part is endpoint/Fredholm compatibility in the continuum exact Green BVP."
+    },
+    "closedTraceActiveUniqueContinuationClosed": false,
+    "remainingAnalyticGap": "Build a stable validated endpoint-flow solver that encloses the exact fundamental matrix Phi(a,s0) and endpoint rows with Frobenius endpoint-map radius below the rank margin."
+  },
+  "endpointRangeTheorem": {
+    "theoremName": "exact adjoint Green endpoint range theorem",
+    "endpointSelectionJson": "adjoint_green_endpoint_selection.json",
+    "jumpJson": "adjoint_green_jump_conditions.json",
+    "activeRangeJson": "global_trace_active_range_inclusion.json",
+    "continuumActiveRangeJson": "continuum_active_trace_range_theorem.json",
+    "exactFundamentalMatrixEndpointMapStatus": {
+      "label": "exact fundamental-matrix endpoint map",
+      "closed": true,
+      "status": "closed",
+      "reason": "For analytic coefficients with nonzero leading coefficient, P^*K=0 has a unique fundamental matrix Phi(a,t), and the endpoint concomitant is exactly Pi_delta Beta_z=Mz+b(d)."
+    },
+    "endpointFredholmRangeAlternativeStatus": {
+      "label": "endpoint Fredholm range alternative",
+      "closed": true,
+      "status": "closed",
+      "reason": "The exact endpoint equation Mz=-b(d) is solvable iff b(d) is orthogonal to ker(M^T); the minimum-norm solution is z=-M^+b(d)."
+    },
+    "uniformTraceDualBoundFromCompactnessStatus": {
+      "label": "uniform trace-dual bound from compactness",
+      "closed": true,
+      "status": "closed",
+      "reason": "If rank M is constant, b(d_u) lies in Range(M), and d_u is continuous on the compact source window, then ||M^+b(d_u)|| and the trace-dual norm of the piecewise homogeneous Green solution are uniformly bounded."
+    },
+    "finiteEndpointCompatibilityEvidenceStatus": {
+      "label": "finite endpoint compatibility evidence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The sampled-flow diagnostic has rank one on the two active modes, but the actual endpoint right-hand sides lie in its range and are killed by the Moore-Penrose z choice."
+    },
+    "continuumActiveRangeCompatibilityStatus": {
+      "label": "continuum active range compatibility",
+      "closed": false,
+      "status": "open",
+      "reason": "Open until the compactness/Mosco passage and the closed-trace active unique-continuation lemma are proved."
+    },
+    "exactEndpointReductionClosed": true,
+    "unconditionalContinuumEndpointClosed": false,
+    "finiteEndpointEvidence": {
+      "source": "sampled-flow diagnostic, not the continuum definition",
+      "activeDim": 2,
+      "endpointMapRank": 1,
+      "endpointMapGramEigenvalues": [
+        7704285951341.06,
+        5.4067419733088444e+51
+      ],
+      "endpointMapRankThreshold": 5.406741973308844e+25,
+      "endpointMapFrobenius": 7.353055129202313e+25,
+      "flowLeftFrobenius": 1.188781293335011e+29,
+      "flowRightFrobenius": 4325523736.791256,
+      "maxEndpointResidualNorm": 4.904278671755176e-27,
+      "maxSelectedZNorm": 2.791429837949141,
+      "actualEndpointRhsInRange": {
+        "label": "actual endpoint RHS in Range(M)",
+        "closed": true,
+        "status": "closed",
+        "reason": "For the actual source rows, the endpoint vectors b(d) are in the finite endpoint-map range."
+      },
+      "activeEndpointKilled": {
+        "label": "active endpoint concomitant killed",
+        "closed": true,
+        "status": "closed",
+        "reason": "Minimum-norm z solves Mz=-b(d) on the active two-dimensional source space."
+      },
+      "uniformTraceDualBoundClosed": {
+        "label": "uniform trace-dual bound",
+        "closed": false,
+        "status": "open",
+        "reason": "Still needs a rigorous continuum bound for the exact fundamental matrix and M^+ over the source window."
+      }
+    },
+    "finiteActiveRangeEvidence": {
+      "source": "finite active range inclusion certificate",
+      "rows": 1,
+      "allRanksMatch": true,
+      "maxRangeResidualRelative": 2.2573105615124823e-69,
+      "interpretation": "Finite evidence for the continuum compatibility condition b(d_u) in Range(M)."
+    },
+    "continuumActiveRangeTheorem": {
+      "hilbertAnnihilatorRangeCriterionStatus": {
+        "label": "Hilbert annihilator range criterion",
+        "closed": true,
+        "status": "closed",
+        "reason": "For a densely defined closed trace map R between Hilbert spaces, closure Ran(R^*)=(ker R)^perp.  Hence E_active factors through the interval trace iff ker R is annihilated by E_active."
+      },
+      "finiteActiveBlockFactorizationStatus": {
+        "label": "finite active block factorization",
+        "closed": true,
+        "status": "closed",
+        "reason": "Current Galerkin active blocks satisfy E_active=C_sample R_global to roundoff.  This is finite evidence for, not proof of, the continuum annihilator condition."
+      },
+      "compactnessContradictionReductionStatus": {
+        "label": "compactness contradiction reduction",
+        "closed": true,
+        "status": "closed",
+        "reason": "Failure of ker R subset ker E_active is equivalent to an A-normalized sequence with R f_n -> 0 and active source bounded below.  The high-block elliptic/Mosco theorem is the compactness mechanism needed to pass such a sequence to a continuum limit."
+      },
+      "closedTraceActiveUniqueContinuationStatus": {
+        "label": "closed-trace active unique continuation",
+        "closed": false,
+        "status": "open",
+        "reason": "Closed if the exact Green annihilation implication is available for every scalar active source row.  The remaining open part is endpoint/Fredholm compatibility in the continuum exact Green BVP."
+      },
+      "continuumActiveTraceRangeCompatibilityStatus": {
+        "label": "continuum active trace range compatibility",
+        "closed": false,
+        "status": "open",
+        "reason": "Open until the compactness/Mosco passage and the closed-trace active unique-continuation lemma are proved."
+      }
+    },
+    "jumpConditionEvidence": {
+      "interiorSourceSolved": true,
+      "jumpMatrixInvertible": true,
+      "maxJumpSolveResidual": 0.0,
+      "maxJumpNorm": 24129022.585577942
+    },
+    "definitions": {
+      "state": "Y=(K,K',...,K^(7))^T",
+      "fundamentalMatrix": "d/da Phi(a,t)=A(a)Phi(a,t), Phi(t,t)=I",
+      "piecewiseGreen": "Y_-(a)=Phi(a,s0)z, Y_+(a)=Phi(a,s0)(z+Delta(d))",
+      "endpointMap": "Pi_delta Beta_z=M z+b(d)",
+      "compatibility": "b(d) in Range(M), equivalently ker(M^T) annihilates b(d)",
+      "solution": "z(d)=-M^+b(d) for the minimum-norm endpoint choice"
+    },
+    "traceDualBoundFormula": [
+      "C_Delta = sup_u ||Delta(d_u)|| <= ||J^-1|| sup_u ||rhs(d_u)||.",
+      "C_b <= ||Pi_delta E_+|| ||Phi(a_+,s0)|| C_Delta.",
+      "C_z <= ||M^+|| C_b on the compatible source family.",
+      "sup_a ||Y(a)|| <= C_Phi (C_z + C_Delta).",
+      "The endpoint trace-dual norm is bounded by the endpoint Sobolev trace constant times sup_a ||Y(a)|| and coefficient sup norms."
+    ],
+    "formalProof": [
+      "Write P^*K=sum_{m=0}^8 c_m(a)K^(m) with c_8 nonzero on I. The first-order system Y'=A(a)Y has an exact fundamental matrix Phi by the standard linear ODE theorem.",
+      "The distributional source law fixes the jump Delta(d).  Thus the only remaining degrees of freedom are the eight entries of z=Y(s0-).",
+      "The Lagrange concomitant is bilinear in the endpoint jets of K and f.  After restricting f to the active source space and substituting the exact endpoint states, it becomes Mz+b(d).",
+      "Solvability of Mz=-b(d) is the finite-dimensional Fredholm alternative.  The Moore-Penrose solution gives the canonical choice and the sharp bound ||z||<=||M^+|| ||b(d)||.",
+      "For the actual source family d=d_u, continuity in u and compactness of the source window turn the pointwise bound into a uniform trace-dual bound, once the compatibility b(d_u) in Range(M) is supplied by the active trace range theorem."
+    ],
+    "interpretation": "The sampled ODE endpoint map has been demoted to finite evidence. The proof now uses the exact fundamental matrix and a precise range/compactness theorem.  The remaining global dependency is active trace range compatibility, not endpoint ODE sampling."
+  },
+  "exactEquivalences": [
+    "E_active in closure Ran(R^*) iff ker R subset ker E_active.",
+    "Failure iff there are f_n with ||f_n||_A=1, ||R f_n|| -> 0, and ||E_active f_n|| >= delta.",
+    "If compactness gives f_n -> f locally and R f_n -> 0, then Lambda_a(f)=0 on I.",
+    "The remaining unique-continuation lemma must show the same limit has E_active f=0, contradicting the lower active source bound."
+  ],
+  "formalProof": [
+    "Let R:H_A->L^2(I) be the closed interval trace operator and let E_active:H_A->U_delta be the active source map.",
+    "By the closed-range/annihilator identity, a bounded active source row factors through R precisely when it vanishes on ker R.",
+    "If vanishing fails, normalize a sequence in the bad set.  The commuted Sturm elliptic estimate plus Mosco high-block exhaustion is the compactness engine producing a nonzero closed-trace limit.",
+    "The trace limit satisfies Lambda_a(f)=0 on the whole active interval.  The remaining analytic input is unique continuation in the Volterra/Sturm branch that forces the active source row of such a limit to vanish.",
+    "That contradiction gives ker R subset ker E_active.  Hence E_active is in closure Ran(R^*), giving the continuum trace-to-source representation and the endpoint Fredholm compatibility b(d_u) in Range(M)."
+  ],
+  "remainingAnalyticGap": "Build a stable validated endpoint-flow solver that encloses the exact fundamental matrix Phi(a,s0) and endpoint rows with Frobenius endpoint-map radius below the rank margin."
+}

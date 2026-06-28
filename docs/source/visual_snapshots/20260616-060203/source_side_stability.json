@@ -1,0 +1,226 @@
+{
+  "omega": 0.49,
+  "L": 2.0,
+  "s0": 0.2825,
+  "point": 0.545,
+  "orders": [
+    7,
+    8
+  ],
+  "bases": [
+    18,
+    20,
+    22,
+    24
+  ],
+  "activeTol": 1e-06,
+  "lambda0AtS0": -0.00012862612661029079,
+  "lambda1AtS0": 9.42101395763874e-06,
+  "gapAtS0": 0.00013804714056792953,
+  "lambdaDerivativesAtS0": [
+    -0.00012862612661029079,
+    0.0012586353561607226,
+    -0.010569790654668558,
+    0.08131470927283976,
+    -0.48480406794895253,
+    0.3262134539749114,
+    33.05440359008409,
+    -172.53886154243878,
+    -11867.497399991053,
+    225121.96880967333,
+    3735520.511510404,
+    -308912314.588315,
+    3399472962.8393655,
+    369400519027.39575,
+    -16726614828278.037,
+    -133545146978831.05,
+    5.480905836994158e+16
+  ],
+  "rows": [
+    {
+      "basis": 18,
+      "sourceSideDim": 18,
+      "activeDim": 2,
+      "activeFloor": 18285.13540177335,
+      "sourceTop": 18285135401.77335,
+      "activeSourceEigenvalues": [
+        226461.95322692656,
+        18285135401.77335
+      ],
+      "normalizedActiveEigenvalues": [
+        1.2385030148858706e-05,
+        1.0
+      ],
+      "responseColumnNorms": [
+        5326300100029986.0,
+        1.2930735102401603e+18
+      ],
+      "responseNormalizedMinSingularValue": 0.5526780369411572
+    },
+    {
+      "basis": 20,
+      "sourceSideDim": 18,
+      "activeDim": 2,
+      "activeFloor": 350955.40150085674,
+      "sourceTop": 350955401500.85675,
+      "activeSourceEigenvalues": [
+        8128880.388973607,
+        350955401500.85675
+      ],
+      "normalizedActiveEigenvalues": [
+        2.3162146398689242e-05,
+        1.0
+      ],
+      "responseColumnNorms": [
+        3.3123462397148037e+18,
+        2.1792184654581523e+21
+      ],
+      "responseNormalizedMinSingularValue": 0.002852926559754717
+    },
+    {
+      "basis": 22,
+      "sourceSideDim": 18,
+      "activeDim": 2,
+      "activeFloor": 3661655.9399730274,
+      "sourceTop": 3661655939973.0273,
+      "activeSourceEigenvalues": [
+        274587561456.9068,
+        3661655939973.0273
+      ],
+      "normalizedActiveEigenvalues": [
+        0.07498999522574737,
+        1.0
+      ],
+      "responseColumnNorms": [
+        1.9024386771067628e+23,
+        7.545477292370536e+23
+      ],
+      "responseNormalizedMinSingularValue": 0.0031970980488948567
+    },
+    {
+      "basis": 24,
+      "sourceSideDim": 18,
+      "activeDim": 2,
+      "activeFloor": 9315123458837.074,
+      "sourceTop": 9.315123458837074e+18,
+      "activeSourceEigenvalues": [
+        2.029688362787111e+16,
+        9.315123458837074e+18
+      ],
+      "normalizedActiveEigenvalues": [
+        0.0021789172969699996,
+        1.0
+      ],
+      "responseColumnNorms": [
+        5.662481996147887e+27,
+        1.719742289488143e+31
+      ],
+      "responseNormalizedMinSingularValue": 0.06451730039469201
+    }
+  ],
+  "comparisons": [
+    {
+      "leftBasis": 18,
+      "rightBasis": 20,
+      "normalizedOperatorDiff": 0.019212517339337164,
+      "activeSubspace": {
+        "singularValues": [
+          0.999996003867681,
+          0.9999999999999342
+        ],
+        "minCosine": 0.999996003867681,
+        "projectionGap": 0.002827056538000523,
+        "polarAlpha": 0.0028270593623277553
+      },
+      "responseColumns": {
+        "permutation": [
+          1,
+          0
+        ],
+        "signs": [
+          1,
+          -1
+        ],
+        "signedDots": [
+          0.9989682910236065,
+          -0.7292693258190283
+        ],
+        "columnDistances": [
+          0.045424860514777635,
+          0.7358405726527611
+        ],
+        "maxColumnDistance": 0.7358405726527611,
+        "frobeniusDistance": 0.7372413216272745
+      }
+    },
+    {
+      "leftBasis": 20,
+      "rightBasis": 22,
+      "normalizedOperatorDiff": 0.28152723221724785,
+      "activeSubspace": {
+        "singularValues": [
+          0.9998879290901262,
+          0.9999999999278801
+        ],
+        "minCosine": 0.9998879290901262,
+        "projectionGap": 0.014970947193105075,
+        "polarAlpha": 0.014971366662652433
+      },
+      "responseColumns": {
+        "permutation": [
+          1,
+          0
+        ],
+        "signs": [
+          -1,
+          1
+        ],
+        "signedDots": [
+          -0.9963037202063941,
+          0.996261791571061
+        ],
+        "columnDistances": [
+          0.08597999527338719,
+          0.08646627584138304
+        ],
+        "maxColumnDistance": 0.08646627584138304,
+        "frobeniusDistance": 0.12193841250848654
+      }
+    },
+    {
+      "leftBasis": 22,
+      "rightBasis": 24,
+      "normalizedOperatorDiff": 0.9872033277672388,
+      "activeSubspace": {
+        "singularValues": [
+          0.9999659237188994,
+          0.9999999964141365
+        ],
+        "minCosine": 0.9999659237188994,
+        "projectionGap": 0.008255386181661524,
+        "polarAlpha": 0.008255456510775264
+      },
+      "responseColumns": {
+        "permutation": [
+          1,
+          0
+        ],
+        "signs": [
+          1,
+          -1
+        ],
+        "signedDots": [
+          0.9984701862030216,
+          -0.989924667911344
+        ],
+        "columnDistances": [
+          0.05531390054910995,
+          0.1419530351113071
+        ],
+        "maxColumnDistance": 0.1419530351113071,
+        "frobeniusDistance": 0.1523492427656561
+      }
+    }
+  ],
+  "interpretation": "This is the fixed-source-space stability diagnostic for the continuum theorem rank(LE^*|U_delta)=2.  The operator difference and active-subspace gap measure whether EE^* is stabilizing on the source side."
+}

@@ -1,0 +1,482 @@
+{
+  "omega": 0.49,
+  "L": 2.0,
+  "s0": 0.2825,
+  "bases": [
+    18,
+    20,
+    22,
+    24
+  ],
+  "points": [
+    0.348125,
+    0.545
+  ],
+  "maxDeriv": 8,
+  "rankTol": 1e-26,
+  "minBestSingularValueNormalized": 0.0028529276366790297,
+  "allBestPointsFullRank": true,
+  "rows": [
+    {
+      "basis": 18,
+      "activeDim": 2,
+      "activeTol": 1e-06,
+      "activeFloor": 18285.13540177335,
+      "activeSourceEigenvalues": [
+        226461.95322692656,
+        18285135401.77335
+      ],
+      "lambda0AtS0": -0.00012862612661029079,
+      "lambda1AtS0": 9.42101395763874e-06,
+      "gapAtS0": 0.00013804714056792953,
+      "lambdaDerivativesAtS0": [
+        -0.00012862612661029079,
+        0.0012586353561607226,
+        -0.010569790654668558,
+        0.08131470927283976,
+        -0.48480406794895253,
+        0.3262134539749114,
+        33.05440359008409,
+        -172.53886154243878,
+        -11867.497399991053,
+        225121.96880967333,
+        3735520.511510404,
+        -308912314.588315,
+        3399472962.8393655,
+        369400519027.39575,
+        -16726614828278.037,
+        -133545146978831.05,
+        5.480905836994158e+16
+      ],
+      "points": [
+        {
+          "point": 0.348125,
+          "activeDim": 2,
+          "rankNormalized": 2,
+          "fullRank": true,
+          "minSingularValueNormalized": 0.00035371473527111253,
+          "columnNorms": [
+            31488485255.312767,
+            259133692832.6449
+          ],
+          "rawGramEigenvalues": [
+            244497267201652.8,
+            6.8141795220260334e+22
+          ],
+          "normalizedGramEigenvalues": [
+            1.2511411394791323e-07,
+            1.999999874885886
+          ],
+          "bestNormalizedDerivativeMinor": {
+            "derivativeOrders": [
+              7,
+              8
+            ],
+            "determinant": 0.000500092455557465,
+            "absDeterminant": 0.000500092455557465
+          }
+        },
+        {
+          "point": 0.545,
+          "activeDim": 2,
+          "rankNormalized": 2,
+          "fullRank": true,
+          "minSingularValueNormalized": 0.5526784636940486,
+          "columnNorms": [
+            11192523642398.486,
+            9562562364178.3
+          ],
+          "rawGramEigenvalues": [
+            3.2120651506188283e+25,
+            1.845945329482601e+26
+          ],
+          "normalizedGramEigenvalues": [
+            0.3054534842312138,
+            1.6945465157687862
+          ],
+          "bestNormalizedDerivativeMinor": {
+            "derivativeOrders": [
+              7,
+              8
+            ],
+            "determinant": 0.719447065849795,
+            "absDeterminant": 0.719447065849795
+          }
+        }
+      ],
+      "bestPoint": {
+        "point": 0.545,
+        "activeDim": 2,
+        "rankNormalized": 2,
+        "fullRank": true,
+        "minSingularValueNormalized": 0.5526784636940486,
+        "columnNorms": [
+          11192523642398.486,
+          9562562364178.3
+        ],
+        "rawGramEigenvalues": [
+          3.2120651506188283e+25,
+          1.845945329482601e+26
+        ],
+        "normalizedGramEigenvalues": [
+          0.3054534842312138,
+          1.6945465157687862
+        ],
+        "bestNormalizedDerivativeMinor": {
+          "derivativeOrders": [
+            7,
+            8
+          ],
+          "determinant": 0.719447065849795,
+          "absDeterminant": 0.719447065849795
+        }
+      }
+    },
+    {
+      "basis": 20,
+      "activeDim": 2,
+      "activeTol": 1e-06,
+      "activeFloor": 350955.40150085674,
+      "activeSourceEigenvalues": [
+        8128880.388973607,
+        350955401500.85675
+      ],
+      "lambda0AtS0": -0.00012862612661029079,
+      "lambda1AtS0": 9.42101395763874e-06,
+      "gapAtS0": 0.00013804714056792953,
+      "lambdaDerivativesAtS0": [
+        -0.00012862612661029079,
+        0.0012586353561607226,
+        -0.010569790654668558,
+        0.08131470927283976,
+        -0.48480406794895253,
+        0.3262134539749114,
+        33.05440359008409,
+        -172.53886154243878,
+        -11867.497399991053,
+        225121.96880967333,
+        3735520.511510404,
+        -308912314.588315,
+        3399472962.8393655,
+        369400519027.39575,
+        -16726614828278.037,
+        -133545146978831.05,
+        5.480905836994158e+16
+      ],
+      "points": [
+        {
+          "point": 0.348125,
+          "activeDim": 2,
+          "rankNormalized": 2,
+          "fullRank": true,
+          "minSingularValueNormalized": 0.0002628069838207998,
+          "columnNorms": [
+            294235229091.9344,
+            930251334017.8698
+          ],
+          "rawGramEigenvalues": [
+            1.0871345123890686e+16,
+            9.519419036094642e+23
+          ],
+          "normalizedGramEigenvalues": [
+            6.906751074498613e-08,
+            1.9999999309324892
+          ],
+          "bestNormalizedDerivativeMinor": {
+            "derivativeOrders": [
+              7,
+              8
+            ],
+            "determinant": 0.000371579269518691,
+            "absDeterminant": 0.000371579269518691
+          }
+        },
+        {
+          "point": 0.545,
+          "activeDim": 2,
+          "rankNormalized": 2,
+          "fullRank": true,
+          "minSingularValueNormalized": 0.0028529276366790297,
+          "columnNorms": [
+            1161770555832171.8,
+            3678534298112655.5
+          ],
+          "rawGramEigenvalues": [
+            1.9978324380379083e+25,
+            1.488130542846538e+31
+          ],
+          "normalizedGramEigenvalues": [
+            8.139196100126993e-06,
+            1.9999918608038998
+          ],
+          "bestNormalizedDerivativeMinor": {
+            "derivativeOrders": [
+              7,
+              8
+            ],
+            "determinant": 0.004034639133427284,
+            "absDeterminant": 0.004034639133427284
+          }
+        }
+      ],
+      "bestPoint": {
+        "point": 0.545,
+        "activeDim": 2,
+        "rankNormalized": 2,
+        "fullRank": true,
+        "minSingularValueNormalized": 0.0028529276366790297,
+        "columnNorms": [
+          1161770555832171.8,
+          3678534298112655.5
+        ],
+        "rawGramEigenvalues": [
+          1.9978324380379083e+25,
+          1.488130542846538e+31
+        ],
+        "normalizedGramEigenvalues": [
+          8.139196100126993e-06,
+          1.9999918608038998
+        ],
+        "bestNormalizedDerivativeMinor": {
+          "derivativeOrders": [
+            7,
+            8
+          ],
+          "determinant": 0.004034639133427284,
+          "absDeterminant": 0.004034639133427284
+        }
+      }
+    },
+    {
+      "basis": 22,
+      "activeDim": 2,
+      "activeTol": 1e-06,
+      "activeFloor": 3661655.9399730274,
+      "activeSourceEigenvalues": [
+        274587561456.9068,
+        3661655939973.0273
+      ],
+      "lambda0AtS0": -0.00012862612661029079,
+      "lambda1AtS0": 9.42101395763874e-06,
+      "gapAtS0": 0.00013804714056792953,
+      "lambdaDerivativesAtS0": [
+        -0.00012862612661029079,
+        0.0012586353561607226,
+        -0.010569790654668558,
+        0.08131470927283976,
+        -0.48480406794895253,
+        0.3262134539749114,
+        33.05440359008409,
+        -172.53886154243878,
+        -11867.497399991053,
+        225121.96880967333,
+        3735520.511510404,
+        -308912314.588315,
+        3399472962.8393655,
+        369400519027.39575,
+        -16726614828278.037,
+        -133545146978831.05,
+        5.480905836994158e+16
+      ],
+      "points": [
+        {
+          "point": 0.348125,
+          "activeDim": 2,
+          "rankNormalized": 2,
+          "fullRank": true,
+          "minSingularValueNormalized": 0.10107808143507584,
+          "columnNorms": [
+            12946037792742.363,
+            11341893585645.006
+          ],
+          "rawGramEigenvalues": [
+            1.4869921228087426e+24,
+            2.9475145251640016e+26
+          ],
+          "normalizedGramEigenvalues": [
+            0.010216778546595823,
+            1.9897832214534041
+          ],
+          "bestNormalizedDerivativeMinor": {
+            "derivativeOrders": [
+              6,
+              8
+            ],
+            "determinant": 0.14123628178972353,
+            "absDeterminant": 0.14123628178972353
+          }
+        },
+        {
+          "point": 0.545,
+          "activeDim": 2,
+          "rankNormalized": 2,
+          "fullRank": true,
+          "minSingularValueNormalized": 0.003197098417573381,
+          "columnNorms": [
+            3.630531768133512e+17,
+            3.9431922711831443e+17
+          ],
+          "rawGramEigenvalues": [
+            1.4583102160605478e+30,
+            2.872938037592352e+35
+          ],
+          "normalizedGramEigenvalues": [
+            1.0221438291650216e-05,
+            1.9999897785617085
+          ],
+          "bestNormalizedDerivativeMinor": {
+            "derivativeOrders": [
+              7,
+              8
+            ],
+            "determinant": -0.0045213677701321335,
+            "absDeterminant": 0.0045213677701321335
+          }
+        }
+      ],
+      "bestPoint": {
+        "point": 0.348125,
+        "activeDim": 2,
+        "rankNormalized": 2,
+        "fullRank": true,
+        "minSingularValueNormalized": 0.10107808143507584,
+        "columnNorms": [
+          12946037792742.363,
+          11341893585645.006
+        ],
+        "rawGramEigenvalues": [
+          1.4869921228087426e+24,
+          2.9475145251640016e+26
+        ],
+        "normalizedGramEigenvalues": [
+          0.010216778546595823,
+          1.9897832214534041
+        ],
+        "bestNormalizedDerivativeMinor": {
+          "derivativeOrders": [
+            6,
+            8
+          ],
+          "determinant": 0.14123628178972353,
+          "absDeterminant": 0.14123628178972353
+        }
+      }
+    },
+    {
+      "basis": 24,
+      "activeDim": 2,
+      "activeTol": 1e-06,
+      "activeFloor": 9315123458837.074,
+      "activeSourceEigenvalues": [
+        2.029688362787111e+16,
+        9.315123458837074e+18
+      ],
+      "lambda0AtS0": -0.00012862612661029079,
+      "lambda1AtS0": 9.42101395763874e-06,
+      "gapAtS0": 0.00013804714056792953,
+      "lambdaDerivativesAtS0": [
+        -0.00012862612661029079,
+        0.0012586353561607226,
+        -0.010569790654668558,
+        0.08131470927283976,
+        -0.48480406794895253,
+        0.3262134539749114,
+        33.05440359008409,
+        -172.53886154243878,
+        -11867.497399991053,
+        225121.96880967333,
+        3735520.511510404,
+        -308912314.588315,
+        3399472962.8393655,
+        369400519027.39575,
+        -16726614828278.037,
+        -133545146978831.05,
+        5.480905836994158e+16
+      ],
+      "points": [
+        {
+          "point": 0.348125,
+          "activeDim": 2,
+          "rankNormalized": 2,
+          "fullRank": true,
+          "minSingularValueNormalized": 0.008591544565707498,
+          "columnNorms": [
+            9.577090146135064e+17,
+            3.4057878954975465e+19
+          ],
+          "rawGramEigenvalues": [
+            1.3529457583618555e+32,
+            1.1608561901738568e+39
+          ],
+          "normalizedGramEigenvalues": [
+            7.381463802453802e-05,
+            1.9999261853619754
+          ],
+          "bestNormalizedDerivativeMinor": {
+            "derivativeOrders": [
+              7,
+              8
+            ],
+            "determinant": -0.01209744546681507,
+            "absDeterminant": 0.01209744546681507
+          }
+        },
+        {
+          "point": 0.545,
+          "activeDim": 2,
+          "rankNormalized": 2,
+          "fullRank": true,
+          "minSingularValueNormalized": 0.0645175323881854,
+          "columnNorms": [
+            3.974588335225821e+19,
+            5.634677611490035e+21
+          ],
+          "rawGramEigenvalues": [
+            1.3123314936872795e+37,
+            3.175115839735557e+43
+          ],
+          "normalizedGramEigenvalues": [
+            0.004162511985460553,
+            1.9958374880145395
+          ],
+          "bestNormalizedDerivativeMinor": {
+            "derivativeOrders": [
+              7,
+              8
+            ],
+            "determinant": 0.09114624219781511,
+            "absDeterminant": 0.09114624219781511
+          }
+        }
+      ],
+      "bestPoint": {
+        "point": 0.545,
+        "activeDim": 2,
+        "rankNormalized": 2,
+        "fullRank": true,
+        "minSingularValueNormalized": 0.0645175323881854,
+        "columnNorms": [
+          3.974588335225821e+19,
+          5.634677611490035e+21
+        ],
+        "rawGramEigenvalues": [
+          1.3123314936872795e+37,
+          3.175115839735557e+43
+        ],
+        "normalizedGramEigenvalues": [
+          0.004162511985460553,
+          1.9958374880145395
+        ],
+        "bestNormalizedDerivativeMinor": {
+          "derivativeOrders": [
+            7,
+            8
+          ],
+          "determinant": 0.09114624219781511,
+          "absDeterminant": 0.09114624219781511
+        }
+      }
+    }
+  ],
+  "interpretation": "Stable full derivative rank at off-base points is the finite Galerkin shadow of active unique continuation.  The continuum proof must show that these confluent derivative matrices converge on the spectral active spaces in the A-graph norm."
+}

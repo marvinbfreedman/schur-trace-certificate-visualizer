@@ -1,0 +1,34 @@
+{
+  "theoremName": "original Weyl positive-operator family theorem",
+  "proofClass": "symbolic identity",
+  "omegaRange": "|omega| < 1/2",
+  "normalization": "hbar=1 Weyl convention",
+  "kernelToOperatorJson": "original_weyl_kernel_to_operator_identity_theorem.json",
+  "legacyInputs": {
+    "originalWeylKernelJson": null
+  },
+  "statuses": {
+    "kernelToOperatorIdentityInputStatus": {
+      "label": "kernel-to-operator identity input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The imported identity theorem converts original Weyl kernel positivity into positive Weyl operators."
+    },
+    "weylOperatorFamilyStatus": {
+      "label": "positive Weyl operator family",
+      "closed": true,
+      "status": "closed",
+      "reason": "In the same Weyl normalization, positivity of the coordinate kernel quadratic form is the statement that Op^W(sigma_omega) is positive semidefinite for every |omega|<1/2."
+    }
+  },
+  "originalWeylOperatorFamilyClosed": true,
+  "originalWeylOperatorPositiveClosed": true,
+  "originalWeylKernelPositivityClosed": true,
+  "proof": [
+    "Import original coordinate Weyl kernel positivity for every |omega|<1/2.",
+    "Import the kernel-to-operator identity in the fixed hbar=1 Weyl convention.",
+    "Expose only this Weyl positive-operator family to the KLM packaging theorem."
+  ],
+  "notClaimedHere": "This theorem does not prove KLM positive type.  It only supplies the positive Weyl operator family consumed by the hbar=1 KLM/Weyl equivalence layer.",
+  "remainingAnalyticGap": null
+}

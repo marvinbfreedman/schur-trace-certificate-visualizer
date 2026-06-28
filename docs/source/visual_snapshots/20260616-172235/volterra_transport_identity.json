@@ -1,0 +1,106 @@
+{
+  "theoremName": "Volterra signed-feature transport identity",
+  "exactBranchIdentity": "N_sigma = 2 sigma partial_omega M_sigma",
+  "finiteRangeIdentity": "H_minus = T H_plus on the Green-minimizer trace image",
+  "statuses": {
+    "omegaTransportIdentityStatus": {
+      "label": "branch omega-transport identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "Numerically verifies the exact calculus identity N_sigma=2 sigma partial_omega M_sigma by centered omega differences with fixed Green-minimizer coefficients."
+    },
+    "finiteRangeTransportStatus": {
+      "label": "finite range map H_minus=T H_plus",
+      "closed": true,
+      "status": "closed",
+      "reason": "The least-squares range map carries plus profiles to minus profiles on the scanned Green-minimizer trace image."
+    },
+    "hardyVolterraContractionStatus": {
+      "label": "explicit Hardy/Volterra contraction",
+      "closed": false,
+      "status": "open",
+      "reason": "The finite range map exists and has norm below one, but it has not yet been identified with a closed-form Hardy/Volterra operator.",
+      "blocker": "Derive a u-transport Green identity for the range map T and prove its norm is at most one with endpoint terms cancelled by the Euler-Lagrange trace equations."
+    }
+  },
+  "basis": 12,
+  "constraints": 9,
+  "traceRank": 9,
+  "traceNullity": 3,
+  "transport": {
+    "rank": 9,
+    "cutoff": 1e-12,
+    "rangeResidual": 7.774574254602766e-13,
+    "relativeRangeResidual": 4.722623307554977e-12,
+    "operatorNorm": 0.9830054425902589,
+    "singularValues": [
+      0.9830054425902589,
+      0.7842351270063901,
+      0.7531709165129594,
+      0.6691904525974615,
+      0.6357925378515206,
+      0.5902878829743932,
+      0.5750328505729466,
+      0.5474796506928893,
+      0.5377337645391191,
+      2.3500504602940235e-12,
+      1.5729620756245385e-12,
+      1.3577761790571245e-12
+    ]
+  },
+  "omegaTransport": {
+    "checked": true,
+    "omegaStep": 0.0001,
+    "maxAbsoluteError": 1.7384986294799933e-08,
+    "maxRelativeError": 6.309496388049923e-08,
+    "rows": [
+      {
+        "sigma": -1,
+        "absoluteError": 9.647917425717912e-09,
+        "relativeError": 6.309496388049923e-08
+      },
+      {
+        "sigma": 1,
+        "absoluteError": 1.7384986294799933e-08,
+        "relativeError": 3.7755147513699185e-08
+      }
+    ]
+  },
+  "topProfile": {
+    "topContractionEigenvalue": 0.9529125773915932,
+    "topContractionGapToOne": 0.047087422608406815,
+    "topVectorPlusEnergy": 0.9999999998889848,
+    "topVectorMinusEnergy": 0.9529125770043123,
+    "topVectorDefectEnergy": 0.04708742310036618,
+    "globalDensityPrefixMin": -0.3377200527189521,
+    "globalDensityPrefixFinal": 0.04708742321868478,
+    "branchEndpointDiagnostics": [
+      {
+        "sigma": -1,
+        "plusAtFirstNode": -0.007345861814213039,
+        "minusAtFirstNode": 0.018954431690084483,
+        "plusAtLastNode": 0.0,
+        "minusAtLastNode": 0.0,
+        "densitySum": -0.059728451227525625,
+        "densityPrefixMin": -0.3364240271318032,
+        "densityPrefixFinal": -0.059728451227525625
+      },
+      {
+        "sigma": 1,
+        "plusAtFirstNode": -0.0009341055099412188,
+        "minusAtFirstNode": 0.0016254273326978819,
+        "plusAtLastNode": 0.0,
+        "minusAtLastNode": 0.0,
+        "densitySum": 0.10681587444621034,
+        "densityPrefixMin": -0.27799160149142654,
+        "densityPrefixFinal": 0.10681587444621034
+      }
+    ]
+  },
+  "operatorNormFromContraction": 0.9761724117140338,
+  "defectMin": 4.752936477165384e-15,
+  "defectMax": 0.024364492194284056,
+  "cutoffCaveat": "Near-null directions in the plus-profile Gram make the displayed top generalized eigenvalue cutoff-sensitive.  The robust facts are the small range residual, the subunit finite range-map norm, and the omega-transport identity.",
+  "correctedConclusion": "The finite plus-profile range determines the minus-profile range, and the computed range map is a subunit contraction after the chosen numerical cutoff.  The exact calculus identity N_sigma=2 sigma partial_omega M_sigma is a real transport handle, but the closed-form Hardy/Volterra operator T is still the missing continuum proof object.",
+  "nextProofTarget": "Convert N_sigma=2 sigma partial_omega M_sigma into a u-transport Green identity for the range map T, then show the endpoint boundary form vanishes for Euler-Lagrange Green minimizers."
+}

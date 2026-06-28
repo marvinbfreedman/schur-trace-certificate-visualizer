@@ -1,0 +1,256 @@
+{
+  "theoremName": "Signed Volterra feature contraction",
+  "targetInequality": "minus-feature Gram <= plus-feature Gram on Green-minimizer trace image",
+  "contractionForm": "lambda_max(P^+ M) <= 1",
+  "statuses": {
+    "finiteContractionStatus": {
+      "label": "finite signed-feature contraction",
+      "closed": true,
+      "status": "closed",
+      "reason": "Every scanned direct-Volterra finite quotient has top generalized eigenvalue lambda_max(P^+M) at or below one within the displayed tolerance."
+    },
+    "continuumContractionStatus": {
+      "label": "continuum constrained Volterra contraction",
+      "closed": false,
+      "status": "open",
+      "reason": "The finite spectrum identifies the right inequality, but the continuum Hardy/Volterra proof is still needed.",
+      "blocker": "Derive the transport/Hardy identity showing the minus feature is a contraction of the plus feature on the Green-minimizer trace image."
+    }
+  },
+  "rows": [
+    {
+      "basis": 6,
+      "constraints": 3,
+      "traceRank": 3,
+      "traceNullity": 3,
+      "sOrder": 44,
+      "uOrder": 130,
+      "uMax": 10.0,
+      "plusMin": 1.119606781568718e-05,
+      "plusMax": 0.030408092514289668,
+      "minusMin": 5.29819478177696e-06,
+      "minusMax": 0.013271496971228054,
+      "defectMin": 4.601911092034726e-06,
+      "defectMax": 0.0171763177757733,
+      "schurMin": 4.601911095826668e-06,
+      "schurMax": 0.01717631777580751,
+      "defectVsSchurRelative": 2.9325415284234796e-12,
+      "generalizedCutoff": 1e-12,
+      "generalizedEigenvalues": [
+        0.35829435295757595,
+        0.4867078451243639,
+        0.7429024493717226
+      ],
+      "topContractionEigenvalue": 0.7429024493717226,
+      "topContractionGapToOne": 0.25709755062827744,
+      "plusNullity": 0,
+      "plusNullMinusMax": NaN,
+      "topVectorInTraceCoordinates": [
+        -113.51465232483359,
+        -115.00453542115153,
+        58.04927324862528
+      ],
+      "topVectorPlusEnergy": 0.9999999999999871,
+      "topVectorMinusEnergy": 0.742902449371762,
+      "topVectorDefectEnergy": 0.2570975506281876,
+      "branchRows": [
+        {
+          "sigma": -1,
+          "plusTraceBasis": 0.06439815281925393,
+          "minusTraceBasis": 0.008057768204747805,
+          "plusMinBasis": 5.751547623060621e-10,
+          "minusMinBasis": 1.8807905258012049e-10
+        },
+        {
+          "sigma": 1,
+          "plusTraceBasis": 0.3481225209863916,
+          "minusTraceBasis": 0.07216870791430889,
+          "plusMinBasis": 1.3112149293051021e-08,
+          "minusMinBasis": 3.3407408482095817e-09
+        }
+      ],
+      "finiteDominationClosed": true
+    },
+    {
+      "basis": 8,
+      "constraints": 5,
+      "traceRank": 5,
+      "traceNullity": 3,
+      "sOrder": 44,
+      "uOrder": 130,
+      "uMax": 10.0,
+      "plusMin": 2.152052636713722e-09,
+      "plusMax": 0.02649347522933657,
+      "minusMin": 9.40227311697373e-10,
+      "minusMax": 0.01365055880031922,
+      "defectMin": 8.702780540986463e-10,
+      "defectMax": 0.013371334855826707,
+      "schurMin": 8.702718364731753e-10,
+      "schurMax": 0.013371334856679004,
+      "defectVsSchurRelative": 1.2485698809206607e-10,
+      "generalizedCutoff": 1e-12,
+      "generalizedEigenvalues": [
+        0.3097400587242984,
+        0.3467484139903604,
+        0.42958713940578225,
+        0.5286450438433542,
+        0.8772593735535571
+      ],
+      "topContractionEigenvalue": 0.8772593735535571,
+      "topContractionGapToOne": 0.1227406264464429,
+      "plusNullity": 0,
+      "plusNullMinusMax": NaN,
+      "topVectorInTraceCoordinates": [
+        5538.958440446645,
+        -4214.72608168114,
+        -1083.8187266671484,
+        596.5540276683322,
+        -198.31100165293665
+      ],
+      "topVectorPlusEnergy": 0.9999999999228919,
+      "topVectorMinusEnergy": 0.8772593736649661,
+      "topVectorDefectEnergy": 0.12274062625674109,
+      "branchRows": [
+        {
+          "sigma": -1,
+          "plusTraceBasis": 0.06484859944912061,
+          "minusTraceBasis": 0.008298370747878403,
+          "plusMinBasis": 1.8091159563347238e-13,
+          "minusMinBasis": 2.9778223744665457e-15
+        },
+        {
+          "sigma": 1,
+          "plusTraceBasis": 0.35591139486587464,
+          "minusTraceBasis": 0.07556880723571013,
+          "plusMinBasis": 3.826111145485898e-12,
+          "minusMinBasis": 2.0536735498245408e-13
+        }
+      ],
+      "finiteDominationClosed": true
+    },
+    {
+      "basis": 10,
+      "constraints": 7,
+      "traceRank": 7,
+      "traceNullity": 3,
+      "sOrder": 44,
+      "uOrder": 130,
+      "uMax": 10.0,
+      "plusMin": 8.076453945303806e-12,
+      "plusMax": 0.031251147101789015,
+      "minusMin": 3.7106359247036946e-12,
+      "minusMax": 0.015540155599618619,
+      "defectMin": 2.333043784270358e-12,
+      "defectMax": 0.016337133808660045,
+      "schurMin": 2.0405600409459286e-12,
+      "schurMax": 0.016337133823277214,
+      "defectVsSchurRelative": 1.8921104836805154e-09,
+      "generalizedCutoff": 1e-12,
+      "generalizedEigenvalues": [
+        0.29364252652072526,
+        0.30154866686856924,
+        0.35601924126969897,
+        0.3764456078982522,
+        0.5196423407581536,
+        0.7124742704565508,
+        0.9423336438514
+      ],
+      "topContractionEigenvalue": 0.9423336438514,
+      "topContractionGapToOne": 0.05766635614860005,
+      "plusNullity": 0,
+      "plusNullMinusMax": NaN,
+      "topVectorInTraceCoordinates": [
+        37204.498150521526,
+        88344.68304586914,
+        -1362.6551687573028,
+        -11333.401713466552,
+        -958.0021348120439,
+        -3634.718608415239,
+        881.9495085658458
+      ],
+      "topVectorPlusEnergy": 0.9999999991774331,
+      "topVectorMinusEnergy": 0.9423336453523916,
+      "topVectorDefectEnergy": 0.05766635396514186,
+      "branchRows": [
+        {
+          "sigma": -1,
+          "plusTraceBasis": 0.06492075890886449,
+          "minusTraceBasis": 0.008330551937355473,
+          "plusMinBasis": 3.134048189464041e-17,
+          "minusMinBasis": 4.457306845610812e-18
+        },
+        {
+          "sigma": 1,
+          "plusTraceBasis": 0.3583451980188654,
+          "minusTraceBasis": 0.07665167534358772,
+          "plusMinBasis": 6.676771477923306e-16,
+          "minusMinBasis": 2.494807647380279e-16
+        }
+      ],
+      "finiteDominationClosed": true
+    }
+  ],
+  "worstRow": {
+    "basis": 10,
+    "constraints": 7,
+    "traceRank": 7,
+    "traceNullity": 3,
+    "sOrder": 44,
+    "uOrder": 130,
+    "uMax": 10.0,
+    "plusMin": 8.076453945303806e-12,
+    "plusMax": 0.031251147101789015,
+    "minusMin": 3.7106359247036946e-12,
+    "minusMax": 0.015540155599618619,
+    "defectMin": 2.333043784270358e-12,
+    "defectMax": 0.016337133808660045,
+    "schurMin": 2.0405600409459286e-12,
+    "schurMax": 0.016337133823277214,
+    "defectVsSchurRelative": 1.8921104836805154e-09,
+    "generalizedCutoff": 1e-12,
+    "generalizedEigenvalues": [
+      0.29364252652072526,
+      0.30154866686856924,
+      0.35601924126969897,
+      0.3764456078982522,
+      0.5196423407581536,
+      0.7124742704565508,
+      0.9423336438514
+    ],
+    "topContractionEigenvalue": 0.9423336438514,
+    "topContractionGapToOne": 0.05766635614860005,
+    "plusNullity": 0,
+    "plusNullMinusMax": NaN,
+    "topVectorInTraceCoordinates": [
+      37204.498150521526,
+      88344.68304586914,
+      -1362.6551687573028,
+      -11333.401713466552,
+      -958.0021348120439,
+      -3634.718608415239,
+      881.9495085658458
+    ],
+    "topVectorPlusEnergy": 0.9999999991774331,
+    "topVectorMinusEnergy": 0.9423336453523916,
+    "topVectorDefectEnergy": 0.05766635396514186,
+    "branchRows": [
+      {
+        "sigma": -1,
+        "plusTraceBasis": 0.06492075890886449,
+        "minusTraceBasis": 0.008330551937355473,
+        "plusMinBasis": 3.134048189464041e-17,
+        "minusMinBasis": 4.457306845610812e-18
+      },
+      {
+        "sigma": 1,
+        "plusTraceBasis": 0.3583451980188654,
+        "minusTraceBasis": 0.07665167534358772,
+        "plusMinBasis": 6.676771477923306e-16,
+        "minusMinBasis": 2.494807647380279e-16
+      }
+    ],
+    "finiteDominationClosed": true
+  },
+  "correctedConclusion": "The positive-square problem is exactly the contraction M <= P for the minus and plus signed Volterra feature Grams. The finite direct-Volterra quotient scans support the domination and expose the top trace direction for the analytic Hardy/Green proof.",
+  "nextProofTarget": "Use the top contraction direction to derive a u-transport Hardy identity for G_minus as a Volterra transform of G_plus, with boundary terms killed by the Euler-Lagrange Green-minimizer trace equations."
+}

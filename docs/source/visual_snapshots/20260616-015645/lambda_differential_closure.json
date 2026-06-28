@@ -1,0 +1,162 @@
+{
+  "sMin": 0.02,
+  "sMax": 0.545,
+  "samples": 17,
+  "h": 0.0328125,
+  "jetOrder": 9,
+  "maxQ": 4,
+  "stencilWidth": 9,
+  "oneDimensional": true,
+  "minGap": 1.1635518278617991e-05,
+  "minConsecutiveCos": 0.9809356544506828,
+  "pivotIndex": 8,
+  "minAbsPivot": 0.015180468128738052,
+  "expectedRank": 5,
+  "minRank": 5,
+  "minRankAt": null,
+  "maxClosureNormByQ": [
+    786395.6708539936,
+    2779229.749926992,
+    5094426.886613233,
+    28427660.9634981,
+    1017190885.7533619
+  ],
+  "maxClosureMaxAbsByQ": [
+    626826.1186683539,
+    2125130.5867556343,
+    3488223.7203176403,
+    27607620.847594924,
+    818787578.2269295
+  ],
+  "sampleRows": [
+    {
+      "s": 0.02,
+      "rank": 5,
+      "minGramEigenvalue": 8.674258607373793e-07,
+      "pivotE8": 0.09837783412722585,
+      "closure": [
+        {
+          "q": 0,
+          "pivotColumn": 8,
+          "pivotCoeff": 2.4399264416474667e-06,
+          "closureNorm": 167746.66261644752,
+          "closureMaxAbs": 139606.3230444455
+        },
+        {
+          "q": 1,
+          "pivotColumn": 9,
+          "pivotCoeff": 2.4399264416474667e-06,
+          "closureNorm": 462911.98129747016,
+          "closureMaxAbs": 355775.06058150175
+        },
+        {
+          "q": 2,
+          "pivotColumn": 10,
+          "pivotCoeff": 2.4399264416474667e-06,
+          "closureNorm": 549784.5028373828,
+          "closureMaxAbs": 478833.89123175456
+        },
+        {
+          "q": 3,
+          "pivotColumn": 11,
+          "pivotCoeff": 2.4399264416474667e-06,
+          "closureNorm": 1172257.8128436343,
+          "closureMaxAbs": 925831.4178091369
+        },
+        {
+          "q": 4,
+          "pivotColumn": 12,
+          "pivotCoeff": 2.4399264416474667e-06,
+          "closureNorm": 18192398.681615114,
+          "closureMaxAbs": 15367707.646718295
+        }
+      ]
+    },
+    {
+      "s": 0.2825,
+      "rank": 5,
+      "minGramEigenvalue": 3.769591216766745e-07,
+      "pivotE8": -0.17949627136147217,
+      "closure": [
+        {
+          "q": 0,
+          "pivotColumn": 8,
+          "pivotCoeff": -4.451792444480957e-06,
+          "closureNorm": 43770.26480177382,
+          "closureMaxAbs": 33187.722372081334
+        },
+        {
+          "q": 1,
+          "pivotColumn": 9,
+          "pivotCoeff": -4.451792444480957e-06,
+          "closureNorm": 181514.87633256524,
+          "closureMaxAbs": 129751.85645948266
+        },
+        {
+          "q": 2,
+          "pivotColumn": 10,
+          "pivotCoeff": -4.451792444480957e-06,
+          "closureNorm": 654557.1863876058,
+          "closureMaxAbs": 487870.4443963684
+        },
+        {
+          "q": 3,
+          "pivotColumn": 11,
+          "pivotCoeff": -4.451792444480957e-06,
+          "closureNorm": 561730.1539062135,
+          "closureMaxAbs": 488826.18165082094
+        },
+        {
+          "q": 4,
+          "pivotColumn": 12,
+          "pivotCoeff": -4.451792444480957e-06,
+          "closureNorm": 40775008.80836865,
+          "closureMaxAbs": 36426228.67758086
+        }
+      ]
+    },
+    {
+      "s": 0.545,
+      "rank": 5,
+      "minGramEigenvalue": 3.2556550633984987e-07,
+      "pivotE8": -0.645067899054905,
+      "closure": [
+        {
+          "q": 0,
+          "pivotColumn": 8,
+          "pivotCoeff": -1.599870781386173e-05,
+          "closureNorm": 4007.6094866005365,
+          "closureMaxAbs": 2920.778076569799
+        },
+        {
+          "q": 1,
+          "pivotColumn": 9,
+          "pivotCoeff": -1.599870781386173e-05,
+          "closureNorm": 37946.28189798037,
+          "closureMaxAbs": 29433.207989337763
+        },
+        {
+          "q": 2,
+          "pivotColumn": 10,
+          "pivotCoeff": -1.599870781386173e-05,
+          "closureNorm": 209374.7807580096,
+          "closureMaxAbs": 168768.04537078593
+        },
+        {
+          "q": 3,
+          "pivotColumn": 11,
+          "pivotCoeff": -1.599870781386173e-05,
+          "closureNorm": 23515820.735019024,
+          "closureMaxAbs": 18801892.15158648
+        },
+        {
+          "q": 4,
+          "pivotColumn": 12,
+          "pivotCoeff": -1.599870781386173e-05,
+          "closureNorm": 1017190885.7533619,
+          "closureMaxAbs": 818787578.2269295
+        }
+      ]
+    }
+  ]
+}

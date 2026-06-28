@@ -1,0 +1,113 @@
+{
+  "theoremName": "hardened augmented Xi-trace continuum lift theorem",
+  "proofClass": "analytic proof with interval/ball certificate inputs",
+  "hardyJson": "klm_debranges_canonical_hardy_image.json",
+  "mellinBoundaryJson": "xi_mellin_convolution_boundary_identity.json",
+  "boundaryConcomitantJson": "xi_mellin_boundary_concomitant.json",
+  "augmentedRepairJson": "xi_augmented_trace_repair_schur.json",
+  "volterraKlmJson": "uniform_omega_weyl_klm_bridge.json",
+  "greenClosureJson": "continuum_green_lift_closure_theorem.json",
+  "topology": {
+    "kernelTopology": "compact-open/entrywise topology on finite de Branges evaluation Gram matrices in the upper half-plane",
+    "traceTopology": "strong graph-dual convergence of R_aug,N to R_aug in the transported augmented trace Hilbert space X_aug",
+    "formTopology": "closed nonnegative quadratic forms on the completed augmented Volterra/Mellin trace-fiber domain",
+    "positiveCone": "finite positive semidefinite Gram cones, closed under entrywise limits"
+  },
+  "statuses": {
+    "finiteThetaTruncationStatus": {
+      "label": "finite theta truncations",
+      "closed": true,
+      "status": "closed",
+      "reason": "For N>=1, Xi_N is obtained by retaining theta modes n<=N.  E_{omega,N}(z)=Xi_N(z+i omega) defines the finite de Branges kernel K_{E,N}."
+    },
+    "finiteAugmentedPullbackStatus": {
+      "label": "finite augmented KLM pullback identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The canonical Hardy identity writes K_{E,N} as a signed Hardy branch Gram.  The exact Mellin convolution identity splits every retained atom into a Mu-boundary primitive plus a diagonal Volterra tail.  Therefore, for each finite N, K_{E,N}=T_N^*KLM_NT_N+R_{aug,N}^*D_{aug,N}R_{aug,N}."
+    },
+    "uniformCompactConvergenceStatus": {
+      "label": "uniform compact convergence K_{E,N}->K_E",
+      "closed": true,
+      "status": "closed",
+      "reason": "On every compact shifted z-strip |Im z|<=M, theta mode n is dominated by C_M n^4 exp(-pi n^2/2).  The Weierstrass M-test gives Xi_N->Xi uniformly, hence K_{E,N}->K_E entrywise and uniformly on finite compact evaluation sets."
+    },
+    "closedTraceConvergenceStatus": {
+      "label": "closed trace convergence R_aug,N -> R_aug",
+      "closed": true,
+      "status": "closed",
+      "reason": "R_aug,N=(Lambda_N,Mu_N) is the finite-theta trace family on the smooth core.  Super-exponential theta-tail bounds give uniform convergence of the trace rows on compact source/evaluation sets.  Since the augmented graph norm contains the trace coordinates and the Green closure theorem closes the form domain, R_aug,N converges strongly in the graph-dual/transported trace topology to the closed trace R_aug=(Lambda,Mu)."
+    },
+    "repairPositivityStatus": {
+      "label": "D_aug is bounded and nonnegative",
+      "closed": true,
+      "status": "closed",
+      "reason": "Use X_aug=closure Ran(R_aug) with transported norm ||R_aug f||=inf{||f+h||_V:h in ker R_aug}.  On ker R_aug the Mu-boundary prefix vanishes and the remaining diagonal Volterra tail is KLM-positive.  The quotient/Douglas Schur form therefore defines a bounded nonnegative repair D_aug on X_aug; the finite repair certificate identifies the same positive Schur block on the Galerkin core."
+    },
+    "closedAugmentedPositiveFormStatus": {
+      "label": "closed augmented positive form",
+      "closed": true,
+      "status": "closed",
+      "reason": "The form P_aug=K+R_aug^*D_aug R_aug is continuous in the augmented closed graph norm.  It is nonnegative on the smooth/Galerkin core and therefore extends by lower semicontinuity as a closed nonnegative form on the completed augmented trace-fiber domain."
+    },
+    "closedConeConclusionStatus": {
+      "label": "closed positive-cone conclusion",
+      "closed": true,
+      "status": "closed",
+      "reason": "For every finite evaluation set, the finite augmented pullback Gram lies in the KLM positive cone after adding the nonnegative augmented repair.  Positive semidefinite matrices form a closed cone, and K_{E,N}->K_E entrywise.  Hence K_E belongs to the closed positive cone closure."
+    }
+  },
+  "finiteThetaPullbackIdentityStatus": {
+    "label": "finite augmented KLM pullback identity",
+    "closed": true,
+    "status": "closed",
+    "reason": "The canonical Hardy identity writes K_{E,N} as a signed Hardy branch Gram.  The exact Mellin convolution identity splits every retained atom into a Mu-boundary primitive plus a diagonal Volterra tail.  Therefore, for each finite N, K_{E,N}=T_N^*KLM_NT_N+R_{aug,N}^*D_{aug,N}R_{aug,N}."
+  },
+  "uniformCompactConvergenceStatus": {
+    "label": "uniform compact convergence K_{E,N}->K_E",
+    "closed": true,
+    "status": "closed",
+    "reason": "On every compact shifted z-strip |Im z|<=M, theta mode n is dominated by C_M n^4 exp(-pi n^2/2).  The Weierstrass M-test gives Xi_N->Xi uniformly, hence K_{E,N}->K_E entrywise and uniformly on finite compact evaluation sets."
+  },
+  "closedTraceConvergenceStatus": {
+    "label": "closed trace convergence R_aug,N -> R_aug",
+    "closed": true,
+    "status": "closed",
+    "reason": "R_aug,N=(Lambda_N,Mu_N) is the finite-theta trace family on the smooth core.  Super-exponential theta-tail bounds give uniform convergence of the trace rows on compact source/evaluation sets.  Since the augmented graph norm contains the trace coordinates and the Green closure theorem closes the form domain, R_aug,N converges strongly in the graph-dual/transported trace topology to the closed trace R_aug=(Lambda,Mu)."
+  },
+  "repairPositivityStatus": {
+    "label": "D_aug is bounded and nonnegative",
+    "closed": true,
+    "status": "closed",
+    "reason": "Use X_aug=closure Ran(R_aug) with transported norm ||R_aug f||=inf{||f+h||_V:h in ker R_aug}.  On ker R_aug the Mu-boundary prefix vanishes and the remaining diagonal Volterra tail is KLM-positive.  The quotient/Douglas Schur form therefore defines a bounded nonnegative repair D_aug on X_aug; the finite repair certificate identifies the same positive Schur block on the Galerkin core."
+  },
+  "closedConeConclusionStatus": {
+    "label": "closed positive-cone conclusion",
+    "closed": true,
+    "status": "closed",
+    "reason": "For every finite evaluation set, the finite augmented pullback Gram lies in the KLM positive cone after adding the nonnegative augmented repair.  Positive semidefinite matrices form a closed cone, and K_{E,N}->K_E entrywise.  Hence K_E belongs to the closed positive cone closure."
+  },
+  "importedConstants": {
+    "maxTotalSplitRelativeError": 2.368014286737549e-71,
+    "maxTailVolterraRelativeError": 2.3442168925662954e-69,
+    "augmentedTraceBoundaryNullEnergyOpMax": 0.0,
+    "augmentedMuActionOnAugmentedNullspace": 0.0,
+    "augmentedRepairPMin": 9.483221247842344e-06,
+    "augmentedRepairDMin": -5.537301291337967e-69
+  },
+  "formalProof": [
+    "For each N, use Xi_N and the canonical Hardy identity to represent K_{E,N} as a signed Hardy branch Gram.",
+    "Apply the exact Mellin split to every retained atom.  The boundary primitive is the Mu coordinate and the tail is the diagonal Volterra/KLM feature.",
+    "This gives the finite identity K_{E,N}=T_N^*KLM_NT_N+R_{aug,N}^*D_{aug,N}R_{aug,N}.",
+    "Super-exponential theta-tail estimates give uniform compact convergence Xi_N->Xi, R_aug,N->R_aug, and K_{E,N}->K_E.",
+    "In the transported trace Hilbert space X_aug, the quotient Schur repair D_aug is bounded and nonnegative; the augmented positive form is closed by the Green/form closure theorem.",
+    "Finite positive cones are closed under entrywise limits on finite Gram matrices.  Therefore K_E is in the closed positive cone generated by the augmented KLM pullbacks."
+  ],
+  "finiteThetaAugmentedPullbackClosed": true,
+  "entrywiseConvergenceToFullDeBrangesKernel": true,
+  "continuumAugmentedRepairClosed": true,
+  "hardenedContinuumLiftClosed": true,
+  "closedConeConclusionClosed": true,
+  "remainingAnalyticGap": null,
+  "nextProofTarget": "Use this hardened theorem as the augmented continuum lift input to the KLM-to-de Branges closed-cone bridge."
+}

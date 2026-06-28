@@ -1,0 +1,36 @@
+{
+  "theoremName": "augmented trace quotient two-sided bounds theorem",
+  "proofClass": "analytic proof",
+  "quotientLimsupJson": "augmented_trace_quotient_limsup_theorem.json",
+  "quotientLiminfJson": "augmented_trace_quotient_liminf_consequence_theorem.json",
+  "statement": "The augmented trace quotient norms satisfy both the upper recovery bound and the lower representative-compactness bound.",
+  "statuses": {
+    "quotientUpperBoundInputStatus": {
+      "label": "trace quotient upper bound input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The quotient limsup theorem supplies the recovery upper bound."
+    },
+    "quotientLowerBoundInputStatus": {
+      "label": "trace quotient lower bound input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The quotient liminf theorem supplies the representative lower bound."
+    },
+    "twoSidedQuotientBoundsStatus": {
+      "label": "two-sided trace quotient bounds",
+      "closed": true,
+      "status": "closed",
+      "reason": "The upper and lower quotient bounds identify the limiting transported trace quotient norm from both sides."
+    }
+  },
+  "twoSidedTraceQuotientBoundsClosed": true,
+  "traceQuotientLimsupClosed": true,
+  "traceQuotientLiminfClosed": true,
+  "proof": [
+    "Import the trace quotient limsup theorem.",
+    "Import the trace quotient liminf theorem.",
+    "Use the two inequalities as the two-sided quotient bound package."
+  ],
+  "remainingAnalyticGap": null
+}

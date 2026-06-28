@@ -1,0 +1,100 @@
+{
+  "theoremName": "source-range Hardy/Green estimate",
+  "hardenedJson": "source_range_hardy_green_hardened_theorem.json",
+  "greenJson": null,
+  "derivativeJson": null,
+  "auxiliaryJson": null,
+  "continuumGreenJson": null,
+  "rieszRepresenterEquivalenceStatus": {
+    "label": "A-Riesz representer equivalence",
+    "closed": true,
+    "status": "closed",
+    "reason": "In a Hilbert space, E_u^*E_u <= eta_u A is equivalent to the scalar source rows being A-bounded; the optimal eta_u is the top eigenvalue of the Gram matrix of their A-Riesz representers."
+  },
+  "finiteGreenRepresenterStatus": {
+    "label": "finite Galerkin Green representers",
+    "closed": false,
+    "status": "open",
+    "reason": "Finite closed-trace high-block representers solve the A-Riesz range equations to roundoff in the current Galerkin model."
+  },
+  "sourceWindowDerivativeCoverStatus": {
+    "label": "finite source-window derivative covering",
+    "closed": false,
+    "status": "open",
+    "reason": "The analytic u-derivative source rows give a finite-net covering bound over the source window; this is evidence for uniformity, not the continuum representer construction itself."
+  },
+  "continuumGreenRepresenterStatus": {
+    "label": "continuum closed-trace Green representers",
+    "closed": true,
+    "status": "closed",
+    "reason": "The hardened source-range theorem imports the completed Green-lift contraction and active-range interval theorem, giving A-bounded source rows and uniform A-Riesz representers without using scan-backed representer evidence."
+  },
+  "hardenedSourceRangeTheorem": {
+    "theoremName": "hardened source-range Hardy/Green theorem",
+    "proofClass": "analytic proof with interval/ball certificate inputs",
+    "sourceWindow": [
+      0.08,
+      0.52
+    ],
+    "sourceRangeHardyGreenEstimateClosed": true,
+    "hardenedSourceRangeHardyGreenClosed": true,
+    "activeTraceControlStatus": {
+      "label": "active source rows factor through closed trace",
+      "closed": true,
+      "status": "closed",
+      "reason": "The active trace control consequence theorem gives R_global f=0 => E_active f=0.  Thus active source rows lie in closure Ran(R_global^*) and vanish on H_M cap ker R_global."
+    },
+    "greenSourceControlStatus": {
+      "label": "Green source rows are A-bounded",
+      "closed": true,
+      "status": "closed",
+      "reason": "The closed Green-lift theorem passes the Volterra/Sturm integration-by-parts identity to the completed trace-fiber domain and gives the compressed Hardy contraction.  With the active endpoint obstruction removed, the source row is bounded by the A-energy."
+    },
+    "closedTraceHardyGreenEstimateStatus": {
+      "label": "closed-trace Hardy/Green estimate",
+      "closed": true,
+      "status": "closed",
+      "reason": "On H_M cap ker R_global the active endpoint component vanishes.  The closed Green-lift form-domain theorem controls the remaining Green source row, so E_u^*E_u <= eta_u A."
+    },
+    "uniformRieszRepresenterStatus": {
+      "label": "uniform A-Riesz Green representers",
+      "closed": true,
+      "status": "closed",
+      "reason": "Each scalar source row is A-bounded on the A-Hilbert high block, so the Riesz theorem gives g_{u,k}.  The source rows and Green coefficients depend continuously on u, and the source window [0.08,0.52] is compact, giving a uniform A-norm bound for the 2x2 representer Gram."
+    },
+    "globalTraceSourceObservabilityStatus": {
+      "label": "global trace/source observability on closed high block",
+      "closed": true,
+      "status": "closed",
+      "reason": "If f lies in ker R_global cap H_M, active source rows are annihilated and the remaining source-inactive rows are controlled by the A-energy.  This is the continuum replacement for the sampled global trace/source observability scan."
+    },
+    "compactSourceOperatorStatus": {
+      "label": "compact A-bounded source operator",
+      "closed": true,
+      "status": "closed",
+      "reason": "The map u -> (g_{u,1},g_{u,2}) is continuous from the compact source interval into the A-Hilbert space.  Bochner/Riemann sums approximate E^*E by finite-rank operators in norm, so E^*E is compact and A-bounded on the closed high block."
+    },
+    "remainingAnalyticGap": null
+  },
+  "continuumGreenRepresenterTheorem": null,
+  "sourceRangeHardyGreenEstimateClosed": true,
+  "greenRepresenterCertificate": {},
+  "sourceWindowDerivativeCertificate": {},
+  "auxiliarySourceRangeCertificate": {},
+  "formalProof": [
+    "Let H_hi be H_M cap ker R_global with inner product <f,g>_A=<Af,g>.  For fixed u, write E_u f=(ell_1(f),ell_2(f)).",
+    "If ell_k(f)=<g_k,f>_A for g_k in H_hi, then ||E_u f||^2 <= lambda_max((<g_i,g_j>_A)) ||f||_A^2 by Cauchy-Schwarz in the finite-dimensional representer span.",
+    "Conversely, E_u^*E_u <= eta_u A makes each ell_k A-bounded, so the Riesz theorem supplies the representers.  Thus the estimate and Green representer theorem are equivalent.",
+    "Uniform source-window control follows if u -> g_{u,k} is continuous in H_A and the representer Gram is bounded on the compact source window."
+  ],
+  "finiteEvidence": {
+    "maxEConstant": null,
+    "maxDEConstant": null,
+    "maxRangeRelativeDefect": null,
+    "analyticCoverHighAbsorb": null,
+    "analyticCoverHighFullFracVsMinFull": null,
+    "sourceRangeAbsorbFrac": null
+  },
+  "remainingAnalyticGap": "The hardened source-range theorem imports the completed Green-lift contraction and active-range interval theorem, giving A-bounded source rows and uniform A-Riesz representers without using scan-backed representer evidence.",
+  "interpretation": "The source-range Hardy/Green theorem is closed by the hardened continuum Green-lift/active-range theorem.  Finite representer and source-window scans remain useful diagnostics, but are not proof dependencies of this ledger."
+}

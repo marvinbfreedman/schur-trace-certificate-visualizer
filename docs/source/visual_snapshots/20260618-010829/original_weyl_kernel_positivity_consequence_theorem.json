@@ -1,0 +1,53 @@
+{
+  "theoremName": "original Weyl kernel positivity consequence theorem",
+  "proofClass": "symbolic identity",
+  "assemblySource": "original Weyl kernel positivity assembly theorem",
+  "omegaRange": "|omega| < 1/2",
+  "statuses": {
+    "assemblyInputStatus": {
+      "label": "original Weyl positivity assembly input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The assembly theorem proves original Weyl kernel positivity."
+    },
+    "branchWeightSummaryStatus": {
+      "label": "branch-weight summary",
+      "closed": true,
+      "status": "closed",
+      "reason": "The assembly theorem includes the branch-weight input."
+    },
+    "greenContractionSummaryStatus": {
+      "label": "Green contraction summary",
+      "closed": true,
+      "status": "closed",
+      "reason": "The assembly theorem includes the Green contraction input."
+    },
+    "quadraticIdentitySummaryStatus": {
+      "label": "quadratic identity summary",
+      "closed": true,
+      "status": "closed",
+      "reason": "The assembly theorem includes the exact quadratic-form identity input."
+    },
+    "originalWeylKernelPositivityConsequenceStatus": {
+      "label": "original Weyl kernel positivity consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The only exported consequence is K_omega>=0 for every |omega|<1/2."
+    }
+  },
+  "uniformOmegaBranchTransportClosed": true,
+  "greenLiftContractionClosed": true,
+  "originalWeylFormTransportClosed": true,
+  "originalWeylKernelPositivityConsequenceClosed": true,
+  "originalWeylKernelPositivityClosed": true,
+  "proof": [
+    "Import the original Weyl kernel positivity assembly theorem.",
+    "Export only the positivity conclusion K_omega>=0 for |omega|<1/2."
+  ],
+  "notExportedHere": [
+    "branch-weight proof",
+    "Green contraction proof",
+    "quadratic-form identity proof"
+  ],
+  "remainingAnalyticGap": null
+}

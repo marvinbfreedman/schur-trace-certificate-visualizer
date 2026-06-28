@@ -1,0 +1,39 @@
+{
+  "theoremName": "shifted Xi de Branges kernel positivity theorem",
+  "proofClass": "analytic proof",
+  "finiteGramJson": "shifted_xi_finite_gram_closure_theorem.json",
+  "legacyInputs": {
+    "closedConeJson": null
+  },
+  "omegaRange": "0 < omega < 1/2",
+  "kernel": "K_{E_omega}, E_omega(z)=Xi(z+i omega)",
+  "statuses": {
+    "finiteGramClosureInputStatus": {
+      "label": "shifted-Xi finite-Gram closure input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite-Gram closure theorem combines normalization, entrywise convergence, positive finite pullbacks, and finite PSD cone closure."
+    },
+    "kernelEntryLimitStatus": {
+      "label": "kernel entry convergence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The same closed-cone theorem records entrywise convergence to the full shifted-Xi de Branges kernel on finite evaluation sets."
+    },
+    "shiftedXiKernelPositivityStatus": {
+      "label": "shifted-Xi de Branges kernel positivity",
+      "closed": true,
+      "status": "closed",
+      "reason": "For every finite upper-half-plane evaluation set, the Gram matrix of K_{E_omega} is positive semidefinite."
+    }
+  },
+  "shiftedXiDeBrangesKernelPositiveClosed": true,
+  "finiteEvaluationGramPositive": true,
+  "continuumAugmentedRepairClosed": true,
+  "proof": [
+    "Import the shifted-Xi finite-Gram closure theorem.",
+    "Read off positivity of every finite upper-half-plane evaluation Gram matrix.",
+    "This is exactly positive definiteness of the shifted-Xi de Branges kernel."
+  ],
+  "remainingAnalyticGap": null
+}

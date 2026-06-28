@@ -1,0 +1,46 @@
+{
+  "theoremName": "original Weyl kernel positivity theorem",
+  "proofClass": "analytic proof",
+  "omegaRange": "|omega| < 1/2",
+  "greenClosureJson": "continuum_green_lift_closure_theorem.json",
+  "formTransportJson": "original_weyl_form_transport_theorem.json",
+  "legacyLiftJson": null,
+  "statuses": {
+    "uniformOmegaBranchTransportStatus": {
+      "label": "uniform omega branch transport",
+      "closed": true,
+      "status": "closed",
+      "reason": "For |omega|<1/2, the branch factors exp(0.5 sigma omega(s+u)) are positive and locally uniformly controlled by the super-exponential theta/Phi decay in the Volterra representation."
+    },
+    "omegaIndependentHardyMultiplierStatus": {
+      "label": "omega-independent Hardy multiplier contraction",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Green-lift closure theorem gives the completed-domain contraction for the multiplier kappa=(1-s-u)/(1+s+u), which is independent of omega."
+    },
+    "quotientToOriginalLiftStatus": {
+      "label": "defect-free original Weyl form transport",
+      "closed": true,
+      "status": "closed",
+      "reason": "The original Weyl form transport theorem identifies the original coordinate Weyl quadratic form with the transported nonnegative normalized Volterra form."
+    },
+    "originalWeylPositivityStatus": {
+      "label": "original Weyl kernel positivity for |omega|<1/2",
+      "closed": true,
+      "status": "closed",
+      "reason": "Uniform branch transport, the omega-independent Green contraction, and the original form transport give positivity of K_omega for every |omega|<1/2."
+    }
+  },
+  "uniformOmegaBranchTransportClosed": true,
+  "greenLiftContractionClosed": true,
+  "originalWeylFormTransportClosed": true,
+  "quotientToOriginalWeylLiftClosed": true,
+  "originalWeylKernelPositivityClosed": true,
+  "proof": [
+    "Use positive branch factors and theta/Phi decay for uniform omega branch transport.",
+    "Use the completed-domain Green-lift contraction for the omega-independent Hardy multiplier.",
+    "Use the defect-free original Weyl form transport theorem.",
+    "Conclude original coordinate Weyl kernel positivity for every |omega|<1/2."
+  ],
+  "remainingAnalyticGap": null
+}

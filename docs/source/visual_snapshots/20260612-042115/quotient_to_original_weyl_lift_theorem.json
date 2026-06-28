@@ -1,0 +1,64 @@
+{
+  "theoremName": "publication quotient-to-original Weyl lift theorem",
+  "quotientJson": "weyl_volterra_quotient_schur_theorem.json",
+  "primitiveEndpointJson": "primitive_endpoint_compatibility_theorem.json",
+  "historicalLiftJson": "quotient_to_original_weyl_lift.json",
+  "statuses": {
+    "parityReductionStatus": {
+      "label": "unitary parity reduction",
+      "closed": true,
+      "status": "closed",
+      "reason": "Reflection symmetry decomposes the original coordinate Weyl form as the orthogonal direct sum of even and odd half-line forms.  This is a unitary change of variables."
+    },
+    "primitiveMixedDerivativeStatus": {
+      "label": "mixed-derivative primitive transport",
+      "closed": true,
+      "status": "closed",
+      "reason": "Boundary decay gives K_pm(x,y)=int_x^infty int_y^infty H_pm(u,v) du dv.  Fubini transports finite coordinate Weyl tests to primitive/cumulative mixed-kernel tests without changing the quadratic form value."
+    },
+    "volterraNormalizationStatus": {
+      "label": "Volterra/log normalization",
+      "closed": true,
+      "status": "closed",
+      "reason": "The log coordinate and multiplication by positive Psi weights are invertible form-domain isomorphisms.  They preserve nonnegativity and identify the transported mixed kernel with the normalized Volterra quotient form."
+    },
+    "formCoreClosureStatus": {
+      "label": "form-core closure",
+      "closed": true,
+      "status": "closed",
+      "reason": "The primitive compact core is dense in the transported closed Volterra form domain.  The parity, primitive, and Volterra maps are continuous in the closed graph norms, so the exact identity extends from finite tests to the completed form domain by closed-form continuity."
+    },
+    "quotientSchurStatus": {
+      "label": "normalized quotient Schur positivity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The imported Weyl/Volterra quotient Schur theorem proves the nonnegative closed quotient form in the normalized full-Phi Volterra model."
+    },
+    "primitiveEndpointCompatibilityStatus": {
+      "label": "primitive endpoint compatibility",
+      "closed": true,
+      "status": "closed",
+      "reason": "The primitive endpoint compatibility theorem proves that the trace correction produced by the quotient transport is annihilated on the primitive image: D_bdy=0 and D_q=0 on the transported trace range."
+    },
+    "historicalAuditConsistencyStatus": {
+      "label": "historical lift ledger consistency",
+      "closed": true,
+      "status": "closed",
+      "reason": "The older detailed quotient_to_original_weyl_lift.json ledger also reports the full lift closed.  It is retained as an audit trail, not as the proof edge used by the uniform omega theorem."
+    }
+  },
+  "formalProof": [
+    "Use reflection symmetry to split the original Weyl form into even and odd half-line sectors.",
+    "Use the mixed-derivative primitive identity and Fubini to transport coordinate tests to primitive mixed-kernel tests.",
+    "Apply the positive Volterra/log normalization to identify the transported form with the normalized quotient form.",
+    "Extend the identity from the primitive compact core to the closed form domain by density and closed-form continuity.",
+    "Apply the quotient Schur theorem for positivity on the normalized quotient form.",
+    "Apply primitive endpoint compatibility to show the trace-side boundary correction is annihilated, so the transported quotient positivity is exactly the original Weyl positivity."
+  ],
+  "proofClass": "analytic proof",
+  "quotientToOriginalWeylLiftTheoremClosed": true,
+  "quotientToOriginalWeylLiftClosed": true,
+  "originalWeylKernelPositivityTransportClosed": true,
+  "numericalEvidenceRole": "Finite approximation diagnostics in the historical lift ledger are audit evidence only; this theorem uses the closed quotient Schur and primitive endpoint compatibility theorems as analytic inputs.",
+  "nextProofTarget": "Use this theorem as the lift input for the uniform omega Weyl/KLM bridge."
+}

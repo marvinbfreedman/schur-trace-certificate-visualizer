@@ -1,0 +1,34 @@
+{
+  "omega": 0.49,
+  "L": 2.0,
+  "basis": 20,
+  "constraints": 12,
+  "rank": 12,
+  "nullity": 8,
+  "positiveModes": 8,
+  "lambdaMin": 4.410511401245314e-11,
+  "lambdaMax": 0.1543899487639319,
+  "rows": [
+    {
+      "cutoff": 5,
+      "constants": [
+        {
+          "order": 10,
+          "constant": 1.5295985482594234e+24,
+          "norm": 1236769399791.0134
+        }
+      ]
+    },
+    {
+      "cutoff": 6,
+      "constants": [
+        {
+          "order": 10,
+          "constant": 4.977232064779683e+20,
+          "norm": 22309711035.286144
+        }
+      ]
+    }
+  ],
+  "interpretation": "These constants test whether endpoint energy A alone controls Sobolev graph norms on H_M. Large constants mean the analytic proof needs a commuted Sturm graph energy."
+}

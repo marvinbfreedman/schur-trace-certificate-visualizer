@@ -1,0 +1,3754 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Endpoint Trace / Schur Visualizer</title>
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --panel: #ffffff;
+      --ink: #20242c;
+      --muted: #667085;
+      --line: #d7dce3;
+      --blue: #2869d8;
+      --red: #c64242;
+      --green: #13795b;
+      --amber: #a66b00;
+      --purple: #6d4bc2;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      background: rgba(246, 247, 249, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+
+    .wrap {
+      width: min(1180px, calc(100vw - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 680;
+      letter-spacing: 0;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    main {
+      padding: 22px 0 42px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      min-width: 0;
+      box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+    }
+
+    .span-12 { grid-column: span 12; }
+    .span-7 { grid-column: span 7; }
+    .span-5 { grid-column: span 5; }
+    .span-6 { grid-column: span 6; }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 15px;
+      font-weight: 680;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 12px;
+      color: var(--muted);
+    }
+
+    canvas {
+      width: 100%;
+      display: block;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+    }
+
+    .heatmap {
+      aspect-ratio: 1 / 1;
+      max-height: 560px;
+    }
+
+    .chart {
+      height: 280px;
+    }
+
+    .small-chart {
+      height: 210px;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .key {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .swatch {
+      width: 14px;
+      height: 3px;
+      border-radius: 2px;
+      background: currentColor;
+    }
+
+    .numbers {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 10px;
+      min-width: 0;
+    }
+
+    .metric .label {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+
+    .metric .value {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    .diagram {
+      display: grid;
+      grid-template-columns: 1fr 76px 1fr;
+      gap: 10px;
+      align-items: center;
+      margin-top: 12px;
+    }
+
+    .block {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      min-height: 96px;
+      background: #fbfcfd;
+    }
+
+    .block strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .arrow {
+      text-align: center;
+      color: var(--muted);
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      color: #344054;
+      background: #f0f3f7;
+      border: 1px solid #e2e7ee;
+      border-radius: 4px;
+      padding: 1px 4px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 7px 6px;
+      text-align: right;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    th:first-child, td:first-child {
+      text-align: left;
+      font-family: inherit;
+    }
+
+    th {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    @media (max-width: 860px) {
+      .span-7, .span-5, .span-6 { grid-column: span 12; }
+      .topbar { align-items: flex-start; flex-direction: column; }
+      .meta { white-space: normal; }
+      .diagram { grid-template-columns: 1fr; }
+      .arrow { transform: rotate(90deg); }
+      .numbers { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap topbar">
+      <h1>Endpoint Trace / Schur Visualizer</h1>
+      <div class="meta" id="meta">Loading data...</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="grid">
+      <div class="panel span-12">
+        <h2>What We Are Doing</h2>
+        <p>
+          We are studying whether a Weyl/Volterra kernel is positive. The endpoint
+          model has a tiny negative direction. The moving trace
+          <code>Lambda_a(f)</code> detects that direction. If we remove functions
+          with nonzero endpoint trace, the remaining form becomes positive in the
+          finite tests.
+        </p>
+        <div class="diagram">
+          <div class="block">
+            <strong>Jet matrix</strong>
+            Derivatives of <code>K(s,t)</code> at one point. A negative eigenvalue
+            means a local endpoint obstruction.
+          </div>
+          <div class="arrow">-></div>
+          <div class="block">
+            <strong>Trace family</strong>
+            The lowest eigenvector gives
+            <code>Lambda_a(f)=sum e_k(a) f^(k)(a)/k!</code>.
+          </div>
+        </div>
+        <div class="diagram">
+          <div class="block">
+            <strong>Split space</strong>
+            <code>V = ker R + U</code>, where <code>Rf=(Lambda_a f)</code>.
+          </div>
+          <div class="arrow">-></div>
+          <div class="block">
+            <strong>Schur / Douglas test</strong>
+            Prove <code>|b(n,u)|^2 <= C a(n,n)||u||^2</code> and positivity on
+            <code>ker R</code>.
+          </div>
+        </div>
+      </div>
+
+      <div class="panel span-7">
+        <h2>9 x 9 Endpoint Jet Matrix at s0 = 0.5</h2>
+        <p id="jetText"></p>
+        <canvas id="jetHeatmap" class="heatmap" width="720" height="720"></canvas>
+        <div class="legend">
+          <span class="key" style="color: var(--blue)"><span class="swatch"></span>positive</span>
+          <span class="key" style="color: var(--red)"><span class="swatch"></span>negative</span>
+          <span class="key"><span class="swatch" style="background:#e7eaf0"></span>near zero</span>
+        </div>
+      </div>
+
+      <div class="panel span-5">
+        <h2>Lowest Jet Eigenvector</h2>
+        <p>
+          This vector is the local functional coefficients. The entry at index
+          <code>k</code> multiplies <code>f^(k)(s0)/k!</code>.
+        </p>
+        <canvas id="eigVector" class="small-chart" width="520" height="260"></canvas>
+        <div id="eigMetrics" class="numbers"></div>
+      </div>
+
+      <div class="panel span-6">
+        <h2>Moving Endpoint Defect</h2>
+        <p>
+          The lowest eigenvalue stays negative until about <code>s* = 0.5530736</code>.
+          That is the active endpoint interval.
+        </p>
+        <canvas id="lambdaChart" class="chart" width="620" height="300"></canvas>
+        <div class="legend">
+          <span class="key" style="color: var(--red)"><span class="swatch"></span>lambda0</span>
+          <span class="key" style="color: var(--green)"><span class="swatch"></span>lambda1</span>
+          <span class="key" style="color: var(--amber)"><span class="swatch"></span>s*</span>
+        </div>
+      </div>
+
+      <div class="panel span-6">
+        <h2>Coefficient Field e(a)</h2>
+        <p>
+          This shows why a single global eighth-order ODE chart fails:
+          <code>e8(a)</code> crosses zero near <code>0.1646167</code>.
+        </p>
+        <canvas id="coeffChart" class="chart" width="620" height="300"></canvas>
+        <div class="legend">
+          <span class="key" style="color: var(--blue)"><span class="swatch"></span>e0</span>
+          <span class="key" style="color: var(--purple)"><span class="swatch"></span>e7</span>
+          <span class="key" style="color: var(--red)"><span class="swatch"></span>e8</span>
+          <span class="key" style="color: var(--amber)"><span class="swatch"></span>e8 zero</span>
+        </div>
+      </div>
+
+      <div class="panel span-12">
+        <h2>Schur / Douglas Numbers</h2>
+        <p>
+          These are the finite shadows of the continuum proof. The important
+          quantities are positivity on <code>ker R</code>, zero range residual,
+          and bounded <code>Gamma*Gamma = B*A^+*B</code>.
+        </p>
+        <table id="statsTable"></table>
+      </div>
+
+      <div class="panel span-12">
+        <h2>Endpoint Douglas Refinement</h2>
+        <p>
+          This is the current decisive test. If the finite Douglas constant
+          <code>Gamma*Gamma = B*A^+*B</code> blows up as the basis grows, the
+          continuum estimate is probably false or using the wrong norm. In this
+          endpoint stress scan it decreases.
+        </p>
+        <canvas id="douglasChart" class="chart" width="900" height="300"></canvas>
+        <div class="legend">
+          <span class="key" style="color: var(--blue)"><span class="swatch"></span>log10 Gamma^2 max</span>
+          <span class="key" style="color: var(--green)"><span class="swatch"></span>log10 K|ker R min</span>
+        </div>
+        <table id="douglasTable"></table>
+      </div>
+
+      <div class="panel span-12">
+        <h2>Top Douglas Eigenvector</h2>
+        <p>
+          This is the finite \(U\)-direction that makes
+          <code>Gamma*Gamma = B*A^+*B</code> largest. The paired
+          <code>ker R</code> witness is <code>A^+ B u</code>. The plot shows
+          normalized shapes so the two curves can be compared on the same axis.
+        </p>
+        <div class="grid">
+          <div class="span-7">
+            <canvas id="topVectorChart" class="chart" width="700" height="300"></canvas>
+            <div class="legend">
+              <span class="key" style="color: var(--blue)"><span class="swatch"></span>top U direction</span>
+              <span class="key" style="color: var(--green)"><span class="swatch"></span>cross source h</span>
+              <span class="key" style="color: var(--red)"><span class="swatch"></span>paired ker R witness</span>
+            </div>
+          </div>
+          <div class="span-5">
+            <canvas id="traceChart" class="chart" width="500" height="300"></canvas>
+            <div class="legend">
+              <span class="key" style="color: var(--purple)"><span class="swatch"></span>sampled trace values Ru</span>
+            </div>
+          </div>
+        </div>
+        <div id="topVectorMetrics" class="numbers"></div>
+        <h2 style="margin-top:16px">Hardy Boundary-Layer Profile</h2>
+        <p>
+          The paired witness <code>A^+Bu</code> is the Riesz solution that a
+          Hardy estimate must control. Its mass is strongly concentrated near
+          the right endpoint.
+        </p>
+        <table id="hardyProfileTable"></table>
+        <h2 style="margin-top:16px">Riesz Spectral Amplification</h2>
+        <p>
+          The energy of <code>A^+Bu</code> is not carried by one endpoint mode.
+          The smallest modes dominate the witness norm, while several mid modes
+          carry most of the Douglas energy. That is why the next proof target is
+          a Hardy/Green estimate, not a rank-one extremizer guess.
+        </p>
+        <table id="rieszProfileTable"></table>
+        <h2 style="margin-top:16px">Riesz Spectral Refinement</h2>
+        <p>
+          This scan separates the visible boundary layer from the energy
+          estimate. The witness norm stays in the two lowest modes, but the
+          Douglas energy moves into mid modes as the section grows.
+        </p>
+        <table id="rieszScanTable"></table>
+        <h2 style="margin-top:16px">Windowed Hardy / Green Constants</h2>
+        <p>
+          For each spectral window <code>I</code>, this scans
+          <code>lambda_max(B* P_I A_I^-1 P_I B)</code>. The full window is the
+          Douglas constant; the proper windows show which bands the analytic
+          Hardy estimate has to control.
+        </p>
+        <table id="windowScanTable"></table>
+        <h2 style="margin-top:16px">High-Frequency Tail Refinement</h2>
+        <p>
+          This increases basis and trace samples together. It tests whether the
+          source tail becomes small once the moving trace is resolved, rather
+          than only in one fixed finite section.
+        </p>
+        <table id="highTailTable"></table>
+        <table id="sourceEnvelopeTable" style="margin-top:10px"></table>
+        <h2 style="margin-top:16px">Source Packet Tracking</h2>
+        <p>
+          The apparent tail motion is mostly insertion of new tiny eigenvalues
+          at the low end. This table tracks the packet and compares it with a
+          fixed spectral cutoff.
+        </p>
+        <table id="sourcePacketTable"></table>
+        <table id="commutedSourceTable" style="margin-top:10px"></table>
+        <h2 style="margin-top:16px">Three-Part Certificate</h2>
+        <p>
+          This is the current proof split in finite form: pick a cutoff for the
+          finite Schur block, bound the spectral tail, and check whether sampled
+          endpoint traces approximate the moving continuum trace.
+        </p>
+        <table id="threePartTable"></table>
+        <table id="basis16ModeTable" style="margin-top:10px"></table>
+        <h2 style="margin-top:16px">Endpoint Trace Refinement</h2>
+        <p>
+          This holds the basis fixed and increases sampled trace constraints.
+          Dense trace leakage drops rapidly, showing that the continuum trace
+          condition is the right object and sparse sampling was the source of
+          the low-mode leak.
+        </p>
+        <table id="traceRefinementTable"></table>
+        <table id="lambdaDerivativeTable" style="margin-top:10px"></table>
+        <table id="traceResolutionTable" style="margin-top:10px"></table>
+        <table id="lambdaClosureTable" style="margin-top:10px"></table>
+        <table id="sourceConcomitantTable" style="margin-top:10px"></table>
+        <table id="traceConcomitantTable" style="margin-top:10px"></table>
+        <table id="lagrangeAdjointTable" style="margin-top:10px"></table>
+        <table id="energyControlTable" style="margin-top:10px"></table>
+        <table id="splitControlTable" style="margin-top:10px"></table>
+        <table id="splitBasisTable" style="margin-top:10px"></table>
+        <table id="hardyGraphTable" style="margin-top:10px"></table>
+        <table id="graphEnergyTable" style="margin-top:10px"></table>
+        <table id="commutedKernelTable" style="margin-top:10px"></table>
+        <table id="commutedDominanceTable" style="margin-top:10px"></table>
+        <table id="commutedBasisScanTable" style="margin-top:10px"></table>
+        <table id="compactObstructionTable" style="margin-top:10px"></table>
+        <table id="auxRegularizerTable" style="margin-top:10px"></table>
+        <table id="sourceWindowTable" style="margin-top:10px"></table>
+        <table id="sourceWindowRefinementTable" style="margin-top:10px"></table>
+        <table id="sourceWindowLipschitzTable" style="margin-top:10px"></table>
+        <table id="sourceWindowDerivativeTable" style="margin-top:10px"></table>
+        <table id="closedTraceHardyGreenTable" style="margin-top:10px"></table>
+        <table id="adjointEvalRepresenterTable" style="margin-top:10px"></table>
+        <table id="boundaryRowRepresenterTable" style="margin-top:10px"></table>
+        <table id="fixedRepresenterTheoremTable" style="margin-top:10px"></table>
+        <table id="localTraceTowerTable" style="margin-top:10px"></table>
+        <table id="localTraceTowerSourceTable" style="margin-top:10px"></table>
+        <table id="globalTraceSourceTable" style="margin-top:10px"></table>
+        <table id="globalTraceKillsTable" style="margin-top:10px"></table>
+        <table id="globalTraceGapTable" style="margin-top:10px"></table>
+        <table id="globalTraceActiveGapScanTable" style="margin-top:10px"></table>
+        <table id="globalTraceActiveRangeTable" style="margin-top:10px"></table>
+        <table id="traceToSourceKernelTable" style="margin-top:10px"></table>
+        <table id="traceToSourceRefinementTable" style="margin-top:10px"></table>
+        <table id="traceWeightedFrameTable" style="margin-top:10px"></table>
+        <table id="traceFramePassageTable" style="margin-top:10px"></table>
+        <table id="traceQuadratureStabilityTable" style="margin-top:10px"></table>
+        <table id="traceActiveMinorTable" style="margin-top:10px"></table>
+        <table id="traceActiveMinorSummaryTable" style="margin-top:10px"></table>
+        <table id="traceActiveMinorLandscapeTable" style="margin-top:10px"></table>
+        <table id="traceActiveDerivativeRankTable" style="margin-top:10px"></table>
+        <table id="traceActiveDerivativeRankScanTable" style="margin-top:10px"></table>
+        <table id="determinantGapBoundTable" style="margin-top:10px"></table>
+        <table id="projectiveDeterminantTable" style="margin-top:10px"></table>
+        <table id="projectiveResponseColumnTable" style="margin-top:10px"></table>
+        <table id="noncollapseKernelGapTable" style="margin-top:10px"></table>
+        <table id="sourceSideNoncollapseTable" style="margin-top:10px"></table>
+        <table id="sourceSideStabilityTable" style="margin-top:10px"></table>
+        <table id="sourceSideRankPerturbationTable" style="margin-top:10px"></table>
+        <table id="sourceSideQuadratureTable" style="margin-top:10px"></table>
+        <table id="sourceSideRieszRankTable" style="margin-top:10px"></table>
+        <table id="fullThetaTailTable" style="margin-top:10px"></table>
+        <h2 style="margin-top:16px">Full Theta Tail Visuals</h2>
+        <p>
+          These images use the finite reduced-Volterra certificate directly:
+          active two-plane matrices, log-scale perturbation ratios, source
+          spectral separation, and the quadratic-form landscape on the active
+          plane.
+        </p>
+        <div class="grid">
+          <div class="span-6">
+            <canvas id="fullThetaMatrixTriptych" class="small-chart" width="560" height="260"></canvas>
+            <div class="legend">
+              <span class="key" style="color: var(--blue)"><span class="swatch"></span>positive</span>
+              <span class="key" style="color: var(--red)"><span class="swatch"></span>negative</span>
+            </div>
+          </div>
+          <div class="span-6">
+            <canvas id="fullThetaRatioBars" class="small-chart" width="560" height="260"></canvas>
+            <div class="legend">
+              <span class="key" style="color: var(--green)"><span class="swatch"></span>tail ratios</span>
+              <span class="key" style="color: var(--amber)"><span class="swatch"></span>safety thresholds</span>
+            </div>
+          </div>
+          <div class="span-6">
+            <canvas id="fullThetaSourceSpectrum" class="small-chart" width="560" height="260"></canvas>
+            <div class="legend">
+              <span class="key" style="color: var(--blue)"><span class="swatch"></span>source eigenvalues</span>
+              <span class="key" style="color: var(--red)"><span class="swatch"></span>quadrature error</span>
+            </div>
+          </div>
+          <div class="span-6">
+            <canvas id="fullThetaSurface" class="small-chart" width="560" height="260"></canvas>
+            <div class="legend">
+              <span class="key" style="color: var(--purple)"><span class="swatch"></span>active quadratic form</span>
+              <span class="key" style="color: var(--green)"><span class="swatch"></span>tail overlay</span>
+            </div>
+          </div>
+        </div>
+        <table id="fullThetaSourceTailTable" style="margin-top:10px"></table>
+        <table id="fullThetaIntervalPropagationTable" style="margin-top:10px"></table>
+        <table id="fullThetaSourceQuadratureTable" style="margin-top:10px"></table>
+        <table id="globalSchurBridgeTable" style="margin-top:10px"></table>
+        <table id="fullThetaInactiveTailTable" style="margin-top:10px"></table>
+        <table id="tailAbsorptionTable" style="margin-top:10px"></table>
+        <table id="sourceInactiveMinmaxTailTable" style="margin-top:10px"></table>
+        <table id="highBlockExhaustionTable" style="margin-top:10px"></table>
+        <table id="commutedEllipticTraceTable" style="margin-top:10px"></table>
+        <table id="sourceRangeHardyGreenTable" style="margin-top:10px"></table>
+        <table id="continuumGreenRepresenterTable" style="margin-top:10px"></table>
+        <table id="traceToSourceGreenKernelTable" style="margin-top:10px"></table>
+        <table id="sourceQuadratureErrorTable" style="margin-top:10px"></table>
+        <table id="sourceQuadratureEnvelopeTable" style="margin-top:10px"></table>
+        <table id="closedTraceOdeObstructionTable" style="margin-top:10px"></table>
+        <h2 style="margin-top:16px">Fixed Representer Visuals</h2>
+        <p>
+          The direct source rows are the real theorem. The fixed-jet plots are
+          still useful diagnostics, but the proof now keeps the Lagrange source
+          rows together and uses interval trace range plus source-inactive tail
+          control.
+        </p>
+        <div class="grid">
+          <div class="span-6">
+            <canvas id="evalRepresenterProfileChart" class="small-chart" width="560" height="260"></canvas>
+            <div class="legend">
+              <span class="key" style="color: var(--blue)"><span class="swatch"></span>k_s0^hi</span>
+            </div>
+          </div>
+          <div class="span-6">
+            <canvas id="sourceAmplitudeChart" class="small-chart" width="560" height="260"></canvas>
+            <div class="legend">
+              <span class="key" style="color: var(--red)"><span class="swatch"></span>p</span>
+              <span class="key" style="color: var(--green)"><span class="swatch"></span>p'</span>
+              <span class="key" style="color: var(--purple)"><span class="swatch"></span>p''</span>
+            </div>
+          </div>
+          <div class="span-6">
+            <canvas id="boundaryGramHeatmap" class="heatmap" width="560" height="560"></canvas>
+            <div class="legend">
+              <span class="key" style="color: var(--blue)"><span class="swatch"></span>positive</span>
+              <span class="key" style="color: var(--red)"><span class="swatch"></span>negative</span>
+            </div>
+          </div>
+          <div class="span-6">
+            <canvas id="boundaryCoeffChart" class="chart" width="560" height="300"></canvas>
+            <div class="legend">
+              <span class="key" style="color: var(--blue)"><span class="swatch"></span>b0</span>
+              <span class="key" style="color: var(--green)"><span class="swatch"></span>b1</span>
+              <span class="key" style="color: var(--red)"><span class="swatch"></span>b2</span>
+              <span class="key" style="color: var(--amber)"><span class="swatch"></span>b4</span>
+              <span class="key" style="color: var(--purple)"><span class="swatch"></span>b6</span>
+            </div>
+          </div>
+          <div class="span-6">
+            <canvas id="fixedRepresenterBasisChart" class="chart" width="560" height="300"></canvas>
+            <div class="legend">
+              <span class="key" style="color: var(--blue)"><span class="swatch"></span>log eval cover</span>
+              <span class="key" style="color: var(--green)"><span class="swatch"></span>log boundary</span>
+              <span class="key" style="color: var(--red)"><span class="swatch"></span>log d-boundary</span>
+            </div>
+          </div>
+          <div class="span-6">
+            <canvas id="localTraceTowerChart" class="chart" width="560" height="300"></canvas>
+            <div class="legend">
+              <span class="key" style="color: var(--blue)"><span class="swatch"></span>log eval tower</span>
+              <span class="key" style="color: var(--red)"><span class="swatch"></span>log D7 tower</span>
+            </div>
+          </div>
+          <div class="span-6">
+            <canvas id="localTraceTowerSourceChart" class="chart" width="560" height="300"></canvas>
+            <div class="legend">
+              <span class="key" style="color: var(--blue)"><span class="swatch"></span>log E high/full</span>
+              <span class="key" style="color: var(--green)"><span class="swatch"></span>log dE high/full</span>
+            </div>
+          </div>
+          <div class="span-6">
+            <canvas id="globalTraceSourceChart" class="chart" width="560" height="300"></canvas>
+            <div class="legend">
+              <span class="key" style="color: var(--blue)"><span class="swatch"></span>global E</span>
+              <span class="key" style="color: var(--red)"><span class="swatch"></span>local E</span>
+            </div>
+          </div>
+          <div class="span-6">
+            <canvas id="globalTraceKillsChart" class="chart" width="560" height="300"></canvas>
+            <div class="legend">
+              <span class="key" style="color: var(--blue)"><span class="swatch"></span>log trace/source</span>
+              <span class="key" style="color: var(--green)"><span class="swatch"></span>log trace L2</span>
+            </div>
+          </div>
+          <div class="span-6">
+            <canvas id="globalTraceGapChart" class="chart" width="560" height="300"></canvas>
+            <div class="legend">
+              <span class="key" style="color: var(--blue)"><span class="swatch"></span>log active C</span>
+              <span class="key" style="color: var(--red)"><span class="swatch"></span>log full ker/source</span>
+              <span class="key" style="color: var(--green)"><span class="swatch"></span>log beta frac</span>
+            </div>
+          </div>
+          <div class="span-6">
+            <canvas id="globalTraceActiveGapScanChart" class="chart" width="560" height="300"></canvas>
+            <div class="legend">
+              <span class="key" style="color: var(--blue)"><span class="swatch"></span>log min active trace</span>
+              <span class="key" style="color: var(--red)"><span class="swatch"></span>log max full leak</span>
+            </div>
+          </div>
+          <div class="span-6">
+            <canvas id="traceToSourceKernelChart" class="chart" width="560" height="300"></canvas>
+            <div class="legend">
+              <span class="key" style="color: var(--blue)"><span class="swatch"></span>boundary C, u=.30</span>
+              <span class="key" style="color: var(--red)"><span class="swatch"></span>eval C, u=.30</span>
+              <span class="key" style="color: var(--green)"><span class="swatch"></span>eval C, u=.08</span>
+            </div>
+          </div>
+        </div>
+        <h2 style="margin-top:16px">Top Vector Stability Scan</h2>
+        <p>
+          The Douglas constant decreases, but the low-order eigenvector shape is
+          not fully stable yet. Low correlation means the finite top direction is
+          still moving as the Galerkin space changes.
+        </p>
+        <table id="topVectorScanTable"></table>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const colors = {
+      blue: "#2869d8",
+      red: "#c64242",
+      green: "#13795b",
+      amber: "#a66b00",
+      purple: "#6d4bc2",
+      grid: "#d7dce3",
+      ink: "#20242c",
+      muted: "#667085"
+    };
+
+    function sci(x) {
+      if (x === 0) return "0";
+      const ax = Math.abs(x);
+      if (ax >= 1e-3 && ax < 1e4) return x.toPrecision(5);
+      return x.toExponential(3);
+    }
+
+    function pct(x) {
+      return `${(100 * Number(x)).toFixed(4)}%`;
+    }
+
+    function setupCanvas(canvas) {
+      const rect = canvas.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = Math.max(1, Math.floor(rect.width * dpr));
+      canvas.height = Math.max(1, Math.floor(rect.height * dpr));
+      const ctx = canvas.getContext("2d");
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      return { ctx, w: rect.width, h: rect.height };
+    }
+
+    function drawAxes(ctx, x, y, w, h, y0 = null) {
+      ctx.strokeStyle = colors.grid;
+      ctx.lineWidth = 1;
+      ctx.strokeRect(x, y, w, h);
+      if (y0 !== null && y0 >= y && y0 <= y + h) {
+        ctx.beginPath();
+        ctx.moveTo(x, y0);
+        ctx.lineTo(x + w, y0);
+        ctx.stroke();
+      }
+    }
+
+    function drawHeatmap(data) {
+      const canvas = document.getElementById("jetHeatmap");
+      const { ctx, w, h } = setupCanvas(canvas);
+      const m = data.jet.matrix;
+      const n = m.length;
+      const pad = 42;
+      const size = Math.min(w - pad - 10, h - pad - 10);
+      const cell = size / n;
+      const maxAbs = Math.max(...m.flat().map(v => Math.abs(v)));
+
+      ctx.clearRect(0, 0, w, h);
+      ctx.font = "12px ui-monospace, monospace";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+
+      for (let i = 0; i < n; i++) {
+        ctx.fillStyle = colors.muted;
+        ctx.fillText(i, pad + i * cell + cell / 2, 18);
+        ctx.fillText(i, 20, pad + i * cell + cell / 2);
+      }
+
+      for (let r = 0; r < n; r++) {
+        for (let c = 0; c < n; c++) {
+          const v = m[r][c];
+          const intensity = Math.pow(Math.abs(v) / maxAbs, 0.35);
+          const base = v >= 0 ? [40, 105, 216] : [198, 66, 66];
+          const bg = base.map(channel => Math.round(248 - (248 - channel) * intensity));
+          ctx.fillStyle = `rgb(${bg[0]},${bg[1]},${bg[2]})`;
+          ctx.fillRect(pad + c * cell, pad + r * cell, cell, cell);
+          ctx.strokeStyle = "rgba(255,255,255,0.55)";
+          ctx.strokeRect(pad + c * cell, pad + r * cell, cell, cell);
+        }
+      }
+
+      ctx.strokeStyle = colors.ink;
+      ctx.strokeRect(pad, pad, size, size);
+    }
+
+    function drawVector(data) {
+      const canvas = document.getElementById("eigVector");
+      const { ctx, w, h } = setupCanvas(canvas);
+      const vec = data.jet.lowestEigenvector;
+      const pad = { l: 36, r: 12, t: 16, b: 28 };
+      const plotW = w - pad.l - pad.r;
+      const plotH = h - pad.t - pad.b;
+      const maxAbs = Math.max(...vec.map(v => Math.abs(v)));
+      const y0 = pad.t + plotH / 2;
+      const barW = plotW / vec.length * 0.68;
+
+      ctx.clearRect(0, 0, w, h);
+      drawAxes(ctx, pad.l, pad.t, plotW, plotH, y0);
+
+      ctx.font = "11px ui-monospace, monospace";
+      ctx.textAlign = "center";
+      for (let i = 0; i < vec.length; i++) {
+        const x = pad.l + (i + 0.5) * plotW / vec.length;
+        const y = y0 - (vec[i] / maxAbs) * (plotH * 0.44);
+        ctx.fillStyle = vec[i] >= 0 ? colors.blue : colors.red;
+        ctx.fillRect(x - barW / 2, Math.min(y, y0), barW, Math.abs(y - y0));
+        ctx.fillStyle = colors.muted;
+        ctx.fillText(String(i), x, h - 12);
+      }
+    }
+
+    function drawLineChart(canvasId, series, markers = []) {
+      const canvas = document.getElementById(canvasId);
+      const { ctx, w, h } = setupCanvas(canvas);
+      const pad = { l: 54, r: 18, t: 16, b: 34 };
+      const plotW = w - pad.l - pad.r;
+      const plotH = h - pad.t - pad.b;
+      const xs = series.flatMap(s => s.points.map(p => p.x)).concat(markers.map(m => m.x));
+      const ys = series.flatMap(s => s.points.map(p => p.y));
+      let minX = Math.min(...xs), maxX = Math.max(...xs);
+      let minY = Math.min(...ys), maxY = Math.max(...ys);
+      const yPad = (maxY - minY || 1) * 0.12;
+      minY -= yPad; maxY += yPad;
+
+      const xMap = x => pad.l + (x - minX) / (maxX - minX || 1) * plotW;
+      const yMap = y => pad.t + (maxY - y) / (maxY - minY || 1) * plotH;
+
+      ctx.clearRect(0, 0, w, h);
+      drawAxes(ctx, pad.l, pad.t, plotW, plotH, yMap(0));
+
+      ctx.font = "11px ui-monospace, monospace";
+      ctx.fillStyle = colors.muted;
+      ctx.textAlign = "right";
+      ctx.fillText(sci(maxY), pad.l - 6, pad.t + 4);
+      ctx.fillText(sci(minY), pad.l - 6, pad.t + plotH);
+      ctx.textAlign = "center";
+      ctx.fillText(minX.toFixed(2), pad.l, h - 12);
+      ctx.fillText(maxX.toFixed(2), pad.l + plotW, h - 12);
+
+      for (const marker of markers) {
+        const x = xMap(marker.x);
+        ctx.strokeStyle = marker.color;
+        ctx.setLineDash([4, 4]);
+        ctx.beginPath();
+        ctx.moveTo(x, pad.t);
+        ctx.lineTo(x, pad.t + plotH);
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+
+      for (const s of series) {
+        ctx.strokeStyle = s.color;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        s.points.forEach((p, i) => {
+          const x = xMap(p.x);
+          const y = yMap(p.y);
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        });
+        ctx.stroke();
+        ctx.fillStyle = s.color;
+        for (const p of s.points) {
+          ctx.beginPath();
+          ctx.arc(xMap(p.x), yMap(p.y), 3, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+    }
+
+    function drawSignedHeatmap(canvasId, matrix) {
+      const canvas = document.getElementById(canvasId);
+      if (!canvas || !matrix || !matrix.length) return;
+      const { ctx, w, h } = setupCanvas(canvas);
+      const n = matrix.length;
+      const pad = 42;
+      const size = Math.min(w - pad - 10, h - pad - 10);
+      const cell = size / n;
+      const transformed = matrix.map(row => row.map(v => {
+        const value = Number(v);
+        return Math.sign(value) * Math.log10(1 + Math.abs(value));
+      }));
+      const maxAbs = Math.max(...transformed.flat().map(v => Math.abs(v)), 1e-30);
+
+      ctx.clearRect(0, 0, w, h);
+      ctx.font = "12px ui-monospace, monospace";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+
+      for (let i = 0; i < n; i++) {
+        ctx.fillStyle = colors.muted;
+        ctx.fillText(i, pad + i * cell + cell / 2, 18);
+        ctx.fillText(i, 20, pad + i * cell + cell / 2);
+      }
+
+      for (let r = 0; r < n; r++) {
+        for (let c = 0; c < n; c++) {
+          const v = transformed[r][c];
+          const intensity = Math.pow(Math.abs(v) / maxAbs, 0.62);
+          const base = v >= 0 ? [40, 105, 216] : [198, 66, 66];
+          const bg = base.map(channel => Math.round(248 - (248 - channel) * intensity));
+          ctx.fillStyle = `rgb(${bg[0]},${bg[1]},${bg[2]})`;
+          ctx.fillRect(pad + c * cell, pad + r * cell, cell, cell);
+          ctx.strokeStyle = "rgba(255,255,255,0.55)";
+          ctx.strokeRect(pad + c * cell, pad + r * cell, cell, cell);
+        }
+      }
+
+      ctx.strokeStyle = colors.ink;
+      ctx.strokeRect(pad, pad, size, size);
+    }
+
+    function signedFill(value, maxAbs, gamma = 0.55) {
+      const intensity = Math.pow(Math.abs(value) / (maxAbs || 1), gamma);
+      const base = value >= 0 ? [40, 105, 216] : [198, 66, 66];
+      const bg = base.map(channel => Math.round(248 - (248 - channel) * intensity));
+      return `rgb(${bg[0]},${bg[1]},${bg[2]})`;
+    }
+
+    function drawMiniMatrix(ctx, matrix, x, y, size, label) {
+      const values = matrix.map(row => row.map(Number));
+      const n = values.length;
+      const cell = size / n;
+      const maxAbs = Math.max(...values.flat().map(v => Math.abs(v)), 1e-300);
+
+      ctx.fillStyle = colors.ink;
+      ctx.font = "12px ui-monospace, monospace";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(label, x + size / 2, y - 12);
+
+      for (let r = 0; r < n; r++) {
+        for (let c = 0; c < n; c++) {
+          const v = values[r][c];
+          ctx.fillStyle = signedFill(v, maxAbs);
+          ctx.fillRect(x + c * cell, y + r * cell, cell, cell);
+          ctx.strokeStyle = "rgba(255,255,255,0.75)";
+          ctx.strokeRect(x + c * cell, y + r * cell, cell, cell);
+          ctx.fillStyle = colors.ink;
+          ctx.font = "10px ui-monospace, monospace";
+          ctx.fillText(sci(v), x + c * cell + cell / 2, y + r * cell + cell / 2);
+        }
+      }
+      ctx.strokeStyle = colors.ink;
+      ctx.strokeRect(x, y, size, size);
+      ctx.fillStyle = colors.muted;
+      ctx.font = "10px ui-monospace, monospace";
+      ctx.fillText(`max ${sci(maxAbs)}`, x + size / 2, y + size + 14);
+    }
+
+    function drawFullThetaMatrixTriptych(data) {
+      const canvas = document.getElementById("fullThetaMatrixTriptych");
+      if (!canvas || !data.fullThetaTail) return;
+      const { ctx, w, h } = setupCanvas(canvas);
+      const active = data.fullThetaTail.activeSourcePlane;
+      const panels = [
+        ["core", active.coreMatrix],
+        ["tail", active.tailMatrix],
+        ["full", active.fullMatrix]
+      ];
+      ctx.clearRect(0, 0, w, h);
+      const gap = 18;
+      const top = 32;
+      const size = Math.min((w - 2 * gap - 36) / 3, h - 68);
+      const start = (w - (3 * size + 2 * gap)) / 2;
+      panels.forEach(([label, matrix], idx) => {
+        drawMiniMatrix(ctx, matrix, start + idx * (size + gap), top, size, label);
+      });
+    }
+
+    function drawFullThetaRatioBars(data) {
+      const canvas = document.getElementById("fullThetaRatioBars");
+      if (!canvas || !data.fullThetaTail) return;
+      const { ctx, w, h } = setupCanvas(canvas);
+      const ft = data.fullThetaTail;
+      const rows = [
+        ["global", Number(ft.global.tailRelativeToCoreOp), colors.green],
+        ["active", Number(ft.activeSourcePlane.tailRelativeToCore), colors.green],
+        ["ker/min", Number(ft.traceKernel.tailKerRelativeToCorePositiveMin), colors.blue],
+        ["Riesz", Number(ft.activeSourcePlane.tailOverCertifiedRieszLowerDiagnostic), colors.purple],
+        ["alpha", Number(ft.activeSourcePlane.projectorAlphaFromRieszCertificate), colors.red]
+      ].filter(row => row[1] > 0);
+      const logs = rows.map(row => Math.log10(row[1]));
+      const minLog = Math.floor(Math.min(...logs, -6)) - 1;
+      const maxLog = 0;
+      const pad = { l: 54, r: 18, t: 16, b: 40 };
+      const plotW = w - pad.l - pad.r;
+      const plotH = h - pad.t - pad.b;
+      const yMap = y => pad.t + (maxLog - y) / (maxLog - minLog) * plotH;
+
+      ctx.clearRect(0, 0, w, h);
+      drawAxes(ctx, pad.l, pad.t, plotW, plotH, null);
+      ctx.font = "10px ui-monospace, monospace";
+      ctx.fillStyle = colors.muted;
+      ctx.textAlign = "right";
+      ctx.fillText("10^0", pad.l - 6, yMap(0));
+      ctx.fillText(`10^${minLog}`, pad.l - 6, yMap(minLog));
+
+      for (const target of [-3, -6]) {
+        const y = yMap(target);
+        ctx.strokeStyle = colors.amber;
+        ctx.setLineDash([4, 4]);
+        ctx.beginPath();
+        ctx.moveTo(pad.l, y);
+        ctx.lineTo(pad.l + plotW, y);
+        ctx.stroke();
+        ctx.setLineDash([]);
+        ctx.fillStyle = colors.amber;
+        ctx.textAlign = "left";
+        ctx.fillText(`1e${target}`, pad.l + 4, y - 4);
+      }
+
+      const step = plotW / rows.length;
+      const barW = step * 0.55;
+      rows.forEach(([label, value, color], idx) => {
+        const logValue = Math.log10(value);
+        const x = pad.l + idx * step + step / 2;
+        const y = yMap(logValue);
+        const y0 = yMap(0);
+        ctx.fillStyle = color;
+        ctx.fillRect(x - barW / 2, y0, barW, y - y0);
+        ctx.fillStyle = colors.ink;
+        ctx.textAlign = "center";
+        ctx.fillText(logValue.toFixed(1), x, y - 8);
+        ctx.fillStyle = colors.muted;
+        ctx.fillText(label, x, h - 14);
+      });
+    }
+
+    function drawFullThetaSourceSpectrum(data) {
+      const canvas = document.getElementById("fullThetaSourceSpectrum");
+      if (!canvas || !data.sourceSideRieszRank) return;
+      const { ctx, w, h } = setupCanvas(canvas);
+      const r = data.sourceSideRieszRank;
+      const values = [
+        ["active top", Number(r.activeEigenvalues[1]), colors.blue],
+        ["active low", Number(r.activeEigenvalues[0]), colors.blue],
+        ["comp top", Number(r.complementTopEigenvalue), colors.red],
+        ["quad eps", Number(r.sourceGramErrorBound), colors.amber]
+      ].filter(row => row[1] > 0);
+      const logs = values.map(row => Math.log10(row[1]));
+      const minLog = Math.floor(Math.min(...logs)) - 1;
+      const maxLog = Math.ceil(Math.max(...logs)) + 1;
+      const pad = { l: 54, r: 18, t: 18, b: 44 };
+      const plotW = w - pad.l - pad.r;
+      const plotH = h - pad.t - pad.b;
+      const yMap = y => pad.t + (maxLog - y) / (maxLog - minLog) * plotH;
+
+      ctx.clearRect(0, 0, w, h);
+      drawAxes(ctx, pad.l, pad.t, plotW, plotH, null);
+      ctx.font = "10px ui-monospace, monospace";
+      ctx.fillStyle = colors.muted;
+      ctx.textAlign = "right";
+      ctx.fillText(`10^${maxLog}`, pad.l - 6, pad.t + 4);
+      ctx.fillText(`10^${minLog}`, pad.l - 6, pad.t + plotH);
+
+      const step = plotW / values.length;
+      const barW = step * 0.55;
+      values.forEach(([label, value, color], idx) => {
+        const x = pad.l + idx * step + step / 2;
+        const y = yMap(Math.log10(value));
+        ctx.fillStyle = color;
+        ctx.fillRect(x - barW / 2, y, barW, pad.t + plotH - y);
+        ctx.fillStyle = colors.ink;
+        ctx.textAlign = "center";
+        ctx.fillText(sci(value), x, y - 8);
+        ctx.fillStyle = colors.muted;
+        ctx.fillText(label, x, h - 22);
+        ctx.fillText(`10^${Math.log10(value).toFixed(1)}`, x, h - 10);
+      });
+    }
+
+    function quadraticValue(matrix, x, y) {
+      const m = matrix.map(row => row.map(Number));
+      return m[0][0] * x * x + (m[0][1] + m[1][0]) * x * y + m[1][1] * y * y;
+    }
+
+    function drawQuadraticWireframe(ctx, matrix, x0, y0, width, height, label, color) {
+      const samples = [];
+      const steps = 16;
+      let maxAbs = 1e-300;
+      for (let i = 0; i <= steps; i++) {
+        const row = [];
+        const x = -1 + 2 * i / steps;
+        for (let j = 0; j <= steps; j++) {
+          const y = -1 + 2 * j / steps;
+          const z = quadraticValue(matrix, x, y);
+          maxAbs = Math.max(maxAbs, Math.abs(z));
+          row.push({ x, y, z });
+        }
+        samples.push(row);
+      }
+
+      const cx = x0 + width / 2;
+      const baseY = y0 + height * 0.66;
+      const sx = width * 0.23;
+      const sy = height * 0.12;
+      const sz = height * 0.24;
+      const project = p => ({
+        x: cx + (p.x - p.y) * sx,
+        y: baseY + (p.x + p.y) * sy - (p.z / maxAbs) * sz
+      });
+
+      ctx.fillStyle = colors.ink;
+      ctx.font = "12px ui-monospace, monospace";
+      ctx.textAlign = "center";
+      ctx.fillText(label, cx, y0 + 14);
+      ctx.fillStyle = colors.muted;
+      ctx.font = "10px ui-monospace, monospace";
+      ctx.fillText(`max |q| ${sci(maxAbs)}`, cx, y0 + height - 8);
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 1.1;
+
+      for (let i = 0; i <= steps; i += 2) {
+        ctx.beginPath();
+        for (let j = 0; j <= steps; j++) {
+          const p = project(samples[i][j]);
+          if (j === 0) ctx.moveTo(p.x, p.y);
+          else ctx.lineTo(p.x, p.y);
+        }
+        ctx.stroke();
+      }
+      for (let j = 0; j <= steps; j += 2) {
+        ctx.beginPath();
+        for (let i = 0; i <= steps; i++) {
+          const p = project(samples[i][j]);
+          if (i === 0) ctx.moveTo(p.x, p.y);
+          else ctx.lineTo(p.x, p.y);
+        }
+        ctx.stroke();
+      }
+    }
+
+    function drawFullThetaSurface(data) {
+      const canvas = document.getElementById("fullThetaSurface");
+      if (!canvas || !data.fullThetaTail) return;
+      const { ctx, w, h } = setupCanvas(canvas);
+      const active = data.fullThetaTail.activeSourcePlane;
+      ctx.clearRect(0, 0, w, h);
+      const gap = 16;
+      const panelW = (w - gap - 24) / 2;
+      drawQuadraticWireframe(ctx, active.coreMatrix, 12, 10, panelW, h - 18, "core q(v)", colors.purple);
+      drawQuadraticWireframe(ctx, active.tailMatrix, 12 + panelW + gap, 10, panelW, h - 18, "tail q(v)", colors.green);
+    }
+
+    function normalizedCoefficientPoints(rows, index) {
+      const maxAbs = Math.max(...rows.map(row => Math.abs(row.coefficients[index])), 1e-30);
+      return rows.map(row => ({ x: row.u, y: row.coefficients[index] / maxAbs }));
+    }
+
+    function renderStats(data) {
+      const table = document.getElementById("statsTable");
+      const rows = [
+        ["model", "K min", "K|ker R min", "range residual", "Gamma^2 max", "repaired min"],
+        ...Object.values(data.quotient).map(q => [
+          `${q.label} ${q.domain}`,
+          sci(q.kMin),
+          sci(q.kerMin),
+          sci(q.rangeResidual),
+          sci(q.gamma2Max),
+          sci(q.repairedMin)
+        ])
+      ];
+      table.innerHTML = rows.map((row, idx) => {
+        const tag = idx === 0 ? "th" : "td";
+        return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+      }).join("");
+    }
+
+    function renderDouglas(data) {
+      const rows = data.douglasScan;
+      drawLineChart("douglasChart", [
+        {
+          color: colors.blue,
+          points: rows.map(r => ({ x: r.basis, y: Math.log10(r.gamma2Max) }))
+        },
+        {
+          color: colors.green,
+          points: rows.map(r => ({ x: r.basis, y: Math.log10(r.kerMin) }))
+        }
+      ]);
+
+      const tableRows = [
+        ["basis", "constraints", "K min", "K|ker R min", "range residual", "Gamma^2 max", "repaired min"],
+        ...rows.map(r => [
+          String(r.basis),
+          String(r.constraints),
+          sci(r.kMin),
+          sci(r.kerMin),
+          sci(r.rangeResidual),
+          sci(r.gamma2Max),
+          sci(r.repairedMin)
+        ])
+      ];
+      document.getElementById("douglasTable").innerHTML = tableRows.map((row, idx) => {
+        const tag = idx === 0 ? "th" : "td";
+        return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+      }).join("");
+    }
+
+    function normalizedPoints(grid, key) {
+      const maxAbs = Math.max(...grid.map(p => Math.abs(p[key])), 1e-30);
+      return grid.map(p => ({ x: p.s, y: p[key] / maxAbs }));
+    }
+
+    function renderTopVector(data) {
+      const top = data.topVector;
+      if (!top) return;
+      drawLineChart("topVectorChart", [
+        { color: colors.blue, points: normalizedPoints(top.grid, "u") },
+        { color: colors.green, points: normalizedPoints(top.grid, "source") },
+        { color: colors.red, points: normalizedPoints(top.grid, "nWitness") }
+      ]);
+      drawLineChart("traceChart", [
+        {
+          color: colors.purple,
+          points: top.traceCenters.map((x, i) => ({ x, y: top.traceValues[i] }))
+        }
+      ]);
+
+      const traceMax = Math.max(...top.traceValues.map(v => Math.abs(v)));
+      const metrics = [
+        ["model", `${top.model}, L=${top.L}`],
+        ["basis / traces", `${top.basis} / ${top.constraints}`],
+        ["Gamma^2 top", sci(top.gamma2Top)],
+        ["Gamma top", sci(top.gammaTop)],
+        ["range residual", sci(top.rangeResidual)],
+        ["max |Ru|", sci(traceMax)]
+      ];
+      document.getElementById("topVectorMetrics").innerHTML = metrics.map(([label, value]) => `
+        <div class="metric"><div class="label">${label}</div><div class="value">${value}</div></div>
+      `).join("");
+
+      if (data.topVectorScan) {
+        const rows = data.topVectorScan.rows;
+        const tableRows = [
+          ["basis", "traces", "Gamma^2 top", "corr prev", "u peak", "witness peak", "u zeros", "max |Ru|"],
+          ...rows.map(r => [
+            String(r.basis),
+            String(r.constraints),
+            sci(r.gamma2Top),
+            r.corrPrev === null ? "n/a" : sci(r.corrPrev),
+            r.uPeakS.toFixed(3),
+            r.nPeakS.toFixed(3),
+            String(r.uSignChanges),
+            sci(r.maxTraceAbs)
+          ])
+        ];
+        document.getElementById("topVectorScanTable").innerHTML = tableRows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.hardyProfile) {
+        const rows = data.hardyProfile.uLayers.map((uRow, idx) => {
+          const hRow = data.hardyProfile.sourceLayers[idx];
+          const wRow = data.hardyProfile.witnessLayers[idx];
+          return [
+            uRow.width.toFixed(2),
+            sci(uRow.left),
+            sci(uRow.right),
+            sci(hRow.left),
+            sci(hRow.right),
+            sci(wRow.left),
+            sci(wRow.right)
+          ];
+        });
+        const tableRows = [
+          [
+            "layer width",
+            "u left mass",
+            "u right mass",
+            "source left mass",
+            "source right mass",
+            "witness left mass",
+            "witness right mass"
+          ],
+          ...rows
+        ];
+        document.getElementById("hardyProfileTable").innerHTML = tableRows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.rieszProfile) {
+        const top = data.rieszProfile.topEnergyModes;
+        const rows = [
+          ["mode", "lambda", "source coeff", "witness coeff", "energy share", "witness share", "mode peak"],
+          ...top.map(r => [
+            String(r.mode),
+            sci(r.lambda),
+            sci(r.sourceCoeff),
+            sci(r.witnessCoeff),
+            `${(100 * r.energyFrac).toFixed(1)}%`,
+            `${(100 * r.witnessFrac).toFixed(2)}%`,
+            r.modePeakS.toFixed(3)
+          ])
+        ];
+        document.getElementById("rieszProfileTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.rieszScan) {
+        const rows = [
+          ["basis", "traces", "Gamma^2", "low2 energy", "low2 witness", "top3 energy", "eff rank", "top energy modes"],
+          ...data.rieszScan.rows.map(r => [
+            String(r.basis),
+            String(r.constraints),
+            sci(r.gamma2Top),
+            `${(100 * r.energyLow2).toFixed(1)}%`,
+            `${(100 * r.witnessLow2).toFixed(1)}%`,
+            `${(100 * r.energyTop3).toFixed(1)}%`,
+            r.energyEffectiveRank.toFixed(2),
+            r.topEnergyModes.map(m => m.mode).join(", ")
+          ])
+        ];
+        document.getElementById("rieszScanTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.windowScan) {
+        const label = w => `[${w.start},${w.stop})`;
+        const rows = [
+          ["basis", "traces", "Gamma^2", "largest proper", "proper share", "inner window", "inner share", "best single", "single share", "tail 2+"],
+          ...data.windowScan.rows.map(r => {
+            const fullWidth = r.positiveModes;
+            const proper = r.topWindows.find(w => w.width < fullWidth) || r.topWindows[0];
+            const inner = r.topWindows.find(w => w.start > 0 && w.stop < fullWidth) || proper;
+            const single = r.topSingles[0];
+            const tail2 = r.tails.find(t => t.start === 2);
+            return [
+              String(r.basis),
+              String(r.constraints),
+              sci(r.gamma2Full),
+              label(proper),
+              `${(100 * proper.fractionOfFull).toFixed(1)}%`,
+              label(inner),
+              `${(100 * inner.fractionOfFull).toFixed(1)}%`,
+              String(single.mode),
+              `${(100 * single.fractionOfFull).toFixed(1)}%`,
+              tail2 ? `${(100 * tail2.fractionOfFull).toFixed(1)}%` : "n/a"
+            ];
+          })
+        ];
+        document.getElementById("windowScanTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.highTail) {
+        const rows = [
+          ["basis", "traces", "nullity", "Gamma^2", "dense leakage", "tail <=10%", "tail <=5%", "top modes"],
+          ...data.highTail.rows.map(r => [
+            String(r.basis),
+            String(r.constraints),
+            String(r.nullity),
+            sci(r.gamma2),
+            sci(r.denseTraceMax),
+            String(r.tailCutoff10),
+            String(r.tailCutoff05),
+            r.topModes.map(m => m.mode).join(", ")
+          ])
+        ];
+        document.getElementById("highTailTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.sourceEnvelope) {
+        const rows = [
+          ["basis", "tail@4 op", "tail@4 scalar", "tail@6 op", "tail@6 scalar", "sharpness@6"],
+          ...data.sourceEnvelope.rows.map(r => {
+            const tail4 = r.tails.find(t => t.start === 4) || r.tails[r.tails.length - 1];
+            const tail6 = r.tails.find(t => t.start === 6) || r.tails[r.tails.length - 1];
+            return [
+              String(r.basis),
+              `${(100 * tail4.operatorFrac).toFixed(2)}%`,
+              `${(100 * tail4.scalarFrac).toFixed(2)}%`,
+              `${(100 * tail6.operatorFrac).toFixed(2)}%`,
+              `${(100 * tail6.scalarFrac).toFixed(2)}%`,
+              sci(tail6.slack)
+            ];
+          })
+        ];
+        document.getElementById("sourceEnvelopeTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.sourcePacket) {
+        const rows = [
+          ["basis", "peak mode", "peak lambda", "peak share", "sig modes", "tail after sig", "tail lambda >=1e-2", "lambda cutoff <=5%"],
+          ...data.sourcePacket.rows.map(r => {
+            const tail1e2 = r.spectralTails.find(t => Math.abs(t.lambdaThreshold - 1e-2) < 1e-15);
+            const cutoff = r.lambdaCutoffScalar05 === null ? "none" : sci(r.lambdaCutoffScalar05);
+            return [
+              String(r.basis),
+              String(r.peakMode),
+              sci(r.peakLambda),
+              `${(100 * r.peakShare).toFixed(1)}%`,
+              r.significantModes.join(", "),
+              `${(100 * r.tailAfterSignificantScalarFrac).toFixed(2)}%`,
+              tail1e2 ? `${(100 * tail1e2.scalarFrac).toFixed(2)}%` : "n/a",
+              cutoff
+            ];
+          })
+        ];
+        document.getElementById("sourcePacketTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.commutedSource) {
+        const rows = [
+          ["basis", "lambda range", "Gamma^2", "m=0 op/G", "m=1 op/G", "m=2 op/G", "m=1 HS/G"],
+          ...data.commutedSource.rows.map(r => {
+            const momentMap = Object.fromEntries(r.moments.map(m => [String(m.moment), m]));
+            return [
+              String(r.basis),
+              `${sci(r.lambdaMin)} - ${sci(r.lambdaMax)}`,
+              sci(r.gamma2),
+              sci(momentMap["0"].operatorFrac),
+              sci(momentMap["1"].operatorFrac),
+              sci(momentMap["2"].operatorFrac),
+              sci(momentMap["1"].hilbertSchmidtFrac)
+            ];
+          })
+        ];
+        document.getElementById("commutedSourceTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.threePart) {
+        const rows = [
+          ["basis", "traces", "Gamma^2", "tail <=50%", "tail <=25%", "tail <=10%", "tail <=5%", "top source mode", "top share", "dense trace m0"],
+          ...data.threePart.rows.map(r => {
+            const thresholds = Object.fromEntries(r.tailThresholds.map(t => [String(t.threshold), t.cutoff]));
+            const topMode = r.lowModes.reduce((best, m) => m.singleFrac > best.singleFrac ? m : best, r.lowModes[0]);
+            return [
+              String(r.basis),
+              String(r.constraints),
+              sci(r.gamma2),
+              String(thresholds["0.5"]),
+              String(thresholds["0.25"]),
+              String(thresholds["0.1"]),
+              String(thresholds["0.05"]),
+              String(topMode.mode),
+              `${(100 * topMode.singleFrac).toFixed(1)}%`,
+              sci(r.lowModes[0].denseTraceMax)
+            ];
+          })
+        ];
+        document.getElementById("threePartTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.basis16LowModes) {
+        const modes = data.basis16LowModes.rows[0].lowModes;
+        const rows = [
+          ["basis 16 mode", "lambda", "single share", "source/sqrt(lambda)", "dense trace max", "dense trace rms"],
+          ...modes.map(m => [
+            String(m.mode),
+            sci(m.lambda),
+            `${(100 * m.singleFrac).toFixed(1)}%`,
+            sci(m.sourceOverSqrtLambda),
+            sci(m.denseTraceMax),
+            sci(m.denseTraceRms)
+          ])
+        ];
+        document.getElementById("basis16ModeTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.traceRefinement) {
+        const rows = [
+          ["traces", "rank", "nullity", "Gamma^2", "tail <=10%", "tail <=5%", "top modes", "dense leakage"],
+          ...data.traceRefinement.rows.map(r => {
+            const thresholds = Object.fromEntries(r.tailCutoffs.map(t => [String(t.threshold), t.cutoff]));
+            return [
+              String(r.constraints),
+              String(r.rank),
+              String(r.nullity),
+              sci(r.gamma2),
+              String(thresholds["0.1"]),
+              String(thresholds["0.05"]),
+              r.topModes.map(m => m.mode).join(", "),
+              sci(r.lowModeDenseMax)
+            ];
+          })
+        ];
+        document.getElementById("traceRefinementTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.lambdaDerivatives) {
+        const d = data.lambdaDerivatives;
+        const rows = [
+          ["quantity", "value"],
+          ["mesh h", sci(d.h)],
+          ["min spectral gap", sci(d.minGap)],
+          ["min consecutive cos", sci(d.minConsecutiveCos)],
+          ["sup ||e||", sci(d.supNormE)],
+          ["sup ||e'||", sci(d.supNormD1)],
+          ["sup ||e''||", sci(d.supNormD2)],
+          ["largest |e_k'|", `e${d.coefficients.reduce((best, row) => row.supD1 > best.supD1 ? row : best, d.coefficients[0]).k}`],
+          ["largest |e_k''|", `e${d.coefficients.reduce((best, row) => row.supD2 > best.supD2 ? row : best, d.coefficients[0]).k}`]
+        ];
+        document.getElementById("lambdaDerivativeTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.traceResolution) {
+        const rows = [
+          ["traces", "cutoff", "fill distance", "dense op", "d trace op", "mesh bound", "ratio", "J0", "J3"],
+          ...data.traceResolution.rows.map(r => [
+            String(r.constraints),
+            String(r.cutoff),
+            sci(r.fillDistance),
+            sci(r.denseTraceOp),
+            sci(r.traceDerivativeOp),
+            sci(r.meshBound),
+            sci(r.denseOverBound),
+            sci(r.jetConstants[0]),
+            sci(r.jetConstants[3])
+          ])
+        ];
+        document.getElementById("traceResolutionTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.lambdaClosure) {
+        const d = data.lambdaClosure;
+        const rows = [
+          ["active interval", "max q", "min |e8|", "rank", "min gap", "q0 closure", "q2 closure", "q4 closure"],
+          [
+            `[${d.sMin}, ${d.sMax}]`,
+            String(d.maxQ),
+            sci(d.minAbsPivot),
+            `${d.minRank}/${d.expectedRank}`,
+            sci(d.minGap),
+            sci(d.maxClosureNormByQ[0]),
+            sci(d.maxClosureNormByQ[2]),
+            sci(d.maxClosureNormByQ[4])
+          ]
+        ];
+        document.getElementById("lambdaClosureTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.sourceConcomitant) {
+        const rowsByQ = new Map();
+        for (const r of data.sourceConcomitant.rows) {
+          const key = String(r.qIntegrations);
+          if (!rowsByQ.has(key)) rowsByQ.set(key, []);
+          rowsByQ.get(key).push(r.relativeResidual);
+        }
+        const qSummary = Array.from(rowsByQ.entries()).map(([q, vals]) => {
+          const lo = Math.min(...vals);
+          const hi = Math.max(...vals);
+          return `Q${q}: ${lo.toFixed(2)}-${hi.toFixed(2)}`;
+        }).join("; ");
+        const rows = [
+          ["test", "s0", "t count", "min residual", "max residual", "by Q"],
+          [
+            "raw IBP row",
+            String(data.sourceConcomitant.actualS0),
+            String(data.sourceConcomitant.tValues.length),
+            sci(Math.min(...data.sourceConcomitant.rows.map(r => r.relativeResidual))),
+            sci(Math.max(...data.sourceConcomitant.rows.map(r => r.relativeResidual))),
+            qSummary
+          ]
+        ];
+        document.getElementById("sourceConcomitantTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.traceConcomitant) {
+        const summarizeTrace = d => {
+          const rowsByQ = new Map();
+          for (const r of d.rows) {
+            const key = String(r.maxTraceQ);
+            if (!rowsByQ.has(key)) rowsByQ.set(key, []);
+            rowsByQ.get(key).push(r.relativeResidual);
+          }
+          const all = d.rows.map(r => r.relativeResidual);
+          return { rowsByQ, all };
+        };
+        const pick = (rowsByQ, q) => {
+          const vals = rowsByQ.get(String(q));
+          if (!vals) return "n/a";
+          return `${Math.min(...vals).toExponential(2)}-${Math.max(...vals).toExponential(2)}`;
+        };
+        const summary = summarizeTrace(data.traceConcomitant);
+        const rows = [
+          ["test", "s0", "max q", "min residual", "max residual", "q6", "q8", "q10"],
+          [
+            "trace Green row",
+            String(data.traceConcomitant.actualS0),
+            String(data.traceConcomitant.maxTraceQ),
+            sci(Math.min(...summary.all)),
+            sci(Math.max(...summary.all)),
+            pick(summary.rowsByQ, 6),
+            pick(summary.rowsByQ, 8),
+            pick(summary.rowsByQ, 10)
+          ]
+        ];
+        if (data.traceConcomitantExact) {
+          const exact = summarizeTrace(data.traceConcomitantExact);
+          rows.push([
+            "analytic e row",
+            String(data.traceConcomitantExact.s0),
+            String(data.traceConcomitantExact.maxTraceQ),
+            sci(Math.min(...exact.all)),
+            sci(Math.max(...exact.all)),
+            pick(exact.rowsByQ, 6),
+            pick(exact.rowsByQ, 8),
+            pick(exact.rowsByQ, 10)
+          ]);
+        }
+        document.getElementById("traceConcomitantTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.lagrangeAdjoint) {
+        const rows = data.lagrangeAdjoint.rows;
+        const pstars = rows.map(r => r.pStarH);
+        const ratios = rows.map(r => r.pStarOverBoundaryNorm);
+        const table = [
+          ["test", "s0", "identity defect", "P*h range", "|P*h|/|B| range"],
+          [
+            "Lagrange adjoint",
+            String(data.lagrangeAdjoint.s0),
+            sci(data.lagrangeAdjoint.maxIdentityDefect),
+            `${Math.min(...pstars).toFixed(2)} to ${Math.max(...pstars).toFixed(2)}`,
+            `${Math.min(...ratios).toFixed(2)} to ${Math.max(...ratios).toFixed(2)}`
+          ]
+        ];
+        document.getElementById("lagrangeAdjointTable").innerHTML = table.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.energyControl) {
+        const boundary = data.energyControl.rows.map(r => r.boundaryNorm);
+        const adjoint = data.energyControl.rows.map(r => r.adjointEvalNorm);
+        const combined = data.energyControl.rows.map(r => r.combinedNorm);
+        const table = [
+          ["test", "basis/null", "lambda min", "B norm range", "adjoint norm range", "combined max"],
+          [
+            "finite A-control",
+            `${data.energyControl.basis}/${data.energyControl.nullity}`,
+            sci(data.energyControl.lambdaMin),
+            `${Math.min(...boundary).toFixed(0)} to ${Math.max(...boundary).toFixed(0)}`,
+            `${Math.min(...adjoint).toFixed(0)} to ${Math.max(...adjoint).toFixed(0)}`,
+            sci(Math.max(...combined))
+          ]
+        ];
+        document.getElementById("energyControlTable").innerHTML = table.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.splitControl) {
+        const highRange = cutoff => {
+          const vals = data.splitControl.rows.map(r =>
+            r.splits.find(s => s.cutoff === cutoff).highFrac
+          );
+          return `${Math.min(...vals).toExponential(2)}-${Math.max(...vals).toExponential(2)}`;
+        };
+        const momentVals = data.splitControl.rows.map(r => {
+          const split = r.splits.find(s => s.cutoff === 4);
+          return split.momentBounds.find(m => m.moment === 1).highBoundFrac;
+        });
+        const table = [
+          ["test", "basis/null", "high@2", "high@3", "high@4", "high@5", "m1 bound@4"],
+          [
+            "low/high split",
+            `${data.splitControl.basis}/${data.splitControl.nullity}`,
+            highRange(2),
+            highRange(3),
+            highRange(4),
+            highRange(5),
+            `${Math.min(...momentVals).toExponential(2)}-${Math.max(...momentVals).toExponential(2)}`
+          ]
+        ];
+        document.getElementById("splitControlTable").innerHTML = table.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.splitBasisScan) {
+        const rows = [
+          ["basis", "cons/null", "lambda min", "cut<=1e-2", "cut<=1e-3", "cut<=1e-4", "high@4", "high@5"]
+        ];
+        for (const r of data.splitBasisScan.rows) {
+          const byCut = new Map(r.cutoffSummaries.filter(Boolean).map(s => [s.cutoff, s.maxHighFrac]));
+          rows.push([
+            String(r.basis),
+            `${r.constraints}/${r.nullity}`,
+            sci(r.lambdaMin),
+            String(r.thresholdCutoffs["1e-2"]),
+            String(r.thresholdCutoffs["1e-3"]),
+            String(r.thresholdCutoffs["1e-4"]),
+            byCut.has(4) ? sci(byCut.get(4)) : "n/a",
+            byCut.has(5) ? sci(byCut.get(5)) : "n/a"
+          ]);
+        }
+        document.getElementById("splitBasisTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.hardyGraph) {
+        const rows = [["cutoff", "C4 max", "C6 max", "C8 max", "C10 max"]];
+        for (const cutoff of [2, 3, 4, 5]) {
+          const subset = data.hardyGraph.rows.filter(r => r.cutoff === cutoff);
+          const maxFor = order => Math.max(...subset.map(r =>
+            r.graph.find(g => g.order === order).constant
+          ));
+          rows.push([
+            String(cutoff),
+            sci(maxFor(4)),
+            sci(maxFor(6)),
+            sci(maxFor(8)),
+            sci(maxFor(10))
+          ]);
+        }
+        document.getElementById("hardyGraphTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.graphEnergyBridge) {
+        const rows = [["cutoff", "G6", "G8", "G10"]];
+        for (const cutoff of [2, 3, 4, 5]) {
+          const row = data.graphEnergyBridge.rows.find(r => r.cutoff === cutoff);
+          const get = order => row.constants.find(c => c.order === order).constant;
+          rows.push([String(cutoff), sci(get(6)), sci(get(8)), sci(get(10))]);
+        }
+        document.getElementById("graphEnergyTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.commutedKernelEnergy) {
+        const rows = [["cutoff", "S6", "S8", "S10", "min S8"]];
+        for (const cutoff of [2, 3, 4, 5]) {
+          const get = order => data.commutedKernelEnergy.rows.find(
+            r => r.cutoff === cutoff && r.order === order
+          );
+          rows.push([
+            String(cutoff),
+            sci(get(6).constant),
+            sci(get(8).constant),
+            sci(get(10).constant),
+            sci(get(8).sMin)
+          ]);
+        }
+        document.getElementById("commutedKernelTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.commutedDominance) {
+        const rows = [["cutoff", "D6", "D8", "D10", "D8 < 1"]];
+        for (const cutoff of [2, 3, 4, 5]) {
+          const get = order => data.commutedDominance.rows.find(
+            r => r.cutoff === cutoff && r.order === order
+          );
+          rows.push([
+            String(cutoff),
+            sci(get(6).product),
+            sci(get(8).product),
+            sci(get(10).product),
+            get(8).subunit ? "yes" : "no"
+          ]);
+        }
+        document.getElementById("commutedDominanceTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.commutedBasisScan) {
+        const rows = [["basis", "pos", "D10 M5", "D12 M5", "D10 M6", "D12 M6"]];
+        for (const result of data.commutedBasisScan.results) {
+          const get = (cutoff, order) => result.rows.find(
+            r => r.cutoff === cutoff && r.order === order
+          );
+          const value = (cutoff, order) => {
+            const row = get(cutoff, order);
+            return row && !row.emptyHighBlock ? sci(row.product) : "empty";
+          };
+          rows.push([
+            String(result.basis),
+            String(result.positiveModes),
+            value(5, 10),
+            value(5, 12),
+            value(6, 10),
+            value(6, 12)
+          ]);
+        }
+        document.getElementById("commutedBasisScanTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.compactObstruction) {
+        const rows = [["freq", "S10/W10", "S10", "W10"]];
+        for (const row of data.compactObstruction.rows) {
+          rows.push([
+            sci(row.frequency),
+            sci(row.ratio),
+            sci(row.energy),
+            sci(row.sobolevNorm2)
+          ]);
+        }
+        document.getElementById("compactObstructionTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.auxRegularizer) {
+        const rows = [
+          ["regularizer", "control", "absorb", "product/fraction"],
+          [
+            "W10",
+            sci(data.auxRegularizer.sobolevControl),
+            sci(data.auxRegularizer.sobolevAbsorb),
+            sci(data.auxRegularizer.sobolevRouteProduct)
+          ],
+          [
+            "Ssrc",
+            "1",
+            sci(data.auxRegularizer.sourceRangeAbsorb),
+            sci(data.auxRegularizer.sourceRangeAbsorbFrac)
+          ]
+        ];
+        document.getElementById("auxRegularizerTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.sourceWindow) {
+        const rows = [["quantity", "value"]];
+        rows.push(["integrated high/full", sci(data.sourceWindow.integratedHighFullFrac)]);
+        rows.push(["integrated high eta", sci(data.sourceWindow.integratedHighAbsorb)]);
+        rows.push(["worst u", sci(data.sourceWindow.worstSingle.u)]);
+        rows.push(["worst high/full", sci(data.sourceWindow.worstSingle.highFullFrac)]);
+        document.getElementById("sourceWindowTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.sourceWindowRefinement) {
+        const rows = [
+          ["basis", "traces", "pos", "src nodes", "integrated high/full", "worst high/full", "worst u"],
+          ...data.sourceWindowRefinement.rows.map(row => [
+            String(row.basis),
+            String(row.constraints),
+            String(row.positiveModes),
+            String(row.sourceCount),
+            sci(row.integratedHighFullFrac),
+            sci(row.worstSingleHighFullFrac),
+            row.worstU.toFixed(5)
+          ])
+        ];
+        document.getElementById("sourceWindowRefinementTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.sourceWindowLipschitz) {
+        const rows = [
+          ["quantity", "value"],
+          ["sample max high/full", sci(data.sourceWindowLipschitz.maxSampleHighFullFrac)],
+          ["max high Lipschitz", sci(data.sourceWindowLipschitz.maxHighLipAbsorb)],
+          ["mesh radius", sci(data.sourceWindowLipschitz.meshRadius)],
+          ["cover high/full", sci(data.sourceWindowLipschitz.coverHighFullFracVsMinFull)]
+        ];
+        document.getElementById("sourceWindowLipschitzTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.sourceWindowDerivative) {
+        const fdMax = Math.max(
+          ...data.sourceWindowDerivative.finiteDifferenceChecks.map(row =>
+            Math.min(...row.checks.map(check => check.relativeDefect))
+          )
+        );
+        const rows = [
+          ["quantity", "value"],
+          ["FD derivative rel", sci(fdMax)],
+          ["sample max high/full", sci(data.sourceWindowDerivative.maxSampleHighFullFrac)],
+          ["max dE high", sci(data.sourceWindowDerivative.maxAnalyticDerivativeHighAbsorb)],
+          ["dE high/full", sci(data.sourceWindowDerivative.maxAnalyticDerivativeHighFullFrac)],
+          ["cover high/full", sci(data.sourceWindowDerivative.analyticCoverHighFullFracVsMinFull)]
+        ];
+        document.getElementById("sourceWindowDerivativeTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.closedTraceHardyGreen) {
+        const rows = [
+          ["u", "E constant", "dE constant", "range defect"],
+          ...data.closedTraceHardyGreen.rows.map(row => [
+            row.u.toFixed(2),
+            sci(row.EConstant),
+            sci(row.dEConstant),
+            sci(row.maxRangeRelativeDefect)
+          ])
+        ];
+        document.getElementById("closedTraceHardyGreenTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.adjointEvalRepresenter) {
+        const rows = [
+          ["quantity", "value"],
+          ["eval repr norm^2", sci(data.adjointEvalRepresenter.evalRepresenterNorm2)],
+          ["range defect", sci(data.adjointEvalRepresenter.evalRangeRelativeDefect)],
+          ["factor defect", sci(data.adjointEvalRepresenter.maxFactorRelativeDefect)],
+          ["cover |p|", sci(data.adjointEvalRepresenter.coverAbsPStar)],
+          ["cover |p'|", sci(data.adjointEvalRepresenter.coverAbsDPStar)],
+          ["cover eval", sci(data.adjointEvalRepresenter.coverEvalNorm2)],
+          ["cover dEval", sci(data.adjointEvalRepresenter.coverDEvalNorm2)]
+        ];
+        document.getElementById("adjointEvalRepresenterTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.boundaryRowRepresenter) {
+        const rows = [
+          ["quantity", "value"],
+          ["jet range defect", sci(data.boundaryRowRepresenter.maxJetRangeRelativeDefect)],
+          ["factor defect", sci(data.boundaryRowRepresenter.maxFactorRelativeDefect)],
+          ["cover ||b||", sci(data.boundaryRowRepresenter.coverBNorm)],
+          ["cover ||b'||", sci(data.boundaryRowRepresenter.coverDBNorm)],
+          ["cover boundary", sci(data.boundaryRowRepresenter.coverBoundaryNorm2)],
+          ["cover dBoundary", sci(data.boundaryRowRepresenter.coverDBoundaryNorm2)]
+        ];
+        document.getElementById("boundaryRowRepresenterTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.fixedRepresenterTheorem) {
+        const env = data.fixedRepresenterTheorem.coefficientEnvelope;
+        const rows = [
+          ["basis", "constraints", "pos/high", "lambda hi min", "eval norm^2", "eval cover", "boundary cover", "d-boundary", "defect"],
+          ...data.fixedRepresenterTheorem.rows.map(row => [
+            row.basis,
+            row.constraints,
+            `${row.positiveModes}/${row.highModes}`,
+            sci(row.lambdaMinHigh),
+            sci(row.evalRepresenterNorm2),
+            sci(row.evalCoverNorm2),
+            sci(row.boundaryCoverNorm2),
+            sci(row.boundaryDerivativeCoverNorm2),
+            sci(row.maxJetRangeRelativeDefect)
+          ]),
+          ["cover |p|", sci(env.coverAbsP), "cover |p'|", sci(env.coverAbsDP), "grid", env.sourceGrid, "window", `${env.sourceMin}-${env.sourceMax}`, ""]
+        ];
+        document.getElementById("fixedRepresenterTheoremTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.localTraceTower) {
+        const rows = [
+          ["basis", "tower", "rank/null", "pos/high", "eval norm^2", "D7 norm^2", "defect"],
+          ...data.localTraceTower.rows.map(row => [
+            row.basis,
+            row.towerConstraints,
+            `${row.rank}/${row.nullity}`,
+            `${row.positiveModes}/${row.highModes}`,
+            sci(row.jetRepresenters[0].norm2),
+            sci(row.jetRepresenters[7].norm2),
+            sci(row.maxRangeRelativeDefect)
+          ]),
+          ["lambda0", sci(data.localTraceTower.lambda0), "lambda1", sci(data.localTraceTower.lambda1), "e8(s0)", sci(data.localTraceTower.e8AtS0), ""]
+        ];
+        document.getElementById("localTraceTowerTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.localTraceTowerSource) {
+        const rows = [
+          ["basis", "tower", "pos/high", "max E high", "E high/full", "max dE high", "dE high/full"],
+          ...data.localTraceTowerSource.rows.map(row => [
+            row.basis,
+            row.towerConstraints,
+            `${row.positiveModes}/${row.highModes}`,
+            sci(row.maxHighConstant),
+            sci(row.maxHighFullFrac),
+            sci(row.maxDerivativeHighConstant),
+            sci(row.maxDerivativeHighFullFrac)
+          ]),
+          ["source grid", data.localTraceTowerSource.sourceGrid, "window", `${data.localTraceTowerSource.sourceMin}-${data.localTraceTowerSource.sourceMax}`, "e8(s0)", sci(data.localTraceTowerSource.e8AtS0), ""]
+        ];
+        document.getElementById("localTraceTowerSourceTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.globalTraceSource) {
+        const rows = [
+          ["basis", "constraints", "pos/high", "max E high", "E high/full", "max dE high", "dE high/full"],
+          ...data.globalTraceSource.rows.map(row => [
+            row.basis,
+            row.constraints,
+            `${row.positiveModes}/${row.highModes}`,
+            sci(row.maxHighConstant),
+            sci(row.maxHighFullFrac),
+            sci(row.maxDerivativeHighConstant),
+            sci(row.maxDerivativeHighFullFrac)
+          ]),
+          ["source grid", data.globalTraceSource.sourceGrid, "trace rule", data.globalTraceSource.constraintRule, "ratio", data.globalTraceSource.constraintRatio, ""]
+        ];
+        document.getElementById("globalTraceSourceTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.globalTraceKills) {
+        const rows = [
+          ["basis", "local/global", "high", "source top", "trace L2", "trace/source", "ker source"],
+          ...data.globalTraceKills.rows.map(row => {
+            const top = (row.topSourceDirections && row.topSourceDirections[0]) || {};
+            return [
+              row.basis,
+              `${row.localTowerConstraints}/${row.globalTraceConstraints}`,
+              row.highModes,
+              sci(row.sourceTopEigenvalue),
+              sci(top.globalTraceL2),
+              sci(top.tracePerSourceNorm),
+              sci(row.sourceConstantOnGlobalTraceKernel)
+            ];
+          }),
+          [
+            "source grid",
+            data.globalTraceKills.sourceGrid,
+            "window",
+            `${data.globalTraceKills.sourceMin}-${data.globalTraceKills.sourceMax}`,
+            "s0",
+            sci(data.globalTraceKills.s0),
+            ""
+          ]
+        ];
+        document.getElementById("globalTraceKillsTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.globalTraceGap) {
+        const penaltyAt = (row, beta) => {
+          const target = Number(beta);
+          return (row.penalty || []).find(item => Number(item.beta) === target) || {};
+        };
+        const rows = [
+          ["basis", "high/active", "source top", "active C", "active ker frac", "full ker frac", "beta 1e8 frac"],
+          ...data.globalTraceGap.rows.map(row => [
+            row.basis,
+            `${row.highModes}/${row.sourceActiveDim}`,
+            sci(row.sourceTop),
+            sci(row.activeTraceOnlyConstantNormed),
+            sci(row.activeSourceOnTraceKernelFrac),
+            sci(row.sourceOnTraceKernelFrac),
+            sci(penaltyAt(row, 1e8).constantFracOfSourceTop)
+          ]),
+          [
+            "active tol",
+            data.globalTraceGap.rows[0] ? sci(data.globalTraceGap.rows[0].sourceActiveTol) : "",
+            "source grid",
+            data.globalTraceGap.sourceGrid,
+            "cutoff",
+            data.globalTraceGap.cutoff,
+            ""
+          ]
+        ];
+        document.getElementById("globalTraceGapTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.globalTraceActiveGapScan) {
+        const grouped = aggregateActiveGapRows(data.globalTraceActiveGapScan.rows);
+        const rows = [
+          ["basis", "active dims", "min active trace", "max active ker/source", "max full ker/source"],
+          ...grouped.map(row => [
+            row.basis,
+            row.activeDims.join(","),
+            sci(row.minActiveTrace),
+            sci(row.maxActiveKernelFrac),
+            sci(row.maxFullKernelFrac)
+          ]),
+          [
+            "ratios",
+            data.globalTraceActiveGapScan.globalConstraintRatios.join(", "),
+            "active tols",
+            data.globalTraceActiveGapScan.activeTols.join(", "),
+            ""
+          ]
+        ];
+        document.getElementById("globalTraceActiveGapScanTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.globalTraceActiveRange) {
+        const rows = [
+          ["basis", "ratio", "active tol", "active/rank", "relative residual", "coeff Frobenius"],
+          ...data.globalTraceActiveRange.rows.map(row => [
+            row.basis,
+            row.ratio,
+            sci(row.activeTol),
+            `${row.activeDim}/${row.traceRankOnActive}`,
+            sci(row.rangeResidualRelative),
+            sci(row.coefficientFrob)
+          ])
+        ];
+        document.getElementById("globalTraceActiveRangeTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.traceToSourceKernelProfile) {
+        const profile = data.traceToSourceKernelProfile;
+        const statsFor = component => profile.rowProfiles
+          .filter(row => row.component === component)
+          .map(row => row.stats);
+        const maxOf = (stats, key) => Math.max(...stats.map(row => Number(row[key] || 0)), 0);
+        const rows = [
+          ["basis", "active/rank", "rel residual", "coeff op", "max |C_bdry|", "max |C_eval|"],
+          [
+            profile.basis,
+            `${profile.activeDim}/${profile.traceRankOnActive}`,
+            sci(profile.rangeResidualRelative),
+            sci(profile.coefficientOperator),
+            sci(maxOf(statsFor("boundary"), "maxAbs")),
+            sci(maxOf(statsFor("adjointEval"), "maxAbs"))
+          ]
+        ];
+        document.getElementById("traceToSourceKernelTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.traceToSourceKernelRefinement) {
+        const rows = [
+          ["trace samples", "rank", "rel residual", "coeff op", "raw L2(K)", "weighted L2(K)"],
+          ...data.traceToSourceKernelRefinement.rows.map(row => [
+            row.traceCount,
+            row.traceRankOnActive,
+            sci(row.rangeResidualRelative),
+            sci(row.coefficientOperator),
+            sci(row.maxDensityL2),
+            sci(row.weightedMaxDensityL2)
+          ])
+        ];
+        document.getElementById("traceToSourceRefinementTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.traceWeightedFrameBasisScan) {
+        const rows = [
+          ["basis", "traces", "active/rank", "frame min", "density op", "max row L2", "bound op"],
+          ...data.traceWeightedFrameBasisScan.rows.map(row => [
+            row.basis,
+            row.traceCount,
+            `${row.activeDim}/${row.frameRank}`,
+            sci(row.frameMin),
+            sci(row.densityOperator),
+            sci(row.maxRowDensityL2),
+            sci(row.frameBoundOperator)
+          ])
+        ];
+        document.getElementById("traceWeightedFrameTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.traceFrameContinuumPassage) {
+        const c = data.traceFrameContinuumPassage;
+        const rows = [
+          ["rows", "basis range", "active dims", "gamma floor", "max residual", "max row L2"],
+          [
+            c.rowCount,
+            c.basisRange.join("-"),
+            c.activeDims.join(","),
+            sci(c.observedGammaFloor),
+            sci(c.maxRangeResidualRelative),
+            sci(c.maxRowDensityL2)
+          ]
+        ];
+        document.getElementById("traceFramePassageTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.traceQuadratureStability) {
+        const rows = [
+          ["basis", "trace counts", "frame min drift", "max row L2 drift"],
+          ...data.traceQuadratureStability.groups
+            .filter(group => group.firstToLastRelativeChanges)
+            .map(group => [
+              group.basis,
+              group.traceCounts.join("->"),
+              pct(group.firstToLastRelativeChanges.frameMin),
+              pct(group.firstToLastRelativeChanges.maxRowDensityL2)
+            ])
+        ];
+        document.getElementById("traceQuadratureStabilityTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.traceActiveMinor) {
+        const rows = [
+          ["basis", "active dim", "frame min", "best minor", "trace points"],
+          ...data.traceActiveMinor.rows.map(row => [
+            row.basis,
+            row.activeDim,
+            sci(row.weightedFrameEigenvalues[0]),
+            sci(row.bestNormalizedMinor.absDeterminant),
+            row.bestNormalizedMinor.traceCenters.join(", ")
+          ])
+        ];
+        document.getElementById("traceActiveMinorTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.traceActiveMinorSummary) {
+        const rows = [
+          ["basis", "traces", "active dim", "best minor", "trace points"],
+          ...data.traceActiveMinorSummary.rows.map(row => [
+            row.basis,
+            row.traceCount,
+            row.activeDim,
+            sci(row.bestAbsMinor),
+            row.traceCenters.join(", ")
+          ])
+        ];
+        document.getElementById("traceActiveMinorSummaryTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.traceActiveMinorLandscape) {
+        const rows = [
+          ["rank", "abs det", "trace points", "sign counts"],
+          ...data.traceActiveMinorLandscape.topMinors.slice(0, 5).map((row, idx) => [
+            idx + 1,
+            sci(row.absDeterminant),
+            row.traceCenters.join(", "),
+            idx === 0
+              ? `${data.traceActiveMinorLandscape.signCounts.positive}/${data.traceActiveMinorLandscape.signCounts.negative}/${data.traceActiveMinorLandscape.signCounts.nearZero}`
+              : ""
+          ])
+        ];
+        document.getElementById("traceActiveMinorLandscapeTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.traceActiveDerivativeRank) {
+        const rows = [
+          ["point", "rank", "min singular", "best minor", "orders"],
+          ...data.traceActiveDerivativeRank.rows.map(row => [
+            row.point,
+            row.rankNormalized,
+            sci(row.minSingularValueNormalized),
+            sci(row.bestNormalizedDerivativeMinor.absDeterminant),
+            row.bestNormalizedDerivativeMinor.derivativeOrders.join(",")
+          ])
+        ];
+        document.getElementById("traceActiveDerivativeRankTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.traceActiveDerivativeRankScan) {
+        const rows = [
+          ["basis", "active dim", "best point", "rank", "min singular", "best minor", "orders"],
+          ...data.traceActiveDerivativeRankScan.rows.map(row => {
+            const best = row.bestPoint || {};
+            const minor = best.bestNormalizedDerivativeMinor || {};
+            return [
+              row.basis,
+              row.activeDim,
+              best.point,
+              `${best.rankNormalized}/${row.activeDim}`,
+              sci(best.minSingularValueNormalized),
+              sci(minor.absDeterminant),
+              (minor.derivativeOrders || []).join(",")
+            ];
+          })
+        ];
+        document.getElementById("traceActiveDerivativeRankScanTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.determinantGapBound) {
+        const rows = [
+          ["basis", "raw min", "C high", "allowed alpha", "normalized min"],
+          ...data.determinantGapBound.rows.map(row => [
+            row.basis,
+            sci(row.rawMinSingularValue),
+            sci(row.COnHighBlock),
+            sci(row.allowedAlphaRaw),
+            sci(row.normalizedMinSingularValue)
+          ]),
+          ["max drift", "", "", sci(data.determinantGapBound.maxConsecutivePolarAlphaEstimate), ""]
+        ];
+        document.getElementById("determinantGapBoundTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.projectiveDeterminant) {
+        const rows = [
+          ["basis", "eta", "scale ratio", "projective alpha", "raw alpha"],
+          ...data.projectiveDeterminant.rows.map(row => [
+            row.basis,
+            sci(row.normalizedMargin),
+            sci(row.columnScaleRatio),
+            sci(row.projectiveAllowedAlpha),
+            sci(row.rawAllowedAlpha)
+          ]),
+          ["min", "", "", sci(data.projectiveDeterminant.minProjectiveAllowedAlpha), ""]
+        ];
+        document.getElementById("projectiveDeterminantTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.projectiveResponseColumn) {
+        const rows = [
+          ["basis pair", "max column dist", "frob dist", "perm", "signs"],
+          ...data.projectiveResponseColumn.consecutiveComparisons.map(row => [
+            `${row.leftBasis}->${row.rightBasis}`,
+            sci(row.maxColumnDistance),
+            sci(row.frobeniusDistance),
+            row.permutation.join(","),
+            row.signs.join(",")
+          ])
+        ];
+        document.getElementById("projectiveResponseColumnTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.noncollapseKernelGap) {
+        const rows = [
+          ["basis", "ker source/top", "cutoff gap/top", "pass"],
+          ...data.noncollapseKernelGap.rows.map(row => [
+            row.basis,
+            sci(row.kernelSourceFracOfTop),
+            sci(row.cutoffGapFracOfTop),
+            row.passesCutoffNoncollapse ? "yes" : "no"
+          ])
+        ];
+        document.getElementById("noncollapseKernelGapTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.sourceSideNoncollapse) {
+        const rows = [
+          ["basis", "active dim", "right eta", "source-side eta"],
+          ...data.sourceSideNoncollapse.rows.map(row => [
+            row.basis,
+            row.activeDim,
+            sci(row.rightNormalizedMinSingularValue),
+            sci(row.sourceNormalizedMinSingularValue)
+          ])
+        ];
+        document.getElementById("sourceSideNoncollapseTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.sourceSideStability) {
+        const rows = [
+          ["basis pair", "operator diff", "active gap", "response max dist", "response frob"],
+          ...data.sourceSideStability.comparisons.map(row => [
+            `${row.leftBasis}->${row.rightBasis}`,
+            sci(row.normalizedOperatorDiff),
+            sci(row.activeSubspace.projectionGap),
+            sci(row.responseColumns.maxColumnDistance),
+            sci(row.responseColumns.frobeniusDistance)
+          ])
+        ];
+        document.getElementById("sourceSideStabilityTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.sourceSideRankPerturbation) {
+        const rows = [
+          ["basis", "eta", "m/b", "gap/top", "B rel max", "T/top max"],
+          ...data.sourceSideRankPerturbation.rows.map(row => [
+            row.basis,
+            sci(row.normalizedRankMargin),
+            sci(row.relativeRankMargin),
+            sci(row.spectralGapToComplementFracOfTop),
+            sci(row.splitSufficientConditions.relativeBErrorMax),
+            sci(row.splitSufficientConditions.topNormalizedTErrorMax)
+          ])
+        ];
+        document.getElementById("sourceSideRankPerturbationTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.sourceSideQuadrature) {
+        const rows = [
+          ["grid", "dim", "active", "eta", "m/b", "gap/top", "B rel max", "T/top max"],
+          ...data.sourceSideQuadrature.rows.map(row => [
+            row.sourceGrid,
+            row.sourceSideDim,
+            row.activeDim,
+            row.activeDim === 2 ? sci(row.normalizedRankMargin) : "",
+            row.activeDim === 2 ? sci(row.relativeRankMargin) : "",
+            row.activeDim === 2 ? sci(row.spectralGapToComplementFracOfTop) : "",
+            row.activeDim === 2 ? sci(row.relativeBErrorMax) : "",
+            row.activeDim === 2 ? sci(row.topNormalizedTErrorMax) : ""
+          ])
+        ];
+        document.getElementById("sourceSideQuadratureTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.sourceSideRieszRank) {
+        const rows = [
+          ["basis", "grid", "eps/gap", "alpha", "alpha allowed", "m", "||L||", "lower bound", "pass"],
+          [
+            data.sourceSideRieszRank.basis,
+            data.sourceSideRieszRank.sourceGrid,
+            sci(Number(data.sourceSideRieszRank.sourceGramErrorBound) / Number(data.sourceSideRieszRank.spectralGapToComplement)),
+            sci(data.sourceSideRieszRank.projectorErrorAlpha),
+            sci(data.sourceSideRieszRank.projectorErrorAlphaAllowed),
+            sci(data.sourceSideRieszRank.finiteRankMargin),
+            sci(data.sourceSideRieszRank.responseOperatorNorm),
+            sci(data.sourceSideRieszRank.continuumLowerBoundForUnitActiveVector),
+            data.sourceSideRieszRank.rankTheoremPasses ? "yes" : "no"
+          ]
+        ];
+        document.getElementById("sourceSideRieszRankTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.fullThetaTail) {
+        const rows = [
+          ["object", "basis/grid", "global tail/core", "active tail/core", "ker tail/min", "tail/Riesz lower", "status"],
+          [
+            `Phi<=${data.fullThetaTail.fullNmax} - tilde3`,
+            `${data.fullThetaTail.basis} / ${data.fullThetaTail.sourceGrid}`,
+            sci(data.fullThetaTail.global.tailRelativeToCoreOp),
+            sci(data.fullThetaTail.activeSourcePlane.tailRelativeToCore),
+            sci(data.fullThetaTail.traceKernel.tailKerRelativeToCorePositiveMin),
+            sci(data.fullThetaTail.activeSourcePlane.tailOverCertifiedRieszLowerDiagnostic),
+            data.fullThetaTail.activeSourcePlane.perturbativeDiagnosticPasses ? "pass" : "check"
+          ],
+          [
+            "remaining",
+            "continuum",
+            "",
+            "",
+            "",
+            "",
+            "derive S_tail and n>=9 bound"
+          ]
+        ];
+        document.getElementById("fullThetaTailTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+        drawFullThetaMatrixTriptych(data);
+        drawFullThetaRatioBars(data);
+        drawFullThetaSourceSpectrum(data);
+        drawFullThetaSurface(data);
+      }
+
+      if (data.fullThetaSourceTail) {
+        const s = data.fullThetaSourceTail;
+        const rows = [
+          ["object", "basis/grid", "S tail/core", "E tail/core", "active tail/core", "Riesz alpha", "lower after tail", "status"],
+          [
+            `S(Phi<=${s.fullNmax}) - S(tilde3)`,
+            `${s.basis} / ${s.sourceGrid}`,
+            sci(s.sourceTailObject.tailRelativeToCore),
+            sci(s.sourceTailObject.rowTailRelativeToCore),
+            sci(s.activePlane.tailRelativeToCore),
+            sci(s.rieszStabilityUnderFiniteTail.tailProjectorAlpha),
+            sci(s.rieszStabilityUnderFiniteTail.lowerBoundAfterFiniteTail),
+            s.rieszStabilityUnderFiniteTail.rankPersistsForPhiTruncation ? "pass" : "check"
+          ],
+          [
+            `theta n>=${s.omittedThetaTailEnvelope.startMode}`,
+            `v>=${Number(s.omittedThetaTailEnvelope.vMin).toFixed(2)}`,
+            sci(s.omittedThetaTailEnvelope.relativeZerothDerivativeBound),
+            "",
+            sci(Math.max(...s.omittedThetaTailEnvelope.maxDerivativeBounds.map(Number))),
+            "",
+            "",
+            "profile envelope"
+          ]
+        ];
+        document.getElementById("fullThetaSourceTailTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.fullThetaIntervalPropagation) {
+        const p = data.fullThetaIntervalPropagation;
+        const rows = [
+          ["object", "basis/grid", "Delta E", "Delta S", "Delta S/S8", "Riesz alpha", "lower after tail", "status"],
+          [
+            `theta n>=${p.tailStart} interval`,
+            `${p.basis} / ${p.sourceGrid}`,
+            sci(p.deltaEOperatorBound),
+            sci(p.deltaSOperatorBound),
+            sci(p.deltaSRelativeToS8),
+            sci(p.tailProjectorAlpha),
+            sci(p.lowerBoundAfterOmittedTail),
+            p.rankPersistsForFullPhi ? "pass" : "check"
+          ],
+          [
+            "normalized ratios",
+            `iv dps ${p.ivDps}`,
+            `denom >= ${sci(p.minDenominatorAbsLower)}`,
+            `max h ${sci(Math.max(...p.maxPropagatedHDerivativeBounds.map(Number)))}`,
+            "",
+            "",
+            "",
+            "enclosed"
+          ]
+        ];
+        document.getElementById("fullThetaIntervalPropagationTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.fullThetaSourceQuadrature) {
+        const q = data.fullThetaSourceQuadrature;
+        const rows = [
+          ["object", "basis/grid", "M2 envelope", "quad error", "alpha", "comp L norm", "rank lower", "status"],
+          [
+            "continuum source",
+            `${q.basis} / ${q.sourceGrid}`,
+            sci(q.d2SourceGramIntervalEnvelope),
+            sci(q.sourceQuadratureErrorBound),
+            sci(q.totalProjectorAlpha),
+            sci(q.complementResponseOperatorNorm),
+            sci(q.lowerBoundAfterContinuumAndTail),
+            q.fullPhiContinuumSourceNoncollapsePasses ? "pass" : "check"
+          ],
+          [
+            "gap conversion",
+            `subintervals ${q.subintervals}`,
+            `gap ${sci(q.spectralGapToComplementS8)}`,
+            `tail ${sci(q.omittedTailDeltaSBound)}`,
+            `angle ${Number(q.angleFactorLowerBound).toFixed(6)}`,
+            `margin ${sci(q.finiteRankMarginS8)}`,
+            `total/S8 ${sci(q.totalContinuumErrorRelativeToS8)}`,
+            q.totalGapConditionPasses ? "stable" : "gap fail"
+          ]
+        ];
+        document.getElementById("fullThetaSourceQuadratureTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.globalSchurBridge) {
+        const b = data.globalSchurBridge;
+        const src = b.closedInputs.fullPhiContinuumSourceNoncollapse;
+        const range = b.closedInputs.sampledActiveTraceRange;
+        const gap = b.closedInputs.sampledActiveTraceKernelExclusion;
+        const inactive = b.remainingAnalyticItems.find(item => item.name.includes("source-inactive"));
+        const tail = inactive && inactive.finiteDiagnostic.bestObservedNonzeroOperatorTail;
+        const rows = [
+          ["bridge", "full-Phi rank", "active range", "active kernel", "full kernel source", "tail diagnostic", "global Schur"],
+          [
+            "source -> Schur",
+            src.closed ? `pass ${sci(src.rankLowerBound)}` : "check",
+            range.sampledActiveRangeInclusionObserved ? `pass ${sci(range.rangeResidualRelativeMax)}` : "check",
+            gap.activeKernelExclusionObserved ? "pass 0" : "check",
+            sci(gap.fullTraceKernelSourceFracMax),
+            tail ? `${sci(tail.fraction)} @ ${tail.basis}/${tail.start}` : "open",
+            b.globalSchurTheoremClosed ? "closed" : "tail open"
+          ],
+          [
+            "next theorem",
+            `alpha ${sci(src.projectorAlpha)}`,
+            `rank gap ${range.traceRankMinusActiveDimMin}`,
+            `min trace ${sci(gap.activeTraceMinNormedMin)}`,
+            "",
+            "",
+            b.nextProofTarget
+          ]
+        ];
+        document.getElementById("globalSchurBridgeTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.fullThetaInactiveTail) {
+        const t = data.fullThetaInactiveTail;
+        const budget = t.finiteSchurTailBudgetDiagnostic;
+        const rows = [
+          ["object", "basis/grid", "finite inactive/top", "continuum inactive/top", "active trace min", "kernel source", "budget", "status"],
+          [
+            "full-Phi inactive tail",
+            `${t.rows[0].basis} / ${t.sourceGrid}`,
+            sci(t.rows[0].finiteInactiveFracOfTop),
+            sci(t.worstContinuumInactiveFracUpper),
+            sci(t.minActiveTraceEigenvalueNormed),
+            `active ${sci(t.worstActiveTraceKernelSourceFrac)} / full ${sci(t.worstFullTraceKernelSourceFrac)}`,
+            budget ? sci(budget.fraction) : "",
+            t.finiteBudgetDiagnosticPasses ? "finite pass" : "check"
+          ],
+          [
+            "analytic status",
+            `ratio ${t.rows[0].ratio}`,
+            `comp ${sci(t.rows[0].complementTopEigenvalue)}`,
+            `err ${sci(t.continuumErrorBound)}`,
+            "",
+            `inactive ker ${sci(t.rows[0].inactiveTraceKernelSourceFrac)}`,
+            "",
+            t.globalSchurTailTheoremClosed ? "closed" : "theorem open"
+          ]
+        ];
+        document.getElementById("fullThetaInactiveTailTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.tailAbsorption) {
+        const a = data.tailAbsorption;
+        const rows = [
+          ["theorem step", "epsilon", "low/mid budget", "slack", "epsilon/budget", "absorption", "analytic estimate"],
+          [
+            "source-inactive tail",
+            sci(a.epsilonDeltaUpper),
+            sci(a.finiteLowMidSchurBudget),
+            sci(a.absorptionSlack),
+            Number(a.epsilonOverBudget).toFixed(4),
+            a.absorptionCertificatePasses ? "pass" : "check",
+            a.continuumTailEstimateProved ? "proved" : "open"
+          ],
+          [
+            "normalization",
+            `${a.basis} / ${a.sourceGrid}`,
+            `trace ratio ${a.globalTraceRatio}`,
+            `active ker ${sci(a.activeTraceKernelSourceFrac)}`,
+            `full ker ${sci(a.fullTraceKernelSourceFrac)}`,
+            "",
+            "conditional closure"
+          ]
+        ];
+        document.getElementById("tailAbsorptionTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.sourceInactiveMinmaxTail) {
+        const m = data.sourceInactiveMinmaxTail;
+        const rows = [
+          ["min-max theorem", "raw tail", "top scale", "normalized eps", "budget", "slack", "status"],
+          [
+            "source inactive",
+            sci(m.absoluteTailBound),
+            sci(m.sourceTopLower),
+            sci(m.normalizedEpsilonDelta),
+            sci(m.finiteLowMidSchurBudget),
+            sci(m.absorptionSlack),
+            m.minMaxProofInCertifiedSourceModel ? "proved in source model" : "open"
+          ],
+          [
+            "remaining passage",
+            `basis ${m.basis}`,
+            `grid ${m.sourceGrid}`,
+            `trace ratio ${m.globalTraceRatio}`,
+            Number(m.epsilonOverBudget).toFixed(4),
+            "",
+            m.continuumHighBlockExhaustionProvedHere ? "closed" : "high-block open"
+          ]
+        ];
+        document.getElementById("sourceInactiveMinmaxTailTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.highBlockExhaustion) {
+        const h = data.highBlockExhaustion;
+        const ev = h.finiteEvidence || {};
+        const rows = [
+          ["high-block exhaustion", "epsilon", "conditional", "continuum", "elliptic", "Mosco up", "Mosco down", "evidence"],
+          [
+            "source-tail passage",
+            sci(h.normalizedEpsilonDelta),
+            h.conditionalTailEstimatePassage ? "pass" : "open",
+            h.tailEstimatePassesToContinuum ? "closed" : "open",
+            h.ellipticTraceStatus?.status || "",
+            h.moscoLimsupStatus?.status || "",
+            h.moscoLiminfStatus?.status || "",
+            ev.observedGammaFloor ? `gamma ${sci(ev.observedGammaFloor)}` : ""
+          ],
+          [
+            "operator path",
+            `slack ${sci(h.absorptionSlack)}`,
+            h.spectralProjectionConvergenceStatus?.status || "",
+            h.sourceOperatorNormConvergenceStatus?.status || "",
+            "",
+            "",
+            "",
+            ev.maxRangeResidualRelative ? `resid ${sci(ev.maxRangeResidualRelative)}` : ""
+          ]
+        ];
+        document.getElementById("highBlockExhaustionTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.commutedEllipticTrace) {
+        const c = data.commutedEllipticTrace;
+        const best = c.bestFiniteSubunitDominance || {};
+        const src = c.sourceRangeCertificate || {};
+        const obs = c.compactObstruction || {};
+        const rows = [
+          ["elliptic trace", "compact route", "finite evidence", "source fraction", "obstruction", "continuum"],
+          [
+            "source-range Hardy/Green",
+            c.compactKernelEllipticityStatus?.status || "",
+            best.product ? `M ${best.cutoff}, m ${best.order}, ${sci(best.product)}` : "",
+            src.sourceRangeAbsorbFrac ? sci(src.sourceRangeAbsorbFrac) : "",
+            obs.maxRatio ? sci(obs.maxRatio) : "",
+            c.sourceRangeHardyGreenStatus?.status || ""
+          ],
+          [
+            "endpoint trace input",
+            c.invalidRoute ? "invalid a10 route" : "",
+            c.finiteCommutedDominationStatus?.status || "",
+            src.maxPerSourceFrac ? `per ${sci(src.maxPerSourceFrac)}` : "",
+            "",
+            c.ellipticTraceEstimateClosed ? "closed" : "open"
+          ]
+        ];
+        document.getElementById("commutedEllipticTraceTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.sourceRangeHardyGreen) {
+        const srg = data.sourceRangeHardyGreen;
+        const ev = srg.finiteEvidence || {};
+        const rows = [
+          ["source-range HG", "Riesz eq", "finite reps", "E const", "dE const", "cover frac", "continuum reps"],
+          [
+            "Green representers",
+            srg.rieszRepresenterEquivalenceStatus?.status || "",
+            srg.finiteGreenRepresenterStatus?.status || "",
+            sci(ev.maxEConstant),
+            sci(ev.maxDEConstant),
+            sci(ev.analyticCoverHighFullFracVsMinFull),
+            srg.continuumGreenRepresenterStatus?.status || ""
+          ],
+          [
+            "range defect",
+            "",
+            sci(ev.maxRangeRelativeDefect),
+            "",
+            "",
+            sci(ev.sourceRangeAbsorbFrac),
+            srg.sourceRangeHardyGreenEstimateClosed ? "closed" : "open"
+          ]
+        ];
+        document.getElementById("sourceRangeHardyGreenTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.continuumGreenRepresenter) {
+        const cg = data.continuumGreenRepresenter;
+        const ev = cg.finiteEvidence || {};
+        const rows = [
+          ["continuum Green", "row def", "finite reps", "active range", "inactive tail", "value", "status"],
+          [
+            "direct rows",
+            cg.directSourceRowDefinitionStatus?.status || "",
+            cg.finiteDirectRepresenterStatus?.status || "",
+            cg.activeTraceRangeInclusionStatus?.status || "",
+            cg.sourceInactiveTailStatus?.status || "",
+            sci(ev.maxFiniteEConstant),
+            cg.directGreenRepresenterStatus?.status || ""
+          ],
+          [
+            "range/tail",
+            "",
+            "",
+            sci(ev.traceToSourceRangeResidualRelative),
+            sci(ev.inactiveFracUpper),
+            sci(ev.maxGlobalHighFullFrac),
+            cg.uniformSourceGramBoundStatus?.status || ""
+          ],
+          [
+            "fixed-jet route",
+            "",
+            "",
+            sci(ev.evalRepresenterNorm2Basis20),
+            sci(ev.fixedScanMaxEvalRepresenterNorm2),
+            sci(ev.fixedScanMaxBoundaryCoverNorm2),
+            cg.fixedJetSufficientRouteStatus?.status || cg.continuumFixedJetRepresenterStatus?.status || ""
+          ]
+        ];
+        document.getElementById("continuumGreenRepresenterTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.traceToSourceGreenKernel) {
+        const tg = data.traceToSourceGreenKernel;
+        const sampled = tg.sampledDensity || {};
+        const refined = tg.refinement || {};
+        const rows = [
+          ["trace Green", "finite range", "density", "refine", "Lagrange", "value", "continuum"],
+          [
+            "kernel K",
+            tg.finiteActiveRangeIdentityStatus?.status || "",
+            tg.sampledGreenDensityStatus?.status || "",
+            tg.traceGridDensityStabilityStatus?.status || "",
+            tg.lagrangeAdjointIdentityStatus?.status || "",
+            sci(refined.weightedDensityL2RelativeSpread),
+            tg.continuumAdjointGreenProblemStatus?.status || ""
+          ],
+          [
+            "bounds",
+            sci(sampled.maxDensityL2),
+            sci(refined.maxWeightedDensityL2),
+            sci(refined.maxWeightedRangeResidualRelative),
+            "",
+            sci(sampled.maxPointDensity),
+            tg.continuumTraceToSourceClosed ? "closed" : "open"
+          ]
+        ];
+        document.getElementById("traceToSourceGreenKernelTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.sourceQuadratureError) {
+        const rows = [
+          ["object", "grid", "norm", "error bound", "relative", "target", "pass"],
+          [
+            "S=E*E",
+            data.sourceQuadratureError.sourceGrid,
+            sci(data.sourceQuadratureError.sourceGramNorm),
+            sci(data.sourceQuadratureError.sourceGramErrorBound),
+            sci(data.sourceQuadratureError.sourceGramRelativeErrorBound),
+            sci(data.sourceQuadratureError.sourceGramTargetRelative),
+            data.sourceQuadratureError.sourceGramPassesTarget ? "yes" : "no"
+          ],
+          [
+            "BB*",
+            data.sourceQuadratureError.sourceGrid,
+            sci(data.sourceQuadratureError.bbStarGramNorm),
+            sci(data.sourceQuadratureError.bbStarErrorBound),
+            sci(data.sourceQuadratureError.bbStarRelativeErrorBound),
+            "",
+            ""
+          ],
+          [
+            "crude B",
+            data.sourceQuadratureError.sourceGrid,
+            sci(data.sourceQuadratureError.bOperatorNorm),
+            "",
+            sci(data.sourceQuadratureError.crudeBRelativeErrorFromBBStar),
+            sci(data.sourceQuadratureError.bTargetRelative),
+            data.sourceQuadratureError.crudeBPassesTarget ? "yes" : "no"
+          ]
+        ];
+        document.getElementById("sourceQuadratureErrorTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.sourceQuadratureChebyshev || data.sourceQuadratureInterval || data.sourceQuadratureBall || data.sourceQuadratureBernstein || data.sourceQuadratureComplexBall) {
+        const rows = [["method", "grid", "degree/parts", "envelope", "tail q", "relative", "target", "pass"]];
+        if (data.sourceQuadratureInterval) {
+          rows.push([
+            "raw interval",
+            data.sourceQuadratureInterval.sourceGrid,
+            data.sourceQuadratureInterval.subintervals,
+            sci(data.sourceQuadratureInterval.intervalSecondDerivativeEnvelope),
+            "",
+            sci(data.sourceQuadratureInterval.sourceGramRelativeErrorBound),
+            sci(data.sourceQuadratureInterval.sourceGramTargetRelative),
+            data.sourceQuadratureInterval.sourceGramPassesTarget ? "yes" : "no"
+          ]);
+        }
+        if (data.sourceQuadratureChebyshev) {
+          rows.push([
+            "Chebyshev tail",
+            data.sourceQuadratureChebyshev.sourceGrid,
+            data.sourceQuadratureChebyshev.chebDegree,
+            sci(data.sourceQuadratureChebyshev.chebyshevEnvelope),
+            sci(data.sourceQuadratureChebyshev.maxTailRatio),
+            sci(data.sourceQuadratureChebyshev.sourceGramRelativeErrorBound),
+            sci(data.sourceQuadratureChebyshev.sourceGramTargetRelative),
+            data.sourceQuadratureChebyshev.sourceGramPassesTarget ? "yes" : "no"
+          ]);
+        }
+        if (data.sourceQuadratureBall) {
+          rows.push([
+            "ball DCT",
+            data.sourceQuadratureBall.sourceGrid,
+            data.sourceQuadratureBall.chebDegree,
+            sci(data.sourceQuadratureBall.ballChebyshevEnvelope),
+            sci(data.sourceQuadratureBall.maxTailRatioUpper),
+            sci(data.sourceQuadratureBall.sourceGramRelativeErrorBound),
+            sci(data.sourceQuadratureBall.sourceGramTargetRelative),
+            data.sourceQuadratureBall.sourceGramPassesTarget ? "yes" : "no"
+          ]);
+        }
+        if (data.sourceQuadratureBernstein) {
+          rows.push([
+            "Bernstein ellipse",
+            data.sourceQuadratureBernstein.sourceGrid,
+            data.sourceQuadratureBernstein.chebDegree,
+            sci(data.sourceQuadratureBernstein.bernsteinTotalEnvelope),
+            sci(data.sourceQuadratureBernstein.bernsteinTailFactor),
+            sci(data.sourceQuadratureBernstein.sourceGramRelativeErrorBound),
+            sci(data.sourceQuadratureBernstein.sourceGramTargetRelative),
+            data.sourceQuadratureBernstein.sourceGramPassesTarget ? "yes" : "no"
+          ]);
+        }
+        if (data.sourceQuadratureComplexBall) {
+          rows.push([
+            "complex-ball ellipse",
+            data.sourceQuadratureComplexBall.sourceGrid,
+            data.sourceQuadratureComplexBall.arcs,
+            sci(data.sourceQuadratureComplexBall.bernsteinTotalEnvelope),
+            sci(data.sourceQuadratureComplexBall.bernsteinTailFactor),
+            sci(data.sourceQuadratureComplexBall.sourceGramRelativeErrorBound),
+            sci(data.sourceQuadratureComplexBall.sourceGramTargetRelative),
+            data.sourceQuadratureComplexBall.sourceGramPassesTarget ? "yes" : "no"
+          ]);
+        }
+        document.getElementById("sourceQuadratureEnvelopeTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.closedTraceOdeObstruction) {
+        const rows = [
+          ["t", "projected source", "pstar", "eval projection"],
+          ...data.closedTraceOdeObstruction.rows.map(row => [
+            row.t,
+            sci(row.projectedSourceNorm),
+            sci(row.pStar),
+            sci(row.evalProjectionNorm)
+          ])
+        ];
+        document.getElementById("closedTraceOdeObstructionTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+    }
+
+    function aggregateActiveGapRows(rows) {
+      const byBasis = new Map();
+      rows.forEach(row => {
+        if (!byBasis.has(row.basis)) {
+          byBasis.set(row.basis, {
+            basis: row.basis,
+            activeDims: new Set(),
+            minActiveTrace: Infinity,
+            maxActiveKernelFrac: 0,
+            maxFullKernelFrac: 0
+          });
+        }
+        const out = byBasis.get(row.basis);
+        out.activeDims.add(row.activeDim);
+        out.minActiveTrace = Math.min(out.minActiveTrace, Number(row.activeTraceMinNormed));
+        out.maxActiveKernelFrac = Math.max(out.maxActiveKernelFrac, Number(row.activeTraceKernelSourceFrac));
+        out.maxFullKernelFrac = Math.max(out.maxFullKernelFrac, Number(row.fullTraceKernelSourceFrac));
+      });
+      return Array.from(byBasis.values()).map(row => ({
+        ...row,
+        activeDims: Array.from(row.activeDims).sort((a, b) => a - b)
+      })).sort((a, b) => a.basis - b.basis);
+    }
+
+    function renderRepresenterVisuals(data) {
+      if (data.adjointEvalRepresenter) {
+        const profile = data.adjointEvalRepresenter.evalRepresenterProfile.grid;
+        drawLineChart("evalRepresenterProfileChart", [
+          {
+            color: colors.blue,
+            points: profile.map(row => ({ x: row.s, y: row.value }))
+          }
+        ]);
+
+        const rows = data.adjointEvalRepresenter.rows;
+        drawLineChart("sourceAmplitudeChart", [
+          { color: colors.red, points: rows.map(row => ({ x: row.u, y: row.pStar })) },
+          { color: colors.green, points: rows.map(row => ({ x: row.u, y: row.dPStar })) },
+          { color: colors.purple, points: rows.map(row => ({ x: row.u, y: row.d2PStar })) }
+        ]);
+      }
+
+      if (data.boundaryRowRepresenter) {
+        drawSignedHeatmap("boundaryGramHeatmap", data.boundaryRowRepresenter.jetGram);
+        const rows = data.boundaryRowRepresenter.rows;
+        drawLineChart("boundaryCoeffChart", [
+          { color: colors.blue, points: normalizedCoefficientPoints(rows, 0) },
+          { color: colors.green, points: normalizedCoefficientPoints(rows, 1) },
+          { color: colors.red, points: normalizedCoefficientPoints(rows, 2) },
+          { color: colors.amber, points: normalizedCoefficientPoints(rows, 4) },
+          { color: colors.purple, points: normalizedCoefficientPoints(rows, 6) }
+        ]);
+      }
+
+      if (data.fixedRepresenterTheorem) {
+        const rows = data.fixedRepresenterTheorem.rows;
+        const logPoint = key => row => ({ x: row.basis, y: Math.log10(Math.max(row[key], 1e-300)) });
+        drawLineChart("fixedRepresenterBasisChart", [
+          { color: colors.blue, points: rows.map(logPoint("evalCoverNorm2")) },
+          { color: colors.green, points: rows.map(logPoint("boundaryCoverNorm2")) },
+          { color: colors.red, points: rows.map(logPoint("boundaryDerivativeCoverNorm2")) }
+        ]);
+      }
+
+      if (data.localTraceTower) {
+        const rows = data.localTraceTower.rows;
+        drawLineChart("localTraceTowerChart", [
+          {
+            color: colors.blue,
+            points: rows.map(row => ({
+              x: row.basis,
+              y: Math.log10(Math.max(row.jetRepresenters[0].norm2, 1e-300))
+            }))
+          },
+          {
+            color: colors.red,
+            points: rows.map(row => ({
+              x: row.basis,
+              y: Math.log10(Math.max(row.jetRepresenters[7].norm2, 1e-300))
+            }))
+          }
+        ]);
+      }
+
+      if (data.localTraceTowerSource) {
+        const rows = data.localTraceTowerSource.rows;
+        drawLineChart("localTraceTowerSourceChart", [
+          {
+            color: colors.blue,
+            points: rows.map(row => ({
+              x: row.basis,
+              y: Math.log10(Math.max(row.maxHighFullFrac, 1e-300))
+            }))
+          },
+          {
+            color: colors.green,
+            points: rows.map(row => ({
+              x: row.basis,
+              y: Math.log10(Math.max(row.maxDerivativeHighFullFrac, 1e-300))
+            }))
+          }
+        ]);
+      }
+
+      if (data.globalTraceSource) {
+        const globalRows = data.globalTraceSource.rows;
+        const localRows = data.localTraceTowerSource ? data.localTraceTowerSource.rows : [];
+        drawLineChart("globalTraceSourceChart", [
+          {
+            color: colors.blue,
+            points: globalRows.map(row => ({
+              x: row.basis,
+              y: Math.log10(Math.max(row.maxHighConstant, 1e-300))
+            }))
+          },
+          {
+            color: colors.red,
+            points: localRows.map(row => ({
+              x: row.basis,
+              y: Math.log10(Math.max(row.maxHighConstant, 1e-300))
+            }))
+          }
+        ]);
+      }
+
+      if (data.globalTraceKills) {
+        const rows = data.globalTraceKills.rows;
+        const top = row => (row.topSourceDirections && row.topSourceDirections[0]) || {};
+        drawLineChart("globalTraceKillsChart", [
+          {
+            color: colors.blue,
+            points: rows.map(row => ({
+              x: row.basis,
+              y: Math.log10(Math.max(top(row).tracePerSourceNorm || 0, 1e-300))
+            }))
+          },
+          {
+            color: colors.green,
+            points: rows.map(row => ({
+              x: row.basis,
+              y: Math.log10(Math.max(top(row).globalTraceL2 || 0, 1e-300))
+            }))
+          }
+        ]);
+      }
+
+      if (data.globalTraceGap) {
+        const rows = data.globalTraceGap.rows;
+        const penaltyAt = (row, beta) => {
+          const target = Number(beta);
+          return (row.penalty || []).find(item => Number(item.beta) === target) || {};
+        };
+        drawLineChart("globalTraceGapChart", [
+          {
+            color: colors.blue,
+            points: rows.map(row => ({
+              x: row.basis,
+              y: Math.log10(Math.max(row.activeTraceOnlyConstantNormed || 0, 1e-300))
+            }))
+          },
+          {
+            color: colors.red,
+            points: rows.map(row => ({
+              x: row.basis,
+              y: Math.log10(Math.max(row.sourceOnTraceKernelFrac || 0, 1e-300))
+            }))
+          },
+          {
+            color: colors.green,
+            points: rows.map(row => ({
+              x: row.basis,
+              y: Math.log10(Math.max(penaltyAt(row, 1e8).constantFracOfSourceTop || 0, 1e-300))
+            }))
+          }
+        ]);
+      }
+
+      if (data.globalTraceActiveGapScan) {
+        const rows = aggregateActiveGapRows(data.globalTraceActiveGapScan.rows);
+        drawLineChart("globalTraceActiveGapScanChart", [
+          {
+            color: colors.blue,
+            points: rows.map(row => ({
+              x: row.basis,
+              y: Math.log10(Math.max(row.minActiveTrace, 1e-16))
+            }))
+          },
+          {
+            color: colors.red,
+            points: rows.map(row => ({
+              x: row.basis,
+              y: Math.log10(Math.max(row.maxFullKernelFrac, 1e-16))
+            }))
+          }
+        ]);
+      }
+
+      if (data.traceToSourceKernelProfile) {
+        const profile = data.traceToSourceKernelProfile;
+        const centers = profile.traceCenters.map(Number);
+        const findRow = (node, component) => {
+          let best = null;
+          let bestDist = Infinity;
+          for (const row of profile.rowProfiles) {
+            if (row.component !== component) continue;
+            const dist = Math.abs(Number(row.sourceNode) - node);
+            if (dist < bestDist) {
+              best = row;
+              bestDist = dist;
+            }
+          }
+          return best;
+        };
+        const normPoints = row => {
+          if (!row) return [];
+          const vals = row.coefficients.map(Number);
+          const maxAbs = Math.max(...vals.map(v => Math.abs(v)), 1e-30);
+          return vals.map((y, i) => ({ x: centers[i], y: y / maxAbs }));
+        };
+        drawLineChart("traceToSourceKernelChart", [
+          { color: colors.blue, points: normPoints(findRow(0.30, "boundary")) },
+          { color: colors.red, points: normPoints(findRow(0.30, "adjointEval")) },
+          { color: colors.green, points: normPoints(findRow(0.08, "adjointEval")) }
+        ]);
+      }
+    }
+
+    function renderMetrics(data) {
+      const vals = data.jet.eigenvalues;
+      const vec = data.jet.lowestEigenvector;
+      const metrics = [
+        ["lowest eigenvalue", sci(vals[0])],
+        ["second eigenvalue", sci(vals[1])],
+        ["most negative coeff", `e${vec.indexOf(Math.min(...vec))}`],
+        ["largest abs coeff", `e${vec.map(Math.abs).indexOf(Math.max(...vec.map(Math.abs)))}`]
+      ];
+      document.getElementById("eigMetrics").innerHTML = metrics.map(([label, value]) => `
+        <div class="metric"><div class="label">${label}</div><div class="value">${value}</div></div>
+      `).join("");
+    }
+
+    function render(data) {
+      document.getElementById("meta").textContent =
+        `jet order ${data.meta.jetOrder}, s0=${data.meta.center}, s*~${data.meta.sStar}`;
+      document.getElementById("jetText").textContent = data.explain.jetMatrix;
+      drawHeatmap(data);
+      drawVector(data);
+      renderMetrics(data);
+
+      const rows = data.defectFamily;
+      drawLineChart("lambdaChart", [
+        { color: colors.red, points: rows.map(r => ({ x: r.s, y: r.lambda0 })) },
+        { color: colors.green, points: rows.map(r => ({ x: r.s, y: r.lambda1 })) }
+      ], [{ x: data.meta.sStar, color: colors.amber }]);
+
+      drawLineChart("coeffChart", [
+        { color: colors.blue, points: rows.map(r => ({ x: r.s, y: r.coeffs[0] })) },
+        { color: colors.purple, points: rows.map(r => ({ x: r.s, y: r.coeffs[7] })) },
+        { color: colors.red, points: rows.map(r => ({ x: r.s, y: r.coeffs[8] })) }
+      ], [{ x: data.meta.e8Zero, color: colors.amber }]);
+
+      renderStats(data);
+      renderDouglas(data);
+      renderTopVector(data);
+      renderRepresenterVisuals(data);
+    }
+
+    Promise.all([
+      fetch("visual_data.json").then(r => {
+        if (!r.ok) throw new Error(`visual_data.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("douglas_top_vector.json").then(r => {
+        if (!r.ok) throw new Error(`douglas_top_vector.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("douglas_top_vector_scan.json").then(r => {
+        if (!r.ok) throw new Error(`douglas_top_vector_scan.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("hardy_witness_profile.json").then(r => {
+        if (!r.ok) throw new Error(`hardy_witness_profile.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("riesz_spectral_profile.json").then(r => {
+        if (!r.ok) throw new Error(`riesz_spectral_profile.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("riesz_spectral_scan.json").then(r => {
+        if (!r.ok) throw new Error(`riesz_spectral_scan.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("windowed_hardy_green_scan.json").then(r => {
+        if (!r.ok) throw new Error(`windowed_hardy_green_scan.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("high_frequency_tail_refinement.json").then(r => {
+        if (!r.ok) throw new Error(`high_frequency_tail_refinement.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("source_envelope_tail_certificate.json").then(r => {
+        if (!r.ok) throw new Error(`source_envelope_tail_certificate.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("source_packet_tracking.json").then(r => {
+        if (!r.ok) throw new Error(`source_packet_tracking.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("commuted_source_certificate.json").then(r => {
+        if (!r.ok) throw new Error(`commuted_source_certificate.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("three_part_hardy_green_certificate.json").then(r => {
+        if (!r.ok) throw new Error(`three_part_hardy_green_certificate.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("three_part_hardy_green_basis16_low8.json").then(r => {
+        if (!r.ok) throw new Error(`three_part_hardy_green_basis16_low8.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("endpoint_trace_refinement_scan.json").then(r => {
+        if (!r.ok) throw new Error(`endpoint_trace_refinement_scan.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("lambda_field_derivative_bounds.json").then(r => {
+        if (!r.ok) throw new Error(`lambda_field_derivative_bounds.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("trace_resolution_certificate.json").then(r => {
+        if (!r.ok) throw new Error(`trace_resolution_certificate.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("lambda_differential_closure.json").then(r => {
+        if (!r.ok) throw new Error(`lambda_differential_closure.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("source_concomitant_membership.json").then(r => {
+        if (!r.ok) throw new Error(`source_concomitant_membership.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("trace_concomitant_membership.json").then(r => {
+        if (!r.ok) throw new Error(`trace_concomitant_membership.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("trace_concomitant_exact_derivatives.json").then(r => {
+        if (!r.ok) throw new Error(`trace_concomitant_exact_derivatives.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("trace_lagrange_adjoint_control.json").then(r => {
+        if (!r.ok) throw new Error(`trace_lagrange_adjoint_control.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("lagrange_energy_control_certificate.json").then(r => {
+        if (!r.ok) throw new Error(`lagrange_energy_control_certificate.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("lagrange_split_control_certificate.json").then(r => {
+        if (!r.ok) throw new Error(`lagrange_split_control_certificate.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("lagrange_split_basis_scan.json").then(r => {
+        if (!r.ok) throw new Error(`lagrange_split_basis_scan.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("lagrange_hardy_graph_certificate.json").then(r => {
+        if (!r.ok) throw new Error(`lagrange_hardy_graph_certificate.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("lagrange_graph_energy_bridge.json").then(r => {
+        if (!r.ok) throw new Error(`lagrange_graph_energy_bridge.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("lagrange_commuted_kernel_energy.json").then(r => {
+        if (!r.ok) throw new Error(`lagrange_commuted_kernel_energy.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("lagrange_commuted_dominance_summary.json").then(r => {
+        if (!r.ok) throw new Error(`lagrange_commuted_dominance_summary.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("lagrange_commuted_basis_scan.json").then(r => {
+        if (!r.ok) throw new Error(`lagrange_commuted_basis_scan.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("commuted_compact_obstruction.json").then(r => {
+        if (!r.ok) throw new Error(`commuted_compact_obstruction.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("aux_regularizer_certificate.json").then(r => {
+        if (!r.ok) throw new Error(`aux_regularizer_certificate.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("source_window_regularizer_scan.json").then(r => {
+        if (!r.ok) throw new Error(`source_window_regularizer_scan.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("source_window_refinement_scan.json").then(r => {
+        if (!r.ok) throw new Error(`source_window_refinement_scan.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("source_window_lipschitz_scan.json").then(r => {
+        if (!r.ok) throw new Error(`source_window_lipschitz_scan.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("source_window_derivative_scan.json").then(r => {
+        if (!r.ok) throw new Error(`source_window_derivative_scan.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("closed_trace_hardy_green_certificate.json").then(r => {
+        if (!r.ok) throw new Error(`closed_trace_hardy_green_certificate.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("adjoint_eval_representer_certificate.json").then(r => {
+        if (!r.ok) throw new Error(`adjoint_eval_representer_certificate.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("boundary_row_representer_certificate.json").then(r => {
+        if (!r.ok) throw new Error(`boundary_row_representer_certificate.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("fixed_representer_theorem_scan.json").then(r => {
+        if (!r.ok) throw new Error(`fixed_representer_theorem_scan.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("local_trace_tower_representer_scan.json").then(r => {
+        if (!r.ok) throw new Error(`local_trace_tower_representer_scan.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("local_trace_tower_source_row_scan.json").then(r => {
+        if (!r.ok) throw new Error(`local_trace_tower_source_row_scan.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("global_trace_source_observability_scan.json").then(r => {
+        if (!r.ok) throw new Error(`global_trace_source_observability_scan.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("global_trace_kills_local_bad_modes.json").then(r => {
+        if (!r.ok) throw new Error(`global_trace_kills_local_bad_modes.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("global_trace_observability_gap.json").then(r => {
+        if (!r.ok) throw new Error(`global_trace_observability_gap.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("global_trace_active_gap_scan.json").then(r => {
+        if (!r.ok) throw new Error(`global_trace_active_gap_scan.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("global_trace_active_range_inclusion.json").then(r => {
+        if (!r.ok) throw new Error(`global_trace_active_range_inclusion.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("trace_to_source_kernel_profile.json").then(r => {
+        if (!r.ok) throw new Error(`trace_to_source_kernel_profile.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("trace_to_source_kernel_refinement.json").then(r => {
+        if (!r.ok) throw new Error(`trace_to_source_kernel_refinement.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("trace_weighted_frame_basis_scan.json").then(r => {
+        if (!r.ok) throw new Error(`trace_weighted_frame_basis_scan.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("trace_weighted_frame_basis22.json").then(r => {
+        if (!r.ok) throw new Error(`trace_weighted_frame_basis22.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("trace_frame_continuum_passage_certificate.json").then(r => {
+        if (!r.ok) throw new Error(`trace_frame_continuum_passage_certificate.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("trace_quadrature_stability_certificate.json").then(r => {
+        if (!r.ok) throw new Error(`trace_quadrature_stability_certificate.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("trace_active_minor_certificate.json").then(r => {
+        if (!r.ok) throw new Error(`trace_active_minor_certificate.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("trace_active_minor_summary.json").then(r => {
+        if (!r.ok) throw new Error(`trace_active_minor_summary.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("trace_active_minor_landscape.json").then(r => {
+        if (!r.ok) throw new Error(`trace_active_minor_landscape.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("trace_active_derivative_rank.json").then(r => {
+        if (!r.ok) throw new Error(`trace_active_derivative_rank.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("trace_active_derivative_rank_scan.json").then(r => {
+        if (!r.ok) throw new Error(`trace_active_derivative_rank_scan.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("determinant_gap_bound_diagnostic.json").then(r => {
+        if (!r.ok) throw new Error(`determinant_gap_bound_diagnostic.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("projective_determinant_stability.json").then(r => {
+        if (!r.ok) throw new Error(`projective_determinant_stability.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("projective_response_column_convergence.json").then(r => {
+        if (!r.ok) throw new Error(`projective_response_column_convergence.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("noncollapse_kernel_source_gap.json").then(r => {
+        if (!r.ok) throw new Error(`noncollapse_kernel_source_gap.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("source_side_noncollapse.json").then(r => {
+        if (!r.ok) throw new Error(`source_side_noncollapse.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("source_side_stability.json").then(r => {
+        if (!r.ok) throw new Error(`source_side_stability.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("source_side_rank_perturbation_certificate.json").then(r => {
+        if (!r.ok) throw new Error(`source_side_rank_perturbation_certificate.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("source_side_quadrature_refinement.json").then(r => {
+        if (!r.ok) throw new Error(`source_side_quadrature_refinement.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("source_side_quadrature_refinement_g65.json").then(r => {
+        if (!r.ok) throw new Error(`source_side_quadrature_refinement_g65.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("source_side_riesz_rank_theorem.json").then(r => {
+        if (!r.ok) throw new Error(`source_side_riesz_rank_theorem.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("full_theta_tail_relative_certificate.json").then(r => {
+        if (!r.ok) throw new Error(`full_theta_tail_relative_certificate.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("full_theta_source_tail_certificate.json").then(r => {
+        if (!r.ok) throw new Error(`full_theta_source_tail_certificate.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("full_theta_interval_propagation.json").then(r => {
+        if (!r.ok) throw new Error(`full_theta_interval_propagation.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("full_theta_source_quadrature_certificate.json").then(r => {
+        if (!r.ok) throw new Error(`full_theta_source_quadrature_certificate.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("global_weyl_volterra_schur_bridge.json").then(r => {
+        if (!r.ok) throw new Error(`global_weyl_volterra_schur_bridge.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("full_theta_source_inactive_schur_tail_certificate.json").then(r => {
+        if (!r.ok) throw new Error(`full_theta_source_inactive_schur_tail_certificate.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("continuum_tail_absorption_certificate.json").then(r => {
+        if (!r.ok) throw new Error(`continuum_tail_absorption_certificate.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("source_inactive_minmax_tail_theorem.json").then(r => {
+        if (!r.ok) throw new Error(`source_inactive_minmax_tail_theorem.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("high_block_exhaustion_theorem.json").then(r => {
+        if (!r.ok) throw new Error(`high_block_exhaustion_theorem.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("commuted_sturm_elliptic_trace_theorem.json").then(r => {
+        if (!r.ok) throw new Error(`commuted_sturm_elliptic_trace_theorem.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("source_range_hardy_green_theorem.json").then(r => {
+        if (!r.ok) throw new Error(`source_range_hardy_green_theorem.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("continuum_green_representer_theorem.json").then(r => {
+        if (!r.ok) throw new Error(`continuum_green_representer_theorem.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("continuum_trace_to_source_green_kernel.json").then(r => {
+        if (!r.ok) throw new Error(`continuum_trace_to_source_green_kernel.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("source_quadrature_error_bound_g65_e9.json").then(r => {
+        if (!r.ok) throw new Error(`source_quadrature_error_bound_g65_e9.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("source_quadrature_interval_envelope_s16.json").then(r => {
+        if (!r.ok) throw new Error(`source_quadrature_interval_envelope_s16.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("source_quadrature_chebyshev_envelope_d32_g129.json").then(r => {
+        if (!r.ok) throw new Error(`source_quadrature_chebyshev_envelope_d32_g129.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("source_quadrature_chebyshev_ball_d32_g129.json").then(r => {
+        if (!r.ok) throw new Error(`source_quadrature_chebyshev_ball_d32_g129.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("source_quadrature_bernstein_bound_rho2.json").then(r => {
+        if (!r.ok) throw new Error(`source_quadrature_bernstein_bound_rho2.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("source_quadrature_complex_ball_bernstein_rho2.json").then(r => {
+        if (!r.ok) throw new Error(`source_quadrature_complex_ball_bernstein_rho2.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("closed_trace_local_ode_obstruction.json").then(r => {
+        if (!r.ok) throw new Error(`closed_trace_local_ode_obstruction.json HTTP ${r.status}`);
+        return r.json();
+      })
+    ])
+      .then(([data, topVector, topVectorScan, hardyProfile, rieszProfile, rieszScan, windowScan, highTail, sourceEnvelope, sourcePacket, commutedSource, threePart, basis16LowModes, traceRefinement, lambdaDerivatives, traceResolution, lambdaClosure, sourceConcomitant, traceConcomitant, traceConcomitantExact, lagrangeAdjoint, energyControl, splitControl, splitBasisScan, hardyGraph, graphEnergyBridge, commutedKernelEnergy, commutedDominance, commutedBasisScan, compactObstruction, auxRegularizer, sourceWindow, sourceWindowRefinement, sourceWindowLipschitz, sourceWindowDerivative, closedTraceHardyGreen, adjointEvalRepresenter, boundaryRowRepresenter, fixedRepresenterTheorem, localTraceTower, localTraceTowerSource, globalTraceSource, globalTraceKills, globalTraceGap, globalTraceActiveGapScan, globalTraceActiveRange, traceToSourceKernelProfile, traceToSourceKernelRefinement, traceWeightedFrameBasisScan, traceWeightedFrameBasis22, traceFrameContinuumPassage, traceQuadratureStability, traceActiveMinor, traceActiveMinorSummary, traceActiveMinorLandscape, traceActiveDerivativeRank, traceActiveDerivativeRankScan, determinantGapBound, projectiveDeterminant, projectiveResponseColumn, noncollapseKernelGap, sourceSideNoncollapse, sourceSideStability, sourceSideRankPerturbation, sourceSideQuadrature, sourceSideQuadratureG65, sourceSideRieszRank, fullThetaTail, fullThetaSourceTail, fullThetaIntervalPropagation, fullThetaSourceQuadrature, globalSchurBridge, fullThetaInactiveTail, tailAbsorption, sourceInactiveMinmaxTail, highBlockExhaustion, commutedEllipticTrace, sourceRangeHardyGreen, continuumGreenRepresenter, traceToSourceGreenKernel, sourceQuadratureError, sourceQuadratureInterval, sourceQuadratureChebyshev, sourceQuadratureBall, sourceQuadratureBernstein, sourceQuadratureComplexBall, closedTraceOdeObstruction]) => {
+        data.topVector = topVector;
+        data.topVectorScan = topVectorScan;
+        data.hardyProfile = hardyProfile;
+        data.rieszProfile = rieszProfile;
+        data.rieszScan = rieszScan;
+        data.windowScan = windowScan;
+        data.highTail = highTail;
+        data.sourceEnvelope = sourceEnvelope;
+        data.sourcePacket = sourcePacket;
+        data.commutedSource = commutedSource;
+        data.threePart = threePart;
+        data.basis16LowModes = basis16LowModes;
+        data.traceRefinement = traceRefinement;
+        data.lambdaDerivatives = lambdaDerivatives;
+        data.traceResolution = traceResolution;
+        data.lambdaClosure = lambdaClosure;
+        data.sourceConcomitant = sourceConcomitant;
+        data.traceConcomitant = traceConcomitant;
+        data.traceConcomitantExact = traceConcomitantExact;
+        data.lagrangeAdjoint = lagrangeAdjoint;
+        data.energyControl = energyControl;
+        data.splitControl = splitControl;
+        data.splitBasisScan = splitBasisScan;
+        data.hardyGraph = hardyGraph;
+        data.graphEnergyBridge = graphEnergyBridge;
+        data.commutedKernelEnergy = commutedKernelEnergy;
+        data.commutedDominance = commutedDominance;
+        data.commutedBasisScan = commutedBasisScan;
+        data.compactObstruction = compactObstruction;
+        data.auxRegularizer = auxRegularizer;
+        data.sourceWindow = sourceWindow;
+        data.sourceWindowRefinement = sourceWindowRefinement;
+        data.sourceWindowLipschitz = sourceWindowLipschitz;
+        data.sourceWindowDerivative = sourceWindowDerivative;
+        data.closedTraceHardyGreen = closedTraceHardyGreen;
+        data.adjointEvalRepresenter = adjointEvalRepresenter;
+        data.boundaryRowRepresenter = boundaryRowRepresenter;
+        data.fixedRepresenterTheorem = fixedRepresenterTheorem;
+        data.localTraceTower = localTraceTower;
+        data.localTraceTowerSource = localTraceTowerSource;
+        data.globalTraceSource = globalTraceSource;
+        data.globalTraceKills = globalTraceKills;
+        data.globalTraceGap = globalTraceGap;
+        data.globalTraceActiveGapScan = globalTraceActiveGapScan;
+        data.globalTraceActiveRange = globalTraceActiveRange;
+        data.traceToSourceKernelProfile = traceToSourceKernelProfile;
+        data.traceToSourceKernelRefinement = traceToSourceKernelRefinement;
+        data.traceWeightedFrameBasisScan = {
+          ...traceWeightedFrameBasisScan,
+          rows: [
+            ...(traceWeightedFrameBasisScan.rows || []),
+            ...(traceWeightedFrameBasis22.rows || [])
+          ]
+        };
+        data.traceFrameContinuumPassage = traceFrameContinuumPassage;
+        data.traceQuadratureStability = traceQuadratureStability;
+        data.traceActiveMinor = traceActiveMinor;
+        data.traceActiveMinorSummary = traceActiveMinorSummary;
+        data.traceActiveMinorLandscape = traceActiveMinorLandscape;
+        data.traceActiveDerivativeRank = traceActiveDerivativeRank;
+        data.traceActiveDerivativeRankScan = traceActiveDerivativeRankScan;
+        data.determinantGapBound = determinantGapBound;
+        data.projectiveDeterminant = projectiveDeterminant;
+        data.projectiveResponseColumn = projectiveResponseColumn;
+        data.noncollapseKernelGap = noncollapseKernelGap;
+        data.sourceSideNoncollapse = sourceSideNoncollapse;
+        data.sourceSideStability = sourceSideStability;
+        data.sourceSideRankPerturbation = sourceSideRankPerturbation;
+        data.sourceSideQuadrature = {
+          ...sourceSideQuadrature,
+          rows: [
+            ...(sourceSideQuadrature.rows || []),
+            ...(sourceSideQuadratureG65.rows || [])
+          ]
+        };
+        data.sourceSideRieszRank = sourceSideRieszRank;
+        data.fullThetaTail = fullThetaTail;
+        data.fullThetaSourceTail = fullThetaSourceTail;
+        data.fullThetaIntervalPropagation = fullThetaIntervalPropagation;
+        data.fullThetaSourceQuadrature = fullThetaSourceQuadrature;
+        data.globalSchurBridge = globalSchurBridge;
+        data.fullThetaInactiveTail = fullThetaInactiveTail;
+        data.tailAbsorption = tailAbsorption;
+        data.sourceInactiveMinmaxTail = sourceInactiveMinmaxTail;
+        data.highBlockExhaustion = highBlockExhaustion;
+        data.commutedEllipticTrace = commutedEllipticTrace;
+        data.sourceRangeHardyGreen = sourceRangeHardyGreen;
+        data.continuumGreenRepresenter = continuumGreenRepresenter;
+        data.traceToSourceGreenKernel = traceToSourceGreenKernel;
+        data.sourceQuadratureError = sourceQuadratureError;
+        data.sourceQuadratureInterval = sourceQuadratureInterval;
+        data.sourceQuadratureChebyshev = sourceQuadratureChebyshev;
+        data.sourceQuadratureBall = sourceQuadratureBall;
+        data.sourceQuadratureBernstein = sourceQuadratureBernstein;
+        data.sourceQuadratureComplexBall = sourceQuadratureComplexBall;
+        data.closedTraceOdeObstruction = closedTraceOdeObstruction;
+        render(data);
+        window.addEventListener("resize", () => render(data));
+      })
+      .catch(err => {
+        document.getElementById("meta").textContent = "Could not load visual_data.json";
+        document.querySelector("main").innerHTML =
+          `<div class="panel"><h2>Data load failed</h2><p>${err.message}</p></div>`;
+      });
+  </script>
+</body>
+</html>

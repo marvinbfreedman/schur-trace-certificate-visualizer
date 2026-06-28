@@ -1,0 +1,36 @@
+{
+  "theoremName": "augmented trace quotient liminf theorem",
+  "proofClass": "analytic proof",
+  "liminfJson": "augmented_mosco_liminf_theorem.json",
+  "traceConvergenceJson": "xi_augmented_trace_convergence_theorem.json",
+  "statement": "If x_N=R_aug,N f_N converges to x and the finite quotient norms are bounded, then x belongs to X_aug and ||x||_{X_aug} <= liminf ||x_N||_{X_aug,N}.",
+  "statuses": {
+    "moscoLiminfInputStatus": {
+      "label": "Mosco liminf input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Bounded graph-energy representatives have weak graph-form subsequential limits."
+    },
+    "traceConvergenceInputStatus": {
+      "label": "augmented trace convergence input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Strong graph-dual trace convergence identifies the limiting trace coordinate."
+    },
+    "traceQuotientLiminfStatus": {
+      "label": "trace quotient liminf",
+      "closed": true,
+      "status": "closed",
+      "reason": "Choose near-minimizing representatives f_N.  Mosco liminf gives a weak limit f with norm at most the liminf, and trace convergence identifies R_aug f=x."
+    }
+  },
+  "traceQuotientLiminfClosed": true,
+  "finiteQuotientLowerBoundClosed": true,
+  "proof": [
+    "Choose finite representatives f_N near the finite quotient norms.",
+    "Use liminf compactness to obtain a weak graph limit f.",
+    "Use trace convergence to identify x=R_aug f.",
+    "Use lower semicontinuity of the graph norm to get the quotient lower bound."
+  ],
+  "remainingAnalyticGap": null
+}

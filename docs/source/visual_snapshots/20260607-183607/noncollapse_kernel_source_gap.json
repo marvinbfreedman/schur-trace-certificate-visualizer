@@ -1,0 +1,170 @@
+{
+  "omega": 0.49,
+  "L": 2.0,
+  "s0": 0.2825,
+  "point": 0.545,
+  "orders": [
+    7,
+    8
+  ],
+  "bases": [
+    18,
+    20,
+    22,
+    24
+  ],
+  "activeTol": 1e-06,
+  "lambda0AtS0": -0.00012862612661029079,
+  "lambda1AtS0": 9.42101395763874e-06,
+  "gapAtS0": 0.00013804714056792953,
+  "lambdaDerivativesAtS0": [
+    -0.00012862612661029079,
+    0.0012586353561607226,
+    -0.010569790654668558,
+    0.08131470927283976,
+    -0.48480406794895253,
+    0.3262134539749114,
+    33.05440359008409,
+    -172.53886154243878,
+    -11867.497399991053,
+    225121.96880967333,
+    3735520.511510404,
+    -308912314.588315,
+    3399472962.8393655,
+    369400519027.39575,
+    -16726614828278.037,
+    -133545146978831.05,
+    5.480905836994158e+16
+  ],
+  "allPassCutoffNoncollapse": false,
+  "minCutoffGap": -1087458087610041.0,
+  "rows": [
+    {
+      "basis": 18,
+      "highModes": 5,
+      "activeDim": 2,
+      "activeTol": 1e-06,
+      "activeFloor": 18285.13540177335,
+      "sourceTop": 18285135401.77335,
+      "activeSourceEigenvalues": [
+        226461.95322692656,
+        18285135401.77335
+      ],
+      "inactiveMaxSourceEigenvalue": 5.349515553432974,
+      "responseRank": 2,
+      "responseNullity": 3,
+      "responseGramEigenvalues": [
+        -2.9921294344265674e-46,
+        1.7516229036437893e-45,
+        2.0508362006109103e-45,
+        3.2850636042798713e+25,
+        1.8898654017325285e+26
+      ],
+      "kernelSourceMax": 20082295.18921202,
+      "kernelSourceFracOfTop": 0.0010982852873632197,
+      "cutoffGap": -20064010.05381025,
+      "cutoffGapFracOfTop": -0.0010972852873632195,
+      "minActiveGap": -19855833.235985097,
+      "passesCutoffNoncollapse": false,
+      "passesActiveMinNoncollapse": false
+    },
+    {
+      "basis": 20,
+      "highModes": 6,
+      "activeDim": 2,
+      "activeTol": 1e-06,
+      "activeFloor": 350955.40150085674,
+      "sourceTop": 350955401500.85675,
+      "activeSourceEigenvalues": [
+        8128880.388973607,
+        350955401500.85675
+      ],
+      "inactiveMaxSourceEigenvalue": 7.664039577472116,
+      "responseRank": 2,
+      "responseNullity": 4,
+      "responseGramEigenvalues": [
+        -1.0354706627158556e-44,
+        -4.778828807974757e-46,
+        2.300571244066767e-40,
+        2.9560464306855155e-40,
+        2.2153164208915507e+25,
+        1.4936569941699482e+31
+      ],
+      "kernelSourceMax": 571178032.952115,
+      "kernelSourceFracOfTop": 0.001627494634672892,
+      "cutoffGap": -570827077.5506141,
+      "cutoffGapFracOfTop": -0.001626494634672892,
+      "minActiveGap": -563049152.5631415,
+      "passesCutoffNoncollapse": false,
+      "passesActiveMinNoncollapse": false
+    },
+    {
+      "basis": 22,
+      "highModes": 8,
+      "activeDim": 2,
+      "activeTol": 1e-06,
+      "activeFloor": 3661655.9399730274,
+      "sourceTop": 3661655939973.0273,
+      "activeSourceEigenvalues": [
+        274587561456.9068,
+        3661655939973.0273
+      ],
+      "inactiveMaxSourceEigenvalue": 165247.04233490035,
+      "responseRank": 2,
+      "responseNullity": 6,
+      "responseGramEigenvalues": [
+        -1.7171630262018893e-42,
+        3.5013538290882667e-46,
+        1.0819253675062723e-41,
+        1.391161733135556e-41,
+        4.4892404764391634e-36,
+        5.319702896751581e-36,
+        1.9807888823201738e+30,
+        2.8764973030722416e+35
+      ],
+      "kernelSourceMax": 535907094274.5806,
+      "kernelSourceFracOfTop": 0.1463564854426296,
+      "cutoffGap": -535903432618.6406,
+      "cutoffGapFracOfTop": -0.1463554854426296,
+      "minActiveGap": -261319532817.6738,
+      "passesCutoffNoncollapse": false,
+      "passesActiveMinNoncollapse": false
+    },
+    {
+      "basis": 24,
+      "highModes": 11,
+      "activeDim": 2,
+      "activeTol": 1e-06,
+      "activeFloor": 9315123458837.074,
+      "sourceTop": 9.315123458837074e+18,
+      "activeSourceEigenvalues": [
+        2.029688362787111e+16,
+        9.315123458837074e+18
+      ],
+      "inactiveMaxSourceEigenvalue": 1744514119.2154782,
+      "responseRank": 2,
+      "responseNullity": 9,
+      "responseGramEigenvalues": [
+        -2.3012835875600257e-28,
+        -3.0370216223917075e-34,
+        -2.9192319690108705e-43,
+        -9.506947643597401e-45,
+        2.546717913300134e-42,
+        3.455082684194394e-40,
+        7.55933045739129e-35,
+        7.051825485571532e-33,
+        4.6396711621757925e-28,
+        1.3855293823273444e+37,
+        3.175115781492628e+43
+      ],
+      "kernelSourceMax": 1096773211068878.0,
+      "kernelSourceFracOfTop": 0.00011774113525338099,
+      "cutoffGap": -1087458087610041.0,
+      "cutoffGapFracOfTop": -0.00011674113525338098,
+      "minActiveGap": 1.920011041680223e+16,
+      "passesCutoffNoncollapse": false,
+      "passesActiveMinNoncollapse": true
+    }
+  ],
+  "interpretation": "If kernelSourceMax is below the active spectral cutoff, no active source eigenvector can lie in ker L.  This is the finite operator form of the response noncollapse theorem."
+}

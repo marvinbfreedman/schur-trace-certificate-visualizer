@@ -1,0 +1,38 @@
+{
+  "theoremName": "high-block Mosco projection consequence theorem",
+  "proofClass": "symbolic identity",
+  "source": "high-block Mosco projection input theorem",
+  "statuses": {
+    "highBlockMoscoProjectionInputStatus": {
+      "label": "high-block Mosco projection input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full input theorem closes the high-block Mosco projection passage."
+    },
+    "strongProjectionConvergenceInputStatus": {
+      "label": "strong projection convergence input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full input theorem records strong convergence of the high-block projections."
+    },
+    "projectionConsequenceStatus": {
+      "label": "projection convergence consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Only the terminal projection-convergence flags are exported upstream."
+    }
+  },
+  "highBlockMoscoProjectionConsequenceClosed": true,
+  "highBlockMoscoProjectionClosed": true,
+  "strongProjectionConvergenceClosed": true,
+  "proof": [
+    "Import the full high-block Mosco projection input theorem.",
+    "Export only the projection-convergence consequences used by compact compression."
+  ],
+  "notExportedHere": [
+    "trace-frame recovery theorem",
+    "bounded sampled-trace correction construction",
+    "abstract Mosco projection theorem"
+  ],
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,136 @@
+{
+  "theoremName": "finite interval trace-frame lower bound certificate",
+  "proofClass": "interval/ball certificate",
+  "omega": 0.49,
+  "L": 2.0,
+  "s0": 0.2825,
+  "basis": 18,
+  "traceCount": 13,
+  "traceMin": 0.02,
+  "traceMax": 0.545,
+  "activeDimension": 2,
+  "activeIndices": [
+    3,
+    4
+  ],
+  "activeSourceEigenvalues": [
+    226461.95322692656,
+    18285135401.77335
+  ],
+  "activeFloor": 182.85135401773348,
+  "centerDps": 70,
+  "refinedDps": 90,
+  "centerFrameMatrix": [
+    [
+      "41267.6986362275666492253738778",
+      "-337666.341468247859053615169867"
+    ],
+    [
+      "-337666.341468247859053615169867",
+      "2782958.57413446413044779348592"
+    ]
+  ],
+  "centerFrameMatrixFloat": [
+    [
+      41267.698636227564,
+      -337666.3414682479
+    ],
+    [
+      -337666.3414682479,
+      2782958.574134464
+    ]
+  ],
+  "entryBalls": [
+    [
+      {
+        "center": "41267.6986362275666492253738778",
+        "radius": "4.12678201419629950982418743742e-41",
+        "lower": "41267.6986362275666492253738778",
+        "upper": "41267.6986362275666492253738778"
+      },
+      {
+        "center": "-337666.341468247859053615169867",
+        "radius": "3.37667284286065349376882710616e-40",
+        "lower": "-337666.341468247859053615169867",
+        "upper": "-337666.341468247859053615169867"
+      }
+    ],
+    [
+      {
+        "center": "-337666.341468247859053615169867",
+        "radius": "3.37667284286065349376882710616e-40",
+        "lower": "-337666.341468247859053615169867",
+        "upper": "-337666.341468247859053615169867"
+      },
+      {
+        "center": "2782958.57413446413044779348592",
+        "radius": "2.78296587838520884010484607321e-39",
+        "lower": "2782958.57413446413044779348592",
+        "upper": "2782958.57413446413044779348592"
+      }
+    ]
+  ],
+  "radiusMatrix": [
+    [
+      "4.12678201419629950982418743742e-41",
+      "3.37667284286065349376882710616e-40"
+    ],
+    [
+      "3.37667284286065349376882710616e-40",
+      "2.78296587838520884010484607321e-39"
+    ]
+  ],
+  "radiusMatrixFloat": [
+    [
+      4.1267820141962997e-41,
+      3.3766728428606534e-40
+    ],
+    [
+      3.3766728428606534e-40,
+      2.7829658783852088e-39
+    ]
+  ],
+  "refinedAlignedFrameMatrix": [
+    [
+      "41267.6986362275666492253738778",
+      "-337666.341468247859053615169867"
+    ],
+    [
+      "-337666.341468247859053615169867",
+      "2782958.57413446413044779348592"
+    ]
+  ],
+  "signAlignment": [
+    -1,
+    -1
+  ],
+  "centerRefinedFrobeniusDifferenceAfterAlignment": 7.425944617305465e-46,
+  "centerFrameEigenvalues": [
+    293.11515100909196,
+    2823933.1576196826
+  ],
+  "lambdaMinCenter": 293.11515100909196,
+  "lambdaMinCenterString": "293.115151009091947583262597316",
+  "radiusFrobeniusBound": 2.8239405983465517e-39,
+  "radiusRowSumBound": 3.1206331626712744e-39,
+  "radiusOperatorBoundUsed": 2.8239405983465517e-39,
+  "weylLowerBound": 293.11515100909196,
+  "weylLowerBoundString": "293.115151009091947583262597316",
+  "direct2x2IntervalLowerBound": 293.1151510088239,
+  "direct2x2IntervalLowerBoundString": "293.115151008823886513710021973",
+  "direct2x2IntervalEigenvalueInterval": [
+    293.1151510088239,
+    293.1151510097552
+  ],
+  "gammaFiniteLower": 293.1151510088239,
+  "gammaFiniteLowerString": "293.115151008823886513710021973",
+  "gammaFiniteLowerPositive": true,
+  "finiteTraceFrameIntervalLowerBoundStatus": {
+    "label": "finite weighted trace-frame interval lower bound",
+    "closed": true,
+    "status": "closed",
+    "reason": "Every entry of Gamma_N is enclosed in an explicit symmetric ball around the high-precision center.  Weyl's inequality gives lambda_min(Gamma_N)>=lambda_min(center)-||Radius||_2; for active dimension two the direct 2x2 interval eigenvalue bound is also computed.  The larger certified lower bound is positive."
+  },
+  "scope": "This certifies positivity of the finite sampled weighted trace frame.  It does not include the continuum trace quadrature error or Galerkin-to-continuum projection transport.",
+  "nextProofTarget": "Use this finite gamma_N lower bound inside a trace quadrature interval consistency theorem to certify gamma_delta>0."
+}

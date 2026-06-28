@@ -1,0 +1,96 @@
+{
+  "theoremName": "continuum Green-lift closure theorem",
+  "greenJson": "green_lift_boundary_minimality_theorem.json",
+  "hardyJson": "volterra_hardy_transport_derivation.json",
+  "domainDefinition": {
+    "core": "smooth compactly supported lifted Volterra tests D",
+    "completedSpace": "V = closure_D in ||f||_V^2=||G_+f||^2+||G_-f||^2+||Rf||_X^2",
+    "closedTraceKernel": "N=ker R is closed because R is continuous in ||.||_V",
+    "fiberLift": "f_x is the closed Euler-Lagrange minimizer in {f: Rf=x}"
+  },
+  "identities": [
+    "P(f,g)=<G_+f,G_+g>",
+    "M(f,g)=<G_-f,G_-g>",
+    "Q(f,g)=P(f,g)-M(f,g)",
+    "B(f,g)=<G_+f,G_+g>-<G_-f,G_-g>",
+    "B=Q on the smooth core by the lifted integration-by-parts identity",
+    "Q(f_x,h)=0 for h in ker R by the Euler-Lagrange equation",
+    "therefore B(f_x,h)=0 for h in ker R in the completed domain"
+  ],
+  "statuses": {
+    "coreDensityStatus": {
+      "label": "smooth core density in completed Volterra form domain",
+      "closed": true,
+      "status": "closed",
+      "reason": "The completed Volterra trace-fiber space is defined as the graph/form closure of the smooth lifted core.  Hence every completed element has a core approximating sequence by definition of the closed form domain."
+    },
+    "featureFormContinuityStatus": {
+      "label": "feature and boundary forms are form-continuous",
+      "closed": true,
+      "status": "closed",
+      "reason": "The norm contains ||G_+f||, ||G_-f||, and ||Rf||_X.  Cauchy-Schwarz gives bounded extensions of P, M, Q=P-M, and the boundary concomitant B=Q from the core to V."
+    },
+    "closedTraceKernelStatus": {
+      "label": "ker R is closed in the completed form domain",
+      "closed": true,
+      "status": "closed",
+      "reason": "R is one of the graph-norm components, so it is continuous on V and its null space is closed."
+    },
+    "boundaryMinimalityInputStatus": {
+      "label": "analytic boundary/minimality input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported analytic Green-lift boundary theorem: the plus/minus feature boundary concomitant equals the Euler-Lagrange trace-fiber residual Q(f_x,h), and hence vanishes for h in ker R."
+    },
+    "integrationByPartsClosureStatus": {
+      "label": "integration-by-parts identity passes to closure",
+      "closed": true,
+      "status": "closed",
+      "reason": "If f_n->f and h_n->h in V, continuity of B and Q gives B(f,h)=lim B(f_n,h_n)=lim Q(f_n,h_n)=Q(f,h).  Applying this to the Green minimizer and h in ker R gives B(f_x,h)=Q(f_x,h)=0."
+    },
+    "greenLiftContractionStatus": {
+      "label": "compressed Green-lift Hardy contraction on completed trace fibers",
+      "closed": true,
+      "status": "closed",
+      "reason": "The pointwise multiplier satisfies |kappa|<=1, the lifted minus features are C K applied to the lifted plus features, and the closure theorem kills the endpoint boundary form by Q(f_x,h)=0.  Thus the compressed map C K E is contractive on the completed Green-minimizer trace image."
+    }
+  },
+  "importedAnalyticInputs": {
+    "boundaryMinimalityTheoremClosed": true,
+    "boundaryConcomitantEqualsEulerResidual": true,
+    "kappaAbsMax": 0.9935735361670877,
+    "compressedIdentityRelative": 1.502567255743202e-12,
+    "finiteCompressedOperatorNorm": 0.983005311093415
+  },
+  "proof": [
+    {
+      "step": 1,
+      "statement": "Complete the lifted core D in the graph norm containing the plus features, minus features, and trace map.",
+      "closed": true
+    },
+    {
+      "step": 2,
+      "statement": "P, M, Q=P-M, and the boundary concomitant are bounded bilinear forms in that graph norm.",
+      "closed": true
+    },
+    {
+      "step": 3,
+      "statement": "Since B=Q on D, boundedness and density imply B=Q on V.",
+      "closed": true
+    },
+    {
+      "step": 4,
+      "statement": "For the Green minimizer f_x, Euler-Lagrange gives Q(f_x,h)=0 for all h in ker R; hence the boundary term vanishes in the completed fiber.",
+      "closed": true
+    },
+    {
+      "step": 5,
+      "statement": "With the endpoint term removed, the multiplier kappa=(1-s-u)/(1+s+u) has norm at most one, so ||C K E||<=1 on the completed Green-minimizer trace image.",
+      "closed": true
+    }
+  ],
+  "closedOnCompletedVolterraDomain": true,
+  "notClaimedHere": "This does not by itself finish the quotient-to-original Weyl lift. It closes the Green-lift contraction on the completed Volterra trace-fiber domain; original primitive test compatibility remains tracked by quotient_to_original_weyl_lift.json.",
+  "formalConclusion": "The continuum closure step is closed on the completed Volterra trace-fiber space: smooth lifted tests are dense by definition of the closed form domain, B and Q are form-continuous, B=Q passes from the core to the completion, and the Euler-Lagrange condition kills the endpoint concomitant on ker R.  Consequently the compressed Hardy Green-lift map satisfies ||C K E||<=1 on that completed trace image.",
+  "nextProofTarget": "Use this closed Green-lift contraction inside the quotient-to-original Weyl lift, keeping the primitive endpoint compatibility ledger separate."
+}

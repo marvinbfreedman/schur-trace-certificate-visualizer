@@ -1,0 +1,3032 @@
+{
+  "theoremName": "continuum trace-to-source Green kernel",
+  "interval": [
+    0.02,
+    0.545
+  ],
+  "profileJson": "trace_to_source_kernel_profile.json",
+  "refinementJson": "trace_to_source_kernel_refinement.json",
+  "activeRangeJson": "global_trace_active_range_inclusion.json",
+  "lagrangeJson": "trace_lagrange_adjoint_control.json",
+  "adjointBoundaryJson": "adjoint_green_boundary_diagnostic.json",
+  "regularizedBvpJson": "adjoint_green_bvp_regularized.json",
+  "jumpJson": "adjoint_green_jump_conditions.json",
+  "endpointSelectionJson": "adjoint_green_endpoint_selection.json",
+  "endpointRangeJson": "adjoint_green_endpoint_range_theorem.json",
+  "activeTraceRangeJson": "continuum_active_trace_range_theorem.json",
+  "finiteActiveRangeIdentityStatus": {
+    "label": "finite active range identity",
+    "closed": true,
+    "status": "closed",
+    "reason": "Finite active blocks satisfy E_active=C_N R_N to roundoff."
+  },
+  "sampledGreenDensityStatus": {
+    "label": "sampled Green density construction",
+    "closed": true,
+    "status": "closed",
+    "reason": "Rows of C_N define sampled kernels K_N(a_i)=C_{N,i}/w_i."
+  },
+  "traceGridDensityStabilityStatus": {
+    "label": "trace-grid density stability",
+    "closed": true,
+    "status": "closed",
+    "reason": "Weighted density norms remain stable under trace refinement; this is finite evidence for an L2 trace-dual kernel."
+  },
+  "lagrangeAdjointIdentityStatus": {
+    "label": "Lagrange adjoint identity",
+    "closed": true,
+    "status": "closed",
+    "reason": "The symbolic identity D_a B_P[h,f]=h Lambda_a(f)-f P^*h is verified to roundoff for source test rows."
+  },
+  "sampledKernelAdjointIbpStatus": {
+    "label": "sampled-kernel adjoint IBP diagnostic",
+    "closed": false,
+    "status": "open",
+    "reason": "Differentiating the coarse pseudoinverse kernel K_N does not solve the adjoint boundary problem; this diagnostic is expected to stay open until K_u is constructed by the BVP itself."
+  },
+  "continuumAdjointGreenProblemStatus": {
+    "label": "continuum adjoint Green problem",
+    "closed": false,
+    "status": "open",
+    "reason": "The endpoint part is now reduced exactly to the fundamental-matrix Fredholm range condition.  The remaining global input is active trace range compatibility plus the source-inactive Hardy/Schur tail."
+  },
+  "continuumTraceToSourceClosed": false,
+  "sampledDensity": {
+    "basis": 18,
+    "activeDim": 2,
+    "traceRankOnActive": 2,
+    "traceCount": 11,
+    "traceMin": 0.02,
+    "traceMax": 0.545,
+    "rangeResidualRelative": 2.411802011191882e-69,
+    "coefficientOperator": 201.41472755309704,
+    "maxCoefficientL1": 217.87670026491386,
+    "maxDensityL2": 349.5148388300294,
+    "maxPointDensity": 1208.8906326905274,
+    "maxCoefficient": 31.733379108126336,
+    "maxCoefficientVariation": 68.12258929293967,
+    "rows": [
+      {
+        "sourceNode": 0.08,
+        "component": "boundary",
+        "coefficientL1": 17.05991232796577,
+        "densityL2": 27.22230506627383,
+        "maxPointDensity": 91.03316478712155,
+        "maxCoefficient": 2.38962057566194,
+        "coefficientVariation": 5.280320870199723
+      },
+      {
+        "sourceNode": 0.08,
+        "component": "adjointEval",
+        "coefficientL1": 217.87670026491386,
+        "densityL2": 349.5148388300294,
+        "maxPointDensity": 1208.8906326905274,
+        "maxCoefficient": 31.733379108126336,
+        "coefficientVariation": 68.12258929293967
+      },
+      {
+        "sourceNode": 0.135,
+        "component": "boundary",
+        "coefficientL1": 17.145855372810217,
+        "densityL2": 27.361659916719976,
+        "maxPointDensity": 91.5528134170209,
+        "maxCoefficient": 2.403261352196798,
+        "coefficientVariation": 5.307826792776664
+      },
+      {
+        "sourceNode": 0.135,
+        "component": "adjointEval",
+        "coefficientL1": 215.24512601344472,
+        "densityL2": 345.2933032126222,
+        "maxPointDensity": 1194.289321683143,
+        "maxCoefficient": 31.350094694182502,
+        "coefficientVariation": 67.29978606657937
+      },
+      {
+        "sourceNode": 0.19,
+        "component": "boundary",
+        "coefficientL1": 17.208527329967936,
+        "densityL2": 27.463905600617952,
+        "maxPointDensity": 91.94873927648565,
+        "maxCoefficient": 2.413654406007748,
+        "coefficientVariation": 5.328136662235386
+      },
+      {
+        "sourceNode": 0.19,
+        "component": "adjointEval",
+        "coefficientL1": 212.2655103681114,
+        "densityL2": 340.5134443255183,
+        "maxPointDensity": 1177.756900188408,
+        "maxCoefficient": 30.916118629945704,
+        "coefficientVariation": 66.36816220495919
+      },
+      {
+        "sourceNode": 0.245,
+        "component": "boundary",
+        "coefficientL1": 17.246985295120147,
+        "densityL2": 27.5275137461101,
+        "maxPointDensity": 92.21525767557763,
+        "maxCoefficient": 2.4206505139839125,
+        "coefficientVariation": 5.340948948547959
+      },
+      {
+        "sourceNode": 0.245,
+        "component": "adjointEval",
+        "coefficientL1": 208.9658590535437,
+        "densityL2": 335.22018857121253,
+        "maxPointDensity": 1159.4487581958235,
+        "maxCoefficient": 30.43552990264036,
+        "coefficientVariation": 65.33647413992566
+      },
+      {
+        "sourceNode": 0.3,
+        "component": "boundary",
+        "coefficientL1": 17.260559327699074,
+        "densityL2": 27.551392576186764,
+        "maxPointDensity": 92.34817561217864,
+        "maxCoefficient": 2.424139609819689,
+        "coefficientVariation": 5.3460471292685785
+      },
+      {
+        "sourceNode": 0.3,
+        "component": "adjointEval",
+        "coefficientL1": 205.37606817649618,
+        "densityL2": 329.4614948774893,
+        "maxPointDensity": 1139.5307744953905,
+        "maxCoefficient": 29.912682830503993,
+        "coefficientVariation": 64.21406936113421
+      },
+      {
+        "sourceNode": 0.355,
+        "component": "boundary",
+        "coefficientL1": 17.248852518947,
+        "densityL2": 27.53488739610302,
+        "maxPointDensity": 92.34480166035493,
+        "maxCoefficient": 2.4240510435843166,
+        "coefficientVariation": 5.343299851825018
+      },
+      {
+        "sourceNode": 0.355,
+        "component": "adjointEval",
+        "coefficientL1": 201.52729358770245,
+        "densityL2": 323.2873430362886,
+        "maxPointDensity": 1118.1758175767623,
+        "maxCoefficient": 29.352115211390004,
+        "coefficientVariation": 63.01068923707915
+      },
+      {
+        "sourceNode": 0.41,
+        "component": "boundary",
+        "coefficientL1": 17.211735425388305,
+        "densityL2": 27.477772028974268,
+        "maxPointDensity": 92.2039239727042,
+        "maxCoefficient": 2.420353004283485,
+        "coefficientVariation": 5.332659324838474
+      },
+      {
+        "sourceNode": 0.41,
+        "component": "adjointEval",
+        "coefficientL1": 197.45134664067052,
+        "densityL2": 316.74876438818416,
+        "maxPointDensity": 1095.5603929920346,
+        "maxCoefficient": 28.758460316040907,
+        "coefficientVariation": 61.7362800895436
+      },
+      {
+        "sourceNode": 0.465,
+        "component": "boundary",
+        "coefficientL1": 17.149335365599995,
+        "densityL2": 27.38023198864337,
+        "maxPointDensity": 91.92575897696582,
+        "maxCoefficient": 2.4130511731453526,
+        "coefficientVariation": 5.3141580914415645
+      },
+      {
+        "sourceNode": 0.465,
+        "component": "adjointEval",
+        "coefficientL1": 193.1801307574866,
+        "densityL2": 309.8969379689106,
+        "maxPointDensity": 1071.8615171365539,
+        "maxCoefficient": 28.136364824834533,
+        "coefficientVariation": 60.400817027004855
+      },
+      {
+        "sourceNode": 0.52,
+        "component": "boundary",
+        "coefficientL1": 17.062021219656536,
+        "densityL2": 27.24284040773963,
+        "maxPointDensity": 91.51187417885873,
+        "maxCoefficient": 2.402186697195041,
+        "coefficientVariation": 5.2879043824946566
+      },
+      {
+        "sourceNode": 0.52,
+        "component": "adjointEval",
+        "coefficientL1": 188.74513046466316,
+        "densityL2": 302.7823708276212,
+        "maxPointDensity": 1047.2538821601884,
+        "maxCoefficient": 27.49041440670494,
+        "coefficientVariation": 59.01414418362725
+      }
+    ]
+  },
+  "refinement": {
+    "basis": 18,
+    "activeDim": 2,
+    "traceCounts": [
+      7,
+      9,
+      11,
+      13,
+      15,
+      17,
+      21
+    ],
+    "maxWeightedDensityL1": 225.18490261340185,
+    "maxWeightedDensityL2": 339.2666879549353,
+    "minWeightedDensityL2": 330.80492148641235,
+    "weightedDensityL2RelativeSpread": 0.02494134192640493,
+    "maxWeightedPointDensity": 847.7249847094712,
+    "maxWeightedRangeResidualRelative": 3.8758775998187393e-69,
+    "rows": [
+      {
+        "basis": 18,
+        "traceCount": 7,
+        "traceMin": 0.02,
+        "traceMax": 0.545,
+        "traceStep": 0.0875,
+        "activeDim": 2,
+        "traceRankOnActive": 2,
+        "traceGramEigenvalues": [
+          4535.721784430386,
+          40416445.426195875
+        ],
+        "traceGramTol": 4.0416445426195876e-19,
+        "coefficientOperator": 247.548147463491,
+        "coefficientFrobenius": 247.5488919883722,
+        "sourceActiveFrobenius": 135223.37765241103,
+        "rangeResidualRelative": 3.6779162024321746e-69,
+        "maxCoefficientL1AsDensityL1": 214.4815502727829,
+        "maxDensityL2": 342.70543911309306,
+        "maxPointDensity": 975.708374815545,
+        "rowStats": [
+          {
+            "sourceNode": 0.08,
+            "component": "boundary",
+            "coefficientL1": 16.812314558244637,
+            "densityL2": 26.73066287917499,
+            "maxCoefficient": 3.3761575476039347,
+            "maxDensity": 73.3483395556496,
+            "coefficientVariation": 7.730506623116882
+          },
+          {
+            "sourceNode": 0.08,
+            "component": "adjointEval",
+            "coefficientL1": 214.4815502727829,
+            "densityL2": 342.70543911309306,
+            "maxCoefficient": 42.68724139818009,
+            "maxDensity": 975.708374815545,
+            "coefficientVariation": 99.38799314943473
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "boundary",
+            "coefficientL1": 16.89670291377036,
+            "densityL2": 26.86683989950595,
+            "maxCoefficient": 3.3923117883591405,
+            "maxDensity": 73.7692352682864,
+            "coefficientVariation": 7.77032084087884
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "adjointEval",
+            "coefficientL1": 211.89098356956606,
+            "densityL2": 338.56614928397465,
+            "maxCoefficient": 42.17165324583011,
+            "maxDensity": 963.9235027618311,
+            "coefficientVariation": 98.18755784194555
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "boundary",
+            "coefficientL1": 16.9581556402745,
+            "densityL2": 26.96657321538111,
+            "maxCoefficient": 3.4038543328773048,
+            "maxDensity": 74.09045991629036,
+            "coefficientVariation": 7.799596495251006
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "adjointEval",
+            "coefficientL1": 208.95779896537897,
+            "densityL2": 333.8794136813121,
+            "maxCoefficient": 41.58787548450231,
+            "maxDensity": 950.5800110743386,
+            "coefficientVariation": 96.82835780363824
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "boundary",
+            "coefficientL1": 16.995746807205165,
+            "densityL2": 27.028369130374347,
+            "maxCoefficient": 3.410607717628239,
+            "maxDensity": 74.3074096408675,
+            "coefficientVariation": 7.817897009097669
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "adjointEval",
+            "coefficientL1": 205.70956577455317,
+            "densityL2": 328.6892834319368,
+            "maxCoefficient": 40.94139510351843,
+            "maxDensity": 935.8033166518499,
+            "coefficientVariation": 95.32316830035943
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "boundary",
+            "coefficientL1": 17.00881930925647,
+            "densityL2": 27.051162271964316,
+            "maxCoefficient": 3.412448007264583,
+            "maxDensity": 74.41668374881509,
+            "coefficientVariation": 7.82490999640729
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "adjointEval",
+            "coefficientL1": 202.17571423591647,
+            "densityL2": 323.0427831069965,
+            "maxCoefficient": 40.2380694631393,
+            "maxDensity": 919.7273020146125,
+            "coefficientVariation": 93.68562692644429
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "boundary",
+            "coefficientL1": 16.996984885483787,
+            "densityL2": 27.034315967711475,
+            "maxCoefficient": 3.409304674862065,
+            "maxDensity": 74.4160930228606,
+            "coefficientVariation": 7.820447428889755
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "adjointEval",
+            "coefficientL1": 198.38691470181635,
+            "densityL2": 316.9889187704423,
+            "maxCoefficient": 39.48400273751303,
+            "maxDensity": 902.4914911431549,
+            "coefficientVariation": 91.92994592889086
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "boundary",
+            "coefficientL1": 16.96011859476899,
+            "densityL2": 26.977613752920078,
+            "maxCoefficient": 3.4011593925222297,
+            "maxDensity": 74.30464227490515,
+            "coefficientVariation": 7.804443223393633
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "adjointEval",
+            "coefficientL1": 194.374482812743,
+            "densityL2": 310.5777275481325,
+            "maxCoefficient": 38.68542752941334,
+            "maxDensity": 884.2383435294478,
+            "coefficientVariation": 90.0706365729271
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "boundary",
+            "coefficientL1": 16.898348238680338,
+            "densityL2": 26.88124278539725,
+            "maxCoefficient": 3.388043831938929,
+            "maxDensity": 74.08248921843274,
+            "coefficientVariation": 7.776948474664679
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "adjointEval",
+            "coefficientL1": 190.16982484306956,
+            "densityL2": 303.8593913836248,
+            "maxCoefficient": 37.84859448004402,
+            "maxDensity": 865.1107309724348,
+            "coefficientVariation": 88.12225212235718
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "boundary",
+            "coefficientL1": 16.812039361822208,
+            "densityL2": 26.745770166790756,
+            "maxCoefficient": 3.3700366014582768,
+            "maxDensity": 73.75088240922135,
+            "coefficientVariation": 7.738124623174311
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "adjointEval",
+            "coefficientL1": 185.8039346992018,
+            "densityL2": 296.88343332583014,
+            "maxCoefficient": 36.979672158976356,
+            "maxDensity": 845.249649348031,
+            "coefficientVariation": 86.09915475497036
+          }
+        ],
+        "weightedTraceGramEigenvalues": [
+          307.1349314661922,
+          2848803.14902905
+        ],
+        "weightedTraceGramTol": 2.8488031490290503e-20,
+        "weightedTraceRankOnActive": 2,
+        "weightedDensityCoordinateOperator": 935.8100514035642,
+        "weightedDensityCoordinateFrobenius": 935.8129388104863,
+        "weightedRangeResidualRelative": 2.381983699242848e-69,
+        "weightedMaxDensityL1": 220.23076537799247,
+        "weightedMaxDensityL2": 330.80492148641235,
+        "weightedMaxPointDensity": 770.272100085638,
+        "weightedRowStats": [
+          {
+            "sourceNode": 0.08,
+            "component": "boundary",
+            "densityL1": 17.233477100222625,
+            "densityL2": 25.82801462032933,
+            "maxDensity": 58.01938830907643,
+            "maxCoefficient": 3.8785863338534607,
+            "densityCoordinateVariation": 31.97873654342431
+          },
+          {
+            "sourceNode": 0.08,
+            "component": "adjointEval",
+            "densityL1": 220.23076537799247,
+            "densityL2": 330.80492148641235,
+            "maxDensity": 770.272100085638,
+            "maxCoefficient": 49.01801480817107,
+            "densityCoordinateVariation": 411.3000130637027
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "boundary",
+            "densityL1": 17.320475786946133,
+            "densityL2": 25.959160618812696,
+            "maxDensity": 58.35031070304897,
+            "maxCoefficient": 3.897444328176161,
+            "densityCoordinateVariation": 32.14364990775862
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "adjointEval",
+            "densityL1": 217.5707580855863,
+            "densityL2": 326.80936935722906,
+            "maxDensity": 760.9685434283829,
+            "maxCoefficient": 48.425961846700325,
+            "densityCoordinateVariation": 406.3322192487086
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "boundary",
+            "densityL1": 17.383967977065623,
+            "densityL2": 26.0550903304321,
+            "maxDensity": 58.60237718026255,
+            "maxCoefficient": 3.9110065564557743,
+            "densityCoordinateVariation": 32.264970057067565
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "adjointEval",
+            "densityL1": 214.55894896002982,
+            "densityL2": 322.28538162280995,
+            "maxDensity": 750.4345359012433,
+            "maxCoefficient": 47.75560634908162,
+            "densityCoordinateVariation": 400.7074050654558
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "boundary",
+            "densityL1": 17.422999233569,
+            "densityL2": 26.1143651274619,
+            "maxDensity": 58.77196755417227,
+            "maxCoefficient": 3.919065938261082,
+            "densityCoordinateVariation": 32.34088871400297
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "adjointEval",
+            "densityL1": 211.2236463159005,
+            "densityL2": 317.27547972544824,
+            "maxDensity": 738.7690877623095,
+            "maxCoefficient": 47.013249057996255,
+            "densityCoordinateVariation": 394.47843874121276
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "boundary",
+            "densityL1": 17.43689096459346,
+            "densityL2": 26.13595999365229,
+            "maxDensity": 58.85641219898996,
+            "maxCoefficient": 3.921477059709466,
+            "densityCoordinateVariation": 32.37011146506146
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "adjointEval",
+            "densityL1": 207.59506927467558,
+            "densityL2": 311.8250552982816,
+            "maxDensity": 726.0778924469334,
+            "maxCoefficient": 46.20561601529183,
+            "densityCoordinateVariation": 387.70175710049404
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "boundary",
+            "densityL1": 17.425240520459855,
+            "densityL2": 26.119263820155066,
+            "maxDensity": 58.853998309492034,
+            "maxCoefficient": 3.918156082650632,
+            "densityCoordinateVariation": 32.351858483158786
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "adjointEval",
+            "densityL1": 203.70471031280948,
+            "densityL2": 305.98141265950125,
+            "maxDensity": 712.4710970362182,
+            "maxCoefficient": 45.33971668068002,
+            "densityCoordinateVariation": 380.4361750684302
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "boundary",
+            "densityL1": 17.387915593392453,
+            "densityL2": 26.064071145300307,
+            "maxDensity": 58.76395584659717,
+            "maxCoefficient": 3.9090793931239194,
+            "densityCoordinateVariation": 32.285854574544906
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "adjointEval",
+            "densityL1": 199.58472449195995,
+            "densityL2": 299.79285138536665,
+            "maxDensity": 698.0611660481386,
+            "maxCoefficient": 44.42270798923205,
+            "densityCoordinateVariation": 372.7417450053586
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "boundary",
+            "densityL1": 17.325043422647887,
+            "densityL2": 25.97056608818998,
+            "maxDensity": 58.58642481357991,
+            "maxCoefficient": 3.8942811031373616,
+            "densityCoordinateVariation": 32.172309478567335
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "adjointEval",
+            "densityL1": 195.26735993712458,
+            "densityL2": 293.30781084101204,
+            "maxDensity": 682.9608894960386,
+            "maxCoefficient": 43.46176758965634,
+            "densityCoordinateVariation": 364.67869307545783
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "boundary",
+            "densityL1": 17.23699545093467,
+            "densityL2": 25.839299441840318,
+            "maxDensity": 58.322406037512266,
+            "maxCoefficient": 3.8738495511289073,
+            "densityCoordinateVariation": 32.011889618802144
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "adjointEval",
+            "densityL1": 190.7844413517387,
+            "densityL2": 286.574094377178,
+            "maxDensity": 667.2815764475123,
+            "maxCoefficient": 42.46397888731445,
+            "densityCoordinateVariation": 356.3064546664958
+          }
+        ]
+      },
+      {
+        "basis": 18,
+        "traceCount": 9,
+        "traceMin": 0.02,
+        "traceMax": 0.545,
+        "traceStep": 0.065625,
+        "activeDim": 2,
+        "traceRankOnActive": 2,
+        "traceGramEigenvalues": [
+          5644.417709786144,
+          51047124.711181305
+        ],
+        "traceGramTol": 5.10471247111813e-19,
+        "coefficientOperator": 220.85731640387513,
+        "coefficientFrobenius": 220.85798342098556,
+        "sourceActiveFrobenius": 135223.37765241103,
+        "rangeResidualRelative": 1.4430768317595408e-69,
+        "maxCoefficientL1AsDensityL1": 216.01844210263366,
+        "maxDensityL2": 347.5128712559037,
+        "maxPointDensity": 1113.9085312138834,
+        "rowStats": [
+          {
+            "sourceNode": 0.08,
+            "component": "boundary",
+            "coefficientL1": 17.00394820893668,
+            "densityL2": 27.078346936518066,
+            "maxCoefficient": 2.750722755184716,
+            "maxDensity": 83.83155063420088,
+            "coefficientVariation": 6.253418701517782
+          },
+          {
+            "sourceNode": 0.08,
+            "component": "adjointEval",
+            "coefficientL1": 216.01844210263366,
+            "densityL2": 347.5128712559037,
+            "maxCoefficient": 36.55012368045555,
+            "maxDensity": 1113.9085312138834,
+            "coefficientVariation": 80.69944063998767
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "boundary",
+            "coefficientL1": 17.088100925944918,
+            "densityL2": 27.21676029346681,
+            "maxCoefficient": 2.7664530894905437,
+            "maxDensity": 84.31095129875943,
+            "coefficientVariation": 6.286023569319704
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "adjointEval",
+            "coefficientL1": 213.4093124004279,
+            "densityL2": 343.3155159492591,
+            "maxCoefficient": 36.10866131092017,
+            "maxDensity": 1100.4544399518527,
+            "coefficientVariation": 79.72473077042412
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "boundary",
+            "coefficientL1": 17.149047683293617,
+            "densityL2": 27.31825926695861,
+            "maxCoefficient": 2.7784451387682347,
+            "maxDensity": 84.67642327674619,
+            "coefficientVariation": 6.310106462976875
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "adjointEval",
+            "coefficientL1": 210.45510972989482,
+            "densityL2": 338.563035363268,
+            "maxCoefficient": 35.60881290939427,
+            "maxDensity": 1085.2209648577302,
+            "coefficientVariation": 78.62110970581192
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "boundary",
+            "coefficientL1": 17.185864810774902,
+            "densityL2": 27.381325755994876,
+            "maxCoefficient": 2.7865268279622253,
+            "maxDensity": 84.92272237599163,
+            "coefficientVariation": 6.32530996378464
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "adjointEval",
+            "coefficientL1": 207.18360095640898,
+            "densityL2": 333.30009856885863,
+            "maxCoefficient": 35.05527660421255,
+            "maxDensity": 1068.3512869855253,
+            "coefficientVariation": 77.39895049801758
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "boundary",
+            "coefficientL1": 17.197899838507993,
+            "densityL2": 27.404875825952654,
+            "maxCoefficient": 2.790571172178498,
+            "maxDensity": 85.04597858067802,
+            "coefficientVariation": 6.331377343697208
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "adjointEval",
+            "coefficientL1": 203.62442720450628,
+            "densityL2": 327.57438979240743,
+            "maxCoefficient": 34.453067646652954,
+            "maxDensity": 1049.998252088471,
+            "coefficientVariation": 76.06932637832038
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "boundary",
+            "coefficientL1": 17.184771329427367,
+            "densityL2": 27.38826016175774,
+            "maxCoefficient": 2.7904965798880528,
+            "maxDensity": 85.04370529182637,
+            "coefficientVariation": 6.3281527621994105
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "adjointEval",
+            "coefficientL1": 199.80847859841606,
+            "densityL2": 321.43560254924546,
+            "maxCoefficient": 33.80741261760412,
+            "maxDensity": 1030.3211464412684,
+            "coefficientVariation": 74.64377717509026
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "boundary",
+            "coefficientL1": 17.14636314062071,
+            "densityL2": 27.331255523245286,
+            "maxCoefficient": 2.786266191797554,
+            "maxDensity": 84.91477917859213,
+            "coefficientVariation": 6.3155793649462995
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "adjointEval",
+            "coefficientL1": 195.7672951743957,
+            "densityL2": 314.9344758802278,
+            "maxCoefficient": 33.123648062477976,
+            "maxDensity": 1009.4826076183764,
+            "coefficientVariation": 73.13408550863946
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "boundary",
+            "coefficientL1": 17.0828136116587,
+            "densityL2": 27.234047987863754,
+            "maxCoefficient": 2.7778863333193593,
+            "maxDensity": 84.65939301544715,
+            "coefficientVariation": 6.293695465293286
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "adjointEval",
+            "coefficientL1": 191.53250825203293,
+            "densityL2": 308.1218956753949,
+            "maxCoefficient": 32.40712597174279,
+            "maxDensity": 987.6457439007328,
+            "coefficientVariation": 71.5520681005987
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "boundary",
+            "coefficientL1": 16.994500317189946,
+            "densityL2": 27.097208993240173,
+            "maxCoefficient": 2.765404183739349,
+            "maxDensity": 84.27898464729444,
+            "coefficientVariation": 6.2626290430876255
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "adjointEval",
+            "coefficientL1": 187.1353338280786,
+            "densityL2": 301.0480796872425,
+            "maxCoefficient": 31.6631280636211,
+            "maxDensity": 964.9715219389288,
+            "coefficientVariation": 69.90938651769487
+          }
+        ],
+        "weightedTraceGramEigenvalues": [
+          299.0945772131482,
+          2834244.7046404444
+        ],
+        "weightedTraceGramTol": 2.8342447046404444e-20,
+        "weightedTraceRankOnActive": 2,
+        "weightedDensityCoordinateOperator": 946.7270450343125,
+        "weightedDensityCoordinateFrobenius": 946.7299233772707,
+        "weightedRangeResidualRelative": 1.5314595026687327e-69,
+        "weightedMaxDensityL1": 219.0191091028209,
+        "weightedMaxDensityL2": 334.66544339575955,
+        "weightedMaxPointDensity": 805.7581651349932,
+        "weightedRowStats": [
+          {
+            "sourceNode": 0.08,
+            "component": "boundary",
+            "densityL1": 17.04123316487028,
+            "densityL2": 26.11227366995774,
+            "maxDensity": 60.730010927530515,
+            "maxCoefficient": 2.993488302257457,
+            "densityCoordinateVariation": 28.74331578048914
+          },
+          {
+            "sourceNode": 0.08,
+            "component": "adjointEval",
+            "densityL1": 219.0191091028209,
+            "densityL2": 334.66544339575955,
+            "maxDensity": 805.7581651349932,
+            "maxCoefficient": 37.97062149719993,
+            "densityCoordinateVariation": 370.6963911226822
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "boundary",
+            "densityL1": 17.12890370692016,
+            "densityL2": 26.24515570911602,
+            "maxDensity": 61.0757336065076,
+            "maxCoefficient": 3.008225672206806,
+            "densityCoordinateVariation": 28.89287551924789
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "adjointEval",
+            "densityL1": 216.37373652560683,
+            "densityL2": 330.62326282929257,
+            "maxDensity": 796.0259980987655,
+            "maxCoefficient": 37.512001967333646,
+            "densityCoordinateVariation": 366.2190189355467
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "boundary",
+            "densityL1": 17.193342180618433,
+            "densityL2": 26.342435959836305,
+            "maxDensity": 61.338911372195675,
+            "maxCoefficient": 3.018877134894672,
+            "densityCoordinateVariation": 29.00326244397303
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "adjointEval",
+            "densityL1": 213.3784976436325,
+            "densityL2": 326.0464797685891,
+            "maxDensity": 785.0066939130854,
+            "maxCoefficient": 36.99272726866911,
+            "densityCoordinateVariation": 361.1494875661311
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "boundary",
+            "densityL1": 17.23358722159592,
+            "densityL2": 26.40265682990318,
+            "maxDensity": 61.515761969864165,
+            "maxCoefficient": 3.0252809098761437,
+            "densityCoordinateVariation": 29.072836981867788
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "adjointEval",
+            "densityL1": 210.06154502599207,
+            "densityL2": 320.97811188483416,
+            "maxDensity": 772.8038241909968,
+            "maxCoefficient": 36.41767811937573,
+            "densityCoordinateVariation": 355.53544607942683
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "boundary",
+            "densityL1": 17.248951178569587,
+            "densityL2": 26.424779062057727,
+            "maxDensity": 61.60349773515043,
+            "maxCoefficient": 3.027322916059714,
+            "densityCoordinateVariation": 29.100422200351243
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "adjointEval",
+            "densityL1": 206.45293153588318,
+            "densityL2": 315.4640805354314,
+            "maxDensity": 759.5279516135656,
+            "maxCoefficient": 35.79206468535208,
+            "densityCoordinateVariation": 349.427759845017
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "boundary",
+            "densityL1": 17.23902046554207,
+            "densityL2": 26.408182078469416,
+            "maxDensity": 61.600332043319284,
+            "maxCoefficient": 3.024936730135594,
+            "densityCoordinateVariation": 29.085304664249247
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "adjointEval",
+            "densityL1": 202.58397638579027,
+            "densityL2": 309.55224208403723,
+            "maxDensity": 745.2942976849264,
+            "maxCoefficient": 35.121316675301266,
+            "densityCoordinateVariation": 342.8794375665183
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "boundary",
+            "densityL1": 17.203650231296557,
+            "densityL2": 26.352655666102454,
+            "maxDensity": 61.50546451490057,
+            "maxCoefficient": 3.018102566529338,
+            "densityCoordinateVariation": 29.027225657750378
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "adjointEval",
+            "densityL1": 198.48665772801797,
+            "densityL2": 303.2914597671238,
+            "maxDensity": 730.2205081092868,
+            "maxCoefficient": 34.410978036152436,
+            "densityCoordinateVariation": 335.94460322289586
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "boundary",
+            "densityL1": 17.142953841245607,
+            "densityL2": 26.25838376086052,
+            "maxDensity": 61.319046700244954,
+            "maxCoefficient": 3.0068453666740287,
+            "densityCoordinateVariation": 28.9263636040254
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "adjointEval",
+            "densityL1": 194.19304626619888,
+            "densityL2": 296.73073824138595,
+            "maxDensity": 714.4245690816389,
+            "maxCoefficient": 33.66660876015362,
+            "densityCoordinateVariation": 328.6775374390052
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "boundary",
+            "densityL1": 17.057287810315394,
+            "densityL2": 26.125921306898995,
+            "maxDensity": 61.042130519183246,
+            "maxCoefficient": 2.9912321097906043,
+            "densityCoordinateVariation": 28.783308759775075
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "adjointEval",
+            "densityL1": 189.73479161196607,
+            "densityL2": 289.9184387267825,
+            "maxDensity": 698.0229176247665,
+            "maxCoefficient": 32.893695836219976,
+            "densityCoordinateVariation": 321.1318081289013
+          }
+        ]
+      },
+      {
+        "basis": 18,
+        "traceCount": 11,
+        "traceMin": 0.02,
+        "traceMax": 0.545,
+        "traceStep": 0.0525,
+        "activeDim": 2,
+        "traceRankOnActive": 2,
+        "traceGramEigenvalues": [
+          6746.882562520208,
+          61716774.728149824
+        ],
+        "traceGramTol": 6.171677472814983e-19,
+        "coefficientOperator": 201.41472755309704,
+        "coefficientFrobenius": 201.4153360841363,
+        "sourceActiveFrobenius": 135223.37765241103,
+        "rangeResidualRelative": 2.411802011191882e-69,
+        "maxCoefficientL1AsDensityL1": 217.87670026491386,
+        "maxDensityL2": 349.5148388300294,
+        "maxPointDensity": 1208.8906326905271,
+        "rowStats": [
+          {
+            "sourceNode": 0.08,
+            "component": "boundary",
+            "coefficientL1": 17.05991232796577,
+            "densityL2": 27.22230506627383,
+            "maxCoefficient": 2.38962057566194,
+            "maxDensity": 91.03316478712154,
+            "coefficientVariation": 5.280320870199723
+          },
+          {
+            "sourceNode": 0.08,
+            "component": "adjointEval",
+            "coefficientL1": 217.87670026491386,
+            "densityL2": 349.5148388300294,
+            "maxCoefficient": 31.733379108126336,
+            "maxDensity": 1208.8906326905271,
+            "coefficientVariation": 68.12258929293967
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "boundary",
+            "coefficientL1": 17.145855372810217,
+            "densityL2": 27.361659916719976,
+            "maxCoefficient": 2.403261352196798,
+            "maxDensity": 91.55281341702089,
+            "coefficientVariation": 5.307826792776665
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "adjointEval",
+            "coefficientL1": 215.24512601344472,
+            "densityL2": 345.2933032126222,
+            "maxCoefficient": 31.350094694182502,
+            "maxDensity": 1194.2893216831428,
+            "coefficientVariation": 67.29978606657937
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "boundary",
+            "coefficientL1": 17.208527329967936,
+            "densityL2": 27.463905600617952,
+            "maxCoefficient": 2.413654406007748,
+            "maxDensity": 91.94873927648564,
+            "coefficientVariation": 5.328136662235385
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "adjointEval",
+            "coefficientL1": 212.2655103681114,
+            "densityL2": 340.5134443255183,
+            "maxCoefficient": 30.916118629945704,
+            "maxDensity": 1177.7569001884078,
+            "coefficientVariation": 66.36816220495919
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "boundary",
+            "coefficientL1": 17.24698529512015,
+            "densityL2": 27.527513746110102,
+            "maxCoefficient": 2.4206505139839125,
+            "maxDensity": 92.21525767557762,
+            "coefficientVariation": 5.340948948547959
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "adjointEval",
+            "coefficientL1": 208.9658590535437,
+            "densityL2": 335.22018857121253,
+            "maxCoefficient": 30.43552990264036,
+            "maxDensity": 1159.4487581958233,
+            "coefficientVariation": 65.33647413992566
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "boundary",
+            "coefficientL1": 17.260559327699074,
+            "densityL2": 27.551392576186764,
+            "maxCoefficient": 2.424139609819689,
+            "maxDensity": 92.34817561217862,
+            "coefficientVariation": 5.3460471292685785
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "adjointEval",
+            "coefficientL1": 205.37606817649618,
+            "densityL2": 329.4614948774894,
+            "maxCoefficient": 29.912682830503993,
+            "maxDensity": 1139.5307744953902,
+            "coefficientVariation": 64.21406936113421
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "boundary",
+            "coefficientL1": 17.248852518947,
+            "densityL2": 27.534887396103024,
+            "maxCoefficient": 2.4240510435843166,
+            "maxDensity": 92.34480166035492,
+            "coefficientVariation": 5.343299851825017
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "adjointEval",
+            "coefficientL1": 201.52729358770245,
+            "densityL2": 323.2873430362886,
+            "maxCoefficient": 29.352115211390004,
+            "maxDensity": 1118.175817576762,
+            "coefficientVariation": 63.01068923707915
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "boundary",
+            "coefficientL1": 17.211735425388305,
+            "densityL2": 27.477772028974268,
+            "maxCoefficient": 2.420353004283485,
+            "maxDensity": 92.20392397270419,
+            "coefficientVariation": 5.332659324838473
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "adjointEval",
+            "coefficientL1": 197.45134664067052,
+            "densityL2": 316.74876438818416,
+            "maxCoefficient": 28.758460316040907,
+            "maxDensity": 1095.5603929920346,
+            "coefficientVariation": 61.7362800895436
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "boundary",
+            "coefficientL1": 17.149335365599995,
+            "densityL2": 27.38023198864337,
+            "maxCoefficient": 2.4130511731453526,
+            "maxDensity": 91.92575897696581,
+            "coefficientVariation": 5.3141580914415645
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "adjointEval",
+            "coefficientL1": 193.1801307574866,
+            "densityL2": 309.8969379689106,
+            "maxCoefficient": 28.136364824834533,
+            "maxDensity": 1071.8615171365536,
+            "coefficientVariation": 60.400817027004855
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "boundary",
+            "coefficientL1": 17.062021219656536,
+            "densityL2": 27.24284040773963,
+            "maxCoefficient": 2.402186697195041,
+            "maxDensity": 91.51187417885872,
+            "coefficientVariation": 5.2879043824946566
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "adjointEval",
+            "coefficientL1": 188.74513046466316,
+            "densityL2": 302.7823708276212,
+            "maxCoefficient": 27.49041440670494,
+            "maxDensity": 1047.2538821601881,
+            "coefficientVariation": 59.01414418362725
+          }
+        ],
+        "weightedTraceGramEigenvalues": [
+          295.2418827418933,
+          2827554.302787
+        ],
+        "weightedTraceGramTol": 2.827554302787e-20,
+        "weightedTraceRankOnActive": 2,
+        "weightedDensityCoordinateOperator": 952.1432530483877,
+        "weightedDensityCoordinateFrobenius": 952.1461262557801,
+        "weightedRangeResidualRelative": 3.8758775998187393e-69,
+        "weightedMaxDensityL1": 223.39040079024622,
+        "weightedMaxDensityL2": 336.58072271549446,
+        "weightedMaxPointDensity": 823.2558749040126,
+        "weightedRowStats": [
+          {
+            "sourceNode": 0.08,
+            "component": "boundary",
+            "densityL1": 17.4688316665198,
+            "densityL2": 26.253621181351328,
+            "maxDensity": 62.06675330641613,
+            "maxCoefficient": 2.408981106357173,
+            "densityCoordinateVariation": 26.003148709896852
+          },
+          {
+            "sourceNode": 0.08,
+            "component": "adjointEval",
+            "densityL1": 223.39040079024622,
+            "densityL2": 336.58072271549446,
+            "maxDensity": 823.2558749040126,
+            "maxCoefficient": 30.517857615288143,
+            "densityCoordinateVariation": 335.0206025961985
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "boundary",
+            "densityL1": 17.55721895549426,
+            "densityL2": 26.38736076853818,
+            "maxDensity": 62.41977180074163,
+            "maxCoefficient": 2.420789898617995,
+            "densityCoordinateVariation": 26.13800678109512
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "adjointEval",
+            "densityL1": 220.6922305589631,
+            "densityL2": 332.5154088826614,
+            "maxDensity": 813.3123657534979,
+            "maxCoefficient": 30.149254601690334,
+            "densityCoordinateVariation": 330.9741323199741
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "boundary",
+            "densityL1": 17.62178021386354,
+            "densityL2": 26.48530683262626,
+            "maxDensity": 62.68842613288175,
+            "maxCoefficient": 2.4293102172414804,
+            "densityCoordinateVariation": 26.237423175052122
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "adjointEval",
+            "densityL1": 217.63721121819566,
+            "densityL2": 327.9124330431095,
+            "maxDensity": 802.0537681981191,
+            "maxCoefficient": 29.73190164057974,
+            "densityCoordinateVariation": 326.39249220980673
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "boundary",
+            "densityL1": 17.661545824789403,
+            "densityL2": 26.545992412309065,
+            "maxDensity": 62.868854155697576,
+            "maxCoefficient": 2.434412416328041,
+            "densityCoordinateVariation": 26.29991937214065
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "adjointEval",
+            "densityL1": 214.25405721993386,
+            "densityL2": 322.8150590567404,
+            "maxDensity": 789.585902994774,
+            "maxCoefficient": 29.269721476864955,
+            "densityCoordinateVariation": 321.31874558880645
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "boundary",
+            "densityL1": 17.675825899112358,
+            "densityL2": 26.568371226769628,
+            "maxDensity": 62.9582100239109,
+            "maxCoefficient": 2.436005206249779,
+            "densityCoordinateVariation": 26.32443513301121
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "adjointEval",
+            "densityL1": 210.5734212372805,
+            "densityL2": 317.26947108737494,
+            "maxDensity": 776.0217337852491,
+            "maxCoefficient": 28.766901640135316,
+            "densityCoordinateVariation": 315.7988625477998
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "boundary",
+            "densityL1": 17.664210404990634,
+            "densityL2": 26.551818043393926,
+            "maxDensity": 62.95467073633314,
+            "maxCoefficient": 2.434035612244186,
+            "densityCoordinateVariation": 26.310329204822537
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "adjointEval",
+            "densityL1": 206.62724756705072,
+            "densityL2": 311.32379937906404,
+            "maxDensity": 761.4789842046232,
+            "maxCoefficient": 28.227806111557303,
+            "densityCoordinateVariation": 309.8807502373653
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "boundary",
+            "densityL1": 17.626563516442634,
+            "densityL2": 26.49612033535223,
+            "maxDensity": 62.85742097623085,
+            "maxCoefficient": 2.42848814710856,
+            "densityCoordinateVariation": 26.257371324012215
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "adjointEval",
+            "densityL1": 202.44815259732638,
+            "densityL2": 305.0271868109741,
+            "maxDensity": 746.0778547315721,
+            "maxCoefficient": 27.656890688174514,
+            "densityCoordinateVariation": 303.6133237494277
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "boundary",
+            "densityL1": 17.563012690131377,
+            "densityL2": 26.401461990877234,
+            "maxDensity": 62.66661801067649,
+            "maxCoefficient": 2.419383268709739,
+            "densityCoordinateVariation": 26.16572626965973
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "adjointEval",
+            "densityL1": 198.06884711470258,
+            "densityL2": 298.4289184918378,
+            "maxDensity": 729.9388937295969,
+            "maxCoefficient": 27.058624063020584,
+            "densityCoordinateVariation": 297.0456397462146
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "boundary",
+            "densityL1": 17.47393312509343,
+            "densityL2": 26.26840005592819,
+            "maxDensity": 62.38333897517035,
+            "maxCoefficient": 2.4067752125924984,
+            "densityCoordinateVariation": 26.03593094200712
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "adjointEval",
+            "densityL1": 193.52161240941257,
+            "densityL2": 291.57763241128424,
+            "maxDensity": 713.1810667484257,
+            "maxCoefficient": 26.437416254679537,
+            "densityCoordinateVariation": 290.226110770379
+          }
+        ]
+      },
+      {
+        "basis": 18,
+        "traceCount": 13,
+        "traceMin": 0.02,
+        "traceMax": 0.545,
+        "traceStep": 0.04375,
+        "activeDim": 2,
+        "traceRankOnActive": 2,
+        "traceGramEigenvalues": [
+          7847.098723704895,
+          72405617.03875223
+        ],
+        "traceGramTol": 7.240561703875222e-19,
+        "coefficientOperator": 186.3879001558717,
+        "coefficientFrobenius": 186.38846292239603,
+        "sourceActiveFrobenius": 135223.37765241103,
+        "rangeResidualRelative": 1.7229628666181374e-69,
+        "maxCoefficientL1AsDensityL1": 218.2012259391229,
+        "maxDensityL2": 350.268735381431,
+        "maxPointDensity": 1278.0176648179527,
+        "rowStats": [
+          {
+            "sourceNode": 0.08,
+            "component": "boundary",
+            "coefficientL1": 17.138472083969877,
+            "densityL2": 27.275512178878543,
+            "maxCoefficient": 2.1059665687780353,
+            "maxDensity": 96.27275742985304,
+            "coefficientVariation": 4.540080640220027
+          },
+          {
+            "sourceNode": 0.08,
+            "component": "adjointEval",
+            "coefficientL1": 218.2012259391229,
+            "densityL2": 350.268735381431,
+            "maxCoefficient": 27.956636417892714,
+            "maxDensity": 1278.0176648179527,
+            "coefficientVariation": 58.68460547023721
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "boundary",
+            "coefficientL1": 17.22391552616448,
+            "densityL2": 27.41523378050231,
+            "maxCoefficient": 2.117975078173495,
+            "maxDensity": 96.8217178593598,
+            "coefficientVariation": 4.56387831093769
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "adjointEval",
+            "coefficientL1": 215.565731977987,
+            "densityL2": 346.0380939957129,
+            "maxCoefficient": 27.61896853295799,
+            "maxDensity": 1262.5814186495081,
+            "coefficientVariation": 57.97579678842163
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "boundary",
+            "coefficientL1": 17.285974063857267,
+            "densityL2": 27.51777435125526,
+            "maxCoefficient": 2.127121280583313,
+            "maxDensity": 97.23982996952286,
+            "coefficientVariation": 4.581489830662029
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "adjointEval",
+            "coefficientL1": 212.58167821799978,
+            "densityL2": 341.2479250481171,
+            "maxCoefficient": 27.23664205582498,
+            "maxDensity": 1245.1036368377133,
+            "coefficientVariation": 57.17324392991622
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "boundary",
+            "coefficientL1": 17.32371003178656,
+            "densityL2": 27.581601522355577,
+            "maxCoefficient": 2.133273805942395,
+            "maxDensity": 97.52108827165233,
+            "coefficientVariation": 4.592654359242131
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "adjointEval",
+            "coefficientL1": 209.27711209810317,
+            "densityL2": 335.9432518464943,
+            "maxCoefficient": 26.813250513750827,
+            "maxDensity": 1225.7485949143236,
+            "coefficientVariation": 56.28449017446963
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "boundary",
+            "coefficientL1": 17.336459470199113,
+            "densityL2": 27.605620428612834,
+            "maxCoefficient": 2.136335785456764,
+            "maxDensity": 97.6610644780235,
+            "coefficientVariation": 4.59718423205143
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "adjointEval",
+            "coefficientL1": 205.68197425507338,
+            "densityL2": 330.1721367650818,
+            "maxCoefficient": 26.35262999653232,
+            "maxDensity": 1204.6916569843347,
+            "coefficientVariation": 55.31758797205861
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "boundary",
+            "coefficientL1": 17.32383205352325,
+            "densityL2": 27.58917421138131,
+            "maxCoefficient": 2.136245078321931,
+            "maxDensity": 97.65691786614542,
+            "coefficientVariation": 4.594965122582359
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "adjointEval",
+            "coefficientL1": 201.8274669460448,
+            "densityL2": 323.984667401236,
+            "maxCoefficient": 25.858778236787,
+            "maxDensity": 1182.1155765388341,
+            "coefficientVariation": 54.280929081903714
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "boundary",
+            "coefficientL1": 17.285705385191548,
+            "densityL2": 27.532035449162763,
+            "maxCoefficient": 2.1329737611778494,
+            "maxDensity": 97.50737193955884,
+            "coefficientVariation": 4.585954677935639
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "adjointEval",
+            "coefficientL1": 197.74544890729257,
+            "densityL2": 317.43198516911673,
+            "maxCoefficient": 25.335777077331944,
+            "maxDensity": 1158.2069521066032,
+            "coefficientVariation": 53.1830818214424
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "boundary",
+            "coefficientL1": 17.222214159913005,
+            "densityL2": 27.434389306386823,
+            "maxCoefficient": 2.1265269400092035,
+            "maxDensity": 97.21266011470644,
+            "coefficientVariation": 4.570179758544289
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "adjointEval",
+            "coefficientL1": 193.46787108080542,
+            "densityL2": 310.56537949662004,
+            "maxCoefficient": 24.787720174674096,
+            "maxDensity": 1133.152922270816,
+            "coefficientVariation": 52.03263930657923
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "boundary",
+            "coefficientL1": 17.13373483571186,
+            "densityL2": 27.29680942028957,
+            "maxCoefficient": 2.116940963423562,
+            "maxDensity": 96.77444404221998,
+            "coefficientVariation": 4.547732452289678
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "adjointEval",
+            "coefficientL1": 189.0262648890566,
+            "densityL2": 303.43546637559916,
+            "maxCoefficient": 24.218647435143172,
+            "maxDensity": 1107.1381684636879,
+            "coefficientVariation": 50.838081824626016
+          }
+        ],
+        "weightedTraceGramEigenvalues": [
+          293.11515100909196,
+          2823933.1576196826
+        ],
+        "weightedTraceGramTol": 2.823933157619683e-20,
+        "weightedTraceRankOnActive": 2,
+        "weightedDensityCoordinateOperator": 955.1857996305145,
+        "weightedDensityCoordinateFrobenius": 955.1886697932988,
+        "weightedRangeResidualRelative": 2.875685188887882e-69,
+        "weightedMaxDensityL1": 223.29283057694178,
+        "weightedMaxDensityL2": 337.65662101012276,
+        "weightedMaxPointDensity": 833.0640531107096,
+        "weightedRowStats": [
+          {
+            "sourceNode": 0.08,
+            "component": "boundary",
+            "densityL1": 17.397598069963358,
+            "densityL2": 26.333104156271716,
+            "maxDensity": 62.816093187694136,
+            "maxCoefficient": 2.0200564500351685,
+            "densityCoordinateVariation": 23.944734876616483
+          },
+          {
+            "sourceNode": 0.08,
+            "component": "adjointEval",
+            "densityL1": 223.29283057694178,
+            "densityL2": 337.65662101012276,
+            "maxDensity": 833.0640531107096,
+            "maxCoefficient": 25.63699930921262,
+            "densityCoordinateVariation": 308.9310178638683
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "boundary",
+            "densityL1": 17.486697821672102,
+            "densityL2": 26.467324515744366,
+            "maxDensity": 63.17320079454949,
+            "maxCoefficient": 2.0300196566722475,
+            "densityCoordinateVariation": 24.069485691786127
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "adjointEval",
+            "densityL1": 220.59583882532507,
+            "densityL2": 333.5783121840394,
+            "maxDensity": 823.0020781068423,
+            "maxCoefficient": 25.32734863438128,
+            "densityCoordinateVariation": 305.19966471274097
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "boundary",
+            "densityL1": 17.5520766739345,
+            "densityL2": 26.56564352400711,
+            "maxDensity": 63.444924414551096,
+            "maxCoefficient": 2.037225759231985,
+            "densityCoordinateVariation": 24.161604621911025
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "adjointEval",
+            "densityL1": 217.5421538251903,
+            "densityL2": 328.960622685856,
+            "maxDensity": 811.6093468822763,
+            "maxCoefficient": 24.976744810529304,
+            "densityCoordinateVariation": 300.9748178473501
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "boundary",
+            "densityL1": 17.59275748310946,
+            "densityL2": 26.62658896678538,
+            "maxDensity": 63.62735712278891,
+            "maxCoefficient": 2.041565390993017,
+            "densityCoordinateVariation": 24.21972410779564
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "adjointEval",
+            "densityL1": 214.16047748691784,
+            "densityL2": 323.8469546707179,
+            "maxDensity": 798.992940930545,
+            "maxCoefficient": 24.588483200318766,
+            "densityCoordinateVariation": 296.29618705311736
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "boundary",
+            "densityL1": 17.608042309947106,
+            "densityL2": 26.649110628425536,
+            "maxDensity": 63.71762046664961,
+            "maxCoefficient": 2.042961384024732,
+            "densityCoordinateVariation": 24.24286208630394
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "adjointEval",
+            "densityL1": 210.48144909544413,
+            "densityL2": 318.2836399325975,
+            "maxDensity": 785.2671697296001,
+            "maxCoefficient": 24.166081602886894,
+            "densityCoordinateVariation": 291.2061625199006
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "boundary",
+            "densityL1": 17.59751271609599,
+            "densityL2": 26.632580672449446,
+            "maxDensity": 63.71387106005009,
+            "maxCoefficient": 2.041368743970621,
+            "densityCoordinateVariation": 24.23042272932757
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "adjointEval",
+            "densityL1": 206.53699899527544,
+            "densityL2": 312.3189625664468,
+            "maxDensity": 770.5511594607116,
+            "maxCoefficient": 23.71320604825325,
+            "densityCoordinateVariation": 285.74892064961824
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "boundary",
+            "densityL1": 17.561024271113773,
+            "densityL2": 26.576785283326373,
+            "maxDensity": 63.615285218951534,
+            "maxCoefficient": 2.036773963998572,
+            "densityCoordinateVariation": 24.18218915133011
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "adjointEval",
+            "densityL1": 202.35972932863564,
+            "densityL2": 306.0022225392758,
+            "maxDensity": 754.9665426575837,
+            "maxCoefficient": 23.2335996977881,
+            "densityCoordinateVariation": 279.96956729253753
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "boundary",
+            "densityL1": 17.498695775898877,
+            "densityL2": 26.48190833351141,
+            "maxDensity": 63.42202342047853,
+            "maxCoefficient": 2.029193737139697,
+            "densityCoordinateVariation": 24.09830877911715
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "adjointEval",
+            "densityL1": 197.98233659503128,
+            "densityL2": 299.38286250230493,
+            "maxDensity": 738.635303883407,
+            "maxCoefficient": 22.731016546338026,
+            "densityCoordinateVariation": 273.91333884450273
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "boundary",
+            "densityL1": 17.410893854579406,
+            "densityL2": 26.348508060420116,
+            "maxDensity": 63.13517694001394,
+            "maxCoefficient": 2.018673142723184,
+            "densityCoordinateVariation": 23.979272281252523
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "adjointEval",
+            "densityL1": 193.43708798519822,
+            "densityL2": 292.5096759191005,
+            "maxDensity": 721.6778260301331,
+            "maxCoefficient": 22.20916129836876,
+            "densityCoordinateVariation": 267.624877742317
+          }
+        ]
+      },
+      {
+        "basis": 18,
+        "traceCount": 15,
+        "traceMin": 0.02,
+        "traceMax": 0.545,
+        "traceStep": 0.0375,
+        "activeDim": 2,
+        "traceRankOnActive": 2,
+        "traceGramEigenvalues": [
+          8946.321623499645,
+          83105344.23135415
+        ],
+        "traceGramTol": 8.310534423135415e-19,
+        "coefficientOperator": 174.30869615569551,
+        "coefficientFrobenius": 174.30922196970837,
+        "sourceActiveFrobenius": 135223.37765241103,
+        "rangeResidualRelative": 1.1155856455456302e-69,
+        "maxCoefficientL1AsDensityL1": 219.74300973764312,
+        "maxDensityL2": 350.4327687945315,
+        "maxPointDensity": 1330.5263414596916,
+        "rowStats": [
+          {
+            "sourceNode": 0.08,
+            "component": "boundary",
+            "coefficientL1": 17.19785844309106,
+            "densityL2": 27.28590133610357,
+            "maxCoefficient": 1.8797214568098308,
+            "maxDensity": 100.25181102985765,
+            "coefficientVariation": 4.006053479340009
+          },
+          {
+            "sourceNode": 0.08,
+            "component": "adjointEval",
+            "coefficientL1": 219.74300973764312,
+            "densityL2": 350.4327687945315,
+            "maxCoefficient": 24.94736890236922,
+            "maxDensity": 1330.5263414596916,
+            "coefficientVariation": 51.760791166985236
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "boundary",
+            "coefficientL1": 17.284634347879543,
+            "densityL2": 27.425717147916302,
+            "maxCoefficient": 1.8904321411436418,
+            "maxDensity": 100.82304752766089,
+            "coefficientVariation": 4.0270242009512085
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "adjointEval",
+            "coefficientL1": 217.08889369098551,
+            "densityL2": 346.20014616848,
+            "maxCoefficient": 24.646047771814402,
+            "maxDensity": 1314.455881163435,
+            "coefficientVariation": 51.13561020405946
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "boundary",
+            "coefficientL1": 17.34795202059382,
+            "densityL2": 27.528338051260256,
+            "maxCoefficient": 1.8985879600954703,
+            "maxDensity": 101.25802453842508,
+            "coefficientVariation": 4.042536211581444
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "adjointEval",
+            "coefficientL1": 214.0837549635731,
+            "densityL2": 341.4077339496971,
+            "maxCoefficient": 24.304875124160844,
+            "maxDensity": 1296.2600066219115,
+            "coefficientVariation": 50.427745329162526
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "boundary",
+            "coefficientL1": 17.386859456696538,
+            "densityL2": 27.592230655200645,
+            "maxCoefficient": 1.9040717396282227,
+            "maxDensity": 101.55049278017188,
+            "coefficientVariation": 4.052359649328006
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "adjointEval",
+            "coefficientL1": 210.75583917420116,
+            "densityL2": 336.10057653077837,
+            "maxCoefficient": 23.927057677441585,
+            "maxDensity": 1276.1097427968846,
+            "coefficientVariation": 49.64384983960563
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "boundary",
+            "coefficientL1": 17.400679901948138,
+            "densityL2": 27.61629926326432,
+            "maxCoefficient": 1.9067970960295226,
+            "maxDensity": 101.69584512157454,
+            "coefficientVariation": 4.056329204572015
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "adjointEval",
+            "coefficientL1": 207.1352985166089,
+            "densityL2": 330.32675879392286,
+            "maxCoefficient": 23.516018602665923,
+            "maxDensity": 1254.1876588088492,
+            "coefficientVariation": 48.791026129249815
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "boundary",
+            "coefficientL1": 17.389011942536186,
+            "densityL2": 27.599886382896884,
+            "maxCoefficient": 1.9067086370652735,
+            "maxDensity": 101.69112731014792,
+            "coefficientVariation": 4.054344259118616
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "adjointEval",
+            "coefficientL1": 203.25355571935262,
+            "densityL2": 324.1363917928754,
+            "maxCoefficient": 23.075325314342955,
+            "maxDensity": 1230.6840167649577,
+            "coefficientVariation": 47.876675868312645
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "boundary",
+            "coefficientL1": 17.351723910946056,
+            "densityL2": 27.542764157877738,
+            "maxCoefficient": 1.9037815053052052,
+            "maxDensity": 101.53501361627761,
+            "coefficientVariation": 4.046367678684552
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "adjointEval",
+            "coefficientL1": 199.14269462873241,
+            "densityL2": 317.5806408916946,
+            "maxCoefficient": 22.6086202835138,
+            "maxDensity": 1205.7930817874028,
+            "coefficientVariation": 46.90835645427475
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "boundary",
+            "coefficientL1": 17.28894310931164,
+            "densityL2": 27.445117514477815,
+            "maxCoefficient": 1.8980203169243144,
+            "maxDensity": 101.22775023596343,
+            "coefficientVariation": 4.0324233746590865
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "adjointEval",
+            "coefficientL1": 194.83489194827663,
+            "densityL2": 310.710819537491,
+            "maxCoefficient": 22.11955652327745,
+            "maxDensity": 1179.7096812414638,
+            "coefficientVariation": 45.89364715727429
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "boundary",
+            "coefficientL1": 17.20104049479222,
+            "densityL2": 27.307520041675076,
+            "maxCoefficient": 1.8894575664329425,
+            "maxDensity": 100.77107020975693,
+            "coefficientVariation": 4.012592785280724
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "adjointEval",
+            "coefficientL1": 190.3619018977233,
+            "densityL2": 303.5775674259574,
+            "maxCoefficient": 21.611739082253905,
+            "maxDensity": 1152.626084386875,
+            "coefficientVariation": 44.840027730767304
+          }
+        ],
+        "weightedTraceGramEigenvalues": [
+          291.82167241467965,
+          2821754.5455694925
+        ],
+        "weightedTraceGramTol": 2.8217545455694927e-20,
+        "weightedTraceRankOnActive": 2,
+        "weightedDensityCoordinateOperator": 957.0548267804361,
+        "weightedDensityCoordinateFrobenius": 957.0576950208704,
+        "weightedRangeResidualRelative": 1.4281502751975134e-69,
+        "weightedMaxDensityL1": 224.38453281737145,
+        "weightedMaxDensityL2": 338.3175398241284,
+        "weightedMaxPointDensity": 839.0841145314613,
+        "weightedRowStats": [
+          {
+            "sourceNode": 0.08,
+            "component": "boundary",
+            "densityL1": 17.543171040341875,
+            "densityL2": 26.381956626161887,
+            "maxDensity": 63.27603505908179,
+            "maxCoefficient": 1.7374085648129252,
+            "densityCoordinateVariation": 22.279148970900067
+          },
+          {
+            "sourceNode": 0.08,
+            "component": "adjointEval",
+            "densityL1": 224.38453281737145,
+            "densityL2": 338.3175398241284,
+            "maxDensity": 839.0841145314613,
+            "maxCoefficient": 22.027959172020157,
+            "densityCoordinateVariation": 287.21056760264185
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "boundary",
+            "densityL1": 17.631991824542563,
+            "densityL2": 26.516472013516708,
+            "maxDensity": 63.63565233636137,
+            "maxCoefficient": 1.74594883579656,
+            "densityCoordinateVariation": 22.394917021360673
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "adjointEval",
+            "densityL1": 221.6743551881336,
+            "densityL2": 334.2312482402232,
+            "maxDensity": 828.9494275826827,
+            "maxCoefficient": 21.76189946899079,
+            "densityCoordinateVariation": 283.7415599779901
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "boundary",
+            "densityL1": 17.696885611763836,
+            "densityL2": 26.61501977182271,
+            "maxDensity": 63.909259660851,
+            "maxCoefficient": 1.7521175642435933,
+            "densityCoordinateVariation": 22.48032077917812
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "adjointEval",
+            "densityL1": 218.60574039939974,
+            "densityL2": 329.6045202168734,
+            "maxDensity": 817.4743678247154,
+            "maxCoefficient": 21.460651783011013,
+            "densityCoordinateVariation": 279.8137554000184
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "boundary",
+            "densityL1": 17.736878045133864,
+            "densityL2": 26.676124463196622,
+            "maxDensity": 64.09292262547615,
+            "maxCoefficient": 1.755820995104445,
+            "densityCoordinateVariation": 22.53409107733701
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "adjointEval",
+            "densityL1": 215.20753068822245,
+            "densityL2": 324.48084286328464,
+            "maxDensity": 804.766790565742,
+            "maxCoefficient": 21.127047573149092,
+            "densityCoordinateVariation": 275.4640717220689
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "boundary",
+            "densityL1": 17.751275718859315,
+            "densityL2": 26.69873345827263,
+            "maxDensity": 64.18374276550351,
+            "maxCoefficient": 1.7569930502240174,
+            "densityCoordinateVariation": 22.55531725434117
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "adjointEval",
+            "densityL1": 211.51051513823944,
+            "densityL2": 318.9066386618756,
+            "maxDensity": 790.9418313307337,
+            "maxCoefficient": 20.764109421526882,
+            "densityCoordinateVariation": 270.73191874693214
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "boundary",
+            "densityL1": 17.739666317365472,
+            "densityL2": 26.682217324575646,
+            "maxDensity": 64.17986418466175,
+            "maxCoefficient": 1.755595302148002,
+            "densityCoordinateVariation": 22.54344779416852
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "adjointEval",
+            "densityL1": 207.54678020478485,
+            "densityL2": 312.93028621741917,
+            "maxDensity": 776.1194771554477,
+            "maxCoefficient": 20.374987273994936,
+            "densityCoordinateVariation": 265.65836690371975
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "boundary",
+            "densityL1": 17.70191294702876,
+            "densityL2": 26.626361458516293,
+            "maxDensity": 64.08045806489204,
+            "maxCoefficient": 1.7516163804209717,
+            "densityCoordinateVariation": 22.498283502558632
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "adjointEval",
+            "densityL1": 203.34908742540034,
+            "densityL2": 306.6011819951832,
+            "maxDensity": 760.4222395400025,
+            "maxCoefficient": 19.962897349613986,
+            "densityCoordinateVariation": 260.2853507218522
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "boundary",
+            "densityL1": 17.63814317193575,
+            "densityL2": 26.53134972642216,
+            "maxDensity": 63.885686855234596,
+            "maxCoefficient": 1.7450708613476826,
+            "densityCoordinateVariation": 22.419963865414893
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "adjointEval",
+            "densityL1": 198.95029315623316,
+            "densityL2": 299.96886542393196,
+            "maxDensity": 743.9729845579119,
+            "maxCoefficient": 19.531065175842027,
+            "densityCoordinateVariation": 254.6549260978741
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "boundary",
+            "densityL1": 17.54873341115754,
+            "densityL2": 26.39774110110686,
+            "maxDensity": 63.59665051146049,
+            "maxCoefficient": 1.7359977063319332,
+            "densityCoordinateVariation": 22.308947424316486
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "adjointEval",
+            "densityL1": 194.3828223457238,
+            "densityL2": 293.08222547407524,
+            "maxDensity": 726.8929650371197,
+            "maxCoefficient": 19.082673928593344,
+            "densityCoordinateVariation": 248.80859672960787
+          }
+        ]
+      },
+      {
+        "basis": 18,
+        "traceCount": 17,
+        "traceMin": 0.02,
+        "traceMax": 0.545,
+        "traceStep": 0.0328125,
+        "activeDim": 2,
+        "traceRankOnActive": 2,
+        "traceGramEigenvalues": [
+          10045.039877328103,
+          93811841.87036756
+        ],
+        "traceGramTol": 9.381184187036756e-19,
+        "coefficientOperator": 164.31875434397332,
+        "coefficientFrobenius": 164.31924955698742,
+        "sourceActiveFrobenius": 135223.37765241103,
+        "rangeResidualRelative": 3.075933392187957e-69,
+        "maxCoefficientL1AsDensityL1": 219.6306201131881,
+        "maxDensityL2": 350.3087386626322,
+        "maxPointDensity": 1371.7446078541254,
+        "rowStats": [
+          {
+            "sourceNode": 0.08,
+            "component": "boundary",
+            "coefficientL1": 17.2310414079044,
+            "densityL2": 27.275465155552922,
+            "maxCoefficient": 1.6959918415284292,
+            "maxDensity": 103.37474081697091,
+            "coefficientVariation": 3.563390606408371
+          },
+          {
+            "sourceNode": 0.08,
+            "component": "adjointEval",
+            "coefficientL1": 219.6306201131881,
+            "densityL2": 350.3087386626322,
+            "maxCoefficient": 22.505184972606745,
+            "maxDensity": 1371.7446078541254,
+            "coefficientVariation": 46.09834784314269
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "boundary",
+            "coefficientL1": 17.31727721973002,
+            "densityL2": 27.41524104566706,
+            "maxCoefficient": 1.7056506806329446,
+            "maxDensity": 103.9634700576271,
+            "coefficientVariation": 3.5821193429966574
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "adjointEval",
+            "coefficientL1": 216.97786153908947,
+            "densityL2": 346.0776141063656,
+            "maxCoefficient": 22.233361206107382,
+            "maxDensity": 1355.176302086545,
+            "coefficientVariation": 45.54155941614806
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "boundary",
+            "coefficientL1": 17.380004278383236,
+            "densityL2": 27.517836341971712,
+            "maxCoefficient": 1.7130043377657276,
+            "maxDensity": 104.41169296857768,
+            "coefficientVariation": 3.5959931072415086
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "adjointEval",
+            "coefficientL1": 213.97425981808018,
+            "densityL2": 341.2868980860337,
+            "maxCoefficient": 21.92558712487719,
+            "maxDensity": 1336.4167390401335,
+            "coefficientVariation": 44.91113239806656
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "boundary",
+            "coefficientL1": 17.418276313501046,
+            "densityL2": 27.581718095076017,
+            "maxCoefficient": 1.7179471448089527,
+            "maxDensity": 104.71296882645045,
+            "coefficientVariation": 3.604806631423213
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "adjointEval",
+            "coefficientL1": 210.6480461224687,
+            "densityL2": 335.9816190514823,
+            "maxCoefficient": 21.584755530268133,
+            "maxDensity": 1315.6422418449147,
+            "coefficientVariation": 44.21299223954995
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "boundary",
+            "coefficientL1": 17.431422428975264,
+            "densityL2": 27.605790890830388,
+            "maxCoefficient": 1.7204012115819314,
+            "maxDensity": 104.86255003927963,
+            "coefficientVariation": 3.6084121104760456
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "adjointEval",
+            "coefficientL1": 207.0293572243719,
+            "densityL2": 330.2098448660273,
+            "maxCoefficient": 21.213954487280514,
+            "maxDensity": 1293.0410354151932,
+            "coefficientVariation": 43.45346435826173
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "boundary",
+            "coefficientL1": 17.419047082864033,
+            "densityL2": 27.589397361652406,
+            "maxCoefficient": 1.7203166065608713,
+            "maxDensity": 104.85739316180549,
+            "coefficientVariation": 3.606719337494276
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "adjointEval",
+            "coefficientL1": 203.14959978089652,
+            "densityL2": 324.0216688473994,
+            "maxCoefficient": 20.816402183921067,
+            "maxDensity": 1268.8092759723318,
+            "coefficientVariation": 42.63914070847111
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "boundary",
+            "coefficientL1": 17.381024393162527,
+            "densityL2": 27.532309623869967,
+            "maxCoefficient": 1.7176709442162477,
+            "maxDensity": 104.69613374270462,
+            "coefficientVariation": 3.5996946391461138
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "adjointEval",
+            "coefficientL1": 199.0408412287585,
+            "densityL2": 317.4682382504862,
+            "maxCoefficient": 20.395384517185928,
+            "maxDensity": 1243.147246761809,
+            "coefficientVariation": 41.77675193571104
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "boundary",
+            "coefficientL1": 17.31748727302601,
+            "densityL2": 27.434712431551016,
+            "maxCoefficient": 1.7124684270678125,
+            "maxDensity": 104.37902793556191,
+            "coefficientVariation": 3.587358714017634
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "adjointEval",
+            "coefficientL1": 194.73524181440916,
+            "densityL2": 310.6008483608161,
+            "maxCoefficient": 19.954196894130718,
+            "maxDensity": 1216.2558106898723,
+            "coefficientVariation": 40.873048165382386
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "boundary",
+            "coefficientL1": 17.228812041232718,
+            "densityL2": 27.297179066748548,
+            "maxCoefficient": 1.7047384060237096,
+            "maxDensity": 103.90786474811183,
+            "coefficientVariation": 3.569783507438891
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "adjointEval",
+            "coefficientL1": 190.26453951659286,
+            "densityL2": 303.47012095096295,
+            "maxCoefficient": 19.496091452740252,
+            "maxDensity": 1188.333193309882,
+            "coefficientVariation": 39.934690892968995
+          }
+        ],
+        "weightedTraceGramEigenvalues": [
+          290.9777735803732,
+          2820342.59903592
+        ],
+        "weightedTraceGramTol": 2.82034259903592e-20,
+        "weightedTraceRankOnActive": 2,
+        "weightedDensityCoordinateOperator": 958.2818424448103,
+        "weightedDensityCoordinateFrobenius": 958.2847094027583,
+        "weightedRangeResidualRelative": 2.4176231969512184e-69,
+        "weightedMaxDensityL1": 224.63673410674397,
+        "weightedMaxDensityL2": 338.7514319130411,
+        "weightedMaxPointDensity": 843.0347519711328,
+        "weightedRowStats": [
+          {
+            "sourceNode": 0.08,
+            "component": "boundary",
+            "densityL1": 17.51528005351794,
+            "densityL2": 26.41403853794342,
+            "maxDensity": 63.577874244294705,
+            "maxCoefficient": 1.521835633701174,
+            "densityCoordinateVariation": 21.138893686130345
+          },
+          {
+            "sourceNode": 0.08,
+            "component": "adjointEval",
+            "densityL1": 224.63673410674397,
+            "densityL2": 338.7514319130411,
+            "maxDensity": 843.0347519711328,
+            "maxCoefficient": 20.041735529856147,
+            "densityCoordinateVariation": 274.85172718919256
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "boundary",
+            "densityL1": 17.60476286224984,
+            "densityL2": 26.54874749026138,
+            "maxDensity": 63.9391384284917,
+            "maxCoefficient": 1.5293464336741074,
+            "densityCoordinateVariation": 21.251824250726056
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "adjointEval",
+            "densityL1": 221.92351032149915,
+            "densityL2": 334.6598996620626,
+            "maxDensity": 832.8523481450998,
+            "maxCoefficient": 19.79966597808216,
+            "densityCoordinateVariation": 271.53199301218575
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "boundary",
+            "densityL1": 17.670362684550867,
+            "densityL2": 26.64744528677596,
+            "maxDensity": 64.21398186600669,
+            "maxCoefficient": 1.5347801700000543,
+            "densityCoordinateVariation": 21.335967527758278
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "adjointEval",
+            "densityL1": 218.85144650445395,
+            "densityL2": 330.02723786215506,
+            "maxDensity": 821.3232606681979,
+            "maxCoefficient": 19.525581283978642,
+            "densityCoordinateVariation": 267.7732041858264
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "boundary",
+            "densityL1": 17.711098117404173,
+            "densityL2": 26.70865437458475,
+            "maxDensity": 64.39845211527957,
+            "maxCoefficient": 1.5380543975248508,
+            "densityCoordinateVariation": 21.390086267395443
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "adjointEval",
+            "densityL1": 215.44941731044534,
+            "densityL2": 324.8969893947216,
+            "maxDensity": 808.5558526608914,
+            "maxCoefficient": 19.22205759876173,
+            "densityCoordinateVariation": 263.6106899664156
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "boundary",
+            "densityL1": 17.726268724410335,
+            "densityL2": 26.73132054106695,
+            "maxDensity": 64.48963757930167,
+            "maxCoefficient": 1.5391109312830564,
+            "densityCoordinateVariation": 21.413285153564864
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "adjointEval",
+            "densityL1": 211.74824642909064,
+            "densityL2": 319.31563627899305,
+            "maxDensity": 794.6658017376843,
+            "maxCoefficient": 18.89184496346021,
+            "densityCoordinateVariation": 259.08216432964554
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "boundary",
+            "densityL1": 17.715455300031234,
+            "densityL2": 26.714813307362444,
+            "maxDensity": 64.4856741526508,
+            "maxCoefficient": 1.5379158282635457,
+            "densityCoordinateVariation": 21.405011892892357
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "adjointEval",
+            "densityL1": 207.7800563799095,
+            "densityL2": 313.33161916528076,
+            "maxDensity": 779.7736598661055,
+            "maxCoefficient": 18.537809298660594,
+            "densityCoordinateVariation": 254.2269304197983
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "boundary",
+            "densityL1": 17.67851431172136,
+            "densityL2": 26.658917553922773,
+            "maxDensity": 64.3857296486989,
+            "maxCoefficient": 1.5344588711822635,
+            "densityCoordinateVariation": 21.36505112995281
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "adjointEval",
+            "densityL1": 203.5776455234006,
+            "densityL2": 306.9943978697965,
+            "maxDensity": 764.0025153639144,
+            "maxCoefficient": 18.16287682241686,
+            "densityCoordinateVariation": 249.08511829871742
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "boundary",
+            "densityL1": 17.61556702956129,
+            "densityL2": 26.56381714444542,
+            "maxDensity": 64.18996781114996,
+            "maxCoefficient": 1.5287525988713675,
+            "densityCoordinateVariation": 21.293511797694244
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "adjointEval",
+            "densityL1": 199.17390714524143,
+            "densityL2": 300.3535753555991,
+            "maxDensity": 747.4758127916937,
+            "maxCoefficient": 17.769982221857873,
+            "densityCoordinateVariation": 243.69697417287185
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "boundary",
+            "densityL1": 17.52698399983943,
+            "densityL2": 26.430071535896055,
+            "maxDensity": 63.899494292829566,
+            "maxCoefficient": 1.5208309403199827,
+            "densityCoordinateVariation": 21.190808695305364
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "adjointEval",
+            "densityL1": 194.60130263851372,
+            "densityL2": 293.4581032931804,
+            "maxDensity": 730.3153758688549,
+            "maxCoefficient": 17.36202165133552,
+            "densityCoordinateVariation": 238.10221581144557
+          }
+        ]
+      },
+      {
+        "basis": 18,
+        "traceCount": 21,
+        "traceMin": 0.02,
+        "traceMax": 0.545,
+        "traceStep": 0.02625,
+        "activeDim": 2,
+        "traceRankOnActive": 2,
+        "traceGramEigenvalues": [
+          12241.741205227647,
+          115236975.36097746
+        ],
+        "traceGramTol": 1.1523697536097746e-18,
+        "coefficientOperator": 148.61552725875896,
+        "coefficientFrobenius": 148.61597439016535,
+        "sourceActiveFrobenius": 135223.37765241103,
+        "rangeResidualRelative": 2.1419025861925915e-69,
+        "maxCoefficientL1AsDensityL1": 220.6051236365545,
+        "maxDensityL2": 349.71495142258067,
+        "maxPointDensity": 1432.269108022389,
+        "rowStats": [
+          {
+            "sourceNode": 0.08,
+            "component": "boundary",
+            "coefficientL1": 17.295311736650753,
+            "densityL2": 27.22985387186503,
+            "maxCoefficient": 1.4169693093700764,
+            "maxDensity": 107.9595664281963,
+            "coefficientVariation": 2.934795159300945
+          },
+          {
+            "sourceNode": 0.08,
+            "component": "adjointEval",
+            "coefficientL1": 220.6051236365545,
+            "densityL2": 349.71495142258067,
+            "maxCoefficient": 18.798532042793855,
+            "maxDensity": 1432.269108022389,
+            "coefficientVariation": 37.95301693758706
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "boundary",
+            "coefficientL1": 17.382074053007944,
+            "densityL2": 27.369385845847287,
+            "maxCoefficient": 1.4250336440344975,
+            "maxDensity": 108.5739919264379,
+            "coefficientVariation": 2.9501856906384094
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "adjointEval",
+            "coefficientL1": 217.94059474292683,
+            "densityL2": 345.49099879066335,
+            "maxCoefficient": 18.57147824204745,
+            "maxDensity": 1414.969770822663,
+            "coefficientVariation": 37.49461004039664
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "boundary",
+            "coefficientL1": 17.445241453142707,
+            "densityL2": 27.47179931305276,
+            "maxCoefficient": 1.4311720020218506,
+            "maxDensity": 109.04167634452195,
+            "coefficientVariation": 2.9615774293526256
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "adjointEval",
+            "coefficientL1": 214.9236660074129,
+            "densityL2": 340.70840322446134,
+            "maxCoefficient": 18.314395221623954,
+            "maxDensity": 1395.382493076111,
+            "coefficientVariation": 36.975576096347844
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "boundary",
+            "coefficientL1": 17.483861945111975,
+            "densityL2": 27.535563996578404,
+            "maxCoefficient": 1.4352961578591812,
+            "maxDensity": 109.3558977416519,
+            "coefficientVariation": 2.9688016856739377
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "adjointEval",
+            "coefficientL1": 211.58269386434918,
+            "densityL2": 335.41211684880744,
+            "maxCoefficient": 18.029699332198756,
+            "maxDensity": 1373.6913776913336,
+            "coefficientVariation": 36.40079356073183
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "boundary",
+            "coefficientL1": 17.497260056228964,
+            "densityL2": 27.5595864176327,
+            "maxCoefficient": 1.4373410908853694,
+            "maxDensity": 109.5117021626948,
+            "coefficientVariation": 2.9717370760725004
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "adjointEval",
+            "coefficientL1": 207.94794880304823,
+            "densityL2": 329.6501260500783,
+            "maxCoefficient": 17.719970027747863,
+            "maxDensity": 1350.0929544950754,
+            "coefficientVariation": 35.775470183824964
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "boundary",
+            "coefficientL1": 17.485036844861813,
+            "densityL2": 27.543210404365382,
+            "maxCoefficient": 1.4372651353897103,
+            "maxDensity": 109.50591507731126,
+            "coefficientVariation": 2.9703096294954405
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "adjointEval",
+            "coefficientL1": 204.05097683230645,
+            "densityL2": 323.47243923583926,
+            "maxCoefficient": 17.38789545371145,
+            "maxDensity": 1324.7920345684915,
+            "coefficientVariation": 35.10503315692013
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "boundary",
+            "coefficientL1": 17.44706421082245,
+            "densityL2": 27.486208542183316,
+            "maxCoefficient": 1.435049635152899,
+            "maxDensity": 109.3371150592685,
+            "coefficientVariation": 2.9644919062374586
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "adjointEval",
+            "coefficientL1": 199.92398767241593,
+            "densityL2": 316.93011696434746,
+            "maxCoefficient": 17.03622031270122,
+            "maxDensity": 1297.9977381105693,
+            "coefficientVariation": 34.39502385657128
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "boundary",
+            "coefficientL1": 17.383474009560445,
+            "densityL2": 27.38876535471693,
+            "maxCoefficient": 1.4306981425839072,
+            "maxDensity": 109.00557276829768,
+            "coefficientVariation": 2.954301214336511
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "adjointEval",
+            "coefficientL1": 195.59928426520202,
+            "densityL2": 310.0743675735827,
+            "maxCoefficient": 16.667697251060872,
+            "maxDensity": 1269.9197905570188,
+            "coefficientVariation": 33.65099969721203
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "boundary",
+            "coefficientL1": 17.29464261835883,
+            "densityL2": 27.251453233663973,
+            "maxCoefficient": 1.4242352155613227,
+            "maxDensity": 108.5131592808627,
+            "coefficientVariation": 2.9397970334875603
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "adjointEval",
+            "coefficientL1": 191.10874541117647,
+            "densityL2": 302.9557270302018,
+            "maxCoefficient": 16.2850427725734,
+            "maxDensity": 1240.76516362464,
+            "coefficientVariation": 32.87844512379013
+          }
+        ],
+        "weightedTraceGramEigenvalues": [
+          289.9809826725559,
+          2818684.298003295
+        ],
+        "weightedTraceGramTol": 2.818684298003295e-20,
+        "weightedTraceRankOnActive": 2,
+        "weightedDensityCoordinateOperator": 959.738951995986,
+        "weightedDensityCoordinateFrobenius": 959.7418174105745,
+        "weightedRangeResidualRelative": 8.067839628665068e-70,
+        "weightedMaxDensityL1": 225.18490261340185,
+        "weightedMaxDensityL2": 339.2666879549353,
+        "weightedMaxPointDensity": 847.7249847094712,
+        "weightedRowStats": [
+          {
+            "sourceNode": 0.08,
+            "component": "boundary",
+            "densityL1": 17.566197587517923,
+            "densityL2": 26.45214677069155,
+            "maxDensity": 63.9362247584502,
+            "maxCoefficient": 1.2966421667514498,
+            "densityCoordinateVariation": 20.10332814717022
+          },
+          {
+            "sourceNode": 0.08,
+            "component": "adjointEval",
+            "densityL1": 225.18490261340185,
+            "densityL2": 339.2666879549353,
+            "maxDensity": 847.7249847094712,
+            "maxCoefficient": 17.309143015665963,
+            "densityCoordinateVariation": 261.34797483507964
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "boundary",
+            "densityL1": 17.655802209821044,
+            "densityL2": 26.58708546591025,
+            "maxDensity": 64.29944411493159,
+            "maxCoefficient": 1.304162773528121,
+            "densityCoordinateVariation": 20.21067476698544
+          },
+          {
+            "sourceNode": 0.135,
+            "component": "adjointEval",
+            "densityL1": 222.4650578993205,
+            "densityL2": 335.1689323008527,
+            "maxDensity": 837.4859309723068,
+            "maxCoefficient": 17.100078462092135,
+            "densityCoordinateVariation": 258.191342664621
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "boundary",
+            "densityL1": 17.721453388945864,
+            "densityL2": 26.68596130101391,
+            "maxDensity": 64.57575502010008,
+            "maxCoefficient": 1.3099220036420616,
+            "densityCoordinateVariation": 20.29064396539229
+          },
+          {
+            "sourceNode": 0.19,
+            "component": "adjointEval",
+            "densityL1": 219.3854974961019,
+            "densityL2": 330.52922401565365,
+            "maxDensity": 825.8927012955718,
+            "maxCoefficient": 16.863363874097722,
+            "densityCoordinateVariation": 254.61722705818877
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "boundary",
+            "densityL1": 17.762168348987753,
+            "densityL2": 26.747294212736684,
+            "maxDensity": 64.7611836222257,
+            "maxCoefficient": 1.313837613898895,
+            "densityCoordinateVariation": 20.342059656225167
+          },
+          {
+            "sourceNode": 0.245,
+            "component": "adjointEval",
+            "densityL1": 215.97516651979439,
+            "densityL2": 325.3911722114067,
+            "maxDensity": 813.0542616790942,
+            "maxCoefficient": 16.601224157293505,
+            "densityCoordinateVariation": 250.65922150883156
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "boundary",
+            "densityL1": 17.777246017847688,
+            "densityL2": 26.770028109643558,
+            "maxDensity": 64.85280273410567,
+            "maxCoefficient": 1.3158486765791948,
+            "densityCoordinateVariation": 20.36407090649941
+          },
+          {
+            "sourceNode": 0.3,
+            "component": "adjointEval",
+            "densityL1": 212.26496387734778,
+            "densityL2": 319.80132960856787,
+            "maxDensity": 799.0869333110073,
+            "maxCoefficient": 16.316034398078326,
+            "densityCoordinateVariation": 246.35318706523532
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "boundary",
+            "densityL1": 17.76626727066349,
+            "densityL2": 26.753531271645706,
+            "maxDensity": 64.8487385049175,
+            "maxCoefficient": 1.3159157388402447,
+            "densityCoordinateVariation": 20.356152963949583
+          },
+          {
+            "sourceNode": 0.355,
+            "component": "adjointEval",
+            "densityL1": 208.28709047507638,
+            "densityL2": 313.80821053783876,
+            "maxDensity": 784.1119388509833,
+            "maxCoefficient": 16.010269762798416,
+            "densityCoordinateVariation": 241.73649586716346
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "boundary",
+            "densityL1": 17.729089338325537,
+            "densityL2": 26.697587967873673,
+            "maxDensity": 64.7481547494209,
+            "maxCoefficient": 1.3140205244011078,
+            "densityCoordinateVariation": 20.31810146384663
+          },
+          {
+            "sourceNode": 0.41,
+            "component": "adjointEval",
+            "densityL1": 204.0744247094907,
+            "densityL2": 307.4613500460185,
+            "maxDensity": 768.2530514199362,
+            "maxCoefficient": 15.686457494002989,
+            "densityCoordinateVariation": 236.8473063446179
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "boundary",
+            "densityL1": 17.665834892346293,
+            "densityL2": 26.60238206028558,
+            "maxDensity": 64.55121674893581,
+            "maxCoefficient": 1.3101652141145756,
+            "densityCoordinateVariation": 20.25002039419377
+          },
+          {
+            "sourceNode": 0.465,
+            "component": "adjointEval",
+            "densityL1": 199.65994013392057,
+            "densityL2": 300.8104265444858,
+            "maxDensity": 751.6344023635644,
+            "maxCoefficient": 15.34713214859927,
+            "densityCoordinateVariation": 231.72388736591904
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "boundary",
+            "densityL1": 17.576876464437767,
+            "densityL2": 26.46847358214391,
+            "maxDensity": 64.25903692044956,
+            "maxCoefficient": 1.30437135402512,
+            "densityCoordinateVariation": 20.15230457275874
+          },
+          {
+            "sourceNode": 0.52,
+            "component": "adjointEval",
+            "densityL1": 195.07617735517664,
+            "densityL2": 293.90446616140724,
+            "maxDensity": 734.3784931688275,
+            "maxCoefficient": 14.994795004472973,
+            "densityCoordinateVariation": 226.40400532477798
+          }
+        ]
+      }
+    ]
+  },
+  "activeRange": {
+    "maxRangeResidualRelative": 2.2573105615124823e-69,
+    "allActiveRanksMatch": true,
+    "rows": [
+      {
+        "basis": 18,
+        "ratio": 0.625,
+        "globalTraceConstraints": 11,
+        "globalTraceMin": 0.02,
+        "globalTraceMax": 0.545,
+        "activeTol": 1e-08,
+        "activeFloor": 182.85135401773348,
+        "activeDim": 2,
+        "traceRankOnActive": 2,
+        "traceGramMin": 6746.882562520208,
+        "traceGramMax": 61716774.728149824,
+        "traceGramTol": 6.171677472814983e-19,
+        "sourceActiveFrob": 135223.37765241103,
+        "coefficientFrob": 201.4153360841363,
+        "coefficientOp": 201.41472755309704,
+        "rangeResidualFrob": 3.052411585381784e-64,
+        "rangeResidualRelative": 2.2573105615124823e-69
+      }
+    ]
+  },
+  "lagrangeIdentity": {
+    "maxIdentityDefect": 2.698802673467014e-79,
+    "maxIdentityRelativeDefect": 4.743989074453735e-81,
+    "rows": [
+      {
+        "t": 0.08,
+        "h0": 0.10995236981977767,
+        "pStarH": -107.41740043918624,
+        "boundaryRowNorm": 10.438342443499268,
+        "pStarOverBoundaryNorm": 10.290656875899206,
+        "traceRowNorm": 0.19485613418832154,
+        "identityRowDefectNorm": 1.9304107631086823e-81,
+        "randomIdentityDefectMax": 2.698802673467014e-79,
+        "randomIdentityRelativeDefectMax": 3.0674386568024795e-81
+      },
+      {
+        "t": 0.24,
+        "h0": 0.10864497048594665,
+        "pStarH": -103.17821238401122,
+        "boundaryRowNorm": 10.399785975178101,
+        "pStarOverBoundaryNorm": 9.921186131164035,
+        "traceRowNorm": 0.19485613418832154,
+        "identityRowDefectNorm": 3.3596796061922713e-81,
+        "randomIdentityDefectMax": 1.349401336733507e-79,
+        "randomIdentityRelativeDefectMax": 1.943228098910416e-81
+      },
+      {
+        "t": 0.4,
+        "h0": 0.1061412149547786,
+        "pStarH": -97.7202960613159,
+        "boundaryRowNorm": 10.238572298146638,
+        "pStarOverBoundaryNorm": 9.544328370763665,
+        "traceRowNorm": 0.19485613418832154,
+        "identityRowDefectNorm": 1.3517602747039836e-79,
+        "randomIdentityDefectMax": 1.349401336733507e-79,
+        "randomIdentityRelativeDefectMax": 2.095915363094055e-81
+      },
+      {
+        "t": 0.52,
+        "h0": 0.10356175691109845,
+        "pStarH": -93.05497666991295,
+        "boundaryRowNorm": 10.04188280474921,
+        "pStarOverBoundaryNorm": 9.266686186170537,
+        "traceRowNorm": 0.19485613418832154,
+        "identityRowDefectNorm": 1.0859730206806942e-80,
+        "randomIdentityDefectMax": 3.3735033418337674e-80,
+        "randomIdentityRelativeDefectMax": 4.743989074453735e-81
+      }
+    ]
+  },
+  "adjointBoundaryDiagnostic": {
+    "activeDim": 2,
+    "activeRangeFrobeniusRelative": 3.6497508373774743e-69,
+    "maxIbpRelativeDefectOnActive": 2481283.9499772824,
+    "maxActiveRangeRelativeDefect": 5.611776968403598e-69,
+    "maxEtaL2Trap": 15220911281.570494,
+    "status": {
+      "finiteActiveRangeClosed": true,
+      "discreteAdjointIbpSmall": false,
+      "continuumAdjointGreenClosed": false
+    },
+    "interpretation": "Finite-difference P^*K_N and endpoint concomitant diagnostic. Large IBP defects indicate the need for an analytic adjoint Green construction rather than differentiating coarse sampled kernel coefficients."
+  },
+  "regularizedBvpDiagnostic": {
+    "traceSamples": 11,
+    "kernelDegree": 6,
+    "smoothOrder": 4,
+    "smoothWeight": 1e-06,
+    "regularizedRangeResidualRelative": 9.797678374642602e-70,
+    "regularizedMaxIbpRelativeDefectOnActive": 114872.78146325507,
+    "regularizedMaxEtaL2": 1670341309.4242046,
+    "regularizedMaxDensityL2": 352.92225680739114,
+    "exactActiveRangeOnRegularizedKernel": {
+      "label": "exact active range on regularized kernels",
+      "closed": true,
+      "status": "closed",
+      "reason": "Polynomial densities solve the two active moment equations."
+    },
+    "regularizedAdjointIbpSmall": {
+      "label": "regularized adjoint IBP diagnostic",
+      "closed": false,
+      "status": "open",
+      "reason": "Tests whether the smooth finite kernels behave like solutions of P^*K=eta with matched endpoint concomitant."
+    },
+    "continuumBvpClosed": {
+      "label": "continuum adjoint BVP compactness",
+      "closed": false,
+      "status": "open",
+      "reason": "Still requires a uniform norm bound and convergence of the regularized kernels in the trace-dual topology."
+    }
+  },
+  "jumpConditionCertificate": {
+    "detJumpMatrix": 1.5426921318086964e-43,
+    "inverseJumpMatrixFrobenius": 6.551722209743162e+16,
+    "maxJumpSolveResidual": 0.0,
+    "maxJumpNorm": 24129022.585577942,
+    "distributionalSourceJumpLaw": true,
+    "jumpMatrixInvertible": true,
+    "interiorSourceSolved": true,
+    "endpointConcomitantSolved": false
+  },
+  "endpointSelectionCertificate": {
+    "odeSamples": 11,
+    "stencilWidth": 9,
+    "activeDim": 2,
+    "endpointMapRank": 1,
+    "endpointMapGramEigenvalues": [
+      7704285951341.06,
+      5.4067419733088444e+51
+    ],
+    "endpointMapFrobenius": 7.353055129202313e+25,
+    "flowLeftFrobenius": 1.188781293335011e+29,
+    "flowRightFrobenius": 4325523736.791256,
+    "maxEndpointResidualNorm": 4.904278671755176e-27,
+    "maxSelectedZNorm": 2.791429837949141,
+    "activeEndpointMapFullRowRank": {
+      "label": "active endpoint map full row rank",
+      "closed": false,
+      "status": "open",
+      "reason": "Sufficient but not necessary; the diagnostic may still close if the actual endpoint right-hand sides lie in Range(M)."
+    },
+    "actualEndpointRhsInRange": {
+      "label": "actual endpoint RHS in Range(M)",
+      "closed": true,
+      "status": "closed",
+      "reason": "For the actual source rows, the endpoint vectors b(d) are in the finite endpoint-map range."
+    },
+    "activeEndpointKilled": {
+      "label": "active endpoint concomitant killed",
+      "closed": true,
+      "status": "closed",
+      "reason": "Minimum-norm z solves Mz=-b(d) on the active two-dimensional source space."
+    },
+    "uniformTraceDualBoundClosed": {
+      "label": "uniform trace-dual bound",
+      "closed": false,
+      "status": "open",
+      "reason": "Still needs a rigorous continuum bound for the exact fundamental matrix and M^+ over the source window."
+    }
+  },
+  "endpointRangeTheorem": {
+    "exactEndpointReductionClosed": true,
+    "unconditionalContinuumEndpointClosed": false,
+    "exactFundamentalMatrixEndpointMapStatus": {
+      "label": "exact fundamental-matrix endpoint map",
+      "closed": true,
+      "status": "closed",
+      "reason": "For analytic coefficients with nonzero leading coefficient, P^*K=0 has a unique fundamental matrix Phi(a,t), and the endpoint concomitant is exactly Pi_delta Beta_z=Mz+b(d)."
+    },
+    "endpointFredholmRangeAlternativeStatus": {
+      "label": "endpoint Fredholm range alternative",
+      "closed": true,
+      "status": "closed",
+      "reason": "The exact endpoint equation Mz=-b(d) is solvable iff b(d) is orthogonal to ker(M^T); the minimum-norm solution is z=-M^+b(d)."
+    },
+    "uniformTraceDualBoundFromCompactnessStatus": {
+      "label": "uniform trace-dual bound from compactness",
+      "closed": true,
+      "status": "closed",
+      "reason": "If rank M is constant, b(d_u) lies in Range(M), and d_u is continuous on the compact source window, then ||M^+b(d_u)|| and the trace-dual norm of the piecewise homogeneous Green solution are uniformly bounded."
+    },
+    "finiteEndpointCompatibilityEvidenceStatus": {
+      "label": "finite endpoint compatibility evidence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The sampled-flow diagnostic has rank one on the two active modes, but the actual endpoint right-hand sides lie in its range and are killed by the Moore-Penrose z choice."
+    },
+    "continuumActiveRangeCompatibilityStatus": {
+      "label": "continuum active range compatibility",
+      "closed": false,
+      "status": "open",
+      "reason": "Open until the compactness/Mosco passage and the closed-trace active unique-continuation lemma are proved."
+    },
+    "finiteEndpointResidual": 4.904278671755176e-27,
+    "finiteSelectedZNorm": 2.791429837949141,
+    "finiteEndpointRank": 1,
+    "finiteEndpointActiveDim": 2
+  },
+  "activeTraceRangeTheorem": {
+    "hilbertAnnihilatorRangeCriterionStatus": {
+      "label": "Hilbert annihilator range criterion",
+      "closed": true,
+      "status": "closed",
+      "reason": "For a densely defined closed trace map R between Hilbert spaces, closure Ran(R^*)=(ker R)^perp.  Hence E_active factors through the interval trace iff ker R is annihilated by E_active."
+    },
+    "finiteActiveBlockFactorizationStatus": {
+      "label": "finite active block factorization",
+      "closed": true,
+      "status": "closed",
+      "reason": "Current Galerkin active blocks satisfy E_active=C_sample R_global to roundoff.  This is finite evidence for, not proof of, the continuum annihilator condition."
+    },
+    "compactnessContradictionReductionStatus": {
+      "label": "compactness contradiction reduction",
+      "closed": true,
+      "status": "closed",
+      "reason": "Failure of ker R subset ker E_active is equivalent to an A-normalized sequence with R f_n -> 0 and active source bounded below.  The high-block elliptic/Mosco theorem is the compactness mechanism needed to pass such a sequence to a continuum limit."
+    },
+    "closedTraceActiveUniqueContinuationStatus": {
+      "label": "closed-trace active unique continuation",
+      "closed": false,
+      "status": "open",
+      "reason": "Closed if the exact Green annihilation implication is available for every scalar active source row.  The remaining open part is endpoint/Fredholm compatibility in the continuum exact Green BVP."
+    },
+    "continuumActiveTraceRangeCompatibilityStatus": {
+      "label": "continuum active trace range compatibility",
+      "closed": false,
+      "status": "open",
+      "reason": "Open until the compactness/Mosco passage and the closed-trace active unique-continuation lemma are proved."
+    },
+    "finiteMaxRangeResidualRelative": 2.2573105615124823e-69,
+    "finiteMaxCoefficientOperator": 201.41472755309704,
+    "observedGammaFloor": 293.11515100909196,
+    "remainingAnalyticGap": "Build a stable validated endpoint-flow solver that encloses the exact fundamental matrix Phi(a,s0) and endpoint rows with Frobenius endpoint-map radius below the rank margin."
+  },
+  "formalConstruction": [
+    "Finite: E_active=C_N R_N on the source-active block.",
+    "Quadrature interpretation: C_{N,i}=w_i K_N(a_i), so K_N(a_i)=C_{N,i}/w_i.",
+    "Continuum target: P_delta E_u(f)=P_delta int_I K_u(a)Lambda_a(f) da.",
+    "Lagrange identity converts this into the adjoint Green boundary problem P^*K_u=eta_u plus endpoint concomitant terms.",
+    "The actual source rows are distributional at s0; their interior contribution is encoded by exact jumps of K,K',...,K^(7).",
+    "After the jumps are fixed, the exact fundamental matrix gives Pi_delta Beta_z=M z+b(d); the endpoint problem is the Fredholm condition b(d) in Range(M).",
+    "The coarse sampled K_N should not be differentiated as the BVP solution; the adjoint-boundary diagnostic records that failure mode.",
+    "A polynomial minimum-norm regularized K_N improves the IBP defect but still does not close the BVP."
+  ],
+  "remainingAnalyticGap": "Prove the closed-trace active unique-continuation lemma in the continuum space and combine it with the source-inactive high-frequency Hardy/Schur tail.  The endpoint ODE step itself is now an exact fundamental-matrix/Fredholm reduction.",
+  "interpretation": "The finite active range identity and trace-grid density stability support the continuum trace-to-source representation.  The actual continuum adjoint Green problem remains the next analytic proof."
+}

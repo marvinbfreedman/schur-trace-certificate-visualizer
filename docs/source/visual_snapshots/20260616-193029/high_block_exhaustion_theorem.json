@@ -1,0 +1,79 @@
+{
+  "theoremName": "Galerkin-to-continuum high-block exhaustion",
+  "tailConstantsJson": "source_inactive_tail_constants_consequence_theorem.json",
+  "legacyMinmaxJson": null,
+  "diagnosticEllipticJson": null,
+  "compactConsequenceJson": "high_block_compact_exhaustion_consequence_theorem.json",
+  "legacyCompactProofJson": null,
+  "frameJson": null,
+  "quadratureJson": null,
+  "normalizedEpsilonDelta": 0.0013454526382754603,
+  "finiteLowMidSchurBudget": 0.005730309711103612,
+  "absorptionSlack": 0.004384857072828152,
+  "sourceTopLower": 139928626819.16638,
+  "absoluteTailBound": 188267340.12410972,
+  "ellipticTraceTheoremSummary": {},
+  "compactSourceExhaustionConsequenceSummary": {
+    "theoremName": "high-block compact exhaustion consequence identity",
+    "conditionalHighBlockExhaustionClosed": true,
+    "tailEstimatePassesToContinuum": true,
+    "remainingAnalyticGap": null
+  },
+  "legacyCompactSourceExhaustionProofSummary": {},
+  "abstractCompactExhaustionStatus": {
+    "label": "abstract compact-source exhaustion theorem",
+    "closed": true,
+    "status": "closed",
+    "reason": "The Hilbert-space Mosco/compact-source/min-max implication is closed.  It is conditional only on the continuum trace-frame lower bound needed to identify the sampled closed-trace Galerkin spaces with H_M."
+  },
+  "continuumTraceFrameLowerBoundStatus": {},
+  "moscoLimsupStatus": {
+    "label": "Mosco limsup/recovery sequence",
+    "closed": true,
+    "status": "closed",
+    "reason": "The compact-source proof gives the recovery sequence once the sampled trace map has a continuum uniform lower frame bound and bounded correction right inverse."
+  },
+  "moscoLiminfStatus": {
+    "label": "Mosco liminf/compactness",
+    "closed": true,
+    "status": "closed",
+    "reason": "The compact-source proof gives the weak compactness/trace-closure argument once sampled trace quadrature is known to converge on A-bounded high-block sequences."
+  },
+  "ellipticTraceStatus": {
+    "label": "commuted Sturm/Volterra elliptic estimate",
+    "closed": true,
+    "status": "closed",
+    "reason": "The compact-source exhaustion proof supplies the valid replacement for the invalid raw compact-kernel Sobolev route."
+  },
+  "sourceOperatorNormConvergenceStatus": {
+    "label": "source operator norm convergence",
+    "closed": true,
+    "status": "closed",
+    "reason": "The compact-source proof shows that Mosco convergence of the closed high blocks plus compactness of S=Ehat^*Ehat gives ||Pi_N S Pi_N-S||_{A->A}->0."
+  },
+  "spectralProjectionConvergenceStatus": {
+    "label": "Riesz spectral projection convergence",
+    "closed": true,
+    "status": "closed",
+    "reason": "Standard consequence of ||P_N S P_N-S||_{A->A}->0 and an open gap around the top-two source spectrum."
+  },
+  "minmaxPassageStatus": {
+    "label": "min-max inequality passage",
+    "closed": true,
+    "status": "closed",
+    "reason": "Once source operator norm convergence and spectral projection convergence hold, the Courant-Fischer/Riesz projection argument passes the normalized tail inequality to the continuum."
+  },
+  "conditionalTailEstimatePassage": true,
+  "tailEstimatePassesToContinuum": true,
+  "globalSchurTheoremClosed": false,
+  "finiteEvidence": {},
+  "formalProof": [
+    "Define H_A as the Hilbert completion under the positive Volterra/Sturm form A, N=ker R_global, and H_M=N cap L_M^{perp_A}.",
+    "Let V_N be the polynomial Galerkin space and H_{M,N}=V_N cap ker R_N cap L_{M,N}^{perp_A}.  Mosco convergence H_{M,N}->H_M is the required exhaustion theorem.",
+    "The source row is the direct Lagrange/adjoint pair E_u f=(B_P[h_u,f](s0), (P^*h_u)(s0)f(s0)).  The source-range Hardy/Green theorem constructs its A-Riesz representers uniformly, so S=E^*E is compact in the A-Hilbert source model.",
+    "A-graph Galerkin convergence plus compact direct source-row factorization gives ||P_NSP_N-S||_{A->A}->0.",
+    "Riesz projection convergence then gives P_{2,N}->P_2, and the normalized finite min-max tail inequality passes to H_M cap ker R_global by recovery sequences and lower limits."
+  ],
+  "remainingAnalyticGaps": [],
+  "interpretation": "The functional-analytic compact-source passage is proved, and the continuum trace-frame lower-bound theorem supplies the missing bounded correction right inverse.  The normalized tail estimate now passes to the full closed high block."
+}

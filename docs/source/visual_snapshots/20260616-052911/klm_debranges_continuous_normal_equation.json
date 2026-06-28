@@ -1,0 +1,223 @@
+{
+  "theoremName": "continuous Weyl/Volterra normal equation for de Branges evaluation trace",
+  "normalEquation": "G_+^*G_+ f_z = G_+^*h_z^+",
+  "plusKernel": "N_+(s,t)=sum_sigma w_sigma/4 int_0^inf (1+s+u)(1+t+u) A_s(u)A_t(u) exp(sigma omega (u+(s+t)/2)) du",
+  "rhsKernel": "b_z(s)=sum_sigma sqrt(w_sigma/4) int_0^inf (1+s+u) A_s(u) exp(sigma omega(s+u)/2) h_z^+(u,sigma) du",
+  "basis": 8,
+  "constraints": 5,
+  "omega": 0.49,
+  "sOrder": 16,
+  "laguerreOrder": 40,
+  "rhsLaguerreOrder": 60,
+  "traceRank": 5,
+  "variants": [
+    "same",
+    "split",
+    "branch_unweighted",
+    "undo_sigma_u",
+    "apply_sigma_u"
+  ],
+  "results": [
+    {
+      "variant": "same",
+      "normalEquationResidualMax": 4.043412944224161e-29,
+      "normalEquationResidualMean": 3.745761408104897e-29,
+      "coefficientNormFrobenius": 5.680847063938692,
+      "rawTraceNormFrobenius": 118.79773666196661,
+      "traceCoordinateNormFrobenius": 5.425442358642295,
+      "directContinuousGram": {
+        "jointRelative": 0.49102347752870895,
+        "plusRelative": 0.5724501970269822,
+        "crossRelative": 0.4614393894948481,
+        "minusRelative": 0.45312861550071604,
+        "jointFrobenius": 0.14592763482876467,
+        "globalScale": 0.922119838903918,
+        "scaledJointRelative": 0.48543987873405764,
+        "mappedJointNorm": 0.2817692020660929
+      },
+      "greenTraceGram": {
+        "jointRelative": 9.460887256095168,
+        "plusRelative": 8.929104137730894,
+        "crossRelative": 9.683285515516545,
+        "minusRelative": 9.555086015775611,
+        "jointFrobenius": 2.811688165323721,
+        "globalScale": 0.00569717189261741,
+        "scaledJointRelative": 0.9985459952114593,
+        "mappedJointNorm": 2.8120041356654144
+      }
+    },
+    {
+      "variant": "split",
+      "normalEquationResidualMax": 4.043412944224161e-29,
+      "normalEquationResidualMean": 3.745761408104897e-29,
+      "coefficientNormFrobenius": 4.016965481794737,
+      "rawTraceNormFrobenius": 84.00268518329031,
+      "traceCoordinateNormFrobenius": 3.8363670827327034,
+      "directContinuousGram": {
+        "jointRelative": 0.6291457643402046,
+        "plusRelative": 0.4423887856159182,
+        "crossRelative": 0.6685114091043913,
+        "minusRelative": 0.7126426754519115,
+        "jointFrobenius": 0.18697630063388063,
+        "globalScale": 1.844239677807836,
+        "scaledJointRelative": 0.48543987873405764,
+        "mappedJointNorm": 0.14088460103304645
+      },
+      "greenTraceGram": {
+        "jointRelative": 4.782475015453231,
+        "plusRelative": 4.082800928985092,
+        "crossRelative": 5.268851438487875,
+        "minusRelative": 4.408101216800686,
+        "jointFrobenius": 1.421307329631597,
+        "globalScale": 0.01139434378523482,
+        "scaledJointRelative": 0.9985459952114593,
+        "mappedJointNorm": 1.4060020678327072
+      }
+    },
+    {
+      "variant": "branch_unweighted",
+      "normalEquationResidualMax": 4.043412944224161e-29,
+      "normalEquationResidualMean": 3.745761408104897e-29,
+      "coefficientNormFrobenius": 8.033930963589475,
+      "rawTraceNormFrobenius": 168.00537036658062,
+      "traceCoordinateNormFrobenius": 7.672734165465407,
+      "directContinuousGram": {
+        "jointRelative": 1.131383750373213,
+        "plusRelative": 1.8440533255162577,
+        "crossRelative": 0.838032116474278,
+        "minusRelative": 0.41118923880800456,
+        "jointFrobenius": 0.3362367836393474,
+        "globalScale": 0.461059919451959,
+        "scaledJointRelative": 0.48543987873405764,
+        "mappedJointNorm": 0.5635384041321858
+      },
+      "greenTraceGram": {
+        "jointRelative": 18.896396160320855,
+        "plusRelative": 18.65527530777516,
+        "crossRelative": 18.53401592756489,
+        "minusRelative": 19.883338801940337,
+        "jointFrobenius": 5.615834119259089,
+        "globalScale": 0.002848585946308705,
+        "scaledJointRelative": 0.9985459952114593,
+        "mappedJointNorm": 5.624008271330829
+      }
+    },
+    {
+      "variant": "undo_sigma_u",
+      "normalEquationResidualMax": 4.0966966630446246e-29,
+      "normalEquationResidualMean": 3.786562022361551e-29,
+      "coefficientNormFrobenius": 5.707177724086222,
+      "rawTraceNormFrobenius": 119.45870135425203,
+      "traceCoordinateNormFrobenius": 5.451661491188046,
+      "directContinuousGram": {
+        "jointRelative": 0.4893141485053414,
+        "plusRelative": 0.5618931511013571,
+        "crossRelative": 0.46295749916898443,
+        "minusRelative": 0.4565906627708396,
+        "jointFrobenius": 0.14541963805683922,
+        "globalScale": 0.931991575915764,
+        "scaledJointRelative": 0.48513583775266483,
+        "mappedJointNorm": 0.27883848835257286
+      },
+      "greenTraceGram": {
+        "jointRelative": 9.06132530180555,
+        "plusRelative": 8.523316533646888,
+        "crossRelative": 9.30278531009658,
+        "minusRelative": 9.120356999942246,
+        "jointFrobenius": 2.6929420490473683,
+        "globalScale": 0.006005330878847614,
+        "scaledJointRelative": 0.9985185906924788,
+        "mappedJointNorm": 2.692712432973421
+      }
+    },
+    {
+      "variant": "apply_sigma_u",
+      "normalEquationResidualMax": 4.131059036454125e-29,
+      "normalEquationResidualMean": 3.827721484235589e-29,
+      "coefficientNormFrobenius": 5.870425256305391,
+      "rawTraceNormFrobenius": 122.88186939503055,
+      "traceCoordinateNormFrobenius": 5.610307707638945,
+      "directContinuousGram": {
+        "jointRelative": 0.4935791796594594,
+        "plusRelative": 0.6055415253874207,
+        "crossRelative": 0.45548962332698867,
+        "minusRelative": 0.42968800109655825,
+        "jointFrobenius": 0.14668716585800234,
+        "globalScale": 0.8906732009986972,
+        "scaledJointRelative": 0.4817156607982733,
+        "mappedJointNorm": 0.2924040470237704
+      },
+      "greenTraceGram": {
+        "jointRelative": 9.775704344709728,
+        "plusRelative": 9.260544240091448,
+        "crossRelative": 9.973567191497203,
+        "minusRelative": 9.905426252348146,
+        "jointFrobenius": 2.905248891536684,
+        "globalScale": 0.0055519694680692825,
+        "scaledJointRelative": 0.9985251035380328,
+        "mappedJointNorm": 2.906188550793623
+      }
+    }
+  ],
+  "bestDirectContinuousGram": {
+    "variant": "apply_sigma_u",
+    "normalEquationResidualMax": 4.131059036454125e-29,
+    "normalEquationResidualMean": 3.827721484235589e-29,
+    "coefficientNormFrobenius": 5.870425256305391,
+    "rawTraceNormFrobenius": 122.88186939503055,
+    "traceCoordinateNormFrobenius": 5.610307707638945,
+    "directContinuousGram": {
+      "jointRelative": 0.4935791796594594,
+      "plusRelative": 0.6055415253874207,
+      "crossRelative": 0.45548962332698867,
+      "minusRelative": 0.42968800109655825,
+      "jointFrobenius": 0.14668716585800234,
+      "globalScale": 0.8906732009986972,
+      "scaledJointRelative": 0.4817156607982733,
+      "mappedJointNorm": 0.2924040470237704
+    },
+    "greenTraceGram": {
+      "jointRelative": 9.775704344709728,
+      "plusRelative": 9.260544240091448,
+      "crossRelative": 9.973567191497203,
+      "minusRelative": 9.905426252348146,
+      "jointFrobenius": 2.905248891536684,
+      "globalScale": 0.0055519694680692825,
+      "scaledJointRelative": 0.9985251035380328,
+      "mappedJointNorm": 2.906188550793623
+    }
+  },
+  "bestGreenTraceGram": {
+    "variant": "undo_sigma_u",
+    "normalEquationResidualMax": 4.0966966630446246e-29,
+    "normalEquationResidualMean": 3.786562022361551e-29,
+    "coefficientNormFrobenius": 5.707177724086222,
+    "rawTraceNormFrobenius": 119.45870135425203,
+    "traceCoordinateNormFrobenius": 5.451661491188046,
+    "directContinuousGram": {
+      "jointRelative": 0.4893141485053414,
+      "plusRelative": 0.5618931511013571,
+      "crossRelative": 0.46295749916898443,
+      "minusRelative": 0.4565906627708396,
+      "jointFrobenius": 0.14541963805683922,
+      "globalScale": 0.931991575915764,
+      "scaledJointRelative": 0.48513583775266483,
+      "mappedJointNorm": 0.27883848835257286
+    },
+    "greenTraceGram": {
+      "jointRelative": 9.06132530180555,
+      "plusRelative": 8.523316533646888,
+      "crossRelative": 9.30278531009658,
+      "minusRelative": 9.120356999942246,
+      "jointFrobenius": 2.6929420490473683,
+      "globalScale": 0.006005330878847614,
+      "scaledJointRelative": 0.9985185906924788,
+      "mappedJointNorm": 2.692712432973421
+    }
+  },
+  "continuousNormalEquationSolved": true,
+  "directContinuousMapConstructed": false,
+  "traceMapConstructed": false,
+  "diagnosis": "The continuous Galerkin normal equation has been assembled from the Weyl/Volterra kernel and solved.  If the residuals remain large under refinement, the missing bridge is not this plus-branch least-squares inverse; the target must include an additional transform or a different Hardy-to-Volterra branch normalization.",
+  "nextProofTarget": "Refine the continuous normal-equation certificate and derive the missing Hardy-to-Volterra branch normalization or extra transform if the trace-lifted joint Gram remains far from the Hardy joint Gram."
+}

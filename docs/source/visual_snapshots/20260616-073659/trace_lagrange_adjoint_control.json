@@ -1,0 +1,71 @@
+{
+  "s0": 0.2825,
+  "jetOrder": 9,
+  "maxTraceQ": 10,
+  "lambda0": -0.00012862612661029079,
+  "lambda1": 9.42101395763874e-06,
+  "gap": 0.00013804714056792953,
+  "e8": -0.17949627136147217,
+  "lambdaDerivatives": [
+    -0.00012862612661029079,
+    0.0012586353561607226,
+    -0.010569790654668558,
+    0.08131470927283976,
+    -0.48480406794895253,
+    0.3262134539749114,
+    33.05440359008409,
+    -172.53886154243878,
+    -11867.497399991053,
+    225121.96880967333,
+    3735520.511510404
+  ],
+  "maxIdentityDefect": 2.698802673467014e-79,
+  "maxIdentityRelativeDefect": 4.743989074453735e-81,
+  "rows": [
+    {
+      "t": 0.08,
+      "h0": 0.10995236981977767,
+      "pStarH": -107.41740043918624,
+      "boundaryRowNorm": 10.438342443499268,
+      "pStarOverBoundaryNorm": 10.290656875899206,
+      "traceRowNorm": 0.19485613418832154,
+      "identityRowDefectNorm": 1.9304107631086823e-81,
+      "randomIdentityDefectMax": 2.698802673467014e-79,
+      "randomIdentityRelativeDefectMax": 3.0674386568024795e-81
+    },
+    {
+      "t": 0.24,
+      "h0": 0.10864497048594665,
+      "pStarH": -103.17821238401122,
+      "boundaryRowNorm": 10.399785975178101,
+      "pStarOverBoundaryNorm": 9.921186131164035,
+      "traceRowNorm": 0.19485613418832154,
+      "identityRowDefectNorm": 3.3596796061922713e-81,
+      "randomIdentityDefectMax": 1.349401336733507e-79,
+      "randomIdentityRelativeDefectMax": 1.943228098910416e-81
+    },
+    {
+      "t": 0.4,
+      "h0": 0.1061412149547786,
+      "pStarH": -97.7202960613159,
+      "boundaryRowNorm": 10.238572298146638,
+      "pStarOverBoundaryNorm": 9.544328370763665,
+      "traceRowNorm": 0.19485613418832154,
+      "identityRowDefectNorm": 1.3517602747039836e-79,
+      "randomIdentityDefectMax": 1.349401336733507e-79,
+      "randomIdentityRelativeDefectMax": 2.095915363094055e-81
+    },
+    {
+      "t": 0.52,
+      "h0": 0.10356175691109845,
+      "pStarH": -93.05497666991295,
+      "boundaryRowNorm": 10.04188280474921,
+      "pStarOverBoundaryNorm": 9.266686186170537,
+      "traceRowNorm": 0.19485613418832154,
+      "identityRowDefectNorm": 1.0859730206806942e-80,
+      "randomIdentityDefectMax": 3.3735033418337674e-80,
+      "randomIdentityRelativeDefectMax": 4.743989074453735e-81
+    }
+  ],
+  "nextControlTarget": "Bound the endpoint pairing B_P[h_u,f]|_a^b and the integral of f P^*h_u by the commuted Sturm energy on the closed trace space."
+}

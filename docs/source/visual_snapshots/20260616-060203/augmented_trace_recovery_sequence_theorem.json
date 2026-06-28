@@ -1,0 +1,36 @@
+{
+  "theoremName": "augmented trace recovery sequence theorem",
+  "proofClass": "analytic proof",
+  "graphRecoveryJson": "augmented_graph_recovery_sequence_consequence_theorem.json",
+  "traceConvergenceJson": "xi_augmented_trace_convergence_theorem.json",
+  "statement": "The graph-norm recovery sequence can be chosen so that R_aug,N f_N -> R_aug f in the transported graph-dual trace topology.",
+  "statuses": {
+    "graphRecoveryInputStatus": {
+      "label": "graph recovery input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Finite core functions recover f in the completed graph norm."
+    },
+    "traceConvergenceInputStatus": {
+      "label": "augmented trace convergence input",
+      "closed": true,
+      "status": "closed",
+      "reason": "R_aug,N converges strongly to R_aug on graph-norm bounded recovery sequences."
+    },
+    "traceRecoverySequenceStatus": {
+      "label": "trace recovery sequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Graph recovery gives f_N -> f in V; strong graph-dual trace convergence then gives R_aug,N f_N -> R_aug f."
+    }
+  },
+  "traceRecoverySequenceClosed": true,
+  "graphAndTraceRecoveryClosed": true,
+  "proof": [
+    "Take the graph recovery sequence from the graph recovery theorem.",
+    "Apply strong graph-dual convergence of the augmented trace rows.",
+    "Use the triangle inequality in the transported trace norm.",
+    "Conclude simultaneous recovery of f and R_aug f."
+  ],
+  "remainingAnalyticGap": null
+}

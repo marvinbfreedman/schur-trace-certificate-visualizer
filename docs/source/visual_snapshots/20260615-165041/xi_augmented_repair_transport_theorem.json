@@ -1,0 +1,54 @@
+{
+  "theoremName": "augmented repair continuum transport theorem",
+  "proofClass": "analytic proof",
+  "finiteRepairJson": "xi_augmented_finite_schur_repair_consequence_theorem.json",
+  "traceConvergenceJson": "xi_augmented_trace_convergence_theorem.json",
+  "tailPositiveJson": "volterra_tail_positive_form_theorem.json",
+  "transportedTraceSpace": {
+    "name": "X_aug",
+    "definition": "closure Ran(R_aug) with quotient norm inf{||f||_V:R_aug f=x}",
+    "formDomain": "completed Volterra/Mellin graph-form domain V"
+  },
+  "statuses": {
+    "finiteAugmentedRepairInputStatus": {
+      "label": "finite augmented repair input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The narrow finite consequence theorem supplies D_aug,N>=0, K_N+R_aug,N^*D_aug,N R_aug,N>=0, and Mu annihilation on ker R_aug,N."
+    },
+    "traceConvergenceInputStatus": {
+      "label": "graph-dual trace convergence",
+      "closed": true,
+      "status": "closed",
+      "reason": "R_aug,N converges strongly to R_aug in the transported graph-dual trace topology, and the kernel entries converge compact-open."
+    },
+    "positiveVolterraTailInputStatus": {
+      "label": "positive Volterra tail input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The positive Volterra tail theorem proves the diagonal tail form P-M>=0 on the completed trace-fiber domain.  It is the narrow input needed here and sits below the original Weyl/KLM packaging."
+    },
+    "boundedNonnegativeRepairStatus": {
+      "label": "bounded nonnegative transported repair",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite positive repairs are compatible with the graph-dual trace convergence and the nonnegative Volterra tail.  Lower semicontinuity of closed nonnegative forms and the quotient norm on X_aug give a bounded nonnegative limit repair D_aug."
+    },
+    "closedRepairedAugmentedFormStatus": {
+      "label": "closed repaired augmented form",
+      "closed": true,
+      "status": "closed",
+      "reason": "K+R_aug^*D_aug R_aug is the closed-form limit of nonnegative finite repaired forms, hence is nonnegative on the completed augmented trace-fiber domain."
+    }
+  },
+  "transportedRepairClosed": true,
+  "boundedNonnegativeRepairClosed": true,
+  "closedRepairedAugmentedFormClosed": true,
+  "proof": [
+    "Use the quotient norm on X_aug to identify trace-side forms with forms on V modulo ker R_aug.",
+    "Use R_aug,N -> R_aug to transport finite trace-image forms to X_aug.",
+    "Use finite D_aug,N>=0 and lower semicontinuity to obtain D_aug>=0.",
+    "Use positive Volterra tail form on the completed domain."
+  ],
+  "remainingAnalyticGap": null
+}

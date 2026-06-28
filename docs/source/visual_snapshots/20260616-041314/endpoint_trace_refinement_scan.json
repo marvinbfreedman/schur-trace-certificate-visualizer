@@ -1,0 +1,546 @@
+{
+  "model": "endpoint_b",
+  "kind": "tilde3",
+  "omega": 0.49,
+  "L": 2.0,
+  "basis": 16,
+  "denseConstraints": 32,
+  "rows": [
+    {
+      "constraints": 5,
+      "rank": 5,
+      "nullity": 11,
+      "positiveModes": 11,
+      "gamma2": 9.408375266156203e-12,
+      "lambdaMin": 3.1887718367697564e-14,
+      "lambdaMax": 0.1543899510230955,
+      "tailCutoffs": [
+        {
+          "threshold": 0.5,
+          "cutoff": 7
+        },
+        {
+          "threshold": 0.25,
+          "cutoff": 7
+        },
+        {
+          "threshold": 0.1,
+          "cutoff": 8
+        },
+        {
+          "threshold": 0.05,
+          "cutoff": 9
+        }
+      ],
+      "topModes": [
+        {
+          "mode": 6,
+          "lambda": 3.709495688101882e-06,
+          "singleFrac": 0.45331458290471077,
+          "sourceOverSqrtLambda": 2.0651764354622575e-06,
+          "denseTraceMax": 0.1244320269583153,
+          "denseTraceRms": 0.06759747055071702,
+          "sampledTraceMax": 1.2690673997791835e-55
+        },
+        {
+          "mode": 7,
+          "lambda": 5.262765453744694e-05,
+          "singleFrac": 0.15190473681835331,
+          "sourceOverSqrtLambda": 1.1954818144554783e-06,
+          "denseTraceMax": 0.024992250593218093,
+          "denseTraceRms": 0.012283856852852357,
+          "sampledTraceMax": 5.757636638802172e-57
+        },
+        {
+          "mode": 3,
+          "lambda": 9.636811166396424e-10,
+          "singleFrac": 0.14205760785611338,
+          "sourceOverSqrtLambda": 1.1560844623654337e-06,
+          "denseTraceMax": 5.554032780153322,
+          "denseTraceRms": 2.7458769630971096,
+          "sampledTraceMax": 8.072644437530192e-55
+        },
+        {
+          "mode": 2,
+          "lambda": 5.494197424132462e-11,
+          "singleFrac": 0.13741962491583298,
+          "sourceOverSqrtLambda": 1.1370555835765398e-06,
+          "denseTraceMax": 9.156208516314386,
+          "denseTraceRms": 3.269127963803706,
+          "sampledTraceMax": 1.4520479795443535e-53
+        }
+      ],
+      "lowModeDenseMax": 40.10380182853751,
+      "lowModeDenseRms": 11.534380398975065
+    },
+    {
+      "constraints": 6,
+      "rank": 6,
+      "nullity": 10,
+      "positiveModes": 10,
+      "gamma2": 1.5510953939692582e-10,
+      "lambdaMin": 1.1621604686681439e-12,
+      "lambdaMax": 0.15438995102306322,
+      "tailCutoffs": [
+        {
+          "threshold": 0.5,
+          "cutoff": 6
+        },
+        {
+          "threshold": 0.25,
+          "cutoff": 6
+        },
+        {
+          "threshold": 0.1,
+          "cutoff": 7
+        },
+        {
+          "threshold": 0.05,
+          "cutoff": 7
+        }
+      ],
+      "topModes": [
+        {
+          "mode": 5,
+          "lambda": 3.709433249191473e-06,
+          "singleFrac": 0.43003749223789006,
+          "sourceOverSqrtLambda": 8.167185399170769e-06,
+          "denseTraceMax": 0.06537912090199786,
+          "denseTraceRms": 0.02249343683380097,
+          "sampledTraceMax": 1.378812216498353e-54
+        },
+        {
+          "mode": 6,
+          "lambda": 5.2627628925089426e-05,
+          "singleFrac": 0.1743378924011402,
+          "sourceOverSqrtLambda": 5.200141362479646e-06,
+          "denseTraceMax": 0.008801222611215723,
+          "denseTraceRms": 0.002965935942741105,
+          "sampledTraceMax": 2.2761402115103765e-55
+        },
+        {
+          "mode": 2,
+          "lambda": 9.390013091404861e-10,
+          "singleFrac": 0.1676989872987881,
+          "sourceOverSqrtLambda": 5.100167906769926e-06,
+          "denseTraceMax": 2.0428056628393163,
+          "denseTraceRms": 0.7089981877060753,
+          "sampledTraceMax": 5.251701345292607e-53
+        },
+        {
+          "mode": 4,
+          "lambda": 2.430177801011932e-07,
+          "singleFrac": 0.14417876121806852,
+          "sourceOverSqrtLambda": 4.729006369561576e-06,
+          "denseTraceMax": 0.0770787082513215,
+          "denseTraceRms": 0.026416062012762868,
+          "sampledTraceMax": 2.3228728969244847e-54
+        }
+      ],
+      "lowModeDenseMax": 3.6924314783971113,
+      "lowModeDenseRms": 0.7867614342023991
+    },
+    {
+      "constraints": 7,
+      "rank": 7,
+      "nullity": 9,
+      "positiveModes": 9,
+      "gamma2": 1.3580081685755103e-09,
+      "lambdaMin": 9.968696664084638e-12,
+      "lambdaMax": 0.15438995101956088,
+      "tailCutoffs": [
+        {
+          "threshold": 0.5,
+          "cutoff": 5
+        },
+        {
+          "threshold": 0.25,
+          "cutoff": 5
+        },
+        {
+          "threshold": 0.1,
+          "cutoff": 6
+        },
+        {
+          "threshold": 0.05,
+          "cutoff": 7
+        }
+      ],
+      "topModes": [
+        {
+          "mode": 4,
+          "lambda": 3.7087196424349307e-06,
+          "singleFrac": 0.5745500336764746,
+          "sourceOverSqrtLambda": 2.7932841584557542e-05,
+          "denseTraceMax": 0.014658643770459808,
+          "denseTraceRms": 0.004216734255646461,
+          "sampledTraceMax": 1.3045451743996391e-54
+        },
+        {
+          "mode": 1,
+          "lambda": 7.534099069466578e-10,
+          "singleFrac": 0.1473990206847436,
+          "sourceOverSqrtLambda": 1.4148112034116509e-05,
+          "denseTraceMax": 0.10719358557486451,
+          "denseTraceRms": 0.029705568484216967,
+          "sampledTraceMax": 1.4975200118470062e-53
+        },
+        {
+          "mode": 5,
+          "lambda": 5.262746783973255e-05,
+          "singleFrac": 0.13852843770953088,
+          "sourceOverSqrtLambda": 1.371578470192452e-05,
+          "denseTraceMax": 0.00107329854851899,
+          "denseTraceRms": 0.0003840590510111454,
+          "sampledTraceMax": 2.201250280371806e-55
+        },
+        {
+          "mode": 3,
+          "lambda": 2.429624059055472e-07,
+          "singleFrac": 0.05720166142995191,
+          "sourceOverSqrtLambda": 8.813644165608536e-06,
+          "denseTraceMax": 0.003412398890417736,
+          "denseTraceRms": 0.0016468438463765897,
+          "sampledTraceMax": 2.6242988164836498e-55
+        }
+      ],
+      "lowModeDenseMax": 0.1483500941136515,
+      "lowModeDenseRms": 0.02592524377907106
+    },
+    {
+      "constraints": 8,
+      "rank": 8,
+      "nullity": 8,
+      "positiveModes": 8,
+      "gamma2": 6.900309694881411e-08,
+      "lambdaMin": 1.8483932225723395e-10,
+      "lambdaMax": 0.1543899483613016,
+      "tailCutoffs": [
+        {
+          "threshold": 0.5,
+          "cutoff": 4
+        },
+        {
+          "threshold": 0.25,
+          "cutoff": 7
+        },
+        {
+          "threshold": 0.1,
+          "cutoff": 7
+        },
+        {
+          "threshold": 0.05,
+          "cutoff": 7
+        }
+      ],
+      "topModes": [
+        {
+          "mode": 3,
+          "lambda": 3.685395491719195e-06,
+          "singleFrac": 0.3474082063250798,
+          "sourceOverSqrtLambda": 0.00015482971982750307,
+          "denseTraceMax": 0.004192812269039519,
+          "denseTraceRms": 0.0013597728570935244,
+          "sampledTraceMax": 2.7482710004105703e-52
+        },
+        {
+          "mode": 6,
+          "lambda": 0.009537787625483933,
+          "singleFrac": 0.2410195484826534,
+          "sourceOverSqrtLambda": 0.0001289616038614127,
+          "denseTraceMax": 5.487200111228254e-05,
+          "denseTraceRms": 1.262567551696171e-05,
+          "sampledTraceMax": 5.9107184515107e-54
+        },
+        {
+          "mode": 2,
+          "lambda": 2.2816259002224282e-07,
+          "singleFrac": 0.2115709744869893,
+          "sourceOverSqrtLambda": 0.00012082653874079485,
+          "denseTraceMax": 0.033617226476550605,
+          "denseTraceRms": 0.00843377581645566,
+          "sampledTraceMax": 1.3282316417026958e-51
+        },
+        {
+          "mode": 5,
+          "lambda": 0.0007495248467460908,
+          "singleFrac": 0.07665314117551202,
+          "sourceOverSqrtLambda": 7.272760227014905e-05,
+          "denseTraceMax": 0.0002346723032386659,
+          "denseTraceRms": 5.903078547014362e-05,
+          "sampledTraceMax": 7.539295165012994e-54
+        }
+      ],
+      "lowModeDenseMax": 0.09581195139462205,
+      "lowModeDenseRms": 0.01705098642576224
+    },
+    {
+      "constraints": 9,
+      "rank": 9,
+      "nullity": 7,
+      "positiveModes": 7,
+      "gamma2": 8.936131731974987e-08,
+      "lambdaMin": 5.698507055909597e-09,
+      "lambdaMax": 0.1543899490869806,
+      "tailCutoffs": [
+        {
+          "threshold": 0.5,
+          "cutoff": 3
+        },
+        {
+          "threshold": 0.25,
+          "cutoff": 3
+        },
+        {
+          "threshold": 0.1,
+          "cutoff": 6
+        },
+        {
+          "threshold": 0.05,
+          "cutoff": 6
+        }
+      ],
+      "topModes": [
+        {
+          "mode": 2,
+          "lambda": 3.644033672339648e-06,
+          "singleFrac": 0.7324184706575398,
+          "sourceOverSqrtLambda": 0.00025583174034367654,
+          "denseTraceMax": 0.008076241401686758,
+          "denseTraceRms": 0.001885491990611031,
+          "sampledTraceMax": 1.5257423441770132e-51
+        },
+        {
+          "mode": 3,
+          "lambda": 5.2609450862685515e-05,
+          "singleFrac": 0.20348268802431002,
+          "sourceOverSqrtLambda": 0.00013484613844532602,
+          "denseTraceMax": 0.0009735870444667205,
+          "denseTraceRms": 0.00023521217424838002,
+          "sampledTraceMax": 1.2243634619946803e-52
+        },
+        {
+          "mode": 5,
+          "lambda": 0.009537791002559927,
+          "singleFrac": 0.14831979415639476,
+          "sourceOverSqrtLambda": 0.00011512624457702758,
+          "denseTraceMax": 7.868500293779306e-05,
+          "denseTraceRms": 1.8252910960343685e-05,
+          "sampledTraceMax": 1.5161024282258021e-53
+        },
+        {
+          "mode": 0,
+          "lambda": 5.698507055909597e-09,
+          "singleFrac": 0.1072203548396409,
+          "sourceOverSqrtLambda": 9.78843815527346e-05,
+          "denseTraceMax": 0.005747923059761016,
+          "denseTraceRms": 0.0013723711537620088,
+          "sampledTraceMax": 1.0624697680095805e-51
+        }
+      ],
+      "lowModeDenseMax": 0.016687988212531726,
+      "lowModeDenseRms": 0.0022829685848702722
+    },
+    {
+      "constraints": 10,
+      "rank": 10,
+      "nullity": 6,
+      "positiveModes": 6,
+      "gamma2": 1.020331191370662e-06,
+      "lambdaMin": 4.686435916226444e-08,
+      "lambdaMax": 0.1543899451762793,
+      "tailCutoffs": [
+        {
+          "threshold": 0.5,
+          "cutoff": 2
+        },
+        {
+          "threshold": 0.25,
+          "cutoff": 3
+        },
+        {
+          "threshold": 0.1,
+          "cutoff": 4
+        },
+        {
+          "threshold": 0.05,
+          "cutoff": 4
+        }
+      ],
+      "topModes": [
+        {
+          "mode": 1,
+          "lambda": 3.294719577854136e-06,
+          "singleFrac": 0.3877947797548973,
+          "sourceOverSqrtLambda": 0.0006290302930977473,
+          "denseTraceMax": 0.0012835677335725757,
+          "denseTraceRms": 0.0002905050546820056,
+          "sampledTraceMax": 1.1976993466150196e-51
+        },
+        {
+          "mode": 2,
+          "lambda": 5.2327877849974863e-05,
+          "singleFrac": 0.290513612191416,
+          "sourceOverSqrtLambda": 0.0005444447630721247,
+          "denseTraceMax": 0.0003024246837221386,
+          "denseTraceRms": 6.588211380031503e-05,
+          "sampledTraceMax": 3.9481671759962545e-53
+        },
+        {
+          "mode": 0,
+          "lambda": 4.686435916226444e-08,
+          "singleFrac": 0.18437003426213197,
+          "sourceOverSqrtLambda": 0.0004337262923915622,
+          "denseTraceMax": 0.0011832821489668674,
+          "denseTraceRms": 0.0002730431402597722,
+          "sampledTraceMax": 1.9134476903175407e-51
+        },
+        {
+          "mode": 3,
+          "lambda": 0.0007493928601000864,
+          "singleFrac": 0.13438250246587433,
+          "sourceOverSqrtLambda": 0.0003702899658921053,
+          "denseTraceMax": 3.161843281964343e-05,
+          "denseTraceRms": 6.741602800560408e-06,
+          "sampledTraceMax": 7.052164231602455e-54
+        }
+      ],
+      "lowModeDenseMax": 0.0012835677335725757,
+      "lowModeDenseRms": 0.0002020715500545728
+    },
+    {
+      "constraints": 11,
+      "rank": 11,
+      "nullity": 5,
+      "positiveModes": 5,
+      "gamma2": 4.8396050722090985e-06,
+      "lambdaMin": 1.7355757401297282e-06,
+      "lambdaMax": 0.1543896308996082,
+      "tailCutoffs": [
+        {
+          "threshold": 0.5,
+          "cutoff": 4
+        },
+        {
+          "threshold": 0.25,
+          "cutoff": 4
+        },
+        {
+          "threshold": 0.1,
+          "cutoff": 4
+        },
+        {
+          "threshold": 0.05,
+          "cutoff": 5
+        }
+      ],
+      "topModes": [
+        {
+          "mode": 3,
+          "lambda": 0.009535551164559043,
+          "singleFrac": 0.4654370101598609,
+          "sourceOverSqrtLambda": 0.0015008435345376615,
+          "denseTraceMax": 4.637683762125835e-06,
+          "denseTraceRms": 9.234644140276986e-07,
+          "sampledTraceMax": 9.290183901137794e-52
+        },
+        {
+          "mode": 0,
+          "lambda": 1.7355757401297282e-06,
+          "singleFrac": 0.3842920571321902,
+          "sourceOverSqrtLambda": 0.0013637528327767523,
+          "denseTraceMax": 7.888547921988551e-05,
+          "denseTraceRms": 1.5695416728741075e-05,
+          "sampledTraceMax": 2.2524559591296065e-50
+        },
+        {
+          "mode": 1,
+          "lambda": 5.1663666166863436e-05,
+          "singleFrac": 0.19720226864500662,
+          "sourceOverSqrtLambda": 0.000976924305965163,
+          "denseTraceMax": 7.383229782111351e-05,
+          "denseTraceRms": 1.4655885333096855e-05,
+          "sampledTraceMax": 1.302760077508893e-50
+        },
+        {
+          "mode": 4,
+          "lambda": 0.1543896308996082,
+          "singleFrac": 0.06614456818017392,
+          "sourceOverSqrtLambda": 0.0005657858143006506,
+          "denseTraceMax": 3.1116148841197267e-07,
+          "denseTraceRms": 6.162118518848858e-08,
+          "sampledTraceMax": 8.887442270581362e-53
+        }
+      ],
+      "lowModeDenseMax": 7.888547921988551e-05,
+      "lowModeDenseRms": 1.0812789341872854e-05
+    },
+    {
+      "constraints": 12,
+      "rank": 12,
+      "nullity": 4,
+      "positiveModes": 4,
+      "gamma2": 5.0310466453995605e-05,
+      "lambdaMin": 3.0015371977770912e-05,
+      "lambdaMax": 0.1543887791246448,
+      "tailCutoffs": [
+        {
+          "threshold": 0.5,
+          "cutoff": 2
+        },
+        {
+          "threshold": 0.25,
+          "cutoff": 3
+        },
+        {
+          "threshold": 0.1,
+          "cutoff": 3
+        },
+        {
+          "threshold": 0.05,
+          "cutoff": 3
+        }
+      ],
+      "topModes": [
+        {
+          "mode": 0,
+          "lambda": 3.0015371977770912e-05,
+          "singleFrac": 0.42630899339711487,
+          "sourceOverSqrtLambda": 0.004631177421708456,
+          "denseTraceMax": 3.018733374039953e-06,
+          "denseTraceRms": 5.707141296697493e-07,
+          "sampledTraceMax": 6.91427208513299e-50
+        },
+        {
+          "mode": 2,
+          "lambda": 0.00951708602481433,
+          "singleFrac": 0.4104073220769957,
+          "sourceOverSqrtLambda": 0.004543983253691508,
+          "denseTraceMax": 1.3766397770823382e-07,
+          "denseTraceRms": 2.5810076372495565e-08,
+          "sampledTraceMax": 3.3686094478017066e-51
+        },
+        {
+          "mode": 1,
+          "lambda": 0.0007411439349533532,
+          "singleFrac": 0.16139898360686475,
+          "sourceOverSqrtLambda": 0.0028495715731425585,
+          "denseTraceMax": 4.1220593646942083e-07,
+          "denseTraceRms": 7.756633079136222e-08,
+          "sampledTraceMax": 1.5709144715585623e-50
+        },
+        {
+          "mode": 3,
+          "lambda": 0.1543887791246448,
+          "singleFrac": 0.023285880009791156,
+          "sourceOverSqrtLambda": 0.0010823693847686032,
+          "denseTraceMax": 4.322474693862611e-08,
+          "denseTraceRms": 8.284001897904855e-09,
+          "sampledTraceMax": 2.0630247695173883e-52
+        }
+      ],
+      "lowModeDenseMax": 3.018733374039953e-06,
+      "lowModeDenseRms": 2.882992968283711e-07
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "theoremName": "compact-source high-block exhaustion proof",
+  "activeJson": "synchronized_active_range_interval_theorem.json",
+  "tailConstantsJson": "source_inactive_tail_constants_consequence_theorem.json",
+  "legacyMinmaxJson": null,
+  "frameJson": null,
+  "quadratureJson": null,
+  "traceFrameTheoremJson": null,
+  "normalizedEpsilonDelta": 0.0013454526382754603,
+  "finiteLowMidSchurBudget": 0.005730309711103612,
+  "absorptionSlack": 0.004384857072828152,
+  "observedTraceFrameFloor": 0.0,
+  "observedTraceFrameMaxResidual": 1.0,
+  "observedTraceFrameMinRelativeDrift": null,
+  "observedDensityRelativeDrift": null,
+  "activeSourceInputStatus": {
+    "label": "active source annihilation/range input",
+    "closed": true,
+    "status": "closed",
+    "reason": "Imported from synchronized_active_range_interval_theorem.py: R_global f=0 implies P_active Ehat f=0, equivalently E_active lies in closure Range(R_global^*)."
+  },
+  "certifiedSourceModelStatus": {
+    "label": "certified normalized source-tail constants input",
+    "closed": true,
+    "status": "closed",
+    "reason": "The certified source-tail constants theorem gives the normalized inactive-tail constant and verifies it is below the low/mid Schur budget; the active theorem supplies the active/inactive source split."
+  },
+  "abstractMoscoLimsupStatus": {
+    "label": "abstract Mosco limsup with bounded trace correction",
+    "closed": true,
+    "status": "closed",
+    "reason": "If V_N is A-graph dense, sampled traces converge on V_N, and the sampled trace map has a uniformly bounded right inverse, then each f in H_M has corrected approximants f_N in H_{M,N}.  The correction norm is bounded by gamma_0^{-1/2}||R_N v_N|| and tends to zero."
+  },
+  "abstractMoscoLiminfStatus": {
+    "label": "abstract Mosco liminf from weak compactness and trace consistency",
+    "closed": true,
+    "status": "closed",
+    "reason": "If f_N is A-bounded in H_{M,N}, Hilbert weak compactness gives a subsequence.  Trace consistency passes R_N f_N=0 to R_global f=0, and finite low/mid A-orthogonality passes by strong convergence of the removed modes."
+  },
+  "compactSourceNormConvergenceStatus": {
+    "label": "compact source operator norm convergence",
+    "closed": true,
+    "status": "closed",
+    "reason": "Mosco convergence of closed subspaces is equivalent to strong convergence of the A-orthogonal projections.  For compact S=Ehat^*Ehat, strong projection convergence gives ||Pi_N S Pi_N-S||_{A->A}->0."
+  },
+  "minmaxContinuumPassageStatus": {
+    "label": "continuum min-max passage",
+    "closed": true,
+    "status": "closed",
+    "reason": "Norm convergence of compact positive source operators implies convergence of lambda_3 and of the spectral min-max tail.  The continuum P_2 estimate follows from Courant-Fischer."
+  },
+  "finiteTraceFrameEvidenceStatus": {
+    "label": "trace-frame theorem diagnostics",
+    "closed": false,
+    "status": "open",
+    "reason": "Diagnostic frame numbers are read from the theorem-level continuum trace-frame lower-bound object.  They are displayed for audit visibility only; the proof input is the closed continuum trace-frame theorem, not the old broad diagnostic ledgers."
+  },
+  "continuumTraceFrameLowerBoundStatus": {
+    "label": "continuum uniform trace-frame lower bound",
+    "closed": false,
+    "status": "open",
+    "reason": "Imported from continuum_trace_frame_lower_bound_theorem.py: active range plus source noncollapse make R_global injective on the finite active spectral space; compactness gives gamma_delta>0, and finite-dimensional quadrature consistency gives bounded sampled-trace correction right inverses for fine trace meshes."
+  },
+  "continuumTraceFrameLowerBoundTheoremSummary": null,
+  "conditionalHighBlockExhaustionClosed": true,
+  "tailEstimatePassesToContinuum": false,
+  "formalProof": [
+    "Let H_A be the A-Hilbert completion, R=R_global, H_M=ker(R) cap L_M^{perp_A}, and H_{M,N}=V_N cap ker(R_N) cap L_{M,N}^{perp_A}.",
+    "Limsup: choose v_N in V_N with v_N->f in A graph norm.  Since Rf=0 and sampled traces are consistent, R_N v_N->0.  A uniform trace-frame lower bound gamma_0 supplies a correction w_N with R_N w_N=R_N v_N and ||w_N||_A<=gamma_0^{-1/2}||R_N v_N||.  Then f_N=v_N-w_N lies in ker R_N and f_N->f; finite low/mid orthogonality is corrected by the convergent finite Gram matrix.",
+    "Liminf: an A-bounded sequence f_N in H_{M,N} has a weakly convergent subsequence.  Trace consistency passes R_N f_N=0 to Rf=0, and low/mid orthogonality passes to the limit, so the weak limit belongs to H_M.",
+    "Mosco convergence gives strong convergence of the A-orthogonal projections Pi_N to Pi.  Since the source operator is compact after active range annihilation plus the inactive Hardy/Schur bound, ||Pi_N S Pi_N-S|| tends to zero.",
+    "Therefore lambda_3(S_N)->lambda_3(S).  The finite normalized inactive-tail bound passes to H_M, giving the same epsilon constant in the full closed trace space once the continuum trace-frame lower bound is supplied."
+  ],
+  "conditionalConclusion": "Assuming the continuum uniform trace-frame lower bound/quadrature consistency, the certified normalized estimate ||(I-P_active)Ehat f||^2 <= 1.345452638275e-03<A f,f> passes to H_M cap ker R_global and is absorbed by the low/mid budget 5.730309711104e-03 with slack 4.384857072828e-03.",
+  "remainingAnalyticGap": "Prove the continuum uniform trace-frame lower bound and trace quadrature consistency that turn the observed finite frame floor into a bounded sampled-trace correction right inverse."
+}

@@ -1,0 +1,38 @@
+{
+  "theoremName": "augmented trace liminf representative compactness theorem",
+  "proofClass": "analytic proof",
+  "moscoLiminfJson": "augmented_mosco_liminf_theorem.json",
+  "traceLimitJson": "xi_augmented_trace_limit_identification_consequence_theorem.json",
+  "statement": "Near-minimizing finite representatives for bounded augmented trace quotient coordinates have weak graph subsequential limits, and the augmented trace of the limit is the limiting trace coordinate.",
+  "statuses": {
+    "weakRepresentativeCompactnessInputStatus": {
+      "label": "weak representative compactness input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Mosco liminf theorem supplies weak graph compactness and graph-norm lower semicontinuity for bounded representative sequences."
+    },
+    "traceLimitIdentificationInputStatus": {
+      "label": "trace limit identification input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The augmented trace convergence theorem identifies the trace of the weak graph limit with the limiting augmented trace coordinate."
+    },
+    "representativeCompactnessAndTraceIdentificationStatus": {
+      "label": "representative compactness and trace identification",
+      "closed": true,
+      "status": "closed",
+      "reason": "Near-minimizers are bounded in the graph norm, hence have weak graph limit points, and the closed augmented trace map identifies the limit trace."
+    }
+  },
+  "representativeCompactnessAndTraceIdentificationClosed": true,
+  "weakRepresentativeCompactnessClosed": true,
+  "traceLimitIdentificationClosed": true,
+  "proof": [
+    "Choose finite representatives within epsilon_N of their finite quotient norms.",
+    "Bounded quotient norms give bounded representative graph norms.",
+    "Apply Mosco liminf weak compactness to extract a weak graph limit.",
+    "Apply closed augmented trace convergence to identify the limit coordinate.",
+    "Retain graph-norm lower semicontinuity for the abstract quotient-liminf principle."
+  ],
+  "remainingAnalyticGap": null
+}

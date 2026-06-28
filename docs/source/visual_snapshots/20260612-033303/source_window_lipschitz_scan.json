@@ -1,0 +1,307 @@
+{
+  "omega": 0.49,
+  "L": 2.0,
+  "basis": 20,
+  "constraints": 12,
+  "rank": 12,
+  "nullity": 8,
+  "positiveModes": 8,
+  "cutoff": 6,
+  "sourceMin": 0.08,
+  "sourceMax": 0.52,
+  "sourceGrid": 17,
+  "mesh": 0.0275,
+  "meshRadius": 0.01375,
+  "maxSampleHighAbsorb": 934694.7045980463,
+  "minSampleFullAbsorb": 589331737216.9569,
+  "maxSampleHighFullFrac": 1.1943753378212075e-06,
+  "maxHighLipAbsorb": 129156.81025796862,
+  "coverHighAbsorb": 1869438.2466149712,
+  "coverHighFullFracVsMinFull": 3.1721323128517602e-06,
+  "sampled": [
+    {
+      "u": 0.08,
+      "pStarH": -107.41740043918624,
+      "highAbsorb": 934694.7045980463,
+      "fullAbsorb": 782580379048.2869,
+      "highFullFrac": 1.1943753378212075e-06,
+      "highSize": 16067.842703159009,
+      "fullSize": 38895.64874530573
+    },
+    {
+      "u": 0.1075,
+      "pStarH": -106.79095890167775,
+      "highAbsorb": 923936.3776782453,
+      "fullAbsorb": 773620457370.4128,
+      "highFullFrac": 1.1943018942631975e-06,
+      "highSize": 15882.854504416135,
+      "fullSize": 38448.60943266563
+    },
+    {
+      "u": 0.135,
+      "pStarH": -106.11998375896385,
+      "highAbsorb": 912476.2851755983,
+      "fullAbsorb": 764073033215.864,
+      "highFullFrac": 1.1942265274500374e-06,
+      "highSize": 15685.802479875443,
+      "fullSize": 37972.370313865635
+    },
+    {
+      "u": 0.1625,
+      "pStarH": -105.40609133907924,
+      "highAbsorb": 900356.1072414529,
+      "fullAbsorb": 753972811867.219,
+      "highFullFrac": 1.1941493022960796e-06,
+      "highSize": 15477.403324765846,
+      "fullSize": 37468.66325838931
+    },
+    {
+      "u": 0.19,
+      "pStarH": -104.6509759828204,
+      "highAbsorb": 887619.0252534894,
+      "fullAbsorb": 743355760298.5779,
+      "highFullFrac": 1.194070285938144e-06,
+      "highSize": 15258.399536708253,
+      "fullSize": 36939.28265317668
+    },
+    {
+      "u": 0.2175,
+      "pStarH": -103.85640013983931,
+      "highAbsorb": 874309.3976493744,
+      "fullAbsorb": 732258837026.1018,
+      "highFullFrac": 1.1939895477399464e-06,
+      "highSize": 15029.553841849642,
+      "fullSize": 36386.07193015158
+    },
+    {
+      "u": 0.245,
+      "pStarH": -103.02418447121939,
+      "highAbsorb": 860472.4407381975,
+      "fullAbsorb": 720719726024.6212,
+      "highFullFrac": 1.1939071592842765e-06,
+      "highSize": 14791.643706669896,
+      "fullSize": 35810.91029972724
+    },
+    {
+      "u": 0.2725,
+      "pStarH": -102.15619802896134,
+      "highAbsorb": 846153.9176125972,
+      "fullAbsorb": 708776577315.4221,
+      "highFullFrac": 1.1938231943520322e-06,
+      "highSize": 14545.455989155322,
+      "fullSize": 35215.6998201063
+    },
+    {
+      "u": 0.3,
+      "pStarH": -101.25434857934155,
+      "highAbsorb": 831399.8380072507,
+      "fullAbsorb": 696467756600.2439,
+      "highFullFrac": 1.1937377288873614e-06,
+      "highSize": 14291.781778264884,
+      "fullSize": 34602.352920679594
+    },
+    {
+      "u": 0.3275,
+      "pStarH": -100.32057313304135,
+      "highAbsorb": 816256.171643535,
+      "fullAbsorb": 683831606062.4879,
+      "highFullFrac": 1.1936508409483289e-06,
+      "highSize": 14031.411465355179,
+      "fullSize": 33972.780485125106
+    },
+    {
+      "u": 0.355,
+      "pStarH": -99.35682874035949,
+      "highAbsorb": 800768.5772732252,
+      "fullAbsorb": 670906218184.9398,
+      "highFullFrac": 1.1935626106426814e-06,
+      "highSize": 13765.1300856077,
+      "fullSize": 33328.88058622828
+    },
+    {
+      "u": 0.3825,
+      "pStarH": -98.36508360479516,
+      "highAbsorb": 784982.1492935471,
+      "fullAbsorb": 657729224150.1637,
+      "highFullFrac": 1.1934731200484575e-06,
+      "highSize": 13493.712961645917,
+      "fullSize": 32672.52795029876
+    },
+    {
+      "u": 0.41,
+      "pStarH": -97.34730856291115,
+      "highAbsorb": 768941.183459027,
+      "fullAbsorb": 644337598101.1896,
+      "highFullFrac": 1.1933824531193493e-06,
+      "highSize": 13217.921675564714,
+      "fullSize": 32005.564214647715
+    },
+    {
+      "u": 0.4375,
+      "pStarH": -96.30546897274455,
+      "highAbsorb": 752688.9628692104,
+      "fullAbsorb": 630767478251.8767,
+      "highFullFrac": 1.1932906955749044e-06,
+      "highSize": 12938.500389638728,
+      "fullSize": 31329.78902719928
+    },
+    {
+      "u": 0.465,
+      "pStarH": -95.24151704721294,
+      "highAbsorb": 736267.565071797,
+      "fullAbsorb": 617054005553.6813,
+      "highFullFrac": 1.1931979347758155e-06,
+      "highSize": 12656.172530137983,
+      "fullSize": 30646.952023202008
+    },
+    {
+      "u": 0.4925,
+      "pStarH": -94.15738466305349,
+      "highAbsorb": 719717.6907937246,
+      "fullAbsorb": 603231180353.2018,
+      "highFullFrac": 1.193104259584722e-06,
+      "highSize": 12371.637843056198,
+      "fullSize": 29958.745700417363
+    },
+    {
+      "u": 0.52,
+      "pStarH": -93.05497666991295,
+      "highAbsorb": 703078.5145031781,
+      "fullAbsorb": 589331737216.9569,
+      "highFullFrac": 1.1930097602131113e-06,
+      "highSize": 12085.56982523443,
+      "fullSize": 29266.79920129779
+    }
+  ],
+  "intervals": [
+    {
+      "left": 0.08,
+      "right": 0.1075,
+      "highLipAbsorb": 41600.88825525741,
+      "fullLipAbsorb": 34620500994.620705,
+      "highLipSize": 715.4514068885986,
+      "fullLipSize": 1728.6096866039995
+    },
+    {
+      "left": 0.1075,
+      "right": 0.135,
+      "highLipAbsorb": 47727.742435347864,
+      "fullLipAbsorb": 39723345196.75679,
+      "highLipSize": 820.8042218398809,
+      "fullLipSize": 1983.2066536165446
+    },
+    {
+      "left": 0.135,
+      "right": 0.1625,
+      "highLipAbsorb": 54033.3257689147,
+      "fullLipAbsorb": 44976638162.415344,
+      "highLipSize": 929.2283527646404,
+      "fullLipSize": 2245.248761326595
+    },
+    {
+      "left": 0.1625,
+      "right": 0.19,
+      "highLipAbsorb": 60461.02690766924,
+      "fullLipAbsorb": 50333236816.07536,
+      "highLipSize": 1039.750360298189,
+      "fullLipSize": 2512.383655163485
+    },
+    {
+      "left": 0.19,
+      "right": 0.2175,
+      "highLipAbsorb": 66954.91694490948,
+      "fullLipAbsorb": 55746550060.98177,
+      "highLipSize": 1151.4085594016028,
+      "fullLipSize": 2782.2871637452436
+    },
+    {
+      "left": 0.2175,
+      "right": 0.245,
+      "highLipAbsorb": 73460.43100254581,
+      "fullLipAbsorb": 61171106967.02207,
+      "highLipSize": 1263.2647385297232,
+      "fullLipSize": 3052.6916270401066
+    },
+    {
+      "left": 0.245,
+      "right": 0.2725,
+      "highLipAbsorb": 79924.9900000735,
+      "fullLipAbsorb": 66563075345.39144,
+      "highLipSize": 1374.414849982696,
+      "fullLipSize": 3321.4117408988836
+    },
+    {
+      "left": 0.2725,
+      "right": 0.3,
+      "highLipAbsorb": 86298.55547112998,
+      "fullLipAbsorb": 71880724747.69664,
+      "highLipSize": 1483.9985487930744,
+      "fullLipSize": 3586.367621288057
+    },
+    {
+      "left": 0.3,
+      "right": 0.3275,
+      "highLipAbsorb": 92534.11213556948,
+      "fullLipAbsorb": 77084829458.92021,
+      "highLipSize": 1591.2074891816042,
+      "fullLipSize": 3845.6048680887975
+    },
+    {
+      "left": 0.3275,
+      "right": 0.355,
+      "highLipAbsorb": 98588.0747674754,
+      "fullLipAbsorb": 82139008577.88358,
+      "highLipSize": 1695.2923191264724,
+      "fullLipSize": 4097.31148445866
+    },
+    {
+      "left": 0.355,
+      "right": 0.3825,
+      "highLipAbsorb": 104420.61767501861,
+      "fullLipAbsorb": 87010001756.2322,
+      "highLipSize": 1795.5683441214796,
+      "fullLipSize": 4339.831581520596
+    },
+    {
+      "left": 0.3825,
+      "right": 0.41,
+      "highLipAbsorb": 109995.92678468722,
+      "fullLipAbsorb": 91667880562.65192,
+      "highLipSize": 1891.4198600284042,
+      "fullLipSize": 4571.6758678087745
+    },
+    {
+      "left": 0.41,
+      "right": 0.4375,
+      "highLipAbsorb": 115282.37586457036,
+      "fullLipAbsorb": 96086196723.35289,
+      "highLipSize": 1982.3031814458102,
+      "fullLipSize": 4791.528986983529
+    },
+    {
+      "left": 0.4375,
+      "right": 0.465,
+      "highLipAbsorb": 120252.6298004031,
+      "fullLipAbsorb": 100242069638.90987,
+      "highLipSize": 2067.748415727754,
+      "fullLipSize": 4998.253824636981
+    },
+    {
+      "left": 0.465,
+      "right": 0.4925,
+      "highLipAbsorb": 124883.67903255663,
+      "fullLipAbsorb": 104116216573.43875,
+      "highLipSize": 2147.3600533231356,
+      "fullLipSize": 5190.89295465619
+    },
+    {
+      "left": 0.4925,
+      "right": 0.52,
+      "highLipAbsorb": 129156.81025796862,
+      "fullLipAbsorb": 107692929742.99762,
+      "highLipSize": 2220.8164622271224,
+      "fullLipSize": 5368.6674370048295
+    }
+  ],
+  "interpretation": "Finite-net source-window lift. The derivative row controls the operator change E_u-E_v in the A-energy metric; the covering constant is a conservative pointwise continuum bound over the source window."
+}

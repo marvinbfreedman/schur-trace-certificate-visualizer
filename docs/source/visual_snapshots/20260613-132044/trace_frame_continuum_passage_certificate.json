@@ -1,0 +1,65 @@
+{
+  "theoremName": "trace-frame continuum passage certificate",
+  "proofClass": "interval/ball certificate",
+  "inputs": [
+    "trace_frame_interval_lower_bound_certificate.json",
+    "trace_quadrature_interval_consistency_theorem.json",
+    "continuum_trace_frame_lower_bound_theorem.json"
+  ],
+  "finiteFrameJson": "trace_frame_interval_lower_bound_certificate.json",
+  "quadratureJson": "trace_quadrature_interval_consistency_theorem.json",
+  "continuumTraceFrameJson": "continuum_trace_frame_lower_bound_theorem.json",
+  "rowCount": 1,
+  "basisRange": [
+    18,
+    18
+  ],
+  "traceCounts": [
+    13
+  ],
+  "activeDims": [
+    2
+  ],
+  "allFrameMinsPositive": true,
+  "observedGammaFloor": 293.1151510088239,
+  "certifiedContinuumGammaLower": 82.91376250306405,
+  "observedGammaFloorRow": {
+    "basis": 18,
+    "traceCount": 13,
+    "activeDim": 2,
+    "frameRank": 2,
+    "frameMin": 293.1151510088239,
+    "frameMax": 293.1151510088239,
+    "densityOperator": 8563.73344298828,
+    "maxRowDensityL2": 2004444009.9567046,
+    "frameBoundOperator": 0.7171290456408642,
+    "rangeResidualRelative": 0.0,
+    "sourceFile": "trace_frame_interval_lower_bound_certificate.json"
+  },
+  "maxRangeResidualRelative": 0.0,
+  "rangeResidualWithinTolerance": true,
+  "maxDensityOperator": 8563.73344298828,
+  "maxRowDensityL2": 2004444009.9567046,
+  "rows": [
+    {
+      "basis": 18,
+      "traceCount": 13,
+      "activeDim": 2,
+      "frameRank": 2,
+      "frameMin": 293.1151510088239,
+      "frameMax": 293.1151510088239,
+      "densityOperator": 8563.73344298828,
+      "maxRowDensityL2": 2004444009.9567046,
+      "frameBoundOperator": 0.7171290456408642,
+      "rangeResidualRelative": 0.0,
+      "sourceFile": "trace_frame_interval_lower_bound_certificate.json"
+    }
+  ],
+  "finiteFrameIntervalCertificateClosed": true,
+  "traceQuadratureIntervalCertificateClosed": true,
+  "continuumTraceFrameLowerBoundClosed": true,
+  "continuumPassageClosed": true,
+  "conditionalConclusion": "The continuum trace-frame lower bound and bounded sampled-trace correction right inverse are supplied by the interval lower-bound certificate, the interval quadrature theorem, and the continuum trace-frame lower-bound theorem.",
+  "remainingAnalyticGap": null,
+  "remainingNumericalGap": null
+}

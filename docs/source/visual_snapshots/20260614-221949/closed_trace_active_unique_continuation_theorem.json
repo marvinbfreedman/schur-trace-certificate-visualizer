@@ -1,0 +1,58 @@
+{
+  "theoremName": "closed-trace active unique continuation",
+  "proofClass": "analytic proof",
+  "lagrangeJson": "trace_lagrange_adjoint_identity_theorem.json",
+  "jumpJson": "adjoint_green_jump_conditions_theorem.json",
+  "endpointRangeJson": "adjoint_green_endpoint_range_interval_theorem.json",
+  "volterraSturmLagrangeIdentityStatus": {
+    "label": "Volterra/Sturm Lagrange identity",
+    "closed": true,
+    "status": "closed",
+    "reason": "Imported from the symbolic Lagrange identity theorem: D_a B_P[K,f]=K P f-f P^*K."
+  },
+  "distributionalInteriorGreenSourceStatus": {
+    "label": "distributional interior Green source",
+    "closed": true,
+    "status": "closed",
+    "reason": "Imported from the symbolic jump theorem: every local active source row has a unique jump vector, since the jump map is triangular with nonzero leading coefficient."
+  },
+  "exactEndpointFredholmReductionStatus": {
+    "label": "exact endpoint Fredholm reduction",
+    "closed": true,
+    "status": "closed",
+    "reason": "The exact fundamental matrix gives the endpoint equation Mz=-b(ell), with the usual finite-dimensional Fredholm alternative."
+  },
+  "endpointGreenBvpSolvabilityStatus": {
+    "label": "endpoint Green BVP solvable for active rows",
+    "closed": true,
+    "status": "closed",
+    "reason": "The endpoint interval/Krawczyk theorem proves full active row rank, so the endpoint compatibility condition is vacuous for active source rows."
+  },
+  "formalGreenAnnihilationImplicationStatus": {
+    "label": "formal Green annihilation implication",
+    "closed": true,
+    "status": "closed",
+    "reason": "For each active scalar source row ell, the solved Green coefficient gives ell(f)=int_I K_ell(a)Lambda_a(f)da."
+  },
+  "traceDualClosureStatus": {
+    "label": "closed-domain trace-dual continuity",
+    "closed": true,
+    "status": "closed",
+    "reason": "The endpoint theorem supplies uniform trace-dual bounds for the selected Green family, so the identity passes from smooth test functions to the completed closed trace domain."
+  },
+  "closedTraceActiveUniqueContinuationStatus": {
+    "label": "closed-trace active unique continuation",
+    "closed": true,
+    "status": "closed",
+    "reason": "If Lambda_a(f)=0 on I, the Green representation annihilates every scalar active source row.  Therefore E_active f=0."
+  },
+  "closedTraceActiveUniqueContinuationClosed": true,
+  "proof": [
+    "Let P f=Lambda_a(f).  The symbolic Lagrange identity gives D_a B_P[K,f]=K P f-f P^*K.",
+    "For an active source row ell, the distributional jump theorem constructs a piecewise homogeneous K with P^*K=ell as a distribution.",
+    "The endpoint interval theorem solves the endpoint concomitant equation for this K, because the active endpoint map has full row rank.",
+    "Integrating Green's formula over I eliminates endpoint terms and gives ell(f)=int_I K(a)Lambda_a(f)da.",
+    "Uniform trace-dual bounds pass this identity to the closed trace completion.  Hence R_global f=0 implies ell(f)=0 for each active row ell."
+  ],
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,238 @@
+{
+  "omega": 0.49,
+  "L": 2.0,
+  "s0": 0.2825,
+  "point": 0.545,
+  "orders": [
+    7,
+    8
+  ],
+  "bases": [
+    18,
+    20,
+    22,
+    24
+  ],
+  "activeTol": 1e-06,
+  "lambda0AtS0": -0.00012862612661029079,
+  "lambda1AtS0": 9.42101395763874e-06,
+  "gapAtS0": 0.00013804714056792953,
+  "lambdaDerivativesAtS0": [
+    -0.00012862612661029079,
+    0.0012586353561607226,
+    -0.010569790654668558,
+    0.08131470927283976,
+    -0.48480406794895253,
+    0.3262134539749114,
+    33.05440359008409,
+    -172.53886154243878,
+    -11867.497399991053,
+    225121.96880967333,
+    3735520.511510404,
+    -308912314.588315,
+    3399472962.8393655,
+    369400519027.39575,
+    -16726614828278.037,
+    -133545146978831.05,
+    5.480905836994158e+16
+  ],
+  "rows": [
+    {
+      "basis": 18,
+      "sourceSideDim": 18,
+      "sourceNodes": [
+        0.08,
+        0.135,
+        0.19,
+        0.245,
+        0.3,
+        0.355,
+        0.41,
+        0.465,
+        0.52
+      ],
+      "activeFloor": 18285.13540177335,
+      "sourceTop": 18285135401.77335,
+      "activeSourceEigenvalues": [
+        226461.95322692656,
+        18285135401.77335
+      ],
+      "nextBelowActiveEigenvalue": 5.349515553432974,
+      "spectralGapToComplement": 226456.60371137314,
+      "spectralGapToComplementFracOfTop": 1.2384737587965069e-05,
+      "rawCompressedSingularValues": [
+        3831976783369743.5,
+        1.2930788020501678e+18
+      ],
+      "rawRankMargin": 3831976783369743.5,
+      "rawCompressedOpNorm": 1.2930788020501678e+18,
+      "responseOperatorNorm": 1.2930788020520783e+18,
+      "relativeRankMargin": 0.0029634518617802008,
+      "responseColumnNorms": [
+        5326300100029986.0,
+        1.2930735102401603e+18
+      ],
+      "normalizedResponseSingularValues": [
+        0.5526780369411572,
+        1.301747666593979
+      ],
+      "normalizedRankMargin": 0.5526780369411572,
+      "splitSufficientConditions": {
+        "absoluteBErrorMax": 957994195842435.9,
+        "relativeBErrorMax": 0.0007408629654450502,
+        "absoluteTErrorMax": 41.94332774255562,
+        "topNormalizedTErrorMax": 2.2938483539196447e-09,
+        "requiresTErrorBelowGapQuarter": 56614.150927843286,
+        "requiresTErrorBelowGapQuarterFracOfTop": 3.0961843969912672e-06
+      }
+    },
+    {
+      "basis": 20,
+      "sourceSideDim": 18,
+      "sourceNodes": [
+        0.08,
+        0.135,
+        0.19,
+        0.245,
+        0.3,
+        0.355,
+        0.41,
+        0.465,
+        0.52
+      ],
+      "activeFloor": 350955.40150085674,
+      "sourceTop": 350955401500.85675,
+      "activeSourceEigenvalues": [
+        8128880.388973607,
+        350955401500.85675
+      ],
+      "nextBelowActiveEigenvalue": 7.664039577472116,
+      "spectralGapToComplement": 8128872.724934029,
+      "spectralGapToComplementFracOfTop": 2.3162124561043933e-05,
+      "rawCompressedSingularValues": [
+        1.3364106623425046e+16,
+        2.1792209827488347e+21
+      ],
+      "rawRankMargin": 1.3364106623425046e+16,
+      "rawCompressedOpNorm": 2.1792209827488347e+21,
+      "responseOperatorNorm": 2.1792209827488693e+21,
+      "relativeRankMargin": 6.132515577455373e-06,
+      "responseColumnNorms": [
+        3.3123462397148037e+18,
+        2.1792184654581523e+21
+      ],
+      "normalizedResponseSingularValues": [
+        0.002852926559754717,
+        1.414210684731962
+      ],
+      "normalizedRankMargin": 0.002852926559754717,
+      "splitSufficientConditions": {
+        "absoluteBErrorMax": 3341026655856261.5,
+        "relativeBErrorMax": 1.5331288943638432e-06,
+        "absoluteTErrorMax": 3.1156524133006274,
+        "topNormalizedTErrorMax": 8.877630604847726e-12,
+        "requiresTErrorBelowGapQuarter": 2032218.1812335073,
+        "requiresTErrorBelowGapQuarterFracOfTop": 5.790531140260983e-06
+      }
+    },
+    {
+      "basis": 22,
+      "sourceSideDim": 18,
+      "sourceNodes": [
+        0.08,
+        0.135,
+        0.19,
+        0.245,
+        0.3,
+        0.355,
+        0.41,
+        0.465,
+        0.52
+      ],
+      "activeFloor": 3661655.9399730274,
+      "sourceTop": 3661655939973.0273,
+      "activeSourceEigenvalues": [
+        274587561456.9068,
+        3661655939973.0273
+      ],
+      "nextBelowActiveEigenvalue": 165247.04233490035,
+      "spectralGapToComplement": 274587396209.86447,
+      "spectralGapToComplementFracOfTop": 0.07498995009670055,
+      "rawCompressedSingularValues": [
+        8.340610666650273e+20,
+        7.78160850493295e+23
+      ],
+      "rawRankMargin": 8.340610666650273e+20,
+      "rawCompressedOpNorm": 7.78160850493295e+23,
+      "responseOperatorNorm": 7.781608505310442e+23,
+      "relativeRankMargin": 0.001071836325479282,
+      "responseColumnNorms": [
+        1.9024386771067628e+23,
+        7.545477292370536e+23
+      ],
+      "normalizedResponseSingularValues": [
+        0.0031970980488948567,
+        1.4142099485451465
+      ],
+      "normalizedRankMargin": 0.0031970980488948567,
+      "splitSufficientConditions": {
+        "absoluteBErrorMax": 2.0851526666625683e+20,
+        "relativeBErrorMax": 0.0002679590813698205,
+        "absoluteTErrorMax": 18394546.611031555,
+        "topNormalizedTErrorMax": 5.023559534970141e-06,
+        "requiresTErrorBelowGapQuarter": 68646849052.46612,
+        "requiresTErrorBelowGapQuarterFracOfTop": 0.018747487524175138
+      }
+    },
+    {
+      "basis": 24,
+      "sourceSideDim": 18,
+      "sourceNodes": [
+        0.08,
+        0.135,
+        0.19,
+        0.245,
+        0.3,
+        0.355,
+        0.41,
+        0.465,
+        0.52
+      ],
+      "activeFloor": 9315123458837.074,
+      "sourceTop": 9.315123458837074e+18,
+      "activeSourceEigenvalues": [
+        2.029688362787111e+16,
+        9.315123458837074e+18
+      ],
+      "nextBelowActiveEigenvalue": 1744514119.2154782,
+      "spectralGapToComplement": 2.029688188335699e+16,
+      "spectralGapToComplementFracOfTop": 0.002178917109692383,
+      "rawCompressedSingularValues": [
+        5.1611393942253274e+26,
+        1.7197423819360873e+31
+      ],
+      "rawRankMargin": 5.1611393942253274e+26,
+      "rawCompressedOpNorm": 1.7197423819360873e+31,
+      "responseOperatorNorm": 1.7197423819360873e+31,
+      "relativeRankMargin": 3.0011119388794225e-05,
+      "responseColumnNorms": [
+        5.662481996147887e+27,
+        1.719742289488143e+31
+      ],
+      "normalizedResponseSingularValues": [
+        0.06451730039469201,
+        1.4127411362134894
+      ],
+      "normalizedRankMargin": 0.06451730039469201,
+      "splitSufficientConditions": {
+        "absoluteBErrorMax": 1.2902848485563318e+26,
+        "relativeBErrorMax": 7.502779847198556e-06,
+        "absoluteTErrorMax": 38070759088.85508,
+        "topNormalizedTErrorMax": 4.0869838448290345e-09,
+        "requiresTErrorBelowGapQuarter": 5074220470839248.0,
+        "requiresTErrorBelowGapQuarterFracOfTop": 0.0005447292774230958
+      }
+    }
+  ],
+  "theorem": "If ||T-T_N||<gap_N/4 and ||B-B_N|| + ||B_N||*4||T-T_N||/gap_N < sigma_min(B_N Q_N), then rank(B|U_delta)=2.  The split sufficient conditions in each row reserve one quarter of the rank margin for B-error and one quarter for active-projector error."
+}

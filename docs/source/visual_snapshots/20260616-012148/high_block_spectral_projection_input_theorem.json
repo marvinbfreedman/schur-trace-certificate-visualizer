@@ -1,0 +1,43 @@
+{
+  "theoremName": "high-block spectral projection input theorem",
+  "proofClass": "symbolic identity",
+  "compactCompressionJson": "high_block_compact_compression_input_theorem.json",
+  "sourceGapJson": "high_block_source_spectral_gap_theorem.json",
+  "abstractSpectralJson": "abstract_compact_source_spectral_projection_theorem.json",
+  "statement": "The high-block source model satisfies the norm-convergence and spectral-gap hypotheses of the abstract Riesz projection theorem.",
+  "statuses": {
+    "compactCompressionInputStatus": {
+      "label": "compact-compression norm convergence input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The high-block compact-compression theorem gives norm convergence of compressed source operators."
+    },
+    "sourceGapInputStatus": {
+      "label": "source spectral-gap input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The high-block source spectral-gap theorem gives an isolated active top-two cluster."
+    },
+    "abstractSpectralInputStatus": {
+      "label": "abstract spectral projection input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The abstract Riesz theorem gives active/inactive spectral projection stability."
+    },
+    "highBlockSpectralProjectionStatus": {
+      "label": "high-block spectral projection stability",
+      "closed": true,
+      "status": "closed",
+      "reason": "The high-block inputs satisfy the abstract spectral projection theorem."
+    }
+  },
+  "highBlockSpectralProjectionClosed": true,
+  "compactSourceRieszProjectionConvergenceClosed": true,
+  "sourceActiveInactiveSplittingStabilityClosed": true,
+  "proof": [
+    "Use compact-compression norm convergence for the compressed source operators.",
+    "Use the interval-certified source spectral gap for the top-two active cluster.",
+    "Apply the abstract Riesz projection continuity theorem through the abstract compact-source spectral theorem."
+  ],
+  "remainingAnalyticGap": null
+}

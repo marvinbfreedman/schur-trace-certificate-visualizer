@@ -1,0 +1,250 @@
+{
+  "omega": 0.49,
+  "L": 2.0,
+  "s0": 0.2825,
+  "basis": 22,
+  "traceCount": 9,
+  "excludeS0Radius": 0.001,
+  "allowedTraceCenters": [
+    0.02,
+    0.085625,
+    0.15125,
+    0.216875,
+    0.348125,
+    0.41375,
+    0.479375,
+    0.545
+  ],
+  "activeTol": 1e-08,
+  "activeFloor": 36616.55939973027,
+  "activeDim": 3,
+  "activeSourceEigenvalues": [
+    165247.04233490035,
+    274587561456.9068,
+    3661655939973.0273
+  ],
+  "weightedColumnNorms": [
+    874276.3905340936,
+    28350334.353331923,
+    29317387.140350454
+  ],
+  "weightedFrameEigenvalues": [
+    2874982.3289243444,
+    436080038.4593773,
+    1664014566934922.8
+  ],
+  "minorCount": 56,
+  "signCounts": {
+    "positive": 53,
+    "negative": 3,
+    "nearZero": 0
+  },
+  "bestAbsDeterminant": 4.355505059299606e-07,
+  "topKthAbsDeterminant": 2.7374823733056984e-07,
+  "topMinors": [
+    {
+      "rowIndices": [
+        1,
+        5,
+        8
+      ],
+      "traceCenters": [
+        0.085625,
+        0.348125,
+        0.545
+      ],
+      "determinant": 4.355505059299606e-07,
+      "absDeterminant": 4.355505059299606e-07,
+      "minDistanceToS0": 0.065625
+    },
+    {
+      "rowIndices": [
+        0,
+        1,
+        5
+      ],
+      "traceCenters": [
+        0.02,
+        0.085625,
+        0.348125
+      ],
+      "determinant": 4.2510773947390644e-07,
+      "absDeterminant": 4.2510773947390644e-07,
+      "minDistanceToS0": 0.065625
+    },
+    {
+      "rowIndices": [
+        1,
+        5,
+        7
+      ],
+      "traceCenters": [
+        0.085625,
+        0.348125,
+        0.479375
+      ],
+      "determinant": 4.028007400675309e-07,
+      "absDeterminant": 4.028007400675309e-07,
+      "minDistanceToS0": 0.065625
+    },
+    {
+      "rowIndices": [
+        0,
+        2,
+        5
+      ],
+      "traceCenters": [
+        0.02,
+        0.15125,
+        0.348125
+      ],
+      "determinant": 3.7479063532810855e-07,
+      "absDeterminant": 3.7479063532810855e-07,
+      "minDistanceToS0": 0.065625
+    },
+    {
+      "rowIndices": [
+        0,
+        5,
+        8
+      ],
+      "traceCenters": [
+        0.02,
+        0.348125,
+        0.545
+      ],
+      "determinant": 3.6905437106383787e-07,
+      "absDeterminant": 3.6905437106383787e-07,
+      "minDistanceToS0": 0.065625
+    },
+    {
+      "rowIndices": [
+        0,
+        5,
+        7
+      ],
+      "traceCenters": [
+        0.02,
+        0.348125,
+        0.479375
+      ],
+      "determinant": 3.5537363601697194e-07,
+      "absDeterminant": 3.5537363601697194e-07,
+      "minDistanceToS0": 0.065625
+    },
+    {
+      "rowIndices": [
+        1,
+        6,
+        8
+      ],
+      "traceCenters": [
+        0.085625,
+        0.41375,
+        0.545
+      ],
+      "determinant": 3.3329122637553824e-07,
+      "absDeterminant": 3.3329122637553824e-07,
+      "minDistanceToS0": 0.13125
+    },
+    {
+      "rowIndices": [
+        0,
+        1,
+        3
+      ],
+      "traceCenters": [
+        0.02,
+        0.085625,
+        0.216875
+      ],
+      "determinant": 3.327682274560542e-07,
+      "absDeterminant": 3.327682274560542e-07,
+      "minDistanceToS0": 0.065625
+    },
+    {
+      "rowIndices": [
+        1,
+        3,
+        7
+      ],
+      "traceCenters": [
+        0.085625,
+        0.216875,
+        0.479375
+      ],
+      "determinant": 2.9720257673828605e-07,
+      "absDeterminant": 2.9720257673828605e-07,
+      "minDistanceToS0": 0.065625
+    },
+    {
+      "rowIndices": [
+        0,
+        6,
+        8
+      ],
+      "traceCenters": [
+        0.02,
+        0.41375,
+        0.545
+      ],
+      "determinant": 2.9265529484763106e-07,
+      "absDeterminant": 2.9265529484763106e-07,
+      "minDistanceToS0": 0.13125
+    },
+    {
+      "rowIndices": [
+        2,
+        5,
+        8
+      ],
+      "traceCenters": [
+        0.15125,
+        0.348125,
+        0.545
+      ],
+      "determinant": 2.9235373776547664e-07,
+      "absDeterminant": 2.9235373776547664e-07,
+      "minDistanceToS0": 0.065625
+    },
+    {
+      "rowIndices": [
+        0,
+        3,
+        6
+      ],
+      "traceCenters": [
+        0.02,
+        0.216875,
+        0.41375
+      ],
+      "determinant": 2.7374823733056984e-07,
+      "absDeterminant": 2.7374823733056984e-07,
+      "minDistanceToS0": 0.065625
+    }
+  ],
+  "lambda0": -0.00012862612661029079,
+  "lambda1": 9.42101395763874e-06,
+  "gap": 0.00013804714056792953,
+  "e8AtS0": -0.17949627136147217,
+  "lambdaDerivatives": [
+    -0.00012862612661029079,
+    0.0012586353561607226,
+    -0.010569790654668558,
+    0.08131470927283976,
+    -0.48480406794895253,
+    0.3262134539749114,
+    33.05440359008409,
+    -172.53886154243878,
+    -11867.497399991053,
+    225121.96880967333,
+    3735520.511510404,
+    -308912314.588315,
+    3399472962.8393655,
+    369400519027.39575,
+    -16726614828278.037,
+    -133545146978831.05,
+    5.480905836994158e+16
+  ],
+  "interpretation": "All listed determinants use trace points outside the excluded s0-neighborhood.  Persistent nonzero top minors are the finite shadow of the exterior trace nonvanishing theorem."
+}

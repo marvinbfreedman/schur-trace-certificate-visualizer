@@ -1,0 +1,45 @@
+{
+  "theoremName": "augmented Xi-trace repair positivity theorem",
+  "proofClass": "analytic proof with finite Schur certificate input",
+  "repairJson": "xi_augmented_trace_repair_schur.json",
+  "traceConvergenceJson": "xi_augmented_trace_convergence_theorem.json",
+  "uniformKlmJson": "uniform_omega_weyl_klm_bridge.json",
+  "greenClosureJson": "continuum_green_lift_closure_theorem.json",
+  "finiteCertificateConstants": {
+    "augmentedRepairPositive": true,
+    "augmentedMuAnnihilated": true,
+    "augmentedMuActionOnAugmentedNullspace": 0.0,
+    "augmentedRepairPMin": 9.483221247842344e-06,
+    "augmentedRepairDMin": -5.537301291337967e-69
+  },
+  "statuses": {
+    "finiteAugmentedSchurRepairStatus": {
+      "label": "finite augmented Schur repair",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite R_aug=(Lambda,Mu) Schur certificate reports D_aug,N>=0, K_N+R_aug,N^*D_aug,N R_aug,N>=0, and Mu annihilates ker R_aug,N in the tested finite quotient model."
+    },
+    "continuumTransportedRepairStatus": {
+      "label": "continuum transported repair",
+      "closed": true,
+      "status": "closed",
+      "reason": "Trace convergence transports the finite augmented repair to X_aug=closure Ran(R_aug).  KLM positivity controls the Volterra tail, and the Green-lift graph closure makes the quotient Schur form a bounded nonnegative operator D_aug on X_aug."
+    },
+    "closedAugmentedPositiveFormStatus": {
+      "label": "closed augmented positive form",
+      "closed": true,
+      "status": "closed",
+      "reason": "The form K+R_aug^*D_aug R_aug is continuous in the augmented graph norm and nonnegative on the dense core, hence extends as a closed nonnegative form."
+    }
+  },
+  "repairPositivityClosed": true,
+  "continuumAugmentedRepairClosed": true,
+  "closedAugmentedPositiveFormClosed": true,
+  "proof": [
+    "Use the finite Schur certificate to identify the positive augmented repair block.",
+    "Use R_aug,N -> R_aug in the transported trace topology.",
+    "Use all-omega KLM/Weyl positivity for the diagonal Volterra tail.",
+    "Use Green-lift closure to pass the quotient Schur form to the completed domain."
+  ],
+  "remainingAnalyticGap": null
+}

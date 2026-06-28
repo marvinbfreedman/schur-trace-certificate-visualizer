@@ -1,0 +1,54 @@
+{
+  "theoremName": "augmented repair transport consequence theorem",
+  "proofClass": "symbolic identity",
+  "transportLimitJson": "xi_augmented_repair_transport_limit_theorem.json",
+  "tailPositiveJson": "volterra_tail_positive_form_theorem.json",
+  "transportedTraceSpace": {
+    "name": "X_aug",
+    "definition": "closure Ran(R_aug) with quotient norm inf{||f||_V:R_aug f=x}",
+    "formDomain": "completed Volterra/Mellin graph-form domain V"
+  },
+  "statuses": {
+    "transportLimitNonnegativeInputStatus": {
+      "label": "transport-limit D_aug nonnegativity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The transport-limit theorem gives a nonnegative trace-side limit form D_aug on X_aug."
+    },
+    "transportLimitClosedFormInputStatus": {
+      "label": "closed repaired form limit",
+      "closed": true,
+      "status": "closed",
+      "reason": "The transport-limit theorem gives the closed repaired augmented form as the finite repaired-form limit."
+    },
+    "positiveTailInputStatus": {
+      "label": "positive Volterra tail input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The positive Volterra tail theorem supplies the remaining completed-domain nonnegative tail input."
+    },
+    "transportConsequenceStatus": {
+      "label": "transport consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The two transport-limit conclusions and the positive tail input imply the narrow transport consequence."
+    }
+  },
+  "transportedRepairClosed": true,
+  "boundedNonnegativeRepairClosed": true,
+  "closedRepairedAugmentedFormClosed": true,
+  "DaugNonnegativeTransportLimitClosed": true,
+  "DaugTransportConsequenceClosed": true,
+  "proof": [
+    "Import the closed-form transport-limit theorem.",
+    "Import the positive Volterra tail theorem.",
+    "Expose only D_aug>=0 on X_aug and the closed repaired-form conclusion."
+  ],
+  "notExportedHere": [
+    "finite Schur algebra",
+    "Mosco graph-form proof",
+    "trace quotient compatibility proof",
+    "Volterra Green-lift proof"
+  ],
+  "remainingAnalyticGap": null
+}

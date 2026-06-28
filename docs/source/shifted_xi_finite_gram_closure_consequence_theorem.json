@@ -1,0 +1,35 @@
+{
+  "theoremName": "shifted Xi finite-Gram closure consequence theorem",
+  "proofClass": "symbolic identity",
+  "finiteGramSource": "shifted Xi finite-Gram closure theorem",
+  "statuses": {
+    "finiteGramClosureInputStatus": {
+      "label": "shifted-Xi finite-Gram closure input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite-Gram closure theorem closes the shifted-Xi finite evaluation Gram argument."
+    },
+    "kernelEntryLimitStatus": {
+      "label": "kernel entry convergence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite-Gram theorem records entrywise convergence to the full shifted-Xi de Branges kernel."
+    },
+    "finiteEvaluationGramPositivityStatus": {
+      "label": "finite evaluation Gram positivity",
+      "closed": true,
+      "status": "closed",
+      "reason": "Every finite shifted-Xi de Branges evaluation Gram matrix is positive semidefinite."
+    }
+  },
+  "finiteEvaluationGramPositive": true,
+  "shiftedXiFiniteGramClosureClosed": true,
+  "entrywiseConvergenceToFullDeBrangesKernel": true,
+  "continuumAugmentedRepairClosed": true,
+  "shiftedXiFiniteGramClosureConsequenceClosed": true,
+  "proof": [
+    "Import the shifted-Xi finite-Gram closure theorem.",
+    "Expose only the finite evaluation Gram positivity and entrywise convergence flags used upstream."
+  ],
+  "remainingAnalyticGap": null
+}

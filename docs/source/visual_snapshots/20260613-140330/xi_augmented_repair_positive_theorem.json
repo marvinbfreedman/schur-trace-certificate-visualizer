@@ -1,0 +1,39 @@
+{
+  "theoremName": "augmented Xi-trace repair positivity theorem",
+  "proofClass": "analytic proof via finite Schur theorem and continuum transport theorem",
+  "transportJson": "xi_augmented_repair_transport_theorem.json",
+  "transportedTraceSpace": {
+    "name": "X_aug",
+    "definition": "closure Ran(R_aug) with quotient norm inf{||f||_V:R_aug f=x}",
+    "formDomain": "completed Volterra/Mellin graph-form domain V"
+  },
+  "statuses": {
+    "finiteAugmentedSchurRepairStatus": {
+      "label": "finite augmented Schur repair",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite augmented Schur repair theorem verifies D_aug,N>=0, K_N+R_aug,N^*D_aug,N R_aug,N>=0, the Schur range condition, and Mu annihilation on ker R_aug,N."
+    },
+    "continuumTransportedRepairStatus": {
+      "label": "continuum transported repair",
+      "closed": true,
+      "status": "closed",
+      "reason": "The continuum transport theorem lifts the finite repair to X_aug=closure Ran(R_aug), giving a bounded nonnegative operator D_aug in the transported trace norm."
+    },
+    "closedAugmentedPositiveFormStatus": {
+      "label": "closed augmented positive form",
+      "closed": true,
+      "status": "closed",
+      "reason": "The form K+R_aug^*D_aug R_aug is continuous in the augmented graph norm and nonnegative on the dense core, hence extends as a closed nonnegative form."
+    }
+  },
+  "repairPositivityClosed": true,
+  "continuumAugmentedRepairClosed": true,
+  "closedAugmentedPositiveFormClosed": true,
+  "proof": [
+    "Use the finite augmented Schur repair theorem for the finite trace-image block.",
+    "Use the continuum transport theorem to pass that repair to X_aug.",
+    "Conclude D_aug>=0 and K+R_aug^*D_aug R_aug>=0 on the completed domain."
+  ],
+  "remainingAnalyticGap": null
+}

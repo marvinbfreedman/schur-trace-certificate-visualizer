@@ -1,0 +1,47 @@
+{
+  "theoremName": "augmented D_aug trace-form representation theorem",
+  "proofClass": "symbolic identity",
+  "nonnegativeLimitJson": "augmented_nonnegative_closed_form_limit_theorem.json",
+  "finiteConstantsJson": "augmented_daug_finite_bound_consequence_theorem.json",
+  "statement": "The completed nonnegative repaired form descends to a nonnegative self-adjoint trace-side form D_aug on X_aug.  The interval finite repair constants give the transported operator-norm upper bound.",
+  "transportedTraceSpace": {
+    "name": "X_aug",
+    "definition": "closure Ran(R_aug) with transported quotient norm"
+  },
+  "operatorBound": {
+    "normUpper": 2e-18,
+    "source": "interval dMaxUpper from the finite Schur repair constants"
+  },
+  "statuses": {
+    "nonnegativeClosedFormLimitInputStatus": {
+      "label": "nonnegative closed-form limit input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The completed repaired form is the nonnegative closed-form limit."
+    },
+    "finiteRepairOperatorBoundInputStatus": {
+      "label": "finite repair operator bound input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The interval constants enclose the finite D_aug,N upper spectral endpoint."
+    },
+    "DaugTraceFormRepresentationStatus": {
+      "label": "D_aug trace-side representation",
+      "closed": true,
+      "status": "closed",
+      "reason": "The descended nonnegative closed form on X_aug is represented by D_aug, and the interval upper endpoint supplies the bounded trace-side form estimate."
+    }
+  },
+  "finiteInputsClosed": true,
+  "DaugTraceFormRepresentationClosed": true,
+  "DaugClosedNonnegativeFormClosed": true,
+  "DaugBoundedNonnegativeClosed": true,
+  "DaugOperatorNormUpper": 2e-18,
+  "proof": [
+    "Import the nonnegative closed-form limit theorem.",
+    "Use the trace repair descent built into that theorem to put the form on X_aug.",
+    "Use the interval dMaxUpper constant to bound the trace-side form in the transported quotient norm.",
+    "Represent the bounded nonnegative trace form by its self-adjoint positive operator D_aug."
+  ],
+  "remainingAnalyticGap": null
+}

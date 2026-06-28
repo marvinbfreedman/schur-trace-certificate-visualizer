@@ -1,0 +1,35 @@
+{
+  "theoremName": "primitive trace-density consequence theorem",
+  "proofClass": "symbolic identity",
+  "primitiveDensityJson": "primitive_trace_image_density.json",
+  "statuses": {
+    "primitiveContainsCompactCoreStatus": {
+      "label": "primitive image contains compact smooth core",
+      "closed": true,
+      "status": "closed",
+      "reason": "Compact smooth Volterra core elements arise as derivatives of compact primitive tests."
+    },
+    "primitiveTraceDenseStatus": {
+      "label": "primitive trace image is dense in X_R",
+      "closed": true,
+      "status": "closed",
+      "reason": "The primitive trace image is dense in the completed transported trace range."
+    },
+    "dqZeroEquivalenceStatus": {
+      "label": "D_q zero transfers from X_R to primitive image",
+      "closed": true,
+      "status": "closed",
+      "reason": "Since D_q is bounded, D_q=0 on X_R is equivalent to D_q=0 on the dense primitive trace image."
+    }
+  },
+  "primitiveTraceDensityConsequenceClosed": true,
+  "primitiveTraceDenseInXR": true,
+  "primitiveTraceImageDenseInXR": true,
+  "DqZeroTransfersToPrimitiveTraceImage": true,
+  "dqZeroOnPrimitiveImageEquivalentToDqZero": true,
+  "proof": [
+    "Import the primitive trace image density theorem.",
+    "Expose only the density and bounded-form transfer needed by endpoint compatibility."
+  ],
+  "remainingAnalyticGap": null
+}

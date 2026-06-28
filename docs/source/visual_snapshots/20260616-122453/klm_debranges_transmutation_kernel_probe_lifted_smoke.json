@@ -1,0 +1,279 @@
+{
+  "theoremName": "Hardy-to-Volterra transmutation kernel probe",
+  "ansatz": "(U_theta h)(s,u,sigma)=theta(s,u,sigma) h(s+u)",
+  "basis": 4,
+  "constraints": 3,
+  "omega": 0.49,
+  "sOrder": 5,
+  "uOrder": 10,
+  "uMax": 10.0,
+  "traceRank": null,
+  "traceLiftSkipped": true,
+  "integratedFormsSkipped": true,
+  "thetas": [
+    "plain",
+    "coarea",
+    "branch_undo",
+    "A",
+    "sqrtA",
+    "r_weight"
+  ],
+  "pairTransforms": [
+    "direct",
+    "swap"
+  ],
+  "results": [
+    {
+      "pairTransform": "direct",
+      "theta": "plain",
+      "normalResidualMax": 5.2594587607386386e-27,
+      "normalResidualMean": 2.2984719774188623e-27,
+      "coefficientNormFrobenius": 59202158.4658371,
+      "liftedTriangleGram": {
+        "jointRelative": 0.9571214528985189,
+        "plusRelative": 0.8986710332924698,
+        "crossRelative": 0.9711754399194633,
+        "minusRelative": 0.9889597248707875,
+        "jointFrobenius": 0.2844476410136325,
+        "globalScale": 13.050106126098706,
+        "scaledJointRelative": 0.6562101107107784,
+        "mappedJointNorm": 0.017184049229369138
+      },
+      "integratedVolterraGram": null,
+      "greenTraceGram": null
+    },
+    {
+      "pairTransform": "direct",
+      "theta": "coarea",
+      "normalResidualMax": 1.5898731409130103e-27,
+      "normalResidualMean": 8.188512245050655e-28,
+      "coefficientNormFrobenius": 29129829.578102745,
+      "liftedTriangleGram": {
+        "jointRelative": 0.9237462504213682,
+        "plusRelative": 0.8235998348200089,
+        "crossRelative": 0.944919958595268,
+        "minusRelative": 0.9807894705093166,
+        "jointFrobenius": 0.2745288396073658,
+        "globalScale": 7.342839189888483,
+        "scaledJointRelative": 0.6496738004926801,
+        "mappedJointNorm": 0.03076852066502077
+      },
+      "integratedVolterraGram": null,
+      "greenTraceGram": null
+    },
+    {
+      "pairTransform": "direct",
+      "theta": "branch_undo",
+      "normalResidualMax": 2.3660981636983163e-27,
+      "normalResidualMean": 1.2563088575194181e-27,
+      "coefficientNormFrobenius": 38017067.28490057,
+      "liftedTriangleGram": {
+        "jointRelative": 0.9581349007328974,
+        "plusRelative": 0.9019218309208485,
+        "crossRelative": 0.9714165543062967,
+        "minusRelative": 0.9893347656525873,
+        "jointFrobenius": 0.28474882833411974,
+        "globalScale": 13.450056580934634,
+        "scaledJointRelative": 0.6537684982976129,
+        "mappedJointNorm": 0.01671982862651403
+      },
+      "integratedVolterraGram": null,
+      "greenTraceGram": null
+    },
+    {
+      "pairTransform": "direct",
+      "theta": "A",
+      "normalResidualMax": 0.0,
+      "normalResidualMean": 0.0,
+      "coefficientNormFrobenius": 0.26496716731545544,
+      "liftedTriangleGram": {
+        "jointRelative": 0.9811973475258786,
+        "plusRelative": 0.9577425203111001,
+        "crossRelative": 0.9864443429438389,
+        "minusRelative": 0.9954374913340539,
+        "jointFrobenius": 0.2916027741592808,
+        "globalScale": 30.196595847363252,
+        "scaledJointRelative": 0.6542874046670514,
+        "mappedJointNorm": 0.007442869121085798
+      },
+      "integratedVolterraGram": null,
+      "greenTraceGram": null
+    },
+    {
+      "pairTransform": "direct",
+      "theta": "sqrtA",
+      "normalResidualMax": 9.387812356093122e-32,
+      "normalResidualMean": 2.490868251101941e-32,
+      "coefficientNormFrobenius": 442.22042264257254,
+      "liftedTriangleGram": {
+        "jointRelative": 0.9734618117647138,
+        "plusRelative": 0.9399235760201167,
+        "crossRelative": 0.9809886092149094,
+        "minusRelative": 0.9935026330852365,
+        "jointFrobenius": 0.2893038444961995,
+        "globalScale": 21.421024988349487,
+        "scaledJointRelative": 0.6524277866314547,
+        "mappedJointNorm": 0.010514262305150695
+      },
+      "integratedVolterraGram": null,
+      "greenTraceGram": null
+    },
+    {
+      "pairTransform": "direct",
+      "theta": "r_weight",
+      "normalResidualMax": 3.9248775249340475e-26,
+      "normalResidualMean": 2.1191939098515452e-26,
+      "coefficientNormFrobenius": 1034304733.2870312,
+      "liftedTriangleGram": {
+        "jointRelative": 0.9205024630800795,
+        "plusRelative": 0.6817832529991356,
+        "crossRelative": 1.0079692793128556,
+        "minusRelative": 0.9554495208147761,
+        "jointFrobenius": 0.2735648160193612,
+        "globalScale": 2.351699237817621,
+        "scaledJointRelative": 0.8786362590980881,
+        "mappedJointNorm": 0.060341949195712334
+      },
+      "integratedVolterraGram": null,
+      "greenTraceGram": null
+    },
+    {
+      "pairTransform": "swap",
+      "theta": "plain",
+      "normalResidualMax": 6.0188499747438764e-27,
+      "normalResidualMean": 2.5882862532680933e-27,
+      "coefficientNormFrobenius": 54976420.05789825,
+      "liftedTriangleGram": {
+        "jointRelative": 0.9583150307958187,
+        "plusRelative": 0.9019181952979699,
+        "crossRelative": 0.9717841351764266,
+        "minusRelative": 0.9893135495048356,
+        "jointFrobenius": 0.2848023613223507,
+        "globalScale": 13.532401737218779,
+        "scaledJointRelative": 0.6530454801075636,
+        "mappedJointNorm": 0.016631793324562806
+      },
+      "integratedVolterraGram": null,
+      "greenTraceGram": null
+    },
+    {
+      "pairTransform": "swap",
+      "theta": "coarea",
+      "normalResidualMax": 3.0618196540922225e-27,
+      "normalResidualMean": 1.4353756074016841e-27,
+      "coefficientNormFrobenius": 27050597.28582933,
+      "liftedTriangleGram": {
+        "jointRelative": 0.9256380601784622,
+        "plusRelative": 0.8282932195556765,
+        "crossRelative": 0.9462255970725312,
+        "minusRelative": 0.9812985505781864,
+        "jointFrobenius": 0.2750910679651383,
+        "globalScale": 7.583628345523152,
+        "scaledJointRelative": 0.6470771798273482,
+        "mappedJointNorm": 0.02987824541579883
+      },
+      "integratedVolterraGram": null,
+      "greenTraceGram": null
+    },
+    {
+      "pairTransform": "swap",
+      "theta": "branch_undo",
+      "normalResidualMax": 4.633878490544242e-27,
+      "normalResidualMean": 1.5815707270306251e-27,
+      "coefficientNormFrobenius": 35303480.727032356,
+      "liftedTriangleGram": {
+        "jointRelative": 0.9592874143639524,
+        "plusRelative": 0.904964037809636,
+        "crossRelative": 0.9720530665363482,
+        "minusRelative": 0.9896628643178275,
+        "jointFrobenius": 0.2850913447228151,
+        "globalScale": 13.934686421715934,
+        "scaledJointRelative": 0.6508050896924639,
+        "mappedJointNorm": 0.016192724908211626
+      },
+      "integratedVolterraGram": null,
+      "greenTraceGram": null
+    },
+    {
+      "pairTransform": "swap",
+      "theta": "A",
+      "normalResidualMax": 0.0,
+      "normalResidualMean": 0.0,
+      "coefficientNormFrobenius": 0.26170587203969153,
+      "liftedTriangleGram": {
+        "jointRelative": 0.9816090280464438,
+        "plusRelative": 0.958682467828886,
+        "crossRelative": 0.9867390551260676,
+        "minusRelative": 0.9955356493129978,
+        "jointFrobenius": 0.29172512180133964,
+        "globalScale": 31.072568161644753,
+        "scaledJointRelative": 0.6515674488379236,
+        "mappedJointNorm": 0.007255471728015333
+      },
+      "integratedVolterraGram": null,
+      "greenTraceGram": null
+    },
+    {
+      "pairTransform": "swap",
+      "theta": "sqrtA",
+      "normalResidualMax": 5.018013928099428e-32,
+      "normalResidualMean": 1.0036027856198856e-32,
+      "coefficientNormFrobenius": 410.65544300766567,
+      "liftedTriangleGram": {
+        "jointRelative": 0.974079511949442,
+        "plusRelative": 0.9413730848532055,
+        "crossRelative": 0.9814147162449876,
+        "minusRelative": 0.99365528710023,
+        "jointFrobenius": 0.2894874192764612,
+        "globalScale": 22.074292954784994,
+        "scaledJointRelative": 0.6497309852335692,
+        "mappedJointNorm": 0.010234247369623263
+      },
+      "integratedVolterraGram": null,
+      "greenTraceGram": null
+    },
+    {
+      "pairTransform": "swap",
+      "theta": "r_weight",
+      "normalResidualMax": 5.712990414319254e-26,
+      "normalResidualMean": 2.616911796307971e-26,
+      "coefficientNormFrobenius": 1025845042.7248548,
+      "liftedTriangleGram": {
+        "jointRelative": 0.9233407191129145,
+        "plusRelative": 0.6956597294598663,
+        "crossRelative": 1.0074478240340543,
+        "minusRelative": 0.9571200607877446,
+        "jointFrobenius": 0.27440831945425725,
+        "globalScale": 2.399087454458651,
+        "scaledJointRelative": 0.8812330609696376,
+        "mappedJointNorm": 0.05855423200425099
+      },
+      "integratedVolterraGram": null,
+      "greenTraceGram": null
+    }
+  ],
+  "bestIntegratedVolterraGram": null,
+  "bestLiftedTriangleGram": {
+    "pairTransform": "swap",
+    "theta": "coarea",
+    "normalResidualMax": 3.0618196540922225e-27,
+    "normalResidualMean": 1.4353756074016841e-27,
+    "coefficientNormFrobenius": 27050597.28582933,
+    "liftedTriangleGram": {
+      "jointRelative": 0.9256380601784622,
+      "plusRelative": 0.8282932195556765,
+      "crossRelative": 0.9462255970725312,
+      "minusRelative": 0.9812985505781864,
+      "jointFrobenius": 0.2750910679651383,
+      "globalScale": 7.583628345523152,
+      "scaledJointRelative": 0.6470771798273482,
+      "mappedJointNorm": 0.02987824541579883
+    },
+    "integratedVolterraGram": null,
+    "greenTraceGram": null
+  },
+  "bestGreenTraceGram": null,
+  "simpleCoareaTransmutationConstructed": false,
+  "diagnosis": "This tests the natural coarea ansatz r=s+u.  If residuals do not collapse, the missing U is not a scalar multiplier on the coarea surface; it must be a nonlocal integral transform in r or an operator-valued Volterra inverse.",
+  "nextProofTarget": "Derive a nonlocal transmutation kernel U(r;s,u,sigma), likely from the Mellin/Laplace representation of Xi and the Volterra ratio A_s(u)=Psi(s+u)/Psi(s), rather than from scalar coarea weights."
+}

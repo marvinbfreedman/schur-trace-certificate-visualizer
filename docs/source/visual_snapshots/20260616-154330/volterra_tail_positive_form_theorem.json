@@ -1,0 +1,29 @@
+{
+  "theoremName": "positive Volterra tail form theorem",
+  "proofClass": "analytic proof",
+  "greenClosureJson": "continuum_green_lift_closure_theorem.json",
+  "statuses": {
+    "completedGreenLiftContractionStatus": {
+      "label": "completed Green-lift contraction",
+      "closed": true,
+      "status": "closed",
+      "reason": "The imported continuum Green-lift closure theorem proves the compressed branch contraction ||C K E||<=1 on the completed trace-fiber domain."
+    },
+    "volterraTailPositivityStatus": {
+      "label": "positive Volterra tail form",
+      "closed": true,
+      "status": "closed",
+      "reason": "Since G_- = C K E G_+ and ||C K E||<=1, one has ||G_-f||^2<=||G_+f||^2.  Thus the diagonal Volterra tail form P-M is nonnegative on the completed domain."
+    }
+  },
+  "volterraTailPositiveFormClosed": true,
+  "omegaIndependent": true,
+  "notClaimedHere": "This theorem does not assert original coordinate Weyl positivity or the KLM positive-type condition.  Those are packaged by the separate uniform omega Weyl/KLM bridge.",
+  "proof": [
+    "Import the completed-domain Green-lift contraction ||C K E||<=1.",
+    "Use the branch identity G_-=C K E G_+ on the Green-minimizer trace image.",
+    "Conclude ||G_-f||^2<=||G_+f||^2.",
+    "Therefore the diagonal Volterra tail form P-M is nonnegative."
+  ],
+  "remainingAnalyticGap": null
+}

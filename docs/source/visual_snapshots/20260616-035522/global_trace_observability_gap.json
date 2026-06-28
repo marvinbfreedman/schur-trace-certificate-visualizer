@@ -1,0 +1,306 @@
+{
+  "omega": 0.49,
+  "L": 2.0,
+  "s0": 0.2825,
+  "sourceMin": 0.08,
+  "sourceMax": 0.52,
+  "sourceGrid": 9,
+  "bases": [
+    18,
+    20,
+    22
+  ],
+  "localConstraintOffset": 8,
+  "globalConstraintRule": "ratio-floor",
+  "globalConstraintRatio": 0.625,
+  "cutoff": 6,
+  "jetOrder": 9,
+  "maxTraceQ": 16,
+  "betas": [
+    0.0,
+    1e-06,
+    0.0001,
+    0.01,
+    1.0,
+    100.0,
+    10000.0,
+    1000000.0,
+    100000000.0
+  ],
+  "lambda0": -0.00012862612661029079,
+  "lambda1": 9.42101395763874e-06,
+  "gap": 0.00013804714056792953,
+  "e8AtS0": -0.17949627136147217,
+  "lambdaDerivatives": [
+    -0.00012862612661029079,
+    0.0012586353561607226,
+    -0.010569790654668558,
+    0.08131470927283976,
+    -0.48480406794895253,
+    0.3262134539749114,
+    33.05440359008409,
+    -172.53886154243878,
+    -11867.497399991053,
+    225121.96880967333,
+    3735520.511510404,
+    -308912314.588315,
+    3399472962.8393655,
+    369400519027.39575,
+    -16726614828278.037,
+    -133545146978831.05,
+    5.480905836994158e+16
+  ],
+  "rows": [
+    {
+      "basis": 18,
+      "localTowerConstraints": 10,
+      "globalTraceConstraints": 11,
+      "globalTraceMin": 0.02,
+      "globalTraceMax": 0.545,
+      "localRank": 7,
+      "localNullity": 11,
+      "positiveModes": 11,
+      "cutoff": 6,
+      "highModes": 5,
+      "lambdaMinHigh": 3.7094961197795018e-06,
+      "lambdaMaxHigh": 0.1543899510231228,
+      "sourceTop": 18285135401.77335,
+      "traceTop": 61907339.30328198,
+      "traceMinRaw": 2.8939625491037427e-12,
+      "traceRankTol": 1e-26,
+      "traceOnlyConstantNormed": 9.937808916515362e+24,
+      "traceOnlyConstantRaw": 1.605271528118883e+17,
+      "sourceOnTraceKernel": 0.0,
+      "sourceOnTraceKernelFrac": 0.0,
+      "sourceTraceKernelCrossFrob": 0.0,
+      "sourceActiveTol": 1e-08,
+      "sourceActiveFloor": 182.85135401773348,
+      "sourceActiveDim": 2,
+      "sourceActiveEigenvalues": [
+        226461.95322692656,
+        18285135401.77335
+      ],
+      "activeTraceOnlyConstantNormed": 2511450284286.733,
+      "activeSourceOnTraceKernel": 0.0,
+      "activeSourceOnTraceKernelFrac": 0.0,
+      "activeSourceTraceKernelCrossFrob": 0.0,
+      "activeTraceMinNormed": 0.00010898356541326154,
+      "activeTraceMaxNormed": 0.9969217773324326,
+      "penalty": [
+        {
+          "beta": 0.0,
+          "constant": 18285135401.77335,
+          "constantFracOfSourceTop": 1.0
+        },
+        {
+          "beta": 1e-06,
+          "constant": 18285117443.592358,
+          "constantFracOfSourceTop": 0.9999990178808853
+        },
+        {
+          "beta": 0.0001,
+          "constant": 18283339761.441967,
+          "constantFracOfSourceTop": 0.9999017978105206
+        },
+        {
+          "beta": 0.01,
+          "constant": 18107331448.59321,
+          "constantFracOfSourceTop": 0.9902760384720534
+        },
+        {
+          "beta": 1.0,
+          "constant": 9306019886.54051,
+          "constantFracOfSourceTop": 0.5089390743936183
+        },
+        {
+          "beta": 100.0,
+          "constant": 501398280.9143307,
+          "constantFracOfSourceTop": 0.02742108657646055
+        },
+        {
+          "beta": 10000.0,
+          "constant": 164260095.32395244,
+          "constantFracOfSourceTop": 0.008983258352466014
+        },
+        {
+          "beta": 1000000.0,
+          "constant": 21473780.604672216,
+          "constantFracOfSourceTop": 0.0011743845551501699
+        },
+        {
+          "beta": 100000000.0,
+          "constant": 18067101.152092397,
+          "constantFracOfSourceTop": 0.0009880758744799994
+        }
+      ]
+    },
+    {
+      "basis": 20,
+      "localTowerConstraints": 12,
+      "globalTraceConstraints": 12,
+      "globalTraceMin": 0.02,
+      "globalTraceMax": 0.545,
+      "localRank": 7,
+      "localNullity": 13,
+      "positiveModes": 12,
+      "cutoff": 6,
+      "highModes": 6,
+      "lambdaMinHigh": 2.4303999162118003e-07,
+      "lambdaMaxHigh": 0.15438995102312345,
+      "sourceTop": 350955401500.85675,
+      "traceTop": 101655590647.81381,
+      "traceMinRaw": 1.4260927040692354e-15,
+      "traceRankTol": 1e-26,
+      "traceOnlyConstantNormed": 3.3437893282334084e+31,
+      "traceOnlyConstantRaw": 3.28933146413755e+20,
+      "sourceOnTraceKernel": 0.0,
+      "sourceOnTraceKernelFrac": 0.0,
+      "sourceTraceKernelCrossFrob": 0.0,
+      "sourceActiveTol": 1e-08,
+      "sourceActiveFloor": 3509.5540150085676,
+      "sourceActiveDim": 2,
+      "sourceActiveEigenvalues": [
+        8128880.388973607,
+        350955401500.85675
+      ],
+      "activeTraceOnlyConstantNormed": 1.2830885010443712e+16,
+      "activeSourceOnTraceKernel": 0.0,
+      "activeSourceOnTraceKernelFrac": 0.0,
+      "activeSourceTraceKernelCrossFrob": 0.0,
+      "activeTraceMinNormed": 1.6637296455149803e-06,
+      "activeTraceMaxNormed": 0.9982439162389066,
+      "penalty": [
+        {
+          "beta": 0.0,
+          "constant": 350955401500.85675,
+          "constantFracOfSourceTop": 1.0
+        },
+        {
+          "beta": 1e-06,
+          "constant": 350955072463.52295,
+          "constantFracOfSourceTop": 0.9999990624525725
+        },
+        {
+          "beta": 0.0001,
+          "constant": 350922501024.62085,
+          "constantFracOfSourceTop": 0.9999062545380547
+        },
+        {
+          "beta": 0.01,
+          "constant": 347697602900.5209,
+          "constantFracOfSourceTop": 0.9907173430401586
+        },
+        {
+          "beta": 1.0,
+          "constant": 186436768808.9914,
+          "constantFracOfSourceTop": 0.5312263837846538
+        },
+        {
+          "beta": 100.0,
+          "constant": 25178105384.19391,
+          "constantFracOfSourceTop": 0.07174160955072932
+        },
+        {
+          "beta": 10000.0,
+          "constant": 21585354440.54685,
+          "constantFracOfSourceTop": 0.06150455114307211
+        },
+        {
+          "beta": 1000000.0,
+          "constant": 8056504092.004814,
+          "constantFracOfSourceTop": 0.022955919919030357
+        },
+        {
+          "beta": 100000000.0,
+          "constant": 165308275.46888408,
+          "constantFracOfSourceTop": 0.00047102359662209254
+        }
+      ]
+    },
+    {
+      "basis": 22,
+      "localTowerConstraints": 14,
+      "globalTraceConstraints": 13,
+      "globalTraceMin": 0.02,
+      "globalTraceMax": 0.545,
+      "localRank": 7,
+      "localNullity": 15,
+      "positiveModes": 14,
+      "cutoff": 6,
+      "highModes": 8,
+      "lambdaMinHigh": 9.638517436324169e-10,
+      "lambdaMaxHigh": 0.15438995102312347,
+      "sourceTop": 3661655939973.0273,
+      "traceTop": 4.55330134954902e+16,
+      "traceMinRaw": 5.803392326434271e-16,
+      "traceRankTol": 1e-26,
+      "traceOnlyConstantNormed": 5.737363253227297e+30,
+      "traceOnlyConstantRaw": 126004470444187.75,
+      "sourceOnTraceKernel": 465969.3925117187,
+      "sourceOnTraceKernelFrac": 1.2725646542180343e-07,
+      "sourceTraceKernelCrossFrob": 1275919500.0552645,
+      "sourceActiveTol": 1e-08,
+      "sourceActiveFloor": 36616.55939973027,
+      "sourceActiveDim": 3,
+      "sourceActiveEigenvalues": [
+        165247.04233490035,
+        274587561456.9068,
+        3661655939973.0273
+      ],
+      "activeTraceOnlyConstantNormed": 1.7321294062177357e+20,
+      "activeSourceOnTraceKernel": 0.0,
+      "activeSourceOnTraceKernelFrac": 0.0,
+      "activeSourceTraceKernelCrossFrob": 0.0,
+      "activeTraceMinNormed": 1.7387882094426997e-09,
+      "activeTraceMaxNormed": 0.9999982606232107,
+      "penalty": [
+        {
+          "beta": 0.0,
+          "constant": 3661655939973.0273,
+          "constantFracOfSourceTop": 1.0
+        },
+        {
+          "beta": 1e-06,
+          "constant": 3661654048718.9644,
+          "constantFracOfSourceTop": 0.9999994834976049
+        },
+        {
+          "beta": 0.0001,
+          "constant": 3661466834021.349,
+          "constantFracOfSourceTop": 0.9999483550735574
+        },
+        {
+          "beta": 0.01,
+          "constant": 3642937930355.157,
+          "constantFracOfSourceTop": 0.9948881025621408
+        },
+        {
+          "beta": 1.0,
+          "constant": 2740790443968.0864,
+          "constantFracOfSourceTop": 0.7485111897182443
+        },
+        {
+          "beta": 100.0,
+          "constant": 1926949128590.169,
+          "constantFracOfSourceTop": 0.5262507346892792
+        },
+        {
+          "beta": 10000.0,
+          "constant": 1908526130625.2278,
+          "constantFracOfSourceTop": 0.5212194050758594
+        },
+        {
+          "beta": 1000000.0,
+          "constant": 1607877566123.3875,
+          "constantFracOfSourceTop": 0.4391121373722599
+        },
+        {
+          "beta": 100000000.0,
+          "constant": 313771729505.39044,
+          "constantFracOfSourceTop": 0.08569121038381934
+        }
+      ]
+    }
+  ],
+  "interpretation": "Finite penalty/observability model for the compact global trace contradiction.  On the A-normalized local bad high block, the source Gram S is compared with the sampled interval trace Gram T. Zero source mass on ker T and decay under I+beta T support the continuum interval-observability theorem."
+}

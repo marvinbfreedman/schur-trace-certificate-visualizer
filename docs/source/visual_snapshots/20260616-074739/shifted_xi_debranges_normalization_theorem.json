@@ -1,0 +1,58 @@
+{
+  "theoremName": "shifted Xi de Branges normalization theorem",
+  "proofClass": "symbolic identity",
+  "riemannJson": "riemann_kernel_normalization_theorem.json",
+  "hardyImageJson": "klm_debranges_canonical_hardy_image_hardened_theorem.json",
+  "normalization": {
+    "Xi": "Xi(z)=xi(1/2+i z), real entire in z",
+    "Eomega": "E_omega(z)=Xi(z+i omega)",
+    "EomegaSharp": "E_omega#(z)=overline(E_omega(conj z))=Xi(z-i omega)",
+    "omegaRange": "0<omega<1/2",
+    "evaluationDomain": "z,w in C_+",
+    "kernel": "K_E(w,z)=(E(z)conj(E(w))-E#(z)conj(E#(w)))/(2*pi*i*(conj(w)-z))",
+    "diagonal": "K_E(z,z)=(|Xi(z+i omega)|^2-|Xi(z-i omega)|^2)/(4*pi*Im z)"
+  },
+  "statuses": {
+    "riemannNormalizationInputStatus": {
+      "label": "Riemann/Xi normalization input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Riemann kernel normalization fixes Xi up to harmless positive Gram rescaling."
+    },
+    "realEntireSharpStatus": {
+      "label": "real-entire sharp operation",
+      "closed": true,
+      "status": "closed",
+      "reason": "Since Xi is real entire in the z-normalization and omega is real, E_omega#(z)=overline(Xi(conj z+i omega))=Xi(z-i omega)."
+    },
+    "upperHalfPlaneDenominatorStatus": {
+      "label": "upper-half-plane denominator",
+      "closed": true,
+      "status": "closed",
+      "reason": "For z,w in C_+, conj(w)-z cannot vanish.  On the diagonal, 2*pi*i*(conj(z)-z)=4*pi*Im z>0."
+    },
+    "canonicalHardyImageInputStatus": {
+      "label": "canonical Hardy/de Branges image input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The hardened Hardy image theorem fixes the same de Branges kernel normalization."
+    },
+    "shiftedXiNormalizationStatus": {
+      "label": "shifted-Xi de Branges normalization",
+      "closed": true,
+      "status": "closed",
+      "reason": "The shifted kernel, sharp operation, and diagonal sign convention are all fixed."
+    }
+  },
+  "shiftedXiDeBrangesNormalizationClosed": true,
+  "EomegaSharpIdentityClosed": true,
+  "deBrangesKernelDenominatorClosed": true,
+  "diagonalFormulaClosed": true,
+  "proof": [
+    "Use the fixed Xi normalization from the Riemann kernel theorem.",
+    "Use real-entireness of Xi to compute the sharp transform of E_omega.",
+    "Check that the de Branges denominator is nonzero on C_+ x C_+ and positive on the diagonal.",
+    "Use the canonical Hardy image theorem to match the same kernel normalization."
+  ],
+  "remainingAnalyticGap": null
+}

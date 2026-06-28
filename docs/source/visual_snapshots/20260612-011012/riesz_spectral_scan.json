@@ -1,0 +1,232 @@
+{
+  "model": "endpoint_b",
+  "kind": "tilde3",
+  "omega": 0.49,
+  "L": 2.0,
+  "rows": [
+    {
+      "basis": 10,
+      "constraints": 5,
+      "gamma2Top": 1.3580683329997357e-06,
+      "kerMin": 2.650459226269166e-06,
+      "energyLow2": 0.9189162110063674,
+      "witnessLow2": 0.9996963953616628,
+      "energyTop3": 0.9814964868712684,
+      "energyEffectiveRank": 1.7394571866193598,
+      "topEnergyModes": [
+        {
+          "mode": 0,
+          "energyFrac": 0.7320047243231484,
+          "witnessFrac": 0.9869407462554289,
+          "lambda": 2.650459226269166e-06,
+          "modePeakS": 2.0
+        },
+        {
+          "mode": 1,
+          "energyFrac": 0.18691148668321902,
+          "witnessFrac": 0.012755649106233795,
+          "lambda": 5.2363871814367524e-05,
+          "modePeakS": 0.0
+        },
+        {
+          "mode": 2,
+          "energyFrac": 0.06258027586490095,
+          "witnessFrac": 0.00029839818640346917,
+          "lambda": 0.0007494447419391361,
+          "modePeakS": 0.0
+        }
+      ],
+      "topWitnessModes": [
+        {
+          "mode": 0,
+          "energyFrac": 0.7320047243231484,
+          "witnessFrac": 0.9869407462554289,
+          "lambda": 2.650459226269166e-06,
+          "modePeakS": 2.0
+        },
+        {
+          "mode": 1,
+          "energyFrac": 0.18691148668321902,
+          "witnessFrac": 0.012755649106233795,
+          "lambda": 5.2363871814367524e-05,
+          "modePeakS": 0.0
+        },
+        {
+          "mode": 2,
+          "energyFrac": 0.06258027586490095,
+          "witnessFrac": 0.00029839818640346917,
+          "lambda": 0.0007494447419391361,
+          "modePeakS": 0.0
+        }
+      ]
+    },
+    {
+      "basis": 12,
+      "constraints": 6,
+      "gamma2Top": 5.211494713261904e-07,
+      "kerMin": 7.961713716783178e-08,
+      "energyLow2": 0.919660216178021,
+      "witnessLow2": 0.9997413787674602,
+      "energyTop3": 0.9696405432550309,
+      "energyEffectiveRank": 2.0661268199851524,
+      "topEnergyModes": [
+        {
+          "mode": 1,
+          "energyFrac": 0.6296792523478105,
+          "witnessFrac": 0.048860078702609805,
+          "lambda": 3.364562472471451e-06,
+          "modePeakS": 1.95
+        },
+        {
+          "mode": 0,
+          "energyFrac": 0.2899809638302104,
+          "witnessFrac": 0.9508813000648504,
+          "lambda": 7.961713716783178e-08,
+          "modePeakS": 2.0
+        },
+        {
+          "mode": 2,
+          "energyFrac": 0.04998032707701003,
+          "witnessFrac": 0.00024808611536866765,
+          "lambda": 5.259688329139811e-05,
+          "modePeakS": 0.0
+        }
+      ],
+      "topWitnessModes": [
+        {
+          "mode": 0,
+          "energyFrac": 0.2899809638302104,
+          "witnessFrac": 0.9508813000648504,
+          "lambda": 7.961713716783178e-08,
+          "modePeakS": 2.0
+        },
+        {
+          "mode": 1,
+          "energyFrac": 0.6296792523478105,
+          "witnessFrac": 0.048860078702609805,
+          "lambda": 3.364562472471451e-06,
+          "modePeakS": 1.95
+        },
+        {
+          "mode": 2,
+          "energyFrac": 0.04998032707701003,
+          "witnessFrac": 0.00024808611536866765,
+          "lambda": 5.259688329139811e-05,
+          "modePeakS": 0.0
+        }
+      ]
+    },
+    {
+      "basis": 14,
+      "constraints": 7,
+      "gamma2Top": 3.088404445845257e-07,
+      "kerMin": 6.842608720338264e-09,
+      "energyLow2": 0.04235338010752762,
+      "witnessLow2": 0.9667786117662409,
+      "energyTop3": 0.9511318224047188,
+      "energyEffectiveRank": 2.887340729296844,
+      "topEnergyModes": [
+        {
+          "mode": 2,
+          "energyFrac": 0.4657339581238992,
+          "witnessFrac": 0.031707808957862564,
+          "lambda": 3.565321385842804e-06,
+          "modePeakS": 0.0
+        },
+        {
+          "mode": 3,
+          "energyFrac": 0.31564355137855304,
+          "witnessFrac": 0.0014585395590060149,
+          "lambda": 5.252979677154642e-05,
+          "modePeakS": 0.0
+        },
+        {
+          "mode": 4,
+          "energyFrac": 0.16975431290226653,
+          "witnessFrac": 5.497802824379579e-05,
+          "lambda": 0.0007494776204364304,
+          "modePeakS": 0.0
+        }
+      ],
+      "topWitnessModes": [
+        {
+          "mode": 0,
+          "energyFrac": 0.02680669538784559,
+          "witnessFrac": 0.9509300794475606,
+          "lambda": 6.842608720338264e-09,
+          "modePeakS": 2.0
+        },
+        {
+          "mode": 2,
+          "energyFrac": 0.4657339581238992,
+          "witnessFrac": 0.031707808957862564,
+          "lambda": 3.565321385842804e-06,
+          "modePeakS": 0.0
+        },
+        {
+          "mode": 1,
+          "energyFrac": 0.01554668471968203,
+          "witnessFrac": 0.015848532318680282,
+          "lambda": 2.3810896855524865e-07,
+          "modePeakS": 0.0
+        }
+      ]
+    },
+    {
+      "basis": 16,
+      "constraints": 8,
+      "gamma2Top": 6.900309694881411e-08,
+      "kerMin": 1.8483932225723395e-10,
+      "energyLow2": 0.08593974920572237,
+      "witnessLow2": 0.9871721152218771,
+      "energyTop3": 0.7904018457051465,
+      "energyEffectiveRank": 4.324976702295294,
+      "topEnergyModes": [
+        {
+          "mode": 3,
+          "energyFrac": 0.34296384876655606,
+          "witnessFrac": 0.0011941132368394336,
+          "lambda": 3.685395491719195e-06,
+          "modePeakS": 0.0
+        },
+        {
+          "mode": 6,
+          "energyFrac": 0.24064067543041598,
+          "witnessFrac": 3.2374469344393737e-07,
+          "lambda": 0.009537787625483933,
+          "modePeakS": 0.0
+        },
+        {
+          "mode": 2,
+          "energyFrac": 0.2067973215081744,
+          "witnessFrac": 0.011630054229382793,
+          "lambda": 2.2816259002224282e-07,
+          "modePeakS": 2.0
+        }
+      ],
+      "topWitnessModes": [
+        {
+          "mode": 0,
+          "energyFrac": 0.012982913743906232,
+          "witnessFrac": 0.9012786282140482,
+          "lambda": 1.8483932225723395e-10,
+          "modePeakS": 2.0
+        },
+        {
+          "mode": 1,
+          "energyFrac": 0.07295683546181614,
+          "witnessFrac": 0.08589348700782883,
+          "lambda": 1.0899009282853936e-08,
+          "modePeakS": 1.9666666666666666
+        },
+        {
+          "mode": 2,
+          "energyFrac": 0.2067973215081744,
+          "witnessFrac": 0.011630054229382793,
+          "lambda": 2.2816259002224282e-07,
+          "modePeakS": 2.0
+        }
+      ]
+    }
+  ]
+}

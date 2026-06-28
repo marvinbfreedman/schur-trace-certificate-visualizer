@@ -1,0 +1,209 @@
+{
+  "basis": 18,
+  "constraints": 11,
+  "omega": 0.49,
+  "L": 2.0,
+  "rows": [
+    {
+      "cutoff": 2,
+      "order": 2,
+      "hardyMax": 8039.1554114919645,
+      "hardyWorstT": 0.08,
+      "commutedConstant": 5726.696712010223,
+      "product": 46037804.86233022,
+      "normProduct": 6785.116422164782,
+      "subunit": false
+    },
+    {
+      "cutoff": 2,
+      "order": 4,
+      "hardyMax": 6585.300861279051,
+      "hardyWorstT": 0.08,
+      "commutedConstant": 45005.35361975521,
+      "product": 296373793.95434225,
+      "normProduct": 17215.510272842403,
+      "subunit": false
+    },
+    {
+      "cutoff": 2,
+      "order": 6,
+      "hardyMax": 752.6093082876845,
+      "hardyWorstT": 0.08,
+      "commutedConstant": 91307.25302278603,
+      "product": 68718688.53912757,
+      "normProduct": 8289.673608721128,
+      "subunit": false
+    },
+    {
+      "cutoff": 2,
+      "order": 8,
+      "hardyMax": 4.639943266814614,
+      "hardyWorstT": 0.08,
+      "commutedConstant": 119247.99354878449,
+      "product": 553303.9247478351,
+      "normProduct": 743.8440190979794,
+      "subunit": false
+    },
+    {
+      "cutoff": 2,
+      "order": 10,
+      "hardyMax": 0.0012334866064688942,
+      "hardyWorstT": 0.08,
+      "commutedConstant": 32392.82903694077,
+      "product": 39.95612076270313,
+      "normProduct": 6.321085410173092,
+      "subunit": false
+    },
+    {
+      "cutoff": 3,
+      "order": 2,
+      "hardyMax": 8009.659960361554,
+      "hardyWorstT": 0.08,
+      "commutedConstant": 882.3154985816423,
+      "product": 7067047.121395822,
+      "normProduct": 2658.391829921959,
+      "subunit": false
+    },
+    {
+      "cutoff": 3,
+      "order": 4,
+      "hardyMax": 5481.622570845227,
+      "hardyWorstT": 0.08,
+      "commutedConstant": 1765.8315626481365,
+      "product": 9679622.150122922,
+      "normProduct": 3111.209113853153,
+      "subunit": false
+    },
+    {
+      "cutoff": 3,
+      "order": 6,
+      "hardyMax": 603.9466010009255,
+      "hardyWorstT": 0.08,
+      "commutedConstant": 15003.573501738989,
+      "product": 9061357.219242817,
+      "normProduct": 3010.208833161383,
+      "subunit": false
+    },
+    {
+      "cutoff": 3,
+      "order": 8,
+      "hardyMax": 4.193297320944738,
+      "hardyWorstT": 0.08,
+      "commutedConstant": 76001.90458546909,
+      "product": 318698.58288494515,
+      "normProduct": 564.533951932871,
+      "subunit": false
+    },
+    {
+      "cutoff": 3,
+      "order": 10,
+      "hardyMax": 0.000607162947191415,
+      "hardyWorstT": 0.08,
+      "commutedConstant": 32389.30783592042,
+      "product": 19.665587603147433,
+      "normProduct": 4.434589902476602,
+      "subunit": false
+    },
+    {
+      "cutoff": 4,
+      "order": 2,
+      "hardyMax": 7588.668323295472,
+      "hardyWorstT": 0.08,
+      "commutedConstant": 33.86396485886976,
+      "product": 256982.39742569593,
+      "normProduct": 506.9343127326221,
+      "subunit": false
+    },
+    {
+      "cutoff": 4,
+      "order": 4,
+      "hardyMax": 4793.716578479153,
+      "hardyWorstT": 0.08,
+      "commutedConstant": 1397.9026651554434,
+      "product": 6701149.181055842,
+      "normProduct": 2588.6577952784414,
+      "subunit": false
+    },
+    {
+      "cutoff": 4,
+      "order": 6,
+      "hardyMax": 473.48396619818413,
+      "hardyWorstT": 0.08,
+      "commutedConstant": 7724.589472007607,
+      "product": 3657469.2604588987,
+      "normProduct": 1912.4511132206487,
+      "subunit": false
+    },
+    {
+      "cutoff": 4,
+      "order": 8,
+      "hardyMax": 0.6391900256896913,
+      "hardyWorstT": 0.08,
+      "commutedConstant": 6700.257753653209,
+      "product": 4282.737925685148,
+      "normProduct": 65.4426307974026,
+      "subunit": false
+    },
+    {
+      "cutoff": 4,
+      "order": 10,
+      "hardyMax": 0.00020276242910134522,
+      "hardyWorstT": 0.08,
+      "commutedConstant": 2166.7702009410923,
+      "product": 0.43933958924722577,
+      "normProduct": 0.6628269678032312,
+      "subunit": true
+    },
+    {
+      "cutoff": 5,
+      "order": 2,
+      "hardyMax": 7289.589071641454,
+      "hardyWorstT": 0.08,
+      "commutedConstant": 17.403517056598904,
+      "product": 126864.48774390902,
+      "normProduct": 356.18041459899086,
+      "subunit": false
+    },
+    {
+      "cutoff": 5,
+      "order": 4,
+      "hardyMax": 2460.1900373046437,
+      "hardyWorstT": 0.08,
+      "commutedConstant": 110.34263401130586,
+      "product": 271463.8488845672,
+      "normProduct": 521.0219274508197,
+      "subunit": false
+    },
+    {
+      "cutoff": 5,
+      "order": 6,
+      "hardyMax": 0.09618287831898366,
+      "hardyWorstT": 0.08,
+      "commutedConstant": 4776.081314308506,
+      "product": 459.3772478957066,
+      "normProduct": 21.43308768926462,
+      "subunit": false
+    },
+    {
+      "cutoff": 5,
+      "order": 8,
+      "hardyMax": 3.850115253466272e-06,
+      "hardyWorstT": 0.08,
+      "commutedConstant": 2662.6249876010556,
+      "product": 0.010251413079023268,
+      "normProduct": 0.10124926211594466,
+      "subunit": true
+    },
+    {
+      "cutoff": 5,
+      "order": 10,
+      "hardyMax": 2.332906784208821e-08,
+      "hardyWorstT": 0.08,
+      "commutedConstant": 1239.1493981956048,
+      "product": 2.890820037698804e-05,
+      "normProduct": 0.005376634670217797,
+      "subunit": true
+    }
+  ],
+  "interpretation": "Product of the high-block Hardy graph constant and the commuted Sturm elliptic constant. Product below one means the commuted energy dominates that residual row in the finite certificate."
+}

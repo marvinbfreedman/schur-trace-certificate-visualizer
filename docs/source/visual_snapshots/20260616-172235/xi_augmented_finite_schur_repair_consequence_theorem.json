@@ -1,0 +1,79 @@
+{
+  "theoremName": "augmented finite Schur repair consequence theorem",
+  "proofClass": "symbolic finite Schur identity with interval/ball certificate inputs",
+  "algebraJson": "finite_schur_douglas_repair_algebra_theorem.json",
+  "constantsJson": "xi_augmented_finite_schur_interval_constants_theorem.json",
+  "finiteTraceDimensions": {
+    "traceRank": 10,
+    "traceNullity": 0,
+    "lambdaRows": 7,
+    "muRows": 10,
+    "augmentedRows": 17,
+    "basis": 10,
+    "constraints": 7
+  },
+  "certificateConstants": {
+    "dMin": -5.537301291337967e-69,
+    "dMax": 1e-18,
+    "pMin": 9.483221247842344e-06,
+    "constructedSchurMin": 9.483221245850071e-06,
+    "normalizedRangeResidual": 0.0,
+    "augmentedMuActionOnAugmentedNullspace": 0.0,
+    "eigTolerance": 1e-20
+  },
+  "statuses": {
+    "finiteSchurAlgebraInputStatus": {
+      "label": "finite Schur/Douglas algebra input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The universal finite repair algebra theorem is closed."
+    },
+    "finiteConstantsInputStatus": {
+      "label": "finite augmented interval constants input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The interval/ball finite augmented certificate constants satisfy the required inequalities."
+    },
+    "finiteSchurRangeConditionStatus": {
+      "label": "finite Schur range condition",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite Douglas range residual is below the certificate tolerance."
+    },
+    "finiteRepairOperatorNonnegativeStatus": {
+      "label": "finite repair operator nonnegative",
+      "closed": true,
+      "status": "closed",
+      "reason": "D_aug,N is nonnegative in the finite trace model up to tolerance."
+    },
+    "finiteRepairedFormPositiveStatus": {
+      "label": "finite repaired form positive",
+      "closed": true,
+      "status": "closed",
+      "reason": "K_N+R_aug,N^*D_aug,N R_aug,N is nonnegative in the finite model."
+    },
+    "finiteMuKernelAnnihilationStatus": {
+      "label": "finite Mu annihilation",
+      "closed": true,
+      "status": "closed",
+      "reason": "The primitive Mu rows vanish on the finite augmented trace kernel."
+    }
+  },
+  "finiteAugmentedSchurRepairClosed": true,
+  "finiteSchurRangeConditionClosed": true,
+  "finiteRepairOperatorNonnegativeClosed": true,
+  "finiteRepairedFormPositiveClosed": true,
+  "finiteMuKernelAnnihilationClosed": true,
+  "exportedConsequence": {
+    "D_aug,N": "nonnegative on the finite augmented trace image",
+    "K_N+R_aug,N^*D_aug,N R_aug,N": "nonnegative finite repaired form",
+    "rangeCondition": "finite Douglas Schur range condition",
+    "Mu": "annihilates ker R_aug,N"
+  },
+  "proof": [
+    "Use the interval constants theorem to verify the finite Schur hypotheses.",
+    "Apply the universal finite Schur/Douglas repair algebra theorem.",
+    "Export only the finite positivity/range/annihilation consequence to the continuum transport layer."
+  ],
+  "remainingAnalyticGap": null
+}

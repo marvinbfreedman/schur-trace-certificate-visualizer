@@ -1,0 +1,38 @@
+{
+  "theoremName": "quotient original transport identity theorem",
+  "proofClass": "symbolic identity",
+  "statuses": {
+    "parityReductionStatus": {
+      "label": "unitary parity reduction",
+      "closed": true,
+      "status": "closed",
+      "reason": "Reflection symmetry decomposes the coordinate Weyl form into even and odd half-line sectors."
+    },
+    "primitiveMixedDerivativeStatus": {
+      "label": "mixed-derivative primitive transport",
+      "closed": true,
+      "status": "closed",
+      "reason": "The mixed-derivative primitive identity transports coordinate tests to primitive mixed-kernel tests."
+    },
+    "volterraNormalizationStatus": {
+      "label": "Volterra/log normalization",
+      "closed": true,
+      "status": "closed",
+      "reason": "The log coordinate and positive Psi weights identify the transported mixed form with the normalized Volterra quotient form."
+    },
+    "formCoreClosureStatus": {
+      "label": "closed form-core transport",
+      "closed": true,
+      "status": "closed",
+      "reason": "The identity extends from the smooth core to the completed form domain by density and closed-form continuity."
+    }
+  },
+  "quotientOriginalTransportIdentityClosed": true,
+  "proof": [
+    "Apply parity reduction.",
+    "Apply the primitive mixed-derivative identity.",
+    "Apply Volterra/log normalization.",
+    "Extend the identity by closed-form continuity."
+  ],
+  "remainingAnalyticGap": null
+}

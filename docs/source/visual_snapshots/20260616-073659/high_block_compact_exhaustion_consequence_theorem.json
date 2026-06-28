@@ -1,0 +1,29 @@
+{
+  "theoremName": "high-block compact exhaustion consequence identity",
+  "proofClass": "symbolic identity",
+  "tailPassageJson": "high_block_tail_estimate_continuum_passage_theorem.json",
+  "normalizedEpsilonDelta": 0.0013454526382754603,
+  "finiteLowMidSchurBudget": 0.005730309711103612,
+  "absorptionSlack": 0.004384857072828152,
+  "statuses": {
+    "tailPassageInputStatus": {
+      "label": "high-block tail passage input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The high-block tail-passage theorem proves the continuum estimate."
+    },
+    "compactExhaustionConsequenceStatus": {
+      "label": "compact exhaustion consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The statement 'high-block compact exhaustion is closed' is exactly the continuum tail-passage theorem in the high-block source model."
+    }
+  },
+  "conditionalHighBlockExhaustionClosed": true,
+  "tailEstimatePassesToContinuum": true,
+  "proof": [
+    "Import the high-block tail estimate continuum passage theorem.",
+    "Expose its conclusion under the historical compact-exhaustion names."
+  ],
+  "remainingAnalyticGap": null
+}

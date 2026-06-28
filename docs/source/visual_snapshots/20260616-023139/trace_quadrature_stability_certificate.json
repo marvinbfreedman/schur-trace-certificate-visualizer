@@ -1,0 +1,46 @@
+{
+  "theoremName": "trace quadrature stability certificate",
+  "proofClass": "interval/ball certificate",
+  "inputs": [
+    "trace_quadrature_interval_consistency_theorem.json"
+  ],
+  "quadratureJson": "trace_quadrature_interval_consistency_theorem.json",
+  "groups": [
+    {
+      "basis": 18,
+      "traceCounts": [
+        13
+      ],
+      "activeDims": [
+        2
+      ],
+      "rows": [
+        {
+          "traceCount": 13,
+          "frameMin": 293.1151510088239,
+          "frameMax": null,
+          "densityOperator": 8563.73344298828,
+          "maxRowDensityL2": 2004444009.9567046,
+          "rangeResidualRelative": 0.0
+        }
+      ],
+      "firstToLastRelativeChanges": {
+        "frameMin": 0.7171290456408642,
+        "frameMax": 0.7171290456408642,
+        "densityOperator": 0.7171290456408642,
+        "maxRowDensityL2": 0.7171290456408642
+      }
+    }
+  ],
+  "comparableBasisCount": 1,
+  "maxAbsFrameMinRelativeDrift": 0.7171290456408642,
+  "maxAbsMaxRowDensityL2RelativeDrift": 0.7171290456408642,
+  "traceQuadratureErrorBound": 167852.61118533928,
+  "metricRelativeTraceQuadratureErrorBound": 0.7171290456408642,
+  "gammaFiniteLower": 293.1151510088239,
+  "gammaAfterMetricTraceQuadrature": 82.91376250306405,
+  "traceQuadratureClosed": true,
+  "interpretation": "Trace quadrature stability is certified by the interval quadrature consistency theorem, not by raw trace mesh drift.",
+  "remainingAnalyticGap": null,
+  "remainingNumericalGap": null
+}

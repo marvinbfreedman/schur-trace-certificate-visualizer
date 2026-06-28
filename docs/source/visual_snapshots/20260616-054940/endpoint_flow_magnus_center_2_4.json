@@ -1,0 +1,602 @@
+{
+  "theoremName": "endpoint flow Magnus center",
+  "interval": [
+    0.02,
+    0.545
+  ],
+  "s0": 0.2825,
+  "steps": [
+    2,
+    4
+  ],
+  "rankMargin": 2775659.55249,
+  "centers": [
+    {
+      "magnusStepsPerHalf": 2,
+      "activeDim": 2,
+      "activeIndices": [
+        3,
+        4
+      ],
+      "traceFieldMinGap": 1.1635518278617991e-05,
+      "endpointMapRank": 2,
+      "endpointMapGramEigenvalues": [
+        1.6575363550501034e+26,
+        1.493699761187174e+31
+      ],
+      "endpointMapRankThreshold": 149369.9761187174,
+      "sigmaMin": 12874534380124.602,
+      "sigmaMax": 3864841214315504.0,
+      "endpointMap": [
+        [
+          -523760281457847.56,
+          43033306462555.805,
+          28248448191977.6,
+          -364373199752.07,
+          -244170822511.4487,
+          -661795566.5236655,
+          1004975607.3469645,
+          32785854.49104708
+        ],
+        [
+          -3816966779844626.0,
+          218786152170728.1,
+          207561086958916.1,
+          -883009928525.9858,
+          -1826701024739.522,
+          -12259396754.672182,
+          7949139973.821498,
+          277238302.26767033
+        ]
+      ],
+      "leftObstructionVector": [
+        0.9906906768379773,
+        -0.13613222552471013
+      ],
+      "leftObstructionGramEigenvalues": [
+        1.6575363550501034e+26,
+        1.493699761187174e+31
+      ],
+      "leftObstructionResidualNorm": 12874534380124.602,
+      "maxLeftObstructionPairing": 36593838.629729696,
+      "maxLeftObstructionRelativePairing": 0.39663939637870327,
+      "endpointMapFrobenius": 3864862658039383.0,
+      "flowLeftFrobenius": 1.646173296289357e+19,
+      "flowRightFrobenius": 333560468051.48206,
+      "maxEndpointResidualNorm": 1.3834903638671393e-60,
+      "maxSelectedZNorm": 2.842506930098753e-06,
+      "rows": [
+        {
+          "sourceNode": 0.08,
+          "component": "boundary",
+          "jumpNorm": 2.164029635584716,
+          "endpointVector": [
+            52329882.19622885,
+            112015268.41516276
+          ],
+          "endpointBeforeNorm": 123635904.69112177,
+          "jumpResidualNorm": 0.0,
+          "leftObstructionPairing": 36593838.629729696,
+          "leftObstructionRelativePairing": 0.2959806758493957,
+          "selectedZNorm": 2.842506930098753e-06,
+          "endpointResidualNorm": 1.3834379077101214e-60,
+          "endpointRelativeResidual": 1.1189612848843132e-68,
+          "selectedZ": [
+            -1.302073704608706e-07,
+            -2.8384322159624927e-06,
+            5.801387212807406e-08,
+            5.3163804239575e-08,
+            -1.481188814013238e-09,
+            -2.236041129869016e-10,
+            1.903659753544352e-11,
+            1.1591505610550963e-12
+          ]
+        },
+        {
+          "sourceNode": 0.08,
+          "component": "adjointEval",
+          "jumpNorm": 24129022.585577942,
+          "endpointVector": [
+            2982421.167721859,
+            4926046.043635159
+          ],
+          "endpointBeforeNorm": 5758538.499106264,
+          "jumpResidualNorm": 0.0,
+          "leftObstructionPairing": 2284063.2343090316,
+          "leftObstructionRelativePairing": 0.3966393963787031,
+          "selectedZNorm": 1.7741465801665405e-07,
+          "endpointResidualNorm": 8.64681477416962e-62,
+          "endpointRelativeResidual": 1.5015641165743049e-68,
+          "selectedZ": [
+            -8.664885040182687e-09,
+            -1.7713423471672607e-07,
+            3.6502684608567794e-09,
+            3.31817523013725e-09,
+            -9.270802528297566e-11,
+            -1.3958317851940738e-11,
+            1.1893181673314892e-12,
+            7.238920567705226e-14
+          ]
+        },
+        {
+          "sourceNode": 0.24,
+          "component": "boundary",
+          "jumpNorm": 2.171501321439461,
+          "endpointVector": [
+            52227897.6216756,
+            111822107.33556662
+          ],
+          "endpointBeforeNorm": 123417733.64856127,
+          "jumpResidualNorm": 0.0,
+          "leftObstructionPairing": 36519098.91018868,
+          "leftObstructionRelativePairing": 0.2958983108066043,
+          "selectedZNorm": 2.8367014579619147e-06,
+          "endpointResidualNorm": 1.3834903638671393e-60,
+          "endpointRelativeResidual": 1.1209818256805005e-68,
+          "selectedZ": [
+            -1.2993215931205622e-07,
+            -2.8326355018926945e-06,
+            5.7894879632352534e-08,
+            5.305522403750294e-08,
+            -1.4781591790645138e-09,
+            -2.2314739166231007e-10,
+            1.8997697661841097e-11,
+            1.156782425391725e-12
+          ]
+        },
+        {
+          "sourceNode": 0.24,
+          "component": "adjointEval",
+          "jumpNorm": 23176779.616472207,
+          "endpointVector": [
+            2864721.017299159,
+            4731641.454974098
+          ],
+          "endpointBeforeNorm": 5531279.903004813,
+          "jumpResidualNorm": 0.0,
+          "leftObstructionPairing": 2193923.521929481,
+          "leftObstructionRelativePairing": 0.39663939637870327,
+          "selectedZNorm": 1.7041305403068762e-07,
+          "endpointResidualNorm": 8.349692831337197e-62,
+          "endpointRelativeResidual": 1.5095408255874574e-68,
+          "selectedZ": [
+            -8.322928550716136e-09,
+            -1.7014369753277295e-07,
+            3.506211963546488e-09,
+            3.1872246695850142e-09,
+            -8.904933728837136e-11,
+            -1.3407457990630065e-11,
+            1.1423821648948204e-12,
+            6.953239239749891e-14
+          ]
+        },
+        {
+          "sourceNode": 0.4,
+          "component": "boundary",
+          "jumpNorm": 1.85233267020106,
+          "endpointVector": [
+            51564468.68209356,
+            110428534.283741
+          ],
+          "endpointBeforeNorm": 121874343.54498886,
+          "jumpResidualNorm": 0.0,
+          "leftObstructionPairing": 36051556.24597654,
+          "leftObstructionRelativePairing": 0.2958092343091753,
+          "selectedZNorm": 2.800384158422076e-06,
+          "endpointResidualNorm": 1.363958630555749e-60,
+          "endpointRelativeResidual": 1.1191515711034418e-68,
+          "selectedZ": [
+            -1.2825877158638071e-07,
+            -2.796370723043886e-06,
+            5.715313086576294e-08,
+            5.237597688371987e-08,
+            -1.4592300280505614e-09,
+            -2.2029047355472979e-10,
+            1.8754455446366178e-11,
+            1.14197178209733e-12
+          ]
+        },
+        {
+          "sourceNode": 0.4,
+          "component": "adjointEval",
+          "jumpNorm": 21950775.39665246,
+          "endpointVector": [
+            2713183.1369752283,
+            4481347.303393635
+          ],
+          "endpointBeforeNorm": 5238686.513659712,
+          "jumpResidualNorm": 0.0,
+          "leftObstructionPairing": 2077869.4565952413,
+          "leftObstructionRelativePairing": 0.3966393963787032,
+          "selectedZNorm": 1.613985521537528e-07,
+          "endpointResidualNorm": 7.861398830485443e-62,
+          "endpointRelativeResidual": 1.5006431115866716e-68,
+          "selectedZ": [
+            -7.882662659885294e-09,
+            -1.6114344406344885e-07,
+            3.3207405247174566e-09,
+            3.0186270059282548e-09,
+            -8.433880954921548e-11,
+            -1.2698230895857766e-11,
+            1.0819524857942583e-12,
+            6.585427110954788e-14
+          ]
+        },
+        {
+          "sourceNode": 0.52,
+          "component": "boundary",
+          "jumpNorm": 1.4906039765389272,
+          "endpointVector": [
+            50713779.19691965,
+            108627165.2624654
+          ],
+          "endpointBeforeNorm": 119882227.34581172,
+          "jumpResidualNorm": 0.0,
+          "leftObstructionPairing": 35454010.47798816,
+          "leftObstructionRelativePairing": 0.2957403383548896,
+          "selectedZNorm": 2.753968554114113e-06,
+          "endpointResidualNorm": 1.3420051386345494e-60,
+          "endpointRelativeResidual": 1.1194362737050317e-68,
+          "selectedZ": [
+            -1.2612537452928636e-07,
+            -2.7500219946938897e-06,
+            5.620542173009641e-08,
+            5.150785962673657e-08,
+            -1.4350400392771521e-09,
+            -2.1663918864298989e-10,
+            1.8443589235119036e-11,
+            1.1230433316318938e-12
+          ]
+        },
+        {
+          "sourceNode": 0.52,
+          "component": "adjointEval",
+          "jumpNorm": 20902811.132912643,
+          "endpointVector": [
+            2583651.541067908,
+            4267400.791596174
+          ],
+          "endpointBeforeNorm": 4988583.446408232,
+          "jumpResidualNorm": 0.0,
+          "leftObstructionPairing": 1978668.7269681518,
+          "leftObstructionRelativePairing": 0.3966393963787032,
+          "selectedZNorm": 1.536931334694418e-07,
+          "endpointResidualNorm": 7.495507428429307e-62,
+          "endpointRelativeResidual": 1.5025322336396028e-68,
+          "selectedZ": [
+            -7.506332046437542e-09,
+            -1.5345020463737354e-07,
+            3.1622031912441607e-09,
+            2.8745130431816284e-09,
+            -8.031234320090529e-11,
+            -1.2091997541859475e-11,
+            1.030298386124059e-12,
+            6.271028546483283e-14
+          ]
+        }
+      ],
+      "statuses": {
+        "activeEndpointMapFullRowRank": {
+          "label": "active endpoint map full row rank",
+          "closed": true,
+          "status": "closed",
+          "reason": "Magnus endpoint center has full sampled active row rank."
+        },
+        "actualEndpointRhsInRange": {
+          "label": "actual endpoint RHS in Range(M)",
+          "closed": true,
+          "status": "closed",
+          "reason": "For the actual source rows, endpoint vectors b(d) are in the computed endpoint-map range."
+        },
+        "activeEndpointKilled": {
+          "label": "active endpoint concomitant killed",
+          "closed": true,
+          "status": "closed",
+          "reason": "Minimum-norm z solves Mz=-b(d) on the active source space."
+        }
+      }
+    },
+    {
+      "magnusStepsPerHalf": 4,
+      "activeDim": 2,
+      "activeIndices": [
+        3,
+        4
+      ],
+      "traceFieldMinGap": 1.1635518278617991e-05,
+      "endpointMapRank": 2,
+      "endpointMapGramEigenvalues": [
+        1.1565920569921214e+266,
+        3.1036200168111453e+276
+      ],
+      "endpointMapRankThreshold": 3.1036200168111454e+250,
+      "sigmaMin": 1.0754496998893632e+133,
+      "sigmaMax": 1.7617094019193818e+138,
+      "endpointMap": [
+        [
+          4.3700313939602954e+137,
+          -2.1964355639469346e+137,
+          -2.2930212835142376e+136,
+          4.9372040180456644e+135,
+          5.832654547435177e+133,
+          -2.386692786197879e+133,
+          1.1328557103390004e+132,
+          9.90016639023354e+130
+        ],
+        [
+          -1.5103298082011524e+138,
+          7.590691765658096e+137,
+          7.925553802538063e+136,
+          -1.7063835564658185e+136,
+          -2.0158571552146215e+134,
+          8.249043063020739e+133,
+          -3.916023140128676e+132,
+          -3.422056459119702e+131
+        ]
+      ],
+      "leftObstructionVector": [
+        0.9605969999218061,
+        0.277944965310087
+      ],
+      "leftObstructionGramEigenvalues": [
+        1.1565920569921214e+266,
+        3.1036200168111453e+276
+      ],
+      "leftObstructionResidualNorm": 1.0754496998893632e+133,
+      "maxLeftObstructionPairing": 6257752.404574694,
+      "maxLeftObstructionRelativePairing": 0.6859138838747659,
+      "endpointMapFrobenius": 1.7617094019522075e+138,
+      "flowLeftFrobenius": 3.171100759355508e+142,
+      "flowRightFrobenius": 24847626011.71574,
+      "maxEndpointResidualNorm": 3.723696297618199e-55,
+      "maxSelectedZNorm": 5.818730904243772e-127,
+      "rows": [
+        {
+          "sourceNode": 0.08,
+          "component": "boundary",
+          "jumpNorm": 2.164029635584716,
+          "endpointVector": [
+            -2968477.2700426485,
+            -8117212.041151916
+          ],
+          "endpointBeforeNorm": 8642973.367064225,
+          "jumpResidualNorm": 0.0,
+          "leftObstructionPairing": -5107648.579131631,
+          "leftObstructionRelativePairing": 0.5909596573090629,
+          "selectedZNorm": 4.7493142448544295e-127,
+          "endpointResidualNorm": 3.0391796294742367e-55,
+          "endpointRelativeResidual": 3.5163588968764354e-62,
+          "selectedZ": [
+            -2.0586036320123146e-127,
+            -4.188837669016944e-127,
+            8.762085525706698e-128,
+            -6.351141118997147e-129,
+            -6.315579883622336e-131,
+            5.743528572161778e-131,
+            -9.764894345059102e-132,
+            -6.021408866410344e-133
+          ]
+        },
+        {
+          "sourceNode": 0.08,
+          "component": "adjointEval",
+          "jumpNorm": 24129022.585577942,
+          "endpointVector": [
+            -4165951.7969894204,
+            -8116540.639802435
+          ],
+          "endpointBeforeNorm": 9123233.326644886,
+          "jumpResidualNorm": 0.0,
+          "leftObstructionPairing": -6257752.404574694,
+          "leftObstructionRelativePairing": 0.6859138838747659,
+          "selectedZNorm": 5.818730904243772e-127,
+          "endpointResidualNorm": 3.723696297618199e-55,
+          "endpointRelativeResidual": 4.081553287410668e-62,
+          "selectedZ": [
+            -2.522135651408115e-127,
+            -5.132055062712624e-127,
+            1.0735064300714513e-127,
+            -7.781234818372406e-129,
+            -7.737664182158583e-131,
+            7.036810046000839e-131,
+            -1.1963681007318028e-131,
+            -7.377264521958966e-133
+          ]
+        },
+        {
+          "sourceNode": 0.24,
+          "component": "boundary",
+          "jumpNorm": 2.171501321439461,
+          "endpointVector": [
+            -2946265.2435960965,
+            -8070306.993055132
+          ],
+          "endpointBeforeNorm": 8591294.072942501,
+          "jumpResidualNorm": 0.0,
+          "leftObstructionPairing": -5073274.751198761,
+          "leftObstructionRelativePairing": 0.5905134556127672,
+          "selectedZNorm": 4.717351961600093e-127,
+          "endpointResidualNorm": 3.019543083243609e-55,
+          "endpointRelativeResidual": 3.514654553326705e-62,
+          "selectedZ": [
+            -2.04474953106778e-127,
+            -4.16064730165061e-127,
+            8.703117821416533e-128,
+            -6.308398789803536e-129,
+            -6.273076885383487e-131,
+            5.70487537466961e-131,
+            -9.699177853631946e-132,
+            -5.980885556721397e-133
+          ]
+        },
+        {
+          "sourceNode": 0.24,
+          "component": "adjointEval",
+          "jumpNorm": 23176779.616472207,
+          "endpointVector": [
+            -4001544.047183273,
+            -7796224.359675429
+          ],
+          "endpointBeforeNorm": 8763188.291252473,
+          "jumpResidualNorm": 0.0,
+          "leftObstructionPairing": -6010792.515978857,
+          "leftObstructionRelativePairing": 0.6859138838747659,
+          "selectedZNorm": 5.589096837093609e-127,
+          "endpointResidualNorm": 3.5751291549233505e-55,
+          "endpointRelativeResidual": 4.079712812392825e-62,
+          "selectedZ": [
+            -2.422600498972235e-127,
+            -4.929520404161947e-127,
+            1.031140895093821e-127,
+            -7.474151258709916e-129,
+            -7.432300121570163e-131,
+            6.759104935175423e-131,
+            -1.1491538752759748e-131,
+            -7.086123500918708e-133
+          ]
+        },
+        {
+          "sourceNode": 0.4,
+          "component": "boundary",
+          "jumpNorm": 1.85233267020106,
+          "endpointVector": [
+            -2891427.5754267233,
+            -7934951.933581013
+          ],
+          "endpointBeforeNorm": 8445342.835680451,
+          "jumpResidualNorm": 0.0,
+          "leftObstructionPairing": -4982976.594362475,
+          "leftObstructionRelativePairing": 0.5900265615399367,
+          "selectedZNorm": 4.633388800098185e-127,
+          "endpointResidualNorm": 2.966490086319736e-55,
+          "endpointRelativeResidual": 3.512575089061761e-62,
+          "selectedZ": [
+            -2.0083555052775494e-127,
+            -4.086592788059487e-127,
+            8.548212869447678e-128,
+            -6.196116967755155e-129,
+            -6.161423759483294e-131,
+            5.603335514227601e-131,
+            -9.526544225753162e-132,
+            -5.87443303477608e-133
+          ]
+        },
+        {
+          "sourceNode": 0.4,
+          "component": "adjointEval",
+          "jumpNorm": 21950775.39665246,
+          "endpointVector": [
+            -3789870.5546263284,
+            -7383820.042863858
+          ],
+          "endpointBeforeNorm": 8299633.560960489,
+          "jumpResidualNorm": 0.0,
+          "leftObstructionPairing": -5692833.890535763,
+          "leftObstructionRelativePairing": 0.6859138838747659,
+          "selectedZNorm": 5.293445050234148e-127,
+          "endpointResidualNorm": 3.3878656119487474e-55,
+          "endpointRelativeResidual": 4.081946012513691e-62,
+          "selectedZ": [
+            -2.2944498894472403e-127,
+            -4.6687588610485645e-127,
+            9.765956515555316e-128,
+            -7.078783949947277e-129,
+            -7.039146652330816e-131,
+            6.40156211387509e-131,
+            -1.088365986551812e-131,
+            -6.71128206660159e-133
+          ]
+        },
+        {
+          "sourceNode": 0.52,
+          "component": "boundary",
+          "jumpNorm": 1.4906039765389272,
+          "endpointVector": [
+            -2830560.2145623923,
+            -7779281.5078676855
+          ],
+          "endpointBeforeNorm": 8278242.078298727,
+          "jumpResidualNorm": 0.0,
+          "leftObstructionPairing": -4881239.779048343,
+          "leftObstructionRelativePairing": 0.5896469000156968,
+          "selectedZNorm": 4.538789475436315e-127,
+          "endpointResidualNorm": 2.907236456859338e-55,
+          "endpointRelativeResidual": 3.511900750620243e-62,
+          "selectedZ": [
+            -1.967351193348903e-127,
+            -4.003157312985686e-127,
+            8.373685084675749e-128,
+            -6.069611653603326e-129,
+            -6.035626779110672e-131,
+            5.488932926013188e-131,
+            -9.332041962106269e-132,
+            -5.754495471416488e-133
+          ]
+        },
+        {
+          "sourceNode": 0.52,
+          "component": "adjointEval",
+          "jumpNorm": 20902811.132912643,
+          "endpointVector": [
+            -3608936.221616212,
+            -7031304.954217506
+          ],
+          "endpointBeforeNorm": 7903396.106162029,
+          "jumpResidualNorm": 0.0,
+          "leftObstructionPairing": -5421049.118978299,
+          "leftObstructionRelativePairing": 0.6859138838747658,
+          "selectedZNorm": 5.040727725015569e-127,
+          "endpointResidualNorm": 3.225510200780593e-55,
+          "endpointRelativeResidual": 4.081169863504328e-62,
+          "selectedZ": [
+            -2.184909272059794e-127,
+            -4.4458650291002114e-127,
+            9.29971451523401e-128,
+            -6.740831760276062e-129,
+            -6.703086809087583e-131,
+            6.095941551219482e-131,
+            -1.036405696349482e-131,
+            -6.390874990196037e-133
+          ]
+        }
+      ],
+      "statuses": {
+        "activeEndpointMapFullRowRank": {
+          "label": "active endpoint map full row rank",
+          "closed": true,
+          "status": "closed",
+          "reason": "Magnus endpoint center has full sampled active row rank."
+        },
+        "actualEndpointRhsInRange": {
+          "label": "actual endpoint RHS in Range(M)",
+          "closed": true,
+          "status": "closed",
+          "reason": "For the actual source rows, endpoint vectors b(d) are in the computed endpoint-map range."
+        },
+        "activeEndpointKilled": {
+          "label": "active endpoint concomitant killed",
+          "closed": true,
+          "status": "closed",
+          "reason": "Minimum-norm z solves Mz=-b(d) on the active source space."
+        }
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "frobeniusDifference": 1.7617094019522075e+138,
+      "rankMargin": 2775659.55249,
+      "differenceOverMargin": 6.346993817638068e+131,
+      "passesRankMargin": false,
+      "leftSteps": 2,
+      "rightSteps": 4
+    }
+  ],
+  "magnusCenterStabilityStatus": {
+    "label": "Magnus endpoint center stability",
+    "closed": false,
+    "status": "open",
+    "reason": "Closed only if successive Magnus endpoint maps differ by less than the rank margin.  This is a numerical center test, not an interval proof."
+  },
+  "nextTarget": "If Magnus centers stabilize, wrap the stepper in interval/ball arithmetic.  If not, return to analytic obstruction annihilation."
+}

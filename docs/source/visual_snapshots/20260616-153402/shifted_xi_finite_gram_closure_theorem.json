@@ -1,0 +1,58 @@
+{
+  "theoremName": "shifted Xi finite-Gram closure theorem",
+  "proofClass": "analytic proof",
+  "normalizationJson": "shifted_xi_debranges_normalization_theorem.json",
+  "closedConeJson": "xi_augmented_closed_cone_limit_theorem.json",
+  "psdClosureJson": "finite_psd_cone_closure_theorem.json",
+  "statement": "For each finite upper-half-plane evaluation set and each 0<omega<1/2, the shifted-Xi de Branges Gram matrix is the entrywise limit of positive finite augmented pullback Gram matrices.",
+  "statuses": {
+    "normalizationInputStatus": {
+      "label": "shifted-Xi normalization input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The target entries are exactly the shifted-Xi de Branges kernel entries."
+    },
+    "finitePositiveConeInputStatus": {
+      "label": "finite positive augmented pullback input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The augmented closed-cone theorem supplies positive finite pullback Gram matrices."
+    },
+    "entrywiseKernelConvergenceInputStatus": {
+      "label": "entrywise kernel convergence input",
+      "closed": true,
+      "status": "closed",
+      "reason": "K_{E,N}(w,z) converges entrywise to K_E(w,z) on finite evaluation sets."
+    },
+    "repairPositivityInputStatus": {
+      "label": "continuum repair positivity input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The augmented repair remains nonnegative in the transported trace space."
+    },
+    "finitePsdClosureInputStatus": {
+      "label": "finite PSD cone closure input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Entrywise limits of finite PSD matrices remain PSD."
+    },
+    "finiteEvaluationGramPositivityStatus": {
+      "label": "finite evaluation Gram positivity",
+      "closed": true,
+      "status": "closed",
+      "reason": "For each finite evaluation set, the Gram matrix of K_{E_omega} is an entrywise limit of PSD matrices and is therefore PSD."
+    }
+  },
+  "finiteEvaluationGramPositive": true,
+  "shiftedXiFiniteGramClosureClosed": true,
+  "entrywiseConvergenceToFullDeBrangesKernel": true,
+  "continuumAugmentedRepairClosed": true,
+  "proof": [
+    "Fix omega and a finite set of points in C_+.",
+    "Use the normalization theorem to identify the target matrix as the shifted-Xi de Branges Gram.",
+    "Use the augmented closed-cone theorem to get positive finite truncation matrices.",
+    "Use entrywise convergence of those matrices to the target finite Gram matrix.",
+    "Apply finite PSD cone closure."
+  ],
+  "remainingAnalyticGap": null
+}

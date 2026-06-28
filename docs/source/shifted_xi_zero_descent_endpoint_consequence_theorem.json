@@ -1,0 +1,45 @@
+{
+  "theoremName": "shifted Xi zero-descent endpoint consequence theorem",
+  "proofClass": "symbolic identity",
+  "source": "shifted Xi zero-descent endpoint theorem",
+  "statuses": {
+    "zeroDescentEndpointInputStatus": {
+      "label": "zero-descent endpoint input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full zero-descent theorem closes the endpoint contradiction."
+    },
+    "endpointZeroLocationInputStatus": {
+      "label": "endpoint zero-location input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full zero-descent theorem proves all Xi zeros are real in z-normalization."
+    },
+    "conditionalRhInputStatus": {
+      "label": "conditional RH-side input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full zero-descent theorem records the RH-side zero-location consequence."
+    },
+    "zeroDescentEndpointConsequenceStatus": {
+      "label": "zero-descent endpoint consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Only the terminal zero-location consequence is exported upstream."
+    }
+  },
+  "zeroDescentEndpointConsequenceClosed": true,
+  "zeroDescentEndpointClosed": true,
+  "endpointZeroLocationClosed": true,
+  "conditionalRhClosed": true,
+  "proof": [
+    "Import the full shifted-Xi zero-descent endpoint theorem.",
+    "Export only the endpoint contradiction and zero-location flags used upstream."
+  ],
+  "notExportedHere": [
+    "diagonal de Branges inequality proof",
+    "shifted-Xi normalization proof",
+    "real-entire conjugation proof details"
+  ],
+  "remainingAnalyticGap": null
+}

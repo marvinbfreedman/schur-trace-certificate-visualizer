@@ -1,0 +1,894 @@
+{
+  "theoremName": "repair-free Schur complement trace-kernel probe",
+  "meaning": "Finite diagnostic for the continuum target C-Gamma^*Gamma>=0. Each row transports the Schur complement to sampled trace coordinates, exposing the finite kernel that a Volterra/Green proof should factor.",
+  "parameters": {
+    "model": "full",
+    "kind": "tilde3",
+    "omega": 0.49,
+    "L": 8.0,
+    "basisValues": [
+      6,
+      8,
+      10
+    ],
+    "constraintValues": [
+      3,
+      5,
+      7
+    ],
+    "dps": 50
+  },
+  "rows": [
+    {
+      "model": "full",
+      "kind": "tilde3",
+      "omega": 0.49,
+      "L": 8.0,
+      "basis": 6,
+      "quad": 14,
+      "constraints": 3,
+      "traceRank": 3,
+      "traceNullity": 3,
+      "aZeroCount": 0,
+      "kMin": 0.0008670423150971114,
+      "kMax": 0.2556683543389464,
+      "cMin": 0.0036903529651631153,
+      "cMax": 0.08191500876279567,
+      "gamma2Min": 5.508469930663352e-07,
+      "gamma2Max": 0.05337019030671383,
+      "schurComplementMin": 0.0014084315519562395,
+      "schurComplementMax": 0.036900312628838174,
+      "schurComplementEigenvalues": [
+        0.0014084315519562395,
+        0.0067635287974607,
+        0.036900312628838174
+      ],
+      "traceKernelMin": 0.00010286564513465137,
+      "traceKernelMax": 14567.794577996456,
+      "traceKernelEigenvalues": [
+        0.00010286564513465137,
+        42.33627038251423,
+        14567.794577996456
+      ],
+      "traceKernelDiagMin": 203.16769846331408,
+      "traceKernelDiagMax": 10389.730955500048,
+      "traceKernelOffdiagMin": -6419.20563576044,
+      "traceKernelOffdiagMax": 1425.2618220390925,
+      "principalMinorStats": {
+        "checked": 7,
+        "maxOrder": 3,
+        "min": 63.44198444559738,
+        "minOrder": 3,
+        "negativeCount": 0
+      },
+      "contiguousMinorStats": {
+        "checked": 6,
+        "min": 63.44198444559738,
+        "minOrder": 3,
+        "negativeCount": 0
+      },
+      "inverseStructureStats": {
+        "available": true,
+        "frobenius": 9721.41863976014,
+        "maxAbs": 8381.858874149946,
+        "diagNonpositiveCount": 0,
+        "offdiagPositiveCount": 6,
+        "absByIndexDistance": [
+          {
+            "distance": 0,
+            "maxAbs": 8381.858874149946,
+            "meanAbs": 3240.4807762614987,
+            "maxAbsRelative": 1.0
+          },
+          {
+            "distance": 1,
+            "maxAbs": 3240.596782645913,
+            "meanAbs": 1785.0728260115322,
+            "maxAbsRelative": 0.38662029882656085
+          },
+          {
+            "distance": 2,
+            "maxAbs": 852.3525505397542,
+            "meanAbs": 852.3525505397542,
+            "maxAbsRelative": 0.10169015767712938
+          }
+        ]
+      },
+      "centers": [
+        0.02,
+        0.2825,
+        0.545
+      ],
+      "minModeTrace": [
+        1.0,
+        0.386065190987906,
+        0.10133336367261424
+      ],
+      "minModeExponentialFit": {
+        "available": true,
+        "model": "abs(v(a)) ~= exp(intercept-decay*(a-a0))",
+        "a0": 0.02,
+        "decay": 4.360646793987184,
+        "intercept": 0.06430691607132175,
+        "maxFitResidual": 0.06641964986894236,
+        "maxFitRelativeResidual": 0.1206865374142666,
+        "maxResidualAgainstExp5": 0.1169188422587221,
+        "maxRelativeResidualAgainstExp5": 0.3028474076088998
+      },
+      "traceKernelMatrix": [
+        [
+          203.167698463,
+          -900.373517968,
+          1425.26182204
+        ],
+        [
+          -900.373517968,
+          4017.23229728,
+          -6419.20563576
+        ],
+        [
+          1425.26182204,
+          -6419.20563576,
+          10389.7309555
+        ]
+      ],
+      "traceKernelCorrelation": [
+        [
+          1.0,
+          -0.996625304297,
+          0.980991333886
+        ],
+        [
+          -0.996625304297,
+          1.0,
+          -0.993609338759
+        ],
+        [
+          0.980991333886,
+          -0.993609338759,
+          1.0
+        ]
+      ],
+      "repairFreeFiniteClosed": true,
+      "meaning": "S=C-Gamma^*Gamma is the finite repair-free Schur complement. The traceKernelMatrix is the same form transported to sampled trace coordinates y=R u."
+    },
+    {
+      "model": "full",
+      "kind": "tilde3",
+      "omega": 0.49,
+      "L": 8.0,
+      "basis": 8,
+      "quad": 16,
+      "constraints": 5,
+      "traceRank": 5,
+      "traceNullity": 3,
+      "aZeroCount": 0,
+      "kMin": 9.27493449318089e-05,
+      "kMax": 0.25566883265416057,
+      "cMin": 0.0005857487088515644,
+      "cMax": 0.11634705917570762,
+      "gamma2Min": -1.022970402147552e-52,
+      "gamma2Max": 0.084129089268374,
+      "schurComplementMin": 0.00011790089587421823,
+      "schurComplementMax": 0.0415569984677974,
+      "schurComplementEigenvalues": [
+        0.00011790089587421823,
+        0.0006562531575206292,
+        0.002409999873429942,
+        0.009130067614252368,
+        0.0415569984677974
+      ],
+      "traceKernelMin": 4.687682255694923e-07,
+      "traceKernelMax": 982081.8396882368,
+      "traceKernelEigenvalues": [
+        4.687682255694923e-07,
+        0.13280435320673514,
+        490.68129940124993,
+        98395.42589289238,
+        982081.8396882368
+      ],
+      "traceKernelDiagMin": 16371.05767831401,
+      "traceKernelDiagMax": 610429.1018631995,
+      "traceKernelOffdiagMin": -371022.681735451,
+      "traceKernelOffdiagMax": 150441.0004061691,
+      "principalMinorStats": {
+        "checked": 30,
+        "maxOrder": 4,
+        "min": 16371.05767831401,
+        "minOrder": 1,
+        "negativeCount": 0
+      },
+      "contiguousMinorStats": {
+        "checked": 15,
+        "min": 16371.05767831401,
+        "minOrder": 1,
+        "negativeCount": 0
+      },
+      "inverseStructureStats": {
+        "available": true,
+        "frobenius": 2133250.3899797387,
+        "maxAbs": 1328542.4608871876,
+        "diagNonpositiveCount": 0,
+        "offdiagPositiveCount": 20,
+        "absByIndexDistance": [
+          {
+            "distance": 0,
+            "maxAbs": 1328542.4608871876,
+            "meanAbs": 426651.58437785297,
+            "maxAbsRelative": 1.0
+          },
+          {
+            "distance": 1,
+            "maxAbs": 851758.2814524483,
+            "meanAbs": 325919.93279770465,
+            "maxAbsRelative": 0.6411223626858359
+          },
+          {
+            "distance": 2,
+            "maxAbs": 499708.97347890073,
+            "meanAbs": 242083.15375700925,
+            "maxAbsRelative": 0.3761332348724481
+          },
+          {
+            "distance": 3,
+            "maxAbs": 278878.41460226657,
+            "meanAbs": 180126.99426691106,
+            "maxAbsRelative": 0.20991306097663925
+          },
+          {
+            "distance": 4,
+            "maxAbs": 126923.5816404913,
+            "meanAbs": 126923.5816404913,
+            "maxAbsRelative": 0.09553596168520875
+          }
+        ]
+      },
+      "centers": [
+        0.02,
+        0.15125,
+        0.2825,
+        0.41375,
+        0.545
+      ],
+      "minModeTrace": [
+        1.0,
+        0.6402359480969801,
+        0.3752166561183634,
+        0.20913604609270695,
+        0.09503333541024915
+      ],
+      "minModeExponentialFit": {
+        "available": true,
+        "model": "abs(v(a)) ~= exp(intercept-decay*(a-a0))",
+        "a0": 0.02,
+        "decay": 4.438786208478917,
+        "intercept": 0.09628777526880966,
+        "maxFitResidual": 0.1010758808133507,
+        "maxFitRelativeResidual": 0.12687979003909836,
+        "maxResidualAgainstExp5": 0.12144278244309079,
+        "maxRelativeResidualAgainstExp5": 0.33234232505523004
+      },
+      "traceKernelMatrix": [
+        [
+          16371.0576783,
+          -61506.4567902,
+          69851.211248,
+          -22588.4417755,
+          16018.6185653
+        ],
+        [
+          -61506.4567902,
+          268832.103112,
+          -371022.681735,
+          150441.000406,
+          -30076.482947
+        ],
+        [
+          69851.211248,
+          -371022.681735,
+          610429.101863,
+          -285108.86011,
+          -18159.3621919
+        ],
+        [
+          -22588.4417755,
+          150441.000406,
+          -285108.86011,
+          145388.744344,
+          29907.8335221
+        ],
+        [
+          16018.6185653,
+          -30076.482947,
+          -18159.3621919,
+          29907.8335221,
+          39947.0726873
+        ]
+      ],
+      "traceKernelCorrelation": [
+        [
+          1.0,
+          -0.927132435834,
+          0.698743783223,
+          -0.463001620149,
+          0.626389127515
+        ],
+        [
+          -0.927132435834,
+          1.0,
+          -0.915887813046,
+          0.760957242878,
+          -0.290231138257
+        ],
+        [
+          0.698743783223,
+          -0.915887813046,
+          1.0,
+          -0.957034746597,
+          -0.116289498013
+        ],
+        [
+          -0.463001620149,
+          0.760957242878,
+          -0.957034746597,
+          1.0,
+          0.392443447089
+        ],
+        [
+          0.626389127515,
+          -0.290231138257,
+          -0.116289498013,
+          0.392443447089,
+          1.0
+        ]
+      ],
+      "repairFreeFiniteClosed": true,
+      "meaning": "S=C-Gamma^*Gamma is the finite repair-free Schur complement. The traceKernelMatrix is the same form transported to sampled trace coordinates y=R u."
+    },
+    {
+      "model": "full",
+      "kind": "tilde3",
+      "omega": 0.49,
+      "L": 8.0,
+      "basis": 10,
+      "quad": 20,
+      "constraints": 7,
+      "traceRank": 7,
+      "traceNullity": 3,
+      "aZeroCount": 0,
+      "kMin": 9.483203522472047e-06,
+      "kMax": 0.25566884743423585,
+      "cMin": 5.736005389226729e-05,
+      "cMax": 0.23471967034632576,
+      "gamma2Min": -1.0961778289768156e-52,
+      "gamma2Max": 0.1502211066517431,
+      "schurComplementMin": 1.2820029525476991e-05,
+      "schurComplementMax": 0.11678742475495175,
+      "schurComplementEigenvalues": [
+        1.2820029525476991e-05,
+        8.484500248596337e-05,
+        0.00033892354154069616,
+        0.0012958305420736462,
+        0.005229405351116928,
+        0.0269232430740388,
+        0.11678742475495175
+      ],
+      "traceKernelMin": 2.690222591742659e-09,
+      "traceKernelMax": 939723950.6499853,
+      "traceKernelEigenvalues": [
+        2.690222591742659e-09,
+        0.0003953936788135786,
+        14.227021212233227,
+        80.7534235661796,
+        538618.4486656778,
+        2303754.314414044,
+        939723950.6499853
+      ],
+      "traceKernelDiagMin": 1166469.107577824,
+      "traceKernelDiagMax": 296128648.45056856,
+      "traceKernelOffdiagMin": -231539895.5694308,
+      "traceKernelOffdiagMax": 239863908.50633407,
+      "principalMinorStats": {
+        "checked": 98,
+        "maxOrder": 4,
+        "min": 1166469.107577824,
+        "minOrder": 1,
+        "negativeCount": 0
+      },
+      "contiguousMinorStats": {
+        "checked": 28,
+        "min": 1166469.107577824,
+        "minOrder": 1,
+        "negativeCount": 0
+      },
+      "inverseStructureStats": {
+        "available": true,
+        "frobenius": 371716453.16359174,
+        "maxAbs": 181132011.02154484,
+        "diagNonpositiveCount": 0,
+        "offdiagPositiveCount": 42,
+        "absByIndexDistance": [
+          {
+            "distance": 0,
+            "maxAbs": 181132011.02154484,
+            "meanAbs": 53102711.7660809,
+            "maxAbsRelative": 1.0
+          },
+          {
+            "distance": 1,
+            "maxAbs": 134184013.08862408,
+            "meanAbs": 44234560.73915406,
+            "maxAbsRelative": 0.7408078358532854
+          },
+          {
+            "distance": 2,
+            "maxAbs": 95693669.3642088,
+            "meanAbs": 36416195.791835934,
+            "maxAbsRelative": 0.528308987597043
+          },
+          {
+            "distance": 3,
+            "maxAbs": 65750717.18540312,
+            "meanAbs": 29870682.34175487,
+            "maxAbsRelative": 0.36299888028948324
+          },
+          {
+            "distance": 4,
+            "maxAbs": 44115741.924438424,
+            "meanAbs": 24646564.107615177,
+            "maxAbsRelative": 0.24355574520282364
+          },
+          {
+            "distance": 5,
+            "maxAbs": 28888830.678453814,
+            "meanAbs": 20349220.19939512,
+            "maxAbsRelative": 0.1594904761203011
+          },
+          {
+            "distance": 6,
+            "maxAbs": 15940980.539236117,
+            "meanAbs": 15940980.539236117,
+            "maxAbsRelative": 0.08800752804174414
+          }
+        ]
+      },
+      "centers": [
+        0.02,
+        0.1075,
+        0.195,
+        0.2825,
+        0.37,
+        0.4575,
+        0.545
+      ],
+      "minModeTrace": [
+        1.0,
+        0.7398290054013855,
+        0.5270304790159013,
+        0.3617292513057155,
+        0.2423670189427913,
+        0.15841815357305072,
+        0.08725708384119422
+      ],
+      "minModeExponentialFit": {
+        "available": true,
+        "model": "abs(v(a)) ~= exp(intercept-decay*(a-a0))",
+        "a0": 0.02,
+        "decay": 4.561574205909827,
+        "intercept": 0.10349777364779396,
+        "maxFitResidual": 0.10904332424126774,
+        "maxFitRelativeResidual": 0.159011917161096,
+        "maxResidualAgainstExp5": 0.11016845933739287,
+        "maxRelativeResidualAgainstExp5": 0.29176746484040517
+      },
+      "traceKernelMatrix": [
+        [
+          13024804.5528,
+          -48579764.8202,
+          62035603.3951,
+          -47920147.1197,
+          50202680.0697,
+          -31253264.4757,
+          3884959.57888
+        ],
+        [
+          -48579764.8202,
+          181231354.943,
+          -231539895.569,
+          178987174.777,
+          -187451161.905,
+          116655193.414,
+          -14498352.3397
+        ],
+        [
+          62035603.3951,
+          -231539895.569,
+          296128648.451,
+          -229257885.156,
+          239863908.506,
+          -149145906.8,
+          18532657.8654
+        ],
+        [
+          -47920147.1197,
+          178987174.777,
+          -229257885.156,
+          178136778.661,
+          -186620649.993,
+          115985290.415,
+          -14378567.3731
+        ],
+        [
+          50202680.0697,
+          -187451161.905,
+          239863908.506,
+          -186620649.993,
+          196570782.777,
+          -122412923.294,
+          15125862.4872
+        ],
+        [
+          -31253264.4757,
+          116655193.414,
+          -149145906.8,
+          115985290.415,
+          -122412923.294,
+          76307579.9016,
+          -9421761.25881
+        ],
+        [
+          3884959.57888,
+          -14498352.3397,
+          18532657.8654,
+          -14378567.3731,
+          15125862.4872,
+          -9421761.25881,
+          1166469.10758
+        ]
+      ],
+      "traceKernelCorrelation": [
+        [
+          1.0,
+          -0.999892087731,
+          0.998884308868,
+          -0.994845724692,
+          0.992160222673,
+          -0.991347554319,
+          0.996699582196
+        ],
+        [
+          -0.999892087731,
+          1.0,
+          -0.999468134138,
+          0.996158504572,
+          -0.993143454105,
+          0.991981491986,
+          -0.997161174186
+        ],
+        [
+          0.998884308868,
+          -0.999468134138,
+          1.0,
+          -0.998176342032,
+          0.994180430704,
+          -0.992172731033,
+          0.997150876207
+        ],
+        [
+          -0.994845724692,
+          0.996158504572,
+          -0.998176342032,
+          1.0,
+          -0.997294483902,
+          0.994814889921,
+          -0.997475411239
+        ],
+        [
+          0.992160222673,
+          -0.993143454105,
+          0.994180430704,
+          -0.997294483902,
+          1.0,
+          -0.999502640243,
+          0.998904669916
+        ],
+        [
+          -0.991347554319,
+          0.991981491986,
+          -0.992172731033,
+          0.994814889921,
+          -0.999502640243,
+          1.0,
+          -0.998646155593
+        ],
+        [
+          0.996699582196,
+          -0.997161174186,
+          0.997150876207,
+          -0.997475411239,
+          0.998904669916,
+          -0.998646155593,
+          1.0
+        ]
+      ],
+      "repairFreeFiniteClosed": true,
+      "meaning": "S=C-Gamma^*Gamma is the finite repair-free Schur complement. The traceKernelMatrix is the same form transported to sampled trace coordinates y=R u."
+    }
+  ],
+  "weakestRow": {
+    "model": "full",
+    "kind": "tilde3",
+    "omega": 0.49,
+    "L": 8.0,
+    "basis": 10,
+    "quad": 20,
+    "constraints": 7,
+    "traceRank": 7,
+    "traceNullity": 3,
+    "aZeroCount": 0,
+    "kMin": 9.483203522472047e-06,
+    "kMax": 0.25566884743423585,
+    "cMin": 5.736005389226729e-05,
+    "cMax": 0.23471967034632576,
+    "gamma2Min": -1.0961778289768156e-52,
+    "gamma2Max": 0.1502211066517431,
+    "schurComplementMin": 1.2820029525476991e-05,
+    "schurComplementMax": 0.11678742475495175,
+    "schurComplementEigenvalues": [
+      1.2820029525476991e-05,
+      8.484500248596337e-05,
+      0.00033892354154069616,
+      0.0012958305420736462,
+      0.005229405351116928,
+      0.0269232430740388,
+      0.11678742475495175
+    ],
+    "traceKernelMin": 2.690222591742659e-09,
+    "traceKernelMax": 939723950.6499853,
+    "traceKernelEigenvalues": [
+      2.690222591742659e-09,
+      0.0003953936788135786,
+      14.227021212233227,
+      80.7534235661796,
+      538618.4486656778,
+      2303754.314414044,
+      939723950.6499853
+    ],
+    "traceKernelDiagMin": 1166469.107577824,
+    "traceKernelDiagMax": 296128648.45056856,
+    "traceKernelOffdiagMin": -231539895.5694308,
+    "traceKernelOffdiagMax": 239863908.50633407,
+    "principalMinorStats": {
+      "checked": 98,
+      "maxOrder": 4,
+      "min": 1166469.107577824,
+      "minOrder": 1,
+      "negativeCount": 0
+    },
+    "contiguousMinorStats": {
+      "checked": 28,
+      "min": 1166469.107577824,
+      "minOrder": 1,
+      "negativeCount": 0
+    },
+    "inverseStructureStats": {
+      "available": true,
+      "frobenius": 371716453.16359174,
+      "maxAbs": 181132011.02154484,
+      "diagNonpositiveCount": 0,
+      "offdiagPositiveCount": 42,
+      "absByIndexDistance": [
+        {
+          "distance": 0,
+          "maxAbs": 181132011.02154484,
+          "meanAbs": 53102711.7660809,
+          "maxAbsRelative": 1.0
+        },
+        {
+          "distance": 1,
+          "maxAbs": 134184013.08862408,
+          "meanAbs": 44234560.73915406,
+          "maxAbsRelative": 0.7408078358532854
+        },
+        {
+          "distance": 2,
+          "maxAbs": 95693669.3642088,
+          "meanAbs": 36416195.791835934,
+          "maxAbsRelative": 0.528308987597043
+        },
+        {
+          "distance": 3,
+          "maxAbs": 65750717.18540312,
+          "meanAbs": 29870682.34175487,
+          "maxAbsRelative": 0.36299888028948324
+        },
+        {
+          "distance": 4,
+          "maxAbs": 44115741.924438424,
+          "meanAbs": 24646564.107615177,
+          "maxAbsRelative": 0.24355574520282364
+        },
+        {
+          "distance": 5,
+          "maxAbs": 28888830.678453814,
+          "meanAbs": 20349220.19939512,
+          "maxAbsRelative": 0.1594904761203011
+        },
+        {
+          "distance": 6,
+          "maxAbs": 15940980.539236117,
+          "meanAbs": 15940980.539236117,
+          "maxAbsRelative": 0.08800752804174414
+        }
+      ]
+    },
+    "centers": [
+      0.02,
+      0.1075,
+      0.195,
+      0.2825,
+      0.37,
+      0.4575,
+      0.545
+    ],
+    "minModeTrace": [
+      1.0,
+      0.7398290054013855,
+      0.5270304790159013,
+      0.3617292513057155,
+      0.2423670189427913,
+      0.15841815357305072,
+      0.08725708384119422
+    ],
+    "minModeExponentialFit": {
+      "available": true,
+      "model": "abs(v(a)) ~= exp(intercept-decay*(a-a0))",
+      "a0": 0.02,
+      "decay": 4.561574205909827,
+      "intercept": 0.10349777364779396,
+      "maxFitResidual": 0.10904332424126774,
+      "maxFitRelativeResidual": 0.159011917161096,
+      "maxResidualAgainstExp5": 0.11016845933739287,
+      "maxRelativeResidualAgainstExp5": 0.29176746484040517
+    },
+    "traceKernelMatrix": [
+      [
+        13024804.5528,
+        -48579764.8202,
+        62035603.3951,
+        -47920147.1197,
+        50202680.0697,
+        -31253264.4757,
+        3884959.57888
+      ],
+      [
+        -48579764.8202,
+        181231354.943,
+        -231539895.569,
+        178987174.777,
+        -187451161.905,
+        116655193.414,
+        -14498352.3397
+      ],
+      [
+        62035603.3951,
+        -231539895.569,
+        296128648.451,
+        -229257885.156,
+        239863908.506,
+        -149145906.8,
+        18532657.8654
+      ],
+      [
+        -47920147.1197,
+        178987174.777,
+        -229257885.156,
+        178136778.661,
+        -186620649.993,
+        115985290.415,
+        -14378567.3731
+      ],
+      [
+        50202680.0697,
+        -187451161.905,
+        239863908.506,
+        -186620649.993,
+        196570782.777,
+        -122412923.294,
+        15125862.4872
+      ],
+      [
+        -31253264.4757,
+        116655193.414,
+        -149145906.8,
+        115985290.415,
+        -122412923.294,
+        76307579.9016,
+        -9421761.25881
+      ],
+      [
+        3884959.57888,
+        -14498352.3397,
+        18532657.8654,
+        -14378567.3731,
+        15125862.4872,
+        -9421761.25881,
+        1166469.10758
+      ]
+    ],
+    "traceKernelCorrelation": [
+      [
+        1.0,
+        -0.999892087731,
+        0.998884308868,
+        -0.994845724692,
+        0.992160222673,
+        -0.991347554319,
+        0.996699582196
+      ],
+      [
+        -0.999892087731,
+        1.0,
+        -0.999468134138,
+        0.996158504572,
+        -0.993143454105,
+        0.991981491986,
+        -0.997161174186
+      ],
+      [
+        0.998884308868,
+        -0.999468134138,
+        1.0,
+        -0.998176342032,
+        0.994180430704,
+        -0.992172731033,
+        0.997150876207
+      ],
+      [
+        -0.994845724692,
+        0.996158504572,
+        -0.998176342032,
+        1.0,
+        -0.997294483902,
+        0.994814889921,
+        -0.997475411239
+      ],
+      [
+        0.992160222673,
+        -0.993143454105,
+        0.994180430704,
+        -0.997294483902,
+        1.0,
+        -0.999502640243,
+        0.998904669916
+      ],
+      [
+        -0.991347554319,
+        0.991981491986,
+        -0.992172731033,
+        0.994814889921,
+        -0.999502640243,
+        1.0,
+        -0.998646155593
+      ],
+      [
+        0.996699582196,
+        -0.997161174186,
+        0.997150876207,
+        -0.997475411239,
+        0.998904669916,
+        -0.998646155593,
+        1.0
+      ]
+    ],
+    "repairFreeFiniteClosed": true,
+    "meaning": "S=C-Gamma^*Gamma is the finite repair-free Schur complement. The traceKernelMatrix is the same form transported to sampled trace coordinates y=R u."
+  },
+  "allFiniteRepairFreeClosed": true,
+  "interpretation": [
+    "S_min>0 is the finite repair-free condition.",
+    "The transported trace kernel is the candidate continuum operator on X_R; its inverse structure can suggest a differential/Green proof.",
+    "This remains finite evidence until the trace-kernel formula is derived and bounded in the completed trace range."
+  ],
+  "nextProofTarget": "Derive an explicit formula for the trace-side Schur kernel D_trace=W Sigma^{-1}(C-Gamma^*Gamma)Sigma^{-1}W^*, then prove it is positive as a Volterra/Green Gram kernel on X_R."
+}

@@ -1,0 +1,95 @@
+{
+  "theoremName": "endpoint coefficient synchronized 200 certificate",
+  "order": 11,
+  "stateScaling": "taylor",
+  "conditionMatrixOrder": 200,
+  "controlledQuadratureOrder": 200,
+  "activeReferencePolicy": "fixed legacy/base Krawczyk active source frame; synchronized 200-point companion and boundary rows are projected into this same frame before applying the chart/Krawczyk budget",
+  "activeReferenceDps": 90,
+  "activeReferenceMatrixOrder": 90,
+  "centerSynchronized": true,
+  "collocationNodeCount": 21,
+  "cacheHits": 21,
+  "activeIndices": [
+    3,
+    4
+  ],
+  "traceFieldMinGap": 1.1635518278617991e-05,
+  "traceFieldMinConsecutiveCos": 0.9881718063973355,
+  "derivativeEntryRadius": 4.447376894052536e-29,
+  "derivativeEntryRadiusText": "4.447376894052536e-29",
+  "scaledCompanionAnalyticRadius": 2.0389874331769852e-24,
+  "scaledCompanionAnalyticRadiusText": "2.038987433176985e-24",
+  "boundaryRowAnalyticRadius": 9.062300137770981e-25,
+  "boundaryRowAnalyticRadiusText": "9.062300137770982e-25",
+  "scaledCompanionMaxAbs": 679.9784268707629,
+  "boundaryRowMaxAbs": 12802769.13612685,
+  "chartCoordinate": [
+    0,
+    1
+  ],
+  "rawEndpointEntryCapacityForChartThreshold": 36392.01834543292,
+  "rawEndpointEntryCapacityForChartThresholdText": "36392.01834543292",
+  "rawEndpointRatioLowerAtActualRadius": 0.9643323749252852,
+  "leftSystem": {
+    "label": "left-to-s0 row flow",
+    "dim": 8,
+    "systemSize": 88,
+    "systemInfNorm": 851.0245189994017,
+    "inverseInfNorm": 6705.874237390894,
+    "conditionInfEstimate": 5706863.397346065,
+    "solutionInfNorm": 22561037.10262889,
+    "residualInfNorm": 1.3269964135202901e-74,
+    "scaleInf": 1.0,
+    "scaleInvInf": 7511650135.139026,
+    "targetIndex": 0
+  },
+  "rightSystem": {
+    "label": "right-to-s0 row flow",
+    "dim": 8,
+    "systemSize": 88,
+    "systemInfNorm": 909.5578375354255,
+    "inverseInfNorm": 1640.510880155633,
+    "conditionInfEstimate": 1492139.5286076951,
+    "solutionInfNorm": 2082859009.7785735,
+    "residualInfNorm": 2.822307487855994e-72,
+    "scaleInf": 1.0,
+    "scaleInvInf": 7511650135.139026,
+    "targetIndex": 10
+  },
+  "coefficientRadiusCapacityScaledCompanion": 1.2748331615479972e-09,
+  "boundaryRadiusCapacityUnscaledRows": 5.804600980653454e-10,
+  "simultaneousCapacityFraction": 0.49999508549087535,
+  "simultaneousCoefficientRadius": 6.374103155947938e-10,
+  "simultaneousBoundaryRadius": 2.9022719635622424e-10,
+  "actualEndpointEntryRadius": 1.1502104691957404e-10,
+  "actualEndpointEntryRadiusText": "1.15021046919574e-10",
+  "actualKrawczykQ": 1.0938554638804267e-19,
+  "scaledCompanionRadiusOverSimultaneousBudget": 3.1988616802888144e-15,
+  "boundaryRowRadiusOverSimultaneousBudget": 3.122484815877811e-15,
+  "endpointRadiusOverChartCapacity": 3.16061191846505e-15,
+  "centerSynchronizationStatus": {
+    "label": "200-point center synchronization",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed when the eigenrow interval and deterministic segment quadrature use the same matrix order."
+  },
+  "analyticCompanionInputStatus": {
+    "label": "analytic scaled companion input below Krawczyk budget",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed when the companion-map perturbation radius fits inside the simultaneous Krawczyk coefficient budget."
+  },
+  "analyticBoundaryInputStatus": {
+    "label": "analytic boundary-row input below Krawczyk budget",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed when the Green-concomitant boundary-row perturbation radius fits inside the simultaneous Krawczyk boundary budget."
+  },
+  "synchronizedKrawczykInputStatus": {
+    "label": "synchronized endpoint Krawczyk input",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed when the synchronized center is used and both analytic input radii keep the endpoint map inside the persistent Pluecker chart."
+  }
+}

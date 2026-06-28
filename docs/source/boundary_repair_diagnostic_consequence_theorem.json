@@ -1,0 +1,75 @@
+{
+  "theoremName": "boundary repair diagnostic consequence theorem",
+  "proofClass": "symbolic identity",
+  "boundaryRepairJson": "boundary_repair_identity.json",
+  "statement": "The boundary-repair identity ledger supplies only diagnostic facts used by the canonical boundary comparison: primitive vanishing is false and the abstract quotient repair is nonunique. It does not claim the full boundary-repair identity is closed.",
+  "statuses": {
+    "primitiveVanishingFalseStatus": {
+      "label": "primitive vanishing route is false",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the boundary-repair identity diagnostic ledger."
+    },
+    "alternativeAResolutionStatus": {
+      "label": "alternative A cannot be proved",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the boundary-repair identity diagnostic ledger."
+    },
+    "abstractRepairNonuniquenessStatus": {
+      "label": "abstract quotient repair is nonunique",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the boundary-repair identity diagnostic ledger."
+    },
+    "alternativeBAsStatedStatus": {
+      "label": "alternative B as stated is not well-defined",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the boundary-repair identity diagnostic ledger."
+    },
+    "boundaryRepairDiagnosticConsequenceStatus": {
+      "label": "boundary repair diagnostic consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The comparison theorem may use these diagnostic facts while the full boundary-repair identity remains a separate open/retired target."
+    }
+  },
+  "primitiveVanishingFalse": true,
+  "primitiveVanishingRouteStatus": {
+    "label": "primitive vanishing route is false",
+    "closed": true,
+    "status": "closed",
+    "reason": "Imported from the boundary-repair identity diagnostic ledger."
+  },
+  "alternativeAResolutionStatus": {
+    "label": "alternative A cannot be proved",
+    "closed": true,
+    "status": "closed",
+    "reason": "Imported from the boundary-repair identity diagnostic ledger."
+  },
+  "abstractRepairNonuniquenessStatus": {
+    "label": "abstract quotient repair is nonunique",
+    "closed": true,
+    "status": "closed",
+    "reason": "Imported from the boundary-repair identity diagnostic ledger."
+  },
+  "alternativeBAsStatedStatus": {
+    "label": "alternative B as stated is not well-defined",
+    "closed": true,
+    "status": "closed",
+    "reason": "Imported from the boundary-repair identity diagnostic ledger."
+  },
+  "alternativeAFalseClosed": true,
+  "abstractRepairNonuniquenessClosed": true,
+  "alternativeBAsStatedNotWellDefinedClosed": true,
+  "boundaryRepairDiagnosticConsequenceClosed": true,
+  "boundaryRepairIdentityClosed": false,
+  "proof": [
+    "Import the boundary-repair identity diagnostic ledger.",
+    "Extract the primitive-vanishing disproof.",
+    "Extract the abstract quotient-repair nonuniqueness statement.",
+    "Do not import the intentionally open full boundary-repair identity as a closed proof."
+  ],
+  "remainingAnalyticGap": null
+}

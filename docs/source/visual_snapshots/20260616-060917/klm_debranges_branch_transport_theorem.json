@@ -1,0 +1,80 @@
+{
+  "theoremName": "exact and strong-limit branch transport theorem",
+  "omega": 0.49,
+  "xiQuadrature": {
+    "tmax": 8.0,
+    "intervals": 1200
+  },
+  "rmax": 40.0,
+  "zNodes": [
+    {
+      "real": 0.0,
+      "imag": 0.35
+    },
+    {
+      "real": 0.45,
+      "imag": 0.4
+    },
+    {
+      "real": 0.95,
+      "imag": 0.55
+    },
+    {
+      "real": 1.55,
+      "imag": 0.75
+    },
+    {
+      "real": 2.25,
+      "imag": 0.95
+    }
+  ],
+  "statuses": {
+    "exactUCriterionStatus": {
+      "label": "exact branch transport criterion",
+      "closed": true,
+      "status": "closed",
+      "reason": "The exact U problem is reduced to equality of the joint Hardy and Volterra/KLM feature Gram kernels.  This is the standard Hilbert-space isometry extension criterion."
+    },
+    "exactUConstructedStatus": {
+      "label": "exact branch transport U constructed",
+      "closed": false,
+      "status": "open",
+      "reason": "The criterion is known, but no concrete z -> x_z map into the completed Volterra trace image has been constructed.",
+      "blocker": "z -> x_z in the completed Volterra trace image, with G_\u00b1(z)=G_\u00b1(f_{x_z})"
+    },
+    "hardyStrongTruncationStatus": {
+      "label": "Hardy branch strong truncation",
+      "closed": true,
+      "status": "closed",
+      "reason": "h_{z,R}^\u00b1=1_[0,R]h_z^\u00b1 converges strongly to h_z^\u00b1 in L^2(0,infty).  The finite signed Gram error is explicitly bounded by the exponential tail displayed in this JSON."
+    },
+    "klmClosedConeLimitStatus": {
+      "label": "KLM closed-cone branch limit",
+      "closed": false,
+      "status": "open",
+      "reason": "The Hardy truncation limit is closed, but the truncated Hardy branches have not yet been represented as KLM pullbacks or strong limits of KLM/Volterra feature branches.",
+      "blocker": "Construct x_{z,R} or phase-space pullback vectors such that G_\u00b1(x_{z,R}) -> h_{z,R}^\u00b1 jointly, with Gram convergence."
+    }
+  },
+  "exactTransportCriterion": {
+    "statement": "A single isometry U with U h_z^+=G_+(z) and U h_z^-=G_-(z) exists on the finite evaluation span iff the joint Gram matrix of {h_z^+,h_z^-} equals the joint Gram matrix of {G_+(z),G_-(z)}. The continuum statement is the corresponding Kolmogorov/isometry extension after density.",
+    "requiredJointGramEqualities": [
+      "<h_z^+,h_w^+> = <G_+(z),G_+(w)>",
+      "<h_z^-,h_w^-> = <G_-(z),G_-(w)>",
+      "<h_z^+,h_w^-> = <G_+(z),G_-(w)>",
+      "<h_z^-,h_w^+> = <G_-(z),G_+(w)>"
+    ],
+    "missingConcreteMap": "z -> x_z in the completed Volterra trace image, with G_\u00b1(z)=G_\u00b1(f_{x_z})"
+  },
+  "hardyStrongLimitProof": {
+    "truncatedFeature": "h_{z,R}^\u00b1 = 1_[0,R](r) (2*pi)^(-1/2) E_omega^\u00b1(z) exp(i z r)",
+    "tailNormSquared": "|E_omega^\u00b1(z)|^2 exp(-2 Im(z) R)/(4*pi*Im(z))",
+    "entryTailBoundMax": 7.902378431147618e-14,
+    "jointGramRelativeTailOnSample": 2.6899866762390306e-13,
+    "signedKernelRelativeTailOnSample": 1.4894397175479877e-13,
+    "signedKernelTailEigenMin": 0.0,
+    "signedKernelTailEigenMax": 1.2490009027033011e-15
+  },
+  "closedConeBridgeClosed": false,
+  "nextProofTarget": "Construct the concrete evaluation trace map z -> x_z, or truncated maps x_{z,R}, so that the Volterra/KLM branch features have the same joint Gram limits as the Hardy branches."
+}

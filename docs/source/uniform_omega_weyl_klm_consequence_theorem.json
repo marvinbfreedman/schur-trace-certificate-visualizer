@@ -1,0 +1,47 @@
+{
+  "theoremName": "uniform omega Weyl/KLM consequence theorem",
+  "proofClass": "symbolic identity",
+  "source": "uniform omega Weyl/KLM bridge",
+  "omegaRange": "|omega| < 1/2",
+  "statuses": {
+    "uniformOmegaCoverageInputStatus": {
+      "label": "uniform omega coverage input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full bridge proves coverage for every |omega|<1/2."
+    },
+    "weylOperatorPositivityInputStatus": {
+      "label": "positive Weyl operator family input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full bridge imports the positive Weyl operator family."
+    },
+    "klmPositiveTypeInputStatus": {
+      "label": "KLM positive-type input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full bridge applies the hbar=1 KLM/Weyl equivalence."
+    },
+    "uniformOmegaKlmConsequenceStatus": {
+      "label": "uniform omega KLM/Weyl consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Only the terminal all-omega KLM/Weyl positivity facts are exported upstream."
+    }
+  },
+  "uniformOmegaCoverageClosed": true,
+  "originalWeylKernelPositivityClosed": true,
+  "originalWeylOperatorPositiveClosed": true,
+  "originalKlmConditionClosed": true,
+  "uniformOmegaWeylKlmConsequenceClosed": true,
+  "proof": [
+    "Import the full uniform-omega Weyl/KLM bridge.",
+    "Export only all-omega coverage and KLM positive-type closure for the RH/de Branges ledger."
+  ],
+  "notExportedHere": [
+    "positive Weyl operator-family proof",
+    "hbar=1 KLM/Weyl equivalence proof",
+    "normalization details"
+  ],
+  "remainingAnalyticGap": null
+}

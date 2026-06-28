@@ -1,0 +1,207 @@
+{
+  "omega": 0.49,
+  "L": 2.0,
+  "s0": 0.2825,
+  "sourceMin": 0.08,
+  "sourceMax": 0.52,
+  "sourceGrid": 9,
+  "bases": [
+    18,
+    20,
+    22
+  ],
+  "localConstraintOffset": 8,
+  "globalConstraintRule": "ratio-floor",
+  "globalConstraintRatio": 0.625,
+  "cutoff": 6,
+  "jetOrder": 9,
+  "maxTraceQ": 16,
+  "lambda0": -0.00012862612661029079,
+  "lambda1": 9.42101395763874e-06,
+  "gap": 0.00013804714056792953,
+  "e8AtS0": -0.17949627136147217,
+  "lambdaDerivatives": [
+    -0.00012862612661029079,
+    0.0012586353561607226,
+    -0.010569790654668558,
+    0.08131470927283976,
+    -0.48480406794895253,
+    0.3262134539749114,
+    33.05440359008409,
+    -172.53886154243878,
+    -11867.497399991053,
+    225121.96880967333,
+    3735520.511510404,
+    -308912314.588315,
+    3399472962.8393655,
+    369400519027.39575,
+    -16726614828278.037,
+    -133545146978831.05,
+    5.480905836994158e+16
+  ],
+  "rows": [
+    {
+      "basis": 18,
+      "localTowerConstraints": 10,
+      "globalTraceConstraints": 11,
+      "globalTraceMin": 0.02,
+      "globalTraceMax": 0.545,
+      "localRank": 7,
+      "localNullity": 11,
+      "positiveModes": 11,
+      "cutoff": 6,
+      "highModes": 5,
+      "lambdaMinHigh": 3.7094961197795018e-06,
+      "lambdaMaxHigh": 0.1543899510231228,
+      "sourceTopEigenvalue": 18285135401.77335,
+      "globalTraceRankOnLocalHigh": 5,
+      "globalTraceKernelDimOnLocalHigh": 0,
+      "globalTraceMinPositiveEigenvalue": 2.8939625491037427e-12,
+      "globalTraceMaxEigenvalue": 61907339.30328198,
+      "sourceConstantOnGlobalTraceKernel": 0.0,
+      "topSourceDirections": [
+        {
+          "sourceMode": 4,
+          "sourceEigenvalue": 18285135401.77335,
+          "sourceNorm": 135222.5402873846,
+          "globalTraceL2": 7797.463822915046,
+          "globalTraceMax": 3888.846945019652,
+          "tracePerSourceNorm": 0.05766393536420274
+        },
+        {
+          "sourceMode": 3,
+          "sourceEigenvalue": 226461.95322692656,
+          "sourceNorm": 475.8801878907406,
+          "globalTraceL2": 960.7702852625227,
+          "globalTraceMax": 517.9648886971569,
+          "tracePerSourceNorm": 2.0189331468514724
+        },
+        {
+          "sourceMode": 2,
+          "sourceEigenvalue": 5.349515553432974,
+          "sourceNorm": 2.312901976615735,
+          "globalTraceL2": 424.2233011108036,
+          "globalTraceMax": 218.8544582883328,
+          "tracePerSourceNorm": 183.41603120229595
+        },
+        {
+          "sourceMode": 1,
+          "sourceEigenvalue": 7.550850691692526e-07,
+          "sourceNorm": 0.0008689563102764446,
+          "globalTraceL2": 104.61153538003913,
+          "globalTraceMax": 57.75463284144109,
+          "tracePerSourceNorm": 120387.5662595265
+        }
+      ]
+    },
+    {
+      "basis": 20,
+      "localTowerConstraints": 12,
+      "globalTraceConstraints": 12,
+      "globalTraceMin": 0.02,
+      "globalTraceMax": 0.545,
+      "localRank": 7,
+      "localNullity": 13,
+      "positiveModes": 12,
+      "cutoff": 6,
+      "highModes": 6,
+      "lambdaMinHigh": 2.4303999162118003e-07,
+      "lambdaMaxHigh": 0.15438995102312345,
+      "sourceTopEigenvalue": 350955401500.85675,
+      "globalTraceRankOnLocalHigh": 6,
+      "globalTraceKernelDimOnLocalHigh": 0,
+      "globalTraceMinPositiveEigenvalue": 1.4260927040692354e-15,
+      "globalTraceMaxEigenvalue": 101655590647.81381,
+      "sourceConstantOnGlobalTraceKernel": 0.0,
+      "topSourceDirections": [
+        {
+          "sourceMode": 5,
+          "sourceEigenvalue": 350955401500.85675,
+          "sourceNorm": 592414.8896684289,
+          "globalTraceL2": 308718.3713494674,
+          "globalTraceMax": 196334.55160989074,
+          "tracePerSourceNorm": 0.5211185213833083
+        },
+        {
+          "sourceMode": 4,
+          "sourceEigenvalue": 8128880.388973607,
+          "sourceNorm": 2851.119146751606,
+          "globalTraceL2": 78550.69213320134,
+          "globalTraceMax": 50085.81776229948,
+          "tracePerSourceNorm": 27.550827618935983
+        },
+        {
+          "sourceMode": 3,
+          "sourceEigenvalue": 7.664039577472116,
+          "sourceNorm": 2.7684001837653667,
+          "globalTraceL2": 8520.092066827745,
+          "globalTraceMax": 5430.727733673286,
+          "tracePerSourceNorm": 3077.62299568965
+        },
+        {
+          "sourceMode": 2,
+          "sourceEigenvalue": 0.00042117744335240043,
+          "sourceNorm": 0.02052260810307502,
+          "globalTraceL2": 10286.963462404225,
+          "globalTraceMax": 6563.994904289537,
+          "tracePerSourceNorm": 501250.29970546823
+        }
+      ]
+    },
+    {
+      "basis": 22,
+      "localTowerConstraints": 14,
+      "globalTraceConstraints": 13,
+      "globalTraceMin": 0.02,
+      "globalTraceMax": 0.545,
+      "localRank": 7,
+      "localNullity": 15,
+      "positiveModes": 14,
+      "cutoff": 6,
+      "highModes": 8,
+      "lambdaMinHigh": 9.638517436324169e-10,
+      "lambdaMaxHigh": 0.15438995102312347,
+      "sourceTopEigenvalue": 3661655939973.0273,
+      "globalTraceRankOnLocalHigh": 7,
+      "globalTraceKernelDimOnLocalHigh": 0,
+      "globalTraceMinPositiveEigenvalue": 4.889976243250541e-08,
+      "globalTraceMaxEigenvalue": 4.55330134954902e+16,
+      "sourceConstantOnGlobalTraceKernel": 0.0,
+      "topSourceDirections": [
+        {
+          "sourceMode": 7,
+          "sourceEigenvalue": 3661655939973.0273,
+          "sourceNorm": 1913545.3848741157,
+          "globalTraceL2": 153355583.42007318,
+          "globalTraceMax": 90203872.51191248,
+          "tracePerSourceNorm": 80.14211977008416
+        },
+        {
+          "sourceMode": 6,
+          "sourceEigenvalue": 274587561456.9068,
+          "sourceNorm": 524011.0318084027,
+          "globalTraceL2": 148304145.84774822,
+          "globalTraceMax": 87250482.14450265,
+          "tracePerSourceNorm": 283.017220717547
+        },
+        {
+          "sourceMode": 5,
+          "sourceEigenvalue": 165247.04233490035,
+          "sourceNorm": 406.50589458813556,
+          "globalTraceL2": 4570581.470296715,
+          "globalTraceMax": 2679723.1803599964,
+          "tracePerSourceNorm": 11243.57981309852
+        },
+        {
+          "sourceMode": 4,
+          "sourceEigenvalue": 0.45901567323356934,
+          "sourceNorm": 0.6775069543802258,
+          "globalTraceL2": 279385.95270205906,
+          "globalTraceMax": 166157.41264175007,
+          "tracePerSourceNorm": 412373.55704730377
+        }
+      ]
+    }
+  ],
+  "interpretation": "Top source-heavy directions left by the local trace tower are measured by the global interval trace operator.  Large trace norms and zero/small trace-kernel source constant support the global observability theorem."
+}

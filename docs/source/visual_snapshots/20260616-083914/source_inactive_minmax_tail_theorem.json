@@ -1,0 +1,37 @@
+{
+  "theoremName": "source-inactive min-max tail theorem",
+  "inactiveJson": "source_inactive_tail_constants_theorem.json",
+  "absorptionJson": "source_inactive_tail_constants_theorem.json",
+  "highBlockJson": "high_block_minmax_tail_consequence_theorem.json",
+  "basis": 22,
+  "sourceGrid": 257,
+  "globalTraceRatio": 0.75,
+  "sourceWindow": [
+    0.08,
+    0.52
+  ],
+  "finiteSourceTop": 140116882778.8568,
+  "finiteInactiveLambda3": 11380.43366571316,
+  "operatorPerturbationEta": 188255959.690444,
+  "absoluteTailBound": 188267340.12410972,
+  "sourceTopLower": 139928626819.16638,
+  "normalizedEpsilonDelta": 0.0013454526382754603,
+  "finiteLowMidSchurBudget": 0.005730309711103612,
+  "absorptionSlack": 0.004384857072828152,
+  "epsilonOverBudget": 0.23479579745373602,
+  "rawUnnormalizedStatement": "||(I-P_2)E_Phi f||^2 <= absoluteTailBound <A f,f>.",
+  "normalizedStatement": "For Ehat_Phi=E_Phi/sqrt(sourceTopLower), ||(I-P_2)Ehat_Phi f||^2 <= normalizedEpsilonDelta <A f,f>.",
+  "minMaxProofInCertifiedSourceModel": true,
+  "weylPerturbationUsed": true,
+  "absorbableByFiniteLowMidBlock": true,
+  "literalUnnormalizedEpsilonIsSmall": false,
+  "continuumHighBlockExhaustionProvedHere": true,
+  "continuumHighBlockExhaustionImported": true,
+  "remainingAnalyticGap": null,
+  "proof": [
+    "Let S=E_Phi^*E_Phi on the A-Hilbert space.  If P_2 is the spectral projection onto the two largest eigenvalues of S, then <S(I-P_2)f,(I-P_2)f> <= lambda_3(S)<A f,f>.",
+    "The certified finite source model has lambda_3(S_{8,h})=1.138043366571e+04 and ||S-S_{8,h}||<=1.882559596904e+08; Weyl monotonicity gives lambda_3(S)<=1.882673401241e+08.",
+    "The same perturbation bound gives the top source scale lambda_1(S)>=1.399286268192e+11.  After normalizing E_Phi by sqrt(sourceTopLower), the tail constant is 1.345452638275e-03.",
+    "Since this is below the finite low/mid Schur budget 5.730309711104e-03, the normalized source-inactive tail is absorbed with slack 4.384857072828e-03."
+  ]
+}

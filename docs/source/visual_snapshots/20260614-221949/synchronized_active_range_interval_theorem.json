@@ -1,0 +1,124 @@
+{
+  "theoremName": "synchronized active range interval theorem",
+  "proofClass": "interval/ball certificate",
+  "endpointJson": "endpoint_coefficient_synchronized_200_certificate.json",
+  "inactiveTailJson": "source_inactive_minmax_tail_theorem.json",
+  "conditionMatrixOrder": 200,
+  "controlledQuadratureOrder": 200,
+  "endpointIntervalMargins": {
+    "actualKrawczykQ": 1.0938554638804267e-19,
+    "scaledCompanionRadiusOverSimultaneousBudget": 3.1988616802888144e-15,
+    "boundaryRowRadiusOverSimultaneousBudget": 3.122484815877811e-15,
+    "endpointRadiusOverChartCapacity": 3.16061191846505e-15,
+    "allMarginsBelowOne": true
+  },
+  "inactiveTailConstants": {
+    "normalizedEpsilonDelta": 0.0013454526382754603,
+    "finiteLowMidSchurBudget": 0.005730309711103612,
+    "absorptionSlack": 0.004384857072828152,
+    "epsilonOverBudget": 0.23479579745373602,
+    "absoluteTailBound": 188267340.12410972,
+    "sourceTopLower": 139928626819.16638
+  },
+  "statuses": {
+    "endpointIntervalKrawczykCertificateStatus": {
+      "label": "synchronized endpoint interval/Krawczyk certificate",
+      "closed": true,
+      "status": "closed",
+      "reason": "The synchronized coefficient certificate encloses the scaled companion and active boundary rows inside the persistent Pluecker chart.  The reported Krawczyk and chart ratios are all strictly below one."
+    },
+    "endpointFullActiveRowRankStatus": {
+      "label": "endpoint map has full active row rank",
+      "closed": true,
+      "status": "closed",
+      "reason": "Nonvanishing of the persistent Pluecker chart coordinate gives full row rank for the active endpoint map."
+    },
+    "endpointGreenBvpSolvabilityStatus": {
+      "label": "endpoint Green BVP solvable for every active row",
+      "closed": true,
+      "status": "closed",
+      "reason": "Full active endpoint row rank removes Fredholm compatibility obstructions, so the endpoint free vector can be chosen for every active source row."
+    },
+    "greenTraceRepresentationStatus": {
+      "label": "active Green trace representation",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Volterra/Sturm Lagrange identity gives P_active E f as an interval trace integral once the endpoint BVP is solved; the endpoint concomitant is absorbed by the chosen free vector."
+    },
+    "closedTraceActiveAnnihilationStatus": {
+      "label": "closed trace annihilates active source",
+      "closed": true,
+      "status": "closed",
+      "reason": "If R_global f=0, then every interval trace Lambda_a(f) vanishes.  The Green trace representation therefore gives E_active f=0."
+    },
+    "activeRangeInclusionStatus": {
+      "label": "E_active in closure Range(R_global^*)",
+      "closed": true,
+      "status": "closed",
+      "reason": "For the closed trace operator R_global, closure Range(R_global^*)=(ker R_global)^perp.  The closed-trace annihilation implication places each active source row in that closed range."
+    },
+    "sourceInactiveTailDominationStatus": {
+      "label": "source-inactive min-max tail domination",
+      "closed": true,
+      "status": "closed",
+      "reason": "The imported min-max theorem bounds the source-inactive component by epsilon_delta in the normalized source metric, and epsilon_delta is below the low/mid Schur budget."
+    },
+    "certifiedModelCombinedSourceBoundStatus": {
+      "label": "active range plus inactive tail in the certified source model",
+      "closed": true,
+      "status": "closed",
+      "reason": "On ker R_global the active component vanishes; the inactive component is bounded by epsilon_delta and absorbed with positive Schur slack."
+    },
+    "fullContinuumCombinedSourceBoundStatus": {
+      "label": "full continuum active range plus inactive tail",
+      "closed": true,
+      "status": "closed",
+      "reason": "The active range theorem is closed by the endpoint interval certificate, and the inactive-tail theorem imports the high-block exhaustion passage."
+    }
+  },
+  "endpointGreenBvpSolvabilityStatus": {
+    "label": "endpoint Green BVP solvable for every active row",
+    "closed": true,
+    "status": "closed",
+    "reason": "Alias of statuses.endpointGreenBvpSolvabilityStatus."
+  },
+  "closedTraceActiveAnnihilationStatus": {
+    "label": "closed trace annihilates active source",
+    "closed": true,
+    "status": "closed",
+    "reason": "Alias of statuses.closedTraceActiveAnnihilationStatus."
+  },
+  "activeRangeInclusionStatus": {
+    "label": "E_active in closure Range(R_global^*)",
+    "closed": true,
+    "status": "closed",
+    "reason": "Alias of statuses.activeRangeInclusionStatus."
+  },
+  "sourceInactiveTailDominationStatus": {
+    "label": "source-inactive min-max tail domination",
+    "closed": true,
+    "status": "closed",
+    "reason": "Alias of statuses.sourceInactiveTailDominationStatus."
+  },
+  "certifiedModelCombinedSourceBoundStatus": {
+    "label": "active range plus inactive tail in the certified source model",
+    "closed": true,
+    "status": "closed",
+    "reason": "Alias of statuses.certifiedModelCombinedSourceBoundStatus."
+  },
+  "fullContinuumCombinedSourceBoundStatus": {
+    "label": "full continuum active range plus inactive tail",
+    "closed": true,
+    "status": "closed",
+    "reason": "Alias of statuses.fullContinuumCombinedSourceBoundStatus."
+  },
+  "formalProof": [
+    "The endpoint interval/Krawczyk certificate encloses the exact active endpoint flow in a Pluecker chart whose persistent coordinate remains separated from zero.",
+    "Therefore the active endpoint map has full row rank.  The adjoint endpoint Green BVP is solvable for every active source row, because the Fredholm compatibility cokernel is trivial.",
+    "Solving the endpoint BVP in the Lagrange identity yields P_active E f = integral_I K(a)Lambda_a(f) da for the closed trace domain.",
+    "If R_global f=0, then Lambda_a(f)=0 on I and the integral vanishes.  Hence ker R_global is contained in ker E_active.",
+    "The Hilbert annihilator identity for closed densely defined operators gives closure Range(R_global^*)=(ker R_global)^perp, so E_active lies in closure Range(R_global^*)."
+  ],
+  "theoremClosed": true,
+  "remainingAnalyticGap": null
+}

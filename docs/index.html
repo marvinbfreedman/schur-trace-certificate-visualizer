@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Schur Trace Certificate Visualizer</title>
+  <meta name="description" content="Static visual explainer for endpoint trace, Schur certificate, Krawczyk enclosure, and snapshot verification artifacts.">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --panel: #ffffff;
+      --ink: #18202f;
+      --muted: #5c6678;
+      --line: #d9dfeb;
+      --blue: #2869d8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top left, #e4edff, transparent 34rem), var(--bg);
+      color: var(--ink);
+      font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main {
+      width: min(980px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 64px 0;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 24px 80px rgba(24, 32, 47, 0.12);
+      padding: clamp(24px, 5vw, 56px);
+    }
+    .eyebrow {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    h1 {
+      max-width: 780px;
+      margin: 14px 0 16px;
+      font-size: clamp(36px, 7vw, 72px);
+      line-height: 0.96;
+      letter-spacing: -0.05em;
+    }
+    p {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+    a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0 18px;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+      background: #fff;
+    }
+    a.primary {
+      border-color: var(--blue);
+      background: var(--blue);
+      color: #fff;
+    }
+    .note {
+      margin-top: 32px;
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="card">
+      <div class="eyebrow">Mathematical verification artifact</div>
+      <h1>Schur trace certificate visualizer</h1>
+      <p>
+        A static, inspectable visual explainer for endpoint trace certificates, Krawczyk enclosure diagnostics,
+        spectral profiles, and reproducible visual snapshots. The artifact is published as raw GitHub Pages output
+        so every JSON-backed panel can be opened directly in a browser.
+      </p>
+      <div class="links">
+        <a class="primary" href="source/visual_explainer.html">Open visual explainer</a>
+        <a href="source/visual_snapshot_slideshow.html">Open snapshot slideshow</a>
+        <a href="source/visual_data.json">View visual data JSON</a>
+      </div>
+      <div class="note">
+        Direct explainer URL: <code>source/visual_explainer.html</code>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

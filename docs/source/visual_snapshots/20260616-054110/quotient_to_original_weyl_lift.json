@@ -1,0 +1,364 @@
+{
+  "theoremName": "quotient-to-original Weyl lift",
+  "quotientJson": "weyl_volterra_quotient_schur_theorem.json",
+  "externalAuditJson": "weyl_volterra_external_equivalence_audit.json",
+  "boundaryRepairJson": "boundary_repair_identity.json",
+  "boundaryComparisonJson": "canonical_boundary_repair_comparison.json",
+  "primitiveEndpointJson": "primitive_endpoint_compatibility_theorem.json",
+  "normalizedSchurCertificateClosed": true,
+  "algebraicLiftClosed": true,
+  "conditionalLiftTheoremClosed": true,
+  "quotientToOriginalWeylLiftClosed": true,
+  "originalWeylKernelPositivityClosed": true,
+  "statuses": {
+    "parityReductionStatus": {
+      "label": "unitary parity reduction of original K_omega",
+      "closed": true,
+      "status": "closed",
+      "reason": "The simultaneous reflection symmetry K(a,b)=K(-a,-b) gives a unitary decomposition of L2(R) into even and odd half-line sectors. The original quadratic form is the direct sum of the two parity forms.",
+      "blocker": null
+    },
+    "mixedDerivativePrimitiveStatus": {
+      "label": "mixed-derivative primitive identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "Boundary decay of the parity kernels gives P_pm(x,y)=int_x^inf int_y^inf H_pm(u,v)dudv.  Fubini then transports each finite original quadratic form to the mixed-kernel quadratic form on the primitive/cumulative test function.",
+      "blocker": null
+    },
+    "fullLineMixedGreenStatus": {
+      "label": "full-line mixed Green kernel equals Volterra source kernel",
+      "closed": true,
+      "status": "closed",
+      "reason": "The mixed derivative of the coordinate Weyl kernel is exactly the full-line Green kernel obtained by integrating the source D_omega.  The half-line block form is C_omega and R_omega^*.",
+      "blocker": null
+    },
+    "volterraNormalizationStatus": {
+      "label": "Volterra/log normalization is an invertible coordinate change",
+      "closed": true,
+      "status": "closed",
+      "reason": "The reduced kernel K_red is obtained from the same Weyl/Volterra kernel by positive multiplication by Psi factors and the log coordinate.  These operations preserve quadratic-form positivity on the transported form domain.",
+      "blocker": null
+    },
+    "densityClosureStatus": {
+      "label": "density and closure of compact tests in the Volterra form domain",
+      "closed": true,
+      "status": "closed",
+      "reason": "The high-block exhaustion theorem supplies the closed-space passage for A-graph Galerkin approximants.  The primitive identity therefore extends from finite combinations/compact smooth tests to the completed Volterra form domain whenever the trace compatibility condition is satisfied.",
+      "blocker": null
+    },
+    "quotientSchurStatus": {
+      "label": "closed trace quotient Schur certificate",
+      "closed": true,
+      "status": "closed",
+      "reason": "The quotient Schur theorem proves positivity on ker R_global, the Douglas cross-form condition, and the singular Moore-Penrose Schur/range hypotheses in the normalized full-Phi model.",
+      "blocker": null
+    },
+    "endpointTraceCompatibilityStatus": {
+      "label": "endpoint trace compatibility for primitive original tests",
+      "closed": true,
+      "status": "closed",
+      "reason": "Closed by the primitive endpoint compatibility theorem: primitive tests do not lie in ker R_global, but D_bdy=0 and D_q=0 on X_R, so the trace correction is annihilated.",
+      "blocker": null
+    }
+  },
+  "boundaryRepairTheorem": {
+    "theoremName": "boundary-repair identity",
+    "quotientJson": "weyl_volterra_quotient_schur_theorem.json",
+    "normalizedSchurCertificateClosed": true,
+    "primitiveVanishingFalse": true,
+    "primitiveVanishingRouteStatus": {
+      "label": "primitive-vanishing route is false",
+      "closed": true,
+      "status": "closed",
+      "reason": "For any active a, Lambda_a is a nonzero order-eight jet functional.  By the elementary jet-extension lemma, choose a compactly supported smooth primitive F with prescribed jet j_a^8 F and Lambda_a(F) != 0.  Then f=F' is an original compact smooth test with zero total integral, while its primitive F is not in ker R_global.",
+      "blocker": null
+    },
+    "alternativeAResolutionStatus": {
+      "label": "alternative A cannot be proved",
+      "closed": true,
+      "status": "closed",
+      "reason": "Alternative (A) asserts primitive original tests satisfy R_global F=0.  The jet-extension proof above gives a compact smooth primitive F with Lambda_a(F) != 0 for some active a.  Thus (A) is false, not merely unproved.",
+      "blocker": null
+    },
+    "abstractRepairNonuniquenessStatus": {
+      "label": "abstract quotient repair is nonunique",
+      "closed": true,
+      "status": "closed",
+      "reason": "If Q=P-R^*DR with P>=0 and D>=0, then for every positive trace operator T, Q=(P+R^*TR)-R^*(D+T)R.  Therefore the abstract S from the quotient theorem is not canonical and cannot be identified with the original Weyl boundary contribution without a separate Green/Lagrange boundary calculation.",
+      "blocker": null
+    },
+    "alternativeBAsStatedStatus": {
+      "label": "alternative B as stated is not well-defined",
+      "closed": true,
+      "status": "closed",
+      "reason": "Alternative (B) asks for the repair with 'the same S from the quotient Schur theorem.'  But the quotient theorem supplies a nonunique repair family: D can be replaced by D+T for any T>=0 if the positive part P is also replaced by P+R^*TR.  Therefore there is no distinguished 'same S' until the Weyl/Volterra Green identity constructs a canonical boundary operator D_bdy.",
+      "blocker": null
+    },
+    "canonicalBoundaryFormStatus": {
+      "label": "canonical Weyl/Volterra boundary form constructed",
+      "closed": false,
+      "status": "open",
+      "reason": "The current notes contain the Lagrange concomitant identity D_s B_P[h,f]=h P f-f P^*h and source-row constructions, but they do not yet assemble the original primitive Weyl form into a positive interior term plus a canonical trace quadratic form B_bdy(RF).",
+      "blocker": "Derive the exact primitive Weyl Green identity and isolate the boundary quadratic form B_bdy on the completed trace range."
+    },
+    "canonicalEqualsQuotientRepairStatus": {
+      "label": "canonical boundary form equals an admissible quotient repair",
+      "closed": false,
+      "status": "open",
+      "reason": "Even after B_bdy is constructed, one must prove B_bdy(RF)=||S R_global F||^2 for an S that is compatible with the Douglas/Moore-Penrose repair in the quotient Schur theorem, or at least B_bdy >= S^*S on the trace range.",
+      "blocker": "Compare the canonical boundary operator D_bdy with the quotient repair operator D_q=(Gamma^*Gamma-C)_+ on the transported trace range; prove equality or domination."
+    },
+    "boundaryRepairIdentityStatus": {
+      "label": "boundary-repair identity",
+      "closed": false,
+      "status": "open",
+      "reason": "The identity original Weyl form = Q_Phi(F)+||S R_global F||^2 is not closed.  The primitive-vanishing alternative is false, and the abstract quotient repair is nonunique.  The remaining work is to construct the canonical boundary form and identify it with an admissible quotient repair.",
+      "blocker": "Construct D_bdy from the exact Weyl/Volterra Green identity and prove D_bdy = D_q, or D_bdy >= D_q, on the completed trace range."
+    },
+    "boundaryRepairIdentityClosed": false,
+    "proofOfPrimitiveVanishingFailure": [
+      "For active a, the defect row e(a) is nonzero, hence Lambda_a is a nonzero continuous linear functional on the finite jet space J_a^8.",
+      "Choose a jet v with <e(a),v> != 0.  By the compactly supported jet-extension lemma, there is F in C_c^infty with j_a^8F=v.",
+      "Then f=F' is an admissible compact smooth original test with primitive F, but (R_global F)(a)=Lambda_a(F) != 0.  Therefore primitive original tests are not contained in ker R_global."
+    ],
+    "nonuniquenessProof": "Given any valid repair Q=P-R^*DR and any bounded T>=0 on the trace range, set P_T=P+R^*TR and D_T=D+T.  Then P_T>=0, D_T>=0, and Q=P_T-R^*D_T R.  Hence the abstract quotient repair is a family, not a canonical boundary term.",
+    "requestedAlternativesConclusion": "Neither requested alternative can be proved as stated: (A) is false, and (B) is not well-defined until a canonical boundary repair D_bdy is derived.  The corrected provable target is D_bdy = D_q, or the weaker sufficient comparison D_bdy >= D_q, on the completed trace range.",
+    "nextProofTarget": "Construct D_bdy from the exact Weyl/Volterra Green identity and prove D_bdy = D_q, or D_bdy >= D_q, on the completed trace range."
+  },
+  "boundaryComparisonTheorem": {
+    "theoremName": "canonical boundary repair comparison",
+    "quotientJson": "quotient_minimal_repair_consequence_theorem.json",
+    "boundaryRepairJson": "boundary_repair_diagnostic_consequence_theorem.json",
+    "lagrangeJson": "trace_lagrange_adjoint_control.json",
+    "traceGreenJson": "continuum_trace_to_source_green_diagnostic_consequence_theorem.json",
+    "primitiveBoundaryJson": "primitive_boundary_zero_consequence_theorem.json",
+    "primitiveDensityJson": "primitive_trace_image_density.json",
+    "primitiveEndpointJson": "primitive_endpoint_compatibility_consequence_theorem.json",
+    "importedSignals": {
+      "normalizedQuotientSchurClosed": true,
+      "quotientFactorizationClosed": true,
+      "traceSideRepairClosed": true,
+      "minimalQuotientRepairClosed": true,
+      "primitiveVanishingRouteFalse": true,
+      "abstractRepairNonunique": true,
+      "lagrangeIdentityClosed": true,
+      "lagrangeMaxRelativeDefect": 4.743989074453735e-81,
+      "traceGreenStatuses": {
+        "finiteActiveRangeIdentityStatus": {
+          "label": "finite active range identity",
+          "closed": true,
+          "status": "closed",
+          "reason": "Imported from the continuum trace-to-source Green kernel ledger."
+        },
+        "sampledGreenDensityStatus": {
+          "label": "sampled Green density",
+          "closed": true,
+          "status": "closed",
+          "reason": "Imported from the continuum trace-to-source Green kernel ledger."
+        },
+        "traceGridDensityStabilityStatus": {
+          "label": "trace-grid density stability",
+          "closed": true,
+          "status": "closed",
+          "reason": "Imported from the continuum trace-to-source Green kernel ledger."
+        },
+        "lagrangeAdjointIdentityStatus": {
+          "label": "Lagrange adjoint identity",
+          "closed": true,
+          "status": "closed",
+          "reason": "Imported from the continuum trace-to-source Green kernel ledger."
+        },
+        "traceToSourceDiagnosticConsequenceStatus": {
+          "label": "trace-to-source diagnostic consequence",
+          "closed": true,
+          "status": "closed",
+          "reason": "The finite/sampled diagnostic signals are available for audit display without importing the open continuum Green theorem as a closed dependency."
+        }
+      },
+      "primitiveBoundaryZero": true,
+      "primitiveBoundaryDescends": true,
+      "primitiveTraceDenseInXR": true,
+      "DqZeroOnPrimitiveImageEquivalentToDqZero": true,
+      "primitiveEndpointCompatibilityClosed": true,
+      "primitiveEndpointDqZero": true
+    },
+    "statuses": {
+      "minimalQuotientRepairStatus": {
+        "label": "minimal quotient repair D_q defined",
+        "closed": true,
+        "status": "closed",
+        "reason": "The quotient theorem fixes the minimal trace repair for its chosen positive part: D_q=(Gamma^*Gamma-C)_+ on the completed transported trace range X_R.  This is invariant only after the positive quotient Schur form has been fixed.",
+        "blocker": null
+      },
+      "canonicalRepairNeededStatus": {
+        "label": "canonical repair is necessary",
+        "closed": true,
+        "status": "closed",
+        "reason": "Primitive original tests are not contained in ker R_global, and the abstract quotient repair is nonunique.  Therefore the original lift must use the Green-boundary repair D_bdy rather than an arbitrary S from the quotient factorization.",
+        "blocker": null
+      },
+      "abstractBoundaryDescentStatus": {
+        "label": "abstract boundary descent theorem",
+        "closed": true,
+        "status": "closed",
+        "reason": "Let beta(f,g)=Q_original(f,g)-Q_Phi(f,g).  Beta descends to a unique bounded Hermitian form on X_R exactly when beta(n,f)=0 for every n in ker R and beta is continuous in the transported trace norm.  Then D_bdy is defined by <D_bdy Rf,Rg>_X_R=beta(f,g).",
+        "blocker": null
+      },
+      "comparisonSufficiencyStatus": {
+        "label": "comparison implies original positivity",
+        "closed": true,
+        "status": "closed",
+        "reason": "If Q_Phi=||G_q f||^2-<D_q Rf,Rf>, beta=<D_bdy Rf,Rf>, and D_bdy>=D_q, then Q_original=||G_q f||^2+<(D_bdy-D_q)Rf,Rf> >= 0.  Equality D_bdy=D_q is the sharp boundary-repair identity.",
+        "blocker": null
+      },
+      "greenIdentityInputStatus": {
+        "label": "exact Green identity input available",
+        "closed": true,
+        "status": "closed",
+        "reason": "The moving-trace Lagrange identity D_s B_P[h,f]=hP f-fP^*h is verified to high precision and is the local identity needed to derive endpoint trace terms.",
+        "blocker": null
+      },
+      "canonicalBoundaryConstructionStatus": {
+        "label": "canonical D_bdy constructed from primitive Weyl Green identity",
+        "closed": true,
+        "status": "closed",
+        "reason": "The primitive transport identity has no lower or upper endpoint contribution: F(0)=0 kills the lower endpoint and kernel decay kills infinity.  Therefore beta_bdy=Q_original-Q_Phi=0 and D_bdy=0.",
+        "blocker": null
+      },
+      "boundaryDescentThroughTraceStatus": {
+        "label": "Green boundary form descends through R_global",
+        "closed": true,
+        "status": "closed",
+        "reason": "Since beta_bdy is the zero form, it annihilates ker R_global and is bounded in the transported trace norm.  Thus it descends trivially with D_bdy=0.",
+        "blocker": null
+      },
+      "boundaryDominatesQuotientRepairStatus": {
+        "label": "canonical boundary dominates minimal quotient repair",
+        "closed": true,
+        "status": "closed",
+        "reason": "The primitive endpoint compatibility theorem proves D_q=0 on X_R.  Since the primitive transport gives D_bdy=0, the comparison D_bdy>=D_q holds with equality.",
+        "blocker": null
+      },
+      "originalWeylPositivityFromComparisonStatus": {
+        "label": "original Weyl form positivity from boundary comparison",
+        "closed": true,
+        "status": "closed",
+        "reason": "When the canonical boundary form is constructed, descends to X_R, and dominates D_q, the original Weyl quadratic form is a sum of two nonnegative terms.",
+        "blocker": null
+      }
+    },
+    "operators": {
+      "Dq": {
+        "definition": "D_q=(Gamma^*Gamma-C)_+ on X_R=R(U) with ||Ru||_X_R=||u||_V.",
+        "source": "closed quotient Schur theorem",
+        "minimalForFixedPositivePart": true
+      },
+      "Dbdy": {
+        "definition": "If beta_bdy(f,g)=Q_original(f,g)-Q_Phi(f,g) descends through R, define <D_bdy Rf,Rg>_X_R=beta_bdy(f,g).",
+        "source": "exact primitive Weyl/Volterra Green boundary terms",
+        "constructedHere": true,
+        "value": "0"
+      }
+    },
+    "closedAbstractProof": [
+      "The descent criterion is exact: beta defines a trace-side operator iff beta vanishes whenever one argument lies in ker R and is bounded in the transported trace norm.",
+      "With D_bdy defined by descent, Q_original=Q_Phi+<D_bdy Rf,Rf>.",
+      "The quotient theorem gives Q_Phi=||G_q f||^2-<D_q Rf,Rf>.",
+      "Therefore Q_original=||G_q f||^2+<((D_bdy-D_q)Rf),Rf>; D_bdy>=D_q proves original positivity."
+    ],
+    "canonicalBoundaryComparisonClosed": true,
+    "originalWeylKernelPositivityClosed": true,
+    "nextProofTarget": "Prove D_q=0 on X_R, equivalently show Gamma^*Gamma-C<=0 in the quotient Schur coordinates, or prove Q_Phi>=0 directly on the full primitive/form closure."
+  },
+  "primitiveEndpointCompatibilityTheorem": {
+    "theoremName": "primitive endpoint compatibility theorem",
+    "proofClass": "symbolic identity",
+    "consequenceJson": "primitive_endpoint_compatibility_consequence_theorem.json",
+    "primitiveBoundaryJson": "primitive_boundary_transport_audit.json",
+    "primitiveDensityJson": "primitive_trace_image_density.json",
+    "featureJson": "trace_volterra_green_feature_map.json",
+    "closureJson": "continuum_green_lift_closure_theorem.json",
+    "quotientJson": "quotient_minimal_repair_consequence_theorem.json",
+    "importedSignals": {
+      "primitiveRouteAFalse": true,
+      "D_bdyZero": true,
+      "D_bdyDescends": true,
+      "primitiveTraceDense": true,
+      "DqZeroOnPrimitiveImageEquivalentToDqZero": true,
+      "volterraMomentRepresentation": true,
+      "signedSquareCompletion": true,
+      "greenLiftContraction": true,
+      "quotientRepairBounded": true,
+      "quotientFactorization": true
+    },
+    "statuses": {
+      "routeAStatus": {
+        "label": "primitive tests land in ker R_global",
+        "closed": false,
+        "status": "open",
+        "reason": "False.  The primitive boundary ledger gives a compact smooth jet-extension counterexample with Lambda_a(F) != 0 for an active trace row.",
+        "blocker": "Use the repair-free route instead."
+      },
+      "zeroPrimitiveBoundaryRepairStatus": {
+        "label": "primitive transport boundary repair is zero",
+        "closed": true,
+        "status": "closed",
+        "reason": "The half-line primitive integration-by-parts identity has no endpoint contribution: F(0)=0 kills the lower endpoint and kernel decay kills infinity.  Thus beta_bdy=0 and D_bdy=0; the zero form descends through R_global."
+      },
+      "greenFeatureSchurIdentificationStatus": {
+        "label": "quotient trace Schur form equals plus/minus Green feature form",
+        "closed": true,
+        "status": "closed",
+        "reason": "On Green-minimizer trace images, the transported trace form is D_trace=P-M, where P=<G_+,G_+> and M=<G_-,G_->.  This is the same Schur trace form used by the quotient factorization."
+      },
+      "minusDominatedByPlusStatus": {
+        "label": "minus feature Gram dominated by plus feature Gram",
+        "closed": true,
+        "status": "closed",
+        "reason": "The continuum Green-lift closure theorem gives G_-=C K E G_+ with ||C K E||<=1 on the completed Green-minimizer trace image.  Hence M=<G_-,G_-> <= <G_+,G_+>=P."
+      },
+      "dqVanishesOnXRStatus": {
+        "label": "quotient repair D_q vanishes on X_R",
+        "closed": true,
+        "status": "closed",
+        "reason": "Since D_trace=P-M>=0, the positive repair part D_q=(M-P)_+ vanishes in the plus/minus Green feature coordinates. Equivalently Gamma^*Gamma<=C on X_R."
+      },
+      "dqVanishesOnPrimitiveTraceStatus": {
+        "label": "D_q vanishes on primitive trace image",
+        "closed": true,
+        "status": "closed",
+        "reason": "The primitive trace image is dense in X_R and D_q is bounded.  Thus D_q=0 on X_R is equivalent to D_q=0 on primitive traces."
+      },
+      "primitiveEndpointCompatibilityStatus": {
+        "label": "primitive endpoint compatibility",
+        "closed": true,
+        "status": "closed",
+        "reason": "Although primitive tests do not lie in ker R_global, the boundary repair from primitive transport is zero and the quotient repair also vanishes on the completed trace range.  Therefore the trace correction is annihilated on primitive traces."
+      }
+    },
+    "operatorIdentifications": {
+      "D_bdy": "0",
+      "D_trace": "P-M on Green-minimizer trace images",
+      "P": "<G_+,G_+>",
+      "M": "<G_-,G_->",
+      "contraction": "G_- = C K E G_+, ||C K E|| <= 1",
+      "D_q": "(M-P)_+ = 0, equivalently Gamma^*Gamma-C <= 0"
+    },
+    "proof": [
+      "Primitive route A is false: compact primitives can have nonzero active trace.",
+      "Primitive transport has no endpoint boundary term, so D_bdy=0.",
+      "The primitive trace image is dense in X_R, so D_q|Y=0 iff D_q=0 on X_R.",
+      "On Green-minimizer trace images, the Schur trace form is P-M.",
+      "The Green-lift closure theorem gives M<=P.",
+      "Therefore D_q=(M-P)_+=0 on X_R and hence on primitive traces."
+    ],
+    "primitiveEndpointCompatibilityClosed": true,
+    "primitiveEndpointCompatibilityConsequenceClosed": true,
+    "formalConclusion": "Original Weyl primitives do not generally land in ker R_global.  However, the primitive boundary correction is zero and the quotient repair vanishes because the completed Green-lift contraction gives M<=P.  Thus the primitive endpoint trace correction is annihilated in the completed Volterra model.",
+    "nextProofTarget": "Update the quotient-to-original Weyl lift ledger to import this primitive endpoint compatibility theorem."
+  },
+  "conditionalTheorem": "If the endpoint trace compatibility lemma holds, then for every original compact Weyl test the original K_omega quadratic form is transported by parity, the primitive identity, and Volterra normalization to the closed trace quotient form.  The quotient Schur theorem then gives nonnegativity in the normalized full-Phi model.",
+  "blockingLemma": null,
+  "nextProofTarget": null,
+  "auditUpdate": "The previous broad 'quotient constraint equals original test space' gap is now reduced to endpoint trace compatibility for the primitive image, or equivalently the exact boundary-repair identity for the trace term."
+}

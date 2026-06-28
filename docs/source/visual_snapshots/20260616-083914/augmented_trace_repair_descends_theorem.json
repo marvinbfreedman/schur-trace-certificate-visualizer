@@ -1,0 +1,46 @@
+{
+  "theoremName": "augmented trace repair descent theorem",
+  "proofClass": "analytic proof",
+  "descentPrincipleJson": "abstract_bounded_form_quotient_descent_theorem.json",
+  "nullFiberJson": "augmented_repair_null_fiber_compatibility_theorem.json",
+  "uniformBoundJson": "augmented_repair_uniform_quotient_bound_theorem.json",
+  "legacyQuotientJson": null,
+  "statement": "The finite augmented repair forms descend to a well-defined closed quadratic form D_aug on the transported quotient trace space X_aug.",
+  "statuses": {
+    "abstractDescentPrincipleInputStatus": {
+      "label": "abstract bounded-form descent input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The abstract quotient descent theorem says trace-compatible bounded forms descend uniquely to closed quotient forms."
+    },
+    "nullFiberCompatibilityInputStatus": {
+      "label": "null-fiber compatibility input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Finite repair null-fiber compatibility makes the repair independent of representative in the transported trace quotient."
+    },
+    "uniformQuotientBoundInputStatus": {
+      "label": "uniform quotient bound input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The interval finite repair upper bound gives a uniform bound in the transported quotient norm."
+    },
+    "traceRepairDescendsStatus": {
+      "label": "trace repair descends to X_aug",
+      "closed": true,
+      "status": "closed",
+      "reason": "Null-fiber compatibility and the uniform quotient bound verify the hypotheses of the abstract bounded-form quotient descent theorem."
+    }
+  },
+  "traceRepairDescendsClosed": true,
+  "transportedRepairFormWellDefinedClosed": true,
+  "transportedRepairFormBoundedClosed": true,
+  "transportedRepairRepresentativeIndependenceClosed": true,
+  "proof": [
+    "Import finite/transported null-fiber compatibility for the repair forms.",
+    "Import the uniform quotient-norm repair bound.",
+    "Apply the abstract bounded-form quotient descent principle.",
+    "The descended bounded form is the closed trace-side repair D_aug on X_aug."
+  ],
+  "remainingAnalyticGap": null
+}

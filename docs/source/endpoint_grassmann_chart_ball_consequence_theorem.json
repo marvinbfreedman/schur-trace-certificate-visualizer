@@ -1,0 +1,26 @@
+{
+  "theoremName": "endpoint Grassmann chart ball consequence theorem",
+  "proofClass": "symbolic identity",
+  "chartCapacityInputStatus": {
+    "label": "Grassmann chart capacity input",
+    "closed": true,
+    "status": "closed",
+    "reason": "The chart coordinate, threshold, and noncollapse capacity needed by the synchronized endpoint coefficient certificate are available."
+  },
+  "conditionalChartBallTheoremStatus": {
+    "label": "conditional chart ball theorem",
+    "closed": true,
+    "status": "closed",
+    "reason": "The certified chart ball remains inside the noncollapse capacity."
+  },
+  "chartCoordinate": [
+    0,
+    1
+  ],
+  "threshold": 0.5,
+  "radiusCapacityForNoncollapse": 0.9643323749252883,
+  "radiusCapacityForThreshold": 0.46433237492528834,
+  "certifiedProjectiveRadius": 0.125,
+  "endpointGrassmannChartCapacityInputClosed": true,
+  "remainingAnalyticGap": null
+}

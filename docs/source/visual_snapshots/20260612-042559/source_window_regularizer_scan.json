@@ -1,0 +1,123 @@
+{
+  "omega": 0.49,
+  "L": 2.0,
+  "basis": 20,
+  "constraints": 12,
+  "rank": 12,
+  "nullity": 8,
+  "positiveModes": 8,
+  "cutoff": 6,
+  "sourceMin": 0.08,
+  "sourceMax": 0.52,
+  "sourceCount": 9,
+  "lambdaMinA": 4.410511401245314e-11,
+  "lambdaMaxA": 0.1543899487639319,
+  "integratedHighAbsorb": 363983.27335755696,
+  "integratedFullAbsorb": 304906186061.7362,
+  "integratedHighFullFrac": 1.1937549646298715e-06,
+  "integratedHighSize": 6256.884681390131,
+  "integratedFullSize": 15148.710685037093,
+  "worstSingle": {
+    "u": 0.08700474730832226,
+    "weight": 0.01788036543954637,
+    "pStarH": -107.26214752596054,
+    "highAbsorb": 932023.2100604306,
+    "fullAbsorb": 780355750648.8387,
+    "highFullFrac": 1.1943568164718278e-06,
+    "highSize": 16021.906381340741,
+    "fullSize": 38784.64422636937
+  },
+  "perSource": [
+    {
+      "u": 0.08700474730832226,
+      "weight": 0.01788036543954637,
+      "pStarH": -107.26214752596054,
+      "highAbsorb": 932023.2100604306,
+      "fullAbsorb": 780355750648.8387,
+      "highFullFrac": 1.1943568164718278e-06,
+      "highSize": 16021.906381340741,
+      "fullSize": 38784.64422636937
+    },
+    {
+      "u": 0.11607315638814013,
+      "weight": 0.03974259535286863,
+      "pStarH": -106.58648508273872,
+      "highAbsorb": 920437.0450297932,
+      "fullAbsorb": 770705464842.6367,
+      "highFullFrac": 1.194278601901089e-06,
+      "highSize": 15822.684483584162,
+      "fullSize": 38303.194075661835
+    },
+    {
+      "u": 0.16505828480587012,
+      "weight": 0.0573343532086458,
+      "pStarH": -105.3375565167227,
+      "highAbsorb": 899196.5463447996,
+      "fullAbsorb": 753006365021.7249,
+      "highFullFrac": 1.1941420260356723e-06,
+      "highSize": 15457.465509020269,
+      "fullSize": 37420.47083111685
+    },
+    {
+      "u": 0.22866424685116205,
+      "weight": 0.06871635694880063,
+      "pStarH": -103.52297732209333,
+      "highAbsorb": 868752.9800744624,
+      "fullAbsorb": 727625444585.5997,
+      "highFullFrac": 1.1939562951502311e-06,
+      "highSize": 14934.01751655222,
+      "fullSize": 36155.11177884799
+    },
+    {
+      "u": 0.3,
+      "weight": 0.07265265810027714,
+      "pStarH": -101.25434857934155,
+      "highAbsorb": 831399.8380072507,
+      "fullAbsorb": 696467756600.2439,
+      "highFullFrac": 1.1937377288873614e-06,
+      "highSize": 14291.781778264884,
+      "fullSize": 34602.352920679594
+    },
+    {
+      "u": 0.371335753148838,
+      "weight": 0.06871635694880063,
+      "pStarH": -98.77095497521566,
+      "highAbsorb": 791424.1813252781,
+      "fullAbsorb": 663106675510.1531,
+      "highFullFrac": 1.1935095974058858e-06,
+      "highSize": 13604.47099782234,
+      "fullSize": 32940.371843687586
+    },
+    {
+      "u": 0.4349417151941299,
+      "weight": 0.0573343532086458,
+      "pStarH": -96.40335252163047,
+      "highAbsorb": 754208.6574545325,
+      "fullAbsorb": 632036466501.5608,
+      "highFullFrac": 1.1932992753238077e-06,
+      "highSize": 12964.628117843997,
+      "fullSize": 31392.979817549418
+    },
+    {
+      "u": 0.4839268436118599,
+      "weight": 0.03974259535286863,
+      "pStarH": -94.49741355133297,
+      "highAbsorb": 724888.5193748198,
+      "fullAbsorb": 607550190812.7084,
+      "highFullFrac": 1.1931335556082208e-06,
+      "highSize": 12460.537402361646,
+      "fullSize": 30173.771164029884
+    },
+    {
+      "u": 0.5129952526916778,
+      "weight": 0.01788036543954637,
+      "pStarH": -93.33741063029099,
+      "highAbsorb": 707323.1883996681,
+      "fullAbsorb": 592877692713.1799,
+      "highFullFrac": 1.193033904113937e-06,
+      "highSize": 12158.545932860405,
+      "fullSize": 29443.318095616327
+    }
+  ],
+  "interpretation": "Gauss-window source regularizer. Stability of the high/full fraction supports replacing sampled source points by a uniform source-window Hardy/Green estimate."
+}

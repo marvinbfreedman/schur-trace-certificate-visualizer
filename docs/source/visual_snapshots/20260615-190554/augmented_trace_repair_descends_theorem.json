@@ -1,0 +1,28 @@
+{
+  "theoremName": "augmented trace repair descent theorem",
+  "proofClass": "analytic proof",
+  "quotientJson": "augmented_trace_quotient_compatibility_theorem.json",
+  "statement": "The finite augmented repair forms descend to a well-defined closed quadratic form D_aug on the transported quotient trace space X_aug.",
+  "statuses": {
+    "traceQuotientCompatibilityInputStatus": {
+      "label": "trace quotient compatibility input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Finite trace quotient norms converge to the transported quotient norm on X_aug."
+    },
+    "traceRepairDescendsStatus": {
+      "label": "trace repair descends to X_aug",
+      "closed": true,
+      "status": "closed",
+      "reason": "Quotient compatibility identifies finite trace coordinates modulo the null fiber, so the finite repairs have a single closed transported trace-space limit."
+    }
+  },
+  "traceRepairDescendsClosed": true,
+  "transportedRepairFormWellDefinedClosed": true,
+  "proof": [
+    "Use quotient compatibility to identify the finite trace quotients with X_aug.",
+    "Transport the finite repair forms through those quotient coordinates.",
+    "The identified quotient topology gives a unique closed limit form D_aug."
+  ],
+  "remainingAnalyticGap": null
+}

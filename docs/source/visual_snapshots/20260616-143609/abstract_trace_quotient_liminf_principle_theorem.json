@@ -1,0 +1,29 @@
+{
+  "theoremName": "abstract trace quotient liminf principle",
+  "proofClass": "abstract functional analytic lemma",
+  "statement": "Weak representative compactness, trace identification, and graph norm lower semicontinuity imply the quotient-norm lower bound.",
+  "statuses": {
+    "abstractQuotientLiminfPrincipleStatus": {
+      "label": "abstract quotient liminf principle",
+      "closed": true,
+      "status": "closed",
+      "reason": "For any near-minimizing representatives f_N, weak graph convergence and trace identification give an admissible limit representative f for x.  The quotient norm of x is bounded by ||f||_V, and lower semicontinuity bounds ||f||_V by liminf ||f_N||_V."
+    },
+    "noModelSpecificInputStatus": {
+      "label": "no model-specific input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The lemma is only the Hilbert quotient inequality.  All compactness and trace-convergence hypotheses are supplied by separate augmented trace theorems."
+    }
+  },
+  "abstractTraceQuotientLiminfPrincipleClosed": true,
+  "noVolterraOrThetaClaimed": true,
+  "proof": [
+    "Choose representatives f_N with ||f_N||_V within epsilon_N of the finite quotient norm.",
+    "Use the assumed weak representative limit f and trace identification Rf=x.",
+    "By the quotient definition, ||x||_X <= ||f||_V.",
+    "By weak lower semicontinuity, ||f||_V <= liminf ||f_N||_V.",
+    "Let epsilon_N tend to zero."
+  ],
+  "remainingAnalyticGap": null
+}

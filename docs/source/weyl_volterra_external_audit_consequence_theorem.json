@@ -1,0 +1,53 @@
+{
+  "theoremName": "Weyl/Volterra external audit consequence theorem",
+  "proofClass": "symbolic identity",
+  "source": "Weyl/Volterra external equivalence audit",
+  "normalizedSchurCertificateClosed": true,
+  "conditionalQuotientToOriginalLiftClosed": true,
+  "externalFoundationClosed": true,
+  "originalWeylKernelPositivityClosed": true,
+  "originalKlmConditionClosed": true,
+  "rhFacingChainClosed": true,
+  "closedCount": 11,
+  "openCount": 0,
+  "blockingItems": [],
+  "nextProofTarget": null,
+  "statuses": {
+    "normalizedSchurCertificateStatus": {
+      "label": "normalized Schur certificate summary",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full audit records the normalized Weyl/Volterra Schur certificate as closed."
+    },
+    "originalKlmConditionStatus": {
+      "label": "original KLM condition summary",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full audit records the original KLM condition as closed."
+    },
+    "rhFacingChainStatus": {
+      "label": "RH-facing chain summary",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full audit records the RH-facing chain as closed."
+    },
+    "externalAuditConsequenceStatus": {
+      "label": "external audit consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Only the audit summary facts are exported upstream."
+    }
+  },
+  "externalAuditConsequenceClosed": true,
+  "proof": [
+    "Import the full Weyl/Volterra external equivalence audit.",
+    "Export only closed/open counts, blocking items, and terminal chain status flags."
+  ],
+  "notExportedHere": [
+    "audit item evidence list",
+    "quotient theorem filename",
+    "bridge theorem filename",
+    "source and high-block evidence filenames"
+  ],
+  "remainingAnalyticGap": null
+}

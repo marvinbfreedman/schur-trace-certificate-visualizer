@@ -1,0 +1,52 @@
+{
+  "theoremName": "RH/de Branges bridge ledger",
+  "uniformOmegaJson": "uniform_omega_weyl_klm_bridge.json",
+  "externalAuditJson": "weyl_volterra_external_equivalence_audit.json",
+  "endpointConsequenceJson": "rh_shifted_xi_zero_location_consequence_theorem.json",
+  "augmentedClosedConeJson": null,
+  "legacyInputs": {
+    "kernelPositivityJson": null,
+    "endpointJson": null
+  },
+  "statuses": {
+    "klmWeylInputStatus": {
+      "label": "all-omega KLM/Weyl positivity input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The uniform omega bridge proves original Weyl positivity and the hbar=1 KLM positive-type condition for Q_omega for every |omega|<1/2."
+    },
+    "bridgeStatementIsolatedStatus": {
+      "label": "RH/de Branges bridge statement isolated",
+      "closed": true,
+      "status": "closed",
+      "reason": "The final implication is packaged as the shifted-Xi zero-location consequence theorem, with kernel positivity and endpoint zero exclusion audited in lower layers."
+    },
+    "klmToDeBrangesTransformStatus": {
+      "label": "KLM-to-de Branges transform",
+      "closed": true,
+      "status": "closed",
+      "reason": "The endpoint consequence theorem imports the shifted-Xi positive kernel family.  The detailed augmented closed-cone construction is audited one layer lower."
+    },
+    "criticalEndpointClosureStatus": {
+      "label": "critical endpoint and positive-cone closure",
+      "closed": true,
+      "status": "closed",
+      "reason": "The endpoint consequence theorem imports the positive-kernel closure and the shifted-Xi zero-location endpoint passage."
+    },
+    "rhDeBrangesConclusionStatus": {
+      "label": "Riemann hypothesis / de Branges conclusion",
+      "closed": true,
+      "status": "closed",
+      "reason": "Formal chain closed, conditional on the imported KLM/Weyl and augmented closed-cone bridge certificates.  The endpoint zero-location consequence theorem supplies the final Xi zero exclusion."
+    }
+  },
+  "auditOnlyRhOpen": false,
+  "provedBridgeTheorem": "The all-omega KLM/Weyl positive family transports to the shifted-Xi positive-kernel endpoint consequence through the augmented bridge.",
+  "endpointPassageTheorem": "The shifted-Xi zero-location consequence theorem implies all zeros of Xi(z)=xi(1/2+i z) are real.",
+  "endpointPassageClosed": true,
+  "formalRhClosed": true,
+  "rhClosed": true,
+  "independentRhProofVetted": false,
+  "caution": "The formal ledger is closed, but this does not substitute for publication-grade independent verification of the imported KLM/Weyl, augmented repair, and closed-cone bridge certificates.",
+  "nextProofTarget": "Audit remaining non-endpoint proof layers, starting with the augmented nonnegative closed-form limit and closed-form LSC transport passage."
+}

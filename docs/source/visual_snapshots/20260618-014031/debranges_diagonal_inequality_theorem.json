@@ -1,0 +1,35 @@
+{
+  "theoremName": "shifted Xi diagonal de Branges inequality theorem",
+  "proofClass": "symbolic identity",
+  "kernelPositivityJson": "shifted_xi_debranges_kernel_positivity_theorem.json",
+  "normalizationJson": "shifted_xi_debranges_normalization_theorem.json",
+  "statement": "For z in C_+ and 0<omega<1/2, shifted-Xi de Branges kernel positivity implies |Xi(z-i omega)| <= |Xi(z+i omega)|.",
+  "statuses": {
+    "kernelPositivityInputStatus": {
+      "label": "shifted kernel positivity input",
+      "closed": true,
+      "status": "closed",
+      "reason": "K_{E_omega}(z,z)>=0 for every z in C_+."
+    },
+    "diagonalFormulaInputStatus": {
+      "label": "diagonal formula input",
+      "closed": true,
+      "status": "closed",
+      "reason": "K_E(z,z) has denominator 4*pi*Im z and the shifted-Xi numerator."
+    },
+    "diagonalInequalityStatus": {
+      "label": "diagonal shifted-Xi inequality",
+      "closed": true,
+      "status": "closed",
+      "reason": "Since 4*pi*Im z>0, K_E(z,z)>=0 gives the stated modulus inequality."
+    }
+  },
+  "diagonalInequalityClosed": true,
+  "shiftedXiDiagonalInequalityClosed": true,
+  "proof": [
+    "Apply positive definiteness to the one-point evaluation set {z}.",
+    "Use the diagonal normalization formula.",
+    "Multiply by the positive denominator 4*pi*Im z."
+  ],
+  "remainingAnalyticGap": null
+}

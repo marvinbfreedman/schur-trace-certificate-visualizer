@@ -1,0 +1,27 @@
+{
+  "theoremName": "closed LSC nonnegative cone consequence theorem",
+  "proofClass": "symbolic identity",
+  "conePrincipleJson": "closed_lsc_nonnegative_cone_principle_theorem.json",
+  "statement": "The closed-LSC nonnegative cone principle supplies the abstract cone-closure consequence needed by the augmented nonnegative closed-form limit theorem.",
+  "statuses": {
+    "closedLscNonnegativeConePrincipleStatus": {
+      "label": "closed LSC nonnegative cone principle",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the abstract closed-LSC nonnegative cone principle theorem."
+    },
+    "closedLscNonnegativeConeConsequenceStatus": {
+      "label": "closed LSC nonnegative cone consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "A closed lower-semicontinuous envelope of nonnegative core forms remains nonnegative."
+    }
+  },
+  "closedLscNonnegativeConePrincipleClosed": true,
+  "closedLscNonnegativeConeConsequenceClosed": true,
+  "proof": [
+    "Import the abstract closed-LSC nonnegative cone principle.",
+    "Extract only the cone-closure consequence used upstream."
+  ],
+  "remainingAnalyticGap": null
+}

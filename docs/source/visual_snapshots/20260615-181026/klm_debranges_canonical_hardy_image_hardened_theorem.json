@@ -1,0 +1,58 @@
+{
+  "theoremName": "hardened canonical Hardy image theorem",
+  "proofClass": "symbolic identity",
+  "domain": {
+    "z": "Im z > 0",
+    "w": "Im w > 0",
+    "r": "0 <= r < infinity"
+  },
+  "shiftedXiSpecialization": {
+    "Eomega": "E_omega(z)=Xi(z+i omega)",
+    "EomegaSharp": "E_omega#(z)=Xi(z-i omega)",
+    "omegaRangeUsedHere": "real omega; no omega estimate is needed for this identity"
+  },
+  "formulas": {
+    "kernel": "K_E(w,z)=(E(z)conj(E(w))-E#(z)conj(E#(w)))/(2*pi*i*(conj(w)-z))",
+    "hPlus": "h_z^+(r)=(2*pi)^(-1/2)E(z)exp(i z r)",
+    "hMinus": "h_z^-(r)=(2*pi)^(-1/2)E#(z)exp(i z r)",
+    "hardyIntegral": "int_0^infty exp(i(z-conj(w))r)dr=1/(i*(conj(w)-z))",
+    "branchIdentity": "K_E(w,z)=<h_z^+,h_w^+>_{L2(0,infty)}-<h_z^-,h_w^->_{L2(0,infty)}"
+  },
+  "statuses": {
+    "halfLineHardyIntegralStatus": {
+      "label": "half-line Hardy integral",
+      "closed": true,
+      "status": "closed",
+      "reason": "For Im z, Im w > 0, exp(i(z-conj(w))r) decays like exp(-(Im z+Im w)r).  Direct integration gives int_0^infty exp(i(z-conj(w))r)dr=1/(i(conj(w)-z))."
+    },
+    "plusBranchGramStatus": {
+      "label": "plus branch Gram identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "Substituting h_z^+(r)=(2*pi)^(-1/2)E(z)exp(i z r) into the L2(0,infty) inner product gives E(z)conj(E(w))/(2*pi*i*(conj(w)-z))."
+    },
+    "minusBranchGramStatus": {
+      "label": "minus branch Gram identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The same calculation with E# gives E#(z)conj(E#(w))/(2*pi*i*(conj(w)-z))."
+    },
+    "canonicalHardyImageStatus": {
+      "label": "canonical Hardy/de Branges kernel identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "Subtracting the minus branch Gram from the plus branch Gram is exactly the de Branges kernel formula."
+    }
+  },
+  "canonicalHardyImageClosed": true,
+  "canonicalHardyIdentityClosed": true,
+  "symbolicIdentityClosed": true,
+  "proof": [
+    "Because Im(z-conj(w))=Im z+Im w>0, the exponential exp(i(z-conj(w))r) is integrable on the positive half-line.",
+    "Evaluating the antiderivative gives the Hardy denominator 1/(i(conj(w)-z)).",
+    "The plus branch inner product equals the E(z)conj(E(w)) term of K_E; the minus branch inner product equals the E#(z)conj(E#(w)) term.",
+    "Their signed difference is precisely K_E(w,z)."
+  ],
+  "scope": "This theorem proves the canonical Hardy branch image only.  The separate augmented closed-cone theorem supplies the KLM pullback and positive-cone closure layers.",
+  "remainingAnalyticGap": null
+}

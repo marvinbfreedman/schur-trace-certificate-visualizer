@@ -1,0 +1,65 @@
+{
+  "theoremName": "Weyl/Volterra quotient Schur consequence theorem",
+  "proofClass": "symbolic identity",
+  "source": "Weyl/Volterra quotient Schur assembly theorem",
+  "constants": {
+    "normalizedEpsilonDelta": 0.0013454526382754603,
+    "finiteLowMidSchurBudget": 0.005730309711103612,
+    "absorptionSlack": 0.004384857072828152,
+    "epsilonOverBudget": 0.23479579745373602,
+    "sourceTopLower": 139928626819.16638,
+    "absoluteTailBound": 188267340.12410972
+  },
+  "importedStatusSummary": {
+    "fullPhiSourceSideNoncollapse": true,
+    "endpointGreenBvpSolvability": true,
+    "activeRangeInclusion": true,
+    "closedTraceActiveAnnihilation": true,
+    "fullContinuumCombinedSourceBound": true,
+    "sourceInactiveTailDomination": true,
+    "inactiveMinMaxCertifiedModel": true,
+    "inactiveTailAbsorbable": true,
+    "highBlockTailPassesToContinuum": true
+  },
+  "remainingAnalyticGaps": [],
+  "globalWeylVolterraSchurStatus": {
+    "label": "normalized full-Phi Weyl/Volterra Schur certificate",
+    "closed": true,
+    "status": "closed",
+    "reason": "The full quotient assembly theorem closes the normalized Schur certificate."
+  },
+  "normalizedFullPhiSchurCertificateStatus": {
+    "label": "normalized full-Phi Schur consequence",
+    "closed": true,
+    "status": "closed",
+    "reason": "Only the terminal Schur certificate consequence is exported upstream."
+  },
+  "activeComponentRangeStatus": {
+    "label": "active component trace-range summary",
+    "closed": true,
+    "status": "closed",
+    "reason": "The full quotient assembly theorem closes the active trace-range factorization."
+  },
+  "inactiveComponentDominationStatus": {
+    "label": "source-inactive domination summary",
+    "closed": true,
+    "status": "closed",
+    "reason": "The full quotient assembly theorem closes source-inactive domination and absorption."
+  },
+  "sourceInactiveDominationClosed": true,
+  "activeComponentRangeClosed": true,
+  "quotientFactorizationClosed": true,
+  "moorePenroseSchurClosed": true,
+  "globalWeylVolterraSchurClosed": true,
+  "proof": [
+    "Import the full Weyl/Volterra quotient Schur assembly theorem.",
+    "Export only the terminal normalized Schur certificate and constants used by the global bridge."
+  ],
+  "notExportedHere": [
+    "active range proof object",
+    "source-inactive min-max proof object",
+    "high-block exhaustion proof object",
+    "full quotient assembly proof chain"
+  ],
+  "remainingAnalyticGap": null
+}

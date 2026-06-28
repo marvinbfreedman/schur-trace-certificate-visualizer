@@ -1,0 +1,25 @@
+{
+  "theoremName": "Riemann kernel normalization theorem",
+  "proofClass": "symbolic identity",
+  "statuses": {
+    "riemannKernelFormulaStatus": {
+      "label": "Riemann kernel Fourier representation",
+      "closed": true,
+      "status": "closed",
+      "reason": "The even Riemann kernel Phi is the Fourier kernel for Xi in the normalization used throughout the Weyl/KLM ledger."
+    },
+    "harmlessScalarNormalizationStatus": {
+      "label": "harmless Xi scalar normalization",
+      "closed": true,
+      "status": "closed",
+      "reason": "Multiplying Xi or Phi by a fixed nonzero scalar only rescales the finite Gram matrices by a positive scalar after the paired conjugation used in the kernel."
+    }
+  },
+  "riemannKernelNormalizationClosed": true,
+  "proof": [
+    "Use the fixed even Fourier representation Xi(z)=int Phi(t)e^{izt}dt.",
+    "Track any conventional scalar as a global kernel rescaling.",
+    "Global positive scalar rescalings preserve positive semidefiniteness."
+  ],
+  "remainingAnalyticGap": null
+}

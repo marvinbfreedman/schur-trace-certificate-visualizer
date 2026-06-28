@@ -1,0 +1,29 @@
+{
+  "theoremName": "closed LSC nonnegative cone principle",
+  "proofClass": "abstract functional analytic lemma",
+  "statement": "If a closed lower-semicontinuous quadratic form is the Mosco/lower-envelope limit of nonnegative core quadratic forms, then the completed closed form is nonnegative.",
+  "statuses": {
+    "closedLscConePrincipleStatus": {
+      "label": "closed LSC nonnegative cone principle",
+      "closed": true,
+      "status": "closed",
+      "reason": "For any completed-domain vector f, the closed lower envelope is computed from neighborhood liminf infima of the core forms.  Since every core form is nonnegative, each such neighborhood infimum is nonnegative, so the closed envelope cannot assign a negative value."
+    },
+    "noModelSpecificInputStatus": {
+      "label": "no model-specific input",
+      "closed": true,
+      "status": "closed",
+      "reason": "This lemma uses only closed lower-semicontinuity and the ordered cone structure of quadratic forms; all Volterra/trace assumptions are supplied by separate theorems."
+    }
+  },
+  "closedLscNonnegativeConePrincipleClosed": true,
+  "noTraceOrQuotientClaimed": true,
+  "proof": [
+    "The pointwise nonnegative core forms lie in the closed convex cone of nonnegative quadratic forms.",
+    "The closed lower envelope is the Gamma/Mosco liminf envelope: a supremum of neighborhood liminf infima.",
+    "Every neighborhood liminf infimum of nonnegative core forms is nonnegative.",
+    "A negative value of the closed envelope would therefore require a negative core value in some neighborhood, contradicting core nonnegativity.",
+    "Therefore the lower-semicontinuous completed envelope remains in the nonnegative cone."
+  ],
+  "remainingAnalyticGap": null
+}

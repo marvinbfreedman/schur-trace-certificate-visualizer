@@ -1,0 +1,47 @@
+{
+  "theoremName": "augmented trace quotient compatibility theorem",
+  "proofClass": "analytic proof",
+  "limsupJson": "augmented_mosco_limsup_theorem.json",
+  "liminfJson": "augmented_mosco_liminf_theorem.json",
+  "traceConvergenceJson": "xi_augmented_trace_convergence_theorem.json",
+  "transportedTraceSpace": {
+    "name": "X_aug",
+    "definition": "closure Ran(R_aug) with quotient norm inf{||f||_V:R_aug f=x}"
+  },
+  "statement": "The finite trace quotient norms induced by R_aug,N converge to the transported quotient norm on X_aug in the Mosco sense.",
+  "statuses": {
+    "limsupRecoveryInputStatus": {
+      "label": "limsup recovery input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Recovery sequences provide the upper bound for quotient norm convergence."
+    },
+    "liminfCompactnessInputStatus": {
+      "label": "liminf compactness input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Weak compactness and lower semicontinuity provide the lower bound for quotient norm convergence."
+    },
+    "traceConvergenceInputStatus": {
+      "label": "strong trace convergence input",
+      "closed": true,
+      "status": "closed",
+      "reason": "R_aug,N converges strongly to R_aug in transported graph-dual topology."
+    },
+    "traceQuotientCompatibilityStatus": {
+      "label": "trace quotient compatibility",
+      "closed": true,
+      "status": "closed",
+      "reason": "Limsup gives recovery of quotient representatives, liminf prevents norm loss, and strong trace convergence identifies the limiting trace coordinate."
+    }
+  },
+  "traceQuotientCompatibilityClosed": true,
+  "finiteTraceQuotientNormConvergenceClosed": true,
+  "proof": [
+    "Use limsup recovery to show finite quotient norms are no larger than the limiting quotient norm.",
+    "Use liminf compactness to show no quotient norm can disappear in the limit.",
+    "Use strong trace convergence to identify finite trace coordinates with R_aug f.",
+    "Conclude convergence of finite trace quotient spaces to X_aug."
+  ],
+  "remainingAnalyticGap": null
+}

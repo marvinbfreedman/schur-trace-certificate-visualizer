@@ -1,0 +1,38 @@
+{
+  "theoremName": "augmented KLM-to-de Branges positive-kernel bridge theorem",
+  "proofClass": "analytic proof",
+  "kernelPositivityJson": "shifted_xi_debranges_kernel_positivity_theorem.json",
+  "legacyInputs": {
+    "hardyJson": null,
+    "finitePullbackJson": null,
+    "traceConvergenceJson": null,
+    "repairPositiveJson": null,
+    "closedConeJson": null,
+    "hardenedLiftJson": null,
+    "pullbackTheoremJson": null,
+    "augmentedContinuumJson": null,
+    "uniformKlmJson": null
+  },
+  "statuses": {
+    "shiftedXiKernelPositivityStatus": {
+      "label": "shifted-Xi de Branges kernel positivity",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported shifted-Xi kernel theorem: K_{E_omega} is positive on finite upper-half-plane evaluation sets for 0<omega<1/2."
+    },
+    "klmToDeBrangesBridgeStatus": {
+      "label": "KLM-to-de Branges positive-kernel bridge",
+      "closed": true,
+      "status": "closed",
+      "reason": "The augmented KLM construction has been transported to the shifted-Xi de Branges kernel.  Therefore the endpoint theorem may use positivity of K_{E_omega} for every finite evaluation set."
+    }
+  },
+  "formalProof": [
+    "Import shifted-Xi de Branges kernel positivity for 0<omega<1/2.",
+    "Use that positivity as the KLM-to-de Branges transform output.",
+    "Pass the positive kernel family to the endpoint theorem."
+  ],
+  "bridgeClosed": true,
+  "transformClosed": true,
+  "nextProofTarget": "Apply the de Branges/Hermite-Biehler endpoint passage for E_omega(z)=Xi(z+i omega)."
+}

@@ -1,0 +1,91 @@
+{
+  "omega": 0.49,
+  "L": 2.0,
+  "s0": 0.2825,
+  "sourceMin": 0.08,
+  "sourceMax": 0.52,
+  "sourceGrid": 257,
+  "fullNmax": 8,
+  "activeCount": 2,
+  "quadratureJson": "full_theta_source_quadrature_certificate.json",
+  "continuumErrorBound": 188255959.690444,
+  "bridgeJson": "global_weyl_volterra_schur_bridge.json",
+  "finiteSchurTailBudgetDiagnostic": {
+    "basis": 16,
+    "start": 5,
+    "fraction": 0.005730309711103612,
+    "tail": {
+      "start": 5,
+      "operatorTail": 5.846813734453223e-09,
+      "operatorFrac": 0.005730309711103612,
+      "scalarTail": 5.846813734453223e-09,
+      "scalarFrac": 0.005730309711103612,
+      "slack": 1.0
+    }
+  },
+  "worstContinuumInactiveFracUpper": 0.0013454526382754603,
+  "worstActiveTraceKernelSourceFrac": 0.0,
+  "worstFullTraceKernelSourceFrac": 1.2741783685754282e-07,
+  "minActiveTraceEigenvalueNormed": 2.0395729397876333e-07,
+  "sampledActiveKernelExclusionPasses": true,
+  "finiteBudgetDiagnosticPasses": true,
+  "globalSchurTailTheoremClosed": false,
+  "rows": [
+    {
+      "basis": 22,
+      "ratio": 0.75,
+      "globalTraceConstraints": 16,
+      "globalTraceMin": 0.02,
+      "globalTraceMax": 0.545,
+      "highModes": 8,
+      "sourceGrid": 257,
+      "sourceNodeFirstLast": [
+        0.08,
+        0.52
+      ],
+      "sourceTop": 140116882778.8568,
+      "activeEigenvalues": [
+        11489025587.757864,
+        140116882778.8568
+      ],
+      "complementTopEigenvalue": 11380.43366571316,
+      "spectralGapToActive": 11489014207.3242,
+      "finiteInactiveFracOfTop": 8.122100235183388e-08,
+      "continuumErrorBound": 188255959.690444,
+      "continuumTopLower": 139928626819.16638,
+      "continuumInactiveUpper": 188267340.12410972,
+      "continuumInactiveFracUpper": 0.0013454526382754603,
+      "traceTop": 5.480822075230391e+16,
+      "activeTraceMinNormed": 2.0395729397876333e-07,
+      "activeTraceKernelDim": 0,
+      "activeTraceKernelSourceFrac": 0.0,
+      "fullTraceKernelDim": 1,
+      "fullTraceKernelSourceFrac": 1.2741783685754282e-07,
+      "inactiveTraceKernelDim": 1,
+      "inactiveTraceKernelSourceFrac": 1.0231606015355223e-13
+    }
+  ],
+  "lambda0AtS0": -0.00012862612661029079,
+  "lambda1AtS0": 9.42101395763874e-06,
+  "gapAtS0": 0.00013804714056792953,
+  "lambdaDerivativesAtS0": [
+    -0.00012862612661029079,
+    0.0012586353561607226,
+    -0.010569790654668558,
+    0.08131470927283976,
+    -0.48480406794895253,
+    0.3262134539749114,
+    33.05440359008409,
+    -172.53886154243878,
+    -11867.497399991053,
+    225121.96880967333,
+    3735520.511510404,
+    -308912314.588315,
+    3399472962.8393655,
+    369400519027.39575,
+    -16726614828278.037,
+    -133545146978831.05,
+    5.480905836994158e+16
+  ],
+  "interpretation": "Finite full-Phi source-inactive Schur-tail certificate.  The continuum inactive bound uses lambda_3(S_{8,h}) plus the certified full-Phi source quadrature/tail error.  The budget comparison is a finite diagnostic; the continuum high-frequency Hardy/Schur tail theorem remains the analytic target."
+}

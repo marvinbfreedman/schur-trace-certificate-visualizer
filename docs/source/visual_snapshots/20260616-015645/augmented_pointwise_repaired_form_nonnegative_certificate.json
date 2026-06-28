@@ -1,0 +1,44 @@
+{
+  "theoremName": "augmented pointwise repaired form nonnegative certificate",
+  "proofClass": "interval/ball certificate with symbolic cone algebra",
+  "finiteConsequenceJson": "xi_augmented_finite_schur_repair_consequence_theorem.json",
+  "tailRestrictionJson": "volterra_tail_restriction_consequence_theorem.json",
+  "scope": "For each fixed augmented trace-core index N only.  This certificate does not assert Mosco convergence, density, compactness, quotient compatibility, lower semicontinuity, or any finite-to-continuum promotion.",
+  "statuses": {
+    "finiteSchurRepairInputStatus": {
+      "label": "finite Schur repair input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The interval/ball finite Schur consequence supplies D_aug,N>=0 and nonnegativity of the repaired finite Schur core form."
+    },
+    "tailPositiveRestrictionInputStatus": {
+      "label": "positive Volterra tail restriction input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The positive Volterra tail theorem gives a nonnegative tail form; restricting a nonnegative form to a fixed core preserves nonnegativity."
+    },
+    "fixedCoreConeSumStatus": {
+      "label": "fixed-core cone sum",
+      "closed": true,
+      "status": "closed",
+      "reason": "On each fixed core, q_N^rep is the sum of the finite Schur repaired core form and the restricted nonnegative Volterra tail form."
+    },
+    "pointwiseRepairedFormNonnegativeStatus": {
+      "label": "pointwise repaired form nonnegative",
+      "closed": true,
+      "status": "closed",
+      "reason": "A sum of two nonnegative quadratic forms is nonnegative."
+    }
+  },
+  "pointwiseRepairedFormsNonnegativeClosed": true,
+  "finiteCoreOnly": true,
+  "noContinuumPassageClaimed": true,
+  "exportedConsequence": "For every fixed augmented trace-core index N, q_N^rep>=0.",
+  "proof": [
+    "Import the finite augmented Schur repair consequence.",
+    "Restrict the nonnegative Volterra tail form to the same fixed core.",
+    "Use the exact fixed-core decomposition q_N^rep=q_N^Schur+t_N.",
+    "Apply the elementary cone rule: nonnegative plus nonnegative is nonnegative."
+  ],
+  "remainingAnalyticGap": null
+}

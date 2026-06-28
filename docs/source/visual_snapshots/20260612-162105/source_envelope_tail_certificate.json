@@ -1,0 +1,590 @@
+{
+  "model": "endpoint_b",
+  "kind": "tilde3",
+  "omega": 0.49,
+  "L": 2.0,
+  "constraintRule": "ratio",
+  "constraintRatio": 0.625,
+  "rows": [
+    {
+      "basis": 12,
+      "constraints": 8,
+      "rank": 8,
+      "nullity": 4,
+      "positiveModes": 4,
+      "gamma2": 3.751400988508445e-05,
+      "envelope": [
+        {
+          "mode": 0,
+          "lambda": 3.985122915998644e-05,
+          "rowNorm2": 4.879731009917572e-10,
+          "scalar": 1.2244869512876105e-05,
+          "scalarFrac": 0.3264079086822616,
+          "operatorSingleFrac": 0.3264079086822616
+        },
+        {
+          "mode": 1,
+          "lambda": 0.0007460987262431642,
+          "rowNorm2": 2.517738631765921e-09,
+          "scalar": 3.3745381719702255e-06,
+          "scalarFrac": 0.08995407801798176,
+          "operatorSingleFrac": 0.08995407801798176
+        },
+        {
+          "mode": 2,
+          "lambda": 0.009515206779150296,
+          "rowNorm2": 2.1466322112807768e-07,
+          "scalar": 2.256001641482425e-05,
+          "scalarFrac": 0.6013757655854887,
+          "operatorSingleFrac": 0.6013757655854887
+        },
+        {
+          "mode": 3,
+          "lambda": 0.15438797516622305,
+          "rowNorm2": 3.0497456892335804e-07,
+          "scalar": 1.9753777364785354e-06,
+          "scalarFrac": 0.052657067120514475,
+          "operatorSingleFrac": 0.052657067120514475
+        }
+      ],
+      "tails": [
+        {
+          "start": 0,
+          "operatorTail": 3.751400988508445e-05,
+          "operatorFrac": 1.0,
+          "scalarTail": 4.0154801836149116e-05,
+          "scalarFrac": 1.0703948194062465,
+          "slack": 0.934234715891754
+        },
+        {
+          "start": 1,
+          "operatorTail": 2.6514600883131217e-05,
+          "operatorFrac": 0.7067919682367362,
+          "scalarTail": 2.790993232327301e-05,
+          "scalarFrac": 0.7439869107239849,
+          "slack": 0.9500059181806656
+        },
+        {
+          "start": 2,
+          "operatorTail": 2.4497604874950843e-05,
+          "operatorFrac": 0.6530254950082283,
+          "scalarTail": 2.4535394151302784e-05,
+          "scalarFrac": 0.6540328327060031,
+          "slack": 0.9984598056131111
+        },
+        {
+          "start": 3,
+          "operatorTail": 1.9753777364785354e-06,
+          "operatorFrac": 0.052657067120514475,
+          "scalarTail": 1.9753777364785354e-06,
+          "scalarFrac": 0.052657067120514475,
+          "slack": 1.0
+        },
+        {
+          "start": 4,
+          "operatorTail": 0.0,
+          "operatorFrac": 0.0,
+          "scalarTail": 0.0,
+          "scalarFrac": 0.0,
+          "slack": 0.0
+        }
+      ]
+    },
+    {
+      "basis": 14,
+      "constraints": 9,
+      "rank": 9,
+      "nullity": 5,
+      "positiveModes": 5,
+      "gamma2": 3.724994952481239e-06,
+      "envelope": [
+        {
+          "mode": 0,
+          "lambda": 1.907883806550173e-06,
+          "rowNorm2": 3.261787186979063e-12,
+          "scalar": 1.7096361821305105e-06,
+          "scalarFrac": 0.4589633553709147,
+          "operatorSingleFrac": 0.4589633553709147
+        },
+        {
+          "mode": 1,
+          "lambda": 5.1905743060512824e-05,
+          "rowNorm2": 3.742187453673935e-11,
+          "scalar": 7.209582664698998e-07,
+          "scalarFrac": 0.1935461056100668,
+          "operatorSingleFrac": 0.1935461056100668
+        },
+        {
+          "mode": 2,
+          "lambda": 0.0007484618908355779,
+          "rowNorm2": 7.985761209660958e-10,
+          "scalar": 1.0669562882815192e-06,
+          "scalarFrac": 0.2864316064564903,
+          "operatorSingleFrac": 0.2864316064564903
+        },
+        {
+          "mode": 3,
+          "lambda": 0.009536275455865715,
+          "rowNorm2": 1.4575702855460126e-08,
+          "scalar": 1.5284481790524083e-06,
+          "scalarFrac": 0.4103222148084525,
+          "operatorSingleFrac": 0.4103222148084525
+        },
+        {
+          "mode": 4,
+          "lambda": 0.15438986306522187,
+          "rowNorm2": 1.3579521911479994e-08,
+          "scalar": 8.795604608926517e-08,
+          "scalarFrac": 0.023612393361949976,
+          "operatorSingleFrac": 0.023612393361949976
+        }
+      ],
+      "tails": [
+        {
+          "start": 0,
+          "operatorTail": 3.724994952481239e-06,
+          "operatorFrac": 1.0,
+          "scalarTail": 5.113954962023603e-06,
+          "scalarFrac": 1.3728756756078742,
+          "slack": 0.728398075490139
+        },
+        {
+          "start": 1,
+          "operatorTail": 2.7067066522261055e-06,
+          "operatorFrac": 0.7266336429323625,
+          "scalarTail": 3.4043187798930923e-06,
+          "scalarFrac": 0.9139123202369596,
+          "slack": 0.7950802575283815
+        },
+        {
+          "start": 2,
+          "operatorTail": 2.183259576460504e-06,
+          "operatorFrac": 0.586110747614899,
+          "scalarTail": 2.6833605134231927e-06,
+          "scalarFrac": 0.7203662146268928,
+          "slack": 0.8136288678092293
+        },
+        {
+          "start": 3,
+          "operatorTail": 1.6002472722772852e-06,
+          "operatorFrac": 0.4295971652824259,
+          "scalarTail": 1.6164042251416735e-06,
+          "scalarFrac": 0.43393460817040247,
+          "slack": 0.9900043858998376
+        },
+        {
+          "start": 4,
+          "operatorTail": 8.795604608926517e-08,
+          "operatorFrac": 0.023612393361949976,
+          "scalarTail": 8.795604608926517e-08,
+          "scalarFrac": 0.023612393361949976,
+          "slack": 1.0
+        },
+        {
+          "start": 5,
+          "operatorTail": 0.0,
+          "operatorFrac": 0.0,
+          "scalarTail": 0.0,
+          "scalarFrac": 0.0,
+          "slack": 0.0
+        }
+      ]
+    },
+    {
+      "basis": 16,
+      "constraints": 10,
+      "rank": 10,
+      "nullity": 6,
+      "positiveModes": 6,
+      "gamma2": 1.020331191370662e-06,
+      "envelope": [
+        {
+          "mode": 0,
+          "lambda": 4.686435916226444e-08,
+          "rowNorm2": 8.816052794963819e-15,
+          "scalar": 1.881184967117309e-07,
+          "scalarFrac": 0.18437003426213197,
+          "operatorSingleFrac": 0.18437003426213197
+        },
+        {
+          "mode": 1,
+          "lambda": 3.294719577854136e-06,
+          "rowNorm2": 1.3036517090611345e-12,
+          "scalar": 3.9567910963463785e-07,
+          "scalarFrac": 0.3877947797548973,
+          "operatorSingleFrac": 0.3877947797548973
+        },
+        {
+          "mode": 2,
+          "lambda": 5.2327877849974863e-05,
+          "rowNorm2": 1.551103478699578e-11,
+          "scalar": 2.96420100036662e-07,
+          "scalarFrac": 0.290513612191416,
+          "operatorSingleFrac": 0.290513612191416
+        },
+        {
+          "mode": 3,
+          "lambda": 0.0007493928601000864,
+          "rowNorm2": 1.0275274635003734e-10,
+          "scalar": 1.3711465884037648e-07,
+          "scalarFrac": 0.13438250246587433,
+          "operatorSingleFrac": 0.13438250246587433
+        },
+        {
+          "mode": 4,
+          "lambda": 0.009537771047940648,
+          "rowNorm2": 3.1671175661051905e-10,
+          "scalar": 3.320605569357864e-08,
+          "scalarFrac": 0.032544389482959235,
+          "operatorSingleFrac": 0.032544389482959235
+        },
+        {
+          "mode": 5,
+          "lambda": 0.1543899451762793,
+          "rowNorm2": 9.026892519181498e-10,
+          "scalar": 5.846813734453223e-09,
+          "scalarFrac": 0.005730309711103612,
+          "operatorSingleFrac": 0.005730309711103612
+        }
+      ],
+      "tails": [
+        {
+          "start": 0,
+          "operatorTail": 1.020331191370662e-06,
+          "operatorFrac": 1.0,
+          "scalarTail": 1.0563852346514392e-06,
+          "scalarFrac": 1.0353356278683825,
+          "slack": 0.9658703642401123
+        },
+        {
+          "start": 1,
+          "operatorTail": 8.425160269906095e-07,
+          "operatorFrac": 0.8257279931419282,
+          "scalarTail": 8.682667379397083e-07,
+          "scalarFrac": 0.8509655936062506,
+          "slack": 0.9703423961509776
+        },
+        {
+          "start": 2,
+          "operatorTail": 4.5490392670261984e-07,
+          "operatorFrac": 0.44583947893578024,
+          "scalarTail": 4.725876283050704e-07,
+          "scalarFrac": 0.4631708138513532,
+          "slack": 0.9625811160866126
+        },
+        {
+          "start": 3,
+          "operatorTail": 1.6828188983181655e-07,
+          "operatorFrac": 0.16492869301168286,
+          "scalarTail": 1.7616752826840836e-07,
+          "scalarFrac": 0.17265720165993717,
+          "slack": 0.9552378436928669
+        },
+        {
+          "start": 4,
+          "operatorTail": 3.899366113199094e-08,
+          "operatorFrac": 0.03821667068670987,
+          "scalarTail": 3.905286942803186e-08,
+          "scalarFrac": 0.038274699194062844,
+          "slack": 0.9984838938365327
+        },
+        {
+          "start": 5,
+          "operatorTail": 5.846813734453223e-09,
+          "operatorFrac": 0.005730309711103612,
+          "scalarTail": 5.846813734453223e-09,
+          "scalarFrac": 0.005730309711103612,
+          "slack": 1.0
+        },
+        {
+          "start": 6,
+          "operatorTail": 0.0,
+          "operatorFrac": 0.0,
+          "scalarTail": 0.0,
+          "scalarFrac": 0.0,
+          "slack": 0.0
+        }
+      ]
+    },
+    {
+      "basis": 18,
+      "constraints": 11,
+      "rank": 11,
+      "nullity": 7,
+      "positiveModes": 7,
+      "gamma2": 1.2168287311611528e-06,
+      "envelope": [
+        {
+          "mode": 0,
+          "lambda": 1.0052047510858405e-08,
+          "rowNorm2": 6.53488987473193e-17,
+          "scalar": 6.501053509419671e-09,
+          "scalarFrac": 0.0053426199948583344,
+          "operatorSingleFrac": 0.0053426199948583344
+        },
+        {
+          "mode": 1,
+          "lambda": 4.7601143218701266e-08,
+          "rowNorm2": 1.103294648564035e-14,
+          "scalar": 2.317790233513927e-07,
+          "scalarFrac": 0.19047793449963885,
+          "operatorSingleFrac": 0.19047793449963885
+        },
+        {
+          "mode": 2,
+          "lambda": 3.1062737654730576e-06,
+          "rowNorm2": 1.7659543686896332e-12,
+          "scalar": 5.685121473575895e-07,
+          "scalarFrac": 0.4672080242673836,
+          "operatorSingleFrac": 0.4672080242673836
+        },
+        {
+          "mode": 3,
+          "lambda": 5.2434921951632374e-05,
+          "rowNorm2": 9.947959513739284e-12,
+          "scalar": 1.897201167366206e-07,
+          "scalarFrac": 0.15591357425919844,
+          "operatorSingleFrac": 0.15591357425919844
+        },
+        {
+          "mode": 4,
+          "lambda": 0.0007494212978072687,
+          "rowNorm2": 8.145935448016979e-11,
+          "scalar": 1.086963430563178e-07,
+          "scalarFrac": 0.08932756128514065,
+          "operatorSingleFrac": 0.08932756128514065
+        },
+        {
+          "mode": 5,
+          "lambda": 0.00953769622277949,
+          "rowNorm2": 1.0302753251985079e-09,
+          "scalar": 1.0802140277206935e-07,
+          "scalarFrac": 0.08877288973033244,
+          "operatorSingleFrac": 0.08877288973033244
+        },
+        {
+          "mode": 6,
+          "lambda": 0.1543899343461991,
+          "rowNorm2": 2.5747291190217072e-09,
+          "scalar": 1.6676793923936883e-08,
+          "scalarFrac": 0.013705128336362617,
+          "operatorSingleFrac": 0.013705128336362617
+        }
+      ],
+      "tails": [
+        {
+          "start": 0,
+          "operatorTail": 1.2168287311611528e-06,
+          "operatorFrac": 1.0,
+          "scalarTail": 1.2299068807073465e-06,
+          "scalarFrac": 1.010747732372915,
+          "slack": 0.9893665530689021
+        },
+        {
+          "start": 1,
+          "operatorTail": 1.216237149816795e-06,
+          "operatorFrac": 0.9995138335172336,
+          "scalarTail": 1.223405827197927e-06,
+          "scalarFrac": 1.0054051123780567,
+          "slack": 0.9941403929736456
+        },
+        {
+          "start": 2,
+          "operatorTail": 9.886543757548067e-07,
+          "operatorFrac": 0.8124844116816573,
+          "scalarTail": 9.916268038465341e-07,
+          "scalarFrac": 0.8149271778784177,
+          "slack": 0.997002473026952
+        },
+        {
+          "start": 3,
+          "operatorTail": 4.220224553356778e-07,
+          "operatorFrac": 0.34682157359398064,
+          "scalarTail": 4.231146564889446e-07,
+          "scalarFrac": 0.34771915361103417,
+          "slack": 0.9974186638621076
+        },
+        {
+          "start": 4,
+          "operatorTail": 2.3285696718079682e-07,
+          "operatorFrac": 0.19136379772903145,
+          "scalarTail": 2.3339453975232405e-07,
+          "scalarFrac": 0.1918055793518357,
+          "slack": 0.9976967217309467
+        },
+        {
+          "start": 5,
+          "operatorTail": 1.2469211617274513e-07,
+          "operatorFrac": 0.10247302104196562,
+          "scalarTail": 1.2469819669600625e-07,
+          "scalarFrac": 0.10247801806669507,
+          "slack": 0.999951238081847
+        },
+        {
+          "start": 6,
+          "operatorTail": 1.6676793923936883e-08,
+          "operatorFrac": 0.013705128336362617,
+          "scalarTail": 1.6676793923936883e-08,
+          "scalarFrac": 0.013705128336362617,
+          "slack": 1.0
+        },
+        {
+          "start": 7,
+          "operatorTail": 0.0,
+          "operatorFrac": 0.0,
+          "scalarTail": 0.0,
+          "scalarFrac": 0.0,
+          "slack": 0.0
+        }
+      ]
+    },
+    {
+      "basis": 20,
+      "constraints": 12,
+      "rank": 12,
+      "nullity": 8,
+      "positiveModes": 8,
+      "gamma2": 1.4055348674882143e-07,
+      "envelope": [
+        {
+          "mode": 0,
+          "lambda": 4.410511401245314e-11,
+          "rowNorm2": 5.2115050005966826e-20,
+          "scalar": 1.1816101414283176e-09,
+          "scalarFrac": 0.00840683620705856,
+          "operatorSingleFrac": 0.00840683620705856
+        },
+        {
+          "mode": 1,
+          "lambda": 8.441192762527762e-09,
+          "rowNorm2": 5.783699971156116e-17,
+          "scalar": 6.851756776401533e-09,
+          "scalarFrac": 0.04874839418709039,
+          "operatorSingleFrac": 0.04874839418709039
+        },
+        {
+          "mode": 2,
+          "lambda": 2.2892616972206898e-07,
+          "rowNorm2": 3.25308124278555e-15,
+          "scalar": 1.4210176349584666e-08,
+          "scalarFrac": 0.10110155698221283,
+          "operatorSingleFrac": 0.10110155698221283
+        },
+        {
+          "mode": 3,
+          "lambda": 3.619305237322144e-06,
+          "rowNorm2": 3.2578305453712483e-13,
+          "scalar": 9.001259445532855e-08,
+          "scalarFrac": 0.6404152364870687,
+          "operatorSingleFrac": 0.6404152364870687
+        },
+        {
+          "mode": 4,
+          "lambda": 5.2585287265362064e-05,
+          "rowNorm2": 2.2258227848557353e-12,
+          "scalar": 4.232786204292327e-08,
+          "scalarFrac": 0.301151277154483,
+          "operatorSingleFrac": 0.301151277154483
+        },
+        {
+          "mode": 5,
+          "lambda": 0.0007495103811189707,
+          "rowNorm2": 1.4805235010349297e-11,
+          "scalar": 1.975320873907848e-08,
+          "scalarFrac": 0.1405387315248806,
+          "operatorSingleFrac": 0.1405387315248806
+        },
+        {
+          "mode": 6,
+          "lambda": 0.009537782083561406,
+          "rowNorm2": 2.1148073954238382e-10,
+          "scalar": 2.2172947304685847e-08,
+          "scalarFrac": 0.1577545162170925,
+          "operatorSingleFrac": 0.1577545162170925
+        },
+        {
+          "mode": 7,
+          "lambda": 0.1543899487639319,
+          "rowNorm2": 3.487962299719958e-10,
+          "scalar": 2.2591900105188744e-09,
+          "scalarFrac": 0.016073525195118066,
+          "operatorSingleFrac": 0.016073525195118066
+        }
+      ],
+      "tails": [
+        {
+          "start": 0,
+          "operatorTail": 1.4055348674882143e-07,
+          "operatorFrac": 1.0,
+          "scalarTail": 1.9876934581994955e-07,
+          "scalarFrac": 1.4141900739550046,
+          "slack": 0.7071185255906535
+        },
+        {
+          "start": 1,
+          "operatorTail": 1.402912334022152e-07,
+          "operatorFrac": 0.9981341384502621,
+          "scalarTail": 1.9758773567852122e-07,
+          "scalarFrac": 1.405783237747946,
+          "slack": 0.7100199459265607
+        },
+        {
+          "start": 2,
+          "operatorTail": 1.3832167168098565e-07,
+          "operatorFrac": 0.9841212401096517,
+          "scalarTail": 1.907359789021197e-07,
+          "scalarFrac": 1.3570348435608557,
+          "slack": 0.7251996842817391
+        },
+        {
+          "start": 3,
+          "operatorTail": 1.3079859175132363e-07,
+          "operatorFrac": 0.9305965634639113,
+          "scalarTail": 1.7652580255253502e-07,
+          "scalarFrac": 1.2559332865786428,
+          "slack": 0.7409601874626643
+        },
+        {
+          "start": 4,
+          "operatorTail": 6.159000732143092e-08,
+          "operatorFrac": 0.4381962251245778,
+          "scalarTail": 8.651320809720648e-08,
+          "scalarFrac": 0.6155180500915741,
+          "slack": 0.7119145004104832
+        },
+        {
+          "start": 5,
+          "operatorTail": 2.5852104960632135e-08,
+          "operatorFrac": 0.18393072671922817,
+          "scalarTail": 4.4185346054283204e-08,
+          "scalarFrac": 0.3143667729370912,
+          "slack": 0.585083229378173
+        },
+        {
+          "start": 6,
+          "operatorTail": 2.435360144028813e-08,
+          "operatorFrac": 0.17326927992764532,
+          "scalarTail": 2.443213731520472e-08,
+          "scalarFrac": 0.17382804141221056,
+          "slack": 0.996785550363303
+        },
+        {
+          "start": 7,
+          "operatorTail": 2.2591900105188744e-09,
+          "operatorFrac": 0.016073525195118066,
+          "scalarTail": 2.2591900105188744e-09,
+          "scalarFrac": 0.016073525195118066,
+          "slack": 1.0
+        },
+        {
+          "start": 8,
+          "operatorTail": 0.0,
+          "operatorFrac": 0.0,
+          "scalarTail": 0.0,
+          "scalarFrac": 0.0,
+          "slack": 0.0
+        }
+      ]
+    }
+  ]
+}

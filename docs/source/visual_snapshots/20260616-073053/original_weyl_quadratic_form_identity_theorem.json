@@ -1,0 +1,28 @@
+{
+  "theoremName": "original Weyl quadratic-form identity theorem",
+  "proofClass": "symbolic identity",
+  "formTransportJson": "original_weyl_form_transport_theorem.json",
+  "statement": "The original Weyl quadratic form has exactly the same value as the transported normalized Volterra form after the established coordinate transform.",
+  "statuses": {
+    "formTransportInputStatus": {
+      "label": "form transport input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The original Weyl form transport theorem supplies the exact pullback equality."
+    },
+    "quadraticFormIdentityStatus": {
+      "label": "original Weyl quadratic-form identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The original coordinate Weyl form is the exact pullback of the normalized Volterra form."
+    }
+  },
+  "originalWeylQuadraticFormIdentityClosed": true,
+  "defectFreePullbackClosed": true,
+  "proof": [
+    "Import the original Weyl form transport theorem.",
+    "Read off the exact equality of quadratic values under the established coordinate transform.",
+    "Export only the identity needed by the positivity assembly layer."
+  ],
+  "remainingAnalyticGap": null
+}

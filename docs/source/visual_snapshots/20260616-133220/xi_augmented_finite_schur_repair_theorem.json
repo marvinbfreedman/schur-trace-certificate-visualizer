@@ -1,0 +1,68 @@
+{
+  "theoremName": "finite augmented Schur repair theorem legacy wrapper",
+  "proofClass": "symbolic finite consequence wrapper",
+  "finiteSchurRepairConsequenceJson": "xi_augmented_finite_schur_repair_consequence_theorem.json",
+  "legacyInputs": {
+    "certificateJson": null,
+    "eigTolerance": 1e-20
+  },
+  "finiteTraceDimensions": {
+    "traceRank": 10,
+    "traceNullity": 0,
+    "lambdaRows": 7,
+    "muRows": 10,
+    "augmentedRows": 17,
+    "basis": 10,
+    "constraints": 7
+  },
+  "certificateConstants": {
+    "dMin": -5.537301291337967e-69,
+    "pMin": 9.483221247842344e-06,
+    "constructedSchurMin": 9.483221245850071e-06,
+    "normalizedRangeResidual": 0.0,
+    "augmentedMuActionOnAugmentedNullspace": 0.0,
+    "eigTolerance": 1e-20
+  },
+  "statuses": {
+    "finiteTraceQuotientStatus": {
+      "label": "finite augmented trace quotient",
+      "closed": true,
+      "status": "closed",
+      "reason": "The augmented trace map has a resolved trace image and a well-defined finite quotient/kernel splitting."
+    },
+    "rangeConditionStatus": {
+      "label": "finite Schur range condition",
+      "closed": true,
+      "status": "closed",
+      "reason": "The normalized range residual for the off-diagonal Schur block is below tolerance."
+    },
+    "repairOperatorNonnegativeStatus": {
+      "label": "finite repair operator nonnegative",
+      "closed": true,
+      "status": "closed",
+      "reason": "The constructed D_aug,N has no resolved negative spectrum."
+    },
+    "repairedFormPositiveStatus": {
+      "label": "finite repaired form positive",
+      "closed": true,
+      "status": "closed",
+      "reason": "The constructed Schur complement and the repaired finite form K+R_aug^*D_aug,N R_aug are nonnegative."
+    },
+    "muKernelAnnihilationStatus": {
+      "label": "Mu annihilates finite augmented trace kernel",
+      "closed": true,
+      "status": "closed",
+      "reason": "The primitive Mu rows vanish on ker R_aug in the finite quotient model."
+    }
+  },
+  "finiteAugmentedSchurRepairClosed": true,
+  "finiteRepairOperatorNonnegativeClosed": true,
+  "finiteRepairedFormPositiveClosed": true,
+  "finiteMuKernelAnnihilationClosed": true,
+  "finiteSchurRangeConditionClosed": true,
+  "formalProof": [
+    "Import the narrow finite augmented Schur repair consequence theorem.",
+    "Re-export legacy compatibility flags expected by older theorem scripts."
+  ],
+  "remainingAnalyticGap": null
+}

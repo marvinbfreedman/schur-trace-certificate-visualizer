@@ -1,0 +1,38 @@
+{
+  "theoremName": "abstract Riesz projection continuity theorem",
+  "proofClass": "abstract functional analytic lemma",
+  "statement": "If self-adjoint bounded operators S_N converge to S in norm and a contour Gamma separates an isolated spectral cluster of S, then the Riesz projections converge in norm for all large N.",
+  "hypotheses": [
+    "S_N and S are bounded self-adjoint operators.",
+    "||S_N-S|| -> 0.",
+    "Gamma lies in the resolvent set of S and encloses the selected cluster with positive distance to the rest of the spectrum."
+  ],
+  "statuses": {
+    "resolventIdentityStatus": {
+      "label": "resolvent identity on a fixed contour",
+      "closed": true,
+      "status": "closed",
+      "reason": "For z on Gamma, (z-S_N)^{-1}-(z-S)^{-1}=(z-S_N)^{-1}(S_N-S)(z-S)^{-1} once ||S_N-S|| is below the contour distance."
+    },
+    "rieszProjectionContinuityStatus": {
+      "label": "Riesz projection norm continuity",
+      "closed": true,
+      "status": "closed",
+      "reason": "Integrating the resolvent identity over Gamma gives ||P_N-P|| -> 0."
+    },
+    "rankPersistenceStatus": {
+      "label": "spectral rank persistence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Norm-small perturbations preserve the rank enclosed by the contour."
+    }
+  },
+  "rieszProjectionContinuityClosed": true,
+  "proof": [
+    "Choose a contour Gamma at positive distance from sigma(S).",
+    "For N large, ||S_N-S|| is smaller than half that distance, so Gamma also lies in the resolvent set of S_N.",
+    "Use the resolvent identity and uniform resolvent bounds on Gamma.",
+    "Integrate around Gamma to obtain norm convergence of the Riesz projections and rank persistence."
+  ],
+  "remainingAnalyticGap": null
+}

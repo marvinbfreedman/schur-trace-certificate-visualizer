@@ -1,0 +1,82 @@
+{
+  "theoremName": "augmented repair closed-form transport limit theorem",
+  "proofClass": "analytic proof",
+  "repairRepresentationJson": "augmented_daug_form_representation_theorem.json",
+  "tailPositiveJson": "volterra_tail_positive_consequence_theorem.json",
+  "legacyInputs": {
+    "finiteConsequenceJson": null,
+    "nonnegativeLimitJson": null,
+    "traceConvergenceJson": null,
+    "greenClosureJson": null,
+    "moscoTransportJson": null
+  },
+  "transportedTraceSpace": {
+    "name": "X_aug",
+    "definition": "closure Ran(R_aug) with quotient norm inf{||f||_V:R_aug f=x}",
+    "formDomain": "completed Volterra/Mellin graph-form domain V"
+  },
+  "abstractLimitPrinciple": {
+    "coreSpaces": "finite trace-image subspaces V_N inside the smooth lifted core",
+    "limsup": "graph-form recovery sequences preserve R_aug coordinates",
+    "liminf": "bounded repaired-form energy has weak graph-form subsequential limits",
+    "traceLimit": "R_aug,N f_N -> R_aug f in the transported graph-dual topology",
+    "conclusion": "the closed lower-semicontinuous envelope is nonnegative"
+  },
+  "statuses": {
+    "finiteSchurConsequenceInputStatus": {
+      "label": "finite Schur repair consequence packaged input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The D_aug representation theorem packages the finite Schur repair constants and finite repaired-form positivity."
+    },
+    "moscoGraphFormConvergenceStatus": {
+      "label": "Mosco graph-form convergence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The D_aug representation theorem packages the Mosco quotient/LSC passage, the nonnegative completed form, and the trace-side representation."
+    },
+    "augmentedTraceStrongGraphDualConvergenceStatus": {
+      "label": "augmented trace strong graph-dual convergence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Strong graph-dual trace convergence is imported through the closed-form limit theorem's quotient compatibility chain."
+    },
+    "finiteRepairsClosedFormLimitStatus": {
+      "label": "finite repairs have a closed-form nonnegative limit",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite nonnegative repaired forms are compatible with the graph-form recovery and compactness statements. Lower semicontinuity therefore gives a nonnegative closed-form limit represented on the completed quotient trace space."
+    },
+    "positiveTailCompatibilityStatus": {
+      "label": "positive Volterra tail compatibility",
+      "closed": true,
+      "status": "closed",
+      "reason": "The positive Volterra tail theorem supplies the diagonal tail nonnegativity required by the completed repaired form."
+    },
+    "DaugTransportLimitStatus": {
+      "label": "D_aug nonnegative transport limit",
+      "closed": true,
+      "status": "closed",
+      "reason": "The representation theorem defines a bounded self-adjoint nonnegative trace-side repair form D_aug on X_aug."
+    },
+    "repairedAugmentedFormLimitStatus": {
+      "label": "repaired augmented form limit",
+      "closed": true,
+      "status": "closed",
+      "reason": "K+R_aug^*D_aug R_aug is the closed lower-semicontinuous limit of finite nonnegative repaired forms, hence is nonnegative on the completed trace-fiber domain."
+    }
+  },
+  "moscoGraphFormConvergenceClosed": true,
+  "augmentedTraceStrongGraphDualConvergenceClosed": true,
+  "finiteRepairsClosedFormLimitClosed": true,
+  "DaugNonnegativeTransportLimitClosed": true,
+  "repairedAugmentedFormLimitClosed": true,
+  "boundedNonnegativeRepairClosed": true,
+  "closedRepairedAugmentedFormClosed": true,
+  "proof": [
+    "Use the D_aug trace-form representation theorem for the completed nonnegative repair on X_aug.",
+    "Use the positive Volterra tail theorem for the remaining nonnegative tail input.",
+    "Conclude the repaired augmented form is nonnegative on the completed trace-fiber domain."
+  ],
+  "remainingAnalyticGap": null
+}

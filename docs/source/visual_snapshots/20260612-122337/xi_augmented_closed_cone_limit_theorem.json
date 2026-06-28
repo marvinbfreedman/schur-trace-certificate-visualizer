@@ -1,0 +1,51 @@
+{
+  "theoremName": "augmented Xi closed-cone limit theorem",
+  "proofClass": "analytic proof",
+  "finitePullbackJson": "xi_finite_augmented_pullback_identity_theorem.json",
+  "traceConvergenceJson": "xi_augmented_trace_convergence_theorem.json",
+  "repairPositiveJson": "xi_augmented_repair_positive_theorem.json",
+  "psdClosureJson": "finite_psd_cone_closure_theorem.json",
+  "statuses": {
+    "finitePositivePullbackStatus": {
+      "label": "finite positive augmented pullbacks",
+      "closed": true,
+      "status": "closed",
+      "reason": "For each finite theta truncation, K_{E,N} is represented by a KLM pullback plus the augmented nonnegative trace repair."
+    },
+    "compactTraceConvergenceStatus": {
+      "label": "compact-open and trace convergence",
+      "closed": true,
+      "status": "closed",
+      "reason": "K_{E,N}->K_E entrywise on finite compact evaluation sets and R_aug,N->R_aug in the transported graph-dual topology."
+    },
+    "nonnegativeRepairStatus": {
+      "label": "nonnegative continuum repair",
+      "closed": true,
+      "status": "closed",
+      "reason": "D_aug is bounded and nonnegative on X_aug and the augmented form is closed on the completed trace-fiber domain."
+    },
+    "finitePsdConeClosureStatus": {
+      "label": "finite PSD cone closed",
+      "closed": true,
+      "status": "closed",
+      "reason": "Since c^*G_n c>=0 for every n and every c, the limit satisfies c^*G c>=0 for every c.  Hence G is positive semidefinite."
+    },
+    "closedPositiveConeStatus": {
+      "label": "closed positive-cone limit",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite PSD cone closure theorem applies to each finite evaluation Gram matrix.  Since K_{E,N}->K_E entrywise and the finite augmented pullbacks are positive after repair, the full kernel K_E lies in the closed augmented KLM positive cone."
+    }
+  },
+  "closedConeConclusionClosed": true,
+  "hardenedContinuumLiftClosed": true,
+  "entrywiseConvergenceToFullDeBrangesKernel": true,
+  "continuumAugmentedRepairClosed": true,
+  "proof": [
+    "Apply the finite augmented pullback theorem to each Xi_N.",
+    "Use compact-open convergence to pass K_{E,N} finite Gram entries to K_E.",
+    "Use the continuum repair theorem to keep the augmented repair nonnegative.",
+    "Use the finite PSD cone closure theorem under entrywise limits."
+  ],
+  "remainingAnalyticGap": null
+}

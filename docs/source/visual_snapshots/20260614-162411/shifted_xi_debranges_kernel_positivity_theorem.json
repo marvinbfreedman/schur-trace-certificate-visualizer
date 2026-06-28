@@ -1,0 +1,36 @@
+{
+  "theoremName": "shifted Xi de Branges kernel positivity theorem",
+  "proofClass": "analytic proof",
+  "closedConeJson": "xi_augmented_closed_cone_limit_theorem.json",
+  "omegaRange": "0 < omega < 1/2",
+  "kernel": "K_{E_omega}, E_omega(z)=Xi(z+i omega)",
+  "statuses": {
+    "augmentedClosedConeInputStatus": {
+      "label": "augmented Xi closed-cone input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The augmented Xi closed-cone theorem proves that the shifted-Xi de Branges kernel lies in the positive kernel cone obtained from augmented KLM pullbacks."
+    },
+    "kernelEntryLimitStatus": {
+      "label": "kernel entry convergence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The same closed-cone theorem records entrywise convergence to the full shifted-Xi de Branges kernel on finite evaluation sets."
+    },
+    "shiftedXiKernelPositivityStatus": {
+      "label": "shifted-Xi de Branges kernel positivity",
+      "closed": true,
+      "status": "closed",
+      "reason": "For every finite upper-half-plane evaluation set, the Gram matrix of K_{E_omega} is positive semidefinite."
+    }
+  },
+  "shiftedXiDeBrangesKernelPositiveClosed": true,
+  "finiteEvaluationGramPositive": true,
+  "continuumAugmentedRepairClosed": true,
+  "proof": [
+    "Import the augmented Xi closed-cone limit theorem.",
+    "Read off entrywise convergence to the full shifted-Xi kernel.",
+    "Apply the finite positive-kernel cone conclusion to each finite evaluation set."
+  ],
+  "remainingAnalyticGap": null
+}

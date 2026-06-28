@@ -1,0 +1,80 @@
+{
+  "theoremName": "full-theta source quadrature consequence theorem",
+  "proofClass": "interval/ball certificate",
+  "omega": 0.49,
+  "L": 2.0,
+  "basis": 22,
+  "fullNmax": 8,
+  "sourceGrid": 257,
+  "sourceNodesFirstLast": [
+    0.08,
+    0.52
+  ],
+  "sourceWeightsFirstLast": [
+    0.000859375,
+    0.000859375
+  ],
+  "activeDimension": 2,
+  "activeEigenvaluesS8": [
+    11489025587.757864,
+    140116882778.8568
+  ],
+  "finiteActiveResponseSingularValuesS8": [
+    1206605105217492.0,
+    5.360235441045838e+17
+  ],
+  "sourceQuadratureErrorBound": 188255959.690444,
+  "omittedTailDeltaSBound": 2.5985037269540472e-22,
+  "totalContinuumErrorBound": 188255959.690444,
+  "spectralGapToComplementS8": 11489014207.3242,
+  "totalProjectorAlpha": 0.0655429460851155,
+  "finiteRankMarginS8": 1206605105217492.0,
+  "angleFactorLowerBound": 0.997849749320249,
+  "complementResponseOperatorNorm": 1.8138427095631724e+16,
+  "lowerBoundAfterContinuumAndTail": 15164652572018.725,
+  "d2SourceGramIntervalEnvelope": 1738008439275864.5,
+  "trapezoidFactor": 1.0831705729166666e-07,
+  "totalGapConditionPasses": true,
+  "tailBoundClosed": true,
+  "sourceQuadratureConsequenceClosed": true,
+  "fullPhiContinuumSourceNoncollapsePasses": true,
+  "statuses": {
+    "sourceQuadratureIntervalStatus": {
+      "label": "source quadrature interval consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The second-derivative envelope and trapezoid factor give a nonnegative source quadrature error bound."
+    },
+    "thetaTailIntervalStatus": {
+      "label": "theta tail interval consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The omitted full-theta tail contribution is bounded by a nonnegative interval operator error."
+    },
+    "totalErrorStatus": {
+      "label": "assembled continuum source error",
+      "closed": true,
+      "status": "closed",
+      "reason": "The exported total continuum error dominates the source quadrature and theta-tail contributions."
+    },
+    "rieszGapStatus": {
+      "label": "Riesz gap survives source perturbation",
+      "closed": true,
+      "status": "closed",
+      "reason": "The total perturbation is below one quarter of the active/complement source spectral gap."
+    },
+    "activeRankMarginStatus": {
+      "label": "active source response rank margin",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite rank margin remains positive after continuum quadrature and full-theta tail perturbation."
+    }
+  },
+  "formalProof": [
+    "The interval quadrature certificate gives a source Gram perturbation bound.",
+    "The full-theta tail interval bound is added to that source perturbation.",
+    "The combined error is less than one quarter of the active/complement spectral gap.",
+    "The Riesz projector and active response rank are therefore stable, with positive lower response margin."
+  ],
+  "nextProofTarget": "Import this consequence in the full-theta source noncollapse theorem."
+}

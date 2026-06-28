@@ -1,0 +1,863 @@
+{
+  "bridgeName": "full-Phi source noncollapse to global Weyl/Volterra Schur",
+  "bridgePasses": true,
+  "globalSchurTheoremClosed": true,
+  "externalEquivalenceAudit": {
+    "theoremName": "Weyl/Volterra external equivalence audit",
+    "quotientJson": "weyl_volterra_quotient_schur_theorem.json",
+    "bridgeJson": "global_weyl_volterra_schur_bridge.json",
+    "sourceJson": "full_theta_source_quadrature_certificate.json",
+    "liftJson": "quotient_to_original_weyl_lift_theorem.json",
+    "uniformOmegaJson": "uniform_omega_weyl_klm_bridge.json",
+    "foundationJson": "weyl_klm_external_foundation_theorem.json",
+    "rhLedgerJson": "rh_debranges_bridge_ledger.json",
+    "endpointJson": "debranges_hb_endpoint_passage.json",
+    "sourceOmega": 0.49,
+    "normalizedSchurCertificateClosed": true,
+    "conditionalQuotientToOriginalLiftClosed": true,
+    "externalFoundationClosed": true,
+    "originalWeylKernelPositivityClosed": true,
+    "originalKlmConditionClosed": true,
+    "rhFacingChainClosed": true,
+    "auditItems": [
+      {
+        "label": "Riemann kernel formula and harmless xi normalization",
+        "kind": "external",
+        "closed": true,
+        "status": "closed",
+        "reason": "Imported from the external foundation theorem: the Riemann kernel Fourier representation and harmless scalar normalization are theorem-backed.",
+        "evidence": [
+          "weyl_klm_external_foundation_theorem.json"
+        ],
+        "blocker": null
+      },
+      {
+        "label": "KLM convention equals Weyl positivity for hbar=1",
+        "kind": "external",
+        "closed": true,
+        "status": "closed",
+        "reason": "Imported from the external foundation theorem: the hbar=1 KLM/Weyl convention and quantum-Bochner equivalence are isolated as a standalone theorem object.",
+        "evidence": [
+          "weyl_klm_external_foundation_theorem.json"
+        ],
+        "blocker": null
+      },
+      {
+        "label": "phase-space symbol transported to coordinate Weyl kernel",
+        "kind": "external",
+        "closed": true,
+        "status": "closed",
+        "reason": "Imported from the external foundation theorem: the Weyl symbol and coordinate kernel quadratic forms are identified in the fixed normalization.",
+        "evidence": [
+          "weyl_klm_external_foundation_theorem.json"
+        ],
+        "blocker": null
+      },
+      {
+        "label": "full-line Weyl kernel reduced to even/odd half-line sectors",
+        "kind": "external",
+        "closed": true,
+        "status": "closed",
+        "reason": "Imported from the external foundation theorem: reflection symmetry reduces the full-line form to the even and odd half-line sectors.",
+        "evidence": [
+          "weyl_klm_external_foundation_theorem.json"
+        ],
+        "blocker": null
+      },
+      {
+        "label": "normalized full-Phi Weyl/Volterra quotient Schur certificate",
+        "kind": "internal",
+        "closed": true,
+        "status": "closed",
+        "reason": "Imported quotient and bridge ledgers close positivity on ker R_global, the Douglas cross-form condition, the bounded trace-side repair, and the Moore-Penrose Schur form.",
+        "evidence": [
+          "weyl_volterra_quotient_schur_theorem.json",
+          "global_weyl_volterra_schur_bridge.json"
+        ],
+        "blocker": null
+      },
+      {
+        "label": "full-Phi source tail and continuum high-block passage",
+        "kind": "internal",
+        "closed": true,
+        "status": "closed",
+        "reason": "The full-theta source quadrature, synchronized active range, and source-inactive high-block domination are already imported by the quotient Schur theorem.",
+        "evidence": [
+          "full_theta_source_quadrature_certificate.json",
+          "source_inactive_minmax_tail_theorem.json",
+          "high_block_exhaustion_theorem.json"
+        ],
+        "blocker": null
+      },
+      {
+        "label": "omega coverage for the original target |omega|<1/2",
+        "kind": "external",
+        "closed": true,
+        "status": "closed",
+        "reason": "The uniform omega bridge proves that the final Hardy/Green contraction is omega-independent: kappa=(1-s-u)/(1+s+u) does not depend on omega, while the branch factors are positive and uniformly integrable for |omega|<1/2.",
+        "evidence": [
+          "uniform_omega_weyl_klm_bridge.json"
+        ],
+        "blocker": null
+      },
+      {
+        "label": "repair-free primitive lift / D_q=0 theorem",
+        "kind": "external",
+        "closed": true,
+        "status": "closed",
+        "reason": "The quotient-to-original Weyl lift ledger closes this link.",
+        "evidence": [
+          "weyl_volterra_quotient_schur_theorem.json",
+          "quotient_to_original_weyl_lift_theorem.json"
+        ],
+        "blocker": null
+      },
+      {
+        "label": "original Weyl kernel positivity for all test sets",
+        "kind": "external",
+        "closed": true,
+        "status": "closed",
+        "reason": "Closed by the uniform omega bridge: the quotient-to-original lift is closed, primitive endpoint correction vanishes, and the omega-independent Green-lift contraction gives positivity for every |omega|<1/2.",
+        "evidence": [],
+        "blocker": null
+      },
+      {
+        "label": "KLM quantum positive-type condition for the original Q_omega",
+        "kind": "external",
+        "closed": true,
+        "status": "closed",
+        "reason": "Closed by the hbar=1 KLM/Weyl equivalence together with uniform original Weyl positivity.",
+        "evidence": [],
+        "blocker": null
+      },
+      {
+        "label": "implication from this KLM/Weyl positivity to the RH/de Branges target",
+        "kind": "external",
+        "closed": true,
+        "status": "closed",
+        "reason": "Closed by the augmented KLM-to-de Branges closed-cone bridge and the shifted-Xi endpoint passage.  The endpoint argument uses the diagonal de Branges inequality for every 0<omega<1/2 to exclude upper-half-plane Xi zeros by a zero-descent accumulation contradiction, then uses conjugation to exclude lower-half-plane zeros.",
+        "evidence": [
+          "rh_debranges_bridge_ledger.json",
+          "debranges_hb_endpoint_passage.json"
+        ],
+        "blocker": null
+      }
+    ],
+    "closedCount": 11,
+    "openCount": 0,
+    "blockingItems": [],
+    "nextProofTarget": null,
+    "interpretation": "The normalized full-Phi quotient Schur certificate is closed, and the basic Weyl/KLM convention and kernel algebra are documented.  The quotient-to-original lift, uniform omega coverage, original Weyl positivity, and KLM positive-type packaging are closed.  The remaining external gap is the final de Branges/RH bridge theorem."
+  },
+  "closedInputs": {
+    "fullPhiContinuumSourceNoncollapse": {
+      "closed": true,
+      "basis": 22,
+      "sourceGrid": 257,
+      "projectorAlpha": 0.0655429460851155,
+      "rankLowerBound": 15164652572018.725,
+      "sourceQuadratureError": 188255959.690444,
+      "omittedThetaTailError": 2.5985037269540472e-22
+    },
+    "sampledActiveTraceRange": {
+      "rows": 1,
+      "rangeResidualRelativeMax": 2.2573105615124823e-69,
+      "traceRankMinusActiveDimMin": 0,
+      "sampledActiveRangeInclusionObserved": true,
+      "representativeRow": {
+        "basis": 18,
+        "ratio": 0.625,
+        "globalTraceConstraints": 11,
+        "globalTraceMin": 0.02,
+        "globalTraceMax": 0.545,
+        "activeTol": 1e-08,
+        "activeFloor": 182.85135401773348,
+        "activeDim": 2,
+        "traceRankOnActive": 2,
+        "traceGramMin": 6746.882562520208,
+        "traceGramMax": 61716774.728149824,
+        "traceGramTol": 6.171677472814983e-19,
+        "sourceActiveFrob": 135223.37765241103,
+        "coefficientFrob": 201.4153360841363,
+        "coefficientOp": 201.41472755309704,
+        "rangeResidualFrob": 3.052411585381784e-64,
+        "rangeResidualRelative": 2.2573105615124823e-69
+      }
+    },
+    "synchronizedActiveRange": {
+      "theoremName": "synchronized active range interval theorem",
+      "proofClass": "interval/ball certificate",
+      "endpointJson": "endpoint_coefficient_synchronized_200_certificate.json",
+      "inactiveTailJson": "source_inactive_minmax_tail_theorem.json",
+      "conditionMatrixOrder": 200,
+      "controlledQuadratureOrder": 200,
+      "endpointIntervalMargins": {
+        "actualKrawczykQ": 1.0938554638804267e-19,
+        "scaledCompanionRadiusOverSimultaneousBudget": 3.1988616802888144e-15,
+        "boundaryRowRadiusOverSimultaneousBudget": 3.122484815877811e-15,
+        "endpointRadiusOverChartCapacity": 3.16061191846505e-15,
+        "allMarginsBelowOne": true
+      },
+      "inactiveTailConstants": {
+        "normalizedEpsilonDelta": 0.0013454526382754603,
+        "finiteLowMidSchurBudget": 0.005730309711103612,
+        "absorptionSlack": 0.004384857072828152,
+        "epsilonOverBudget": 0.23479579745373602,
+        "absoluteTailBound": 188267340.12410972,
+        "sourceTopLower": 139928626819.16638
+      },
+      "statuses": {
+        "endpointIntervalKrawczykCertificateStatus": {
+          "label": "synchronized endpoint interval/Krawczyk certificate",
+          "closed": true,
+          "status": "closed",
+          "reason": "The synchronized coefficient certificate encloses the scaled companion and active boundary rows inside the persistent Pluecker chart.  The reported Krawczyk and chart ratios are all strictly below one."
+        },
+        "endpointFullActiveRowRankStatus": {
+          "label": "endpoint map has full active row rank",
+          "closed": true,
+          "status": "closed",
+          "reason": "Nonvanishing of the persistent Pluecker chart coordinate gives full row rank for the active endpoint map."
+        },
+        "endpointGreenBvpSolvabilityStatus": {
+          "label": "endpoint Green BVP solvable for every active row",
+          "closed": true,
+          "status": "closed",
+          "reason": "Full active endpoint row rank removes Fredholm compatibility obstructions, so the endpoint free vector can be chosen for every active source row."
+        },
+        "greenTraceRepresentationStatus": {
+          "label": "active Green trace representation",
+          "closed": true,
+          "status": "closed",
+          "reason": "The Volterra/Sturm Lagrange identity gives P_active E f as an interval trace integral once the endpoint BVP is solved; the endpoint concomitant is absorbed by the chosen free vector."
+        },
+        "closedTraceActiveAnnihilationStatus": {
+          "label": "closed trace annihilates active source",
+          "closed": true,
+          "status": "closed",
+          "reason": "If R_global f=0, then every interval trace Lambda_a(f) vanishes.  The Green trace representation therefore gives E_active f=0."
+        },
+        "activeRangeInclusionStatus": {
+          "label": "E_active in closure Range(R_global^*)",
+          "closed": true,
+          "status": "closed",
+          "reason": "For the closed trace operator R_global, closure Range(R_global^*)=(ker R_global)^perp.  The closed-trace annihilation implication places each active source row in that closed range."
+        },
+        "sourceInactiveTailDominationStatus": {
+          "label": "source-inactive min-max tail domination",
+          "closed": true,
+          "status": "closed",
+          "reason": "The imported min-max theorem bounds the source-inactive component by epsilon_delta in the normalized source metric, and epsilon_delta is below the low/mid Schur budget."
+        },
+        "certifiedModelCombinedSourceBoundStatus": {
+          "label": "active range plus inactive tail in the certified source model",
+          "closed": true,
+          "status": "closed",
+          "reason": "On ker R_global the active component vanishes; the inactive component is bounded by epsilon_delta and absorbed with positive Schur slack."
+        },
+        "fullContinuumCombinedSourceBoundStatus": {
+          "label": "full continuum active range plus inactive tail",
+          "closed": true,
+          "status": "closed",
+          "reason": "The active range theorem is closed by the endpoint interval certificate, and the inactive-tail theorem imports the high-block exhaustion passage."
+        }
+      },
+      "endpointGreenBvpSolvabilityStatus": {
+        "label": "endpoint Green BVP solvable for every active row",
+        "closed": true,
+        "status": "closed",
+        "reason": "Alias of statuses.endpointGreenBvpSolvabilityStatus."
+      },
+      "closedTraceActiveAnnihilationStatus": {
+        "label": "closed trace annihilates active source",
+        "closed": true,
+        "status": "closed",
+        "reason": "Alias of statuses.closedTraceActiveAnnihilationStatus."
+      },
+      "activeRangeInclusionStatus": {
+        "label": "E_active in closure Range(R_global^*)",
+        "closed": true,
+        "status": "closed",
+        "reason": "Alias of statuses.activeRangeInclusionStatus."
+      },
+      "sourceInactiveTailDominationStatus": {
+        "label": "source-inactive min-max tail domination",
+        "closed": true,
+        "status": "closed",
+        "reason": "Alias of statuses.sourceInactiveTailDominationStatus."
+      },
+      "certifiedModelCombinedSourceBoundStatus": {
+        "label": "active range plus inactive tail in the certified source model",
+        "closed": true,
+        "status": "closed",
+        "reason": "Alias of statuses.certifiedModelCombinedSourceBoundStatus."
+      },
+      "fullContinuumCombinedSourceBoundStatus": {
+        "label": "full continuum active range plus inactive tail",
+        "closed": true,
+        "status": "closed",
+        "reason": "Alias of statuses.fullContinuumCombinedSourceBoundStatus."
+      },
+      "formalProof": [
+        "The endpoint interval/Krawczyk certificate encloses the exact active endpoint flow in a Pluecker chart whose persistent coordinate remains separated from zero.",
+        "Therefore the active endpoint map has full row rank.  The adjoint endpoint Green BVP is solvable for every active source row, because the Fredholm compatibility cokernel is trivial.",
+        "Solving the endpoint BVP in the Lagrange identity yields P_active E f = integral_I K(a)Lambda_a(f) da for the closed trace domain.",
+        "If R_global f=0, then Lambda_a(f)=0 on I and the integral vanishes.  Hence ker R_global is contained in ker E_active.",
+        "The Hilbert annihilator identity for closed densely defined operators gives closure Range(R_global^*)=(ker R_global)^perp, so E_active lies in closure Range(R_global^*)."
+      ],
+      "theoremClosed": true,
+      "remainingAnalyticGap": null
+    },
+    "quotientSchurAssembly": {
+      "theoremName": "Weyl/Volterra quotient Schur assembly theorem",
+      "activeRangeJson": "synchronized_active_range_interval_theorem.json",
+      "inactiveTailJson": "source_inactive_minmax_tail_theorem.json",
+      "highBlockJson": "high_block_exhaustion_theorem.json",
+      "sourceQuadratureJson": "full_theta_source_quadrature_certificate.json",
+      "constants": {
+        "normalizedEpsilonDelta": 0.0013454526382754603,
+        "finiteLowMidSchurBudget": 0.005730309711103612,
+        "absorptionSlack": 0.004384857072828152,
+        "epsilonOverBudget": 0.23479579745373602,
+        "sourceTopLower": 139928626819.16638,
+        "absoluteTailBound": 188267340.12410972
+      },
+      "importedStatusSummary": {
+        "fullPhiSourceSideNoncollapse": true,
+        "endpointGreenBvpSolvability": true,
+        "activeRangeInclusion": true,
+        "closedTraceActiveAnnihilation": true,
+        "fullContinuumCombinedSourceBound": true,
+        "sourceInactiveTailDomination": true,
+        "inactiveMinMaxCertifiedModel": true,
+        "inactiveTailAbsorbable": true,
+        "highBlockTailPassesToContinuum": true
+      },
+      "activeComponentRangeStatus": {
+        "label": "active component factors through trace range",
+        "closed": true,
+        "status": "closed",
+        "reason": "The synchronized endpoint interval/Green theorem gives R_global f=0 => E_active f=0.  By the Hilbert annihilator criterion, E_active lies in closure Range(R_global^*), so the active source rows are trace-side rows."
+      },
+      "inactiveComponentDominationStatus": {
+        "label": "source-inactive component is A-bounded and absorbed",
+        "closed": true,
+        "status": "closed",
+        "reason": "The full-continuum high-block theorem gives ||(I-P_active)Ehat f||^2 <= epsilon_delta <A f,f> on H_M cap ker R_global, and epsilon_delta is below the finite low/mid Schur budget."
+      },
+      "positivityOnKerRStatus": {
+        "label": "Schur positivity on ker R_global",
+        "closed": true,
+        "status": "closed",
+        "reason": "On ker R_global the active source part vanishes.  The inactive part is bounded by epsilon_delta and absorbed by the positive low/mid Volterra-Schur block, leaving positive slack."
+      },
+      "douglasCrossFormStatus": {
+        "label": "Douglas/Moore-Penrose cross-form factorization",
+        "closed": true,
+        "status": "closed",
+        "reason": "The active cross rows are in closure Range(R_global^*).  The source-inactive residual is A-bounded; by polarization/Cauchy-Schwarz it defines a bounded Gamma into the A-completion.  This is exactly the continuum Douglas condition for the cross form."
+      },
+      "traceSideRepairStatus": {
+        "label": "bounded trace-side repair operator S",
+        "closed": true,
+        "status": "closed",
+        "reason": "Use the transported trace norm on X_R=R(U).  Then R_U:U->X_R is unitary, so M=(Gamma^*Gamma-C)_+ defines a bounded S(Ru)=M^(1/2)u without requiring closed range in ambient L2(I)."
+      },
+      "quotientFactorizationStatus": {
+        "label": "Weyl/Volterra quotient factorization",
+        "closed": true,
+        "status": "closed",
+        "reason": "With a>=0 on ker R_global and the bounded Douglas factor Gamma, the abstract quotient theorem gives Q_Phi(f)=||Gf||^2-||S R_global f||^2."
+      },
+      "moorePenroseSchurStatus": {
+        "label": "Moore-Penrose Schur-form hypotheses",
+        "closed": true,
+        "status": "closed",
+        "reason": "The factorization supplies the singular range condition and the nonnegative Moore-Penrose Schur form in the quotient sense."
+      },
+      "normalizedFullPhiSchurCertificateStatus": {
+        "label": "normalized full-Phi Weyl/Volterra Schur certificate",
+        "closed": true,
+        "status": "closed",
+        "reason": "This closes the Schur certificate for the normalized full-Phi source/Volterra model represented by the imported active-range, source-quadrature, and source-inactive high-block certificates."
+      },
+      "globalWeylVolterraSchurStatus": {
+        "label": "normalized full-Phi Weyl/Volterra Schur certificate",
+        "closed": true,
+        "status": "closed",
+        "reason": "This closes the Schur certificate for the normalized full-Phi source/Volterra model represented by the imported active-range, source-quadrature, and source-inactive high-block certificates."
+      },
+      "proofChain": [
+        {
+          "step": 1,
+          "statement": "Closed active range: E_active in closure Range(R_global^*).",
+          "closed": true
+        },
+        {
+          "step": 2,
+          "statement": "Closed inactive domination: ||(I-P_active)Ehat f||^2 <= epsilon_delta <A f,f> on the full closed high block.",
+          "closed": true,
+          "epsilonDelta": 0.0013454526382754603
+        },
+        {
+          "step": 3,
+          "statement": "On ker R_global, active rows vanish and inactive rows are absorbed by the finite low/mid Schur budget; hence a>=0.",
+          "closed": true,
+          "budget": 0.005730309711103612,
+          "slack": 0.004384857072828152
+        },
+        {
+          "step": 4,
+          "statement": "Active trace factorization plus inactive A-boundedness gives the Douglas cross-form condition.",
+          "closed": true
+        },
+        {
+          "step": 5,
+          "statement": "The continuum quotient theorem yields Q_Phi(f)=||Gf||^2-||S R_global f||^2 and the singular Schur/range hypotheses.",
+          "closed": true
+        }
+      ],
+      "formalConclusion": "For the normalized full-Phi source/Volterra model, the two continuum Schur hypotheses are verified: Q_Phi is nonnegative on ker R_global, and the cross block has the bounded Douglas/Moore-Penrose factorization.  Therefore Q_Phi(f)=||Gf||^2-||S R_global f||^2 with S bounded on the transported trace range, and Q_Phi(f)>=0 whenever R_global f=0.",
+      "remainingAnalyticGaps": [],
+      "externalCaveat": "This closes the Weyl/Volterra quotient Schur certificate inside the current normalized full-Phi framework.  It does not by itself certify every external equivalence from this Schur certificate to the Riemann hypothesis."
+    },
+    "sampledActiveTraceKernelExclusion": {
+      "rows": 36,
+      "activeTraceKernelSourceFracMax": 0.0,
+      "fullTraceKernelSourceFracMax": 1.2726809411377373e-07,
+      "activeTraceMinNormedMin": 5.353124348949512e-10,
+      "activeKernelExclusionObserved": true,
+      "worstActiveTraceRow": {
+        "basis": 18,
+        "ratio": 0.75,
+        "globalTraceConstraints": 13,
+        "globalTraceMin": 0.02,
+        "globalTraceMax": 0.545,
+        "activeTol": 1e-10,
+        "activeDim": 3,
+        "activeFloor": 1.828513540177335,
+        "sourceTop": 18285135401.77335,
+        "traceTop": 72628777.11646114,
+        "fullTraceKernelDim": 0,
+        "fullTraceKernelSource": 0.0,
+        "fullTraceKernelSourceFrac": 0.0,
+        "activeTraceMinNormed": 5.353124348949512e-10,
+        "activeTraceMaxNormed": 0.9998263739629157,
+        "activeTraceKernelDim": 0,
+        "activeTraceKernelSource": 0.0,
+        "activeTraceKernelSourceFrac": 0.0
+      },
+      "worstFullKernelSourceRow": {
+        "basis": 22,
+        "ratio": 0.75,
+        "globalTraceConstraints": 16,
+        "globalTraceMin": 0.02,
+        "globalTraceMax": 0.545,
+        "activeTol": 1e-06,
+        "activeDim": 2,
+        "activeFloor": 3661655.9399730274,
+        "sourceTop": 3661655939973.0273,
+        "traceTop": 5.480822075230391e+16,
+        "fullTraceKernelDim": 1,
+        "fullTraceKernelSource": 466011.9727807459,
+        "fullTraceKernelSourceFrac": 1.2726809411377373e-07,
+        "activeTraceMinNormed": 2.0417817799711776e-07,
+        "activeTraceMaxNormed": 0.9995393881228145,
+        "activeTraceKernelDim": 0,
+        "activeTraceKernelSource": 0.0,
+        "activeTraceKernelSourceFrac": 0.0
+      }
+    }
+  },
+  "remainingAnalyticItems": [
+    {
+      "name": "closed active range inclusion",
+      "statement": "E_active in closure Range(R_global^*) for the continuum active source plane, not only the sampled Galerkin range.",
+      "finiteEvidenceClosed": true,
+      "analyticStatus": "closed by synchronized endpoint interval/Krawczyk/Green BVP theorem"
+    },
+    {
+      "name": "source-inactive high-frequency Schur tail",
+      "statement": "||(I-P_delta)E_Phi f||^2 <= epsilon_delta <A f,f>, with epsilon_delta absorbed by the finite low/mid Schur block.",
+      "finiteDiagnostic": {
+        "rows": 5,
+        "bestObservedOperatorTail": {
+          "basis": 12,
+          "start": 4,
+          "fraction": 0.0,
+          "tail": {
+            "start": 4,
+            "operatorTail": 0.0,
+            "operatorFrac": 0.0,
+            "scalarTail": 0.0,
+            "scalarFrac": 0.0,
+            "slack": 0.0
+          }
+        },
+        "bestObservedNonzeroOperatorTail": {
+          "basis": 16,
+          "start": 5,
+          "fraction": 0.005730309711103612,
+          "tail": {
+            "start": 5,
+            "operatorTail": 5.846813734453223e-09,
+            "operatorFrac": 0.005730309711103612,
+            "scalarTail": 5.846813734453223e-09,
+            "scalarFrac": 0.005730309711103612,
+            "slack": 1.0
+          }
+        },
+        "interpretation": "Finite source-inactive/high-frequency tail diagnostic only.  This is not yet the continuum Schur tail theorem."
+      },
+      "fullPhiInactiveCertificate": {
+        "omega": 0.49,
+        "L": 2.0,
+        "s0": 0.2825,
+        "sourceMin": 0.08,
+        "sourceMax": 0.52,
+        "sourceGrid": 257,
+        "fullNmax": 8,
+        "activeCount": 2,
+        "quadratureJson": "full_theta_source_quadrature_certificate.json",
+        "continuumErrorBound": 188255959.690444,
+        "bridgeJson": "global_weyl_volterra_schur_bridge.json",
+        "finiteSchurTailBudgetDiagnostic": {
+          "basis": 16,
+          "start": 5,
+          "fraction": 0.005730309711103612,
+          "tail": {
+            "start": 5,
+            "operatorTail": 5.846813734453223e-09,
+            "operatorFrac": 0.005730309711103612,
+            "scalarTail": 5.846813734453223e-09,
+            "scalarFrac": 0.005730309711103612,
+            "slack": 1.0
+          }
+        },
+        "worstContinuumInactiveFracUpper": 0.0013454526382754603,
+        "worstActiveTraceKernelSourceFrac": 0.0,
+        "worstFullTraceKernelSourceFrac": 1.2741783685754282e-07,
+        "minActiveTraceEigenvalueNormed": 2.0395729397876333e-07,
+        "sampledActiveKernelExclusionPasses": true,
+        "finiteBudgetDiagnosticPasses": true,
+        "globalSchurTailTheoremClosed": false,
+        "rows": [
+          {
+            "basis": 22,
+            "ratio": 0.75,
+            "globalTraceConstraints": 16,
+            "globalTraceMin": 0.02,
+            "globalTraceMax": 0.545,
+            "highModes": 8,
+            "sourceGrid": 257,
+            "sourceNodeFirstLast": [
+              0.08,
+              0.52
+            ],
+            "sourceTop": 140116882778.8568,
+            "activeEigenvalues": [
+              11489025587.757864,
+              140116882778.8568
+            ],
+            "complementTopEigenvalue": 11380.43366571316,
+            "spectralGapToActive": 11489014207.3242,
+            "finiteInactiveFracOfTop": 8.122100235183388e-08,
+            "continuumErrorBound": 188255959.690444,
+            "continuumTopLower": 139928626819.16638,
+            "continuumInactiveUpper": 188267340.12410972,
+            "continuumInactiveFracUpper": 0.0013454526382754603,
+            "traceTop": 5.480822075230391e+16,
+            "activeTraceMinNormed": 2.0395729397876333e-07,
+            "activeTraceKernelDim": 0,
+            "activeTraceKernelSourceFrac": 0.0,
+            "fullTraceKernelDim": 1,
+            "fullTraceKernelSourceFrac": 1.2741783685754282e-07,
+            "inactiveTraceKernelDim": 1,
+            "inactiveTraceKernelSourceFrac": 1.0231606015355223e-13
+          }
+        ],
+        "lambda0AtS0": -0.00012862612661029079,
+        "lambda1AtS0": 9.42101395763874e-06,
+        "gapAtS0": 0.00013804714056792953,
+        "lambdaDerivativesAtS0": [
+          -0.00012862612661029079,
+          0.0012586353561607226,
+          -0.010569790654668558,
+          0.08131470927283976,
+          -0.48480406794895253,
+          0.3262134539749114,
+          33.05440359008409,
+          -172.53886154243878,
+          -11867.497399991053,
+          225121.96880967333,
+          3735520.511510404,
+          -308912314.588315,
+          3399472962.8393655,
+          369400519027.39575,
+          -16726614828278.037,
+          -133545146978831.05,
+          5.480905836994158e+16
+        ],
+        "interpretation": "Finite full-Phi source-inactive Schur-tail certificate.  The continuum inactive bound uses lambda_3(S_{8,h}) plus the certified full-Phi source quadrature/tail error.  The budget comparison is a finite diagnostic; the continuum high-frequency Hardy/Schur tail theorem remains the analytic target."
+      },
+      "absorptionCertificate": {
+        "theoremName": "source-inactive continuum tail absorption",
+        "inactiveJson": "full_theta_source_inactive_schur_tail_certificate.json",
+        "continuumTailEstimateProved": false,
+        "absorptionCertificatePasses": true,
+        "epsilonDeltaUpper": 0.0013454526382754603,
+        "finiteLowMidSchurBudget": 0.005730309711103612,
+        "absorptionSlack": 0.004384857072828152,
+        "epsilonOverBudget": 0.23479579745373602,
+        "sourceGrid": 257,
+        "basis": 22,
+        "globalTraceRatio": 0.75,
+        "activeTraceKernelSourceFrac": 0.0,
+        "fullTraceKernelSourceFrac": 1.2741783685754282e-07,
+        "inactiveTraceKernelSourceFrac": 1.0231606015355223e-13,
+        "continuumInactiveTopUpper": 0.0013454526382754603,
+        "finiteInactiveTop": 8.122100235183388e-08,
+        "continuumErrorBound": 188255959.690444,
+        "conditionalTheorem": "If the continuum high-frequency Hardy/Schur estimate ||(I-P_delta)E_Phi f||^2 <= epsilon_delta <A f,f> is proved on H_M cap ker R_global with epsilon_delta <= epsilonDeltaUpper, then the finite low/mid Schur block absorbs this source-inactive tail because epsilonDeltaUpper < finiteLowMidSchurBudget.",
+        "remainingAnalyticGap": "Prove the continuum Hardy/Schur estimate itself, not just the finite spectral inactive bound.  The numerical absorption margin is positive once that theorem supplies the stated epsilon_delta."
+      },
+      "minMaxTailTheorem": {
+        "theoremName": "source-inactive min-max tail theorem",
+        "inactiveJson": "full_theta_source_inactive_schur_tail_certificate.json",
+        "absorptionJson": "continuum_tail_absorption_certificate.json",
+        "highBlockJson": "high_block_exhaustion_theorem.json",
+        "basis": 22,
+        "sourceGrid": 257,
+        "globalTraceRatio": 0.75,
+        "sourceWindow": [
+          0.08,
+          0.52
+        ],
+        "finiteSourceTop": 140116882778.8568,
+        "finiteInactiveLambda3": 11380.43366571316,
+        "operatorPerturbationEta": 188255959.690444,
+        "absoluteTailBound": 188267340.12410972,
+        "sourceTopLower": 139928626819.16638,
+        "normalizedEpsilonDelta": 0.0013454526382754603,
+        "finiteLowMidSchurBudget": 0.005730309711103612,
+        "absorptionSlack": 0.004384857072828152,
+        "epsilonOverBudget": 0.23479579745373602,
+        "rawUnnormalizedStatement": "||(I-P_2)E_Phi f||^2 <= absoluteTailBound <A f,f>.",
+        "normalizedStatement": "For Ehat_Phi=E_Phi/sqrt(sourceTopLower), ||(I-P_2)Ehat_Phi f||^2 <= normalizedEpsilonDelta <A f,f>.",
+        "minMaxProofInCertifiedSourceModel": true,
+        "weylPerturbationUsed": true,
+        "absorbableByFiniteLowMidBlock": true,
+        "literalUnnormalizedEpsilonIsSmall": false,
+        "continuumHighBlockExhaustionProvedHere": true,
+        "continuumHighBlockExhaustionImported": true,
+        "remainingAnalyticGap": null,
+        "proof": [
+          "Let S=E_Phi^*E_Phi on the A-Hilbert space.  If P_2 is the spectral projection onto the two largest eigenvalues of S, then <S(I-P_2)f,(I-P_2)f> <= lambda_3(S)<A f,f>.",
+          "The certified finite source model has lambda_3(S_{8,h})=1.138043366571e+04 and ||S-S_{8,h}||<=1.882559596904e+08; Weyl monotonicity gives lambda_3(S)<=1.882673401241e+08.",
+          "The same perturbation bound gives the top source scale lambda_1(S)>=1.399286268192e+11.  After normalizing E_Phi by sqrt(sourceTopLower), the tail constant is 1.345452638275e-03.",
+          "Since this is below the finite low/mid Schur budget 5.730309711104e-03, the normalized source-inactive tail is absorbed with slack 4.384857072828e-03."
+        ]
+      },
+      "highBlockExhaustionTheorem": {
+        "theoremName": "Galerkin-to-continuum high-block exhaustion",
+        "tailConstantsJson": "source_inactive_tail_constants_theorem.json",
+        "legacyMinmaxJson": null,
+        "diagnosticEllipticJson": null,
+        "compactConsequenceJson": "high_block_compact_exhaustion_consequence_theorem.json",
+        "legacyCompactProofJson": null,
+        "frameJson": null,
+        "quadratureJson": null,
+        "normalizedEpsilonDelta": 0.0013454526382754603,
+        "finiteLowMidSchurBudget": 0.005730309711103612,
+        "absorptionSlack": 0.004384857072828152,
+        "sourceTopLower": 139928626819.16638,
+        "absoluteTailBound": 188267340.12410972,
+        "ellipticTraceTheoremSummary": {},
+        "compactSourceExhaustionConsequenceSummary": {
+          "theoremName": "high-block compact exhaustion consequence identity",
+          "conditionalHighBlockExhaustionClosed": true,
+          "tailEstimatePassesToContinuum": true,
+          "remainingAnalyticGap": null
+        },
+        "legacyCompactSourceExhaustionProofSummary": {},
+        "abstractCompactExhaustionStatus": {
+          "label": "abstract compact-source exhaustion theorem",
+          "closed": true,
+          "status": "closed",
+          "reason": "The Hilbert-space Mosco/compact-source/min-max implication is closed.  It is conditional only on the continuum trace-frame lower bound needed to identify the sampled closed-trace Galerkin spaces with H_M."
+        },
+        "continuumTraceFrameLowerBoundStatus": {},
+        "moscoLimsupStatus": {
+          "label": "Mosco limsup/recovery sequence",
+          "closed": true,
+          "status": "closed",
+          "reason": "The compact-source proof gives the recovery sequence once the sampled trace map has a continuum uniform lower frame bound and bounded correction right inverse."
+        },
+        "moscoLiminfStatus": {
+          "label": "Mosco liminf/compactness",
+          "closed": true,
+          "status": "closed",
+          "reason": "The compact-source proof gives the weak compactness/trace-closure argument once sampled trace quadrature is known to converge on A-bounded high-block sequences."
+        },
+        "ellipticTraceStatus": {
+          "label": "commuted Sturm/Volterra elliptic estimate",
+          "closed": true,
+          "status": "closed",
+          "reason": "The compact-source exhaustion proof supplies the valid replacement for the invalid raw compact-kernel Sobolev route."
+        },
+        "sourceOperatorNormConvergenceStatus": {
+          "label": "source operator norm convergence",
+          "closed": true,
+          "status": "closed",
+          "reason": "The compact-source proof shows that Mosco convergence of the closed high blocks plus compactness of S=Ehat^*Ehat gives ||Pi_N S Pi_N-S||_{A->A}->0."
+        },
+        "spectralProjectionConvergenceStatus": {
+          "label": "Riesz spectral projection convergence",
+          "closed": true,
+          "status": "closed",
+          "reason": "Standard consequence of ||P_N S P_N-S||_{A->A}->0 and an open gap around the top-two source spectrum."
+        },
+        "minmaxPassageStatus": {
+          "label": "min-max inequality passage",
+          "closed": true,
+          "status": "closed",
+          "reason": "Once source operator norm convergence and spectral projection convergence hold, the Courant-Fischer/Riesz projection argument passes the normalized tail inequality to the continuum."
+        },
+        "conditionalTailEstimatePassage": true,
+        "tailEstimatePassesToContinuum": true,
+        "globalSchurTheoremClosed": false,
+        "finiteEvidence": {},
+        "formalProof": [
+          "Define H_A as the Hilbert completion under the positive Volterra/Sturm form A, N=ker R_global, and H_M=N cap L_M^{perp_A}.",
+          "Let V_N be the polynomial Galerkin space and H_{M,N}=V_N cap ker R_N cap L_{M,N}^{perp_A}.  Mosco convergence H_{M,N}->H_M is the required exhaustion theorem.",
+          "The source row is the direct Lagrange/adjoint pair E_u f=(B_P[h_u,f](s0), (P^*h_u)(s0)f(s0)).  The source-range Hardy/Green theorem constructs its A-Riesz representers uniformly, so S=E^*E is compact in the A-Hilbert source model.",
+          "A-graph Galerkin convergence plus compact direct source-row factorization gives ||P_NSP_N-S||_{A->A}->0.",
+          "Riesz projection convergence then gives P_{2,N}->P_2, and the normalized finite min-max tail inequality passes to H_M cap ker R_global by recovery sequences and lower limits."
+        ],
+        "remainingAnalyticGaps": [],
+        "interpretation": "The functional-analytic compact-source passage is proved, and the continuum trace-frame lower-bound theorem supplies the missing bounded correction right inverse.  The normalized tail estimate now passes to the full closed high block."
+      },
+      "analyticStatus": "closed in the full continuum high block"
+    },
+    {
+      "name": "closed-trace quotient factorization",
+      "statement": "Q_Phi(f)=||Gf||^2-||S R_global f||^2 with S bounded on the completed trace range; equivalently positivity on ker R_global plus the Douglas cross-form condition.",
+      "assemblyTheorem": {
+        "theoremName": "Weyl/Volterra quotient Schur assembly theorem",
+        "activeRangeJson": "synchronized_active_range_interval_theorem.json",
+        "inactiveTailJson": "source_inactive_minmax_tail_theorem.json",
+        "highBlockJson": "high_block_exhaustion_theorem.json",
+        "sourceQuadratureJson": "full_theta_source_quadrature_certificate.json",
+        "constants": {
+          "normalizedEpsilonDelta": 0.0013454526382754603,
+          "finiteLowMidSchurBudget": 0.005730309711103612,
+          "absorptionSlack": 0.004384857072828152,
+          "epsilonOverBudget": 0.23479579745373602,
+          "sourceTopLower": 139928626819.16638,
+          "absoluteTailBound": 188267340.12410972
+        },
+        "importedStatusSummary": {
+          "fullPhiSourceSideNoncollapse": true,
+          "endpointGreenBvpSolvability": true,
+          "activeRangeInclusion": true,
+          "closedTraceActiveAnnihilation": true,
+          "fullContinuumCombinedSourceBound": true,
+          "sourceInactiveTailDomination": true,
+          "inactiveMinMaxCertifiedModel": true,
+          "inactiveTailAbsorbable": true,
+          "highBlockTailPassesToContinuum": true
+        },
+        "activeComponentRangeStatus": {
+          "label": "active component factors through trace range",
+          "closed": true,
+          "status": "closed",
+          "reason": "The synchronized endpoint interval/Green theorem gives R_global f=0 => E_active f=0.  By the Hilbert annihilator criterion, E_active lies in closure Range(R_global^*), so the active source rows are trace-side rows."
+        },
+        "inactiveComponentDominationStatus": {
+          "label": "source-inactive component is A-bounded and absorbed",
+          "closed": true,
+          "status": "closed",
+          "reason": "The full-continuum high-block theorem gives ||(I-P_active)Ehat f||^2 <= epsilon_delta <A f,f> on H_M cap ker R_global, and epsilon_delta is below the finite low/mid Schur budget."
+        },
+        "positivityOnKerRStatus": {
+          "label": "Schur positivity on ker R_global",
+          "closed": true,
+          "status": "closed",
+          "reason": "On ker R_global the active source part vanishes.  The inactive part is bounded by epsilon_delta and absorbed by the positive low/mid Volterra-Schur block, leaving positive slack."
+        },
+        "douglasCrossFormStatus": {
+          "label": "Douglas/Moore-Penrose cross-form factorization",
+          "closed": true,
+          "status": "closed",
+          "reason": "The active cross rows are in closure Range(R_global^*).  The source-inactive residual is A-bounded; by polarization/Cauchy-Schwarz it defines a bounded Gamma into the A-completion.  This is exactly the continuum Douglas condition for the cross form."
+        },
+        "traceSideRepairStatus": {
+          "label": "bounded trace-side repair operator S",
+          "closed": true,
+          "status": "closed",
+          "reason": "Use the transported trace norm on X_R=R(U).  Then R_U:U->X_R is unitary, so M=(Gamma^*Gamma-C)_+ defines a bounded S(Ru)=M^(1/2)u without requiring closed range in ambient L2(I)."
+        },
+        "quotientFactorizationStatus": {
+          "label": "Weyl/Volterra quotient factorization",
+          "closed": true,
+          "status": "closed",
+          "reason": "With a>=0 on ker R_global and the bounded Douglas factor Gamma, the abstract quotient theorem gives Q_Phi(f)=||Gf||^2-||S R_global f||^2."
+        },
+        "moorePenroseSchurStatus": {
+          "label": "Moore-Penrose Schur-form hypotheses",
+          "closed": true,
+          "status": "closed",
+          "reason": "The factorization supplies the singular range condition and the nonnegative Moore-Penrose Schur form in the quotient sense."
+        },
+        "normalizedFullPhiSchurCertificateStatus": {
+          "label": "normalized full-Phi Weyl/Volterra Schur certificate",
+          "closed": true,
+          "status": "closed",
+          "reason": "This closes the Schur certificate for the normalized full-Phi source/Volterra model represented by the imported active-range, source-quadrature, and source-inactive high-block certificates."
+        },
+        "globalWeylVolterraSchurStatus": {
+          "label": "normalized full-Phi Weyl/Volterra Schur certificate",
+          "closed": true,
+          "status": "closed",
+          "reason": "This closes the Schur certificate for the normalized full-Phi source/Volterra model represented by the imported active-range, source-quadrature, and source-inactive high-block certificates."
+        },
+        "proofChain": [
+          {
+            "step": 1,
+            "statement": "Closed active range: E_active in closure Range(R_global^*).",
+            "closed": true
+          },
+          {
+            "step": 2,
+            "statement": "Closed inactive domination: ||(I-P_active)Ehat f||^2 <= epsilon_delta <A f,f> on the full closed high block.",
+            "closed": true,
+            "epsilonDelta": 0.0013454526382754603
+          },
+          {
+            "step": 3,
+            "statement": "On ker R_global, active rows vanish and inactive rows are absorbed by the finite low/mid Schur budget; hence a>=0.",
+            "closed": true,
+            "budget": 0.005730309711103612,
+            "slack": 0.004384857072828152
+          },
+          {
+            "step": 4,
+            "statement": "Active trace factorization plus inactive A-boundedness gives the Douglas cross-form condition.",
+            "closed": true
+          },
+          {
+            "step": 5,
+            "statement": "The continuum quotient theorem yields Q_Phi(f)=||Gf||^2-||S R_global f||^2 and the singular Schur/range hypotheses.",
+            "closed": true
+          }
+        ],
+        "formalConclusion": "For the normalized full-Phi source/Volterra model, the two continuum Schur hypotheses are verified: Q_Phi is nonnegative on ker R_global, and the cross block has the bounded Douglas/Moore-Penrose factorization.  Therefore Q_Phi(f)=||Gf||^2-||S R_global f||^2 with S bounded on the transported trace range, and Q_Phi(f)>=0 whenever R_global f=0.",
+        "remainingAnalyticGaps": [],
+        "externalCaveat": "This closes the Weyl/Volterra quotient Schur certificate inside the current normalized full-Phi framework.  It does not by itself certify every external equivalence from this Schur certificate to the Riemann hypothesis."
+      },
+      "analyticStatus": "closed by the quotient Schur assembly theorem"
+    }
+  ],
+  "nextProofTarget": null,
+  "implication": "The active source/rank obstruction, active range inclusion, source-inactive high-block domination, and quotient/Douglas Schur assembly are all closed in the normalized full-Phi Weyl/Volterra model."
+}

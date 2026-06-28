@@ -1,0 +1,49 @@
+{
+  "theoremName": "adjoint Green distributional jump theorem",
+  "proofClass": "symbolic identity",
+  "lagrangeJson": "trace_lagrange_adjoint_identity_theorem.json",
+  "operatorOrder": 8,
+  "leadingCoefficientCondition": "a_8(s0) != 0",
+  "distributionalSourceJumpLawStatus": {
+    "label": "distributional source jump law",
+    "closed": true,
+    "status": "closed",
+    "reason": "For a piecewise smooth K, the singular part of P^*K is obtained by applying the distributional product rule to the jumps of K,K',...,K^(7) at s0."
+  },
+  "jumpMatrixTriangularStatus": {
+    "label": "jump matrix is triangular after reversing derivative order",
+    "closed": true,
+    "status": "closed",
+    "reason": "The coefficient of the highest remaining delta derivative uses the highest available jump through the leading term a_8(s0)D^8K; lower operator coefficients only enter lower triangular positions."
+  },
+  "jumpMatrixInvertibleStatus": {
+    "label": "jump map is invertible",
+    "closed": true,
+    "status": "closed",
+    "reason": "The triangular diagonal is a nonzero signed power of the leading trace coefficient a_8(s0).  Hence the map from jumps to local source jets is bijective."
+  },
+  "interiorSourceSolvedStatus": {
+    "label": "interior adjoint source solved by jumps",
+    "closed": true,
+    "status": "closed",
+    "reason": "Every scalar source row ell(f)=sum_{q=0}^7 d_q f^(q)(s0) has a unique jump vector Delta(ell) with P^*K=ell as a distributional singular source."
+  },
+  "closedStatements": {
+    "distributionalSourceJumpLaw": true,
+    "jumpMatrixInvertible": true,
+    "interiorSourceSolved": true,
+    "endpointConcomitantSolved": false
+  },
+  "formula": {
+    "sourceDistribution": "ell(f)=sum_q d_q f^(q)(s0) corresponds to sum_q (-1)^q d_q delta_s0^(q)",
+    "jumpCondition": "sum_{k=q+1}^8 (-1)^k [D^(k-1-q)(a_k K)]_{s0}=(-1)^q d_q",
+    "piecewiseEquation": "P^*K=0 on each side of s0 after the jump is imposed"
+  },
+  "formalProof": [
+    "Write K=K_- 1_{s<s0}+K_+ 1_{s>s0}.  Distributional differentiation expresses D^nK as the regular sidewise derivatives plus delta derivatives weighted by the jumps of K,...,K^(n-1).",
+    "Collecting the coefficient of delta^(q) gives the displayed linear jump equation.",
+    "Order the equations by descending q.  The new unknown entering at each step is the next highest derivative jump, multiplied by a nonzero signed multiple of a_8(s0).",
+    "Therefore the jump matrix is triangular and invertible."
+  ],
+  "theoremClosed": true
+}

@@ -1,0 +1,38 @@
+{
+  "theoremName": "primitive boundary-zero consequence theorem",
+  "proofClass": "symbolic identity",
+  "primitiveBoundaryJson": "primitive_boundary_transport_audit.json",
+  "statuses": {
+    "primitiveRouteAFalseStatus": {
+      "label": "primitive route A is false",
+      "closed": true,
+      "status": "closed",
+      "reason": "The primitive boundary audit records that primitive tests do not generally land in ker R_global."
+    },
+    "primitiveTransportNoEndpointStatus": {
+      "label": "primitive transport has no endpoint term",
+      "closed": true,
+      "status": "closed",
+      "reason": "For compact primitive tests F(0)=0 kills the lower endpoint and kernel decay kills infinity."
+    },
+    "primitiveBoundaryZeroStatus": {
+      "label": "D_bdy is zero",
+      "closed": true,
+      "status": "closed",
+      "reason": "The canonical primitive boundary form is the zero form."
+    },
+    "primitiveBoundaryDescendsStatus": {
+      "label": "zero boundary descends to trace quotient",
+      "closed": true,
+      "status": "closed",
+      "reason": "The zero boundary form descends through the completed trace quotient."
+    }
+  },
+  "primitiveBoundaryZeroConsequenceClosed": true,
+  "D_bdyZeroOnPrimitiveTransport": true,
+  "proof": [
+    "Import the primitive boundary transport audit.",
+    "Extract only the endpoint consequence D_bdy=0 and its descent to the trace quotient."
+  ],
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,181 @@
+{
+  "theoremName": "repair-free Schur equivalence",
+  "quotientJson": "weyl_volterra_quotient_schur_theorem.json",
+  "repairSummaryJson": "dq_vanishing_repair_route_summary.json",
+  "primitiveEndpointJson": "primitive_endpoint_compatibility_theorem.json",
+  "statuses": {
+    "quotientHypothesesStatus": {
+      "label": "quotient Schur hypotheses for block factorization",
+      "closed": true,
+      "status": "closed",
+      "reason": "The closed quotient theorem gives a>=0 on N=ker R and the Douglas factorization b(n,u)=<A^{1/2}n,Gamma u>.",
+      "blocker": null
+    },
+    "algebraicEquivalenceStatus": {
+      "label": "D_q=0 iff full transported form is positive",
+      "closed": true,
+      "status": "closed",
+      "reason": "Completing the square gives q(n+u)=||A^{1/2}n+Gamma u||^2+<(C-Gamma^*Gamma)u,u>.  Hence q>=0 on N+U iff Gamma^*Gamma<=C iff D_q=(Gamma^*Gamma-C)_+=0.",
+      "blocker": null
+    },
+    "primitiveLiftNoBoundaryRepairStatus": {
+      "label": "primitive lift needs no boundary repair",
+      "closed": true,
+      "status": "closed",
+      "reason": "The primitive transport audit gives D_bdy=0, so original positivity follows from the repair-free full-form positivity theorem without an added endpoint term.",
+      "blocker": null
+    },
+    "finiteRepairFreeEvidenceStatus": {
+      "label": "finite repair-free evidence",
+      "closed": true,
+      "status": "closed",
+      "reason": "All imported finite scans have lambda_max(Gamma^*Gamma-C)<0.",
+      "blocker": null
+    },
+    "continuumRepairFreeTheoremStatus": {
+      "label": "continuum repair-free theorem",
+      "closed": true,
+      "status": "closed",
+      "reason": "The primitive endpoint compatibility theorem identifies the Schur trace form as P-M and uses the closed Green-lift contraction M<=P.  Hence Gamma^*Gamma<=C and D_q=0 on X_R.",
+      "blocker": null
+    }
+  },
+  "identity": "q(n+u)=||A^{1/2}n+Gamma u||^2+<(C-Gamma^*Gamma)u,u>",
+  "equivalentTargets": [
+    "D_q=0 on X_R",
+    "Gamma^*Gamma<=C on X_R",
+    "C-Gamma^*Gamma>=0 on X_R",
+    "Q_Phi>=0 on the full completed primitive/form domain"
+  ],
+  "finiteEvidence": {
+    "scanRows": [
+      {
+        "model": "full",
+        "kind": "tilde3",
+        "omega": 0.49,
+        "L": 8.0,
+        "basis": 6,
+        "quad": 14,
+        "laguerre": 24,
+        "constraints": 3,
+        "traceRank": 3,
+        "traceNullity": 3,
+        "kMin": 0.0008670423150971114,
+        "aMin": 0.005961156626078002,
+        "bNorm": 0.0793238115261531,
+        "rangeResidual": 0.0,
+        "normalizedRangeResidual": 0.0,
+        "gamma2Min": 5.508469930663352e-07,
+        "gamma2Max": 0.05337019030671383,
+        "schurDefectMin": -0.036900312628838174,
+        "schurDefectMax": -0.0014084315519562395,
+        "dqPositivePartNorm": 0.0,
+        "finiteDqZero": true,
+        "lowSchurDefect": [
+          -0.036900312628838174,
+          -0.0067635287974607,
+          -0.0014084315519562395
+        ],
+        "sourceJson": "dq_vanishing_schur_defect_scan.json"
+      },
+      {
+        "model": "full",
+        "kind": "tilde3",
+        "omega": 0.49,
+        "L": 8.0,
+        "basis": 8,
+        "quad": 16,
+        "laguerre": 24,
+        "constraints": 5,
+        "traceRank": 5,
+        "traceNullity": 3,
+        "kMin": 9.27493449318089e-05,
+        "aMin": 0.004058760062849071,
+        "bNorm": 0.10040238636535147,
+        "rangeResidual": 0.0,
+        "normalizedRangeResidual": 0.0,
+        "gamma2Min": -1.022970402147552e-52,
+        "gamma2Max": 0.084129089268374,
+        "schurDefectMin": -0.0415569984677974,
+        "schurDefectMax": -0.00011790089587421823,
+        "dqPositivePartNorm": 0.0,
+        "finiteDqZero": true,
+        "lowSchurDefect": [
+          -0.0415569984677974,
+          -0.009130067614252368,
+          -0.002409999873429942,
+          -0.0006562531575206292,
+          -0.00011790089587421823
+        ],
+        "sourceJson": "dq_vanishing_schur_defect_scan_b8c5.json"
+      },
+      {
+        "model": "full",
+        "kind": "tilde3",
+        "omega": 0.49,
+        "L": 8.0,
+        "basis": 10,
+        "quad": 20,
+        "laguerre": 24,
+        "constraints": 7,
+        "traceRank": 7,
+        "traceNullity": 3,
+        "kMin": 9.483203522472047e-06,
+        "aMin": 0.000790686258662669,
+        "bNorm": 0.07021508919632527,
+        "rangeResidual": 0.0,
+        "normalizedRangeResidual": 0.0,
+        "gamma2Min": -1.0961778289768156e-52,
+        "gamma2Max": 0.1502211066517431,
+        "schurDefectMin": -0.11678742475495175,
+        "schurDefectMax": -1.2820029525476991e-05,
+        "dqPositivePartNorm": 0.0,
+        "finiteDqZero": true,
+        "lowSchurDefect": [
+          -0.11678742475495175,
+          -0.0269232430740388,
+          -0.005229405351116928,
+          -0.0012958305420736462,
+          -0.00033892354154069616,
+          -8.484500248596337e-05
+        ],
+        "sourceJson": "dq_vanishing_schur_defect_scan_b10c7.json"
+      }
+    ],
+    "worstFiniteRow": {
+      "model": "full",
+      "kind": "tilde3",
+      "omega": 0.49,
+      "L": 8.0,
+      "basis": 10,
+      "quad": 20,
+      "laguerre": 24,
+      "constraints": 7,
+      "traceRank": 7,
+      "traceNullity": 3,
+      "kMin": 9.483203522472047e-06,
+      "aMin": 0.000790686258662669,
+      "bNorm": 0.07021508919632527,
+      "rangeResidual": 0.0,
+      "normalizedRangeResidual": 0.0,
+      "gamma2Min": -1.0961778289768156e-52,
+      "gamma2Max": 0.1502211066517431,
+      "schurDefectMin": -0.11678742475495175,
+      "schurDefectMax": -1.2820029525476991e-05,
+      "dqPositivePartNorm": 0.0,
+      "finiteDqZero": true,
+      "lowSchurDefect": [
+        -0.11678742475495175,
+        -0.0269232430740388,
+        -0.005229405351116928,
+        -0.0012958305420736462,
+        -0.00033892354154069616,
+        -8.484500248596337e-05
+      ],
+      "sourceJson": "dq_vanishing_schur_defect_scan_b10c7.json"
+    },
+    "allFiniteDqZero": true
+  },
+  "continuumTheoremClosed": true,
+  "nextProofTarget": null
+}

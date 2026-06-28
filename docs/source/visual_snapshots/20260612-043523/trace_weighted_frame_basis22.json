@@ -1,0 +1,242 @@
+{
+  "omega": 0.49,
+  "L": 2.0,
+  "s0": 0.2825,
+  "sourceMin": 0.08,
+  "sourceMax": 0.52,
+  "sourceGrid": 9,
+  "bases": [
+    22
+  ],
+  "traceCounts": [
+    9
+  ],
+  "constraintMin": 0.02,
+  "constraintMax": 0.545,
+  "cutoff": 6,
+  "activeTol": 1e-08,
+  "lambda0": -0.00012862612661029079,
+  "lambda1": 9.42101395763874e-06,
+  "gap": 0.00013804714056792953,
+  "e8AtS0": -0.17949627136147217,
+  "lambdaDerivatives": [
+    -0.00012862612661029079,
+    0.0012586353561607226,
+    -0.010569790654668558,
+    0.08131470927283976,
+    -0.48480406794895253,
+    0.3262134539749114,
+    33.05440359008409,
+    -172.53886154243878,
+    -11867.497399991053,
+    225121.96880967333,
+    3735520.511510404,
+    -308912314.588315,
+    3399472962.8393655,
+    369400519027.39575,
+    -16726614828278.037,
+    -133545146978831.05,
+    5.480905836994158e+16
+  ],
+  "rows": [
+    {
+      "basis": 22,
+      "traceCount": 9,
+      "traceMin": 0.02,
+      "traceMax": 0.545,
+      "activeTol": 1e-08,
+      "activeFloor": 36616.55939973027,
+      "activeDim": 3,
+      "activeSourceEigenvalues": [
+        165247.04233490035,
+        274587561456.9068,
+        3661655939973.0273
+      ],
+      "sourceTop": 3661655939973.0273,
+      "sourceOperator": 1913545.3848741157,
+      "sourceFrobenius": 1983996.8918012388,
+      "frameRank": 3,
+      "frameEigenvalues": [
+        2874982.3289243444,
+        436080038.4593773,
+        1664014566934922.8
+      ],
+      "frameTol": 1.6640145669349227e-11,
+      "frameMin": 2874982.3289243444,
+      "frameMax": 1664014566934922.8,
+      "densityOperator": 317.0151504613038,
+      "densityFrobenius": 317.0209356847136,
+      "maxRowDensityL2": 111.54097096526432,
+      "maxRowDensityL1": 69.28646260123932,
+      "maxPointDensity": 283.5645551866656,
+      "frameBoundOperator": 1128.5509672506985,
+      "boundRatio": 0.2809045932888572,
+      "rangeResidualRelative": 1.0928484787969945e-63,
+      "weightedRowStats": [
+        {
+          "sourceNode": 0.08,
+          "component": "boundary",
+          "densityL1": 8.604058077065929,
+          "densityL2": 13.691518816393796,
+          "maxDensity": 33.423703673435305,
+          "maxCoefficient": 1.8350796310310344,
+          "densityCoordinateVariation": 20.26352285790153
+        },
+        {
+          "sourceNode": 0.08,
+          "component": "adjointEval",
+          "densityL1": 69.28646260123932,
+          "densityL2": 111.54097096526432,
+          "maxDensity": 283.5645551866656,
+          "maxCoefficient": 15.149062397298945,
+          "densityCoordinateVariation": 163.63325805863383
+        },
+        {
+          "sourceNode": 0.135,
+          "component": "boundary",
+          "densityL1": 8.593664851137683,
+          "densityL2": 13.676930827593576,
+          "maxDensity": 33.40802361096149,
+          "maxCoefficient": 1.8334984951049629,
+          "densityCoordinateVariation": 20.23984315449967
+        },
+        {
+          "sourceNode": 0.135,
+          "component": "adjointEval",
+          "densityL1": 68.44960179540233,
+          "densityL2": 110.19374867477084,
+          "maxDensity": 280.13958509508996,
+          "maxCoefficient": 14.966087886990323,
+          "densityCoordinateVariation": 161.65685090693964
+        },
+        {
+          "sourceNode": 0.19,
+          "component": "boundary",
+          "densityL1": 8.571151593883576,
+          "densityL2": 13.6430650814518,
+          "maxDensity": 33.34528577923015,
+          "maxCoefficient": 1.829333003216921,
+          "densityCoordinateVariation": 20.18762034860546
+        },
+        {
+          "sourceNode": 0.19,
+          "component": "adjointEval",
+          "densityL1": 67.50206115555677,
+          "densityL2": 108.66834819927405,
+          "maxDensity": 276.261642276657,
+          "maxCoefficient": 14.75891390612757,
+          "densityCoordinateVariation": 159.41905211883818
+        },
+        {
+          "sourceNode": 0.245,
+          "component": "boundary",
+          "densityL1": 8.536618615671335,
+          "densityL2": 13.590059953569382,
+          "maxDensity": 33.235611773739656,
+          "maxCoefficient": 1.822597650289968,
+          "densityCoordinateVariation": 20.107082024750827
+        },
+        {
+          "sourceNode": 0.245,
+          "component": "adjointEval",
+          "densityL1": 66.45274671704203,
+          "densityL2": 106.97910694022164,
+          "maxDensity": 271.9671759287235,
+          "maxCoefficient": 14.529487705010439,
+          "densityCoordinateVariation": 156.94089500335193
+        },
+        {
+          "sourceNode": 0.3,
+          "component": "boundary",
+          "densityL1": 8.490272629219534,
+          "densityL2": 13.51822432484873,
+          "maxDensity": 33.079554376658535,
+          "maxCoefficient": 1.8133300845081985,
+          "densityCoordinateVariation": 19.998706929957432
+        },
+        {
+          "sourceNode": 0.3,
+          "component": "adjointEval",
+          "densityL1": 65.31116567121931,
+          "densityL2": 105.14133007146386,
+          "maxDensity": 267.2950955638867,
+          "maxCoefficient": 14.279887973035772,
+          "densityCoordinateVariation": 154.24483261464204
+        },
+        {
+          "sourceNode": 0.355,
+          "component": "boundary",
+          "densityL1": 8.432418387269319,
+          "densityL2": 13.428024599452156,
+          "maxDensity": 32.87806882759451,
+          "maxCoefficient": 1.8015894204259382,
+          "densityCoordinateVariation": 19.863205401072
+        },
+        {
+          "sourceNode": 0.355,
+          "component": "adjointEval",
+          "densityL1": 64.08722581770206,
+          "densityL2": 103.17096768696605,
+          "maxDensity": 262.28595024014146,
+          "maxCoefficient": 14.012280990151037,
+          "densityCoordinateVariation": 151.3542641200217
+        },
+        {
+          "sourceNode": 0.41,
+          "component": "boundary",
+          "densityL1": 8.363449090909004,
+          "densityL2": 13.32006970588099,
+          "maxDensity": 32.63247847954415,
+          "maxCoefficient": 1.7874542682753773,
+          "densityCoordinateVariation": 19.70149686983244
+        },
+        {
+          "sourceNode": 0.41,
+          "component": "adjointEval",
+          "densityL1": 62.79104341101615,
+          "densityL2": 101.08430546231303,
+          "maxDensity": 256.9811421464158,
+          "maxCoefficient": 13.728878613698715,
+          "densityCoordinateVariation": 148.2930809930236
+        },
+        {
+          "sourceNode": 0.465,
+          "component": "boundary",
+          "densityL1": 8.28383588677914,
+          "densityL2": 13.195094583735532,
+          "maxDensity": 32.34443605776108,
+          "maxCoefficient": 1.7710205468707123,
+          "densityCoordinateVariation": 19.51468519451041
+        },
+        {
+          "sourceNode": 0.465,
+          "component": "adjointEval",
+          "densityL1": 61.43276398420174,
+          "densityL2": 98.89767620717319,
+          "maxDensity": 251.4221932980597,
+          "maxCoefficient": 13.431899102589847,
+          "densityCoordinateVariation": 145.08524385400247
+        },
+        {
+          "sourceNode": 0.52,
+          "component": "boundary",
+          "densityL1": 8.194116774791766,
+          "densityL2": 13.05394266696437,
+          "maxDensity": 32.01588178663211,
+          "maxCoefficient": 1.7523991491115507,
+          "densityCoordinateVariation": 19.304032576098628
+        },
+        {
+          "sourceNode": 0.52,
+          "component": "adjointEval",
+          "densityL1": 60.022399858292125,
+          "densityL2": 96.62719827955965,
+          "maxDensity": 245.65008052162193,
+          "maxCoefficient": 13.123531589742763,
+          "densityCoordinateVariation": 141.75439871763265
+        }
+      ]
+    }
+  ],
+  "interpretation": "Finite weighted frame inequality on the source-active subspace. Uniform lower bounds for frameMin imply uniform L2 bounds for the minimal Green density via ||Y|| <= ||E||/sqrt(frameMin)."
+}

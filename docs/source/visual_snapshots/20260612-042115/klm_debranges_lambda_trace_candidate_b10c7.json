@@ -1,0 +1,189 @@
+{
+  "theoremName": "Lambda trace candidate for de Branges evaluation vector",
+  "basis": 10,
+  "constraints": 7,
+  "traceRank": 7,
+  "traceNullity": 3,
+  "omega": 0.49,
+  "candidateFormula": "y_z(a)=Lambda_a(f_z), c_z solves R U c_z=y_z, then x_z=c_z is tested in the Volterra/KLM branch Gram model.",
+  "results": [
+    {
+      "kind": "exp_iz",
+      "full": {
+        "jointRelative": 1.0948458277472768,
+        "plusRelative": 0.9783444310357523,
+        "crossRelative": 1.1503007519683512,
+        "minusRelative": 1.0965643185264264,
+        "jointFrobenius": 0.3253780510646967,
+        "globalScale": 0.12037949240688633,
+        "scaledJointRelative": 0.9981020796619904,
+        "traceCoordinateNormFrobenius": 13.727330288148043,
+        "mappedJointNorm": 0.15203045799795292
+      },
+      "truncated": {
+        "jointRelative": 1.0948458277472979,
+        "plusRelative": 0.9783444310357498,
+        "crossRelative": 1.1503007519683814,
+        "minusRelative": 1.0965643185264513,
+        "jointFrobenius": 0.32537805106466544,
+        "globalScale": 0.12037949240688554,
+        "scaledJointRelative": 0.99810207966199,
+        "traceCoordinateNormFrobenius": 13.727330288148043,
+        "mappedJointNorm": 0.15203045799795292
+      }
+    },
+    {
+      "kind": "exp_minus_iz",
+      "full": {
+        "jointRelative": 161.16270259139105,
+        "plusRelative": 147.15413657958158,
+        "crossRelative": 149.74987555025035,
+        "minusRelative": 195.24112030490818,
+        "jointFrobenius": 47.89606421700737,
+        "globalScale": 2.8201217082971566e-05,
+        "scaledJointRelative": 0.9999896713203309,
+        "traceCoordinateNormFrobenius": 220.3370696949834,
+        "mappedJointNorm": 47.89649294571057
+      },
+      "truncated": {
+        "jointRelative": 161.1627025914096,
+        "plusRelative": 147.15413657959832,
+        "crossRelative": 149.74987555026763,
+        "minusRelative": 195.24112030493097,
+        "jointFrobenius": 47.89606421700737,
+        "globalScale": 2.8201217082969547e-05,
+        "scaledJointRelative": 0.9999896713203309,
+        "traceCoordinateNormFrobenius": 220.3370696949834,
+        "mappedJointNorm": 47.89649294571057
+      }
+    },
+    {
+      "kind": "omega_shift_plus",
+      "full": {
+        "jointRelative": 1.6781465056536204,
+        "plusRelative": 1.383226437847804,
+        "crossRelative": 1.7809818632098888,
+        "minusRelative": 1.7491921526917593,
+        "jointFrobenius": 0.4987296161452301,
+        "globalScale": 0.020794174797184213,
+        "scaledJointRelative": 0.9995902224597671,
+        "traceCoordinateNormFrobenius": 21.59861844890314,
+        "mappedJointNorm": 0.4091081895258458
+      },
+      "truncated": {
+        "jointRelative": 1.678146505653746,
+        "plusRelative": 1.3832264378478836,
+        "crossRelative": 1.7809818632100274,
+        "minusRelative": 1.7491921526918999,
+        "jointFrobenius": 0.49872961614520983,
+        "globalScale": 0.020794174797183634,
+        "scaledJointRelative": 0.9995902224597671,
+        "traceCoordinateNormFrobenius": 21.59861844890314,
+        "mappedJointNorm": 0.4091081895258458
+      }
+    },
+    {
+      "kind": "omega_shift_minus",
+      "full": {
+        "jointRelative": 1.3017187115285245,
+        "plusRelative": 1.298686162458768,
+        "crossRelative": 1.3258834763666654,
+        "minusRelative": 1.2531131270139144,
+        "jointFrobenius": 0.38685875824460614,
+        "globalScale": 0.14501467327812612,
+        "scaledJointRelative": 0.9896614697646035,
+        "traceCoordinateNormFrobenius": 14.676610831804098,
+        "mappedJointNorm": 0.293928929792692
+      },
+      "truncated": {
+        "jointRelative": 1.3017187115285962,
+        "plusRelative": 1.2986861624588604,
+        "crossRelative": 1.3258834763667275,
+        "minusRelative": 1.253113127013984,
+        "jointFrobenius": 0.3868587582445828,
+        "globalScale": 0.14501467327811268,
+        "scaledJointRelative": 0.9896614697646029,
+        "traceCoordinateNormFrobenius": 14.676610831804098,
+        "mappedJointNorm": 0.293928929792692
+      }
+    },
+    {
+      "kind": "plus_weighted",
+      "full": {
+        "jointRelative": 0.9985817659991804,
+        "plusRelative": 0.9756845364079785,
+        "crossRelative": 1.0153403164540844,
+        "minusRelative": 0.9879362518802373,
+        "jointFrobenius": 0.29676926249798596,
+        "globalScale": 0.611341741691591,
+        "scaledJointRelative": 0.9976185726328141,
+        "traceCoordinateNormFrobenius": 6.385940843256123,
+        "mappedJointNorm": 0.03352943147395056
+      },
+      "truncated": {
+        "jointRelative": 0.99858176599918,
+        "plusRelative": 0.9756845364079735,
+        "crossRelative": 1.0153403164540873,
+        "minusRelative": 0.9879362518802354,
+        "jointFrobenius": 0.29676926249795166,
+        "globalScale": 0.6113417416915868,
+        "scaledJointRelative": 0.9976185726328135,
+        "traceCoordinateNormFrobenius": 6.385940843256123,
+        "mappedJointNorm": 0.03352943147395056
+      }
+    },
+    {
+      "kind": "minus_weighted",
+      "full": {
+        "jointRelative": 0.9981136717911498,
+        "plusRelative": 0.9760033724164083,
+        "crossRelative": 1.0146775850929683,
+        "minusRelative": 0.9870357401529904,
+        "jointFrobenius": 0.2966301492299224,
+        "globalScale": 0.6740888996504029,
+        "scaledJointRelative": 0.9975375025788735,
+        "traceCoordinateNormFrobenius": 6.114921836621637,
+        "mappedJointNorm": 0.030920995904511722
+      },
+      "truncated": {
+        "jointRelative": 0.9981136717911494,
+        "plusRelative": 0.9760033724164033,
+        "crossRelative": 1.014677585092971,
+        "minusRelative": 0.9870357401529883,
+        "jointFrobenius": 0.2966301492298881,
+        "globalScale": 0.6740888996503982,
+        "scaledJointRelative": 0.997537502578873,
+        "traceCoordinateNormFrobenius": 6.114921836621637,
+        "mappedJointNorm": 0.030920995904511722
+      }
+    }
+  ],
+  "bestByScaledFullJointResidual": {
+    "kind": "omega_shift_minus",
+    "full": {
+      "jointRelative": 1.3017187115285245,
+      "plusRelative": 1.298686162458768,
+      "crossRelative": 1.3258834763666654,
+      "minusRelative": 1.2531131270139144,
+      "jointFrobenius": 0.38685875824460614,
+      "globalScale": 0.14501467327812612,
+      "scaledJointRelative": 0.9896614697646035,
+      "traceCoordinateNormFrobenius": 14.676610831804098,
+      "mappedJointNorm": 0.293928929792692
+    },
+    "truncated": {
+      "jointRelative": 1.3017187115285962,
+      "plusRelative": 1.2986861624588604,
+      "crossRelative": 1.3258834763667275,
+      "minusRelative": 1.253113127013984,
+      "jointFrobenius": 0.3868587582445828,
+      "globalScale": 0.14501467327811268,
+      "scaledJointRelative": 0.9896614697646029,
+      "traceCoordinateNormFrobenius": 14.676610831804098,
+      "mappedJointNorm": 0.293928929792692
+    }
+  },
+  "exactTraceMapConstructed": false,
+  "diagnosis": "None of the elementary exponential primitive candidates produces the joint Hardy branch Grams.  The primitive/evaluation vector must include the missing Weyl/Volterra integral transform, not just the bare exponential jet.",
+  "nextProofTarget": "Derive the primitive evaluation vector by inverting the Volterra feature map: solve G_+(f_z)=h_z^+ at the feature level, then apply Lambda_a to that f_z."
+}

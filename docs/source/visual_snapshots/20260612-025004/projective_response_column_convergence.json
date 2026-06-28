@@ -1,0 +1,292 @@
+{
+  "omega": 0.49,
+  "L": 2.0,
+  "s0": 0.2825,
+  "point": 0.545,
+  "orders": [
+    7,
+    8
+  ],
+  "bases": [
+    18,
+    20,
+    22,
+    24
+  ],
+  "activeTol": 1e-06,
+  "lambda0AtS0": -0.00012862612661029079,
+  "lambda1AtS0": 9.42101395763874e-06,
+  "gapAtS0": 0.00013804714056792953,
+  "lambdaDerivativesAtS0": [
+    -0.00012862612661029079,
+    0.0012586353561607226,
+    -0.010569790654668558,
+    0.08131470927283976,
+    -0.48480406794895253,
+    0.3262134539749114,
+    33.05440359008409,
+    -172.53886154243878,
+    -11867.497399991053,
+    225121.96880967333,
+    3735520.511510404,
+    -308912314.588315,
+    3399472962.8393655,
+    369400519027.39575,
+    -16726614828278.037,
+    -133545146978831.05,
+    5.480905836994158e+16
+  ],
+  "rows": [
+    {
+      "basis": 18,
+      "activeDim": 2,
+      "activeFloor": 18285.13540177335,
+      "activeSourceEigenvalues": [
+        226461.95322692656,
+        18285135401.77335
+      ],
+      "columnNorms": [
+        11192523319026.836,
+        9562558930574.95
+      ],
+      "normalizedSingularValuesSquared": [
+        0.3054530125171312,
+        1.6945469874828687
+      ],
+      "normalizedMinSingularValue": 0.5526780369411572,
+      "normalizedResponseColumns": [
+        [
+          0.049294294994778866,
+          -0.6843355067786342
+        ],
+        [
+          0.9987842972739248,
+          0.7291672744727576
+        ]
+      ]
+    },
+    {
+      "basis": 20,
+      "activeDim": 2,
+      "activeFloor": 350955.40150085674,
+      "activeSourceEigenvalues": [
+        8128880.388973607,
+        350955401500.85675
+      ],
+      "columnNorms": [
+        1161770543152744.8,
+        3678534256081659.5
+      ],
+      "normalizedSingularValuesSquared": [
+        8.139189955353884e-06,
+        1.9999918608100447
+      ],
+      "normalizedMinSingularValue": 0.002852926559754717,
+      "normalizedResponseColumns": [
+        [
+          -0.0001491365773460958,
+          -0.0038855038151969
+        ],
+        [
+          0.9999999888791405,
+          -0.9999924514015603
+        ]
+      ]
+    },
+    {
+      "basis": 22,
+      "activeDim": 2,
+      "activeFloor": 3661655.9399730274,
+      "activeSourceEigenvalues": [
+        274587561456.9068,
+        3661655939973.0273
+      ],
+      "columnNorms": [
+        3.6305317285807885e+17,
+        3.9431922294682976e+17
+      ],
+      "normalizedSingularValuesSquared": [
+        1.0221435934247299e-05,
+        1.9999897785640657
+      ],
+      "normalizedMinSingularValue": 0.0031970980488948567,
+      "normalizedResponseColumns": [
+        [
+          -0.09025575770962915,
+          0.08575192071812834
+        ],
+        [
+          -0.9959186202698797,
+          0.9963165200342469
+        ]
+      ]
+    },
+    {
+      "basis": 24,
+      "activeDim": 2,
+      "activeFloor": 9315123458837.074,
+      "activeSourceEigenvalues": [
+        2.029688362787111e+16,
+        9.315123458837074e+18
+      ],
+      "columnNorms": [
+        3.974588332592988e+19,
+        5.634677487427291e+21
+      ],
+      "normalizedSingularValuesSquared": [
+        0.004162482050218927,
+        1.9958375179497811
+      ],
+      "normalizedMinSingularValue": 0.06451730039469201,
+      "normalizedResponseColumns": [
+        [
+          0.05618552358178488,
+          0.03505061237054434
+        ],
+        [
+          -0.9984203458162503,
+          0.9993855385047603
+        ]
+      ]
+    }
+  ],
+  "consecutiveComparisons": [
+    {
+      "permutation": [
+        1,
+        0
+      ],
+      "signs": [
+        -1,
+        1
+      ],
+      "signedDots": [
+        -0.9989682910236065,
+        0.7292693258190283
+      ],
+      "columnDistances": [
+        0.045424860514777635,
+        0.7358405726527611
+      ],
+      "maxColumnDistance": 0.7358405726527611,
+      "frobeniusDistance": 0.7372413216272745,
+      "leftBasis": 18,
+      "rightBasis": 20
+    },
+    {
+      "permutation": [
+        1,
+        0
+      ],
+      "signs": [
+        1,
+        1
+      ],
+      "signedDots": [
+        0.9963037202063941,
+        0.996261791571061
+      ],
+      "columnDistances": [
+        0.08597999527338719,
+        0.08646627584138304
+      ],
+      "maxColumnDistance": 0.08646627584138304,
+      "frobeniusDistance": 0.12193841250848654,
+      "leftBasis": 20,
+      "rightBasis": 22
+    },
+    {
+      "permutation": [
+        1,
+        0
+      ],
+      "signs": [
+        -1,
+        -1
+      ],
+      "signedDots": [
+        -0.9984701862030216,
+        -0.989924667911344
+      ],
+      "columnDistances": [
+        0.05531390054910995,
+        0.1419530351113071
+      ],
+      "maxColumnDistance": 0.1419530351113071,
+      "frobeniusDistance": 0.1523492427656561,
+      "leftBasis": 22,
+      "rightBasis": 24
+    }
+  ],
+  "referenceBasis": 24,
+  "referenceComparisons": [
+    {
+      "permutation": [
+        1,
+        0
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "signedDots": [
+        0.9998983780071412,
+        -0.766465191090947
+      ],
+      "columnDistances": [
+        0.014256366497729264,
+        0.6834249174694365
+      ],
+      "maxColumnDistance": 0.6834249174694365,
+      "frobeniusDistance": 0.6835735964794307,
+      "leftBasis": 18,
+      "rightBasis": 24
+    },
+    {
+      "permutation": [
+        0,
+        1
+      ],
+      "signs": [
+        -1,
+        -1
+      ],
+      "signedDots": [
+        -0.9984287140296413,
+        -0.9995141838327346
+      ],
+      "columnDistances": [
+        0.056058647332212476,
+        0.03117101754083258
+      ],
+      "maxColumnDistance": 0.056058647332212476,
+      "frobeniusDistance": 0.06414206322880693,
+      "leftBasis": 20,
+      "rightBasis": 24
+    },
+    {
+      "permutation": [
+        1,
+        0
+      ],
+      "signs": [
+        -1,
+        -1
+      ],
+      "signedDots": [
+        -0.9984701862030216,
+        -0.989924667911344
+      ],
+      "columnDistances": [
+        0.05531390054910995,
+        0.1419530351113071
+      ],
+      "maxColumnDistance": 0.1419530351113071,
+      "frobeniusDistance": 0.1523492427656561,
+      "leftBasis": 22,
+      "rightBasis": 24
+    }
+  ],
+  "maxConsecutiveColumnDistance": 0.7358405726527611,
+  "interpretation": "Direct projective convergence should make these normalized response columns Cauchy after sign/permutation alignment.  Large distances mean the current Galerkin active eigenlines are not yet a stable sequence in the chosen response coordinates."
+}

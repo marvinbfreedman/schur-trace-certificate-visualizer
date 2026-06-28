@@ -1,0 +1,40 @@
+{
+  "theoremName": "full-theta active source-rank consequence",
+  "proofClass": "symbolic identity",
+  "sourceRankJson": "full_theta_source_noncollapse_interval_theorem.json",
+  "activeDimension": 2,
+  "activeEigenvalues": [
+    11489025587.757864,
+    140116882778.8568
+  ],
+  "statement": "The full-Phi active source response has rank two on H_delta; equivalently E_active is injective on the active source spectral space.",
+  "statuses": {
+    "fullThetaSourceNoncollapseInputStatus": {
+      "label": "full-theta source noncollapse input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The interval theorem proves full-Phi active source noncollapse."
+    },
+    "activeResponseRankInputStatus": {
+      "label": "active response rank input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The active response rank survives continuum and theta-tail perturbation."
+    },
+    "activeSourceRankConsequenceStatus": {
+      "label": "active source-rank consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Therefore E_active is injective on H_delta."
+    }
+  },
+  "activeSourceRankClosed": true,
+  "fullPhiActiveSourceInjectiveOnHdelta": true,
+  "fullPhiContinuumSourceNoncollapsePasses": true,
+  "proof": [
+    "Import the full-theta source noncollapse interval theorem.",
+    "Read off the active response rank/noncollapse conclusion.",
+    "Expose only E_active injective on H_delta and the active dimension/eigenvalues."
+  ],
+  "remainingAnalyticGap": null
+}

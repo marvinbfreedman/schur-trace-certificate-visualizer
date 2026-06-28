@@ -1,0 +1,209 @@
+{
+  "model": "endpoint_b",
+  "kind": "tilde3",
+  "omega": 0.49,
+  "L": 2.0,
+  "rows": [
+    {
+      "basis": 16,
+      "constraints": 8,
+      "denseConstraints": 24,
+      "rank": 8,
+      "nullity": 8,
+      "positiveModes": 8,
+      "gamma2": 6.900309694881411e-08,
+      "lambdaMin": 1.8483932225723395e-10,
+      "lambdaMax": 0.1543899483613016,
+      "splits": [
+        {
+          "cutoff": 0,
+          "head": 0.0,
+          "tail": 6.900309694881411e-08,
+          "headFrac": 0.0,
+          "tailFrac": 1.0,
+          "additiveOverhead": 1.0
+        },
+        {
+          "cutoff": 1,
+          "head": 1.0007005438762314e-09,
+          "tail": 6.810863220664637e-08,
+          "headFrac": 0.014502255523669356,
+          "tailFrac": 0.9870373246749891,
+          "additiveOverhead": 1.0015395801986584
+        },
+        {
+          "cutoff": 2,
+          "head": 5.942306910783194e-09,
+          "tail": 6.307413059239602e-08,
+          "headFrac": 0.08611652481614188,
+          "tailFrac": 0.9140768078740561,
+          "additiveOverhead": 1.000193332690198
+        },
+        {
+          "cutoff": 3,
+          "head": 2.0468819595145275e-08,
+          "tail": 4.891444860393946e-08,
+          "headFrac": 0.2966362453315518,
+          "tailFrac": 0.7088732356494633,
+          "additiveOverhead": 1.005509480981015
+        },
+        {
+          "cutoff": 4,
+          "head": 4.386860333256074e-08,
+          "tail": 2.5143413210332255e-08,
+          "headFrac": 0.6357483253991062,
+          "tailFrac": 0.36438093827851553,
+          "additiveOverhead": 1.0001292636776218
+        },
+        {
+          "cutoff": 5,
+          "head": 4.446421230963254e-08,
+          "tail": 2.4568316723807484e-08,
+          "headFrac": 0.6443799521435349,
+          "tailFrac": 0.3560465806633584,
+          "additiveOverhead": 1.0004265328068933
+        },
+        {
+          "cutoff": 6,
+          "head": 4.9752644930560595e-08,
+          "tail": 1.9292870141738812e-08,
+          "headFrac": 0.7210204632911864,
+          "tailFrac": 0.2795942645306209,
+          "additiveOverhead": 1.0006147278218074
+        },
+        {
+          "cutoff": 7,
+          "head": 6.634577245729527e-08,
+          "tail": 2.6618207192679043e-09,
+          "headFrac": 0.9614897793139632,
+          "tailFrac": 0.038575380482450225,
+          "additiveOverhead": 1.0000651597964134
+        },
+        {
+          "cutoff": 8,
+          "head": 6.900309694881411e-08,
+          "tail": 0.0,
+          "headFrac": 1.0,
+          "tailFrac": 0.0,
+          "additiveOverhead": 1.0
+        }
+      ],
+      "lowModes": [
+        {
+          "mode": 0,
+          "lambda": 1.8483932225723395e-10,
+          "sourceNorm2": 1.8496881031252804e-19,
+          "singleConstant": 1.0007005438762314e-09,
+          "singleFrac": 0.014502255523669356,
+          "sourceOverSqrtLambda": 3.1633851233705824e-05,
+          "sampledTraceMax": 1.1000673616048795e-51,
+          "sampledTraceRms": 6.1614032510586186e-52,
+          "denseTraceMax": 0.08417722582721011,
+          "denseTraceRms": 0.020883915674763345
+        },
+        {
+          "mode": 1,
+          "lambda": 1.0899009282853936e-08,
+          "sourceNorm2": 5.5396211726448274e-17,
+          "singleConstant": 5.082683231915059e-09,
+          "singleFrac": 0.07365876977500516,
+          "sourceOverSqrtLambda": 7.12929395656755e-05,
+          "sampledTraceMax": 2.3074459157072566e-51,
+          "sampledTraceRms": 1.297501239971487e-51,
+          "denseTraceMax": 0.10094676042121747,
+          "denseTraceRms": 0.024731270355760896
+        },
+        {
+          "mode": 2,
+          "lambda": 2.2816259002224282e-07,
+          "sourceNorm2": 3.330957622075281e-15,
+          "singleConstant": 1.4599052464080798e-08,
+          "singleFrac": 0.2115709744869893,
+          "sourceOverSqrtLambda": 0.00012082653874079485,
+          "sampledTraceMax": 1.3282316417026958e-51,
+          "sampledTraceRms": 7.473354514144757e-52,
+          "denseTraceMax": 0.03483813704393311,
+          "denseTraceRms": 0.008236424367006024
+        },
+        {
+          "mode": 3,
+          "lambda": 3.685395491719195e-06,
+          "sourceNorm2": 8.834719311602314e-14,
+          "singleConstant": 2.3972242141863092e-08,
+          "singleFrac": 0.3474082063250798,
+          "sourceOverSqrtLambda": 0.00015482971982750307,
+          "sampledTraceMax": 2.7482710004105703e-52,
+          "sampledTraceRms": 1.546096320731776e-52,
+          "denseTraceMax": 0.004135843270203024,
+          "denseTraceRms": 0.0013471884744517954
+        },
+        {
+          "mode": 4,
+          "lambda": 5.262690985815006e-05,
+          "sourceNorm2": 3.9238186754401666e-14,
+          "singleConstant": 7.455916917820902e-10,
+          "singleFrac": 0.010805191719658084,
+          "sourceOverSqrtLambda": 2.7305524931450965e-05,
+          "sampledTraceMax": 3.253330169867187e-54,
+          "sampledTraceRms": 1.8370874885648096e-54,
+          "denseTraceMax": 0.0006727205768227771,
+          "denseTraceRms": 0.00023226239741167896
+        },
+        {
+          "mode": 5,
+          "lambda": 0.0007495248467460908,
+          "sourceNorm2": 3.964464868904524e-12,
+          "singleConstant": 5.28930413196499e-09,
+          "singleFrac": 0.07665314117551202,
+          "sourceOverSqrtLambda": 7.272760227014905e-05,
+          "sampledTraceMax": 7.539295165012994e-54,
+          "sampledTraceRms": 4.236035250802948e-54,
+          "denseTraceMax": 0.0002411763107278131,
+          "denseTraceRms": 5.7577059325673735e-05
+        },
+        {
+          "mode": 6,
+          "lambda": 0.009537787625483933,
+          "sourceNorm2": 1.5862385466929492e-10,
+          "singleConstant": 1.663109527050793e-08,
+          "singleFrac": 0.2410195484826534,
+          "sourceOverSqrtLambda": 0.0001289616038614127,
+          "sampledTraceMax": 5.9107184515107e-54,
+          "sampledTraceRms": 3.32456525893583e-54,
+          "denseTraceMax": 5.424580740145036e-05,
+          "denseTraceRms": 1.2183529918940527e-05
+        },
+        {
+          "mode": 7,
+          "lambda": 0.1543899483613016,
+          "sourceNorm2": 4.109583633948144e-10,
+          "singleConstant": 2.6618207192679043e-09,
+          "singleFrac": 0.038575380482450225,
+          "sourceOverSqrtLambda": 5.159283592968993e-05,
+          "sampledTraceMax": 5.454824545536726e-55,
+          "sampledTraceRms": 3.06759837830926e-55,
+          "denseTraceMax": 7.741878110637325e-06,
+          "denseTraceRms": 1.7767552278907574e-06
+        }
+      ],
+      "tailThresholds": [
+        {
+          "threshold": 0.5,
+          "cutoff": 4
+        },
+        {
+          "threshold": 0.25,
+          "cutoff": 7
+        },
+        {
+          "threshold": 0.1,
+          "cutoff": 7
+        },
+        {
+          "threshold": 0.05,
+          "cutoff": 7
+        }
+      ]
+    }
+  ]
+}

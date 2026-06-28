@@ -1,0 +1,21 @@
+{
+  "theoremName": "Green-lift contractivity consequence theorem",
+  "proofClass": "symbolic consequence",
+  "contractivityJson": "green_lift_contractivity_form_theorem.json",
+  "statuses": {
+    "compressedGreenLiftContractionStatus": {
+      "label": "compressed Green-lift contraction",
+      "closed": true,
+      "status": "closed",
+      "reason": "The imported closed-form Green-lift contractivity theorem proves ||C K E||<=1 on the completed Green-minimizer trace image."
+    }
+  },
+  "closedTraceFiberContractionClosed": true,
+  "greenLiftContractionClosed": true,
+  "proof": [
+    "Import the closed-form Green-lift contractivity theorem.",
+    "Expose only the completed trace-fiber contraction needed by the closure theorem.",
+    "Keep boundary minimality and Hardy multiplier inputs below the full contractivity theorem."
+  ],
+  "remainingAnalyticGap": null
+}

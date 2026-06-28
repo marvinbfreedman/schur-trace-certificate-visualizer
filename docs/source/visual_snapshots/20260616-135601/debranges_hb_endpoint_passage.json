@@ -1,0 +1,56 @@
+{
+  "theoremName": "Hermite-Biehler/de Branges endpoint passage for shifted Xi",
+  "kernelPositivityJson": "shifted_xi_debranges_kernel_positivity_consequence_theorem.json",
+  "augmentedClosedConeJson": null,
+  "uniformOmegaJson": null,
+  "zeroDescentJson": "shifted_xi_zero_descent_endpoint_theorem.json",
+  "statuses": {
+    "shiftedKernelPositivityStatus": {
+      "label": "shifted-Xi de Branges kernel positivity for all 0<omega<1/2",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the shifted-Xi de Branges kernel positivity theorem.  For every 0<omega<1/2, the kernel K_{E_omega} is positive on finite evaluation sets in the upper half-plane."
+    },
+    "diagonalInequalityStatus": {
+      "label": "diagonal de Branges inequality",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported through the zero-descent endpoint theorem."
+    },
+    "zeroDescentContradictionStatus": {
+      "label": "zero-descent contradiction",
+      "closed": true,
+      "status": "closed",
+      "reason": "The zero-descent endpoint theorem excludes upper-half-plane Xi zeros."
+    },
+    "lowerHalfPlaneExclusionStatus": {
+      "label": "lower-half-plane exclusion",
+      "closed": true,
+      "status": "closed",
+      "reason": "The zero-descent endpoint theorem uses real-entire conjugation for the lower half-plane."
+    },
+    "rhSideZeroLocationStatus": {
+      "label": "RH-side zero-location conclusion in z-normalization",
+      "closed": true,
+      "status": "closed",
+      "reason": "All zeros of Xi(z)=xi(1/2+i z) are real.  This is equivalent to the nontrivial zeros of xi(s) lying on Re(s)=1/2."
+    }
+  },
+  "normalization": {
+    "Xi": "Xi(z)=xi(1/2+i z), real entire",
+    "Eomega": "E_omega(z)=Xi(z+i omega)",
+    "EomegaSharp": "E_omega#(z)=Xi(z-i omega)",
+    "omegaRange": "0<omega<1/2",
+    "kernel": "K_E(w,z)=(E(z)conj(E(w))-E#(z)conj(E#(w)))/(2*pi*i*(conj(w)-z))"
+  },
+  "proof": [
+    "Import shifted-Xi kernel positivity.",
+    "Import the diagonal inequality and zero-descent endpoint theorem.",
+    "Conclude all Xi zeros are real in the z-normalization."
+  ],
+  "endpointPassageClosed": true,
+  "conditionalRhClosed": true,
+  "independentRhProofVetted": false,
+  "caution": "This ledger closes the endpoint implication conditional on the imported KLM/Weyl and augmented closed-cone bridge certificates.  It is not an external peer-review validation of those hard inputs.",
+  "nextProofTarget": "Audit every imported theorem for publication-grade rigor and normalization consistency."
+}

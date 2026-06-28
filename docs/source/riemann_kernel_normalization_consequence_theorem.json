@@ -1,0 +1,20 @@
+{
+  "theoremName": "Riemann kernel normalization consequence theorem",
+  "proofClass": "symbolic identity",
+  "statuses": {
+    "riemannKernelNormalizationConsequenceStatus": {
+      "label": "Riemann Phi/Xi normalization positivity consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The fixed even Fourier representation Xi(z)=int Phi(t)e^{izt}dt and any harmless scalar convention preserve the positivity statements used by the Weyl/KLM external foundation."
+    }
+  },
+  "riemannKernelNormalizationClosed": true,
+  "phiXiNormalizationPositivityConsequenceClosed": true,
+  "proof": [
+    "Import the full Riemann kernel normalization theorem.",
+    "Export only the positivity-preserving Phi/Xi normalization consequence."
+  ],
+  "remainingAnalyticGap": null,
+  "nextProofTarget": null
+}

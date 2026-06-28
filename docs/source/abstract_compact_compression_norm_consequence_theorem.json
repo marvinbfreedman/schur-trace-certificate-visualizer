@@ -1,0 +1,27 @@
+{
+  "theoremName": "abstract compact compression norm consequence theorem",
+  "proofClass": "symbolic identity",
+  "statement": "The compact-compression norm theorem supplies the norm convergence input ||P_N S P_N - P S P|| -> 0 needed by downstream Riesz spectral projection arguments.",
+  "compactCompressionNormConvergenceClosed": true,
+  "compactSourceNormConvergenceClosed": true,
+  "statuses": {
+    "compactCompressionInputStatus": {
+      "label": "abstract compact-compression input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The detailed abstract compact-compression theorem has closed norm convergence."
+    },
+    "compactCompressionNormConsequenceStatus": {
+      "label": "compact-compression norm convergence consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Downstream theorems may use the compact-source norm convergence flag."
+    }
+  },
+  "formalProof": [
+    "Import the detailed abstract compact-compression norm theorem.",
+    "Read off compactCompressionNormConvergenceClosed and compactSourceNormConvergenceClosed.",
+    "Expose only the terminal norm-convergence flag to spectral-projection consumers."
+  ],
+  "nextProofTarget": "Use this terminal consequence in compact spectral projection theorems."
+}

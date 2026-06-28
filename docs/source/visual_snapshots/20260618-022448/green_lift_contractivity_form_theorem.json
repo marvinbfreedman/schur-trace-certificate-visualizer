@@ -1,0 +1,48 @@
+{
+  "theoremName": "closed-form Green-lift contractivity theorem",
+  "proofClass": "analytic proof",
+  "boundaryJson": "green_lift_boundary_minimality_theorem.json",
+  "multiplierJson": "volterra_hardy_multiplier_symbolic_theorem.json",
+  "statuses": {
+    "completedTraceFiberFormStatus": {
+      "label": "completed trace-fiber form domain",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Green lift is considered on the completed Volterra trace-fiber form domain with feature and trace norms in the graph norm."
+    },
+    "boundaryMinimalityInputStatus": {
+      "label": "Euler boundary/minimality input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The imported boundary theorem gives Q(f_x,h)=0 on ker R and identifies the endpoint concomitant with the same Euler residual."
+    },
+    "hardyMultiplierIdentityStatus": {
+      "label": "symbolic Hardy multiplier identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The lifted minus branch is exactly multiplication of the lifted plus branch by kappa(s,u)=(1-s-u)/(1+s+u)."
+    },
+    "pointwiseMultiplierBoundStatus": {
+      "label": "pointwise multiplier bound",
+      "closed": true,
+      "status": "closed",
+      "reason": "The symbolic multiplier theorem proves |kappa(s,u)|<=1 for s,u>=0."
+    },
+    "compressedGreenLiftContractionStatus": {
+      "label": "compressed Green-lift contraction",
+      "closed": true,
+      "status": "closed",
+      "reason": "The branch transport has algebraic form C K E.  The endpoint concomitant vanishes by Euler minimality, and K has pointwise norm at most one, so the compressed Green-lift map is contractive on the completed trace image."
+    }
+  },
+  "closedTraceFiberContractionClosed": true,
+  "greenLiftContractionClosed": true,
+  "proof": [
+    "Use the completed Volterra trace-fiber form domain for the Green lift.",
+    "Apply Euler-Lagrange minimality to get Q(f_x,h)=0 for h in ker R.",
+    "Use the Green boundary theorem to identify the endpoint concomitant with that residual.",
+    "Apply the symbolic identity F_-=K F_+ with |K|<=1.",
+    "Conclude ||C K E||<=1 on the completed Green-minimizer trace image."
+  ],
+  "remainingAnalyticGap": null
+}

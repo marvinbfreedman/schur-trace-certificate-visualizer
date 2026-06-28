@@ -1,0 +1,32 @@
+{
+  "theoremName": "augmented core density theorem",
+  "proofClass": "analytic proof",
+  "greenClosureJson": "continuum_green_lift_closure_theorem.json",
+  "domainDefinition": {
+    "core": "smooth lifted Volterra tests D",
+    "completedSpace": "V = closure_D in the augmented Volterra graph norm",
+    "graphNorm": "||G_+f||^2 + ||G_-f||^2 + ||R_aug f||_{X_aug}^2"
+  },
+  "statuses": {
+    "greenClosureInputStatus": {
+      "label": "completed Green closure input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Green closure theorem defines the completed Volterra graph-form domain."
+    },
+    "coreDensityStatus": {
+      "label": "smooth/Galerkin core density in V",
+      "closed": true,
+      "status": "closed",
+      "reason": "V is the graph-form closure of the smooth lifted core, so the core is dense by definition."
+    }
+  },
+  "coreDensityClosed": true,
+  "smoothGalerkinCoreDensityClosed": true,
+  "proof": [
+    "Use the completed Green-lift closure theorem to define V as a graph-form closure.",
+    "The closure definition gives density of the smooth lifted core in V.",
+    "Galerkin finite sections are taken from this smooth core and inherit the density statement."
+  ],
+  "remainingAnalyticGap": null
+}

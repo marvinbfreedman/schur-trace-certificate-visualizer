@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Rounded-ball Krawczyk enclosure</title>
+  <desc id="desc">Schematic finite interval enclosure with a rounded coefficient ball, center trace, admissible radius, and contraction arrows.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7f9fc"/>
+      <stop offset="1" stop-color="#edf3ff"/>
+    </linearGradient>
+    <linearGradient id="ball" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#dfeaff"/>
+      <stop offset="1" stop-color="#9fc0ff"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2 2 L10 6 L2 10 Z" fill="#2869d8"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="1198" height="518" rx="30" fill="url(#bg)" stroke="#d8e0ed" stroke-width="2"/>
+  <text x="60" y="70" fill="#20242c" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="30" font-weight="700">Rounded-ball Krawczyk enclosure</text>
+  <text x="60" y="106" fill="#667085" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="17">Finite interval enclosure for synchronized endpoint coefficient control</text>
+  <g transform="translate(75 145)">
+    <rect x="0" y="0" width="1050" height="300" rx="22" fill="#fff" stroke="#d8e0ed"/>
+    <ellipse cx="355" cy="150" rx="230" ry="92" fill="url(#ball)" stroke="#2869d8" stroke-width="4"/>
+    <ellipse cx="355" cy="150" rx="128" ry="48" fill="none" stroke="#13795b" stroke-width="4" stroke-dasharray="10 9"/>
+    <circle cx="355" cy="150" r="8" fill="#20242c"/>
+    <path d="M165 88 C245 25, 462 21, 552 86" fill="none" stroke="#c64242" stroke-width="4" stroke-linecap="round"/>
+    <path d="M192 211 C282 267, 451 270, 526 211" fill="none" stroke="#a66b00" stroke-width="4" stroke-linecap="round"/>
+    <path d="M690 88 C646 112, 620 136, 595 155" fill="none" stroke="#2869d8" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M690 212 C646 188, 620 166, 595 149" fill="none" stroke="#2869d8" stroke-width="4" marker-end="url(#arrow)"/>
+    <rect x="715" y="72" width="260" height="156" rx="18" fill="#f7f9fc" stroke="#d8e0ed"/>
+    <text x="740" y="112" fill="#20242c" font-family="ui-sans-serif, system-ui" font-size="18" font-weight="700">Krawczyk step</text>
+    <text x="740" y="148" fill="#667085" font-family="ui-sans-serif, system-ui" font-size="15">center row + interval radius</text>
+    <text x="740" y="177" fill="#667085" font-family="ui-sans-serif, system-ui" font-size="15">maps back inside enclosure</text>
+    <text x="740" y="206" fill="#13795b" font-family="ui-sans-serif, system-ui" font-size="15" font-weight="700">certificate: contained</text>
+    <text x="210" y="38" fill="#c64242" font-family="ui-sans-serif, system-ui" font-size="15" font-weight="700">outer coefficient uncertainty</text>
+    <text x="226" y="286" fill="#a66b00" font-family="ui-sans-serif, system-ui" font-size="15" font-weight="700">rounded interval boundary</text>
+    <text x="382" y="141" fill="#20242c" font-family="ui-sans-serif, system-ui" font-size="15" font-weight="700">center</text>
+  </g>
+</svg>

@@ -1,0 +1,79 @@
+{
+  "theoremName": "augmented repair closed-form transport limit theorem",
+  "proofClass": "analytic proof",
+  "finiteConsequenceJson": "xi_augmented_finite_schur_repair_consequence_theorem.json",
+  "traceConvergenceJson": "xi_augmented_trace_convergence_theorem.json",
+  "greenClosureJson": "continuum_green_lift_closure_theorem.json",
+  "tailPositiveJson": "volterra_tail_positive_form_theorem.json",
+  "transportedTraceSpace": {
+    "name": "X_aug",
+    "definition": "closure Ran(R_aug) with quotient norm inf{||f||_V:R_aug f=x}",
+    "formDomain": "completed Volterra/Mellin graph-form domain V"
+  },
+  "abstractLimitPrinciple": {
+    "coreSpaces": "finite trace-image subspaces V_N inside the smooth lifted core",
+    "limsup": "graph-form recovery sequences preserve R_aug coordinates",
+    "liminf": "bounded repaired-form energy has weak graph-form subsequential limits",
+    "traceLimit": "R_aug,N f_N -> R_aug f in the transported graph-dual topology",
+    "conclusion": "the closed lower-semicontinuous envelope is nonnegative"
+  },
+  "statuses": {
+    "finiteSchurConsequenceInputStatus": {
+      "label": "finite Schur repair consequence input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite consequence theorem supplies D_aug,N>=0, the finite repaired-form inequality, the finite Schur range condition, and Mu annihilation."
+    },
+    "moscoGraphFormConvergenceStatus": {
+      "label": "Mosco graph-form convergence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The augmented trace convergence theorem gives strong graph-dual convergence of R_aug,N, while the Green closure theorem supplies the completed Volterra graph domain and closed graph-form compactness needed for the limsup/liminf passage."
+    },
+    "augmentedTraceStrongGraphDualConvergenceStatus": {
+      "label": "augmented trace strong graph-dual convergence",
+      "closed": true,
+      "status": "closed",
+      "reason": "R_aug,N=(Lambda_N,Mu_N) converges strongly to R_aug in the transported graph-dual trace topology."
+    },
+    "finiteRepairsClosedFormLimitStatus": {
+      "label": "finite repairs have a closed-form nonnegative limit",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite nonnegative repaired forms are compatible with the graph-form recovery and compactness statements. Lower semicontinuity therefore gives a nonnegative closed-form limit on the completed quotient trace space."
+    },
+    "positiveTailCompatibilityStatus": {
+      "label": "positive Volterra tail compatibility",
+      "closed": true,
+      "status": "closed",
+      "reason": "The positive Volterra tail theorem supplies the diagonal tail nonnegativity required by the completed repaired form."
+    },
+    "DaugTransportLimitStatus": {
+      "label": "D_aug nonnegative transport limit",
+      "closed": true,
+      "status": "closed",
+      "reason": "The closed-form limit defines a bounded self-adjoint nonnegative trace-side repair D_aug on X_aug."
+    },
+    "repairedAugmentedFormLimitStatus": {
+      "label": "repaired augmented form limit",
+      "closed": true,
+      "status": "closed",
+      "reason": "K+R_aug^*D_aug R_aug is the closed lower-semicontinuous limit of finite nonnegative repaired forms, hence is nonnegative on the completed trace-fiber domain."
+    }
+  },
+  "moscoGraphFormConvergenceClosed": true,
+  "augmentedTraceStrongGraphDualConvergenceClosed": true,
+  "finiteRepairsClosedFormLimitClosed": true,
+  "DaugNonnegativeTransportLimitClosed": true,
+  "repairedAugmentedFormLimitClosed": true,
+  "boundedNonnegativeRepairClosed": true,
+  "closedRepairedAugmentedFormClosed": true,
+  "proof": [
+    "Use the finite consequence theorem for nonnegative repaired forms on the finite trace-image spaces.",
+    "Use strong graph-dual convergence of R_aug,N to identify trace coordinates in X_aug.",
+    "Use the completed Volterra graph-form closure for Mosco limsup and liminf.",
+    "Apply lower semicontinuity to obtain a nonnegative closed-form limit.",
+    "Represent that limit as a bounded nonnegative trace-side form D_aug on X_aug."
+  ],
+  "remainingAnalyticGap": null
+}

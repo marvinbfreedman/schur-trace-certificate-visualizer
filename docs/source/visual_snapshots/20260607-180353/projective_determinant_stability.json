@@ -1,0 +1,67 @@
+{
+  "source": "determinant_gap_bound_diagnostic.json",
+  "point": 0.545,
+  "orders": [
+    7,
+    8
+  ],
+  "bases": [
+    18,
+    20,
+    22,
+    24
+  ],
+  "minProjectiveAllowedAlpha": 0.00016089534103946044,
+  "maxColumnScaleRatio": 141.76757480066556,
+  "rows": [
+    {
+      "basis": 18,
+      "activeDim": 2,
+      "normalizedMargin": 0.5526780369411572,
+      "minColumnNorm": 9562558930574.95,
+      "maxColumnNorm": 11192523319026.836,
+      "columnScaleRatio": 1.1704527418116402,
+      "COnHighBlock": 14894199415076.045,
+      "projectiveAllowedAlpha": 0.12545390184358313,
+      "halfMarginProjectiveAllowedAlpha": 0.06272695092179156,
+      "rawAllowedAlpha": 0.38051744815038435
+    },
+    {
+      "basis": 20,
+      "activeDim": 2,
+      "normalizedMargin": 0.002852926559754717,
+      "minColumnNorm": 1161770543152744.8,
+      "maxColumnNorm": 3678534256081659.5,
+      "columnScaleRatio": 3.1663173745988336,
+      "COnHighBlock": 3864788751647843.0,
+      "projectiveAllowedAlpha": 0.0003032076810129147,
+      "halfMarginProjectiveAllowedAlpha": 0.00015160384050645734,
+      "rawAllowedAlpha": 0.0011565212075218731
+    },
+    {
+      "basis": 22,
+      "activeDim": 2,
+      "normalizedMargin": 0.0031970980488948567,
+      "minColumnNorm": 3.6305317285807885e+17,
+      "maxColumnNorm": 3.9431922294682976e+17,
+      "columnScaleRatio": 1.0861197544222347,
+      "COnHighBlock": 5.363317174064074e+17,
+      "projectiveAllowedAlpha": 0.000765151999783508,
+      "halfMarginProjectiveAllowedAlpha": 0.000382575999891754,
+      "rawAllowedAlpha": 0.002251600951277561
+    },
+    {
+      "basis": 24,
+      "activeDim": 2,
+      "normalizedMargin": 0.06451730039469201,
+      "minColumnNorm": 3.974588332592988e+19,
+      "maxColumnNorm": 5.634677487427291e+21,
+      "columnScaleRatio": 141.76757480066556,
+      "COnHighBlock": 5.634817802752819e+21,
+      "projectiveAllowedAlpha": 0.00016089534103946044,
+      "halfMarginProjectiveAllowedAlpha": 8.044767051973022e-05,
+      "rawAllowedAlpha": 0.000642895430443677
+    }
+  ],
+  "interpretation": "Column normalization is legitimate only with explicit column-scale stability.  The projective allowed alpha is the sufficient subspace/eigenvector perturbation size preserving the normalized singular margin by the elementary normalization Lipschitz bound."
+}

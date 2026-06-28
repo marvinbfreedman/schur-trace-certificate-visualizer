@@ -1,0 +1,41 @@
+{
+  "theoremName": "abstract compact compression norm convergence theorem",
+  "proofClass": "abstract functional analytic lemma",
+  "projectionJson": "abstract_mosco_projection_consequence_theorem.json",
+  "finiteRankJson": "abstract_finite_rank_compression_convergence_theorem.json",
+  "statement": "If P_N -> P strongly are orthogonal projections and S is compact, then ||P_N S P_N - P S P|| -> 0 in operator norm.",
+  "hypotheses": [
+    "P_N and P are orthogonal projections on one Hilbert space.",
+    "P_N -> P strongly.",
+    "S is a compact bounded operator."
+  ],
+  "statuses": {
+    "projectionInputStatus": {
+      "label": "strong projection convergence input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Mosco projection theorem supplies P_N -> P strongly."
+    },
+    "finiteRankApproximationStatus": {
+      "label": "finite-rank compact approximation",
+      "closed": true,
+      "status": "closed",
+      "reason": "The abstract finite-rank compression theorem handles the finite-dimensional approximation step."
+    },
+    "compactCompressionNormConvergenceStatus": {
+      "label": "compact compression norm convergence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite-rank approximation plus uniform boundedness of projections gives ||P_NSP_N-PSP|| -> 0."
+    }
+  },
+  "compactCompressionNormConvergenceClosed": true,
+  "compactSourceNormConvergenceClosed": true,
+  "proof": [
+    "Write P_NSP_N-PSP as terms involving (P_N-P)S and S(P_N-P).",
+    "Approximate S by finite-rank F.",
+    "Strong convergence of P_N is uniform on finite-dimensional subspaces, so the compressed finite-rank error tends to zero.",
+    "The remaining terms are bounded by the compact approximation error."
+  ],
+  "remainingAnalyticGap": null
+}

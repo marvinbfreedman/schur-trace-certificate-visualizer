@@ -1,0 +1,36 @@
+{
+  "theoremName": "augmented Mosco limsup theorem",
+  "proofClass": "analytic proof",
+  "graphRecoveryJson": "augmented_graph_recovery_sequence_theorem.json",
+  "traceRecoveryJson": "augmented_trace_recovery_sequence_theorem.json",
+  "statement": "For every f in V there are finite core functions f_N with f_N -> f in the augmented graph norm and R_aug,N f_N -> R_aug f in the transported graph-dual trace topology.",
+  "statuses": {
+    "graphRecoveryInputStatus": {
+      "label": "graph recovery input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Finite smooth core functions recover f in the completed graph norm."
+    },
+    "traceRecoveryInputStatus": {
+      "label": "trace recovery input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The same recovery sequence recovers R_aug f in graph-dual trace topology."
+    },
+    "moscoLimsupStatus": {
+      "label": "Mosco limsup recovery",
+      "closed": true,
+      "status": "closed",
+      "reason": "Graph recovery supplies f_N -> f; trace recovery supplies R_aug,N f_N -> R_aug f.  Together these are exactly the Mosco limsup recovery statement."
+    }
+  },
+  "moscoLimsupClosed": true,
+  "graphRecoverySequenceClosed": true,
+  "traceRecoverySequenceClosed": true,
+  "proof": [
+    "Import the graph-norm recovery sequence theorem.",
+    "Import the trace recovery sequence theorem.",
+    "Combine the two recovered convergences in the product graph/trace topology."
+  ],
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,50 @@
+{
+  "theoremName": "Weyl/KLM external foundation theorem",
+  "proofClass": "symbolic identity",
+  "riemannJson": "riemann_kernel_normalization_consequence_theorem.json",
+  "klmWeylJson": "klm_weyl_hbar1_equivalence_theorem.json",
+  "symbolKernelJson": "weyl_symbol_kernel_transport_theorem.json",
+  "parityJson": "parity_halfline_reduction_theorem.json",
+  "statuses": {
+    "riemannKernelNormalizationStatus": {
+      "label": "Riemann kernel formula and harmless Xi normalization",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported Riemann kernel normalization theorem."
+    },
+    "klmWeylEquivalenceStatus": {
+      "label": "KLM convention equals Weyl positivity for hbar=1",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported hbar=1 KLM/Weyl equivalence theorem."
+    },
+    "symbolKernelTransportStatus": {
+      "label": "phase-space symbol transported to coordinate Weyl kernel",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported Weyl symbol coordinate-kernel transport theorem."
+    },
+    "parityHalflineReductionStatus": {
+      "label": "full-line Weyl kernel reduced to even/odd half-line sectors",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported parity half-line reduction theorem."
+    },
+    "externalFoundationStatus": {
+      "label": "external Weyl/KLM foundation",
+      "closed": true,
+      "status": "closed",
+      "reason": "All convention and kernel-algebra links from the normalized Volterra/Weyl certificate to the KLM-facing Weyl positivity statement are theorem-backed."
+    }
+  },
+  "externalFoundationClosed": true,
+  "klmWeylHbar1EquivalenceClosed": true,
+  "proof": [
+    "Import the Riemann kernel normalization theorem.",
+    "Import the hbar=1 KLM/Weyl equivalence theorem.",
+    "Import the Weyl symbol to coordinate-kernel transport theorem.",
+    "Import the parity half-line reduction theorem.",
+    "Combine them as the external normalization/kernel-algebra foundation."
+  ],
+  "remainingAnalyticGap": null
+}

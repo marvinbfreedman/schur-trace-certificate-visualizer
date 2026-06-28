@@ -1,0 +1,226 @@
+{
+  "sMin": 0.02,
+  "sMax": 0.545,
+  "requestedS0": 0.2825,
+  "actualS0": 0.2825,
+  "samples": 17,
+  "jetOrder": 9,
+  "stencilWidth": 9,
+  "qValues": [
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "tValues": [
+    0.08,
+    0.24,
+    0.4,
+    0.52
+  ],
+  "traceMinGap": 1.1635518278617991e-05,
+  "traceMinConsecutiveCos": 0.9809356544506828,
+  "rows": [
+    {
+      "t": 0.08,
+      "qIntegrations": 9,
+      "generators": 1,
+      "relativeResidual": 0.9875143846479777,
+      "residualNorm": 6.122705082912528,
+      "targetNorm": 6.200117363449959,
+      "alphaNorm": 5.012402572425295,
+      "alphaMaxAbs": 5.012402572425295
+    },
+    {
+      "t": 0.08,
+      "qIntegrations": 10,
+      "generators": 2,
+      "relativeResidual": 0.9399151535328031,
+      "residualNorm": 14.767662688318225,
+      "targetNorm": 15.711697628037905,
+      "alphaNorm": 185.40152536525534,
+      "alphaMaxAbs": 181.46948064797377
+    },
+    {
+      "t": 0.08,
+      "qIntegrations": 11,
+      "generators": 3,
+      "relativeResidual": 0.9871183048262103,
+      "residualNorm": 120.38815112973586,
+      "targetNorm": 121.95919226817611,
+      "alphaNorm": 1500.7790395842032,
+      "alphaMaxAbs": 1469.3823684121355
+    },
+    {
+      "t": 0.08,
+      "qIntegrations": 12,
+      "generators": 4,
+      "relativeResidual": 0.13844569272111865,
+      "residualNorm": 16.906930978674026,
+      "targetNorm": 122.11958816754886,
+      "alphaNorm": 4340.523282165351,
+      "alphaMaxAbs": 3804.8180980227335
+    },
+    {
+      "t": 0.08,
+      "qIntegrations": 13,
+      "generators": 5,
+      "relativeResidual": 0.5906185296272544,
+      "residualNorm": 1531.5659940367314,
+      "targetNorm": 2593.1560173083617,
+      "alphaNorm": 3323554.7209762405,
+      "alphaMaxAbs": 3273843.8954312643
+    },
+    {
+      "t": 0.24,
+      "qIntegrations": 9,
+      "generators": 1,
+      "relativeResidual": 0.9433551270295115,
+      "residualNorm": 3.37923278288695,
+      "targetNorm": 3.582142807160718,
+      "alphaNorm": 6.09937313074018,
+      "alphaMaxAbs": 6.09937313074018
+    },
+    {
+      "t": 0.24,
+      "qIntegrations": 10,
+      "generators": 2,
+      "relativeResidual": 0.9877929963814721,
+      "residualNorm": 20.672876018008704,
+      "targetNorm": 20.92834844318447,
+      "alphaNorm": 27.02709960155616,
+      "alphaMaxAbs": 26.914141102615847
+    },
+    {
+      "t": 0.24,
+      "qIntegrations": 11,
+      "generators": 3,
+      "relativeResidual": 0.9667168836931134,
+      "residualNorm": 81.58124768527458,
+      "targetNorm": 84.39001021024139,
+      "alphaNorm": 2084.2630435006013,
+      "alphaMaxAbs": 2059.8281417759313
+    },
+    {
+      "t": 0.24,
+      "qIntegrations": 12,
+      "generators": 4,
+      "relativeResidual": 0.8777046577975537,
+      "residualNorm": 193.2743455400764,
+      "targetNorm": 220.20430656602025,
+      "alphaNorm": 58211.742718987996,
+      "alphaMaxAbs": 57190.28322484465
+    },
+    {
+      "t": 0.24,
+      "qIntegrations": 13,
+      "generators": 5,
+      "relativeResidual": 0.5771499966753604,
+      "residualNorm": 1221.0716496434459,
+      "targetNorm": 2115.692032707891,
+      "alphaNorm": 2716247.7069126316,
+      "alphaMaxAbs": 2676142.322693483
+    },
+    {
+      "t": 0.4,
+      "qIntegrations": 9,
+      "generators": 1,
+      "relativeResidual": 0.790370144025836,
+      "residualNorm": 1.473170935636319,
+      "targetNorm": 1.8639000306015647,
+      "alphaNorm": 5.860120073108964,
+      "alphaMaxAbs": 5.860120073108964
+    },
+    {
+      "t": 0.4,
+      "qIntegrations": 10,
+      "generators": 2,
+      "relativeResidual": 0.9952933786182885,
+      "residualNorm": 20.26888902841459,
+      "targetNorm": 20.364738140379057,
+      "alphaNorm": 80.63211024050769,
+      "alphaMaxAbs": 77.94102020628488
+    },
+    {
+      "t": 0.4,
+      "qIntegrations": 11,
+      "generators": 3,
+      "relativeResidual": 0.879932932518768,
+      "residualNorm": 36.974295546713634,
+      "targetNorm": 42.019447369558485,
+      "alphaNorm": 2034.4560692958082,
+      "alphaMaxAbs": 2018.0076675277626
+    },
+    {
+      "t": 0.4,
+      "qIntegrations": 12,
+      "generators": 4,
+      "relativeResidual": 0.9310029620490797,
+      "residualNorm": 258.24322294060113,
+      "targetNorm": 277.3817414847143,
+      "alphaNorm": 78553.89311808097,
+      "alphaMaxAbs": 76773.52963510323
+    },
+    {
+      "t": 0.4,
+      "qIntegrations": 13,
+      "generators": 5,
+      "relativeResidual": 0.5513364530059235,
+      "residualNorm": 677.3512374389734,
+      "targetNorm": 1228.562402768779,
+      "alphaNorm": 1557947.2183935782,
+      "alphaMaxAbs": 1535286.6851462596
+    },
+    {
+      "t": 0.52,
+      "qIntegrations": 9,
+      "generators": 1,
+      "relativeResidual": 0.8569706060050832,
+      "residualNorm": 1.618772325701571,
+      "targetNorm": 1.888947315530177,
+      "alphaNorm": 4.995982713166808,
+      "alphaMaxAbs": 4.995982713166808
+    },
+    {
+      "t": 0.52,
+      "qIntegrations": 10,
+      "generators": 2,
+      "relativeResidual": 0.9940944053120817,
+      "residualNorm": 16.98183018099162,
+      "targetNorm": 17.082713764655395,
+      "alphaNorm": 118.9117543275056,
+      "alphaMaxAbs": 115.49554881897258
+    },
+    {
+      "t": 0.52,
+      "qIntegrations": 11,
+      "generators": 3,
+      "relativeResidual": 0.5477740515746393,
+      "residualNorm": 10.927880076171384,
+      "targetNorm": 19.949612517712254,
+      "alphaNorm": 1706.3588530427362,
+      "alphaMaxAbs": 1695.441219571202
+    },
+    {
+      "t": 0.52,
+      "qIntegrations": 12,
+      "generators": 4,
+      "relativeResidual": 0.9373499253733434,
+      "residualNorm": 233.89335805663313,
+      "targetNorm": 249.52619264729142,
+      "alphaNorm": 71109.34743259911,
+      "alphaMaxAbs": 69363.37674593393
+    },
+    {
+      "t": 0.52,
+      "qIntegrations": 13,
+      "generators": 5,
+      "relativeResidual": 0.5002453027448895,
+      "residualNorm": 317.93856406579306,
+      "targetNorm": 635.565316298297,
+      "alphaNorm": 770628.9246240166,
+      "alphaMaxAbs": 759667.6510438335
+    }
+  ]
+}

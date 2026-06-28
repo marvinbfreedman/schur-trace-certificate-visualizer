@@ -1,0 +1,39 @@
+{
+  "theoremName": "augmented trace quotient compatibility theorem",
+  "proofClass": "analytic proof",
+  "quotientLimsupJson": "augmented_trace_quotient_limsup_theorem.json",
+  "quotientLiminfJson": "augmented_trace_quotient_liminf_theorem.json",
+  "transportedTraceSpace": {
+    "name": "X_aug",
+    "definition": "closure Ran(R_aug) with quotient norm inf{||f||_V:R_aug f=x}"
+  },
+  "statement": "The finite trace quotient norms induced by R_aug,N converge to the transported quotient norm on X_aug in the Mosco sense.",
+  "statuses": {
+    "quotientLimsupInputStatus": {
+      "label": "trace quotient limsup input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Recovery sequences provide the upper bound for quotient norm convergence."
+    },
+    "quotientLiminfInputStatus": {
+      "label": "trace quotient liminf input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Weak compactness and lower semicontinuity provide the lower bound for quotient norm convergence."
+    },
+    "traceQuotientCompatibilityStatus": {
+      "label": "trace quotient compatibility",
+      "closed": true,
+      "status": "closed",
+      "reason": "The quotient limsup and liminf inequalities identify the finite transported trace quotient norms with the limiting quotient norm on X_aug."
+    }
+  },
+  "traceQuotientCompatibilityClosed": true,
+  "finiteTraceQuotientNormConvergenceClosed": true,
+  "proof": [
+    "Use the quotient limsup theorem for the upper semicontinuity inequality.",
+    "Use the quotient liminf theorem for the lower semicontinuity inequality.",
+    "Conclude convergence of finite trace quotient spaces to X_aug."
+  ],
+  "remainingAnalyticGap": null
+}

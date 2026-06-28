@@ -1,0 +1,36 @@
+{
+  "theoremName": "augmented nonnegative closed-form limit theorem",
+  "proofClass": "analytic proof",
+  "finiteSequenceJson": "augmented_finite_repaired_form_sequence_theorem.json",
+  "closedFormLscJson": "closed_form_lsc_transport_theorem.json",
+  "statement": "A directed sequence of nonnegative augmented repaired forms whose closed lower-semicontinuous transport limit is identified by the Mosco/quotient theorem has a nonnegative completed repaired form.",
+  "statuses": {
+    "finiteRepairedSequenceInputStatus": {
+      "label": "finite repaired sequence input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Every finite repaired form in the directed core sequence is nonnegative."
+    },
+    "closedFormLscInputStatus": {
+      "label": "closed lower-semicontinuity input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The closed-form LSC theorem identifies the completed transport limit."
+    },
+    "nonnegativeClosedFormLimitStatus": {
+      "label": "nonnegative closed-form limit",
+      "closed": true,
+      "status": "closed",
+      "reason": "Lower semicontinuity prevents a negative vector in the completed form domain from being approximated by nonnegative finite repaired forms."
+    }
+  },
+  "nonnegativeClosedFormLimitClosed": true,
+  "completedRepairedFormNonnegativeClosed": true,
+  "proof": [
+    "Assume a completed-domain vector had negative repaired-form value.",
+    "Use the closed-form LSC transport theorem to choose core recovery sequences with the same closed envelope.",
+    "The finite repaired forms are nonnegative on the recovery sequence.",
+    "Lower semicontinuity contradicts the negative completed value."
+  ],
+  "remainingAnalyticGap": null
+}

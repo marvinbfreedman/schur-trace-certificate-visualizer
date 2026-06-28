@@ -1,0 +1,35 @@
+{
+  "order": 10,
+  "support": [
+    0.8,
+    1.8
+  ],
+  "vanishOrder": 12,
+  "rows": [
+    {
+      "frequency": 8.0,
+      "energy": 1.0612471611756436e-08,
+      "sobolevNorm2": 542586028011.1548,
+      "ratio": 1.955905803667001e-20
+    },
+    {
+      "frequency": 12.0,
+      "energy": 6.033564920708548e-09,
+      "sobolevNorm2": 6008756928560.288,
+      "ratio": 1.004128639657621e-21
+    },
+    {
+      "frequency": 16.0,
+      "energy": 5.604230783812628e-09,
+      "sobolevNorm2": 55116636460756.41,
+      "ratio": 1.0167947726278429e-22
+    },
+    {
+      "frequency": 20.0,
+      "energy": 1.96746474269201e-09,
+      "sobolevNorm2": 428813862675250.94,
+      "ratio": 4.5881556403460046e-24
+    }
+  ],
+  "interpretation": "For the compact kernel model S_m^comm, smooth oscillatory packets supported away from the endpoint trace interval drive S_m/W_m toward zero. The continuum elliptic estimate therefore needs the local positive terms from the true commuted Sturm identity."
+}

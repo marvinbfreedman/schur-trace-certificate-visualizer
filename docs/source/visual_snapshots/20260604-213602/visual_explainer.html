@@ -1,0 +1,1039 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Endpoint Trace / Schur Visualizer</title>
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --panel: #ffffff;
+      --ink: #20242c;
+      --muted: #667085;
+      --line: #d7dce3;
+      --blue: #2869d8;
+      --red: #c64242;
+      --green: #13795b;
+      --amber: #a66b00;
+      --purple: #6d4bc2;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      background: rgba(246, 247, 249, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+
+    .wrap {
+      width: min(1180px, calc(100vw - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 680;
+      letter-spacing: 0;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    main {
+      padding: 22px 0 42px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      min-width: 0;
+      box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+    }
+
+    .span-12 { grid-column: span 12; }
+    .span-7 { grid-column: span 7; }
+    .span-5 { grid-column: span 5; }
+    .span-6 { grid-column: span 6; }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 15px;
+      font-weight: 680;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 12px;
+      color: var(--muted);
+    }
+
+    canvas {
+      width: 100%;
+      display: block;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+    }
+
+    .heatmap {
+      aspect-ratio: 1 / 1;
+      max-height: 560px;
+    }
+
+    .chart {
+      height: 280px;
+    }
+
+    .small-chart {
+      height: 210px;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .key {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .swatch {
+      width: 14px;
+      height: 3px;
+      border-radius: 2px;
+      background: currentColor;
+    }
+
+    .numbers {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 10px;
+      min-width: 0;
+    }
+
+    .metric .label {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+
+    .metric .value {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    .diagram {
+      display: grid;
+      grid-template-columns: 1fr 76px 1fr;
+      gap: 10px;
+      align-items: center;
+      margin-top: 12px;
+    }
+
+    .block {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      min-height: 96px;
+      background: #fbfcfd;
+    }
+
+    .block strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .arrow {
+      text-align: center;
+      color: var(--muted);
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      color: #344054;
+      background: #f0f3f7;
+      border: 1px solid #e2e7ee;
+      border-radius: 4px;
+      padding: 1px 4px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 7px 6px;
+      text-align: right;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    th:first-child, td:first-child {
+      text-align: left;
+      font-family: inherit;
+    }
+
+    th {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    @media (max-width: 860px) {
+      .span-7, .span-5, .span-6 { grid-column: span 12; }
+      .topbar { align-items: flex-start; flex-direction: column; }
+      .meta { white-space: normal; }
+      .diagram { grid-template-columns: 1fr; }
+      .arrow { transform: rotate(90deg); }
+      .numbers { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap topbar">
+      <h1>Endpoint Trace / Schur Visualizer</h1>
+      <div class="meta" id="meta">Loading data...</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="grid">
+      <div class="panel span-12">
+        <h2>What We Are Doing</h2>
+        <p>
+          We are studying whether a Weyl/Volterra kernel is positive. The endpoint
+          model has a tiny negative direction. The moving trace
+          <code>Lambda_a(f)</code> detects that direction. If we remove functions
+          with nonzero endpoint trace, the remaining form becomes positive in the
+          finite tests.
+        </p>
+        <div class="diagram">
+          <div class="block">
+            <strong>Jet matrix</strong>
+            Derivatives of <code>K(s,t)</code> at one point. A negative eigenvalue
+            means a local endpoint obstruction.
+          </div>
+          <div class="arrow">-></div>
+          <div class="block">
+            <strong>Trace family</strong>
+            The lowest eigenvector gives
+            <code>Lambda_a(f)=sum e_k(a) f^(k)(a)/k!</code>.
+          </div>
+        </div>
+        <div class="diagram">
+          <div class="block">
+            <strong>Split space</strong>
+            <code>V = ker R + U</code>, where <code>Rf=(Lambda_a f)</code>.
+          </div>
+          <div class="arrow">-></div>
+          <div class="block">
+            <strong>Schur / Douglas test</strong>
+            Prove <code>|b(n,u)|^2 <= C a(n,n)||u||^2</code> and positivity on
+            <code>ker R</code>.
+          </div>
+        </div>
+      </div>
+
+      <div class="panel span-7">
+        <h2>9 x 9 Endpoint Jet Matrix at s0 = 0.5</h2>
+        <p id="jetText"></p>
+        <canvas id="jetHeatmap" class="heatmap" width="720" height="720"></canvas>
+        <div class="legend">
+          <span class="key" style="color: var(--blue)"><span class="swatch"></span>positive</span>
+          <span class="key" style="color: var(--red)"><span class="swatch"></span>negative</span>
+          <span class="key"><span class="swatch" style="background:#e7eaf0"></span>near zero</span>
+        </div>
+      </div>
+
+      <div class="panel span-5">
+        <h2>Lowest Jet Eigenvector</h2>
+        <p>
+          This vector is the local functional coefficients. The entry at index
+          <code>k</code> multiplies <code>f^(k)(s0)/k!</code>.
+        </p>
+        <canvas id="eigVector" class="small-chart" width="520" height="260"></canvas>
+        <div id="eigMetrics" class="numbers"></div>
+      </div>
+
+      <div class="panel span-6">
+        <h2>Moving Endpoint Defect</h2>
+        <p>
+          The lowest eigenvalue stays negative until about <code>s* = 0.5530736</code>.
+          That is the active endpoint interval.
+        </p>
+        <canvas id="lambdaChart" class="chart" width="620" height="300"></canvas>
+        <div class="legend">
+          <span class="key" style="color: var(--red)"><span class="swatch"></span>lambda0</span>
+          <span class="key" style="color: var(--green)"><span class="swatch"></span>lambda1</span>
+          <span class="key" style="color: var(--amber)"><span class="swatch"></span>s*</span>
+        </div>
+      </div>
+
+      <div class="panel span-6">
+        <h2>Coefficient Field e(a)</h2>
+        <p>
+          This shows why a single global eighth-order ODE chart fails:
+          <code>e8(a)</code> crosses zero near <code>0.1646167</code>.
+        </p>
+        <canvas id="coeffChart" class="chart" width="620" height="300"></canvas>
+        <div class="legend">
+          <span class="key" style="color: var(--blue)"><span class="swatch"></span>e0</span>
+          <span class="key" style="color: var(--purple)"><span class="swatch"></span>e7</span>
+          <span class="key" style="color: var(--red)"><span class="swatch"></span>e8</span>
+          <span class="key" style="color: var(--amber)"><span class="swatch"></span>e8 zero</span>
+        </div>
+      </div>
+
+      <div class="panel span-12">
+        <h2>Schur / Douglas Numbers</h2>
+        <p>
+          These are the finite shadows of the continuum proof. The important
+          quantities are positivity on <code>ker R</code>, zero range residual,
+          and bounded <code>Gamma*Gamma = B*A^+*B</code>.
+        </p>
+        <table id="statsTable"></table>
+      </div>
+
+      <div class="panel span-12">
+        <h2>Endpoint Douglas Refinement</h2>
+        <p>
+          This is the current decisive test. If the finite Douglas constant
+          <code>Gamma*Gamma = B*A^+*B</code> blows up as the basis grows, the
+          continuum estimate is probably false or using the wrong norm. In this
+          endpoint stress scan it decreases.
+        </p>
+        <canvas id="douglasChart" class="chart" width="900" height="300"></canvas>
+        <div class="legend">
+          <span class="key" style="color: var(--blue)"><span class="swatch"></span>log10 Gamma^2 max</span>
+          <span class="key" style="color: var(--green)"><span class="swatch"></span>log10 K|ker R min</span>
+        </div>
+        <table id="douglasTable"></table>
+      </div>
+
+      <div class="panel span-12">
+        <h2>Top Douglas Eigenvector</h2>
+        <p>
+          This is the finite \(U\)-direction that makes
+          <code>Gamma*Gamma = B*A^+*B</code> largest. The paired
+          <code>ker R</code> witness is <code>A^+ B u</code>. The plot shows
+          normalized shapes so the two curves can be compared on the same axis.
+        </p>
+        <div class="grid">
+          <div class="span-7">
+            <canvas id="topVectorChart" class="chart" width="700" height="300"></canvas>
+            <div class="legend">
+              <span class="key" style="color: var(--blue)"><span class="swatch"></span>top U direction</span>
+              <span class="key" style="color: var(--green)"><span class="swatch"></span>cross source h</span>
+              <span class="key" style="color: var(--red)"><span class="swatch"></span>paired ker R witness</span>
+            </div>
+          </div>
+          <div class="span-5">
+            <canvas id="traceChart" class="chart" width="500" height="300"></canvas>
+            <div class="legend">
+              <span class="key" style="color: var(--purple)"><span class="swatch"></span>sampled trace values Ru</span>
+            </div>
+          </div>
+        </div>
+        <div id="topVectorMetrics" class="numbers"></div>
+        <h2 style="margin-top:16px">Hardy Boundary-Layer Profile</h2>
+        <p>
+          The paired witness <code>A^+Bu</code> is the Riesz solution that a
+          Hardy estimate must control. Its mass is strongly concentrated near
+          the right endpoint.
+        </p>
+        <table id="hardyProfileTable"></table>
+        <h2 style="margin-top:16px">Riesz Spectral Amplification</h2>
+        <p>
+          The energy of <code>A^+Bu</code> is not carried by one endpoint mode.
+          The smallest modes dominate the witness norm, while several mid modes
+          carry most of the Douglas energy. That is why the next proof target is
+          a Hardy/Green estimate, not a rank-one extremizer guess.
+        </p>
+        <table id="rieszProfileTable"></table>
+        <h2 style="margin-top:16px">Riesz Spectral Refinement</h2>
+        <p>
+          This scan separates the visible boundary layer from the energy
+          estimate. The witness norm stays in the two lowest modes, but the
+          Douglas energy moves into mid modes as the section grows.
+        </p>
+        <table id="rieszScanTable"></table>
+        <h2 style="margin-top:16px">Windowed Hardy / Green Constants</h2>
+        <p>
+          For each spectral window <code>I</code>, this scans
+          <code>lambda_max(B* P_I A_I^-1 P_I B)</code>. The full window is the
+          Douglas constant; the proper windows show which bands the analytic
+          Hardy estimate has to control.
+        </p>
+        <table id="windowScanTable"></table>
+        <h2 style="margin-top:16px">Three-Part Certificate</h2>
+        <p>
+          This is the current proof split in finite form: pick a cutoff for the
+          finite Schur block, bound the spectral tail, and check whether sampled
+          endpoint traces approximate the moving continuum trace.
+        </p>
+        <table id="threePartTable"></table>
+        <table id="basis16ModeTable" style="margin-top:10px"></table>
+        <h2 style="margin-top:16px">Endpoint Trace Refinement</h2>
+        <p>
+          This holds the basis fixed and increases sampled trace constraints.
+          Dense trace leakage drops rapidly, showing that the continuum trace
+          condition is the right object and sparse sampling was the source of
+          the low-mode leak.
+        </p>
+        <table id="traceRefinementTable"></table>
+        <table id="lambdaDerivativeTable" style="margin-top:10px"></table>
+        <table id="traceResolutionTable" style="margin-top:10px"></table>
+        <h2 style="margin-top:16px">Top Vector Stability Scan</h2>
+        <p>
+          The Douglas constant decreases, but the low-order eigenvector shape is
+          not fully stable yet. Low correlation means the finite top direction is
+          still moving as the Galerkin space changes.
+        </p>
+        <table id="topVectorScanTable"></table>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const colors = {
+      blue: "#2869d8",
+      red: "#c64242",
+      green: "#13795b",
+      amber: "#a66b00",
+      purple: "#6d4bc2",
+      grid: "#d7dce3",
+      ink: "#20242c",
+      muted: "#667085"
+    };
+
+    function sci(x) {
+      if (x === 0) return "0";
+      const ax = Math.abs(x);
+      if (ax >= 1e-3 && ax < 1e4) return x.toPrecision(5);
+      return x.toExponential(3);
+    }
+
+    function setupCanvas(canvas) {
+      const rect = canvas.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = Math.max(1, Math.floor(rect.width * dpr));
+      canvas.height = Math.max(1, Math.floor(rect.height * dpr));
+      const ctx = canvas.getContext("2d");
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      return { ctx, w: rect.width, h: rect.height };
+    }
+
+    function drawAxes(ctx, x, y, w, h, y0 = null) {
+      ctx.strokeStyle = colors.grid;
+      ctx.lineWidth = 1;
+      ctx.strokeRect(x, y, w, h);
+      if (y0 !== null && y0 >= y && y0 <= y + h) {
+        ctx.beginPath();
+        ctx.moveTo(x, y0);
+        ctx.lineTo(x + w, y0);
+        ctx.stroke();
+      }
+    }
+
+    function drawHeatmap(data) {
+      const canvas = document.getElementById("jetHeatmap");
+      const { ctx, w, h } = setupCanvas(canvas);
+      const m = data.jet.matrix;
+      const n = m.length;
+      const pad = 42;
+      const size = Math.min(w - pad - 10, h - pad - 10);
+      const cell = size / n;
+      const maxAbs = Math.max(...m.flat().map(v => Math.abs(v)));
+
+      ctx.clearRect(0, 0, w, h);
+      ctx.font = "12px ui-monospace, monospace";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+
+      for (let i = 0; i < n; i++) {
+        ctx.fillStyle = colors.muted;
+        ctx.fillText(i, pad + i * cell + cell / 2, 18);
+        ctx.fillText(i, 20, pad + i * cell + cell / 2);
+      }
+
+      for (let r = 0; r < n; r++) {
+        for (let c = 0; c < n; c++) {
+          const v = m[r][c];
+          const intensity = Math.pow(Math.abs(v) / maxAbs, 0.35);
+          const base = v >= 0 ? [40, 105, 216] : [198, 66, 66];
+          const bg = base.map(channel => Math.round(248 - (248 - channel) * intensity));
+          ctx.fillStyle = `rgb(${bg[0]},${bg[1]},${bg[2]})`;
+          ctx.fillRect(pad + c * cell, pad + r * cell, cell, cell);
+          ctx.strokeStyle = "rgba(255,255,255,0.55)";
+          ctx.strokeRect(pad + c * cell, pad + r * cell, cell, cell);
+        }
+      }
+
+      ctx.strokeStyle = colors.ink;
+      ctx.strokeRect(pad, pad, size, size);
+    }
+
+    function drawVector(data) {
+      const canvas = document.getElementById("eigVector");
+      const { ctx, w, h } = setupCanvas(canvas);
+      const vec = data.jet.lowestEigenvector;
+      const pad = { l: 36, r: 12, t: 16, b: 28 };
+      const plotW = w - pad.l - pad.r;
+      const plotH = h - pad.t - pad.b;
+      const maxAbs = Math.max(...vec.map(v => Math.abs(v)));
+      const y0 = pad.t + plotH / 2;
+      const barW = plotW / vec.length * 0.68;
+
+      ctx.clearRect(0, 0, w, h);
+      drawAxes(ctx, pad.l, pad.t, plotW, plotH, y0);
+
+      ctx.font = "11px ui-monospace, monospace";
+      ctx.textAlign = "center";
+      for (let i = 0; i < vec.length; i++) {
+        const x = pad.l + (i + 0.5) * plotW / vec.length;
+        const y = y0 - (vec[i] / maxAbs) * (plotH * 0.44);
+        ctx.fillStyle = vec[i] >= 0 ? colors.blue : colors.red;
+        ctx.fillRect(x - barW / 2, Math.min(y, y0), barW, Math.abs(y - y0));
+        ctx.fillStyle = colors.muted;
+        ctx.fillText(String(i), x, h - 12);
+      }
+    }
+
+    function drawLineChart(canvasId, series, markers = []) {
+      const canvas = document.getElementById(canvasId);
+      const { ctx, w, h } = setupCanvas(canvas);
+      const pad = { l: 54, r: 18, t: 16, b: 34 };
+      const plotW = w - pad.l - pad.r;
+      const plotH = h - pad.t - pad.b;
+      const xs = series.flatMap(s => s.points.map(p => p.x)).concat(markers.map(m => m.x));
+      const ys = series.flatMap(s => s.points.map(p => p.y));
+      let minX = Math.min(...xs), maxX = Math.max(...xs);
+      let minY = Math.min(...ys), maxY = Math.max(...ys);
+      const yPad = (maxY - minY || 1) * 0.12;
+      minY -= yPad; maxY += yPad;
+
+      const xMap = x => pad.l + (x - minX) / (maxX - minX || 1) * plotW;
+      const yMap = y => pad.t + (maxY - y) / (maxY - minY || 1) * plotH;
+
+      ctx.clearRect(0, 0, w, h);
+      drawAxes(ctx, pad.l, pad.t, plotW, plotH, yMap(0));
+
+      ctx.font = "11px ui-monospace, monospace";
+      ctx.fillStyle = colors.muted;
+      ctx.textAlign = "right";
+      ctx.fillText(sci(maxY), pad.l - 6, pad.t + 4);
+      ctx.fillText(sci(minY), pad.l - 6, pad.t + plotH);
+      ctx.textAlign = "center";
+      ctx.fillText(minX.toFixed(2), pad.l, h - 12);
+      ctx.fillText(maxX.toFixed(2), pad.l + plotW, h - 12);
+
+      for (const marker of markers) {
+        const x = xMap(marker.x);
+        ctx.strokeStyle = marker.color;
+        ctx.setLineDash([4, 4]);
+        ctx.beginPath();
+        ctx.moveTo(x, pad.t);
+        ctx.lineTo(x, pad.t + plotH);
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+
+      for (const s of series) {
+        ctx.strokeStyle = s.color;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        s.points.forEach((p, i) => {
+          const x = xMap(p.x);
+          const y = yMap(p.y);
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        });
+        ctx.stroke();
+        ctx.fillStyle = s.color;
+        for (const p of s.points) {
+          ctx.beginPath();
+          ctx.arc(xMap(p.x), yMap(p.y), 3, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+    }
+
+    function renderStats(data) {
+      const table = document.getElementById("statsTable");
+      const rows = [
+        ["model", "K min", "K|ker R min", "range residual", "Gamma^2 max", "repaired min"],
+        ...Object.values(data.quotient).map(q => [
+          `${q.label} ${q.domain}`,
+          sci(q.kMin),
+          sci(q.kerMin),
+          sci(q.rangeResidual),
+          sci(q.gamma2Max),
+          sci(q.repairedMin)
+        ])
+      ];
+      table.innerHTML = rows.map((row, idx) => {
+        const tag = idx === 0 ? "th" : "td";
+        return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+      }).join("");
+    }
+
+    function renderDouglas(data) {
+      const rows = data.douglasScan;
+      drawLineChart("douglasChart", [
+        {
+          color: colors.blue,
+          points: rows.map(r => ({ x: r.basis, y: Math.log10(r.gamma2Max) }))
+        },
+        {
+          color: colors.green,
+          points: rows.map(r => ({ x: r.basis, y: Math.log10(r.kerMin) }))
+        }
+      ]);
+
+      const tableRows = [
+        ["basis", "constraints", "K min", "K|ker R min", "range residual", "Gamma^2 max", "repaired min"],
+        ...rows.map(r => [
+          String(r.basis),
+          String(r.constraints),
+          sci(r.kMin),
+          sci(r.kerMin),
+          sci(r.rangeResidual),
+          sci(r.gamma2Max),
+          sci(r.repairedMin)
+        ])
+      ];
+      document.getElementById("douglasTable").innerHTML = tableRows.map((row, idx) => {
+        const tag = idx === 0 ? "th" : "td";
+        return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+      }).join("");
+    }
+
+    function normalizedPoints(grid, key) {
+      const maxAbs = Math.max(...grid.map(p => Math.abs(p[key])), 1e-30);
+      return grid.map(p => ({ x: p.s, y: p[key] / maxAbs }));
+    }
+
+    function renderTopVector(data) {
+      const top = data.topVector;
+      if (!top) return;
+      drawLineChart("topVectorChart", [
+        { color: colors.blue, points: normalizedPoints(top.grid, "u") },
+        { color: colors.green, points: normalizedPoints(top.grid, "source") },
+        { color: colors.red, points: normalizedPoints(top.grid, "nWitness") }
+      ]);
+      drawLineChart("traceChart", [
+        {
+          color: colors.purple,
+          points: top.traceCenters.map((x, i) => ({ x, y: top.traceValues[i] }))
+        }
+      ]);
+
+      const traceMax = Math.max(...top.traceValues.map(v => Math.abs(v)));
+      const metrics = [
+        ["model", `${top.model}, L=${top.L}`],
+        ["basis / traces", `${top.basis} / ${top.constraints}`],
+        ["Gamma^2 top", sci(top.gamma2Top)],
+        ["Gamma top", sci(top.gammaTop)],
+        ["range residual", sci(top.rangeResidual)],
+        ["max |Ru|", sci(traceMax)]
+      ];
+      document.getElementById("topVectorMetrics").innerHTML = metrics.map(([label, value]) => `
+        <div class="metric"><div class="label">${label}</div><div class="value">${value}</div></div>
+      `).join("");
+
+      if (data.topVectorScan) {
+        const rows = data.topVectorScan.rows;
+        const tableRows = [
+          ["basis", "traces", "Gamma^2 top", "corr prev", "u peak", "witness peak", "u zeros", "max |Ru|"],
+          ...rows.map(r => [
+            String(r.basis),
+            String(r.constraints),
+            sci(r.gamma2Top),
+            r.corrPrev === null ? "n/a" : sci(r.corrPrev),
+            r.uPeakS.toFixed(3),
+            r.nPeakS.toFixed(3),
+            String(r.uSignChanges),
+            sci(r.maxTraceAbs)
+          ])
+        ];
+        document.getElementById("topVectorScanTable").innerHTML = tableRows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.hardyProfile) {
+        const rows = data.hardyProfile.uLayers.map((uRow, idx) => {
+          const hRow = data.hardyProfile.sourceLayers[idx];
+          const wRow = data.hardyProfile.witnessLayers[idx];
+          return [
+            uRow.width.toFixed(2),
+            sci(uRow.left),
+            sci(uRow.right),
+            sci(hRow.left),
+            sci(hRow.right),
+            sci(wRow.left),
+            sci(wRow.right)
+          ];
+        });
+        const tableRows = [
+          [
+            "layer width",
+            "u left mass",
+            "u right mass",
+            "source left mass",
+            "source right mass",
+            "witness left mass",
+            "witness right mass"
+          ],
+          ...rows
+        ];
+        document.getElementById("hardyProfileTable").innerHTML = tableRows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.rieszProfile) {
+        const top = data.rieszProfile.topEnergyModes;
+        const rows = [
+          ["mode", "lambda", "source coeff", "witness coeff", "energy share", "witness share", "mode peak"],
+          ...top.map(r => [
+            String(r.mode),
+            sci(r.lambda),
+            sci(r.sourceCoeff),
+            sci(r.witnessCoeff),
+            `${(100 * r.energyFrac).toFixed(1)}%`,
+            `${(100 * r.witnessFrac).toFixed(2)}%`,
+            r.modePeakS.toFixed(3)
+          ])
+        ];
+        document.getElementById("rieszProfileTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.rieszScan) {
+        const rows = [
+          ["basis", "traces", "Gamma^2", "low2 energy", "low2 witness", "top3 energy", "eff rank", "top energy modes"],
+          ...data.rieszScan.rows.map(r => [
+            String(r.basis),
+            String(r.constraints),
+            sci(r.gamma2Top),
+            `${(100 * r.energyLow2).toFixed(1)}%`,
+            `${(100 * r.witnessLow2).toFixed(1)}%`,
+            `${(100 * r.energyTop3).toFixed(1)}%`,
+            r.energyEffectiveRank.toFixed(2),
+            r.topEnergyModes.map(m => m.mode).join(", ")
+          ])
+        ];
+        document.getElementById("rieszScanTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.windowScan) {
+        const label = w => `[${w.start},${w.stop})`;
+        const rows = [
+          ["basis", "traces", "Gamma^2", "largest proper", "proper share", "inner window", "inner share", "best single", "single share", "tail 2+"],
+          ...data.windowScan.rows.map(r => {
+            const fullWidth = r.positiveModes;
+            const proper = r.topWindows.find(w => w.width < fullWidth) || r.topWindows[0];
+            const inner = r.topWindows.find(w => w.start > 0 && w.stop < fullWidth) || proper;
+            const single = r.topSingles[0];
+            const tail2 = r.tails.find(t => t.start === 2);
+            return [
+              String(r.basis),
+              String(r.constraints),
+              sci(r.gamma2Full),
+              label(proper),
+              `${(100 * proper.fractionOfFull).toFixed(1)}%`,
+              label(inner),
+              `${(100 * inner.fractionOfFull).toFixed(1)}%`,
+              String(single.mode),
+              `${(100 * single.fractionOfFull).toFixed(1)}%`,
+              tail2 ? `${(100 * tail2.fractionOfFull).toFixed(1)}%` : "n/a"
+            ];
+          })
+        ];
+        document.getElementById("windowScanTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.threePart) {
+        const rows = [
+          ["basis", "traces", "Gamma^2", "tail <=50%", "tail <=25%", "tail <=10%", "tail <=5%", "top source mode", "top share", "dense trace m0"],
+          ...data.threePart.rows.map(r => {
+            const thresholds = Object.fromEntries(r.tailThresholds.map(t => [String(t.threshold), t.cutoff]));
+            const topMode = r.lowModes.reduce((best, m) => m.singleFrac > best.singleFrac ? m : best, r.lowModes[0]);
+            return [
+              String(r.basis),
+              String(r.constraints),
+              sci(r.gamma2),
+              String(thresholds["0.5"]),
+              String(thresholds["0.25"]),
+              String(thresholds["0.1"]),
+              String(thresholds["0.05"]),
+              String(topMode.mode),
+              `${(100 * topMode.singleFrac).toFixed(1)}%`,
+              sci(r.lowModes[0].denseTraceMax)
+            ];
+          })
+        ];
+        document.getElementById("threePartTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.basis16LowModes) {
+        const modes = data.basis16LowModes.rows[0].lowModes;
+        const rows = [
+          ["basis 16 mode", "lambda", "single share", "source/sqrt(lambda)", "dense trace max", "dense trace rms"],
+          ...modes.map(m => [
+            String(m.mode),
+            sci(m.lambda),
+            `${(100 * m.singleFrac).toFixed(1)}%`,
+            sci(m.sourceOverSqrtLambda),
+            sci(m.denseTraceMax),
+            sci(m.denseTraceRms)
+          ])
+        ];
+        document.getElementById("basis16ModeTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.traceRefinement) {
+        const rows = [
+          ["traces", "rank", "nullity", "Gamma^2", "tail <=10%", "tail <=5%", "top modes", "dense leakage"],
+          ...data.traceRefinement.rows.map(r => {
+            const thresholds = Object.fromEntries(r.tailCutoffs.map(t => [String(t.threshold), t.cutoff]));
+            return [
+              String(r.constraints),
+              String(r.rank),
+              String(r.nullity),
+              sci(r.gamma2),
+              String(thresholds["0.1"]),
+              String(thresholds["0.05"]),
+              r.topModes.map(m => m.mode).join(", "),
+              sci(r.lowModeDenseMax)
+            ];
+          })
+        ];
+        document.getElementById("traceRefinementTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.lambdaDerivatives) {
+        const d = data.lambdaDerivatives;
+        const rows = [
+          ["quantity", "value"],
+          ["mesh h", sci(d.h)],
+          ["min spectral gap", sci(d.minGap)],
+          ["min consecutive cos", sci(d.minConsecutiveCos)],
+          ["sup ||e||", sci(d.supNormE)],
+          ["sup ||e'||", sci(d.supNormD1)],
+          ["sup ||e''||", sci(d.supNormD2)],
+          ["largest |e_k'|", `e${d.coefficients.reduce((best, row) => row.supD1 > best.supD1 ? row : best, d.coefficients[0]).k}`],
+          ["largest |e_k''|", `e${d.coefficients.reduce((best, row) => row.supD2 > best.supD2 ? row : best, d.coefficients[0]).k}`]
+        ];
+        document.getElementById("lambdaDerivativeTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+
+      if (data.traceResolution) {
+        const rows = [
+          ["traces", "cutoff", "fill distance", "dense op", "d trace op", "mesh bound", "ratio", "J0", "J3"],
+          ...data.traceResolution.rows.map(r => [
+            String(r.constraints),
+            String(r.cutoff),
+            sci(r.fillDistance),
+            sci(r.denseTraceOp),
+            sci(r.traceDerivativeOp),
+            sci(r.meshBound),
+            sci(r.denseOverBound),
+            sci(r.jetConstants[0]),
+            sci(r.jetConstants[3])
+          ])
+        ];
+        document.getElementById("traceResolutionTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(v => `<${tag}>${v}</${tag}>`).join("")}</tr>`;
+        }).join("");
+      }
+    }
+
+    function renderMetrics(data) {
+      const vals = data.jet.eigenvalues;
+      const vec = data.jet.lowestEigenvector;
+      const metrics = [
+        ["lowest eigenvalue", sci(vals[0])],
+        ["second eigenvalue", sci(vals[1])],
+        ["most negative coeff", `e${vec.indexOf(Math.min(...vec))}`],
+        ["largest abs coeff", `e${vec.map(Math.abs).indexOf(Math.max(...vec.map(Math.abs)))}`]
+      ];
+      document.getElementById("eigMetrics").innerHTML = metrics.map(([label, value]) => `
+        <div class="metric"><div class="label">${label}</div><div class="value">${value}</div></div>
+      `).join("");
+    }
+
+    function render(data) {
+      document.getElementById("meta").textContent =
+        `jet order ${data.meta.jetOrder}, s0=${data.meta.center}, s*~${data.meta.sStar}`;
+      document.getElementById("jetText").textContent = data.explain.jetMatrix;
+      drawHeatmap(data);
+      drawVector(data);
+      renderMetrics(data);
+
+      const rows = data.defectFamily;
+      drawLineChart("lambdaChart", [
+        { color: colors.red, points: rows.map(r => ({ x: r.s, y: r.lambda0 })) },
+        { color: colors.green, points: rows.map(r => ({ x: r.s, y: r.lambda1 })) }
+      ], [{ x: data.meta.sStar, color: colors.amber }]);
+
+      drawLineChart("coeffChart", [
+        { color: colors.blue, points: rows.map(r => ({ x: r.s, y: r.coeffs[0] })) },
+        { color: colors.purple, points: rows.map(r => ({ x: r.s, y: r.coeffs[7] })) },
+        { color: colors.red, points: rows.map(r => ({ x: r.s, y: r.coeffs[8] })) }
+      ], [{ x: data.meta.e8Zero, color: colors.amber }]);
+
+      renderStats(data);
+      renderDouglas(data);
+      renderTopVector(data);
+    }
+
+    Promise.all([
+      fetch("visual_data.json").then(r => {
+        if (!r.ok) throw new Error(`visual_data.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("douglas_top_vector.json").then(r => {
+        if (!r.ok) throw new Error(`douglas_top_vector.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("douglas_top_vector_scan.json").then(r => {
+        if (!r.ok) throw new Error(`douglas_top_vector_scan.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("hardy_witness_profile.json").then(r => {
+        if (!r.ok) throw new Error(`hardy_witness_profile.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("riesz_spectral_profile.json").then(r => {
+        if (!r.ok) throw new Error(`riesz_spectral_profile.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("riesz_spectral_scan.json").then(r => {
+        if (!r.ok) throw new Error(`riesz_spectral_scan.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("windowed_hardy_green_scan.json").then(r => {
+        if (!r.ok) throw new Error(`windowed_hardy_green_scan.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("three_part_hardy_green_certificate.json").then(r => {
+        if (!r.ok) throw new Error(`three_part_hardy_green_certificate.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("three_part_hardy_green_basis16_low8.json").then(r => {
+        if (!r.ok) throw new Error(`three_part_hardy_green_basis16_low8.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("endpoint_trace_refinement_scan.json").then(r => {
+        if (!r.ok) throw new Error(`endpoint_trace_refinement_scan.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("lambda_field_derivative_bounds.json").then(r => {
+        if (!r.ok) throw new Error(`lambda_field_derivative_bounds.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch("trace_resolution_certificate.json").then(r => {
+        if (!r.ok) throw new Error(`trace_resolution_certificate.json HTTP ${r.status}`);
+        return r.json();
+      })
+    ])
+      .then(([data, topVector, topVectorScan, hardyProfile, rieszProfile, rieszScan, windowScan, threePart, basis16LowModes, traceRefinement, lambdaDerivatives, traceResolution]) => {
+        data.topVector = topVector;
+        data.topVectorScan = topVectorScan;
+        data.hardyProfile = hardyProfile;
+        data.rieszProfile = rieszProfile;
+        data.rieszScan = rieszScan;
+        data.windowScan = windowScan;
+        data.threePart = threePart;
+        data.basis16LowModes = basis16LowModes;
+        data.traceRefinement = traceRefinement;
+        data.lambdaDerivatives = lambdaDerivatives;
+        data.traceResolution = traceResolution;
+        render(data);
+        window.addEventListener("resize", () => render(data));
+      })
+      .catch(err => {
+        document.getElementById("meta").textContent = "Could not load visual_data.json";
+        document.querySelector("main").innerHTML =
+          `<div class="panel"><h2>Data load failed</h2><p>${err.message}</p></div>`;
+      });
+  </script>
+</body>
+</html>

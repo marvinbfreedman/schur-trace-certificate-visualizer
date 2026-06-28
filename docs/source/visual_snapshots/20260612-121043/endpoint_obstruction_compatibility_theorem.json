@@ -1,0 +1,142 @@
+{
+  "theoremName": "endpoint obstruction compatibility",
+  "endpointSelectionJson": "adjoint_green_endpoint_selection.json",
+  "endpointRangeJson": "adjoint_green_endpoint_range_theorem.json",
+  "jumpJson": "adjoint_green_jump_conditions.json",
+  "lagrangeJson": "trace_lagrange_adjoint_control.json",
+  "rankJson": "endpoint_map_rank_ball_certificate.json",
+  "centerStabilityJson": "endpoint_map_center_stability.json",
+  "endpointFredholmObstructionFormulaStatus": {
+    "label": "endpoint Fredholm obstruction formula",
+    "closed": true,
+    "status": "closed",
+    "reason": "The exact endpoint problem is Mz=-b(d); compatibility is w^*b(d)=0 for every w in ker M^*."
+  },
+  "greenPairingFormulaForObstructionStatus": {
+    "label": "Green pairing formula for obstruction",
+    "closed": true,
+    "status": "closed",
+    "reason": "Green's identity and the exact jump law give w^*b(d)=int K_d P f_w - d(f_w) for the primal endpoint test f_w."
+  },
+  "finiteSampledObstructionAnnihilationStatus": {
+    "label": "finite sampled near-obstruction annihilation",
+    "closed": false,
+    "status": "open",
+    "reason": "The resolved relative-threshold left endpoint direction must annihilate the actual source endpoint vectors.  This is stronger than solving the finite endpoint equation with the full sampled matrix."
+  },
+  "fullEndpointRowRankVacuityStatus": {
+    "label": "full endpoint row rank vacuity",
+    "closed": false,
+    "status": "open",
+    "reason": "If the rank-ball certificate is rigorous and sigma_min(M)>0, then ker(M^*)={0}; there is no Fredholm obstruction to annihilate."
+  },
+  "volterraSturmPrimalObstructionAnnihilationStatus": {
+    "label": "Volterra/Sturm primal obstruction annihilation",
+    "closed": false,
+    "status": "open",
+    "reason": "Still need the non-circular continuum theorem: every primal homogeneous endpoint obstruction f_w annihilates the actual active source rows d_u."
+  },
+  "continuumEndpointObstructionCompatibilityStatus": {
+    "label": "continuum endpoint obstruction compatibility",
+    "closed": false,
+    "status": "open",
+    "reason": "Closed either by rigorous full active row rank of M, which makes ker(M^*) trivial, or by combining the Green pairing formula with the Volterra/Sturm primal obstruction annihilation theorem."
+  },
+  "continuumEndpointObstructionCompatibilityClosed": false,
+  "finiteEvidence": {
+    "activeDim": 2,
+    "endpointMapRank": 1,
+    "endpointMapGramEigenvalues": [
+      7704285951341.06,
+      5.4067419733088444e+51
+    ],
+    "maxEndpointResidualNorm": 4.904278671755176e-27,
+    "maxSelectedZNorm": 2.791429837949141,
+    "leftObstructionVector": [
+      0.9921554436481675,
+      -0.12501030213269598
+    ],
+    "leftObstructionResidualNorm": 2775659.552492175,
+    "maxLeftObstructionPairing": 7748058.894815217,
+    "maxLeftObstructionRelativePairing": 0.26995789773413514,
+    "actualEndpointRhsInRange": {
+      "label": "actual endpoint RHS in Range(M)",
+      "closed": true,
+      "status": "closed",
+      "reason": "For the actual source rows, the endpoint vectors b(d) are in the finite endpoint-map range."
+    },
+    "activeEndpointKilled": {
+      "label": "active endpoint concomitant killed",
+      "closed": true,
+      "status": "closed",
+      "reason": "Minimum-norm z solves Mz=-b(d) on the active two-dimensional source space."
+    },
+    "finiteLeftObstructionAnnihilatesActualRows": {
+      "label": "finite left obstruction annihilates actual rows",
+      "closed": false,
+      "status": "open",
+      "reason": "The resolved left endpoint obstruction annihilates the actual source endpoint vectors."
+    },
+    "interpretation": "Finite sampled-flow endpoint evidence.  A tiny full solve residual only proves the sampled endpoint equation can be solved; it does not by itself prove annihilation of continuum Fredholm obstructions."
+  },
+  "rankBallEvidence": {
+    "conditionalBallFullRowRankStatus": {
+      "label": "conditional ball full active row rank",
+      "closed": true,
+      "status": "closed",
+      "reason": "Weyl perturbation gives sigma_min(M_exact)>=sigma_min(M0)-delta for the supplied endpoint-map ball."
+    },
+    "rigorousEndpointMapFullRowRankStatus": {
+      "label": "rigorous endpoint map full active row rank",
+      "closed": false,
+      "status": "open",
+      "reason": "Closed only if the supplied endpoint-map ball is a rigorous interval enclosure of the exact fundamental-matrix endpoint map."
+    },
+    "kernelMStarZeroStatus": {
+      "label": "ker M^* is zero",
+      "closed": false,
+      "status": "open",
+      "reason": "If the rigorous full-row-rank status is closed, then the left Fredholm obstruction space is trivial and endpoint compatibility is vacuous."
+    },
+    "centerSigmaMin": 2775659.552492175,
+    "centerSigmaMax": 7.353055129202313e+25,
+    "lowerSigmaMin": 2768306.4973629727,
+    "pinvNormUpperBound": 3.612316775445847e-07,
+    "maxAllowedFrobeniusRadiusForRank": 2775659.552492175,
+    "maxAllowedRelativeFrobeniusRadiusForRank": 3.7748384905598945e-20,
+    "remainingAnalyticGap": "Produce a rigorous interval enclosure for the exact endpoint fundamental-matrix map with Frobenius radius below the displayed maxAllowedFrobeniusRadiusForRank."
+  },
+  "centerStabilityEvidence": {
+    "sampledCenterStabilityStatus": {
+      "label": "sampled finite-difference endpoint center stability",
+      "closed": false,
+      "status": "open",
+      "reason": "Stable only if mesh-refinement endpoint maps remain within a small constant factor.  They currently vary by many orders of magnitude."
+    },
+    "exactSegmentCenterStabilityStatus": {
+      "label": "exact-segment derivative endpoint center stability",
+      "closed": false,
+      "status": "open",
+      "reason": "Stable only if exact-derivative segment refinements remain within a small constant factor.  Current piecewise-constant propagation still varies by many orders of magnitude."
+    },
+    "rankBallCenterReadyStatus": {
+      "label": "rank-ball center ready",
+      "closed": false,
+      "status": "open",
+      "reason": "A rank-ball proof needs a stable center before interval radii can be meaningful.  Current centers are not stable enough."
+    },
+    "sampledFrobeniusSpread": 1.2137548705211504e+25,
+    "exactSegmentFrobeniusSpread": 2031772632.6686492,
+    "conclusion": "The desired endpoint-map rank proof cannot be closed from the current sampled-flow center.  The next necessary artifact is a validated ODE construction for the adjoint companion system, preferably using analytic/confluent trace derivatives and a Taylor or Chebyshev model for A(s) rather than piecewise-constant mesh propagation.",
+    "nextTarget": "Build a stable validated endpoint-flow solver that encloses the exact fundamental matrix Phi(a,s0) and endpoint rows with Frobenius endpoint-map radius below the rank margin."
+  },
+  "proof": [
+    "For the exact fundamental matrix endpoint map, the endpoint equation is Mz=-b(d).  The finite-dimensional Fredholm alternative gives compatibility iff ker(M^*) annihilates b(d).",
+    "Let w in ker(M^*) and let f_w be the corresponding primal endpoint test.  The condition w^*M=0 says all homogeneous adjoint endpoint concomitants vanish against f_w.",
+    "For the jump Green coefficient K_d, integrate dB_P[K_d,f_w]=K_d P f_w-f_w P^*K_d across I.  The jump law turns P^*K_d into the source row d.",
+    "Thus w^*b(d)=int_I K_d(a)P f_w(a)da-d(f_w).  If f_w is a primal homogeneous endpoint obstruction, this reduces to w^*b(d)=-d(f_w).",
+    "The remaining continuum theorem is therefore d_u(f_w)=0 for the actual active source family and every primal homogeneous endpoint obstruction f_w.",
+    "Alternatively, a rigorous rank-ball proof that sigma_min(M)>0 makes ker(M^*) trivial and closes endpoint compatibility without an obstruction-annihilation theorem."
+  ],
+  "remainingAnalyticGap": "Build a stable validated endpoint-flow solver that encloses the exact fundamental matrix Phi(a,s0) and endpoint rows with Frobenius endpoint-map radius below the rank margin."
+}

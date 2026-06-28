@@ -1,0 +1,37 @@
+{
+  "theoremName": "augmented trace quotient liminf theorem",
+  "proofClass": "analytic proof",
+  "principleJson": "abstract_trace_quotient_liminf_principle_theorem.json",
+  "representativeCompactnessJson": "augmented_trace_liminf_representative_compactness_theorem.json",
+  "legacyLiminfJson": null,
+  "legacyTraceConvergenceJson": null,
+  "statement": "If x_N=R_aug,N f_N converges to x and the finite quotient norms are bounded, then x belongs to X_aug and ||x||_{X_aug} <= liminf ||x_N||_{X_aug,N}.",
+  "statuses": {
+    "abstractQuotientLiminfPrincipleInputStatus": {
+      "label": "abstract quotient liminf principle input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The abstract Hilbert quotient lemma converts weak representative compactness, trace identification, and graph lower semicontinuity into the quotient lower bound."
+    },
+    "representativeCompactnessInputStatus": {
+      "label": "representative compactness input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The augmented representative theorem supplies bounded near-minimizer compactness and trace limit identification."
+    },
+    "traceQuotientLiminfStatus": {
+      "label": "trace quotient liminf",
+      "closed": true,
+      "status": "closed",
+      "reason": "The representative theorem verifies the hypotheses of the abstract quotient-liminf principle in the augmented trace setting."
+    }
+  },
+  "traceQuotientLiminfClosed": true,
+  "finiteQuotientLowerBoundClosed": true,
+  "proof": [
+    "Import the abstract quotient-norm liminf principle.",
+    "Import augmented representative compactness and trace identification.",
+    "Apply the abstract principle to the verified augmented hypotheses."
+  ],
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,312 @@
+{
+  "omega": 0.49,
+  "L": 2.0,
+  "basis": 20,
+  "constraints": 12,
+  "rank": 12,
+  "nullity": 8,
+  "positiveModes": 8,
+  "cutoff": 6,
+  "sourceMin": 0.08,
+  "sourceMax": 0.52,
+  "sourceGrid": 17,
+  "mesh": 0.0275,
+  "meshRadius": 0.01375,
+  "maxSampleHighAbsorb": 934694.7045980463,
+  "minSampleFullAbsorb": 589331737216.9569,
+  "maxSampleHighFullFrac": 1.1943753378212075e-06,
+  "maxAnalyticDerivativeHighAbsorb": 131172.6997163925,
+  "maxAnalyticDerivativeHighFullFrac": 1.2016772286010286e-06,
+  "worstDerivativeU": 0.52,
+  "analyticCoverHighAbsorb": 1869439.0088731728,
+  "analyticCoverHighFullFracVsMinFull": 3.1721336062798133e-06,
+  "finiteDifferenceChecks": [
+    {
+      "u": 0.08,
+      "analyticNorm": 242.5499019099812,
+      "checks": [
+        {
+          "eps": 0.001,
+          "absoluteDefect": 8.327699474734754e-05,
+          "relativeDefect": 3.433396348197847e-07
+        },
+        {
+          "eps": 0.0005,
+          "absoluteDefect": 2.081926082675016e-05,
+          "relativeDefect": 8.583495875614463e-08
+        },
+        {
+          "eps": 0.0001,
+          "absoluteDefect": 8.327705884609778e-07,
+          "relativeDefect": 3.433398990901461e-09
+        }
+      ]
+    },
+    {
+      "u": 0.3,
+      "analyticNorm": 888.2750048836405,
+      "checks": [
+        {
+          "eps": 0.001,
+          "absoluteDefect": 0.00033332517911595686,
+          "relativeDefect": 3.7524998146223955e-07
+        },
+        {
+          "eps": 0.0005,
+          "absoluteDefect": 8.333131874465032e-05,
+          "relativeDefect": 9.381252234556155e-08
+        },
+        {
+          "eps": 0.0001,
+          "absoluteDefect": 3.3332530565465356e-06,
+          "relativeDefect": 3.752501239166552e-09
+        }
+      ]
+    },
+    {
+      "u": 0.52,
+      "analyticNorm": 1458.1989456882309,
+      "checks": [
+        {
+          "eps": 0.001,
+          "absoluteDefect": 0.0004897924513621021,
+          "relativeDefect": 3.358886335848591e-07
+        },
+        {
+          "eps": 0.0005,
+          "absoluteDefect": 0.000122448136068793,
+          "relativeDefect": 8.397217432563754e-08
+        },
+        {
+          "eps": 0.0001,
+          "absoluteDefect": 4.897925740073581e-06,
+          "relativeDefect": 3.3588871769221387e-09
+        }
+      ]
+    }
+  ],
+  "sampled": [
+    {
+      "u": 0.08,
+      "pStarH": -107.41740043918624,
+      "dPStarH": 21.951179400950767,
+      "highAbsorb": 934694.7045980463,
+      "fullAbsorb": 782580379048.2869,
+      "highFullFrac": 1.1943753378212075e-06,
+      "highDerivativeAbsorb": 38630.085866932364,
+      "fullDerivativeAbsorb": 32146806935.756638,
+      "highDerivativeFullFrac": 1.2016772286010286e-06,
+      "highDerivativeSize": 664.3669928536626,
+      "fullDerivativeSize": 1605.1668817146556
+    },
+    {
+      "u": 0.1075,
+      "pStarH": -106.79095890167775,
+      "dPStarH": 23.59893575896885,
+      "highAbsorb": 923936.3776782453,
+      "fullAbsorb": 773620457370.4128,
+      "highFullFrac": 1.1943018942631975e-06,
+      "highDerivativeAbsorb": 44647.45629312066,
+      "fullDerivativeAbsorb": 37157677419.84018,
+      "highDerivativeFullFrac": 1.2015674658201683e-06,
+      "highDerivativeSize": 767.8381920285161,
+      "fullDerivativeSize": 1855.2053241310193
+    },
+    {
+      "u": 0.135,
+      "pStarH": -106.11998375896385,
+      "dPStarH": 25.18945454247282,
+      "highAbsorb": 912476.2851755983,
+      "fullAbsorb": 764073033215.864,
+      "highFullFrac": 1.1942265274500374e-06,
+      "highDerivativeAbsorb": 50871.8821056023,
+      "fullDerivativeAbsorb": 42342579432.53451,
+      "highDerivativeFullFrac": 1.2014355947931265e-06,
+      "highDerivativeSize": 874.8677874676362,
+      "fullDerivativeSize": 2113.865875857225
+    },
+    {
+      "u": 0.1625,
+      "pStarH": -105.40609133907924,
+      "dPStarH": 26.719719435591138,
+      "highAbsorb": 900356.1072414529,
+      "fullAbsorb": 753972811867.219,
+      "highFullFrac": 1.1941493022960796e-06,
+      "highDerivativeAbsorb": 57246.66586843454,
+      "fullDerivativeAbsorb": 47654306519.0149,
+      "highDerivativeFullFrac": 1.2012905034215977e-06,
+      "highDerivativeSize": 984.4808494801656,
+      "fullDerivativeSize": 2378.792693828081
+    },
+    {
+      "u": 0.19,
+      "pStarH": -104.6509759828204,
+      "dPStarH": 28.187073502008676,
+      "highAbsorb": 887619.0252534894,
+      "fullAbsorb": 743355760298.5779,
+      "highFullFrac": 1.194070285938144e-06,
+      "highDerivativeAbsorb": 63715.43322609661,
+      "fullDerivativeAbsorb": 53045904722.96361,
+      "highDerivativeFullFrac": 1.2011376478326733e-06,
+      "highDerivativeSize": 1095.7080237530483,
+      "fullDerivativeSize": 2647.643183303856
+    },
+    {
+      "u": 0.2175,
+      "pStarH": -103.85640013983931,
+      "dPStarH": 29.589220265750402,
+      "highAbsorb": 874309.3976493744,
+      "fullAbsorb": 732258837026.1018,
+      "highFullFrac": 1.1939895477399464e-06,
+      "highDerivativeAbsorb": 70222.84138024728,
+      "fullDerivativeAbsorb": 58471263060.072426,
+      "highDerivativeFullFrac": 1.2009804082409077e-06,
+      "highDerivativeSize": 1207.597713019131,
+      "fullDerivativeSize": 2918.1174423144544
+    },
+    {
+      "u": 0.245,
+      "pStarH": -103.02418447121939,
+      "dPStarH": 30.924222175913027,
+      "highAbsorb": 860472.4407381975,
+      "fullAbsorb": 720719726024.6212,
+      "highFullFrac": 1.1939071592842765e-06,
+      "highDerivativeAbsorb": 76715.2319544933,
+      "fullDerivativeAbsorb": 63885657890.54084,
+      "highDerivativeFullFrac": 1.2008208804225533e-06,
+      "highDerivativeSize": 1319.2273022196189,
+      "fullDerivativeSize": 3187.9853973506033
+    },
+    {
+      "u": 0.2725,
+      "pStarH": -102.15619802896134,
+      "dPStarH": 32.190496569535426,
+      "highAbsorb": 846153.9176125972,
+      "fullAbsorb": 708776577315.4221,
+      "highFullFrac": 1.1938231943520322e-06,
+      "highDerivativeAbsorb": 83141.22020226513,
+      "fullDerivativeAbsorb": 69246244471.36334,
+      "highDerivativeFullFrac": 1.2006603511421913e-06,
+      "highDerivativeSize": 1429.7132888544334,
+      "fullDerivativeSize": 3455.11129580553
+    },
+    {
+      "u": 0.3,
+      "pStarH": -101.25434857934155,
+      "dPStarH": 33.38680926995107,
+      "highAbsorb": 831399.8380072507,
+      "fullAbsorb": 696467756600.2439,
+      "highFullFrac": 1.1937377288873614e-06,
+      "highDerivativeAbsorb": 89452.2143422963,
+      "fullDerivativeAbsorb": 74512490489.94716,
+      "highDerivativeFullFrac": 1.2004995907949787e-06,
+      "highDerivativeSize": 1538.2202116738054,
+      "fullDerivativeSize": 3717.475296669036
+    },
+    {
+      "u": 0.3275,
+      "pStarH": -100.32057313304135,
+      "dPStarH": 34.512265978394154,
+      "highAbsorb": 816256.171643535,
+      "fullAbsorb": 683831606062.4879,
+      "highFullFrac": 1.1936508409483289e-06,
+      "highDerivativeAbsorb": 95602.86065093928,
+      "fullDerivativeAbsorb": 79646547914.70793,
+      "highDerivativeFullFrac": 1.2003390373342818e-06,
+      "highDerivativeSize": 1643.968302587127,
+      "fullDerivativeSize": 3973.191977614376
+    },
+    {
+      "u": 0.355,
+      "pStarH": -99.35682874035949,
+      "dPStarH": 35.5663016341222,
+      "highAbsorb": 800768.5772732252,
+      "fullAbsorb": 670906218184.9398,
+      "highFullFrac": 1.1935626106426814e-06,
+      "highDerivativeAbsorb": 101551.41175118386,
+      "fullDerivativeAbsorb": 84613561004.6232,
+      "highDerivativeFullFrac": 1.2001789139407002e-06,
+      "highDerivativeSize": 1746.2398178005128,
+      "fullDerivativeSize": 4220.525651844073
+    },
+    {
+      "u": 0.3825,
+      "pStarH": -98.36508360479516,
+      "dPStarH": 36.54866793272174,
+      "highAbsorb": 784982.1492935471,
+      "fullAbsorb": 657729224150.1637,
+      "highFullFrac": 1.1934731200484575e-06,
+      "highDerivativeAbsorb": 107260.01727007367,
+      "fullDerivativeAbsorb": 89381909761.07217,
+      "highDerivativeFullFrac": 1.2000193054365438e-06,
+      "highDerivativeSize": 1844.384033974103,
+      "fullDerivativeSize": 4457.902460017253
+    },
+    {
+      "u": 0.41,
+      "pStarH": -97.34730856291115,
+      "dPStarH": 37.459419203492665,
+      "highAbsorb": 768941.183459027,
+      "fullAbsorb": 644337598101.1896,
+      "highFullFrac": 1.1933824531193493e-06,
+      "highDerivativeAbsorb": 112694.93765039758,
+      "fullDerivativeAbsorb": 93923389449.29352,
+      "highDerivativeFullFrac": 1.1998602085291891e-06,
+      "highDerivativeSize": 1937.8209229459558,
+      "fullDerivativeSize": 4683.9192696541
+    },
+    {
+      "u": 0.4375,
+      "pStarH": -96.30546897274455,
+      "dPStarH": 38.29889685483527,
+      "highAbsorb": 752688.9628692104,
+      "fullAbsorb": 630767478251.8767,
+      "highFullFrac": 1.1932906955749044e-06,
+      "highDerivativeAbsorb": 117826.68336685661,
+      "fullDerivativeAbsorb": 98213328036.5985,
+      "highDerivativeFullFrac": 1.199701565178092e-06,
+      "highDerivativeSize": 2026.0435437476547,
+      "fullDerivativeSize": 4897.349475264295
+    },
+    {
+      "u": 0.465,
+      "pStarH": -95.24151704721294,
+      "dPStarH": 39.06771260142718,
+      "highAbsorb": 736267.565071797,
+      "fullAbsorb": 617054005553.6813,
+      "highFullFrac": 1.1931979347758155e-06,
+      "highDerivativeAbsorb": 122630.08308630624,
+      "fullDerivativeAbsorb": 102230644469.16284,
+      "highDerivativeFullFrac": 1.1995432849227196e-06,
+      "highDerivativeSize": 2108.619212806523,
+      "fullDerivativeSize": 5097.1458460336335
+    },
+    {
+      "u": 0.4925,
+      "pStarH": -94.15738466305349,
+      "dPStarH": 39.766730688763985,
+      "highAbsorb": 719717.6907937246,
+      "fullAbsorb": 603231180353.2018,
+      "highFullFrac": 1.193104259584722e-06,
+      "highDerivativeAbsorb": 127084.2854083906,
+      "fullDerivativeAbsorb": 105957851623.94072,
+      "highDerivativeFullFrac": 1.199385259899668e-06,
+      "highDerivativeSize": 2185.1895320853628,
+      "fullDerivativeSize": 5282.440613488259
+    },
+    {
+      "u": 0.52,
+      "pStarH": -93.05497666991295,
+      "dPStarH": 40.39704932949021,
+      "highAbsorb": 703078.5145031781,
+      "fullAbsorb": 589331737216.9569,
+      "highFullFrac": 1.1930097602131113e-06,
+      "highDerivativeAbsorb": 131172.6997163925,
+      "fullDerivativeAbsorb": 109381008518.1612,
+      "highDerivativeFullFrac": 1.1992273749662228e-06,
+      "highDerivativeSize": 2255.469370271968,
+      "fullDerivativeSize": 5452.54302870079
+    }
+  ],
+  "interpretation": "Analytic u-derivative of the Green/source row. This upgrades the finite divided-difference Lipschitz scan to the exact derivative needed for a continuum source-window Hardy/Green theorem."
+}

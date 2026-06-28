@@ -1,0 +1,42 @@
+{
+  "theoremName": "augmented Xi-trace repair positivity theorem legacy wrapper",
+  "proofClass": "analytic proof wrapper",
+  "repairPositiveConsequenceJson": "xi_augmented_repair_positive_consequence_theorem.json",
+  "legacyInputs": {
+    "transportJson": null
+  },
+  "transportedTraceSpace": {
+    "name": "X_aug",
+    "definition": "closure Ran(R_aug) with quotient norm inf{||f||_V:R_aug f=x}",
+    "formDomain": "completed Volterra/Mellin graph-form domain V"
+  },
+  "statuses": {
+    "DaugNonnegativeConsequenceStatus": {
+      "label": "D_aug nonnegative consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the narrow consequence theorem: D_aug is bounded and nonnegative on the completed transported augmented trace space."
+    },
+    "closedAugmentedPositiveFormStatus": {
+      "label": "closed augmented positive form",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the narrow consequence theorem: the repaired augmented form is closed on the completed trace-fiber domain."
+    },
+    "legacyRepairPositivityWrapperStatus": {
+      "label": "legacy repair positivity wrapper",
+      "closed": true,
+      "status": "closed",
+      "reason": "This file is a backward-compatible alias for the narrow positive repair consequence and no longer exposes the internal transport proof as a direct upstream dependency."
+    }
+  },
+  "repairPositivityClosed": true,
+  "continuumAugmentedRepairClosed": true,
+  "DaugNonnegativeOnTransportedTraceSpaceClosed": true,
+  "closedAugmentedPositiveFormClosed": true,
+  "proof": [
+    "Import the narrow positive-repair consequence theorem.",
+    "Re-export legacy compatibility flags expected by older bridge scripts."
+  ],
+  "remainingAnalyticGap": null
+}

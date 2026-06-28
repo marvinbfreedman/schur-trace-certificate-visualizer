@@ -1,0 +1,60 @@
+{
+  "theoremName": "uniform omega Weyl/KLM bridge",
+  "omegaRange": "|omega| < 1/2",
+  "greenClosureJson": "continuum_green_lift_closure_theorem.json",
+  "primitiveEndpointJson": "primitive_endpoint_compatibility_theorem.json",
+  "liftJson": "quotient_to_original_weyl_lift_theorem.json",
+  "externalAuditJson": "weyl_volterra_external_equivalence_audit.json",
+  "statuses": {
+    "uniformOmegaBranchTransportStatus": {
+      "label": "uniform omega branch transport",
+      "closed": true,
+      "status": "closed",
+      "reason": "For |omega|<1/2, the branch factors exp(0.5 sigma omega(s+u)) are positive and locally uniformly bounded by exp(0.25(s+u)) on compact omega-subintervals.  Theta/Phi super-exponential decay controls the Volterra integrals, so the branch feature maps form the same closed graph domain for every |omega|<1/2."
+    },
+    "omegaIndependentHardyMultiplierStatus": {
+      "label": "omega-independent Hardy multiplier contraction",
+      "closed": true,
+      "status": "closed",
+      "reason": "The multiplier K(s,u)=(1-s-u)/(1+s+u) is independent of omega and satisfies |K|<=1 on the Volterra quadrant.  The closed Green-lift theorem therefore gives M_omega<=P_omega for every |omega|<1/2, with no parameter cover needed."
+    },
+    "uniformPrimitiveEndpointCompatibilityStatus": {
+      "label": "uniform primitive endpoint compatibility",
+      "closed": true,
+      "status": "closed",
+      "reason": "Primitive tests need not lie in ker R_global, but the primitive boundary repair is zero and the quotient repair D_q=(M-P)_+ vanishes.  Since M_omega<=P_omega uniformly, this compatibility holds for every |omega|<1/2."
+    },
+    "originalWeylPositivityStatus": {
+      "label": "original Weyl kernel positivity for |omega|<1/2",
+      "closed": true,
+      "status": "closed",
+      "reason": "The quotient-to-original lift is closed, the primitive endpoint correction is annihilated, and the plus/minus Volterra trace form is positive by the omega-independent Green-lift contraction. Thus the original coordinate Weyl kernel K_omega is positive semidefinite for every |omega|<1/2."
+    },
+    "klmPositiveTypeStatus": {
+      "label": "KLM quantum positive-type condition for Q_omega",
+      "closed": true,
+      "status": "closed",
+      "reason": "In the hbar=1 convention used throughout the notes, positivity of the Weyl quantization of sigma_omega is equivalent to the KLM quantum positive-type condition for Q_omega.  Therefore Q_omega is KLM positive type for every |omega|<1/2."
+    },
+    "deBrangesRhBridgeStatus": {
+      "label": "de Branges/RH bridge",
+      "closed": false,
+      "status": "open",
+      "reason": "This theorem packages Weyl positivity as KLM positive type.  It does not prove that this KLM/Weyl positivity is equivalent to, or implies, the desired de Branges/RH-side statement.",
+      "blocker": "State and prove a separate bridge theorem from the KLM/Weyl positive-type family to the intended de Branges or RH-side positivity formulation."
+    }
+  },
+  "proof": [
+    "The branch factors are positive for real omega and uniformly integrable for |omega|<1/2 by theta/Phi decay.",
+    "The Hardy multiplier kappa=(1-s-u)/(1+s+u) is independent of omega and has absolute value at most one.",
+    "The completed Green-lift theorem gives G_- = C K E G_+ and ||C K E||<=1, hence M_omega<=P_omega.",
+    "Primitive endpoint compatibility gives D_bdy=0 and D_q=(M_omega-P_omega)_+=0.",
+    "The quotient-to-original Weyl lift transports this positivity back to K_omega.",
+    "The hbar=1 KLM/Weyl equivalence packages K_omega positivity as KLM positive type of Q_omega."
+  ],
+  "uniformOmegaCoverageClosed": true,
+  "originalWeylKernelPositivityClosed": true,
+  "originalKlmConditionClosed": true,
+  "rhFacingChainClosed": false,
+  "nextProofTarget": "State and prove a separate bridge theorem from the KLM/Weyl positive-type family to the intended de Branges or RH-side positivity formulation."
+}

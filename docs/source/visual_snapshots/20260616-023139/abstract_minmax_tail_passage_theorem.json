@@ -1,0 +1,39 @@
+{
+  "theoremName": "abstract min-max tail passage theorem",
+  "proofClass": "abstract functional analytic lemma",
+  "spectralJson": "abstract_compact_source_spectral_projection_theorem.json",
+  "statement": "If compact positive source operators and their active Riesz projections converge in norm, then finite inactive-tail min-max bounds pass to the continuum closed subspace.",
+  "hypotheses": [
+    "Compressed source operators S_N converge to S in norm.",
+    "The top active Riesz projections P_{active,N} converge to P_active in norm.",
+    "The finite inactive-tail inequality holds with a uniform constant epsilon."
+  ],
+  "statuses": {
+    "spectralInputStatus": {
+      "label": "Riesz projection stability input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The compact source spectral theorem supplies active projection convergence."
+    },
+    "inactiveTailProjectionConvergenceStatus": {
+      "label": "inactive tail projection convergence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Norm convergence of active projections gives norm convergence of inactive projections I-P_active."
+    },
+    "courantFischerTailPassageStatus": {
+      "label": "Courant-Fischer/min-max tail passage",
+      "closed": true,
+      "status": "closed",
+      "reason": "The source quadratic forms converge uniformly on the unit A-sphere, so the uniform finite inactive-tail bound passes to the limit by recovery sequences and lower limits."
+    }
+  },
+  "abstractMinmaxTailPassageClosed": true,
+  "spectralMinmaxPassageClosed": true,
+  "proof": [
+    "Use norm convergence of source operators to get uniform convergence of source quadratic forms on the A-unit sphere.",
+    "Use norm convergence of active Riesz projections to identify the finite inactive spaces with the continuum inactive space.",
+    "Apply Courant-Fischer variational continuity, or equivalently pass the quadratic inequality along recovery sequences and weak lower limits."
+  ],
+  "remainingAnalyticGap": null
+}

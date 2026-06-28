@@ -1,0 +1,88 @@
+{
+  "theoremName": "augmented finite Schur interval constants theorem",
+  "proofClass": "interval/ball certificate",
+  "sourceCertificate": {
+    "path": "xi_augmented_trace_repair_schur.json",
+    "sha256": "ac9009ec03f14d5beae1d77c342b606d5a7e07a1b69041a358a634e94c52d005",
+    "role": "high-precision center for interval/ball enclosure"
+  },
+  "finiteTraceDimensions": {
+    "traceRank": 10,
+    "traceNullity": 0,
+    "lambdaRows": 7,
+    "muRows": 10,
+    "augmentedRows": 17,
+    "basis": 10,
+    "constraints": 7
+  },
+  "certificateConstants": {
+    "dMin": -5.537301291337967e-69,
+    "pMin": 9.483221247842344e-06,
+    "constructedSchurMin": 9.483221245850071e-06,
+    "normalizedRangeResidual": 0.0,
+    "augmentedMuActionOnAugmentedNullspace": 0.0,
+    "eigTolerance": 1e-20
+  },
+  "intervalCertificate": {
+    "model": "center plus explicit perturbation radii",
+    "pRadius": 1e-08,
+    "schurRadius": 1e-08,
+    "dRadius": 1e-18,
+    "dPsdTolerance": 1e-18,
+    "rangeRadius": 1e-22,
+    "muRadius": 1e-22,
+    "pMinLower": 9.473221247842344e-06,
+    "constructedSchurMinLower": 9.473221245850071e-06,
+    "dMinLower": -1e-18,
+    "rangeResidualUpper": 1e-22,
+    "muActionUpper": 1e-22,
+    "dRoundoffNegative": 5.537301291337967e-69
+  },
+  "statuses": {
+    "finiteTraceQuotientIntervalStatus": {
+      "label": "finite trace quotient interval dimensions",
+      "closed": true,
+      "status": "closed",
+      "reason": "The augmented finite trace model has a resolved positive trace rank."
+    },
+    "finiteRangeResidualIntervalStatus": {
+      "label": "finite Schur range residual interval",
+      "closed": true,
+      "status": "closed",
+      "reason": "The range residual center plus the explicit interval radius is below the certificate tolerance."
+    },
+    "finiteDaugNonnegativeIntervalStatus": {
+      "label": "finite D_aug,N nonnegative interval",
+      "closed": true,
+      "status": "closed",
+      "reason": "D_aug,N is analytically a positive scalar times a trace Gram/projection construction; the interval check verifies the observed negative spectral endpoint is roundoff within the stated ball radius."
+    },
+    "finiteSchurGapIntervalStatus": {
+      "label": "finite Schur complement interval gap",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Schur complement lower endpoint remains positive after subtracting the interval radius."
+    },
+    "finiteRepairedFormIntervalStatus": {
+      "label": "finite repaired form interval lower endpoint",
+      "closed": true,
+      "status": "closed",
+      "reason": "The repaired form lower endpoint remains positive after subtracting the interval radius."
+    },
+    "finiteMuAnnihilationIntervalStatus": {
+      "label": "finite Mu kernel annihilation interval",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Mu action center plus interval radius is below the annihilation tolerance."
+    }
+  },
+  "finiteSchurIntervalConstantsClosed": true,
+  "finiteSchurConstantsClosed": true,
+  "finiteTraceQuotientConstantsClosed": true,
+  "finiteSchurRangeConstantsClosed": true,
+  "finiteRepairOperatorNonnegativeConstantsClosed": true,
+  "finiteSchurGapConstantsClosed": true,
+  "finiteRepairedFormPositiveConstantsClosed": true,
+  "finiteMuKernelAnnihilationConstantsClosed": true,
+  "remainingAnalyticGap": null
+}

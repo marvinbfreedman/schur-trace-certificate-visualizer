@@ -1,0 +1,38 @@
+{
+  "theoremName": "high-block source operator compactness consequence theorem",
+  "proofClass": "symbolic identity",
+  "source": "high-block source operator compactness theorem",
+  "statuses": {
+    "compactSourceOperatorInputStatus": {
+      "label": "compact source operator input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full source compactness theorem closes compactness of S=E^*E."
+    },
+    "highBlockSourceCompactnessInputStatus": {
+      "label": "high-block source compactness input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full theorem records compactness on the completed closed-trace high block."
+    },
+    "sourceCompactnessConsequenceStatus": {
+      "label": "source compactness consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Only the terminal compact-source flag is exported upstream."
+    }
+  },
+  "highBlockSourceOperatorCompactnessConsequenceClosed": true,
+  "highBlockSourceOperatorCompactnessClosed": true,
+  "compactSourceOperatorClosed": true,
+  "proof": [
+    "Import the full high-block source operator compactness theorem.",
+    "Export only compactness of the high-block source operator used by compact compression."
+  ],
+  "notExportedHere": [
+    "closed-trace Hardy/Green estimate",
+    "uniform Riesz representer construction",
+    "finite-rank source approximation"
+  ],
+  "remainingAnalyticGap": null
+}

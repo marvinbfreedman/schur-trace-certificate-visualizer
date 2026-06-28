@@ -1,0 +1,35 @@
+{
+  "theoremName": "augmented finite repaired form sequence theorem",
+  "proofClass": "analytic proof",
+  "finiteConsequenceJson": "xi_augmented_finite_schur_repair_consequence_theorem.json",
+  "tailPositiveJson": "volterra_tail_positive_form_theorem.json",
+  "statement": "The augmented Schur repair gives a directed sequence of nonnegative repaired quadratic forms on the finite trace-image core spaces, with the positive Volterra tail included.",
+  "statuses": {
+    "finiteSchurConsequenceInputStatus": {
+      "label": "finite Schur repair consequence input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite consequence theorem supplies D_aug,N>=0 and repaired-form nonnegativity."
+    },
+    "positiveTailInputStatus": {
+      "label": "positive Volterra tail input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The tail theorem supplies the nonnegative tail part of the repaired form."
+    },
+    "finiteRepairedFormSequenceStatus": {
+      "label": "finite repaired-form sequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Combining the finite repair consequence with the positive tail gives nonnegative repaired forms on every finite core space."
+    }
+  },
+  "finiteRepairedFormSequenceClosed": true,
+  "finiteRepairedFormsNonnegativeClosed": true,
+  "proof": [
+    "Import the finite augmented Schur repair consequence.",
+    "Add the separately nonnegative Volterra tail form.",
+    "The sum of nonnegative finite forms remains nonnegative on each finite core space."
+  ],
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,29 @@
+{
+  "theoremName": "trace Lagrange adjoint identity consequence theorem",
+  "proofClass": "symbolic identity",
+  "identityJson": "trace_lagrange_adjoint_identity_theorem.json",
+  "statuses": {
+    "lagrangeIdentityStatus": {
+      "label": "exact moving-trace Lagrange identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The concomitant identity D_s B_P[h,f]=hPf-fP^*h is an algebraic product-rule telescoping identity for arbitrary smooth trace coefficients a_k(s)."
+    }
+  },
+  "lagrangeIdentityStatus": {
+    "label": "exact moving-trace Lagrange identity",
+    "closed": true,
+    "status": "closed",
+    "reason": "The symbolic trace Lagrange adjoint identity theorem proves D_s B_P[h,f]=hPf-fP^*h exactly."
+  },
+  "theoremClosed": true,
+  "lagrangeAdjointIdentityClosed": true,
+  "maxIdentityDefect": 0.0,
+  "maxIdentityRelativeDefect": 0.0,
+  "proof": [
+    "Import the symbolic trace Lagrange adjoint identity theorem.",
+    "Expose the legacy zero-defect scalar consumed by older comparison ledgers.",
+    "No quadrature or sampled trace rows enter this consequence."
+  ],
+  "remainingAnalyticGap": null
+}

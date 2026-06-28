@@ -1,0 +1,33 @@
+{
+  "theoremName": "uniform omega Weyl/KLM bridge",
+  "omegaRange": "|omega| < 1/2",
+  "weylPositiveJson": "original_weyl_positive_operator_family_consequence_theorem.json",
+  "legacyOriginalWeylJson": null,
+  "klmWeylJson": "klm_weyl_hbar1_equivalence_consequence_theorem.json",
+  "statuses": {
+    "originalWeylPositivityStatus": {
+      "label": "positive Weyl operator family for |omega|<1/2",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the narrow original Weyl positive-operator family theorem: Op^W(sigma_omega) is positive semidefinite for every |omega|<1/2."
+    },
+    "klmPositiveTypeStatus": {
+      "label": "KLM quantum positive-type condition for Q_omega",
+      "closed": true,
+      "status": "closed",
+      "reason": "In the hbar=1 convention, the standalone KLM/Weyl equivalence theorem identifies original Weyl positivity with KLM quantum positive type of Q_omega."
+    }
+  },
+  "proof": [
+    "Import the positive Weyl operator family for every |omega|<1/2.",
+    "Import the hbar=1 KLM/Weyl equivalence theorem.",
+    "Package Op^W(sigma_omega)>=0 as KLM quantum positive type of Q_omega."
+  ],
+  "uniformOmegaCoverageClosed": true,
+  "originalWeylKernelPositivityClosed": true,
+  "originalWeylOperatorPositiveClosed": true,
+  "originalKlmConditionClosed": true,
+  "notClaimedHere": "This theorem stops at KLM quantum positive type.  The RH-facing positive-kernel and endpoint consequences are handled by the top bridge ledger.",
+  "remainingAnalyticGap": null,
+  "nextProofTarget": "Use the top bridge ledger for the downstream RH-facing layer."
+}

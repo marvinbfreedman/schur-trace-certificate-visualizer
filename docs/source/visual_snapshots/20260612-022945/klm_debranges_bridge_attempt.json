@@ -1,0 +1,852 @@
+{
+  "theoremName": "direct and closed-cone KLM-to-de Branges bridge attempt",
+  "hardyJson": "klm_debranges_canonical_hardy_image.json",
+  "pullbackJson": "klm_debranges_pullback_probe.json",
+  "greenJson": "continuum_green_lift_closure_theorem.json",
+  "branchJson": "klm_debranges_branch_transport_theorem.json",
+  "traceMapJson": "klm_debranges_trace_map_constructor.json",
+  "lambdaTraceJson": "klm_debranges_lambda_trace_candidate.json",
+  "featureInverseJson": "klm_debranges_feature_inverse_candidate.json",
+  "continuousNormalJson": "klm_debranges_continuous_normal_equation.json",
+  "coupledNormalJson": "klm_debranges_coupled_branch_normal_equation.json",
+  "transmutationJson": "klm_debranges_transmutation_kernel_probe.json",
+  "nonlocalTransmutationJson": "klm_debranges_nonlocal_transmutation_probe.json",
+  "modeMatchJson": "xi_mellin_volterra_mode_match.json",
+  "modeMixingJson": "xi_mellin_volterra_mode_mixing.json",
+  "mellinBoundaryJson": "xi_mellin_convolution_boundary_identity.json",
+  "statuses": {
+    "canonicalHardyImageStatus": {
+      "label": "canonical de Branges Hardy image",
+      "closed": true,
+      "status": "closed",
+      "reason": "The shifted-Xi kernel is exactly the signed Hardy branch Gram K_E=<h^+,h^+>-<h^-,h^->.  The numerical implementation matches the direct kernel with relative error 1.5801908504997367e-15."
+    },
+    "directKlmPullbackStatus": {
+      "label": "direct finite coherent KLM pullback",
+      "closed": false,
+      "status": "open",
+      "reason": "The tested Gaussian/coherent phase-space ansatzes did not produce an exact pullback.  The best residual was indefinite, so the direct naive coherent embedding is rejected.",
+      "blocker": "Do not tune Gaussian packets further; derive the canonical Weyl image."
+    },
+    "positiveResidualDominationStatus": {
+      "label": "finite positive residual domination",
+      "closed": false,
+      "status": "open",
+      "reason": "The finite probe did not find K_E - T^*KLM T >= 0 for the tested coherent ansatzes.",
+      "blocker": "Any domination proof needs the canonical branch transport, not the tested packets."
+    },
+    "volterraGreenContractionInputStatus": {
+      "label": "completed Volterra/KLM branch contraction input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The earlier completed Green-lift theorem gives the Volterra branch contraction G_- = C K E G_+ on the completed trace-fiber domain."
+    },
+    "closedConeBridgeStatus": {
+      "label": "closed positive-cone KLM-to-de Branges bridge",
+      "closed": false,
+      "status": "open",
+      "reason": "The closed-cone route is reduced but not closed.  The exact-U criterion and the Hardy strong truncation limit are closed, and the Volterra/KLM branch contraction is closed.  What remains is the concrete evaluation trace map z -> x_z, or truncated maps x_{z,R}, whose Volterra/KLM feature Grams converge to the Hardy branch Grams.  The first finite constructor shows that abstract plus-Gram lifting and naive profile fitting do not supply this map; the Lambda trace candidate shows that bare exponential endpoint jets do not supply it either.  The coefficient-level finite inverse of G_+ was also tested and does not close the map in the sampled Weyl/Volterra feature model.  The continuous Galerkin normal equation G_+^*G_+f_z=G_+^*h_z^+ was then assembled from the exact Weyl/Volterra kernel and solved to roundoff; its Lambda traces still do not recover the joint Hardy branch Grams.  The coupled signed-branch equation was also solved for direct and swapped branch normalizations, again without recovering the Hardy joint Gram.  The natural coarea transmutation ansatz r=s+u was then tested with scalar weights theta(s,u,sigma); it improves neither the lifted nor the trace-side bridge enough to close the map.  A finite nonlocal resolvent/heat dictionary centered at the natural Volterra/Mellin locations gives only a modest improvement and still does not close the bridge.  The exact finite-core incomplete-gamma Xi atoms were then matched term-by-term with the exact Volterra ratio atoms; the Xi atom normalization is correct, but the diagonal atom dictionary also fails to close the joint Gram.  A finite 6x6 least-squares mode-mixing matrix between the incomplete-gamma Xi atoms and the Volterra ratio atoms improves the lifted residual only modestly and is badly conditioned, so it is a numerical projection rather than a structural intertwiner.  The exact Mellin split explains the failure: the true identity is a diagonal moving Volterra tail plus an s-dependent incomplete-gamma boundary prefix, not a constant atom-mixing matrix.",
+      "blocker": "Build the Hardy-to-Volterra transmutation with this moving boundary prefix: represent or cancel B_i(s,z) by endpoint/trace terms, then use the diagonal Volterra tail identity for the remaining tail."
+    }
+  },
+  "hardyBranchContractionSample": {
+    "available": true,
+    "plusEigenCutoff": 0.0,
+    "resolvedRank": 5,
+    "maxGeneralizedEigenvalue": 0.9999999999996788,
+    "minGeneralizedEigenvalue": 0.7612087818302057,
+    "eigenvalues": [
+      0.7612087818302057,
+      0.7612087818302063,
+      0.9982835161182477,
+      0.9982835161182482,
+      0.9999966591027046,
+      0.9999966591027062,
+      0.9999999981731462,
+      0.9999999981731469,
+      0.999999999999678,
+      0.9999999999996788
+    ],
+    "sampleContractionHolds": true,
+    "sampleMargin": 3.211875210240578e-13
+  },
+  "branchTransportTheorem": {
+    "available": true,
+    "exactUCriterionClosed": true,
+    "exactUConstructed": false,
+    "hardyStrongTruncationClosed": true,
+    "klmClosedConeLimitClosed": false,
+    "hardyStrongLimitProof": {
+      "truncatedFeature": "h_{z,R}^\u00b1 = 1_[0,R](r) (2*pi)^(-1/2) E_omega^\u00b1(z) exp(i z r)",
+      "tailNormSquared": "|E_omega^\u00b1(z)|^2 exp(-2 Im(z) R)/(4*pi*Im(z))",
+      "entryTailBoundMax": 7.902378431147618e-14,
+      "jointGramRelativeTailOnSample": 2.6899866762390306e-13,
+      "signedKernelRelativeTailOnSample": 1.4894397175479877e-13,
+      "signedKernelTailEigenMin": 0.0,
+      "signedKernelTailEigenMax": 1.2490009027033011e-15
+    }
+  },
+  "traceMapConstructor": {
+    "available": true,
+    "exactTraceMapConstructed": false,
+    "truncatedTraceMapConstructed": false,
+    "fullHardyTarget": {
+      "jointRelative": 0.7104923344704555,
+      "plusRelative": 3.316568383391963e-41,
+      "crossRelative": 0.9845718459893146,
+      "minusRelative": 0.2919335818227242,
+      "jointFrobenius": 0.21115174870060913,
+      "trial": 6,
+      "traceCoordinateNormFrobenius": 2176.850007251299
+    },
+    "truncatedHardyTarget": {
+      "jointRelative": 0.7104923344704247,
+      "plusRelative": 3.3163740082283537e-41,
+      "crossRelative": 0.9845718459892702,
+      "minusRelative": 0.2919335818227256,
+      "jointFrobenius": 0.21115174870057565,
+      "trial": 6,
+      "traceCoordinateNormFrobenius": 2176.850007250503,
+      "hardyRmax": 40.0
+    },
+    "profileFitCandidates": {
+      "plusOnlyFull": {
+        "jointRelative": 2.485029689723238,
+        "plusRelative": 3.446978515418427,
+        "crossRelative": 1.3128996156403534,
+        "minusRelative": 3.0405610154507947,
+        "jointFrobenius": 0.7385278335889116
+      },
+      "combinedPlusMinusFull": {
+        "jointRelative": 4.896549240500552,
+        "plusRelative": 6.7577910022436924,
+        "crossRelative": 2.701200654520265,
+        "minusRelative": 5.927692550383957,
+        "jointFrobenius": 1.455209133960508
+      },
+      "plusOnlyTruncated": {
+        "jointRelative": 2.485029689723589,
+        "plusRelative": 3.4469785154188957,
+        "crossRelative": 1.312899615640559,
+        "minusRelative": 3.0405610154512264,
+        "jointFrobenius": 0.7385278335889307
+      },
+      "combinedPlusMinusTruncated": {
+        "jointRelative": 4.896549240501187,
+        "plusRelative": 6.757791002244541,
+        "crossRelative": 2.701200654520646,
+        "minusRelative": 5.927692550384728,
+        "jointFrobenius": 1.4552091339605289
+      },
+      "description": "Profile fits solve least squares against sampled Hardy branch functions on the Volterra u-row grid, then check joint Grams."
+    },
+    "diagnosis": "Plus-Gram matching is not enough: the best finite trace coordinates still miss the Hardy minus/cross branch Grams.  The missing map must be derived from the actual Lambda_a trace action on the Hardy evaluation exponential."
+  },
+  "lambdaTraceCandidate": {
+    "available": true,
+    "exactTraceMapConstructed": false,
+    "bestByScaledFullJointResidual": {
+      "kind": "plus_weighted",
+      "full": {
+        "jointRelative": 0.9947991326095758,
+        "plusRelative": 0.9815763443447231,
+        "crossRelative": 1.0051055036852028,
+        "minusRelative": 0.9874704734924257,
+        "jointFrobenius": 0.295645098849544,
+        "globalScale": 11.083241166706634,
+        "scaledJointRelative": 0.9694282952778323,
+        "traceCoordinateNormFrobenius": 10.85757617614907,
+        "mappedJointNorm": 0.0065795837173916825
+      },
+      "truncated": {
+        "jointRelative": 0.9947991326095746,
+        "plusRelative": 0.9815763443447191,
+        "crossRelative": 1.005105503685204,
+        "minusRelative": 0.9874704734924229,
+        "jointFrobenius": 0.29564509884950957,
+        "globalScale": 11.083241166706559,
+        "scaledJointRelative": 0.9694282952778256,
+        "traceCoordinateNormFrobenius": 10.85757617614907,
+        "mappedJointNorm": 0.0065795837173916825
+      }
+    },
+    "diagnosis": "None of the elementary exponential primitive candidates produces the joint Hardy branch Grams.  The primitive/evaluation vector must include the missing Weyl/Volterra integral transform, not just the bare exponential jet."
+  },
+  "featureInverseCandidate": {
+    "available": true,
+    "directFeatureMapConstructed": false,
+    "traceMapConstructed": false,
+    "bestDirectFeatureGram": {
+      "variant": "apply_sigma_u",
+      "featureFitRelativeMax": 0.6666608239044051,
+      "featureFitRelativeMean": 0.46538885594770935,
+      "coefficientNormFrobenius": 2562584.548940406,
+      "traceCoordinateNormFrobenius": 65976.49323332273,
+      "directFeatureGram": {
+        "jointRelative": 9.042579215603629,
+        "plusRelative": 13.57622140168715,
+        "crossRelative": 7.333842406818571,
+        "minusRelative": 5.30439340789472,
+        "jointFrobenius": 2.687370885657157,
+        "globalScale": 0.0871689566336097,
+        "scaledJointRelative": 0.5066593614976991,
+        "mappedJointNorm": 2.9393711080094787
+      },
+      "greenTraceGram": {
+        "jointRelative": 75651.05452202682,
+        "plusRelative": 73765.11013762438,
+        "crossRelative": 68842.283100127,
+        "minusRelative": 89938.93981512253,
+        "jointFrobenius": 22482.793519900155,
+        "globalScale": 1.0562238199687942e-06,
+        "scaledJointRelative": 0.9968025210925107,
+        "mappedJointNorm": 22482.81726483561
+      }
+    },
+    "bestGreenTraceGram": {
+      "variant": "undo_sigma_u",
+      "featureFitRelativeMax": 0.6803355729635291,
+      "featureFitRelativeMean": 0.49252721265619764,
+      "coefficientNormFrobenius": 2625729.3819497097,
+      "traceCoordinateNormFrobenius": 67168.21843812971,
+      "directFeatureGram": {
+        "jointRelative": 8.766043836311232,
+        "plusRelative": 13.161129203610978,
+        "crossRelative": 7.0673487825661,
+        "minusRelative": 5.262238651239578,
+        "jointFrobenius": 2.60518712929236,
+        "globalScale": 0.089662150706007,
+        "scaledJointRelative": 0.5069914533595554,
+        "mappedJointNorm": 2.8569902123305475
+      },
+      "greenTraceGram": {
+        "jointRelative": 79406.06312705332,
+        "plusRelative": 77424.72088144184,
+        "crossRelative": 72263.63209045248,
+        "minusRelative": 94397.85954751502,
+        "jointFrobenius": 23598.74733793554,
+        "globalScale": 1.0091738022161955e-06,
+        "scaledJointRelative": 0.9967840518194664,
+        "mappedJointNorm": 23598.77115133783
+      }
+    },
+    "diagnosis": "Finite inversion of the coefficient-level plus feature map was tested. If residuals remain large, the missing transform is not the naive row-grid inverse of G_+; it requires the exact continuous Weyl/Volterra inverse and branch normalization."
+  },
+  "continuousNormalEquation": {
+    "available": true,
+    "continuousNormalEquationSolved": true,
+    "directContinuousMapConstructed": false,
+    "traceMapConstructed": false,
+    "bestDirectContinuousGram": {
+      "variant": "apply_sigma_u",
+      "normalEquationResidualMax": 4.131059036454125e-29,
+      "normalEquationResidualMean": 3.827721484235589e-29,
+      "coefficientNormFrobenius": 5.870425256305391,
+      "rawTraceNormFrobenius": 122.88186939503055,
+      "traceCoordinateNormFrobenius": 5.610307707638945,
+      "directContinuousGram": {
+        "jointRelative": 0.4935791796594594,
+        "plusRelative": 0.6055415253874207,
+        "crossRelative": 0.45548962332698867,
+        "minusRelative": 0.42968800109655825,
+        "jointFrobenius": 0.14668716585800234,
+        "globalScale": 0.8906732009986972,
+        "scaledJointRelative": 0.4817156607982733,
+        "mappedJointNorm": 0.2924040470237704
+      },
+      "greenTraceGram": {
+        "jointRelative": 9.775704344709728,
+        "plusRelative": 9.260544240091448,
+        "crossRelative": 9.973567191497203,
+        "minusRelative": 9.905426252348146,
+        "jointFrobenius": 2.905248891536684,
+        "globalScale": 0.0055519694680692825,
+        "scaledJointRelative": 0.9985251035380328,
+        "mappedJointNorm": 2.906188550793623
+      }
+    },
+    "bestGreenTraceGram": {
+      "variant": "undo_sigma_u",
+      "normalEquationResidualMax": 4.0966966630446246e-29,
+      "normalEquationResidualMean": 3.786562022361551e-29,
+      "coefficientNormFrobenius": 5.707177724086222,
+      "rawTraceNormFrobenius": 119.45870135425203,
+      "traceCoordinateNormFrobenius": 5.451661491188046,
+      "directContinuousGram": {
+        "jointRelative": 0.4893141485053414,
+        "plusRelative": 0.5618931511013571,
+        "crossRelative": 0.46295749916898443,
+        "minusRelative": 0.4565906627708396,
+        "jointFrobenius": 0.14541963805683922,
+        "globalScale": 0.931991575915764,
+        "scaledJointRelative": 0.48513583775266483,
+        "mappedJointNorm": 0.27883848835257286
+      },
+      "greenTraceGram": {
+        "jointRelative": 9.06132530180555,
+        "plusRelative": 8.523316533646888,
+        "crossRelative": 9.30278531009658,
+        "minusRelative": 9.120356999942246,
+        "jointFrobenius": 2.6929420490473683,
+        "globalScale": 0.006005330878847614,
+        "scaledJointRelative": 0.9985185906924788,
+        "mappedJointNorm": 2.692712432973421
+      }
+    },
+    "diagnosis": "The continuous Galerkin normal equation has been assembled from the Weyl/Volterra kernel and solved.  If the residuals remain large under refinement, the missing bridge is not this plus-branch least-squares inverse; the target must include an additional transform or a different Hardy-to-Volterra branch normalization."
+  },
+  "coupledBranchNormalEquation": {
+    "available": true,
+    "coupledNormalEquationSolved": true,
+    "directContinuousMapConstructed": false,
+    "traceMapConstructed": false,
+    "bestDirectContinuousGram": {
+      "variant": "apply_sigma_u",
+      "pairTransform": "swap",
+      "normalEquationResidualMax": 4.2289195325231655e-29,
+      "normalEquationResidualMean": 3.858611170445135e-29,
+      "coefficientNormFrobenius": 6.787674013178214,
+      "directContinuousGram": {
+        "jointRelative": 0.5302030441909391,
+        "plusRelative": 0.749643743252849,
+        "crossRelative": 0.44125226491905994,
+        "minusRelative": 0.3932794913225824,
+        "jointFrobenius": 0.157571439571891,
+        "globalScale": 0.8012158417586913,
+        "scaledJointRelative": 0.48369582652398213,
+        "mappedJointNorm": 0.32464671558167135
+      },
+      "rawTraceNormFrobenius": 144.26111385066935,
+      "traceCoordinateNormFrobenius": 6.513705386917232,
+      "greenTraceGram": {
+        "jointRelative": 7.917041216092437,
+        "plusRelative": 7.475477474448146,
+        "crossRelative": 8.115870528225791,
+        "minusRelative": 7.9653032726248165,
+        "jointFrobenius": 2.352871405092168,
+        "globalScale": 0.007605573375067894,
+        "scaledJointRelative": 0.9981868829967288,
+        "mappedJointNorm": 2.3519836179834765
+      }
+    },
+    "bestGreenTraceGram": {
+      "variant": "apply_sigma_u",
+      "pairTransform": "swap",
+      "normalEquationResidualMax": 4.2289195325231655e-29,
+      "normalEquationResidualMean": 3.858611170445135e-29,
+      "coefficientNormFrobenius": 6.787674013178214,
+      "directContinuousGram": {
+        "jointRelative": 0.5302030441909391,
+        "plusRelative": 0.749643743252849,
+        "crossRelative": 0.44125226491905994,
+        "minusRelative": 0.3932794913225824,
+        "jointFrobenius": 0.157571439571891,
+        "globalScale": 0.8012158417586913,
+        "scaledJointRelative": 0.48369582652398213,
+        "mappedJointNorm": 0.32464671558167135
+      },
+      "rawTraceNormFrobenius": 144.26111385066935,
+      "traceCoordinateNormFrobenius": 6.513705386917232,
+      "greenTraceGram": {
+        "jointRelative": 7.917041216092437,
+        "plusRelative": 7.475477474448146,
+        "crossRelative": 8.115870528225791,
+        "minusRelative": 7.9653032726248165,
+        "jointFrobenius": 2.352871405092168,
+        "globalScale": 0.007605573375067894,
+        "scaledJointRelative": 0.9981868829967288,
+        "mappedJointNorm": 2.3519836179834765
+      }
+    },
+    "diagnosis": "The coupled signed-branch normal equations test the obvious missing normalizations: direct, swapped, and phase-rotated branch targets. If residuals remain large, the missing transform is not a scalar branch renormalization; it must mix the Hardy half-line variable with the Volterra endpoint variable more substantially."
+  },
+  "transmutationKernelProbe": {
+    "available": true,
+    "simpleCoareaTransmutationConstructed": false,
+    "bestIntegratedVolterraGram": null,
+    "bestLiftedTriangleGram": {
+      "pairTransform": "swap",
+      "theta": "coarea",
+      "normalResidualMax": 8.092209568063613e-38,
+      "normalResidualMean": 4.005480543855504e-38,
+      "coefficientNormFrobenius": 6430410.054758236,
+      "liftedTriangleGram": {
+        "jointRelative": 0.8972545067081392,
+        "plusRelative": 0.7946723455155891,
+        "crossRelative": 0.9182106353338882,
+        "minusRelative": 0.9567266292179256,
+        "jointFrobenius": 0.2666557384635713,
+        "globalScale": 6.277872226610025,
+        "scaledJointRelative": 0.5789323623347143,
+        "mappedJointNorm": 0.03859939596910132
+      },
+      "integratedVolterraGram": null,
+      "greenTraceGram": null
+    },
+    "bestGreenTraceGram": null,
+    "diagnosis": "This tests the natural coarea ansatz r=s+u.  If residuals do not collapse, the missing U is not a scalar multiplier on the coarea surface; it must be a nonlocal integral transform in r or an operator-valued Volterra inverse."
+  },
+  "nonlocalTransmutationKernelProbe": {
+    "available": true,
+    "nonlocalDictionaryConstructedBridge": false,
+    "bestLiftedTriangleGram": {
+      "pairTransform": "swap",
+      "spec": {
+        "kernel": "forward",
+        "center": "su",
+        "theta": "coarea",
+        "lambda": "2"
+      },
+      "normalResidualMax": 1.2510257916035645e-37,
+      "normalResidualMean": 4.849440805565349e-38,
+      "coefficientNormFrobenius": 2678964.909511275,
+      "liftedTriangleGram": {
+        "jointRelative": 0.9843143198731231,
+        "plusRelative": 0.9694038503750846,
+        "crossRelative": 0.9876692845363142,
+        "minusRelative": 0.9934279470713594,
+        "jointFrobenius": 0.29252910950428185,
+        "globalScale": 45.046997753608935,
+        "scaledJointRelative": 0.539518515442473,
+        "mappedJointNorm": 0.005554794263922556
+      },
+      "integratedVolterraGram": null,
+      "greenTraceGram": null
+    },
+    "bestIntegratedVolterraGram": null,
+    "bestGreenTraceGram": null,
+    "diagnosis": "This tests a finite Mellin/Laplace dictionary of nonlocal kernels. If residuals remain large, the missing U is not a simple resolvent or heat kernel centered at s+u, u, or log(1+e^s(e^u-1))."
+  },
+  "xiMellinVolterraModeMatch": {
+    "available": true,
+    "modeMatchedBridgeConstructed": false,
+    "maxXiAtomDiagnosticRelativeError": 3.29786657900615e-21,
+    "bestLiftedTriangleGram": {
+      "pairTransform": "swap",
+      "targetKind": "atom_coarea",
+      "normalResidualMax": 0.0,
+      "normalResidualMean": 0.0,
+      "coefficientNormFrobenius": 1.49570446282703,
+      "liftedTriangleGram": {
+        "jointRelative": 0.7326148224411126,
+        "plusRelative": 0.8139531889170105,
+        "crossRelative": 0.6582395021732314,
+        "minusRelative": 0.7845361269304322,
+        "jointFrobenius": 0.21772634745978356,
+        "globalScale": 0.854922269334016,
+        "scaledJointRelative": 0.7231790440898354,
+        "mappedJointNorm": 0.24008959562598298
+      },
+      "integratedVolterraGram": null,
+      "greenTraceGram": null
+    },
+    "bestIntegratedVolterraGram": null,
+    "bestGreenTraceGram": null,
+    "diagnosis": "The exact finite-core Xi atom expansion is matched to the exact Volterra ratio atoms.  If the Xi atom diagnostic is small but the Gram residual remains large, the missing transmutation is not a simple diagonal spectral mode split; it must also mix modes or carry another boundary/Hardy factor."
+  },
+  "xiMellinVolterraModeMixing": {
+    "available": true,
+    "modeMixingBridgeConstructed": false,
+    "maxXiAtomDiagnosticRelativeError": 7.861203769280428e-21,
+    "bestMixingFit": {
+      "pairTransform": "direct",
+      "theta": "coarea",
+      "center": "mellin_eta",
+      "mixingFitResidual": 0.6333092052873901,
+      "mixingNormalConditionEstimate": 3.0791881838313267e+27,
+      "mixingNormalEigenMin": 9.999999999998561e-29,
+      "mixingNormalEigenMax": 0.3079188183830884,
+      "normalResidualMax": 0.0,
+      "normalResidualMean": 0.0,
+      "coefficientNormFrobenius": 0.5738624448877088,
+      "mixingMatrixFrobenius": 102629209038.78731,
+      "mixingMatrix": [
+        [
+          {
+            "real": -7467.074004274906,
+            "imag": 29566.642441748052
+          },
+          {
+            "real": -35473.09861647249,
+            "imag": 146741.7890891062
+          },
+          {
+            "real": -622414410.9633194,
+            "imag": 3113990272.079307
+          },
+          {
+            "real": -5447395599.9688,
+            "imag": 27369305633.739067
+          },
+          {
+            "real": -1119678.6064508865,
+            "imag": -331832.3319731125
+          },
+          {
+            "real": 60034.82856103258,
+            "imag": 16942.764130335116
+          }
+        ],
+        [
+          {
+            "real": -21258.864963420394,
+            "imag": 73810.19997193852
+          },
+          {
+            "real": -101638.7286359083,
+            "imag": 366500.2335737259
+          },
+          {
+            "real": -1839545625.0648124,
+            "imag": 7786875402.792127
+          },
+          {
+            "real": -16111941220.332293,
+            "imag": 68441177049.36551
+          },
+          {
+            "real": 707438.7461414038,
+            "imag": -1701093.7865398864
+          },
+          {
+            "real": -37362.56370098241,
+            "imag": 88979.55277544369
+          }
+        ],
+        [
+          {
+            "real": -4665969.672767842,
+            "imag": -10446231.437586984
+          },
+          {
+            "real": -17595062.2152187,
+            "imag": -31796700.23590018
+          },
+          {
+            "real": -5171190865.346237,
+            "imag": -3230661165.9070163
+          },
+          {
+            "real": -65881041.08153464,
+            "imag": -108290349.63313802
+          },
+          {
+            "real": 13126.59947438368,
+            "imag": 9724.21236561025
+          },
+          {
+            "real": -687.353928507949,
+            "imag": -508.95516839092056
+          }
+        ],
+        [
+          {
+            "real": -52023374.878099814,
+            "imag": -107465474.91707997
+          },
+          {
+            "real": -196854184.1049994,
+            "imag": -327821629.2798999
+          },
+          {
+            "real": -59142491546.92799,
+            "imag": -33751836923.68998
+          },
+          {
+            "real": 6797846390.755162,
+            "imag": 3885129198.8150616
+          },
+          {
+            "real": -24645.642140095937,
+            "imag": -14193.42645877778
+          },
+          {
+            "real": 1267.534231083485,
+            "imag": 730.0720674356339
+          }
+        ],
+        [
+          {
+            "real": 102128353.9225897,
+            "imag": 604616500.051579
+          },
+          {
+            "real": -36805137.152672574,
+            "imag": -219579594.10148427
+          },
+          {
+            "real": 83469.56171172844,
+            "imag": 191659.33701955294
+          },
+          {
+            "real": -9427.548696476255,
+            "imag": -21290.162575300674
+          },
+          {
+            "real": 0.03117397701846031,
+            "imag": 0.06422088865954934
+          },
+          {
+            "real": -0.0016006584312705967,
+            "imag": -0.0032919381371110056
+          }
+        ],
+        [
+          {
+            "real": -4404130.094374442,
+            "imag": -26032839.703700162
+          },
+          {
+            "real": 1587175.0190121166,
+            "imag": 9454366.787896799
+          },
+          {
+            "real": -3591.895050405881,
+            "imag": -8250.005437849966
+          },
+          {
+            "real": 405.68045447645164,
+            "imag": 916.4313036339364
+          },
+          {
+            "real": -0.001341292491319729,
+            "imag": -0.002764252816446855
+          },
+          {
+            "real": 6.886982705627315e-05,
+            "imag": 0.00014169441683338404
+          }
+        ]
+      ],
+      "liftedTriangleGram": {
+        "jointRelative": 0.9031538844724585,
+        "plusRelative": 0.7907420476348462,
+        "crossRelative": 0.9286818061266254,
+        "minusRelative": 0.9623646455608893,
+        "jointFrobenius": 0.2684089789571649,
+        "globalScale": 4.90610363476919,
+        "scaledJointRelative": 0.7046725002353063,
+        "mappedJointNorm": 0.04298045313800707
+      },
+      "integratedVolterraGram": null,
+      "greenTraceGram": null
+    },
+    "bestLiftedTriangleGram": {
+      "pairTransform": "direct",
+      "theta": "coarea",
+      "center": "su",
+      "mixingFitResidual": 0.6576877970567132,
+      "mixingNormalConditionEstimate": 3.0791881838313267e+27,
+      "mixingNormalEigenMin": 9.999999999998561e-29,
+      "mixingNormalEigenMax": 0.3079188183830884,
+      "normalResidualMax": 0.0,
+      "normalResidualMean": 0.0,
+      "coefficientNormFrobenius": 0.46072719169862686,
+      "mixingMatrixFrobenius": 189984002185.58588,
+      "mixingMatrix": [
+        [
+          {
+            "real": -58340.91095617825,
+            "imag": 37184.65755133694
+          },
+          {
+            "real": -286644.76155991515,
+            "imag": 186736.3915567538
+          },
+          {
+            "real": -5848235474.704477,
+            "imag": 4146444081.2734947
+          },
+          {
+            "real": -51359683972.72264,
+            "imag": 36476734779.65867
+          },
+          {
+            "real": -427811.7258802923,
+            "imag": -580769.8439113109
+          },
+          {
+            "real": 24372.94696536006,
+            "imag": 29988.699442152312
+          }
+        ],
+        [
+          {
+            "real": -159493.21900124155,
+            "imag": 85081.73960984264
+          },
+          {
+            "real": -784837.1653495607,
+            "imag": 428673.4109109678
+          },
+          {
+            "real": -16107074633.45033,
+            "imag": 9640214353.629818
+          },
+          {
+            "real": -141470594987.239,
+            "imag": 84827369745.97021
+          },
+          {
+            "real": 3821660.7382747065,
+            "imag": -2082922.767159924
+          },
+          {
+            "real": -200254.3538455847,
+            "imag": 108922.69723027974
+          }
+        ],
+        [
+          {
+            "real": 7869289.7940489855,
+            "imag": 3047267.301038682
+          },
+          {
+            "real": 26293463.5665849,
+            "imag": 3938509.470765872
+          },
+          {
+            "real": 5447089381.786255,
+            "imag": -6598107399.421943
+          },
+          {
+            "real": -5663282808.773501,
+            "imag": -921681602.8047342
+          },
+          {
+            "real": 118866.56984555394,
+            "imag": 35799.221862219594
+          },
+          {
+            "real": -6206.817644034219,
+            "imag": -1871.6456088615087
+          }
+        ],
+        [
+          {
+            "real": 70905650.61586507,
+            "imag": 42460955.03617401
+          },
+          {
+            "real": 232341923.45791557,
+            "imag": 85962467.0934822
+          },
+          {
+            "real": 47591766475.81583,
+            "imag": -45682760243.02248
+          },
+          {
+            "real": -4919699485.740458,
+            "imag": 5364489832.987504
+          },
+          {
+            "real": 7089.510516305158,
+            "imag": -21635.36751979925
+          },
+          {
+            "real": -354.400940596771,
+            "imag": 1114.756324709936
+          }
+        ],
+        [
+          {
+            "real": 884793443.6460738,
+            "imag": 438995740.4029523
+          },
+          {
+            "real": -319688533.2734095,
+            "imag": -156565051.26057932
+          },
+          {
+            "real": 182666.92029805938,
+            "imag": 152888.782818218
+          },
+          {
+            "real": -20127.262892962524,
+            "imag": -17066.460616362012
+          },
+          {
+            "real": 0.05813879474276321,
+            "imag": 0.05300455881928815
+          },
+          {
+            "real": -0.002977971788213428,
+            "imag": -0.0027185581988755235
+          }
+        ],
+        [
+          {
+            "real": -38091262.6516566,
+            "imag": -18902583.766154934
+          },
+          {
+            "real": 13762909.516812898,
+            "imag": 6741512.518850684
+          },
+          {
+            "real": -7866.77739634093,
+            "imag": -6580.22149728673
+          },
+          {
+            "real": 866.8030766870556,
+            "imag": 734.5168954073738
+          },
+          {
+            "real": -0.0025037300680752386,
+            "imag": -0.0022810415971116754
+          },
+          {
+            "real": 0.0001282453526997642,
+            "imag": 0.00011699246052801578
+          }
+        ]
+      ],
+      "liftedTriangleGram": {
+        "jointRelative": 0.9224454768299711,
+        "plusRelative": 0.845459212491328,
+        "crossRelative": 0.9384686671586436,
+        "minusRelative": 0.9681967156385218,
+        "jointFrobenius": 0.2741422617300806,
+        "globalScale": 7.73620023277966,
+        "scaledJointRelative": 0.6192245774956404,
+        "mappedJointNorm": 0.030164461862966622
+      },
+      "integratedVolterraGram": null,
+      "greenTraceGram": null
+    },
+    "bestIntegratedVolterraGram": null,
+    "bestGreenTraceGram": null,
+    "diagnosis": "This derives the finite 6x6 atom mixing matrix by row-level least squares, then tests the induced branch Gram.  A small row fit but large Gram residual means the chosen row target is not the canonical Hardy-to-Volterra transmutation; a large row fit means the six Volterra atoms cannot represent the chosen Hardy row target uniformly."
+  },
+  "xiMellinConvolutionBoundaryIdentity": {
+    "available": true,
+    "maxTotalSplitRelativeError": 2.368014286737549e-71,
+    "maxTailVolterraRelativeError": 2.3442168925662954e-69,
+    "maxBoundaryFraction": 1.0000000045641115,
+    "minTailFraction": 0.0,
+    "maxTailFraction": 1.0,
+    "conclusion": "The exact atom transport is not a constant 6x6 mixing matrix. It is diagonal in the Volterra tail after multiplying by Psi(s), plus an s-dependent incomplete-gamma boundary prefix."
+  },
+  "bestFinitePullbackCandidate": {
+    "kind": "anti_bargmann",
+    "scaleReal": 0.0002583382834445313,
+    "scaleImag": -5.350744544643644e-22,
+    "targetFrobenius": 0.008549621932844566,
+    "scaledPullbackFrobenius": 0.00730599087149802,
+    "residualFrobenius": 0.004440555435997218,
+    "relativeResidualFrobenius": 0.5193861753042207,
+    "targetEigenMin": 1.9559884861477345e-12,
+    "targetEigenMax": 0.008549615777960767,
+    "scaledPullbackEigenMin": 3.458222474197581e-07,
+    "scaledPullbackEigenMax": 0.007229516297742407,
+    "residualEigenMin": -0.002799094323400739,
+    "residualEigenMax": 0.0034171697928052796,
+    "residualLooksPositive": false,
+    "residualLooksZero": false,
+    "width": 0.85
+  },
+  "directKlmPullbackClosed": false,
+  "closedPositiveConeBridgeClosed": false,
+  "rhClosed": false,
+  "nextProofTarget": "Build the Hardy-to-Volterra transmutation with this moving boundary prefix: represent or cancel B_i(s,z) by endpoint/trace terms, then use the diagonal Volterra tail identity for the remaining tail."
+}

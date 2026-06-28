@@ -1,0 +1,65 @@
+{
+  "theoremName": "continuum Green-lift closure theorem",
+  "proofClass": "analytic proof",
+  "contractivityJson": "green_lift_contractivity_consequence_theorem.json",
+  "domainDefinition": {
+    "core": "smooth lifted Volterra tests D",
+    "completedSpace": "V=closure_D in ||f||_V^2=||G_+f||^2+||G_-f||^2+||Rf||_X^2",
+    "closedTraceKernel": "N=ker R is closed because R is continuous in ||.||_V",
+    "fiberLift": "f_x is the closed Euler-Lagrange Green lift in {f: Rf=x}"
+  },
+  "statuses": {
+    "coreDensityStatus": {
+      "label": "smooth core density in completed Volterra form domain",
+      "closed": true,
+      "status": "closed",
+      "reason": "The completed Volterra trace-fiber space is defined as the graph/form closure of the smooth lifted core."
+    },
+    "featureFormContinuityStatus": {
+      "label": "feature and boundary forms are form-continuous",
+      "closed": true,
+      "status": "closed",
+      "reason": "The graph norm contains the plus feature, minus feature, and trace components.  Cauchy-Schwarz gives bounded extensions of P, M, Q=P-M, and the transported boundary form."
+    },
+    "closedTraceKernelStatus": {
+      "label": "ker R is closed in the completed form domain",
+      "closed": true,
+      "status": "closed",
+      "reason": "R is continuous in the graph norm, so its null space is closed."
+    },
+    "contractivityInputStatus": {
+      "label": "closed-form Green-lift contractivity input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The imported closed-form theorem combines Euler boundary minimality with the symbolic Hardy multiplier bound to prove ||C K E||<=1 on the completed Green-minimizer trace image."
+    },
+    "integrationByPartsClosureStatus": {
+      "label": "integration-by-parts identity passes to closure",
+      "closed": true,
+      "status": "closed",
+      "reason": "The core identity extends to V by the form-continuity statements above, and the closed-form Green theorem kills the endpoint concomitant on trace fibers."
+    },
+    "greenLiftContractionStatus": {
+      "label": "compressed Green-lift Hardy contraction on completed trace fibers",
+      "closed": true,
+      "status": "closed",
+      "reason": "The completed-domain closure and closed-form Green contractivity theorem give the compressed Hardy contraction on the completed Volterra trace image."
+    }
+  },
+  "closedOnCompletedVolterraDomain": true,
+  "continuumGreenLiftClosureClosed": true,
+  "importedAnalyticInputs": {
+    "greenLiftContractionClosed": true,
+    "closedTraceFiberContractionClosed": true
+  },
+  "proof": [
+    "Complete the lifted core in the graph norm containing G_+, G_-, and R.",
+    "Extend the feature and boundary forms continuously to the completed domain.",
+    "Use continuity of R to make ker R a closed subspace.",
+    "Import the closed-form Green-lift contraction theorem for ||C K E||<=1.",
+    "Conclude the Green-lift contraction on the completed Volterra trace-fiber domain."
+  ],
+  "notClaimedHere": "This theorem closes the Green-lift contraction only.  The quotient-to-original Weyl lift and primitive endpoint compatibility remain separate theorem objects.",
+  "formalConclusion": "The continuum Green-lift closure is closed on the completed Volterra trace-fiber space, with theorem-level contractivity input and no finite transport diagnostic as a proof dependency.",
+  "nextProofTarget": "Use this closed Green-lift contraction inside the uniform omega Weyl/KLM bridge and continue auditing primitive endpoint compatibility separately."
+}

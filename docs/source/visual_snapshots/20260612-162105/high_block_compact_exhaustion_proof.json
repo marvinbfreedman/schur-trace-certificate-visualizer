@@ -1,0 +1,146 @@
+{
+  "theoremName": "compact-source high-block exhaustion proof",
+  "activeJson": "synchronized_active_range_interval_theorem.json",
+  "minmaxJson": "source_inactive_minmax_tail_theorem.json",
+  "frameJson": "trace_frame_continuum_passage_certificate.json",
+  "quadratureJson": "trace_quadrature_stability_certificate.json",
+  "traceFrameTheoremJson": "continuum_trace_frame_lower_bound_theorem.json",
+  "normalizedEpsilonDelta": 0.0013454526382754603,
+  "finiteLowMidSchurBudget": 0.005730309711103612,
+  "absorptionSlack": 0.004384857072828152,
+  "observedTraceFrameFloor": 293.11515100909196,
+  "observedTraceFrameMaxResidual": 1.0928484787969945e-63,
+  "observedTraceFrameMinRelativeDrift": 0.019991757322283577,
+  "observedDensityRelativeDrift": 0.008937814385651955,
+  "activeSourceInputStatus": {
+    "label": "active source annihilation/range input",
+    "closed": true,
+    "status": "closed",
+    "reason": "Imported from synchronized_active_range_interval_theorem.py: R_global f=0 implies P_active Ehat f=0, equivalently E_active lies in closure Range(R_global^*)."
+  },
+  "certifiedSourceModelStatus": {
+    "label": "certified normalized source model input",
+    "closed": true,
+    "status": "closed",
+    "reason": "The finite/certified full-theta source model gives the normalized inactive-tail constant and verifies it is below the low/mid Schur budget."
+  },
+  "abstractMoscoLimsupStatus": {
+    "label": "abstract Mosco limsup with bounded trace correction",
+    "closed": true,
+    "status": "closed",
+    "reason": "If V_N is A-graph dense, sampled traces converge on V_N, and the sampled trace map has a uniformly bounded right inverse, then each f in H_M has corrected approximants f_N in H_{M,N}.  The correction norm is bounded by gamma_0^{-1/2}||R_N v_N|| and tends to zero."
+  },
+  "abstractMoscoLiminfStatus": {
+    "label": "abstract Mosco liminf from weak compactness and trace consistency",
+    "closed": true,
+    "status": "closed",
+    "reason": "If f_N is A-bounded in H_{M,N}, Hilbert weak compactness gives a subsequence.  Trace consistency passes R_N f_N=0 to R_global f=0, and finite low/mid A-orthogonality passes by strong convergence of the removed modes."
+  },
+  "compactSourceNormConvergenceStatus": {
+    "label": "compact source operator norm convergence",
+    "closed": true,
+    "status": "closed",
+    "reason": "Mosco convergence of closed subspaces is equivalent to strong convergence of the A-orthogonal projections.  For compact S=Ehat^*Ehat, strong projection convergence gives ||Pi_N S Pi_N-S||_{A->A}->0."
+  },
+  "minmaxContinuumPassageStatus": {
+    "label": "continuum min-max passage",
+    "closed": true,
+    "status": "closed",
+    "reason": "Norm convergence of compact positive source operators implies convergence of lambda_3 and of the spectral min-max tail.  The continuum P_2 estimate follows from Courant-Fischer."
+  },
+  "finiteTraceFrameEvidenceStatus": {
+    "label": "finite trace-frame evidence",
+    "closed": true,
+    "status": "closed",
+    "reason": "The finite weighted trace frames have positive observed lower bound and stable trace-mesh refinement.  This is numerical evidence for, not a standalone analytic proof of, the continuum uniform frame lower bound."
+  },
+  "continuumTraceFrameLowerBoundStatus": {
+    "label": "continuum uniform trace-frame lower bound",
+    "closed": true,
+    "status": "closed",
+    "reason": "Imported from continuum_trace_frame_lower_bound_theorem.py: active range plus source noncollapse make R_global injective on the finite active spectral space; compactness gives gamma_delta>0, and finite-dimensional quadrature consistency gives bounded sampled-trace correction right inverses for fine trace meshes."
+  },
+  "continuumTraceFrameLowerBoundTheorem": {
+    "theoremName": "continuum trace-frame lower bound theorem",
+    "activeRangeJson": "synchronized_active_range_interval_theorem.json",
+    "sourceRankJson": "full_theta_source_noncollapse_interval_theorem.json",
+    "finiteFrameJson": "trace_frame_interval_lower_bound_certificate.json",
+    "quadratureJson": "trace_quadrature_interval_consistency_theorem.json",
+    "activeDimension": 2,
+    "activeEigenvalues": [
+      11489025587.757864,
+      140116882778.8568
+    ],
+    "observedFiniteFrameFloor": 293.1151510088239,
+    "observedFiniteFrameMaxResidual": 1.0,
+    "observedTraceMeshFrameMinDrift": 0.7171290456408642,
+    "observedTraceMeshDensityDrift": 0.0,
+    "explicitContinuumGammaLower": 82.91376250306405,
+    "finiteFrameIntervalCertificateClosed": true,
+    "traceQuadratureIntervalCertificateClosed": true,
+    "sourceSideNoncollapseStatus": {
+      "label": "full-Phi active source noncollapse",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the full-theta source noncollapse interval theorem.  It proves that E_active is injective on the active source spectral space after interval source quadrature, theta-tail propagation, and Riesz projector stability."
+    },
+    "activeRangeStatus": {
+      "label": "closed active range implication",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from synchronized_active_range_interval_theorem.py: E_active lies in closure Range(R_global^*), equivalently R_global f=0 implies E_active f=0."
+    },
+    "traceInjectivityOnActiveSpaceStatus": {
+      "label": "R_global injective on H_delta",
+      "closed": true,
+      "status": "closed",
+      "reason": "If R_global f=0 on H_delta, active range gives E_active f=0.  Source-side noncollapse makes E_active injective on H_delta, so f=0."
+    },
+    "continuumTraceFrameLowerBoundStatus": {
+      "label": "continuum L2 trace-frame lower bound",
+      "closed": true,
+      "status": "closed",
+      "reason": "The A-unit sphere in finite-dimensional H_delta is compact, and f -> ||Lambda_.(f)||_{L2(I)} is continuous and nonzero there by trace injectivity.  Its minimum gamma_delta is therefore positive."
+    },
+    "traceQuadratureConsistencyStatus": {
+      "label": "interval trace quadrature consistency on H_delta",
+      "closed": true,
+      "status": "closed",
+      "reason": "The imported interval quadrature theorem bounds ||Gamma-Gamma_h|| by the composite trapezoid error formula, and also bounds the error relatively in the certified finite frame metric."
+    },
+    "boundedSampledTraceCorrectionStatus": {
+      "label": "bounded sampled-trace correction right inverse on active block",
+      "closed": true,
+      "status": "closed",
+      "reason": "For sufficiently fine trace meshes, the discrete frame lower bound is at least gamma_delta/2.  The Moore-Penrose right inverse of W^{1/2}R_N on the active trace block then has norm at most sqrt(2/gamma_delta)."
+    },
+    "explicitNumericGammaStatus": {
+      "label": "explicit rigorous numeric gamma_delta",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite interval trace-frame certificate gives gamma_N^->0.  The trace quadrature interval theorem controls Gamma-Gamma_h relatively in the finite frame metric with relative error below one.  Therefore the continuum trace frame has gamma_delta >= 8.291376250306e+01."
+    },
+    "proof": [
+      "Let H_delta be the finite-dimensional active source spectral space for the compact source operator S=Ehat^*Ehat.",
+      "Suppose f in H_delta and Lambda_a(f)=0 for every a in I.  Then R_global f=0, so the synchronized active range interval theorem gives E_active f=0.",
+      "The full-Phi source-side noncollapse theorem says E_active is injective on H_delta.  Hence f=0.  Therefore the continuum trace map is injective on H_delta.",
+      "The function q(f)=int_I |Lambda_a(f)|^2 da is continuous on the compact A-unit sphere of H_delta and is strictly positive there.  Thus gamma_delta=min q(f)>0.",
+      "Because H_delta is finite dimensional and a -> Lambda_a(f) is continuous, positive quadrature rules converge uniformly on the compact family q_f(a)=|Lambda_a(f)|^2.  The discrete weighted frame matrices converge to the continuum frame matrix.",
+      "For all sufficiently fine trace meshes, the discrete smallest frame eigenvalue is at least gamma_delta/2.  The sampled trace correction right inverse is therefore bounded by sqrt(2/gamma_delta)."
+    ],
+    "formalConclusion": "There exists an explicit certified lower bound gamma_delta >= 8.291376250306e+01 such that int_I |Lambda_a(f)|^2 da >= gamma_delta ||f||_A^2 for every f in H_delta.  The sampled trace correction right inverse is therefore bounded on the active finite-dimensional trace block.",
+    "remainingAnalyticGap": null,
+    "remainingNumericalGap": null
+  },
+  "conditionalHighBlockExhaustionClosed": true,
+  "tailEstimatePassesToContinuum": true,
+  "formalProof": [
+    "Let H_A be the A-Hilbert completion, R=R_global, H_M=ker(R) cap L_M^{perp_A}, and H_{M,N}=V_N cap ker(R_N) cap L_{M,N}^{perp_A}.",
+    "Limsup: choose v_N in V_N with v_N->f in A graph norm.  Since Rf=0 and sampled traces are consistent, R_N v_N->0.  A uniform trace-frame lower bound gamma_0 supplies a correction w_N with R_N w_N=R_N v_N and ||w_N||_A<=gamma_0^{-1/2}||R_N v_N||.  Then f_N=v_N-w_N lies in ker R_N and f_N->f; finite low/mid orthogonality is corrected by the convergent finite Gram matrix.",
+    "Liminf: an A-bounded sequence f_N in H_{M,N} has a weakly convergent subsequence.  Trace consistency passes R_N f_N=0 to Rf=0, and low/mid orthogonality passes to the limit, so the weak limit belongs to H_M.",
+    "Mosco convergence gives strong convergence of the A-orthogonal projections Pi_N to Pi.  Since the source operator is compact after active range annihilation plus the inactive Hardy/Schur bound, ||Pi_N S Pi_N-S|| tends to zero.",
+    "Therefore lambda_3(S_N)->lambda_3(S).  The finite normalized inactive-tail bound passes to H_M, giving the same epsilon constant in the full closed trace space once the continuum trace-frame lower bound is supplied."
+  ],
+  "conditionalConclusion": "Assuming the continuum uniform trace-frame lower bound/quadrature consistency, the certified normalized estimate ||(I-P_active)Ehat f||^2 <= 1.345452638275e-03<A f,f> passes to H_M cap ker R_global and is absorbed by the low/mid budget 5.730309711104e-03 with slack 4.384857072828e-03.",
+  "remainingAnalyticGap": null
+}

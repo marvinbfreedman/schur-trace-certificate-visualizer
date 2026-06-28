@@ -1,0 +1,82 @@
+{
+  "theoremName": "Green-lift boundary/minimality theorem",
+  "finiteIdentity": "<G_+(f_x),G_+(h)>-<G_-(f_x),G_-(h)>=Q(f_x,h)=0 for h in ker R",
+  "statuses": {
+    "finiteBoundaryConcomitantStatus": {
+      "label": "finite boundary concomitant equals Euler-Lagrange residual",
+      "closed": true,
+      "status": "closed",
+      "reason": "The plus/minus feature cross-form against ker R equals the trace-fiber Euler-Lagrange residual and vanishes for the Green minimizer."
+    },
+    "continuumBoundaryTheoremStatus": {
+      "label": "continuum Green-lift boundary theorem",
+      "closed": false,
+      "status": "open",
+      "reason": "The finite Galerkin identity is closed.  The remaining work is passing the lifted integration-by-parts concomitant to the completed Volterra trace domain.",
+      "blocker": "Prove density/closure for the lifted C K E integration-by-parts formula and identify its endpoint row with Q(f_x,h) for all h in ker R."
+    }
+  },
+  "check": {
+    "basis": 12,
+    "constraints": 9,
+    "traceRank": 9,
+    "traceNullity": 3,
+    "schurMin": 2.142120607767207e-14,
+    "schurMax": 0.024364492473596427,
+    "kerEnergyMin": 6.652524925447319e-10,
+    "kerEnergyMax": 0.007265405339452581,
+    "traceError": 3.568221260163187e-12,
+    "plusCrossNorm": 0.00031447124950890077,
+    "minusCrossNorm": 0.00031447124952856484,
+    "boundaryConcomitantFrobenius": 1.3531856705677777e-13,
+    "qCrossFrobenius": 9.798937541131484e-14,
+    "relativeBoundaryConcomitant": 2.1515252549139148e-10,
+    "maxMinimalityGapError": 2.9347141557167777e-09,
+    "minPerturbationGap": 0.0025527423724405196,
+    "rows": [
+      {
+        "seed": 0,
+        "boundaryConcomitant": -1.5476986012230576e-14,
+        "qfh": 2.4130003550837387e-14,
+        "minimalityGap": 0.0025527423724405196,
+        "kerEnergy": 0.0025527426251273798,
+        "gapMinusKerEnergy": -2.526868601512855e-10
+      },
+      {
+        "seed": 1,
+        "boundaryConcomitant": -5.849162300342048e-14,
+        "qfh": -2.2181909087315432e-14,
+        "minimalityGap": 0.004538210714216007,
+        "kerEnergy": 0.004538209111337563,
+        "gapMinusKerEnergy": 1.6028784436891708e-09
+      },
+      {
+        "seed": 2,
+        "boundaryConcomitant": -1.0968483066253754e-13,
+        "qfh": -7.925951561738032e-14,
+        "minimalityGap": 0.007090952727736521,
+        "kerEnergy": 0.007090951736464945,
+        "gapMinusKerEnergy": 9.912715761076218e-10
+      },
+      {
+        "seed": 3,
+        "boundaryConcomitant": -6.19079440489223e-14,
+        "qfh": 9.652001420334955e-14,
+        "minimalityGap": 0.010210969489762078,
+        "kerEnergy": 0.010210970500509519,
+        "gapMinusKerEnergy": -1.010747440605142e-09
+      },
+      {
+        "seed": 4,
+        "boundaryConcomitant": -1.1976010461101083e-13,
+        "qfh": -6.425068810322898e-14,
+        "minimalityGap": 0.013898262468757139,
+        "kerEnergy": 0.013898265403471294,
+        "gapMinusKerEnergy": -2.9347141557167777e-09
+      }
+    ],
+    "finiteBoundaryTheoremClosed": true
+  },
+  "correctedConclusion": "In finite direct-Volterra Galerkin form, the boundary concomitant from the plus/minus Hardy split is exactly the Euler-Lagrange orthogonality Q(f_x,h)=0.  This proves the desired cancellation at the finite quotient level; the only remaining step is the continuum closure of the lifted integration-by-parts identity.",
+  "nextProofTarget": "Prove the continuum closure theorem: smooth compactly supported lifts are dense in the completed trace-fiber domain, the C K E boundary concomitant is continuous in the Volterra form norm, and its finite identity passes to Q(f_x,h)=0 on ker R."
+}

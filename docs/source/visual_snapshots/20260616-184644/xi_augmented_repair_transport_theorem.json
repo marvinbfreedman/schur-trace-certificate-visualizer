@@ -1,0 +1,51 @@
+{
+  "theoremName": "augmented repair continuum transport theorem",
+  "proofClass": "symbolic identity",
+  "transportLimitJson": "xi_augmented_repair_transport_limit_theorem.json",
+  "tailPositiveJson": "volterra_tail_positive_form_theorem.json",
+  "legacyInputs": {
+    "finiteRepairJson": null,
+    "traceConvergenceJson": null
+  },
+  "transportedTraceSpace": {
+    "name": "X_aug",
+    "definition": "closure Ran(R_aug) with quotient norm inf{||f||_V:R_aug f=x}",
+    "formDomain": "completed Volterra/Mellin graph-form domain V"
+  },
+  "statuses": {
+    "closedFormTransportLimitInputStatus": {
+      "label": "closed-form transport limit input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The transport-limit theorem proves that the finite augmented repairs have a nonnegative closed-form limit D_aug on X_aug and that the repaired augmented form is closed and nonnegative."
+    },
+    "positiveVolterraTailInputStatus": {
+      "label": "positive Volterra tail input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The positive Volterra tail theorem proves the diagonal tail form P-M>=0 on the completed trace-fiber domain.  It is the narrow input needed here and sits below the original Weyl/KLM packaging."
+    },
+    "boundedNonnegativeRepairStatus": {
+      "label": "bounded nonnegative transported trace form",
+      "closed": true,
+      "status": "closed",
+      "reason": "The closed-form transport-limit theorem gives a bounded nonnegative trace-side form D_aug on X_aug, and the positive Volterra tail theorem supplies the remaining completed-domain nonnegative tail input."
+    },
+    "closedRepairedAugmentedFormStatus": {
+      "label": "closed repaired augmented form",
+      "closed": true,
+      "status": "closed",
+      "reason": "K+R_aug^*D_aug R_aug is the closed-form limit of nonnegative finite repaired forms, hence is nonnegative on the completed augmented trace-fiber domain."
+    }
+  },
+  "transportedRepairClosed": true,
+  "boundedNonnegativeRepairClosed": true,
+  "closedRepairedAugmentedFormClosed": true,
+  "DaugNonnegativeTransportLimitClosed": true,
+  "proof": [
+    "Import the closed-form transport-limit theorem for D_aug>=0 on X_aug.",
+    "Import the positive Volterra tail theorem.",
+    "Conclude the augmented repair is a bounded nonnegative trace-side form on the completed domain."
+  ],
+  "remainingAnalyticGap": null
+}

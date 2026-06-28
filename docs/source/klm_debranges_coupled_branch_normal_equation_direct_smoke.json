@@ -1,0 +1,64 @@
+{
+  "theoremName": "coupled signed-branch Weyl/Volterra normal equation",
+  "normalEquation": "(G_+^*G_+ + G_-^*G_-)f_z = G_+^*T_+h_z + G_-^*T_-h_z",
+  "basis": 4,
+  "constraints": 3,
+  "omega": 0.49,
+  "sOrder": 5,
+  "laguerreOrder": 8,
+  "rhsLaguerreOrder": 10,
+  "traceRank": null,
+  "traceLiftSkipped": true,
+  "variants": [
+    "same"
+  ],
+  "pairTransforms": [
+    "direct"
+  ],
+  "results": [
+    {
+      "variant": "same",
+      "pairTransform": "direct",
+      "normalEquationResidualMax": 1.0095143689402404e-29,
+      "normalEquationResidualMean": 9.963330218219168e-30,
+      "coefficientNormFrobenius": 1.6733560843819968,
+      "directContinuousGram": {
+        "jointRelative": 0.6894301712631508,
+        "plusRelative": 0.6096285538732293,
+        "crossRelative": 0.6738784834142717,
+        "minusRelative": 0.7956412108822815,
+        "jointFrobenius": 0.20489226865153193,
+        "globalScale": 1.0100652106565038,
+        "scaledJointRelative": 0.6893923808909841,
+        "mappedJointNorm": 0.21313618632742976
+      },
+      "rawTraceNormFrobenius": 1.2673767635672564,
+      "greenTraceGram": null
+    }
+  ],
+  "bestDirectContinuousGram": {
+    "variant": "same",
+    "pairTransform": "direct",
+    "normalEquationResidualMax": 1.0095143689402404e-29,
+    "normalEquationResidualMean": 9.963330218219168e-30,
+    "coefficientNormFrobenius": 1.6733560843819968,
+    "directContinuousGram": {
+      "jointRelative": 0.6894301712631508,
+      "plusRelative": 0.6096285538732293,
+      "crossRelative": 0.6738784834142717,
+      "minusRelative": 0.7956412108822815,
+      "jointFrobenius": 0.20489226865153193,
+      "globalScale": 1.0100652106565038,
+      "scaledJointRelative": 0.6893923808909841,
+      "mappedJointNorm": 0.21313618632742976
+    },
+    "rawTraceNormFrobenius": 1.2673767635672564,
+    "greenTraceGram": null
+  },
+  "bestGreenTraceGram": null,
+  "coupledNormalEquationSolved": true,
+  "directContinuousMapConstructed": false,
+  "traceMapConstructed": false,
+  "diagnosis": "The coupled signed-branch normal equations test the obvious missing normalizations: direct, swapped, and phase-rotated branch targets. If residuals remain large, the missing transform is not a scalar branch renormalization; it must mix the Hardy half-line variable with the Volterra endpoint variable more substantially.",
+  "nextProofTarget": "If the coupled branch system fails, derive an integral Hardy-to-Volterra transmutation kernel U(r;s,u,sigma) rather than a scalar branch normalization."
+}

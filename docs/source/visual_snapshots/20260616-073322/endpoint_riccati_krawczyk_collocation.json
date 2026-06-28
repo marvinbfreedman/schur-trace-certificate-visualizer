@@ -1,0 +1,72 @@
+{
+  "theoremName": "endpoint Riccati Krawczyk collocation certificate",
+  "order": 11,
+  "stateScaling": "taylor",
+  "chartCoordinate": [
+    0,
+    1
+  ],
+  "activeIndices": [
+    3,
+    4
+  ],
+  "traceFieldMinGap": 1.1635518278617991e-05,
+  "traceFieldMinConsecutiveCos": 0.9881718063973355,
+  "rawEndpointEntryCapacityForChartThreshold": 36392.018345433105,
+  "recomputedEndpointMaxDifference": 5.089644958331412e-10,
+  "leftSystem": {
+    "label": "left-to-s0 row flow",
+    "dim": 8,
+    "systemSize": 88,
+    "systemInfNorm": 851.0245189994017,
+    "inverseInfNorm": 6705.874237390894,
+    "conditionInfEstimate": 5706863.397346065,
+    "solutionInfNorm": 22561037.10262889,
+    "residualInfNorm": 9.308191642586044e-65,
+    "scaleInf": 1.0,
+    "scaleInvInf": 7511650135.139026,
+    "targetIndex": 0
+  },
+  "rightSystem": {
+    "label": "right-to-s0 row flow",
+    "dim": 8,
+    "systemSize": 88,
+    "systemInfNorm": 909.5578375354255,
+    "inverseInfNorm": 1640.510880155633,
+    "conditionInfEstimate": 1492139.5286076951,
+    "solutionInfNorm": 2082859009.7785735,
+    "residualInfNorm": 2.7739225176936173e-62,
+    "scaleInf": 1.0,
+    "scaleInvInf": 7511650135.139026,
+    "targetIndex": 10
+  },
+  "coefficientRadiusCapacityScaledCompanion": 1.2748331615480036e-09,
+  "endpointEntryRadiusAtCoefficientCapacity": 36392.018345433105,
+  "krawczykQAtCoefficientCapacity": 6.839096683997074e-05,
+  "boundaryRadiusCapacityUnscaledRows": 5.804600980653483e-10,
+  "endpointEntryRadiusAtBoundaryCapacity": 36392.018345433105,
+  "krawczykQAtBoundaryCapacity": 0.0,
+  "mixedHalfCapacityEndpointEntryRadius": 36392.3760536616,
+  "mixedHalfCapacityKrawczykQ": 3.419548341998537e-05,
+  "mixedHalfCapacityPlueckerRatioLower": 0.4999965260567383,
+  "simultaneousCapacityFraction": 0.49999508549087535,
+  "simultaneousCoefficientRadius": 6.37410315594797e-10,
+  "simultaneousBoundaryRadius": 2.9022719635622574e-10,
+  "simultaneousEndpointEntryRadius": 36392.018345433105,
+  "simultaneousKrawczykQ": 3.419514731195479e-05,
+  "simultaneousPlueckerRatioLower": 0.4999999999999994,
+  "linearCollocationKrawczykStatus": {
+    "label": "linear row-flow Krawczyk theorem",
+    "closed": true,
+    "status": "closed",
+    "reason": "The finite collocation systems have explicit inverse norms. If scaled companion-matrix and endpoint-row interval radii are below the reported capacities, the endpoint map remains inside the persistent Pluecker chart threshold."
+  },
+  "exactCoefficientEnclosureStatus": {
+    "label": "exact coefficient and boundary interval enclosure",
+    "closed": false,
+    "status": "open",
+    "reason": "Open.  The Krawczyk radii are now quantified, but the exact confluent trace-derivative coefficients and boundary rows still need interval/ball enclosures below these radii."
+  },
+  "conclusion": "The Krawczyk/collocation proof has been reduced to finite coefficient and boundary-row interval radii.  This avoids the useless raw Riccati Gronwall bound, but exact coefficient balls are still required to close the theorem.",
+  "nextTarget": "Build interval balls for the scaled companion matrices and active endpoint boundary rows, then compare their radii with the Krawczyk capacities reported here."
+}

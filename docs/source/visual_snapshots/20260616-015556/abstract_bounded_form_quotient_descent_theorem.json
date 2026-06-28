@@ -1,0 +1,28 @@
+{
+  "theoremName": "abstract bounded form quotient descent theorem",
+  "proofClass": "abstract functional analytic lemma",
+  "statement": "A trace-compatible quadratic form that is bounded in the transported quotient norm descends uniquely to a bounded closed quadratic form on the quotient Hilbert space.",
+  "statuses": {
+    "abstractQuotientDescentPrincipleStatus": {
+      "label": "abstract quotient descent principle",
+      "closed": true,
+      "status": "closed",
+      "reason": "Trace compatibility makes the value independent of the chosen representative.  Quotient-norm boundedness makes the descended form continuous on the quotient Hilbert space, hence closed."
+    },
+    "noModelSpecificInputStatus": {
+      "label": "no model-specific input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The lemma only uses the quotient Hilbert structure and boundedness.  Finite repair compatibility and bounds are supplied by separate augmented theorems."
+    }
+  },
+  "abstractBoundedFormQuotientDescentClosed": true,
+  "noVolterraOrThetaClaimed": true,
+  "proof": [
+    "If Rf=Rf', then f-f' lies in the null fiber; trace compatibility gives the same form value.",
+    "Therefore the form is well-defined on equivalence classes in Ran(R).",
+    "The quotient-norm bound gives a continuous bilinear/quadratic form on Ran(R).",
+    "Continuous extension to the Hilbert closure X is unique and closed."
+  ],
+  "remainingAnalyticGap": null
+}

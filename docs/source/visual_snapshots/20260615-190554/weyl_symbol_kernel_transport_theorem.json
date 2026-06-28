@@ -1,0 +1,25 @@
+{
+  "theoremName": "Weyl symbol coordinate-kernel transport theorem",
+  "proofClass": "symbolic identity",
+  "statuses": {
+    "weylSymbolStatus": {
+      "label": "Weyl symbol fixed",
+      "closed": true,
+      "status": "closed",
+      "reason": "The symbol sigma_omega is fixed in the same Weyl convention as the KLM theorem."
+    },
+    "coordinateKernelTransportStatus": {
+      "label": "coordinate Weyl kernel transport",
+      "closed": true,
+      "status": "closed",
+      "reason": "The coordinate kernel K_omega is the standard Weyl integral kernel associated with sigma_omega.  Therefore the quadratic form of K_omega equals <Op^W(sigma_omega)f,f>."
+    }
+  },
+  "weylSymbolKernelTransportClosed": true,
+  "proof": [
+    "Start from the fixed Weyl quantization formula for Op^W(sigma_omega).",
+    "Integrate in the momentum variable to obtain the coordinate kernel K_omega.",
+    "Apply Fubini on the Weyl test domain to identify the two quadratic forms."
+  ],
+  "remainingAnalyticGap": null
+}

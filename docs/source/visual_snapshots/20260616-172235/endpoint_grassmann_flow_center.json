@@ -1,0 +1,1159 @@
+{
+  "theoremName": "endpoint normalized exterior Grassmann center",
+  "sourceRowFlow": "endpoint adjoint row-flow center",
+  "orders": [
+    7,
+    9,
+    11
+  ],
+  "persistentChart": {
+    "columns": [
+      0,
+      1
+    ],
+    "coordinateIndex": 0,
+    "minAbsNormalizedCoordinate": 0.9564654847643472,
+    "meanAbsNormalizedCoordinate": 0.9613572269246907
+  },
+  "chartMarginThreshold": 0.5,
+  "projectiveTailTolerance": 0.05,
+  "tailPairsUsed": 1,
+  "grassmannCenters": [
+    {
+      "chebyshevOrder": 7,
+      "endpointMapRank": 2,
+      "sigmaMin": 3303645.7638790878,
+      "endpointMapFrobenius": 13407615.198811175,
+      "wedgeNorm": 42928340101205.9,
+      "bestNormalizedMinor": {
+        "columns": [
+          0,
+          1
+        ],
+        "determinant": -41351746202100.86,
+        "absDeterminant": 41351746202100.86,
+        "normalizedCoordinate": -0.9632738210844367,
+        "absNormalizedCoordinate": 0.9632738210844367
+      },
+      "topNormalizedMinors": [
+        {
+          "columns": [
+            0,
+            1
+          ],
+          "determinant": -41351746202100.86,
+          "absDeterminant": 41351746202100.86,
+          "normalizedCoordinate": -0.9632738210844367,
+          "absNormalizedCoordinate": 0.9632738210844367
+        },
+        {
+          "columns": [
+            0,
+            2
+          ],
+          "determinant": -11363561453060.719,
+          "absDeterminant": 11363561453060.719,
+          "normalizedCoordinate": -0.2647100126925594,
+          "absNormalizedCoordinate": 0.2647100126925594
+        },
+        {
+          "columns": [
+            1,
+            2
+          ],
+          "determinant": -1693602429062.9324,
+          "absDeterminant": 1693602429062.9324,
+          "normalizedCoordinate": -0.03945184987516807,
+          "absNormalizedCoordinate": 0.03945184987516807
+        },
+        {
+          "columns": [
+            0,
+            3
+          ],
+          "determinant": -920778079030.3813,
+          "absDeterminant": 920778079030.3813,
+          "normalizedCoordinate": -0.021449188970726493,
+          "absNormalizedCoordinate": 0.021449188970726493
+        },
+        {
+          "columns": [
+            1,
+            3
+          ],
+          "determinant": -151104950417.28162,
+          "absDeterminant": 151104950417.28162,
+          "normalizedCoordinate": -0.0035199346180412165,
+          "absNormalizedCoordinate": 0.0035199346180412165
+        },
+        {
+          "columns": [
+            0,
+            4
+          ],
+          "determinant": -75167103887.32074,
+          "absDeterminant": 75167103887.32074,
+          "normalizedCoordinate": -0.001750990224874994,
+          "absNormalizedCoordinate": 0.001750990224874994
+        },
+        {
+          "columns": [
+            1,
+            4
+          ],
+          "determinant": -15928665549.735514,
+          "absDeterminant": 15928665549.735514,
+          "normalizedCoordinate": -0.0003710524448926471,
+          "absNormalizedCoordinate": 0.0003710524448926471
+        },
+        {
+          "columns": [
+            0,
+            5
+          ],
+          "determinant": -7915617188.962884,
+          "absDeterminant": 7915617188.962884,
+          "normalizedCoordinate": -0.00018439141066953405,
+          "absNormalizedCoordinate": 0.00018439141066953405
+        }
+      ],
+      "chartMinor": {
+        "columns": [
+          0,
+          1
+        ],
+        "determinant": -41351746202100.86,
+        "absDeterminant": 41351746202100.86,
+        "normalizedCoordinate": -0.9632738210844367,
+        "absNormalizedCoordinate": 0.9632738210844367
+      },
+      "chartCoordinateNorm": 1.0381264165097084,
+      "orientedNormalizedVector": [
+        -0.9632738210844367,
+        -0.2647100126925594,
+        -0.021449188970726493,
+        -0.001750990224874994,
+        -0.00018439141066953405,
+        -7.945551280506981e-06,
+        -7.6137677064468e-08,
+        -0.03945184987516807,
+        -0.0035199346180412165,
+        -0.0003710524448926471,
+        -4.62634289238057e-05,
+        -2.0553678148401218e-06,
+        -1.9808235588607546e-08,
+        -8.881353601527773e-05,
+        -3.025255464710518e-05,
+        -5.161367927574136e-06,
+        -2.3940206721343205e-07,
+        -2.325056530826005e-09,
+        -1.8638551789375616e-06,
+        -3.5635487254173546e-07,
+        -1.673267901647238e-08,
+        -1.6285186999439776e-10,
+        -1.3067860657187617e-08,
+        -6.755220679859767e-10,
+        -6.678221211506612e-12,
+        -1.1838507023996124e-11,
+        -1.350379185180049e-13,
+        -9.305980200282039e-16
+      ],
+      "chartCoordinates": [
+        {
+          "columns": [
+            0,
+            1
+          ],
+          "coordinateIndex": 0,
+          "ratioToChartMinor": 1.0
+        },
+        {
+          "columns": [
+            0,
+            2
+          ],
+          "coordinateIndex": 1,
+          "ratioToChartMinor": 0.27480245689076604
+        },
+        {
+          "columns": [
+            0,
+            3
+          ],
+          "coordinateIndex": 2,
+          "ratioToChartMinor": 0.02226696968321985
+        },
+        {
+          "columns": [
+            0,
+            4
+          ],
+          "coordinateIndex": 3,
+          "ratioToChartMinor": 0.0018177492074930056
+        },
+        {
+          "columns": [
+            0,
+            5
+          ],
+          "coordinateIndex": 4,
+          "ratioToChartMinor": 0.00019142159439353336
+        },
+        {
+          "columns": [
+            0,
+            6
+          ],
+          "coordinateIndex": 5,
+          "ratioToChartMinor": 8.248486678026836e-06
+        },
+        {
+          "columns": [
+            0,
+            7
+          ],
+          "coordinateIndex": 6,
+          "ratioToChartMinor": 7.904053385230957e-08
+        },
+        {
+          "columns": [
+            1,
+            2
+          ],
+          "coordinateIndex": 7,
+          "ratioToChartMinor": 0.0409560075355872
+        },
+        {
+          "columns": [
+            1,
+            3
+          ],
+          "coordinateIndex": 8,
+          "ratioToChartMinor": 0.0036541371113755963
+        },
+        {
+          "columns": [
+            1,
+            4
+          ],
+          "coordinateIndex": 9,
+          "ratioToChartMinor": 0.0003851993449535697
+        },
+        {
+          "columns": [
+            1,
+            5
+          ],
+          "coordinateIndex": 10,
+          "ratioToChartMinor": 4.8027287684121994e-05
+        },
+        {
+          "columns": [
+            1,
+            6
+          ],
+          "coordinateIndex": 11,
+          "ratioToChartMinor": 2.133731624229365e-06
+        },
+        {
+          "columns": [
+            1,
+            7
+          ],
+          "coordinateIndex": 12,
+          "ratioToChartMinor": 2.056345262898122e-08
+        },
+        {
+          "columns": [
+            2,
+            3
+          ],
+          "coordinateIndex": 13,
+          "ratioToChartMinor": 9.219967788109618e-05
+        },
+        {
+          "columns": [
+            2,
+            4
+          ],
+          "coordinateIndex": 14,
+          "ratioToChartMinor": 3.140597614606342e-05
+        },
+        {
+          "columns": [
+            2,
+            5
+          ],
+          "coordinateIndex": 15,
+          "ratioToChartMinor": 5.358152390940677e-06
+        },
+        {
+          "columns": [
+            2,
+            6
+          ],
+          "coordinateIndex": 16,
+          "ratioToChartMinor": 2.485296101412965e-07
+        },
+        {
+          "columns": [
+            2,
+            7
+          ],
+          "coordinateIndex": 17,
+          "ratioToChartMinor": 2.413702604528894e-09
+        },
+        {
+          "columns": [
+            3,
+            4
+          ],
+          "coordinateIndex": 18,
+          "ratioToChartMinor": 1.934917297803512e-06
+        },
+        {
+          "columns": [
+            3,
+            5
+          ],
+          "coordinateIndex": 19,
+          "ratioToChartMinor": 3.699414068375256e-07
+        },
+        {
+          "columns": [
+            3,
+            6
+          ],
+          "coordinateIndex": 20,
+          "ratioToChartMinor": 1.737063610597766e-08
+        },
+        {
+          "columns": [
+            3,
+            7
+          ],
+          "coordinateIndex": 21,
+          "ratioToChartMinor": 1.69060828219189e-10
+        },
+        {
+          "columns": [
+            4,
+            5
+          ],
+          "coordinateIndex": 22,
+          "ratioToChartMinor": 1.3566091355494379e-08
+        },
+        {
+          "columns": [
+            4,
+            6
+          ],
+          "coordinateIndex": 23,
+          "ratioToChartMinor": 7.012773037115094e-10
+        },
+        {
+          "columns": [
+            4,
+            7
+          ],
+          "coordinateIndex": 24,
+          "ratioToChartMinor": 6.932837854960481e-12
+        },
+        {
+          "columns": [
+            5,
+            6
+          ],
+          "coordinateIndex": 25,
+          "ratioToChartMinor": 1.2289866873646106e-11
+        },
+        {
+          "columns": [
+            5,
+            7
+          ],
+          "coordinateIndex": 26,
+          "ratioToChartMinor": 1.4018643044402638e-13
+        },
+        {
+          "columns": [
+            6,
+            7
+          ],
+          "coordinateIndex": 27,
+          "ratioToChartMinor": 9.660783877429088e-16
+        }
+      ]
+    },
+    {
+      "chebyshevOrder": 9,
+      "endpointMapRank": 2,
+      "sigmaMin": 100147.98529313401,
+      "endpointMapFrobenius": 20948722.016410004,
+      "wedgeNorm": 2097948330348.5706,
+      "bestNormalizedMinor": {
+        "columns": [
+          0,
+          1
+        ],
+        "determinant": 2006615166797.3984,
+        "absDeterminant": 2006615166797.3984,
+        "normalizedCoordinate": 0.9564654847643472,
+        "absNormalizedCoordinate": 0.9564654847643472
+      },
+      "topNormalizedMinors": [
+        {
+          "columns": [
+            0,
+            1
+          ],
+          "determinant": 2006615166797.3984,
+          "absDeterminant": 2006615166797.3984,
+          "normalizedCoordinate": 0.9564654847643472,
+          "absNormalizedCoordinate": 0.9564654847643472
+        },
+        {
+          "columns": [
+            0,
+            2
+          ],
+          "determinant": 601269381432.5105,
+          "absDeterminant": 601269381432.5105,
+          "normalizedCoordinate": 0.2865987559057809,
+          "absNormalizedCoordinate": 0.2865987559057809
+        },
+        {
+          "columns": [
+            1,
+            2
+          ],
+          "determinant": 96424962434.08374,
+          "absDeterminant": 96424962434.08374,
+          "normalizedCoordinate": 0.04596155255075462,
+          "absNormalizedCoordinate": 0.04596155255075462
+        },
+        {
+          "columns": [
+            0,
+            3
+          ],
+          "determinant": 62437922339.628784,
+          "absDeterminant": 62437922339.628784,
+          "normalizedCoordinate": 0.029761420448927278,
+          "absNormalizedCoordinate": 0.029761420448927278
+        },
+        {
+          "columns": [
+            1,
+            3
+          ],
+          "determinant": 10614929715.195923,
+          "absDeterminant": 10614929715.195923,
+          "normalizedCoordinate": 0.005059671661900401,
+          "absNormalizedCoordinate": 0.005059671661900401
+        },
+        {
+          "columns": [
+            0,
+            4
+          ],
+          "determinant": 6816763510.783868,
+          "absDeterminant": 6816763510.783868,
+          "normalizedCoordinate": 0.003249252334851962,
+          "absNormalizedCoordinate": 0.003249252334851962
+        },
+        {
+          "columns": [
+            1,
+            4
+          ],
+          "determinant": 1430742472.15772,
+          "absDeterminant": 1430742472.15772,
+          "normalizedCoordinate": 0.0006819722161222172,
+          "absNormalizedCoordinate": 0.0006819722161222172
+        },
+        {
+          "columns": [
+            0,
+            5
+          ],
+          "determinant": 610610105.8433061,
+          "absDeterminant": 610610105.8433061,
+          "normalizedCoordinate": 0.000291051069757211,
+          "absNormalizedCoordinate": 0.000291051069757211
+        }
+      ],
+      "chartMinor": {
+        "columns": [
+          0,
+          1
+        ],
+        "determinant": 2006615166797.3984,
+        "absDeterminant": 2006615166797.3984,
+        "normalizedCoordinate": 0.9564654847643472,
+        "absNormalizedCoordinate": 0.9564654847643472
+      },
+      "chartCoordinateNorm": 1.0455160336981515,
+      "orientedNormalizedVector": [
+        -0.9564654847643472,
+        -0.2865987559057809,
+        -0.029761420448927278,
+        -0.003249252334851962,
+        -0.000291051069757211,
+        -1.0845147499588717e-05,
+        -9.845338749362567e-08,
+        -0.04596155255075462,
+        -0.005059671661900401,
+        -0.0006819722161222172,
+        -7.395781238648871e-05,
+        -2.978846744170564e-06,
+        -2.773352002548298e-08,
+        -8.595659221740741e-05,
+        -4.82105287629235e-05,
+        -8.174950488472529e-06,
+        -3.7144461546123613e-07,
+        -3.579137823197908e-09,
+        -4.031835919762387e-06,
+        -7.616236149705868e-07,
+        -3.531943961543206e-08,
+        -3.42142126924918e-10,
+        -4.372227978574461e-08,
+        -2.38684563171456e-09,
+        -2.4016266356288253e-11,
+        -6.786773646227423e-11,
+        -8.264527294226063e-13,
+        -7.837776365822066e-15
+      ],
+      "chartCoordinates": [
+        {
+          "columns": [
+            0,
+            1
+          ],
+          "coordinateIndex": 0,
+          "ratioToChartMinor": 1.0
+        },
+        {
+          "columns": [
+            0,
+            2
+          ],
+          "coordinateIndex": 1,
+          "ratioToChartMinor": 0.29964359453743666
+        },
+        {
+          "columns": [
+            0,
+            3
+          ],
+          "coordinateIndex": 2,
+          "ratioToChartMinor": 0.031116042264985506
+        },
+        {
+          "columns": [
+            0,
+            4
+          ],
+          "coordinateIndex": 3,
+          "ratioToChartMinor": 0.003397145413618881
+        },
+        {
+          "columns": [
+            0,
+            5
+          ],
+          "coordinateIndex": 4,
+          "ratioToChartMinor": 0.0003042985600561632
+        },
+        {
+          "columns": [
+            0,
+            6
+          ],
+          "coordinateIndex": 5,
+          "ratioToChartMinor": 1.133877559864142e-05
+        },
+        {
+          "columns": [
+            0,
+            7
+          ],
+          "coordinateIndex": 6,
+          "ratioToChartMinor": 1.029345951964827e-07
+        },
+        {
+          "columns": [
+            1,
+            2
+          ],
+          "coordinateIndex": 7,
+          "ratioToChartMinor": 0.04805354012547412
+        },
+        {
+          "columns": [
+            1,
+            3
+          ],
+          "coordinateIndex": 8,
+          "ratioToChartMinor": 0.005289967847765041
+        },
+        {
+          "columns": [
+            1,
+            4
+          ],
+          "coordinateIndex": 9,
+          "ratioToChartMinor": 0.0007130128864924391
+        },
+        {
+          "columns": [
+            1,
+            5
+          ],
+          "coordinateIndex": 10,
+          "ratioToChartMinor": 7.732407866731369e-05
+        },
+        {
+          "columns": [
+            1,
+            6
+          ],
+          "coordinateIndex": 11,
+          "ratioToChartMinor": 3.11443203295986e-06
+        },
+        {
+          "columns": [
+            1,
+            7
+          ],
+          "coordinateIndex": 12,
+          "ratioToChartMinor": 2.899583985753122e-08
+        },
+        {
+          "columns": [
+            2,
+            3
+          ],
+          "coordinateIndex": 13,
+          "ratioToChartMinor": 8.986899536535318e-05
+        },
+        {
+          "columns": [
+            2,
+            4
+          ],
+          "coordinateIndex": 14,
+          "ratioToChartMinor": 5.0404880814702426e-05
+        },
+        {
+          "columns": [
+            2,
+            5
+          ],
+          "coordinateIndex": 15,
+          "ratioToChartMinor": 8.547041810386563e-06
+        },
+        {
+          "columns": [
+            2,
+            6
+          ],
+          "coordinateIndex": 16,
+          "ratioToChartMinor": 3.8835130109556667e-07
+        },
+        {
+          "columns": [
+            2,
+            7
+          ],
+          "coordinateIndex": 17,
+          "ratioToChartMinor": 3.742045980968912e-09
+        },
+        {
+          "columns": [
+            3,
+            4
+          ],
+          "coordinateIndex": 18,
+          "ratioToChartMinor": 4.215349099351709e-06
+        },
+        {
+          "columns": [
+            3,
+            5
+          ],
+          "coordinateIndex": 19,
+          "ratioToChartMinor": 7.96289701094896e-07
+        },
+        {
+          "columns": [
+            3,
+            6
+          ],
+          "coordinateIndex": 20,
+          "ratioToChartMinor": 3.692704041916789e-08
+        },
+        {
+          "columns": [
+            3,
+            7
+          ],
+          "coordinateIndex": 21,
+          "ratioToChartMinor": 3.5771507950358977e-10
+        },
+        {
+          "columns": [
+            4,
+            5
+          ],
+          "coordinateIndex": 22,
+          "ratioToChartMinor": 4.571234454583256e-08
+        },
+        {
+          "columns": [
+            4,
+            6
+          ],
+          "coordinateIndex": 23,
+          "ratioToChartMinor": 2.4954853779199656e-09
+        },
+        {
+          "columns": [
+            4,
+            7
+          ],
+          "coordinateIndex": 24,
+          "ratioToChartMinor": 2.510939154506485e-11
+        },
+        {
+          "columns": [
+            5,
+            6
+          ],
+          "coordinateIndex": 25,
+          "ratioToChartMinor": 7.095680664210837e-11
+        },
+        {
+          "columns": [
+            5,
+            7
+          ],
+          "coordinateIndex": 26,
+          "ratioToChartMinor": 8.640695797049349e-13
+        },
+        {
+          "columns": [
+            6,
+            7
+          ],
+          "coordinateIndex": 27,
+          "ratioToChartMinor": 8.194520859007398e-15
+        }
+      ]
+    },
+    {
+      "chebyshevOrder": 11,
+      "endpointMapRank": 2,
+      "sigmaMin": 227734.18272342923,
+      "endpointMapFrobenius": 16756072.529728482,
+      "wedgeNorm": 3815578029168.0967,
+      "bestNormalizedMinor": {
+        "columns": [
+          0,
+          1
+        ],
+        "determinant": 3679485422580.422,
+        "absDeterminant": 3679485422580.422,
+        "normalizedCoordinate": 0.9643323749252883,
+        "absNormalizedCoordinate": 0.9643323749252883
+      },
+      "topNormalizedMinors": [
+        {
+          "columns": [
+            0,
+            1
+          ],
+          "determinant": 3679485422580.422,
+          "absDeterminant": 3679485422580.422,
+          "normalizedCoordinate": 0.9643323749252883,
+          "absNormalizedCoordinate": 0.9643323749252883
+        },
+        {
+          "columns": [
+            0,
+            2
+          ],
+          "determinant": 995989076224.9185,
+          "absDeterminant": 995989076224.9185,
+          "normalizedCoordinate": 0.26103229146700796,
+          "absNormalizedCoordinate": 0.26103229146700796
+        },
+        {
+          "columns": [
+            1,
+            2
+          ],
+          "determinant": 145565773855.37158,
+          "absDeterminant": 145565773855.37158,
+          "normalizedCoordinate": 0.0381503857980619,
+          "absNormalizedCoordinate": 0.0381503857980619
+        },
+        {
+          "columns": [
+            0,
+            3
+          ],
+          "determinant": 81507438441.0144,
+          "absDeterminant": 81507438441.0144,
+          "normalizedCoordinate": 0.021361753794034013,
+          "absNormalizedCoordinate": 0.021361753794034013
+        },
+        {
+          "columns": [
+            1,
+            3
+          ],
+          "determinant": 12133828091.35318,
+          "absDeterminant": 12133828091.35318,
+          "normalizedCoordinate": 0.00318007599336101,
+          "absNormalizedCoordinate": 0.00318007599336101
+        },
+        {
+          "columns": [
+            0,
+            4
+          ],
+          "determinant": 6800484952.962906,
+          "absDeterminant": 6800484952.962906,
+          "normalizedCoordinate": 0.0017822948190226377,
+          "absNormalizedCoordinate": 0.0017822948190226377
+        },
+        {
+          "columns": [
+            1,
+            4
+          ],
+          "determinant": 1271592751.9621506,
+          "absDeterminant": 1271592751.9621506,
+          "normalizedCoordinate": 0.0003332634642094827,
+          "absNormalizedCoordinate": 0.0003332634642094827
+        },
+        {
+          "columns": [
+            0,
+            5
+          ],
+          "determinant": 701457809.8368809,
+          "absDeterminant": 701457809.8368809,
+          "normalizedCoordinate": 0.000183840509740491,
+          "absNormalizedCoordinate": 0.000183840509740491
+        }
+      ],
+      "chartMinor": {
+        "columns": [
+          0,
+          1
+        ],
+        "determinant": 3679485422580.422,
+        "absDeterminant": 3679485422580.422,
+        "normalizedCoordinate": 0.9643323749252883,
+        "absNormalizedCoordinate": 0.9643323749252883
+      },
+      "chartCoordinateNorm": 1.0369868584755075,
+      "orientedNormalizedVector": [
+        -0.9643323749252883,
+        -0.26103229146700796,
+        -0.021361753794034013,
+        -0.0017822948190226377,
+        -0.000183840509740491,
+        -7.800150965807004e-06,
+        -7.434182388708535e-08,
+        -0.0381503857980619,
+        -0.00318007599336101,
+        -0.0003332634642094827,
+        -4.44520153136709e-05,
+        -2.021578018678381e-06,
+        -1.9609713834380422e-08,
+        -1.5703480889367927e-05,
+        -1.9699940878481587e-05,
+        -4.759588255136158e-06,
+        -2.386297296967947e-07,
+        -2.367025451316593e-09,
+        -1.5049366190123584e-06,
+        -3.7844442915706735e-07,
+        -1.9059174572364658e-08,
+        -1.8923478481124588e-10,
+        -1.8623528481980938e-08,
+        -1.0406605884164108e-09,
+        -1.0551214363263237e-11,
+        -2.5837049445672656e-11,
+        -3.115273334320927e-13,
+        -2.7697206225780896e-15
+      ],
+      "chartCoordinates": [
+        {
+          "columns": [
+            0,
+            1
+          ],
+          "coordinateIndex": 0,
+          "ratioToChartMinor": 1.0
+        },
+        {
+          "columns": [
+            0,
+            2
+          ],
+          "coordinateIndex": 1,
+          "ratioToChartMinor": 0.2706870558890356
+        },
+        {
+          "columns": [
+            0,
+            3
+          ],
+          "coordinateIndex": 2,
+          "ratioToChartMinor": 0.022151857958402583
+        },
+        {
+          "columns": [
+            0,
+            4
+          ],
+          "coordinateIndex": 3,
+          "ratioToChartMinor": 0.0018482163052554582
+        },
+        {
+          "columns": [
+            0,
+            5
+          ],
+          "coordinateIndex": 4,
+          "ratioToChartMinor": 0.0001906401926563277
+        },
+        {
+          "columns": [
+            0,
+            6
+          ],
+          "coordinateIndex": 5,
+          "ratioToChartMinor": 8.0886540456669e-06
+        },
+        {
+          "columns": [
+            0,
+            7
+          ],
+          "coordinateIndex": 6,
+          "ratioToChartMinor": 7.709149440600808e-08
+        },
+        {
+          "columns": [
+            1,
+            2
+          ],
+          "coordinateIndex": 7,
+          "ratioToChartMinor": 0.03956144871836083
+        },
+        {
+          "columns": [
+            1,
+            3
+          ],
+          "coordinateIndex": 8,
+          "ratioToChartMinor": 0.0032976970140688126
+        },
+        {
+          "columns": [
+            1,
+            4
+          ],
+          "coordinateIndex": 9,
+          "ratioToChartMinor": 0.0003455898327952562
+        },
+        {
+          "columns": [
+            1,
+            5
+          ],
+          "coordinateIndex": 10,
+          "ratioToChartMinor": 4.6096155713028735e-05
+        },
+        {
+          "columns": [
+            1,
+            6
+          ],
+          "coordinateIndex": 11,
+          "ratioToChartMinor": 2.096349838752435e-06
+        },
+        {
+          "columns": [
+            1,
+            7
+          ],
+          "coordinateIndex": 12,
+          "ratioToChartMinor": 2.033501554471785e-08
+        },
+        {
+          "columns": [
+            2,
+            3
+          ],
+          "coordinateIndex": 13,
+          "ratioToChartMinor": 1.6284303314595813e-05
+        },
+        {
+          "columns": [
+            2,
+            4
+          ],
+          "coordinateIndex": 14,
+          "ratioToChartMinor": 2.042857980372985e-05
+        },
+        {
+          "columns": [
+            2,
+            5
+          ],
+          "coordinateIndex": 15,
+          "ratioToChartMinor": 4.935630472330567e-06
+        },
+        {
+          "columns": [
+            2,
+            6
+          ],
+          "coordinateIndex": 16,
+          "ratioToChartMinor": 2.474558937371386e-07
+        },
+        {
+          "columns": [
+            2,
+            7
+          ],
+          "coordinateIndex": 17,
+          "ratioToChartMinor": 2.454574286692364e-09
+        },
+        {
+          "columns": [
+            3,
+            4
+          ],
+          "coordinateIndex": 18,
+          "ratioToChartMinor": 1.560599496754377e-06
+        },
+        {
+          "columns": [
+            3,
+            5
+          ],
+          "coordinateIndex": 19,
+          "ratioToChartMinor": 3.92441899699144e-07
+        },
+        {
+          "columns": [
+            3,
+            6
+          ],
+          "coordinateIndex": 20,
+          "ratioToChartMinor": 1.97641135649327e-08
+        },
+        {
+          "columns": [
+            3,
+            7
+          ],
+          "coordinateIndex": 21,
+          "ratioToChartMinor": 1.9623398501570255e-10
+        },
+        {
+          "columns": [
+            4,
+            5
+          ],
+          "coordinateIndex": 22,
+          "ratioToChartMinor": 1.931235429425855e-08
+        },
+        {
+          "columns": [
+            4,
+            6
+          ],
+          "coordinateIndex": 23,
+          "ratioToChartMinor": 1.079151354321207e-09
+        },
+        {
+          "columns": [
+            4,
+            7
+          ],
+          "coordinateIndex": 24,
+          "ratioToChartMinor": 1.0941470635661996e-11
+        },
+        {
+          "columns": [
+            5,
+            6
+          ],
+          "coordinateIndex": 25,
+          "ratioToChartMinor": 2.679268073694444e-11
+        },
+        {
+          "columns": [
+            5,
+            7
+          ],
+          "coordinateIndex": 26,
+          "ratioToChartMinor": 3.230497508249978e-13
+        },
+        {
+          "columns": [
+            6,
+            7
+          ],
+          "coordinateIndex": 27,
+          "ratioToChartMinor": 2.8721638872620798e-15
+        }
+      ]
+    }
+  ],
+  "projectiveComparisons": [
+    {
+      "leftOrder": 7,
+      "rightOrder": 9,
+      "orientedDot": 0.9996791676541348,
+      "projectiveAbsDot": 0.9996791676541348,
+      "projectiveChordalDistance": 0.02532906943289262,
+      "orientedChordalDistance": 0.025331101273545747
+    },
+    {
+      "leftOrder": 9,
+      "rightOrder": 11,
+      "orientedDot": 0.9995735373129334,
+      "projectiveAbsDot": 0.9995735373129334,
+      "projectiveChordalDistance": 0.029201772270012555,
+      "orientedChordalDistance": 0.02920488613456593
+    }
+  ],
+  "persistentChartNoncollapseStatus": {
+    "label": "persistent affine Grassmann chart identified",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed at the numerical-center level if one Pluecker coordinate stays uniformly away from zero across all recorded orders."
+  },
+  "tailProjectiveStabilityStatus": {
+    "label": "tail projective Grassmann stability",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed at the numerical-center level if the latest normalized two-plane comparisons are below the configured projective distance tolerance."
+  },
+  "rankShortcutReadyStatus": {
+    "label": "full-rank shortcut ready for interval proof",
+    "closed": false,
+    "status": "open",
+    "reason": "Still open.  This diagnostic identifies the projective chart for a future ball certificate, but it does not enclose the exact endpoint flow."
+  },
+  "conclusion": "The raw endpoint-map scale is unstable, but the normalized Pluecker coordinate in the persistent chart is large.  The latest projective comparison is the relevant convergence metric for the full-rank shortcut.",
+  "nextTarget": "Build an interval enclosure directly in the persistent Pluecker chart, or integrate the corresponding Riccati chart equations with ball arithmetic."
+}
