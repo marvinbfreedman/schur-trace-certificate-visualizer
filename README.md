@@ -40,6 +40,82 @@ This is a source-only companion publication for the manuscript
 `rh_weyl_positive_draft.tex` and the frozen submission bundle
 `submission_bundle_20260618-probe3`.
 
+## Python Quick Start
+
+These commands apply to the full companion source bundle, not only the static
+GitHub Pages subset in `docs/`.
+
+Check Python:
+
+```bash
+python3 --version
+```
+
+Python 3.10 or newer is recommended. Most ledger-reading commands use only the
+Python standard library. Numerical scripts may use `numpy`, `scipy`, `mpmath`,
+and `matplotlib`.
+
+Install common dependencies when running the full source bundle:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install -r requirements.txt
+```
+
+Read the ledger dashboard:
+
+```bash
+python3 rh_dashboard.py
+python3 rh_dashboard.py --output reports/dashboard.txt --json-out reports/dashboard_summary.json
+```
+
+Expected regenerated status from the current archive:
+
+- 293 theorem records are detected.
+- 293 theorem records are marked closed.
+- 0 theorem-ledger gaps remain open.
+- 16 numerical certificates are detected.
+- No scan file reports negative inertia/eigenvalue evidence.
+
+Preview which scripts would still run without overwriting existing JSON:
+
+```bash
+python3 rh_orchestrator.py --dry-run --skip-existing
+```
+
+Run unpaired entry-point scripts with a timeout:
+
+```bash
+python3 rh_orchestrator.py --skip-existing --workers 8 --timeout 120
+```
+
+Useful filtered runs:
+
+```bash
+python3 rh_orchestrator.py --filter scan --dry-run
+python3 rh_orchestrator.py --filter certificate --dry-run
+python3 rh_orchestrator.py --filter theorem --dry-run
+python3 rh_orchestrator.py --filter certificate --workers 8 --timeout 120
+python3 rh_orchestrator.py --filter scan --workers 8 --timeout 120
+```
+
+The orchestrator sets `PYTHONPATH=source/` and runs each entry-point script in
+its own subprocess.
+
+To open the visual explainer locally from a source bundle, use an HTTP server so
+the JSON data can be fetched:
+
+```bash
+python3 -m http.server 8765
+```
+
+Then visit:
+
+```text
+http://127.0.0.1:8765/visual/visual_explainer.html
+```
+
 ## Published Paths
 
 - `docs/source/visual_explainer.html`
