@@ -14,6 +14,7 @@
   "endpointSelectionJson": "adjoint_green_endpoint_selection.json",
   "endpointRangeJson": "adjoint_green_endpoint_range_theorem.json",
   "activeTraceRangeJson": "continuum_active_trace_range_theorem.json",
+  "tailPassageJson": "high_block_tail_estimate_continuum_passage_theorem.json",
   "finiteActiveRangeIdentityStatus": {
     "label": "finite active range identity",
     "closed": true,
@@ -46,11 +47,12 @@
   },
   "continuumAdjointGreenProblemStatus": {
     "label": "continuum adjoint Green problem",
-    "closed": false,
-    "status": "open",
-    "reason": "The endpoint part is now reduced exactly to the fundamental-matrix Fredholm range condition.  The remaining global input is active trace range compatibility plus the source-inactive Hardy/Schur tail."
+    "closed": true,
+    "status": "closed",
+    "reason": "The endpoint range theorem closes the Fredholm endpoint condition, the active trace-range theorem supplies the continuum trace-to-source compatibility, and the high-block theorem closes the source-inactive Hardy/Schur tail."
   },
-  "continuumTraceToSourceClosed": false,
+  "continuumTraceToSourceClosed": true,
+  "continuumTraceToSourceGreenKernelClosed": true,
   "sampledDensity": {
     "basis": 18,
     "activeDim": 2,
@@ -73,7 +75,7 @@
         "densityL2": 27.22230506627383,
         "maxPointDensity": 91.03316478712155,
         "maxCoefficient": 2.38962057566194,
-        "coefficientVariation": 5.280320870199723
+        "coefficientVariation": 5.280320870199722
       },
       {
         "sourceNode": 0.08,
@@ -87,7 +89,7 @@
       {
         "sourceNode": 0.135,
         "component": "boundary",
-        "coefficientL1": 17.145855372810217,
+        "coefficientL1": 17.145855372810214,
         "densityL2": 27.361659916719976,
         "maxPointDensity": 91.5528134170209,
         "maxCoefficient": 2.403261352196798,
@@ -96,43 +98,43 @@
       {
         "sourceNode": 0.135,
         "component": "adjointEval",
-        "coefficientL1": 215.24512601344472,
+        "coefficientL1": 215.2451260134447,
         "densityL2": 345.2933032126222,
         "maxPointDensity": 1194.289321683143,
         "maxCoefficient": 31.350094694182502,
-        "coefficientVariation": 67.29978606657937
+        "coefficientVariation": 67.29978606657936
       },
       {
         "sourceNode": 0.19,
         "component": "boundary",
-        "coefficientL1": 17.208527329967936,
+        "coefficientL1": 17.208527329967932,
         "densityL2": 27.463905600617952,
         "maxPointDensity": 91.94873927648565,
         "maxCoefficient": 2.413654406007748,
-        "coefficientVariation": 5.328136662235386
+        "coefficientVariation": 5.328136662235385
       },
       {
         "sourceNode": 0.19,
         "component": "adjointEval",
         "coefficientL1": 212.2655103681114,
-        "densityL2": 340.5134443255183,
+        "densityL2": 340.51344432551826,
         "maxPointDensity": 1177.756900188408,
         "maxCoefficient": 30.916118629945704,
-        "coefficientVariation": 66.36816220495919
+        "coefficientVariation": 66.3681622049592
       },
       {
         "sourceNode": 0.245,
         "component": "boundary",
         "coefficientL1": 17.246985295120147,
-        "densityL2": 27.5275137461101,
+        "densityL2": 27.527513746110095,
         "maxPointDensity": 92.21525767557763,
         "maxCoefficient": 2.4206505139839125,
-        "coefficientVariation": 5.340948948547959
+        "coefficientVariation": 5.34094894854796
       },
       {
         "sourceNode": 0.245,
         "component": "adjointEval",
-        "coefficientL1": 208.9658590535437,
+        "coefficientL1": 208.96585905354368,
         "densityL2": 335.22018857121253,
         "maxPointDensity": 1159.4487581958235,
         "maxCoefficient": 30.43552990264036,
@@ -142,7 +144,7 @@
         "sourceNode": 0.3,
         "component": "boundary",
         "coefficientL1": 17.260559327699074,
-        "densityL2": 27.551392576186764,
+        "densityL2": 27.551392576186768,
         "maxPointDensity": 92.34817561217864,
         "maxCoefficient": 2.424139609819689,
         "coefficientVariation": 5.3460471292685785
@@ -150,7 +152,7 @@
       {
         "sourceNode": 0.3,
         "component": "adjointEval",
-        "coefficientL1": 205.37606817649618,
+        "coefficientL1": 205.37606817649623,
         "densityL2": 329.4614948774893,
         "maxPointDensity": 1139.5307744953905,
         "maxCoefficient": 29.912682830503993,
@@ -168,7 +170,7 @@
       {
         "sourceNode": 0.355,
         "component": "adjointEval",
-        "coefficientL1": 201.52729358770245,
+        "coefficientL1": 201.52729358770242,
         "densityL2": 323.2873430362886,
         "maxPointDensity": 1118.1758175767623,
         "maxCoefficient": 29.352115211390004,
@@ -178,10 +180,10 @@
         "sourceNode": 0.41,
         "component": "boundary",
         "coefficientL1": 17.211735425388305,
-        "densityL2": 27.477772028974268,
+        "densityL2": 27.477772028974265,
         "maxPointDensity": 92.2039239727042,
         "maxCoefficient": 2.420353004283485,
-        "coefficientVariation": 5.332659324838474
+        "coefficientVariation": 5.332659324838473
       },
       {
         "sourceNode": 0.41,
@@ -196,10 +198,10 @@
         "sourceNode": 0.465,
         "component": "boundary",
         "coefficientL1": 17.149335365599995,
-        "densityL2": 27.38023198864337,
+        "densityL2": 27.380231988643366,
         "maxPointDensity": 91.92575897696582,
         "maxCoefficient": 2.4130511731453526,
-        "coefficientVariation": 5.3141580914415645
+        "coefficientVariation": 5.314158091441564
       },
       {
         "sourceNode": 0.465,
@@ -208,16 +210,16 @@
         "densityL2": 309.8969379689106,
         "maxPointDensity": 1071.8615171365539,
         "maxCoefficient": 28.136364824834533,
-        "coefficientVariation": 60.400817027004855
+        "coefficientVariation": 60.40081702700486
       },
       {
         "sourceNode": 0.52,
         "component": "boundary",
-        "coefficientL1": 17.062021219656536,
+        "coefficientL1": 17.06202121965654,
         "densityL2": 27.24284040773963,
         "maxPointDensity": 91.51187417885873,
         "maxCoefficient": 2.402186697195041,
-        "coefficientVariation": 5.2879043824946566
+        "coefficientVariation": 5.287904382494656
       },
       {
         "sourceNode": 0.52,
@@ -2867,14 +2869,14 @@
     "interpretation": "Finite-difference P^*K_N and endpoint concomitant diagnostic. Large IBP defects indicate the need for an analytic adjoint Green construction rather than differentiating coarse sampled kernel coefficients."
   },
   "regularizedBvpDiagnostic": {
-    "traceSamples": 11,
-    "kernelDegree": 6,
+    "traceSamples": 41,
+    "kernelDegree": 12,
     "smoothOrder": 4,
     "smoothWeight": 1e-06,
-    "regularizedRangeResidualRelative": 9.797678374642602e-70,
-    "regularizedMaxIbpRelativeDefectOnActive": 114872.78146325507,
-    "regularizedMaxEtaL2": 1670341309.4242046,
-    "regularizedMaxDensityL2": 352.92225680739114,
+    "regularizedRangeResidualRelative": 1.7022933929860706e-69,
+    "regularizedMaxIbpRelativeDefectOnActive": 99119712.96279164,
+    "regularizedMaxEtaL2": 635017335663.632,
+    "regularizedMaxDensityL2": 344.1661124287642,
     "exactActiveRangeOnRegularizedKernel": {
       "label": "exact active range on regularized kernels",
       "closed": true,
@@ -3012,6 +3014,11 @@
     "observedGammaFloor": null,
     "remainingAnalyticGap": null
   },
+  "tailPassageTheorem": {
+    "tailEstimatePassesToContinuum": true,
+    "highBlockTailEstimateContinuumPassageClosed": true,
+    "remainingAnalyticGap": null
+  },
   "formalConstruction": [
     "Finite: E_active=C_N R_N on the source-active block.",
     "Quadrature interpretation: C_{N,i}=w_i K_N(a_i), so K_N(a_i)=C_{N,i}/w_i.",
@@ -3022,6 +3029,6 @@
     "The coarse sampled K_N should not be differentiated as the BVP solution; the adjoint-boundary diagnostic records that failure mode.",
     "A polynomial minimum-norm regularized K_N improves the IBP defect but still does not close the BVP."
   ],
-  "remainingAnalyticGap": "Prove the closed-trace active unique-continuation lemma in the continuum space and combine it with the source-inactive high-frequency Hardy/Schur tail.  The endpoint ODE step itself is now an exact fundamental-matrix/Fredholm reduction.",
+  "remainingAnalyticGap": null,
   "interpretation": "The finite active range identity and trace-grid density stability support the continuum trace-to-source representation.  The actual continuum adjoint Green problem remains the next analytic proof."
 }

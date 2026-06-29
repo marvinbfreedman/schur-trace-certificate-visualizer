@@ -1,0 +1,46 @@
+{
+  "theoremName": "augmented trace quotient compatibility identity",
+  "proofClass": "symbolic identity",
+  "twoSidedBoundsJson": "augmented_trace_quotient_two_sided_bounds_theorem.json",
+  "legacyQuotientLimsupJson": null,
+  "legacyQuotientLiminfJson": null,
+  "transportedTraceSpace": {
+    "name": "X_aug",
+    "definition": "closure Ran(R_aug) with quotient norm inf{||f||_V:R_aug f=x}"
+  },
+  "statement": "The finite trace quotient norms induced by R_aug,N converge to the transported quotient norm on X_aug in the Mosco sense.",
+  "statuses": {
+    "twoSidedBoundsInputStatus": {
+      "label": "two-sided trace quotient bounds input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The two-sided bounds theorem packages the upper and lower quotient inequalities."
+    },
+    "quotientLimsupInputStatus": {
+      "label": "trace quotient upper bound input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The two-sided bounds theorem includes the recovery upper bound."
+    },
+    "quotientLiminfInputStatus": {
+      "label": "trace quotient lower bound input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The two-sided bounds theorem includes the representative compactness lower bound."
+    },
+    "traceQuotientCompatibilityStatus": {
+      "label": "trace quotient compatibility",
+      "closed": true,
+      "status": "closed",
+      "reason": "By definition, having both the upper and lower quotient bounds is exactly trace quotient compatibility on X_aug."
+    }
+  },
+  "traceQuotientCompatibilityClosed": true,
+  "finiteTraceQuotientNormConvergenceClosed": true,
+  "proof": [
+    "Import the two-sided quotient bounds theorem.",
+    "Read off the upper and lower quotient inequalities.",
+    "Use the definition of trace quotient compatibility."
+  ],
+  "remainingAnalyticGap": null
+}

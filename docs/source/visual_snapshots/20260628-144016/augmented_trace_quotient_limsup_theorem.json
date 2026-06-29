@@ -1,0 +1,29 @@
+{
+  "theoremName": "augmented trace quotient limsup theorem",
+  "proofClass": "analytic proof",
+  "traceRecoveryJson": "augmented_trace_recovery_sequence_theorem.json",
+  "statement": "For every x=R_aug f in X_aug, finite representatives x_N=R_aug,N f_N satisfy limsup ||x_N||_{X_aug,N} <= ||x||_{X_aug}.",
+  "statuses": {
+    "traceRecoveryInputStatus": {
+      "label": "trace recovery input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Recovery sequences recover both graph vectors and their augmented trace coordinates."
+    },
+    "traceQuotientLimsupStatus": {
+      "label": "trace quotient limsup",
+      "closed": true,
+      "status": "closed",
+      "reason": "Use recovered representatives f_N for x_N; the finite quotient norm is bounded by ||f_N||_V, and ||f_N||_V -> ||f||_V after taking near-minimizers for the limiting quotient norm."
+    }
+  },
+  "traceQuotientLimsupClosed": true,
+  "finiteQuotientUpperBoundClosed": true,
+  "proof": [
+    "Choose f with R_aug f=x and ||f||_V within epsilon of the quotient norm.",
+    "Use trace recovery to get f_N and x_N=R_aug,N f_N -> x.",
+    "Bound ||x_N||_{X_aug,N} by ||f_N||_V.",
+    "Pass N->infinity and epsilon->0."
+  ],
+  "remainingAnalyticGap": null
+}

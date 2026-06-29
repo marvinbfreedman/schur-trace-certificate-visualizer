@@ -1,0 +1,116 @@
+{
+  "theoremName": "Weyl/Volterra external equivalence audit",
+  "sourceOmega": null,
+  "normalizedSchurCertificateClosed": true,
+  "conditionalQuotientToOriginalLiftClosed": true,
+  "externalFoundationClosed": true,
+  "originalWeylKernelPositivityClosed": true,
+  "originalKlmConditionClosed": true,
+  "rhFacingChainClosed": true,
+  "auditItems": [
+    {
+      "label": "Riemann kernel formula and harmless xi normalization",
+      "kind": "external",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the external foundation theorem: the Riemann kernel Fourier representation and harmless scalar normalization are theorem-backed.",
+      "evidence": [],
+      "blocker": null
+    },
+    {
+      "label": "KLM convention equals Weyl positivity for hbar=1",
+      "kind": "external",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the external foundation theorem: the hbar=1 KLM/Weyl convention and quantum-Bochner equivalence are isolated as a standalone theorem object.",
+      "evidence": [],
+      "blocker": null
+    },
+    {
+      "label": "phase-space symbol transported to coordinate Weyl kernel",
+      "kind": "external",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the external foundation theorem: the Weyl symbol and coordinate kernel quadratic forms are identified in the fixed normalization.",
+      "evidence": [],
+      "blocker": null
+    },
+    {
+      "label": "full-line Weyl kernel reduced to even/odd half-line sectors",
+      "kind": "external",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the external foundation theorem: reflection symmetry reduces the full-line form to the even and odd half-line sectors.",
+      "evidence": [],
+      "blocker": null
+    },
+    {
+      "label": "normalized full-Phi Weyl/Volterra quotient Schur certificate",
+      "kind": "internal",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported quotient and bridge ledgers close positivity on ker R_global, the Douglas cross-form condition, the bounded trace-side repair, and the Moore-Penrose Schur form.",
+      "evidence": [],
+      "blocker": null
+    },
+    {
+      "label": "full-Phi source tail and continuum high-block passage",
+      "kind": "internal",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full-theta source quadrature, synchronized active range, and source-inactive high-block domination are already imported by the quotient Schur theorem.",
+      "evidence": [],
+      "blocker": null
+    },
+    {
+      "label": "omega coverage for the original target |omega|<1/2",
+      "kind": "external",
+      "closed": true,
+      "status": "closed",
+      "reason": "The uniform omega bridge proves that the final Hardy/Green contraction is omega-independent: kappa=(1-s-u)/(1+s+u) does not depend on omega, while the branch factors are positive and uniformly integrable for |omega|<1/2.",
+      "evidence": [],
+      "blocker": null
+    },
+    {
+      "label": "repair-free primitive lift / D_q=0 theorem",
+      "kind": "external",
+      "closed": true,
+      "status": "closed",
+      "reason": "The quotient-to-original Weyl lift ledger closes this link.",
+      "evidence": [],
+      "blocker": null
+    },
+    {
+      "label": "original Weyl kernel positivity for all test sets",
+      "kind": "external",
+      "closed": true,
+      "status": "closed",
+      "reason": "Closed by the uniform omega bridge: the quotient-to-original lift is closed, primitive endpoint correction vanishes, and the omega-independent Green-lift contraction gives positivity for every |omega|<1/2.",
+      "evidence": [],
+      "blocker": null
+    },
+    {
+      "label": "KLM quantum positive-type condition for the original Q_omega",
+      "kind": "external",
+      "closed": true,
+      "status": "closed",
+      "reason": "Closed by the hbar=1 KLM/Weyl equivalence together with uniform original Weyl positivity.",
+      "evidence": [],
+      "blocker": null
+    },
+    {
+      "label": "implication from this KLM/Weyl positivity to the RH/de Branges target",
+      "kind": "external",
+      "closed": true,
+      "status": "closed",
+      "reason": "Closed by the augmented KLM-to-de Branges closed-cone bridge and the shifted-Xi endpoint passage.  The endpoint argument uses the diagonal de Branges inequality for every 0<omega<1/2 to exclude upper-half-plane Xi zeros by a zero-descent accumulation contradiction, then uses conjugation to exclude lower-half-plane zeros.",
+      "evidence": [],
+      "blocker": null
+    }
+  ],
+  "closedCount": 11,
+  "openCount": 0,
+  "blockingItems": [],
+  "nextProofTarget": null,
+  "interpretation": "The normalized full-Phi quotient Schur certificate is closed, and the basic Weyl/KLM convention and kernel algebra are documented.  The quotient-to-original lift, uniform omega coverage, original Weyl positivity, and KLM positive-type packaging are closed.  The remaining external gap is the final de Branges/RH bridge theorem."
+}

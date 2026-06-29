@@ -17,6 +17,7 @@
   },
   "certificateConstants": {
     "dMin": -5.537301291337967e-69,
+    "dMax": 1e-18,
     "pMin": 9.483221247842344e-06,
     "constructedSchurMin": 9.483221245850071e-06,
     "normalizedRangeResidual": 0.0,

@@ -39,10 +39,10 @@
     {
       "nmax": 3,
       "atomCount": 6,
-      "maxXiRelativeErrorOnShiftedNodes": 1.0253993358717654e-15,
-      "signedHardyGramRelativeErrorVsFullDeBranges": 1.6468306344420745e-14,
+      "maxXiRelativeErrorOnShiftedNodes": 1.026584540662541e-15,
+      "signedHardyGramRelativeErrorVsFullDeBranges": 1.6583946669023032e-14,
       "signedHardyGramFrobenius": 0.008549621932844408,
-      "directDeBrangesFrobenius": 0.008549621932844396,
+      "directDeBrangesFrobenius": 0.0085496219328444,
       "plusBranchFrobenius": 0.15192573233925002,
       "minusBranchFrobenius": 0.145268454299407,
       "splitDiagnostics": {
@@ -828,10 +828,10 @@
     {
       "nmax": 5,
       "atomCount": 10,
-      "maxXiRelativeErrorOnShiftedNodes": 1.0253993358717654e-15,
-      "signedHardyGramRelativeErrorVsFullDeBranges": 1.6468306344420745e-14,
+      "maxXiRelativeErrorOnShiftedNodes": 1.026584540662541e-15,
+      "signedHardyGramRelativeErrorVsFullDeBranges": 1.6583946669023032e-14,
       "signedHardyGramFrobenius": 0.008549621932844408,
-      "directDeBrangesFrobenius": 0.008549621932844396,
+      "directDeBrangesFrobenius": 0.0085496219328444,
       "plusBranchFrobenius": 0.15192573233925002,
       "minusBranchFrobenius": 0.145268454299407,
       "splitDiagnostics": {
@@ -1617,10 +1617,10 @@
     {
       "nmax": 8,
       "atomCount": 16,
-      "maxXiRelativeErrorOnShiftedNodes": 1.0253993358717654e-15,
-      "signedHardyGramRelativeErrorVsFullDeBranges": 1.6468306344420745e-14,
+      "maxXiRelativeErrorOnShiftedNodes": 1.026584540662541e-15,
+      "signedHardyGramRelativeErrorVsFullDeBranges": 1.6583946669023032e-14,
       "signedHardyGramFrobenius": 0.008549621932844408,
-      "directDeBrangesFrobenius": 0.008549621932844396,
+      "directDeBrangesFrobenius": 0.0085496219328444,
       "plusBranchFrobenius": 0.15192573233925002,
       "minusBranchFrobenius": 0.145268454299407,
       "splitDiagnostics": {
@@ -2406,10 +2406,10 @@
     {
       "nmax": 12,
       "atomCount": 24,
-      "maxXiRelativeErrorOnShiftedNodes": 1.0253993358717654e-15,
-      "signedHardyGramRelativeErrorVsFullDeBranges": 1.6468306344420745e-14,
+      "maxXiRelativeErrorOnShiftedNodes": 1.026584540662541e-15,
+      "signedHardyGramRelativeErrorVsFullDeBranges": 1.6583946669023032e-14,
       "signedHardyGramFrobenius": 0.008549621932844408,
-      "directDeBrangesFrobenius": 0.008549621932844396,
+      "directDeBrangesFrobenius": 0.0085496219328444,
       "plusBranchFrobenius": 0.15192573233925002,
       "minusBranchFrobenius": 0.145268454299407,
       "splitDiagnostics": {
@@ -3196,10 +3196,10 @@
   "bestCase": {
     "nmax": 3,
     "atomCount": 6,
-    "maxXiRelativeErrorOnShiftedNodes": 1.0253993358717654e-15,
-    "signedHardyGramRelativeErrorVsFullDeBranges": 1.6468306344420745e-14,
+    "maxXiRelativeErrorOnShiftedNodes": 1.026584540662541e-15,
+    "signedHardyGramRelativeErrorVsFullDeBranges": 1.6583946669023032e-14,
     "signedHardyGramFrobenius": 0.008549621932844408,
-    "directDeBrangesFrobenius": 0.008549621932844396,
+    "directDeBrangesFrobenius": 0.0085496219328444,
     "plusBranchFrobenius": 0.15192573233925002,
     "minusBranchFrobenius": 0.145268454299407,
     "splitDiagnostics": {

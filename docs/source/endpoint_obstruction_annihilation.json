@@ -1,0 +1,130 @@
+{
+  "theoremName": "endpoint obstruction annihilation diagnostic",
+  "basis": 18,
+  "s0": 0.2825,
+  "interval": [
+    0.02,
+    0.545
+  ],
+  "activeDim": 2,
+  "activeIndices": [
+    3,
+    4
+  ],
+  "endpointMapFrobenius": 7.353055129202313e+25,
+  "endpointGramEigenvalues": [
+    7704285951341.06,
+    5.4067419733088444e+51
+  ],
+  "leftNullVector": [
+    0.9921554436481675,
+    -0.12501030213269598
+  ],
+  "leftNullResidualNorm": 2775659.552492175,
+  "maxAbsObstructionPairing": 7748058.894815217,
+  "maxRelativeObstructionPairing": 0.26995789773413514,
+  "traceCenters": [
+    0.02,
+    0.0725,
+    0.125,
+    0.1775,
+    0.23,
+    0.2825,
+    0.335,
+    0.3875,
+    0.44,
+    0.4925,
+    0.545
+  ],
+  "traceOnObstructionNorm": 1926.2048004179744,
+  "traceOnObstructionMaxAbs": 1000.0476154842199,
+  "sourceOnObstructionNorm": 16910.80304030899,
+  "sourceOnObstructionMaxAbs": 5940.0500916614055,
+  "rows": [
+    {
+      "sourceNode": 0.08,
+      "component": "boundary",
+      "endpointVectorNorm": 1853384.370791592,
+      "obstructionPairing": -495000.55090700515,
+      "relativePairing": 0.26707927330561626,
+      "jumpNorm": 2.164029635584716
+    },
+    {
+      "sourceNode": 0.08,
+      "component": "adjointEval",
+      "endpointVectorNorm": 28700989.894527186,
+      "obstructionPairing": 7748058.894815217,
+      "relativePairing": 0.26995789773413514,
+      "jumpNorm": 24129022.585577942
+    },
+    {
+      "sourceNode": 0.24,
+      "component": "boundary",
+      "endpointVectorNorm": 1931530.4100874055,
+      "obstructionPairing": -516166.3513693201,
+      "relativePairing": 0.2672318016188845,
+      "jumpNorm": 2.171501321439461
+    },
+    {
+      "sourceNode": 0.24,
+      "component": "adjointEval",
+      "endpointVectorNorm": 27568315.923316523,
+      "obstructionPairing": 7442284.610729013,
+      "relativePairing": 0.26995789773413514,
+      "jumpNorm": 23176779.616472207
+    },
+    {
+      "sourceNode": 0.4,
+      "component": "boundary",
+      "endpointVectorNorm": 1992569.1553473515,
+      "obstructionPairing": -532774.3795895893,
+      "relativePairing": 0.2673806217263834,
+      "jumpNorm": 1.85233267020106
+    },
+    {
+      "sourceNode": 0.4,
+      "component": "adjointEval",
+      "endpointVectorNorm": 26110008.418364957,
+      "obstructionPairing": 7048602.982442375,
+      "relativePairing": 0.26995789773413514,
+      "jumpNorm": 21950775.39665246
+    },
+    {
+      "sourceNode": 0.52,
+      "component": "boundary",
+      "endpointVectorNorm": 2023694.5219010203,
+      "obstructionPairing": -541309.6996637646,
+      "relativePairing": 0.2674858748717017,
+      "jumpNorm": 1.4906039765389272
+    },
+    {
+      "sourceNode": 0.52,
+      "component": "adjointEval",
+      "endpointVectorNorm": 24863475.88117882,
+      "obstructionPairing": 6712091.679246408,
+      "relativePairing": 0.26995789773413514,
+      "jumpNorm": 20902811.132912643
+    }
+  ],
+  "statuses": {
+    "finiteLeftObstructionFound": {
+      "label": "finite left endpoint obstruction found",
+      "closed": false,
+      "status": "open",
+      "reason": "The endpoint map has a numerically resolved left null direction."
+    },
+    "actualEndpointVectorsAnnihilated": {
+      "label": "actual endpoint vectors annihilated",
+      "closed": false,
+      "status": "open",
+      "reason": "The computed obstruction annihilates b(d_u) for every sampled actual source row."
+    },
+    "obstructionIsGloballyTraceNull": {
+      "label": "obstruction mode globally trace-null",
+      "closed": false,
+      "status": "open",
+      "reason": "If false, endpoint compatibility is not explained by the global closed-trace condition alone."
+    }
+  },
+  "interpretation": "The finite obstruction annihilates the actual endpoint source vectors, while the associated active polynomial need not be globally trace-null.  This supports a special endpoint/source identity as the non-circular continuum target."
+}

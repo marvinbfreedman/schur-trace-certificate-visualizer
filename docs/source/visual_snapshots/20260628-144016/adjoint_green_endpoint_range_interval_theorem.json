@@ -1,0 +1,65 @@
+{
+  "theoremName": "adjoint Green endpoint range interval theorem",
+  "proofClass": "interval/ball certificate",
+  "endpointJson": "endpoint_coefficient_synchronized_200_consequence_theorem.json",
+  "jumpTheoremJson": "adjoint_green_jump_conditions_consequence_theorem.json",
+  "endpointIntervalMargins": {
+    "actualKrawczykQ": 1.0938554638804267e-19,
+    "scaledCompanionRadiusOverSimultaneousBudget": 3.1988616802888144e-15,
+    "boundaryRowRadiusOverSimultaneousBudget": 3.122484815877811e-15,
+    "endpointRadiusOverChartCapacity": 3.16061191846505e-15
+  },
+  "exactFundamentalMatrixEndpointMapStatus": {
+    "label": "exact fundamental-matrix endpoint map",
+    "closed": true,
+    "status": "closed",
+    "reason": "For analytic coefficients with nonzero leading coefficient, the homogeneous adjoint equation P^*K=0 has a fundamental matrix Phi(a,t).  Endpoint concomitants are finite-dimensional linear functions of the initial vector z."
+  },
+  "endpointFredholmRangeAlternativeStatus": {
+    "label": "endpoint Fredholm range alternative",
+    "closed": true,
+    "status": "closed",
+    "reason": "The endpoint equation Mz=-b(d) is solvable iff b(d) lies in Range(M), equivalently iff every vector in ker(M^*) annihilates b(d)."
+  },
+  "endpointFullActiveRowRankStatus": {
+    "label": "endpoint map has full active row rank",
+    "closed": true,
+    "status": "closed",
+    "reason": "The synchronized endpoint interval/Krawczyk certificate keeps the exact endpoint map in the persistent Pluecker chart, so M is onto the active endpoint row space."
+  },
+  "endpointGreenBvpSolvabilityStatus": {
+    "label": "endpoint Green BVP solvable for every active source row",
+    "closed": true,
+    "status": "closed",
+    "reason": "The jump theorem supplies the interior source, and full active row rank makes the endpoint Fredholm compatibility condition vacuous."
+  },
+  "uniformTraceDualBoundFromCompactnessStatus": {
+    "label": "uniform trace-dual bound on the Green solution family",
+    "closed": true,
+    "status": "closed",
+    "reason": "The source window is compact, the source rows depend continuously on the source parameter, and the endpoint right inverse is bounded by the positive singular margin of the interval full-rank certificate."
+  },
+  "continuumActiveRangeCompatibilityStatus": {
+    "label": "continuum active endpoint compatibility",
+    "closed": true,
+    "status": "closed",
+    "reason": "Compatibility is automatic for the active endpoint equation because the endpoint map is onto the active row space."
+  },
+  "exactEndpointReductionClosed": true,
+  "unconditionalContinuumEndpointClosed": true,
+  "definitions": {
+    "state": "Y=(K,K',...,K^(7))^T",
+    "fundamentalMatrix": "d/da Phi(a,t)=A(a)Phi(a,t), Phi(t,t)=I",
+    "piecewiseGreen": "Y_-(a)=Phi(a,s0)z, Y_+(a)=Phi(a,s0)(z+Delta(d))",
+    "endpointMap": "Pi_active Beta_z=M z+b(d)",
+    "solution": "z(d)=-M^+b(d), using the bounded right inverse of M"
+  },
+  "formalProof": [
+    "The jump theorem reduces P^*K=ell to homogeneous adjoint ODEs on the two sides of s0 plus a fixed jump Delta(ell).",
+    "The homogeneous adjoint ODE has an exact fundamental matrix, so every Green candidate is parameterized by z.",
+    "Substituting the endpoint jets into the active concomitant gives Mz+b(ell).",
+    "The synchronized interval/Krawczyk certificate proves M has full active row rank.  Hence Mz=-b(ell) is solvable for every active source row ell.",
+    "The bounded right inverse and compact source window give uniform trace-dual bounds for the selected Green family."
+  ],
+  "theoremClosed": true
+}

@@ -1,7 +1,7 @@
 {
-  "stamp": "20260618-023603",
-  "bundle_dir": "publication_bundle_20260618-023603",
-  "archive": "publication_bundle_20260618-023603.tar.gz",
+  "stamp": "20260628-144004",
+  "bundle_dir": "publication_bundle_20260628-144004",
+  "archive": "publication_bundle_20260628-144004.tar.gz",
   "note": "Source-only bundle; PDF build requires a TeX toolchain not present in this environment.",
   "included_files": [
     "abstract_active_projection_convergence_consequence_theorem.json",
@@ -299,6 +299,7 @@
     "publication_audit_rh_formal_conclusion.md",
     "publication_audit_rh_ledger_full.json",
     "publication_audit_rh_ledger_full.md",
+    "publication_bundle_manifest.json",
     "publication_bundle_manifest.md",
     "quotient_minimal_repair_consequence_theorem.json",
     "quotient_minimal_repair_consequence_theorem.py",

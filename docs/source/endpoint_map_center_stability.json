@@ -615,9 +615,9 @@
       "path": "endpoint_grassmann_flow_center.json",
       "present": true,
       "orders": [
+        5,
         7,
-        9,
-        11
+        9
       ],
       "persistentChart": {
         "columns": [
@@ -625,8 +625,8 @@
           1
         ],
         "coordinateIndex": 0,
-        "minAbsNormalizedCoordinate": 0.9564654847643472,
-        "meanAbsNormalizedCoordinate": 0.9613572269246907
+        "minAbsNormalizedCoordinate": 0.875729186138553,
+        "meanAbsNormalizedCoordinate": 0.9318228306624455
       },
       "persistentChartNoncollapseStatus": {
         "label": "persistent affine Grassmann chart identified",
@@ -644,28 +644,28 @@
   ],
   "grassmannComparisons": [
     {
-      "leftOrder": 7,
-      "rightOrder": 9,
-      "orientedDot": 0.9996791676541348,
-      "projectiveAbsDot": 0.9996791676541348,
-      "projectiveChordalDistance": 0.02532906943289262,
-      "orientedChordalDistance": 0.025331101273545747,
+      "leftOrder": 5,
+      "rightOrder": 7,
+      "orientedDot": 0.7201927244909501,
+      "projectiveAbsDot": 0.7201927244909501,
+      "projectiveChordalDistance": 0.6937740551435334,
+      "orientedChordalDistance": 0.7480738940894139,
       "source": "endpoint_grassmann_flow_center.json"
     },
     {
-      "leftOrder": 9,
-      "rightOrder": 11,
-      "orientedDot": 0.9995735373129334,
-      "projectiveAbsDot": 0.9995735373129334,
-      "projectiveChordalDistance": 0.029201772270012555,
-      "orientedChordalDistance": 0.02920488613456593,
+      "leftOrder": 7,
+      "rightOrder": 9,
+      "orientedDot": 0.999679167654135,
+      "projectiveAbsDot": 0.999679167654135,
+      "projectiveChordalDistance": 0.025329069432883856,
+      "orientedChordalDistance": 0.025331101273545747,
       "source": "endpoint_grassmann_flow_center.json"
     }
   ],
   "grassmannChartBallCertificate": {
     "theoremName": "endpoint Grassmann chart ball certificate",
-    "sourceGrassmannJson": "endpoint_grassmann_flow_center.json",
-    "sourceRowFlowJson": "endpoint_adjoint_row_flow_center_7_9_11.json",
+    "sourceGrassmannJson": "endpoint_grassmann_center_consequence_theorem.json",
+    "sourceRowFlowJson": null,
     "centerOrder": 11,
     "persistentChart": {
       "columns": [
@@ -2742,9 +2742,9 @@
     ],
     "rawEntryBallCapacity": {
       "threshold": 0.5,
-      "uniformAbsoluteEntryRadius": 36392.018345433105,
-      "relativeToMaxEntry": 0.0024877609517736095,
-      "ratioLowerAtRadius": 0.5
+      "uniformAbsoluteEntryRadius": 36392.01834543294,
+      "relativeToMaxEntry": 0.0024877609517735978,
+      "ratioLowerAtRadius": 0.5000000000000001
     },
     "conditionalChartBallTheoremStatus": {
       "label": "conditional chart-ball noncollapse theorem",
@@ -2780,8 +2780,8 @@
     "coefficientInflation": 1e-10,
     "traceFieldMinGap": 1.1635518278617991e-05,
     "traceFieldMinConsecutiveCos": 0.9933352044496803,
-    "centerOrder": 11,
-    "centerPivotAbs": 0.9643323749252883,
+    "centerOrder": 9,
+    "centerPivotAbs": 0.9564654847643472,
     "certifiedProjectiveRadius": 0.125,
     "radiusCapacityForThreshold": 0.46433237492528834,
     "latestProjectiveDistance": 0.029201772270012555,
@@ -2826,207 +2826,207 @@
     "generatorSamples": [
       {
         "s": 0.02,
-        "riccatiRhsInfAtCenter": 0.2733255907234112,
+        "riccatiRhsInfAtCenter": 0.285332060365439,
         "exteriorGeneratorInfNorm": 284030920.19598734
       },
       {
         "s": 0.026423832236261095,
-        "riccatiRhsInfAtCenter": 0.1168735846856498,
+        "riccatiRhsInfAtCenter": 0.09435695090377769,
         "exteriorGeneratorInfNorm": 339314038.309439
       },
       {
         "s": 0.029990811357893613,
-        "riccatiRhsInfAtCenter": 0.05024569029688344,
+        "riccatiRhsInfAtCenter": 0.06385083876242839,
         "exteriorGeneratorInfNorm": 371583644.32370615
       },
       {
         "s": 0.037584165753292424,
-        "riccatiRhsInfAtCenter": 0.23383462494431181,
+        "riccatiRhsInfAtCenter": 0.38972102924449753,
         "exteriorGeneratorInfNorm": 457010615.152283
       },
       {
         "s": 0.04506651948828815,
-        "riccatiRhsInfAtCenter": 0.5357964836968705,
+        "riccatiRhsInfAtCenter": 0.8110428477712184,
         "exteriorGeneratorInfNorm": 556517191.3260636
       },
       {
         "s": 0.058442234969265636,
-        "riccatiRhsInfAtCenter": 1.2373847791920034,
+        "riccatiRhsInfAtCenter": 1.8256945550699595,
         "exteriorGeneratorInfNorm": 741405022.0645032
       },
       {
         "s": 0.0741031856366129,
-        "riccatiRhsInfAtCenter": 2.369650187557526,
+        "riccatiRhsInfAtCenter": 3.5373999591281344,
         "exteriorGeneratorInfNorm": 937018066.5484561
       },
       {
         "s": 0.085625,
-        "riccatiRhsInfAtCenter": 3.441255513590874,
+        "riccatiRhsInfAtCenter": 5.222535091733364,
         "exteriorGeneratorInfNorm": 1030542606.8104012
       },
       {
         "s": 0.10102279950208197,
-        "riccatiRhsInfAtCenter": 5.190379018814958,
+        "riccatiRhsInfAtCenter": 8.097795131301663,
         "exteriorGeneratorInfNorm": 1017208013.8429978
       },
       {
         "s": 0.11069151948828815,
-        "riccatiRhsInfAtCenter": 6.454758376256729,
+        "riccatiRhsInfAtCenter": 10.28378366914408,
         "exteriorGeneratorInfNorm": 877583821.194848
       },
       {
         "s": 0.15125,
-        "riccatiRhsInfAtCenter": 13.352054687376917,
+        "riccatiRhsInfAtCenter": 26.522596123759417,
         "exteriorGeneratorInfNorm": 6442827893.955128
       },
       {
         "s": 0.19180848051171184,
-        "riccatiRhsInfAtCenter": 10.582418282332775,
+        "riccatiRhsInfAtCenter": 12.843527602914564,
         "exteriorGeneratorInfNorm": 3392240253.1678157
       },
       {
         "s": 0.20147720049791804,
-        "riccatiRhsInfAtCenter": 10.439714911329473,
+        "riccatiRhsInfAtCenter": 13.778318666235362,
         "exteriorGeneratorInfNorm": 2345391214.7724752
       },
       {
         "s": 0.216875,
-        "riccatiRhsInfAtCenter": 9.388725034064912,
+        "riccatiRhsInfAtCenter": 13.282394694582486,
         "exteriorGeneratorInfNorm": 1314598636.2980154
       },
       {
         "s": 0.2283968143633871,
-        "riccatiRhsInfAtCenter": 8.185769290751493,
+        "riccatiRhsInfAtCenter": 11.995356766915172,
         "exteriorGeneratorInfNorm": 810967757.5515127
       },
       {
         "s": 0.24405776503073437,
-        "riccatiRhsInfAtCenter": 6.266773993700808,
+        "riccatiRhsInfAtCenter": 9.59131379687197,
         "exteriorGeneratorInfNorm": 357795967.2676908
       },
       {
         "s": 0.25743348051171183,
-        "riccatiRhsInfAtCenter": 4.568125251973759,
+        "riccatiRhsInfAtCenter": 7.304064374513438,
         "exteriorGeneratorInfNorm": 381981160.40200627
       },
       {
         "s": 0.26491583424670756,
-        "riccatiRhsInfAtCenter": 3.6491563006024434,
+        "riccatiRhsInfAtCenter": 6.0274436267296405,
         "exteriorGeneratorInfNorm": 399802897.49404866
       },
       {
         "s": 0.2725091886421064,
-        "riccatiRhsInfAtCenter": 2.7617740514603604,
+        "riccatiRhsInfAtCenter": 4.772999108488069,
         "exteriorGeneratorInfNorm": 390589749.5980038
       },
       {
         "s": 0.2760761677637389,
-        "riccatiRhsInfAtCenter": 2.3642964649040628,
+        "riccatiRhsInfAtCenter": 4.20449055544594,
         "exteriorGeneratorInfNorm": 378000074.73631585
       },
       {
         "s": 0.2825,
-        "riccatiRhsInfAtCenter": 1.6837415554893707,
+        "riccatiRhsInfAtCenter": 3.221463657599533,
         "exteriorGeneratorInfNorm": 343384637.3029956
       },
       {
         "s": 0.2889238322362611,
-        "riccatiRhsInfAtCenter": 1.051900120535286,
+        "riccatiRhsInfAtCenter": 2.2972237390188073,
         "exteriorGeneratorInfNorm": 294531011.68613195
       },
       {
         "s": 0.2924908113578936,
-        "riccatiRhsInfAtCenter": 0.7230808750576477,
+        "riccatiRhsInfAtCenter": 1.8113537424186275,
         "exteriorGeneratorInfNorm": 261555175.21460432
       },
       {
         "s": 0.30008416575329244,
-        "riccatiRhsInfAtCenter": 0.14168155074030855,
+        "riccatiRhsInfAtCenter": 0.8449886804873364,
         "exteriorGeneratorInfNorm": 177659061.18282685
       },
       {
         "s": 0.30756651948828817,
-        "riccatiRhsInfAtCenter": 0.4880934375638831,
+        "riccatiRhsInfAtCenter": 0.2507232669777643,
         "exteriorGeneratorInfNorm": 146623611.98931044
       },
       {
         "s": 0.32094223496926566,
-        "riccatiRhsInfAtCenter": 1.3236958920466422,
+        "riccatiRhsInfAtCenter": 1.3281774467447292,
         "exteriorGeneratorInfNorm": 387260184.0532062
       },
       {
         "s": 0.3366031856366129,
-        "riccatiRhsInfAtCenter": 2.036392485404616,
+        "riccatiRhsInfAtCenter": 2.5272567447392786,
         "exteriorGeneratorInfNorm": 859318593.2564846
       },
       {
         "s": 0.348125,
-        "riccatiRhsInfAtCenter": 2.393427252406361,
+        "riccatiRhsInfAtCenter": 3.2040759252587248,
         "exteriorGeneratorInfNorm": 1392779292.7992797
       },
       {
         "s": 0.363522799502082,
-        "riccatiRhsInfAtCenter": 2.6399474955010955,
+        "riccatiRhsInfAtCenter": 3.8316361177765086,
         "exteriorGeneratorInfNorm": 2460885118.8330913
       },
       {
         "s": 0.37319151948828816,
-        "riccatiRhsInfAtCenter": 2.596801172803972,
+        "riccatiRhsInfAtCenter": 3.9671298726303905,
         "exteriorGeneratorInfNorm": 3394409424.515542
       },
       {
         "s": 0.41375,
-        "riccatiRhsInfAtCenter": 7.439118241767005,
+        "riccatiRhsInfAtCenter": 11.542437186999708,
         "exteriorGeneratorInfNorm": 6515655805.099278
       },
       {
         "s": 0.45430848051171185,
-        "riccatiRhsInfAtCenter": 128.5983757372409,
+        "riccatiRhsInfAtCenter": 228.5962108667111,
         "exteriorGeneratorInfNorm": 85358549191.05212
       },
       {
         "s": 0.463977200497918,
-        "riccatiRhsInfAtCenter": 149.04606428365545,
+        "riccatiRhsInfAtCenter": 279.30551420057674,
         "exteriorGeneratorInfNorm": 146920170129.39807
       },
       {
         "s": 0.479375,
-        "riccatiRhsInfAtCenter": 126.48070439442449,
+        "riccatiRhsInfAtCenter": 138.9243294002063,
         "exteriorGeneratorInfNorm": 167244363654.13113
       },
       {
         "s": 0.4908968143633871,
-        "riccatiRhsInfAtCenter": 861.2084881065625,
+        "riccatiRhsInfAtCenter": 1352.131508946884,
         "exteriorGeneratorInfNorm": 153870245323.0499
       },
       {
         "s": 0.5065577650307344,
-        "riccatiRhsInfAtCenter": 1646.7175647860277,
+        "riccatiRhsInfAtCenter": 2808.422998328029,
         "exteriorGeneratorInfNorm": 808600754911.538
       },
       {
         "s": 0.5199334805117118,
-        "riccatiRhsInfAtCenter": 790.719544288046,
+        "riccatiRhsInfAtCenter": 985.2432791446602,
         "exteriorGeneratorInfNorm": 527098108149.1487
       },
       {
         "s": 0.5274158342467076,
-        "riccatiRhsInfAtCenter": 3098.7265604106237,
+        "riccatiRhsInfAtCenter": 4786.211333569104,
         "exteriorGeneratorInfNorm": 496433305006.3367
       },
       {
         "s": 0.5350091886421063,
-        "riccatiRhsInfAtCenter": 4219.304585364668,
+        "riccatiRhsInfAtCenter": 6797.783437192139,
         "exteriorGeneratorInfNorm": 1205209257025.1377
       },
       {
         "s": 0.538576167763739,
-        "riccatiRhsInfAtCenter": 3913.9037506931045,
+        "riccatiRhsInfAtCenter": 6417.105530206174,
         "exteriorGeneratorInfNorm": 1321073242451.9194
       },
       {
         "s": 0.545,
-        "riccatiRhsInfAtCenter": 2066.2454778142082,
+        "riccatiRhsInfAtCenter": 3603.88972866555,
         "exteriorGeneratorInfNorm": 1172945797175.3447
       }
     ],

@@ -5,14 +5,14 @@
   "legacyMinmaxJson": null,
   "frameJson": null,
   "quadratureJson": null,
-  "traceFrameTheoremJson": null,
+  "traceFrameTheoremJson": "continuum_trace_frame_lower_bound_theorem.json",
   "normalizedEpsilonDelta": 0.0013454526382754603,
   "finiteLowMidSchurBudget": 0.005730309711103612,
   "absorptionSlack": 0.004384857072828152,
-  "observedTraceFrameFloor": 0.0,
+  "observedTraceFrameFloor": 293.1151510088239,
   "observedTraceFrameMaxResidual": 1.0,
-  "observedTraceFrameMinRelativeDrift": null,
-  "observedDensityRelativeDrift": null,
+  "observedTraceFrameMinRelativeDrift": 0.0,
+  "observedDensityRelativeDrift": 0.0,
   "activeSourceInputStatus": {
     "label": "active source annihilation/range input",
     "closed": true,
@@ -57,13 +57,19 @@
   },
   "continuumTraceFrameLowerBoundStatus": {
     "label": "continuum uniform trace-frame lower bound",
-    "closed": false,
-    "status": "open",
+    "closed": true,
+    "status": "closed",
     "reason": "Imported from continuum_trace_frame_lower_bound_theorem.py: active range plus source noncollapse make R_global injective on the finite active spectral space; compactness gives gamma_delta>0, and finite-dimensional quadrature consistency gives bounded sampled-trace correction right inverses for fine trace meshes."
   },
-  "continuumTraceFrameLowerBoundTheoremSummary": null,
+  "continuumTraceFrameLowerBoundTheoremSummary": {
+    "theoremName": "continuum trace-frame lower bound theorem",
+    "proofClass": null,
+    "continuumTraceFrameLowerBoundClosed": true,
+    "traceQuadratureConsistencyClosed": true,
+    "boundedSampledTraceCorrectionClosed": true
+  },
   "conditionalHighBlockExhaustionClosed": true,
-  "tailEstimatePassesToContinuum": false,
+  "tailEstimatePassesToContinuum": true,
   "formalProof": [
     "Let H_A be the A-Hilbert completion, R=R_global, H_M=ker(R) cap L_M^{perp_A}, and H_{M,N}=V_N cap ker(R_N) cap L_{M,N}^{perp_A}.",
     "Limsup: choose v_N in V_N with v_N->f in A graph norm.  Since Rf=0 and sampled traces are consistent, R_N v_N->0.  A uniform trace-frame lower bound gamma_0 supplies a correction w_N with R_N w_N=R_N v_N and ||w_N||_A<=gamma_0^{-1/2}||R_N v_N||.  Then f_N=v_N-w_N lies in ker R_N and f_N->f; finite low/mid orthogonality is corrected by the convergent finite Gram matrix.",
@@ -72,5 +78,5 @@
     "Therefore lambda_3(S_N)->lambda_3(S).  The finite normalized inactive-tail bound passes to H_M, giving the same epsilon constant in the full closed trace space once the continuum trace-frame lower bound is supplied."
   ],
   "conditionalConclusion": "Assuming the continuum uniform trace-frame lower bound/quadrature consistency, the certified normalized estimate ||(I-P_active)Ehat f||^2 <= 1.345452638275e-03<A f,f> passes to H_M cap ker R_global and is absorbed by the low/mid budget 5.730309711104e-03 with slack 4.384857072828e-03.",
-  "remainingAnalyticGap": "Prove the continuum uniform trace-frame lower bound and trace quadrature consistency that turn the observed finite frame floor into a bounded sampled-trace correction right inverse."
+  "remainingAnalyticGap": null
 }

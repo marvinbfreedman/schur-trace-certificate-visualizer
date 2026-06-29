@@ -1,0 +1,3263 @@
+{
+  "theoremName": "endpoint map center stability",
+  "sampledFiniteDifferenceCenters": [
+    {
+      "path": "adjoint_green_endpoint_selection.json",
+      "present": true,
+      "theoremName": "adjoint Green endpoint active selection",
+      "odeSamples": 11,
+      "activeDim": 2,
+      "endpointMapRank": 1,
+      "endpointMapFrobenius": 7.353055129202313e+25,
+      "flowLeftFrobenius": 1.188781293335011e+29,
+      "flowRightFrobenius": 4325523736.791256,
+      "maxEndpointResidualNorm": 4.904278671755176e-27,
+      "maxSelectedZNorm": 2.791429837949141,
+      "sigmaMin": 2775659.552492175,
+      "sigmaMax": 7.353055129202313e+25,
+      "conditionNumber": 2.649119962352819e+19
+    },
+    {
+      "path": "adjoint_green_endpoint_selection_o13.json",
+      "present": true,
+      "theoremName": "adjoint Green endpoint active selection",
+      "odeSamples": 13,
+      "activeDim": 2,
+      "endpointMapRank": 2,
+      "endpointMapFrobenius": 55642636008308.33,
+      "flowLeftFrobenius": 8.293374264168013e+16,
+      "flowRightFrobenius": 3385724914.9274836,
+      "maxEndpointResidualNorm": 9.035256431337667e-51,
+      "maxSelectedZNorm": 3.2600663284688047,
+      "sigmaMin": 1070021.4905476249,
+      "sigmaMax": 55642636008308.32,
+      "conditionNumber": 52001419.13021864
+    },
+    {
+      "path": "adjoint_green_endpoint_selection_o15.json",
+      "present": true,
+      "theoremName": "adjoint Green endpoint active selection",
+      "odeSamples": 15,
+      "activeDim": 2,
+      "endpointMapRank": 1,
+      "endpointMapFrobenius": 6.753652046371978e+38,
+      "flowLeftFrobenius": 1.2195206935175858e+42,
+      "flowRightFrobenius": 2365561455.028202,
+      "maxEndpointResidualNorm": 0.07896447788089653,
+      "maxSelectedZNorm": 0.12760180939676025,
+      "sigmaMin": 974042.827148786,
+      "sigmaMax": 6.753652046371978e+38,
+      "conditionNumber": 6.933629464878089e+32
+    }
+  ],
+  "exactSegmentDerivativeCenters": [
+    {
+      "path": "adjoint_green_endpoint_selection_exact_o5.json",
+      "present": true,
+      "theoremName": "adjoint Green endpoint active selection with exact segment derivatives",
+      "odeSamples": 5,
+      "activeDim": 2,
+      "endpointMapRank": 2,
+      "endpointMapFrobenius": 181357069.7994486,
+      "flowLeftFrobenius": 1172696388363.2188,
+      "flowRightFrobenius": 349792342.99987936,
+      "maxEndpointResidualNorm": 2.685752137697205e-64,
+      "maxSelectedZNorm": 0.20776087701064072,
+      "sigmaMin": 7682619.2580375215,
+      "sigmaMax": 181194271.78467342,
+      "conditionNumber": 23.58496050615925
+    },
+    {
+      "path": "adjoint_green_endpoint_selection_exact_o7.json",
+      "present": true,
+      "theoremName": "adjoint Green endpoint active selection with exact segment derivatives",
+      "odeSamples": 7,
+      "activeDim": 2,
+      "endpointMapRank": 2,
+      "endpointMapFrobenius": 3.6847633115949766e+17,
+      "flowLeftFrobenius": 7.110691462036577e+21,
+      "flowRightFrobenius": 5964256511.166194,
+      "maxEndpointResidualNorm": 5.221293579499863e-46,
+      "maxSelectedZNorm": 0.09021593059333821,
+      "sigmaMin": 8803982.691944918,
+      "sigmaMax": 3.6847633115949766e+17,
+      "conditionNumber": 41853368418.88956
+    }
+  ],
+  "sampledFrobeniusSpread": 1.2137548705211504e+25,
+  "exactSegmentFrobeniusSpread": 2031772632.6686492,
+  "sampledVariantRankBall": {
+    "theoremName": "endpoint map rank ball certificate",
+    "endpointJson": "adjoint_green_endpoint_selection.json",
+    "variantJson": [
+      "adjoint_green_endpoint_selection_o13.json",
+      "adjoint_green_endpoint_selection_o15.json"
+    ],
+    "radiusModel": {
+      "entryRelRadius": "1e-22",
+      "entryAbsRadius": "0",
+      "frobeniusRadius": "0",
+      "assumeRigorousEntryBall": false,
+      "interpretation": "The rank conclusion is rigorous only if these radii enclose the exact endpoint fundamental-matrix map."
+    },
+    "activeDim": 2,
+    "endpointColumns": 8,
+    "centerGramEigenvalues": [
+      7704285951341.06,
+      5.4067419733088444e+51
+    ],
+    "centerSigmaMin": 2775659.552492175,
+    "centerSigmaMax": 7.353055129202313e+25,
+    "centerConditionNumber": 2.649119962352819e+19,
+    "centerFrobeniusNorm": 7.353055129202313e+25,
+    "centerMaxEntry": 6.064144529198774e+25,
+    "entryBallFrobeniusRadius": 6.753652046372606e+38,
+    "totalFrobeniusRadius": 6.753652046372606e+38,
+    "lowerSigmaMin": 0.0,
+    "lowerGramEigenvalue": 0.0,
+    "pinvNormUpperBound": null,
+    "conditionNumberUpperBound": null,
+    "maxAllowedFrobeniusRadiusForRank": 2775659.552492175,
+    "maxAllowedUniformEntryRadiusForRank": 693914.8881230437,
+    "maxAllowedRelativeFrobeniusRadiusForRank": 3.7748384905598945e-20,
+    "variantSummaries": [
+      {
+        "path": "adjoint_green_endpoint_selection_o13.json",
+        "maxEntryDelta": 6.064144529202579e+25,
+        "frobeniusDelta": 7.353055129207735e+25
+      },
+      {
+        "path": "adjoint_green_endpoint_selection_o15.json",
+        "maxEntryDelta": 5.899517501917132e+38,
+        "frobeniusDelta": 6.753652046372606e+38
+      }
+    ],
+    "leastStableLeftDirection": [
+      0.9921554436481675,
+      -0.12501030213269598
+    ],
+    "leastStableSourcePairings": {
+      "maxAbsPairing": 7748058.894815218,
+      "maxRelativePairing": 0.2699578977341352,
+      "rows": [
+        {
+          "sourceNode": 0.08,
+          "component": "boundary",
+          "endpointVectorNorm": 1853384.370791592,
+          "leftDirectionPairing": -495000.5509070053,
+          "leftDirectionRelativePairing": 0.2670792733056163
+        },
+        {
+          "sourceNode": 0.08,
+          "component": "adjointEval",
+          "endpointVectorNorm": 28700989.894527186,
+          "leftDirectionPairing": 7748058.894815218,
+          "leftDirectionRelativePairing": 0.2699578977341352
+        },
+        {
+          "sourceNode": 0.24,
+          "component": "boundary",
+          "endpointVectorNorm": 1931530.4100874055,
+          "leftDirectionPairing": -516166.3513693202,
+          "leftDirectionRelativePairing": 0.2672318016188845
+        },
+        {
+          "sourceNode": 0.24,
+          "component": "adjointEval",
+          "endpointVectorNorm": 27568315.923316523,
+          "leftDirectionPairing": 7442284.610729014,
+          "leftDirectionRelativePairing": 0.2699578977341352
+        },
+        {
+          "sourceNode": 0.4,
+          "component": "boundary",
+          "endpointVectorNorm": 1992569.1553473515,
+          "leftDirectionPairing": -532774.3795895893,
+          "leftDirectionRelativePairing": 0.2673806217263833
+        },
+        {
+          "sourceNode": 0.4,
+          "component": "adjointEval",
+          "endpointVectorNorm": 26110008.418364953,
+          "leftDirectionPairing": 7048602.982442376,
+          "leftDirectionRelativePairing": 0.2699578977341352
+        },
+        {
+          "sourceNode": 0.52,
+          "component": "boundary",
+          "endpointVectorNorm": 2023694.52190102,
+          "leftDirectionPairing": -541309.6996637647,
+          "leftDirectionRelativePairing": 0.2674858748717018
+        },
+        {
+          "sourceNode": 0.52,
+          "component": "adjointEval",
+          "endpointVectorNorm": 24863475.881178815,
+          "leftDirectionPairing": 6712091.679246408,
+          "leftDirectionRelativePairing": 0.2699578977341352
+        }
+      ]
+    },
+    "conditionalBallFullRowRankStatus": {
+      "label": "conditional ball full active row rank",
+      "closed": false,
+      "status": "open",
+      "reason": "Weyl perturbation gives sigma_min(M_exact)>=sigma_min(M0)-delta for the supplied endpoint-map ball."
+    },
+    "rigorousEndpointMapFullRowRankStatus": {
+      "label": "rigorous endpoint map full active row rank",
+      "closed": false,
+      "status": "open",
+      "reason": "Closed only if the supplied endpoint-map ball is a rigorous interval enclosure of the exact fundamental-matrix endpoint map."
+    },
+    "kernelMStarZeroStatus": {
+      "label": "ker M^* is zero",
+      "closed": false,
+      "status": "open",
+      "reason": "If the rigorous full-row-rank status is closed, then the left Fredholm obstruction space is trivial and endpoint compatibility is vacuous."
+    },
+    "moorePenroseEndpointBoundStatus": {
+      "label": "Moore-Penrose endpoint bound",
+      "closed": false,
+      "status": "open",
+      "reason": "On the supplied ball, ||M^+|| <= 1/(sigma_min(M0)-delta).  This becomes a rigorous continuum bound only with a rigorous endpoint map enclosure."
+    },
+    "proof": [
+      "Let M_exact=M0+E with ||E||_2<=||E||_F<=delta.",
+      "Weyl's singular-value inequality gives sigma_min(M_exact)>=sigma_min(M0)-delta.",
+      "If this lower bound is positive, M_exact has full active row rank.",
+      "Full active row rank implies ker(M^*)={0}, so the endpoint Fredholm compatibility condition is vacuous.",
+      "The same lower bound gives ||M^+||<=1/(sigma_min(M0)-delta)."
+    ],
+    "remainingAnalyticGap": "Produce a rigorous interval enclosure for the exact endpoint fundamental-matrix map with Frobenius radius below the displayed maxAllowedFrobeniusRadiusForRank."
+  },
+  "exactSegmentVariantRankBall": {
+    "theoremName": "endpoint map rank ball certificate",
+    "endpointJson": "adjoint_green_endpoint_selection_exact_o7.json",
+    "variantJson": [
+      "adjoint_green_endpoint_selection_exact_o5.json"
+    ],
+    "radiusModel": {
+      "entryRelRadius": "1e-22",
+      "entryAbsRadius": "0",
+      "frobeniusRadius": "0",
+      "assumeRigorousEntryBall": false,
+      "interpretation": "The rank conclusion is rigorous only if these radii enclose the exact endpoint fundamental-matrix map."
+    },
+    "activeDim": 2,
+    "endpointColumns": 8,
+    "centerGramEigenvalues": [
+      77510111240065.69,
+      1.3577480662476379e+35
+    ],
+    "centerSigmaMin": 8803982.691944918,
+    "centerSigmaMax": 3.6847633115949766e+17,
+    "centerConditionNumber": 41853368418.88955,
+    "centerFrobeniusNorm": 3.6847633115949766e+17,
+    "centerMaxEntry": 2.6412041274120154e+17,
+    "entryBallFrobeniusRadius": 3.6847633121863456e+17,
+    "totalFrobeniusRadius": 3.6847633121863456e+17,
+    "lowerSigmaMin": 0.0,
+    "lowerGramEigenvalue": 0.0,
+    "pinvNormUpperBound": null,
+    "conditionNumberUpperBound": null,
+    "maxAllowedFrobeniusRadiusForRank": 8803982.691944918,
+    "maxAllowedUniformEntryRadiusForRank": 2200995.6729862294,
+    "maxAllowedRelativeFrobeniusRadiusForRank": 2.389293951185714e-11,
+    "variantSummaries": [
+      {
+        "path": "adjoint_green_endpoint_selection_exact_o5.json",
+        "maxEntryDelta": 2.641204127543561e+17,
+        "frobeniusDelta": 3.6847633121863456e+17
+      }
+    ],
+    "leastStableLeftDirection": [
+      0.27292859871458264,
+      -0.9620342925299983
+    ],
+    "leastStableSourcePairings": {
+      "maxAbsPairing": 794259.4914814536,
+      "maxRelativePairing": 0.9283672774747642,
+      "rows": [
+        {
+          "sourceNode": 0.08,
+          "component": "boundary",
+          "endpointVectorNorm": 733192.4529925337,
+          "leftDirectionPairing": 662478.8948751641,
+          "leftDirectionRelativePairing": 0.9035538925301928
+        },
+        {
+          "sourceNode": 0.08,
+          "component": "adjointEval",
+          "endpointVectorNorm": 1731252.8719556164,
+          "leftDirectionPairing": -794259.4914814536,
+          "leftDirectionRelativePairing": 0.45877728455939615
+        },
+        {
+          "sourceNode": 0.24,
+          "component": "boundary",
+          "endpointVectorNorm": 737246.1291060406,
+          "leftDirectionPairing": 672789.4671321338,
+          "leftDirectionRelativePairing": 0.912571040485401
+        },
+        {
+          "sourceNode": 0.24,
+          "component": "adjointEval",
+          "endpointVectorNorm": 1662929.6164562742,
+          "leftDirectionPairing": -762914.3338512074,
+          "leftDirectionRelativePairing": 0.45877728455939604
+        },
+        {
+          "sourceNode": 0.4,
+          "component": "boundary",
+          "endpointVectorNorm": 734183.262804106,
+          "leftDirectionPairing": 676708.8287158007,
+          "leftDirectionRelativePairing": 0.9217165018597807
+        },
+        {
+          "sourceNode": 0.4,
+          "component": "adjointEval",
+          "endpointVectorNorm": 1574964.0422576207,
+          "leftDirectionPairing": -722557.7265856412,
+          "leftDirectionRelativePairing": 0.45877728455939604
+        },
+        {
+          "sourceNode": 0.52,
+          "component": "boundary",
+          "endpointVectorNorm": 727174.087133714,
+          "leftDirectionPairing": 675084.627522523,
+          "leftDirectionRelativePairing": 0.9283672774747642
+        },
+        {
+          "sourceNode": 0.52,
+          "component": "adjointEval",
+          "endpointVectorNorm": 1499772.8017143414,
+          "leftDirectionPairing": -688061.6934265431,
+          "leftDirectionRelativePairing": 0.4587772845593961
+        }
+      ]
+    },
+    "conditionalBallFullRowRankStatus": {
+      "label": "conditional ball full active row rank",
+      "closed": false,
+      "status": "open",
+      "reason": "Weyl perturbation gives sigma_min(M_exact)>=sigma_min(M0)-delta for the supplied endpoint-map ball."
+    },
+    "rigorousEndpointMapFullRowRankStatus": {
+      "label": "rigorous endpoint map full active row rank",
+      "closed": false,
+      "status": "open",
+      "reason": "Closed only if the supplied endpoint-map ball is a rigorous interval enclosure of the exact fundamental-matrix endpoint map."
+    },
+    "kernelMStarZeroStatus": {
+      "label": "ker M^* is zero",
+      "closed": false,
+      "status": "open",
+      "reason": "If the rigorous full-row-rank status is closed, then the left Fredholm obstruction space is trivial and endpoint compatibility is vacuous."
+    },
+    "moorePenroseEndpointBoundStatus": {
+      "label": "Moore-Penrose endpoint bound",
+      "closed": false,
+      "status": "open",
+      "reason": "On the supplied ball, ||M^+|| <= 1/(sigma_min(M0)-delta).  This becomes a rigorous continuum bound only with a rigorous endpoint map enclosure."
+    },
+    "proof": [
+      "Let M_exact=M0+E with ||E||_2<=||E||_F<=delta.",
+      "Weyl's singular-value inequality gives sigma_min(M_exact)>=sigma_min(M0)-delta.",
+      "If this lower bound is positive, M_exact has full active row rank.",
+      "Full active row rank implies ker(M^*)={0}, so the endpoint Fredholm compatibility condition is vacuous.",
+      "The same lower bound gives ||M^+||<=1/(sigma_min(M0)-delta)."
+    ],
+    "remainingAnalyticGap": "Produce a rigorous interval enclosure for the exact endpoint fundamental-matrix map with Frobenius radius below the displayed maxAllowedFrobeniusRadiusForRank."
+  },
+  "chebyshevCenters": [
+    {
+      "path": "endpoint_flow_chebyshev_center.json",
+      "present": true,
+      "orders": [
+        5,
+        7
+      ],
+      "rankMargin": 2775659.55249,
+      "stabilityStatus": {
+        "label": "Chebyshev endpoint center stability",
+        "closed": false,
+        "status": "open",
+        "reason": "Closed only if successive Chebyshev endpoint maps differ by less than the rank margin.  This is still a numerical center test, not an interval proof."
+      }
+    },
+    {
+      "path": "endpoint_flow_chebyshev_center_7_9.json",
+      "present": true,
+      "orders": [
+        7,
+        9
+      ],
+      "rankMargin": 2775659.55249,
+      "stabilityStatus": {
+        "label": "Chebyshev endpoint center stability",
+        "closed": false,
+        "status": "open",
+        "reason": "Closed only if successive Chebyshev endpoint maps differ by less than the rank margin.  This is still a numerical center test, not an interval proof."
+      }
+    }
+  ],
+  "chebyshevComparisons": [
+    {
+      "leftOrder": 5,
+      "rightOrder": 7,
+      "frobeniusDifference": 12352331.849168763,
+      "rankMargin": 2775659.55249,
+      "differenceOverMargin": 4.450233040319258,
+      "passesRankMargin": false,
+      "source": "endpoint_flow_chebyshev_center.json"
+    },
+    {
+      "leftOrder": 7,
+      "rightOrder": 9,
+      "frobeniusDifference": 21381179.03487961,
+      "rankMargin": 2775659.55249,
+      "differenceOverMargin": 7.703098535877317,
+      "passesRankMargin": false,
+      "source": "endpoint_flow_chebyshev_center_7_9.json"
+    }
+  ],
+  "magnusCenters": [
+    {
+      "path": "endpoint_flow_magnus_center_2_4.json",
+      "present": true,
+      "steps": [
+        2,
+        4
+      ],
+      "rankMargin": 2775659.55249,
+      "stabilityStatus": {
+        "label": "Magnus endpoint center stability",
+        "closed": false,
+        "status": "open",
+        "reason": "Closed only if successive Magnus endpoint maps differ by less than the rank margin.  This is a numerical center test, not an interval proof."
+      }
+    }
+  ],
+  "magnusComparisons": [
+    {
+      "frobeniusDifference": 1.7617094019522075e+138,
+      "rankMargin": 2775659.55249,
+      "differenceOverMargin": 6.346993817638068e+131,
+      "passesRankMargin": false,
+      "leftSteps": 2,
+      "rightSteps": 4,
+      "source": "endpoint_flow_magnus_center_2_4.json"
+    }
+  ],
+  "rowFlowCenters": [
+    {
+      "path": "endpoint_adjoint_row_flow_center.json",
+      "present": true,
+      "orders": [
+        5,
+        7,
+        9
+      ],
+      "rankMargin": 2775659.55249,
+      "frobeniusStabilityStatus": {
+        "label": "row-flow Frobenius stability",
+        "closed": false,
+        "status": "open",
+        "reason": "Closed if successive row-flow endpoint maps differ below the old rank margin."
+      },
+      "minorStabilityStatus": {
+        "label": "row-flow best-minor stability",
+        "closed": false,
+        "status": "open",
+        "reason": "Closed if the same best 2x2 minor persists and its relative change is below 25 percent across refinements."
+      }
+    },
+    {
+      "path": "endpoint_adjoint_row_flow_center_7_9_11.json",
+      "present": true,
+      "orders": [
+        7,
+        9,
+        11
+      ],
+      "rankMargin": 2775659.55249,
+      "frobeniusStabilityStatus": {
+        "label": "row-flow Frobenius stability",
+        "closed": false,
+        "status": "open",
+        "reason": "Closed if successive row-flow endpoint maps differ below the old rank margin."
+      },
+      "minorStabilityStatus": {
+        "label": "row-flow best-minor stability",
+        "closed": false,
+        "status": "open",
+        "reason": "Closed if the same best 2x2 minor persists and its relative change is below 25 percent across refinements."
+      }
+    }
+  ],
+  "rowFlowComparisons": [
+    {
+      "leftOrder": 5,
+      "rightOrder": 7,
+      "frobeniusDifference": 39806432.38714999,
+      "rankMargin": 2775659.55249,
+      "differenceOverMargin": 14.341251740127952,
+      "passesRankMargin": false,
+      "leftBestMinor": {
+        "columns": [
+          0,
+          1
+        ],
+        "determinant": 291159796478.72876,
+        "absDeterminant": 291159796478.72876
+      },
+      "rightBestMinor": {
+        "columns": [
+          0,
+          1
+        ],
+        "determinant": -41351746202100.86,
+        "absDeterminant": 41351746202100.86
+      },
+      "sameBestMinor": true,
+      "bestMinorDetAbsDiff": 41642905998579.586,
+      "bestMinorRelativeDiff": 1.0070410520285098,
+      "source": "endpoint_adjoint_row_flow_center.json"
+    },
+    {
+      "leftOrder": 7,
+      "rightOrder": 9,
+      "frobeniusDifference": 31559210.959691823,
+      "rankMargin": 2775659.55249,
+      "differenceOverMargin": 11.3699862547554,
+      "passesRankMargin": false,
+      "leftBestMinor": {
+        "columns": [
+          0,
+          1
+        ],
+        "determinant": -41351746202100.86,
+        "absDeterminant": 41351746202100.86
+      },
+      "rightBestMinor": {
+        "columns": [
+          0,
+          1
+        ],
+        "determinant": 2006615166797.4006,
+        "absDeterminant": 2006615166797.4006
+      },
+      "sameBestMinor": true,
+      "bestMinorDetAbsDiff": 43358361368898.26,
+      "bestMinorRelativeDiff": 21.60771137701461,
+      "source": "endpoint_adjoint_row_flow_center.json"
+    },
+    {
+      "leftOrder": 7,
+      "rightOrder": 9,
+      "frobeniusDifference": 31559210.959691823,
+      "rankMargin": 2775659.55249,
+      "differenceOverMargin": 11.3699862547554,
+      "passesRankMargin": false,
+      "leftBestMinor": {
+        "columns": [
+          0,
+          1
+        ],
+        "determinant": -41351746202100.86,
+        "absDeterminant": 41351746202100.86
+      },
+      "rightBestMinor": {
+        "columns": [
+          0,
+          1
+        ],
+        "determinant": 2006615166797.4006,
+        "absDeterminant": 2006615166797.4006
+      },
+      "sameBestMinor": true,
+      "bestMinorDetAbsDiff": 43358361368898.26,
+      "bestMinorRelativeDiff": 21.60771137701461,
+      "source": "endpoint_adjoint_row_flow_center_7_9_11.json"
+    },
+    {
+      "leftOrder": 9,
+      "rightOrder": 11,
+      "frobeniusDifference": 5050842.27352784,
+      "rankMargin": 2775659.55249,
+      "differenceOverMargin": 1.8196908439281791,
+      "passesRankMargin": false,
+      "leftBestMinor": {
+        "columns": [
+          0,
+          1
+        ],
+        "determinant": 2006615166797.4006,
+        "absDeterminant": 2006615166797.4006
+      },
+      "rightBestMinor": {
+        "columns": [
+          0,
+          1
+        ],
+        "determinant": 3679485422580.4243,
+        "absDeterminant": 3679485422580.4243
+      },
+      "sameBestMinor": true,
+      "bestMinorDetAbsDiff": 1672870255783.0237,
+      "bestMinorRelativeDiff": 0.4546478824231458,
+      "source": "endpoint_adjoint_row_flow_center_7_9_11.json"
+    }
+  ],
+  "grassmannCenters": [
+    {
+      "path": "endpoint_grassmann_flow_center.json",
+      "present": true,
+      "orders": [
+        5,
+        7,
+        9
+      ],
+      "persistentChart": {
+        "columns": [
+          0,
+          1
+        ],
+        "coordinateIndex": 0,
+        "minAbsNormalizedCoordinate": 0.875729186138553,
+        "meanAbsNormalizedCoordinate": 0.9318228306624455
+      },
+      "persistentChartNoncollapseStatus": {
+        "label": "persistent affine Grassmann chart identified",
+        "closed": true,
+        "status": "closed",
+        "reason": "Closed at the numerical-center level if one Pluecker coordinate stays uniformly away from zero across all recorded orders."
+      },
+      "tailProjectiveStabilityStatus": {
+        "label": "tail projective Grassmann stability",
+        "closed": true,
+        "status": "closed",
+        "reason": "Closed at the numerical-center level if the latest normalized two-plane comparisons are below the configured projective distance tolerance."
+      }
+    }
+  ],
+  "grassmannComparisons": [
+    {
+      "leftOrder": 5,
+      "rightOrder": 7,
+      "orientedDot": 0.7201927244909501,
+      "projectiveAbsDot": 0.7201927244909501,
+      "projectiveChordalDistance": 0.6937740551435334,
+      "orientedChordalDistance": 0.7480738940894139,
+      "source": "endpoint_grassmann_flow_center.json"
+    },
+    {
+      "leftOrder": 7,
+      "rightOrder": 9,
+      "orientedDot": 0.999679167654135,
+      "projectiveAbsDot": 0.999679167654135,
+      "projectiveChordalDistance": 0.025329069432883856,
+      "orientedChordalDistance": 0.025331101273545747,
+      "source": "endpoint_grassmann_flow_center.json"
+    }
+  ],
+  "grassmannChartBallCertificate": {
+    "theoremName": "endpoint Grassmann chart ball certificate",
+    "sourceGrassmannJson": "endpoint_grassmann_center_consequence_theorem.json",
+    "sourceRowFlowJson": null,
+    "centerOrder": 11,
+    "persistentChart": {
+      "columns": [
+        0,
+        1
+      ],
+      "coordinateIndex": 0,
+      "minAbsNormalizedCoordinate": 0.9564654847643472,
+      "meanAbsNormalizedCoordinate": 0.9613572269246907
+    },
+    "chartCoordinate": [
+      0,
+      1
+    ],
+    "pivotAbsCenter": 0.9643323749252883,
+    "threshold": 0.5,
+    "radiusCapacityForNoncollapse": 0.9643323749252883,
+    "radiusCapacityForThreshold": 0.46433237492528834,
+    "latestProjectiveDistance": 0.029201772270012555,
+    "maxRecordedProjectiveDistance": 0.029201772270012555,
+    "certifiedProjectiveRadius": 0.125,
+    "certifiedProjectiveBall": {
+      "projectiveRadius": 0.125,
+      "pivotAbsCenter": 0.9643323749252883,
+      "pivotAbsLower": 0.8393323749252883,
+      "pivotAbsUpper": 1.0,
+      "provesNoncollapse": true,
+      "provesThreshold": true,
+      "threshold": 0.5,
+      "maxChartRatioDiffBound": 0.18924074267988047,
+      "maxAbsChartRatioUpper": 1.0,
+      "chartRatioBounds": [
+        {
+          "coordinateIndex": 0,
+          "centerRatio": 1.0,
+          "ratioDiffBound": 0.0,
+          "ratioInterval": [
+            1.0,
+            1.0
+          ],
+          "absRatioUpper": 1.0
+        },
+        {
+          "coordinateIndex": 1,
+          "centerRatio": 0.2706870558890356,
+          "ratioDiffBound": 0.18924074267988047,
+          "ratioInterval": [
+            0.0814463132091551,
+            0.4599277985689161
+          ],
+          "absRatioUpper": 0.4599277985689161
+        },
+        {
+          "coordinateIndex": 2,
+          "centerRatio": 0.022151857958402583,
+          "ratioDiffBound": 0.15222691994476378,
+          "ratioInterval": [
+            -0.1300750619863612,
+            0.17437877790316636
+          ],
+          "absRatioUpper": 0.17437877790316636
+        },
+        {
+          "coordinateIndex": 3,
+          "centerRatio": 0.0018482163052554582,
+          "ratioDiffBound": 0.14920314142452107,
+          "ratioInterval": [
+            -0.14735492511926562,
+            0.15105135772977651
+          ],
+          "absRatioUpper": 0.15105135772977654
+        },
+        {
+          "coordinateIndex": 4,
+          "centerRatio": 0.0001906401926563277,
+          "ratioDiffBound": 0.1489562821107798,
+          "ratioInterval": [
+            -0.14876564191812347,
+            0.14914692230343612
+          ],
+          "absRatioUpper": 0.14914692230343612
+        },
+        {
+          "coordinateIndex": 5,
+          "centerRatio": 8.0886540456669e-06,
+          "ratioDiffBound": 0.1489290950952326,
+          "ratioInterval": [
+            -0.14892100644118694,
+            0.14893718374927828
+          ],
+          "absRatioUpper": 0.14893718374927828
+        },
+        {
+          "coordinateIndex": 6,
+          "centerRatio": 7.709149440600808e-08,
+          "ratioDiffBound": 0.1489279019501225,
+          "ratioInterval": [
+            -0.1489278248586281,
+            0.14892797904161692
+          ],
+          "absRatioUpper": 0.14892797904161692
+        },
+        {
+          "coordinateIndex": 7,
+          "centerRatio": 0.03956144871836083,
+          "ratioDiffBound": 0.1548196935705738,
+          "ratioInterval": [
+            -0.11525824485221296,
+            0.1943811422889346
+          ],
+          "absRatioUpper": 0.19438114228893463
+        },
+        {
+          "coordinateIndex": 8,
+          "centerRatio": 0.0032976970140688126,
+          "ratioDiffBound": 0.14941900952876022,
+          "ratioInterval": [
+            -0.1461213125146914,
+            0.15271670654282904
+          ],
+          "absRatioUpper": 0.15271670654282904
+        },
+        {
+          "coordinateIndex": 9,
+          "centerRatio": 0.0003455898327952562,
+          "ratioDiffBound": 0.14897935843381463,
+          "ratioInterval": [
+            -0.14863376860101937,
+            0.14932494826660989
+          ],
+          "absRatioUpper": 0.14932494826660986
+        },
+        {
+          "coordinateIndex": 10,
+          "centerRatio": 4.6096155713028735e-05,
+          "ratioDiffBound": 0.14893475547227794,
+          "ratioInterval": [
+            -0.14888865931656492,
+            0.14898085162799096
+          ],
+          "absRatioUpper": 0.14898085162799096
+        },
+        {
+          "coordinateIndex": 11,
+          "centerRatio": 2.096349838752435e-06,
+          "ratioDiffBound": 0.14892820267400803,
+          "ratioInterval": [
+            -0.14892610632416928,
+            0.14893029902384677
+          ],
+          "absRatioUpper": 0.1489302990238468
+        },
+        {
+          "coordinateIndex": 12,
+          "centerRatio": 2.033501554471785e-08,
+          "ratioDiffBound": 0.14892789349749985,
+          "ratioInterval": [
+            -0.14892787316248432,
+            0.14892791383251539
+          ],
+          "absRatioUpper": 0.14892791383251536
+        },
+        {
+          "coordinateIndex": 13,
+          "centerRatio": 1.6284303314595813e-05,
+          "ratioDiffBound": 0.14893031565598927,
+          "ratioInterval": [
+            -0.14891403135267467,
+            0.14894659995930387
+          ],
+          "absRatioUpper": 0.14894659995930384
+        },
+        {
+          "coordinateIndex": 14,
+          "centerRatio": 2.042857980372985e-05,
+          "ratioDiffBound": 0.1489309328543443,
+          "ratioInterval": [
+            -0.14891050427454058,
+            0.14895136143414803
+          ],
+          "absRatioUpper": 0.14895136143414803
+        },
+        {
+          "coordinateIndex": 15,
+          "centerRatio": 4.935630472330567e-06,
+          "ratioDiffBound": 0.14892862552208325,
+          "ratioInterval": [
+            -0.14892368989161092,
+            0.14893356115255557
+          ],
+          "absRatioUpper": 0.14893356115255557
+        },
+        {
+          "coordinateIndex": 16,
+          "centerRatio": 2.474558937371386e-07,
+          "ratioDiffBound": 0.14892792732213309,
+          "ratioInterval": [
+            -0.14892767986623934,
+            0.14892817477802683
+          ],
+          "absRatioUpper": 0.14892817477802683
+        },
+        {
+          "coordinateIndex": 17,
+          "centerRatio": 2.454574286692364e-09,
+          "ratioDiffBound": 0.14892789083460345,
+          "ratioInterval": [
+            -0.14892788838002916,
+            0.14892789328917774
+          ],
+          "absRatioUpper": 0.14892789328917774
+        },
+        {
+          "coordinateIndex": 18,
+          "centerRatio": 1.560599496754377e-06,
+          "ratioDiffBound": 0.1489281228858398,
+          "ratioInterval": [
+            -0.14892656228634304,
+            0.14892968348533653
+          ],
+          "absRatioUpper": 0.14892968348533656
+        },
+        {
+          "coordinateIndex": 19,
+          "centerRatio": 3.92441899699144e-07,
+          "ratioDiffBound": 0.14892794891459313,
+          "ratioInterval": [
+            -0.14892755647269343,
+            0.14892834135649283
+          ],
+          "absRatioUpper": 0.14892834135649283
+        },
+        {
+          "coordinateIndex": 20,
+          "centerRatio": 1.97641135649327e-08,
+          "ratioDiffBound": 0.14892789341247661,
+          "ratioInterval": [
+            -0.14892787364836305,
+            0.14892791317659018
+          ],
+          "absRatioUpper": 0.14892791317659018
+        },
+        {
+          "coordinateIndex": 21,
+          "centerRatio": 1.9623398501570255e-10,
+          "ratioDiffBound": 0.14892789049827357,
+          "ratioInterval": [
+            -0.1489278903020396,
+            0.14892789069450754
+          ],
+          "absRatioUpper": 0.14892789069450757
+        },
+        {
+          "coordinateIndex": 22,
+          "centerRatio": 1.931235429425855e-08,
+          "ratioDiffBound": 0.14892789334519704,
+          "ratioInterval": [
+            -0.14892787403284274,
+            0.14892791265755134
+          ],
+          "absRatioUpper": 0.14892791265755134
+        },
+        {
+          "coordinateIndex": 23,
+          "centerRatio": 1.079151354321207e-09,
+          "ratioDiffBound": 0.1489278906297646,
+          "ratioInterval": [
+            -0.14892788955061326,
+            0.14892789170891596
+          ],
+          "absRatioUpper": 0.14892789170891596
+        },
+        {
+          "coordinateIndex": 24,
+          "centerRatio": 1.0941470635661996e-11,
+          "ratioDiffBound": 0.14892789047067836,
+          "ratioInterval": [
+            -0.1489278904597369,
+            0.14892789048161983
+          ],
+          "absRatioUpper": 0.14892789048161983
+        },
+        {
+          "coordinateIndex": 25,
+          "centerRatio": 2.679268073694444e-11,
+          "ratioDiffBound": 0.14892789047303903,
+          "ratioInterval": [
+            -0.14892789044624635,
+            0.1489278904998317
+          ],
+          "absRatioUpper": 0.14892789049983174
+        },
+        {
+          "coordinateIndex": 26,
+          "centerRatio": 3.230497508249978e-13,
+          "ratioDiffBound": 0.148927890469097,
+          "ratioInterval": [
+            -0.14892789046877394,
+            0.14892789046942004
+          ],
+          "absRatioUpper": 0.14892789046942004
+        },
+        {
+          "coordinateIndex": 27,
+          "centerRatio": 2.8721638872620798e-15,
+          "ratioDiffBound": 0.1489278904690493,
+          "ratioInterval": [
+            -0.14892789046904645,
+            0.14892789046905217
+          ],
+          "absRatioUpper": 0.14892789046905217
+        }
+      ]
+    },
+    "empiricalSafetyBalls": [
+      {
+        "projectiveRadius": 0.029201772270012555,
+        "pivotAbsCenter": 0.9643323749252883,
+        "pivotAbsLower": 0.9351306026552758,
+        "pivotAbsUpper": 0.9935341471953009,
+        "provesNoncollapse": true,
+        "provesThreshold": true,
+        "threshold": 0.5,
+        "maxChartRatioDiffBound": 0.03968035473030404,
+        "maxAbsChartRatioUpper": 1.0,
+        "chartRatioBounds": [
+          {
+            "coordinateIndex": 0,
+            "centerRatio": 1.0,
+            "ratioDiffBound": 0.0,
+            "ratioInterval": [
+              1.0,
+              1.0
+            ],
+            "absRatioUpper": 1.0
+          },
+          {
+            "coordinateIndex": 1,
+            "centerRatio": 0.2706870558890356,
+            "ratioDiffBound": 0.03968035473030404,
+            "ratioInterval": [
+              0.23100670115873154,
+              0.3103674106193396
+            ],
+            "absRatioUpper": 0.31036741061933965
+          },
+          {
+            "coordinateIndex": 2,
+            "centerRatio": 0.022151857958402583,
+            "ratioDiffBound": 0.03191922678684361,
+            "ratioInterval": [
+              -0.00976736882844103,
+              0.054071084745246197
+            ],
+            "absRatioUpper": 0.0540710847452462
+          },
+          {
+            "coordinateIndex": 3,
+            "centerRatio": 0.0018482163052554582,
+            "ratioDiffBound": 0.031285195221494755,
+            "ratioInterval": [
+              -0.029436978916239295,
+              0.033133411526750214
+            ],
+            "absRatioUpper": 0.033133411526750214
+          },
+          {
+            "coordinateIndex": 4,
+            "centerRatio": 0.0001906401926563277,
+            "ratioDiffBound": 0.031233433296451465,
+            "ratioInterval": [
+              -0.031042793103795138,
+              0.03142407348910779
+            ],
+            "absRatioUpper": 0.03142407348910779
+          },
+          {
+            "coordinateIndex": 5,
+            "centerRatio": 8.0886540456669e-06,
+            "ratioDiffBound": 0.031227732671915264,
+            "ratioInterval": [
+              -0.031219644017869596,
+              0.031235821325960932
+            ],
+            "absRatioUpper": 0.031235821325960932
+          },
+          {
+            "coordinateIndex": 6,
+            "centerRatio": 7.709149440600808e-08,
+            "ratioDiffBound": 0.031227482491005258,
+            "ratioInterval": [
+              -0.03122740539951085,
+              0.031227559582499665
+            ],
+            "absRatioUpper": 0.03122755958249966
+          },
+          {
+            "coordinateIndex": 7,
+            "centerRatio": 0.03956144871836083,
+            "ratioDiffBound": 0.032462884435564394,
+            "ratioInterval": [
+              0.007098564282796434,
+              0.07202433315392523
+            ],
+            "absRatioUpper": 0.07202433315392523
+          },
+          {
+            "coordinateIndex": 8,
+            "centerRatio": 0.0032976970140688126,
+            "ratioDiffBound": 0.03133045885146084,
+            "ratioInterval": [
+              -0.028032761837392027,
+              0.03462815586552965
+            ],
+            "absRatioUpper": 0.03462815586552965
+          },
+          {
+            "coordinateIndex": 9,
+            "centerRatio": 0.0003455898327952562,
+            "ratioDiffBound": 0.03123827198325287,
+            "ratioInterval": [
+              -0.030892682150457613,
+              0.03158386181604812
+            ],
+            "absRatioUpper": 0.03158386181604813
+          },
+          {
+            "coordinateIndex": 10,
+            "centerRatio": 4.6096155713028735e-05,
+            "ratioDiffBound": 0.031228919550416612,
+            "ratioInterval": [
+              -0.031182823394703584,
+              0.031275015706129644
+            ],
+            "absRatioUpper": 0.03127501570612964
+          },
+          {
+            "coordinateIndex": 11,
+            "centerRatio": 2.096349838752435e-06,
+            "ratioDiffBound": 0.03122754554735499,
+            "ratioInterval": [
+              -0.03122544919751624,
+              0.031229641897193742
+            ],
+            "absRatioUpper": 0.031229641897193742
+          },
+          {
+            "coordinateIndex": 12,
+            "centerRatio": 2.033501554471785e-08,
+            "ratioDiffBound": 0.031227480718643442,
+            "ratioInterval": [
+              -0.031227460383627895,
+              0.031227501053658988
+            ],
+            "absRatioUpper": 0.031227501053658988
+          },
+          {
+            "coordinateIndex": 13,
+            "centerRatio": 1.6284303314595813e-05,
+            "ratioDiffBound": 0.031227988601389586,
+            "ratioInterval": [
+              -0.031211704298074988,
+              0.031244272904704183
+            ],
+            "absRatioUpper": 0.03124427290470418
+          },
+          {
+            "coordinateIndex": 14,
+            "centerRatio": 2.042857980372985e-05,
+            "ratioDiffBound": 0.03122811801670111,
+            "ratioInterval": [
+              -0.03120768943689738,
+              0.031248546596504837
+            ],
+            "absRatioUpper": 0.031248546596504837
+          },
+          {
+            "coordinateIndex": 15,
+            "centerRatio": 4.935630472330567e-06,
+            "ratioDiffBound": 0.031227634210934427,
+            "ratioInterval": [
+              -0.031222698580462095,
+              0.03123256984140676
+            ],
+            "absRatioUpper": 0.031232569841406755
+          },
+          {
+            "coordinateIndex": 16,
+            "centerRatio": 2.474558937371386e-07,
+            "ratioDiffBound": 0.03122748781105614,
+            "ratioInterval": [
+              -0.031227240355162403,
+              0.03122773526694988
+            ],
+            "absRatioUpper": 0.03122773526694988
+          },
+          {
+            "coordinateIndex": 17,
+            "centerRatio": 2.454574286692364e-09,
+            "ratioDiffBound": 0.03122748016028232,
+            "ratioInterval": [
+              -0.031227477705708034,
+              0.031227482614856607
+            ],
+            "absRatioUpper": 0.031227482614856604
+          },
+          {
+            "coordinateIndex": 18,
+            "centerRatio": 1.560599496754377e-06,
+            "ratioDiffBound": 0.031227528817221854,
+            "ratioInterval": [
+              -0.031225968217725098,
+              0.03122908941671861
+            ],
+            "absRatioUpper": 0.031229089416718606
+          },
+          {
+            "coordinateIndex": 19,
+            "centerRatio": 3.92441899699144e-07,
+            "ratioDiffBound": 0.03122749233860376,
+            "ratioInterval": [
+              -0.03122709989670406,
+              0.031227884780503458
+            ],
+            "absRatioUpper": 0.031227884780503454
+          },
+          {
+            "coordinateIndex": 20,
+            "centerRatio": 1.97641135649327e-08,
+            "ratioDiffBound": 0.031227480700815612,
+            "ratioInterval": [
+              -0.031227460936702048,
+              0.031227500464929177
+            ],
+            "absRatioUpper": 0.031227500464929177
+          },
+          {
+            "coordinateIndex": 21,
+            "centerRatio": 1.9623398501570255e-10,
+            "ratioDiffBound": 0.03122748008976004,
+            "ratioInterval": [
+              -0.031227479893526058,
+              0.031227480285994026
+            ],
+            "absRatioUpper": 0.031227480285994026
+          },
+          {
+            "coordinateIndex": 22,
+            "centerRatio": 1.931235429425855e-08,
+            "ratioDiffBound": 0.03122748068670831,
+            "ratioInterval": [
+              -0.031227461374354015,
+              0.031227499999062606
+            ],
+            "absRatioUpper": 0.031227499999062606
+          },
+          {
+            "coordinateIndex": 23,
+            "centerRatio": 1.079151354321207e-09,
+            "ratioDiffBound": 0.031227480117331327,
+            "ratioInterval": [
+              -0.031227479038179972,
+              0.031227481196482682
+            ],
+            "absRatioUpper": 0.031227481196482682
+          },
+          {
+            "coordinateIndex": 24,
+            "centerRatio": 1.0941470635661996e-11,
+            "ratioDiffBound": 0.031227480083973826,
+            "ratioInterval": [
+              -0.031227480073032356,
+              0.031227480094915296
+            ],
+            "absRatioUpper": 0.031227480094915293
+          },
+          {
+            "coordinateIndex": 25,
+            "centerRatio": 2.679268073694444e-11,
+            "ratioDiffBound": 0.031227480084468816,
+            "ratioInterval": [
+              -0.031227480057676137,
+              0.031227480111261495
+            ],
+            "absRatioUpper": 0.031227480111261495
+          },
+          {
+            "coordinateIndex": 26,
+            "centerRatio": 3.230497508249978e-13,
+            "ratioDiffBound": 0.031227480083642237,
+            "ratioInterval": [
+              -0.031227480083319187,
+              0.031227480083965288
+            ],
+            "absRatioUpper": 0.031227480083965288
+          },
+          {
+            "coordinateIndex": 27,
+            "centerRatio": 2.8721638872620798e-15,
+            "ratioDiffBound": 0.031227480083632242,
+            "ratioInterval": [
+              -0.03122748008362937,
+              0.031227480083635115
+            ],
+            "absRatioUpper": 0.03122748008363511
+          }
+        ]
+      },
+      {
+        "projectiveRadius": 0.05840354454002511,
+        "pivotAbsCenter": 0.9643323749252883,
+        "pivotAbsLower": 0.9059288303852633,
+        "pivotAbsUpper": 1.0,
+        "provesNoncollapse": true,
+        "provesThreshold": true,
+        "threshold": 0.5,
+        "maxChartRatioDiffBound": 0.08191882803143417,
+        "maxAbsChartRatioUpper": 1.0,
+        "chartRatioBounds": [
+          {
+            "coordinateIndex": 0,
+            "centerRatio": 1.0,
+            "ratioDiffBound": 0.0,
+            "ratioInterval": [
+              1.0,
+              1.0
+            ],
+            "absRatioUpper": 1.0
+          },
+          {
+            "coordinateIndex": 1,
+            "centerRatio": 0.2706870558890356,
+            "ratioDiffBound": 0.08191882803143417,
+            "ratioInterval": [
+              0.1887682278576014,
+              0.35260588392046976
+            ],
+            "absRatioUpper": 0.35260588392046976
+          },
+          {
+            "coordinateIndex": 2,
+            "centerRatio": 0.022151857958402583,
+            "ratioDiffBound": 0.06589622667992097,
+            "ratioInterval": [
+              -0.043744368721518385,
+              0.08804808463832356
+            ],
+            "absRatioUpper": 0.08804808463832356
+          },
+          {
+            "coordinateIndex": 3,
+            "centerRatio": 0.0018482163052554582,
+            "ratioDiffBound": 0.06458728871499274,
+            "ratioInterval": [
+              -0.06273907240973728,
+              0.0664355050202482
+            ],
+            "absRatioUpper": 0.06643550502024821
+          },
+          {
+            "coordinateIndex": 4,
+            "centerRatio": 0.0001906401926563277,
+            "ratioDiffBound": 0.06448042786999734,
+            "ratioInterval": [
+              -0.06428978767734102,
+              0.06467106806265367
+            ],
+            "absRatioUpper": 0.06467106806265367
+          },
+          {
+            "coordinateIndex": 5,
+            "centerRatio": 8.0886540456669e-06,
+            "ratioDiffBound": 0.06446865911227764,
+            "ratioInterval": [
+              -0.06446057045823197,
+              0.06447674776632331
+            ],
+            "absRatioUpper": 0.06447674776632331
+          },
+          {
+            "coordinateIndex": 6,
+            "centerRatio": 7.709149440600808e-08,
+            "ratioDiffBound": 0.06446814262176029,
+            "ratioInterval": [
+              -0.06446806553026588,
+              0.0644682197132547
+            ],
+            "absRatioUpper": 0.06446821971325468
+          },
+          {
+            "coordinateIndex": 7,
+            "centerRatio": 0.03956144871836083,
+            "ratioDiffBound": 0.06701859057349573,
+            "ratioInterval": [
+              -0.027457141855134898,
+              0.10658003929185655
+            ],
+            "absRatioUpper": 0.10658003929185655
+          },
+          {
+            "coordinateIndex": 8,
+            "centerRatio": 0.0032976970140688126,
+            "ratioDiffBound": 0.06468073403685218,
+            "ratioInterval": [
+              -0.06138303702278337,
+              0.067978431050921
+            ],
+            "absRatioUpper": 0.067978431050921
+          },
+          {
+            "coordinateIndex": 9,
+            "centerRatio": 0.0003455898327952562,
+            "ratioDiffBound": 0.06449041718472692,
+            "ratioInterval": [
+              -0.06414482735193167,
+              0.06483600701752218
+            ],
+            "absRatioUpper": 0.06483600701752218
+          },
+          {
+            "coordinateIndex": 10,
+            "centerRatio": 4.6096155713028735e-05,
+            "ratioDiffBound": 0.06447110938512694,
+            "ratioInterval": [
+              -0.06442501322941391,
+              0.06451720554083998
+            ],
+            "absRatioUpper": 0.06451720554083998
+          },
+          {
+            "coordinateIndex": 11,
+            "centerRatio": 2.096349838752435e-06,
+            "ratioDiffBound": 0.06446827279958518,
+            "ratioInterval": [
+              -0.06446617644974643,
+              0.06447036914942393
+            ],
+            "absRatioUpper": 0.06447036914942393
+          },
+          {
+            "coordinateIndex": 12,
+            "centerRatio": 2.033501554471785e-08,
+            "ratioDiffBound": 0.0644681389627758,
+            "ratioInterval": [
+              -0.06446811862776025,
+              0.06446815929779134
+            ],
+            "absRatioUpper": 0.06446815929779133
+          },
+          {
+            "coordinateIndex": 13,
+            "centerRatio": 1.6284303314595813e-05,
+            "ratioDiffBound": 0.06446918747052287,
+            "ratioInterval": [
+              -0.06445290316720827,
+              0.06448547177383747
+            ],
+            "absRatioUpper": 0.06448547177383745
+          },
+          {
+            "coordinateIndex": 14,
+            "centerRatio": 2.042857980372985e-05,
+            "ratioDiffBound": 0.06446945464431003,
+            "ratioInterval": [
+              -0.0644490260645063,
+              0.06448988322411377
+            ],
+            "absRatioUpper": 0.06448988322411377
+          },
+          {
+            "coordinateIndex": 15,
+            "centerRatio": 4.935630472330567e-06,
+            "ratioDiffBound": 0.0644684558427199,
+            "ratioInterval": [
+              -0.06446352021224758,
+              0.06447339147319223
+            ],
+            "absRatioUpper": 0.06447339147319224
+          },
+          {
+            "coordinateIndex": 16,
+            "centerRatio": 2.474558937371386e-07,
+            "ratioDiffBound": 0.06446815360483582,
+            "ratioInterval": [
+              -0.06446790614894209,
+              0.06446840106072955
+            ],
+            "absRatioUpper": 0.06446840106072957
+          },
+          {
+            "coordinateIndex": 17,
+            "centerRatio": 2.454574286692364e-09,
+            "ratioDiffBound": 0.06446813781005704,
+            "ratioInterval": [
+              -0.06446813535548276,
+              0.06446814026463132
+            ],
+            "absRatioUpper": 0.06446814026463134
+          },
+          {
+            "coordinateIndex": 18,
+            "centerRatio": 1.560599496754377e-06,
+            "ratioDiffBound": 0.06446823826075838,
+            "ratioInterval": [
+              -0.06446667766126163,
+              0.06446979886025514
+            ],
+            "absRatioUpper": 0.06446979886025514
+          },
+          {
+            "coordinateIndex": 19,
+            "centerRatio": 3.92441899699144e-07,
+            "ratioDiffBound": 0.06446816295181362,
+            "ratioInterval": [
+              -0.06446777050991392,
+              0.06446855539371332
+            ],
+            "absRatioUpper": 0.06446855539371332
+          },
+          {
+            "coordinateIndex": 20,
+            "centerRatio": 1.97641135649327e-08,
+            "ratioDiffBound": 0.06446813892597081,
+            "ratioInterval": [
+              -0.06446811916185724,
+              0.06446815869008438
+            ],
+            "absRatioUpper": 0.06446815869008438
+          },
+          {
+            "coordinateIndex": 21,
+            "centerRatio": 1.9623398501570255e-10,
+            "ratioDiffBound": 0.06446813766446605,
+            "ratioInterval": [
+              -0.06446813746823206,
+              0.06446813786070003
+            ],
+            "absRatioUpper": 0.06446813786070003
+          },
+          {
+            "coordinateIndex": 22,
+            "centerRatio": 1.931235429425855e-08,
+            "ratioDiffBound": 0.06446813889684673,
+            "ratioInterval": [
+              -0.06446811958449243,
+              0.06446815820920103
+            ],
+            "absRatioUpper": 0.06446815820920103
+          },
+          {
+            "coordinateIndex": 23,
+            "centerRatio": 1.079151354321207e-09,
+            "ratioDiffBound": 0.06446813772138608,
+            "ratioInterval": [
+              -0.06446813664223473,
+              0.06446813880053744
+            ],
+            "absRatioUpper": 0.06446813880053744
+          },
+          {
+            "coordinateIndex": 24,
+            "centerRatio": 1.0941470635661996e-11,
+            "ratioDiffBound": 0.06446813765252059,
+            "ratioInterval": [
+              -0.06446813764157912,
+              0.06446813766346206
+            ],
+            "absRatioUpper": 0.06446813766346206
+          },
+          {
+            "coordinateIndex": 25,
+            "centerRatio": 2.679268073694444e-11,
+            "ratioDiffBound": 0.06446813765354248,
+            "ratioInterval": [
+              -0.0644681376267498,
+              0.06446813768033516
+            ],
+            "absRatioUpper": 0.06446813768033517
+          },
+          {
+            "coordinateIndex": 26,
+            "centerRatio": 3.230497508249978e-13,
+            "ratioDiffBound": 0.06446813765183604,
+            "ratioInterval": [
+              -0.06446813765151299,
+              0.06446813765215909
+            ],
+            "absRatioUpper": 0.06446813765215909
+          },
+          {
+            "coordinateIndex": 27,
+            "centerRatio": 2.8721638872620798e-15,
+            "ratioDiffBound": 0.0644681376518154,
+            "ratioInterval": [
+              -0.06446813765181253,
+              0.06446813765181827
+            ],
+            "absRatioUpper": 0.06446813765181827
+          }
+        ]
+      },
+      {
+        "projectiveRadius": 0.11680708908005022,
+        "pivotAbsCenter": 0.9643323749252883,
+        "pivotAbsLower": 0.8475252858452381,
+        "pivotAbsUpper": 1.0,
+        "provesNoncollapse": true,
+        "provesThreshold": true,
+        "threshold": 0.5,
+        "maxChartRatioDiffBound": 0.17512782050162978,
+        "maxAbsChartRatioUpper": 1.0,
+        "chartRatioBounds": [
+          {
+            "coordinateIndex": 0,
+            "centerRatio": 1.0,
+            "ratioDiffBound": 0.0,
+            "ratioInterval": [
+              1.0,
+              1.0
+            ],
+            "absRatioUpper": 1.0
+          },
+          {
+            "coordinateIndex": 1,
+            "centerRatio": 0.2706870558890356,
+            "ratioDiffBound": 0.17512782050162978,
+            "ratioInterval": [
+              0.0955592353874058,
+              0.44581487639066536
+            ],
+            "absRatioUpper": 0.44581487639066536
+          },
+          {
+            "coordinateIndex": 2,
+            "centerRatio": 0.022151857958402583,
+            "ratioDiffBound": 0.1408743610602881,
+            "ratioInterval": [
+              -0.11872250310188553,
+              0.1630262190186907
+            ],
+            "absRatioUpper": 0.16302621901869072
+          },
+          {
+            "coordinateIndex": 3,
+            "centerRatio": 0.0018482163052554582,
+            "ratioDiffBound": 0.13807608551755504,
+            "ratioInterval": [
+              -0.1362278692122996,
+              0.1399243018228105
+            ],
+            "absRatioUpper": 0.13992430182281052
+          },
+          {
+            "coordinateIndex": 4,
+            "centerRatio": 0.0001906401926563277,
+            "ratioDiffBound": 0.13784763612038073,
+            "ratioInterval": [
+              -0.1376569959277244,
+              0.13803827631303706
+            ],
+            "absRatioUpper": 0.13803827631303708
+          },
+          {
+            "coordinateIndex": 5,
+            "centerRatio": 8.0886540456669e-06,
+            "ratioDiffBound": 0.13782247661872535,
+            "ratioInterval": [
+              -0.13781438796467968,
+              0.13783056527277102
+            ],
+            "absRatioUpper": 0.13783056527277104
+          },
+          {
+            "coordinateIndex": 6,
+            "centerRatio": 7.709149440600808e-08,
+            "ratioDiffBound": 0.13782137245426418,
+            "ratioInterval": [
+              -0.13782129536276977,
+              0.1378214495457586
+            ],
+            "absRatioUpper": 0.1378214495457586
+          },
+          {
+            "coordinateIndex": 7,
+            "centerRatio": 0.03956144871836083,
+            "ratioDiffBound": 0.14327377456771825,
+            "ratioInterval": [
+              -0.10371232584935743,
+              0.1828352232860791
+            ],
+            "absRatioUpper": 0.1828352232860791
+          },
+          {
+            "coordinateIndex": 8,
+            "centerRatio": 0.0032976970140688126,
+            "ratioDiffBound": 0.13827585492278915,
+            "ratioInterval": [
+              -0.13497815790872034,
+              0.14157355193685797
+            ],
+            "absRatioUpper": 0.14157355193685797
+          },
+          {
+            "coordinateIndex": 9,
+            "centerRatio": 0.0003455898327952562,
+            "ratioDiffBound": 0.13786899149079965,
+            "ratioInterval": [
+              -0.1375234016580044,
+              0.1382145813235949
+            ],
+            "absRatioUpper": 0.13821458132359493
+          },
+          {
+            "coordinateIndex": 10,
+            "centerRatio": 4.6096155713028735e-05,
+            "ratioDiffBound": 0.1378277148643649,
+            "ratioInterval": [
+              -0.13778161870865188,
+              0.13787381102007792
+            ],
+            "absRatioUpper": 0.13787381102007792
+          },
+          {
+            "coordinateIndex": 11,
+            "centerRatio": 2.096349838752435e-06,
+            "ratioDiffBound": 0.13782165075119907,
+            "ratioInterval": [
+              -0.13781955440136032,
+              0.1378237471010378
+            ],
+            "absRatioUpper": 0.13782374710103784
+          },
+          {
+            "coordinateIndex": 12,
+            "centerRatio": 2.033501554471785e-08,
+            "ratioDiffBound": 0.13782136463200895,
+            "ratioInterval": [
+              -0.13782134429699341,
+              0.13782138496702448
+            ],
+            "absRatioUpper": 0.1378213849670245
+          },
+          {
+            "coordinateIndex": 13,
+            "centerRatio": 1.6284303314595813e-05,
+            "ratioDiffBound": 0.1378236061542687,
+            "ratioInterval": [
+              -0.1378073218509541,
+              0.1378398904575833
+            ],
+            "absRatioUpper": 0.13783989045758327
+          },
+          {
+            "coordinateIndex": 14,
+            "centerRatio": 2.042857980372985e-05,
+            "ratioDiffBound": 0.1378241773240982,
+            "ratioInterval": [
+              -0.1378037487442945,
+              0.13784460590390193
+            ],
+            "absRatioUpper": 0.13784460590390196
+          },
+          {
+            "coordinateIndex": 15,
+            "centerRatio": 4.935630472330567e-06,
+            "ratioDiffBound": 0.13782204206472262,
+            "ratioInterval": [
+              -0.1378171064342503,
+              0.13782697769519495
+            ],
+            "absRatioUpper": 0.13782697769519495
+          },
+          {
+            "coordinateIndex": 16,
+            "centerRatio": 2.474558937371386e-07,
+            "ratioDiffBound": 0.13782139593411769,
+            "ratioInterval": [
+              -0.13782114847822394,
+              0.13782164339001143
+            ],
+            "absRatioUpper": 0.13782164339001143
+          },
+          {
+            "coordinateIndex": 17,
+            "centerRatio": 2.454574286692364e-09,
+            "ratioDiffBound": 0.13782136216770222,
+            "ratioInterval": [
+              -0.13782135971312792,
+              0.1378213646222765
+            ],
+            "absRatioUpper": 0.13782136462227648
+          },
+          {
+            "coordinateIndex": 18,
+            "centerRatio": 1.560599496754377e-06,
+            "ratioDiffBound": 0.13782157691335734,
+            "ratioInterval": [
+              -0.1378200163138606,
+              0.13782313751285408
+            ],
+            "absRatioUpper": 0.1378231375128541
+          },
+          {
+            "coordinateIndex": 19,
+            "centerRatio": 3.92441899699144e-07,
+            "ratioDiffBound": 0.1378214159162865,
+            "ratioInterval": [
+              -0.1378210234743868,
+              0.1378218083581862
+            ],
+            "absRatioUpper": 0.1378218083581862
+          },
+          {
+            "coordinateIndex": 20,
+            "centerRatio": 1.97641135649327e-08,
+            "ratioDiffBound": 0.13782136455332647,
+            "ratioInterval": [
+              -0.1378213447892129,
+              0.13782138431744004
+            ],
+            "absRatioUpper": 0.13782138431744004
+          },
+          {
+            "coordinateIndex": 21,
+            "centerRatio": 1.9623398501570255e-10,
+            "ratioDiffBound": 0.13782136185645466,
+            "ratioInterval": [
+              -0.1378213616602207,
+              0.13782136205268863
+            ],
+            "absRatioUpper": 0.13782136205268863
+          },
+          {
+            "coordinateIndex": 22,
+            "centerRatio": 1.931235429425855e-08,
+            "ratioDiffBound": 0.13782136449106439,
+            "ratioInterval": [
+              -0.1378213451787101,
+              0.13782138380341868
+            ],
+            "absRatioUpper": 0.13782138380341868
+          },
+          {
+            "coordinateIndex": 23,
+            "centerRatio": 1.079151354321207e-09,
+            "ratioDiffBound": 0.13782136197813952,
+            "ratioInterval": [
+              -0.13782136089898817,
+              0.13782136305729087
+            ],
+            "absRatioUpper": 0.1378213630572909
+          },
+          {
+            "coordinateIndex": 24,
+            "centerRatio": 1.0941470635661996e-11,
+            "ratioDiffBound": 0.1378213618309174,
+            "ratioInterval": [
+              -0.13782136181997592,
+              0.13782136184185886
+            ],
+            "absRatioUpper": 0.13782136184185886
+          },
+          {
+            "coordinateIndex": 25,
+            "centerRatio": 2.679268073694444e-11,
+            "ratioDiffBound": 0.137821361833102,
+            "ratioInterval": [
+              -0.13782136180630933,
+              0.1378213618598947
+            ],
+            "absRatioUpper": 0.13782136185989471
+          },
+          {
+            "coordinateIndex": 26,
+            "centerRatio": 3.230497508249978e-13,
+            "ratioDiffBound": 0.13782136182945395,
+            "ratioInterval": [
+              -0.1378213618291309,
+              0.137821361829777
+            ],
+            "absRatioUpper": 0.137821361829777
+          },
+          {
+            "coordinateIndex": 27,
+            "centerRatio": 2.8721638872620798e-15,
+            "ratioDiffBound": 0.13782136182940982,
+            "ratioInterval": [
+              -0.13782136182940696,
+              0.13782136182941268
+            ],
+            "absRatioUpper": 0.1378213618294127
+          }
+        ]
+      },
+      {
+        "projectiveRadius": 0.23361417816010044,
+        "pivotAbsCenter": 0.9643323749252883,
+        "pivotAbsLower": 0.7307181967651879,
+        "pivotAbsUpper": 1.0,
+        "provesNoncollapse": true,
+        "provesThreshold": true,
+        "threshold": 0.5,
+        "maxChartRatioDiffBound": 0.40624486097967794,
+        "maxAbsChartRatioUpper": 1.0,
+        "chartRatioBounds": [
+          {
+            "coordinateIndex": 0,
+            "centerRatio": 1.0,
+            "ratioDiffBound": 0.0,
+            "ratioInterval": [
+              1.0,
+              1.0
+            ],
+            "absRatioUpper": 1.0
+          },
+          {
+            "coordinateIndex": 1,
+            "centerRatio": 0.2706870558890356,
+            "ratioDiffBound": 0.40624486097967794,
+            "ratioInterval": [
+              -0.13555780509064236,
+              0.6769319168687136
+            ],
+            "absRatioUpper": 0.6769319168687135
+          },
+          {
+            "coordinateIndex": 2,
+            "centerRatio": 0.022151857958402583,
+            "ratioDiffBound": 0.32678694373407735,
+            "ratioInterval": [
+              -0.3046350857756748,
+              0.3489388016924799
+            ],
+            "absRatioUpper": 0.3489388016924799
+          },
+          {
+            "coordinateIndex": 3,
+            "centerRatio": 0.0018482163052554582,
+            "ratioDiffBound": 0.3202957702838268,
+            "ratioInterval": [
+              -0.31844755397857133,
+              0.3221439865890822
+            ],
+            "absRatioUpper": 0.3221439865890823
+          },
+          {
+            "coordinateIndex": 4,
+            "centerRatio": 0.0001906401926563277,
+            "ratioDiffBound": 0.31976583510088363,
+            "ratioInterval": [
+              -0.3195751949082273,
+              0.31995647529354
+            ],
+            "absRatioUpper": 0.31995647529354
+          },
+          {
+            "coordinateIndex": 5,
+            "centerRatio": 8.0886540456669e-06,
+            "ratioDiffBound": 0.31970747248195175,
+            "ratioInterval": [
+              -0.3196993838279061,
+              0.3197155611359974
+            ],
+            "absRatioUpper": 0.3197155611359974
+          },
+          {
+            "coordinateIndex": 6,
+            "centerRatio": 7.709149440600808e-08,
+            "ratioDiffBound": 0.3197049111462556,
+            "ratioInterval": [
+              -0.3197048340547612,
+              0.31970498823775
+            ],
+            "absRatioUpper": 0.31970498823775007
+          },
+          {
+            "coordinateIndex": 7,
+            "centerRatio": 0.03956144871836083,
+            "ratioDiffBound": 0.3323528749719965,
+            "ratioInterval": [
+              -0.2927914262536357,
+              0.3719143236903573
+            ],
+            "absRatioUpper": 0.3719143236903574
+          },
+          {
+            "coordinateIndex": 8,
+            "centerRatio": 0.0032976970140688126,
+            "ratioDiffBound": 0.3207591763493215,
+            "ratioInterval": [
+              -0.3174614793352527,
+              0.3240568733633903
+            ],
+            "absRatioUpper": 0.32405687336339034
+          },
+          {
+            "coordinateIndex": 9,
+            "centerRatio": 0.0003455898327952562,
+            "ratioDiffBound": 0.3198153732579974,
+            "ratioInterval": [
+              -0.31946978342520216,
+              0.32016096309079267
+            ],
+            "absRatioUpper": 0.32016096309079267
+          },
+          {
+            "coordinateIndex": 10,
+            "centerRatio": 4.6096155713028735e-05,
+            "ratioDiffBound": 0.31971962366595846,
+            "ratioInterval": [
+              -0.3196735275102454,
+              0.3197657198216715
+            ],
+            "absRatioUpper": 0.3197657198216715
+          },
+          {
+            "coordinateIndex": 11,
+            "centerRatio": 2.096349838752435e-06,
+            "ratioDiffBound": 0.3197055567130154,
+            "ratioInterval": [
+              -0.31970346036317665,
+              0.3197076530628542
+            ],
+            "absRatioUpper": 0.3197076530628542
+          },
+          {
+            "coordinateIndex": 12,
+            "centerRatio": 2.033501554471785e-08,
+            "ratioDiffBound": 0.319704893000932,
+            "ratioInterval": [
+              -0.31970487266591646,
+              0.3197049133359476
+            ],
+            "absRatioUpper": 0.3197049133359475
+          },
+          {
+            "coordinateIndex": 13,
+            "centerRatio": 1.6284303314595813e-05,
+            "ratioDiffBound": 0.3197100926710711,
+            "ratioInterval": [
+              -0.3196938083677565,
+              0.31972637697438566
+            ],
+            "absRatioUpper": 0.31972637697438566
+          },
+          {
+            "coordinateIndex": 14,
+            "centerRatio": 2.042857980372985e-05,
+            "ratioDiffBound": 0.31971141761651567,
+            "ratioInterval": [
+              -0.31969098903671195,
+              0.3197318461963194
+            ],
+            "absRatioUpper": 0.3197318461963194
+          },
+          {
+            "coordinateIndex": 15,
+            "centerRatio": 4.935630472330567e-06,
+            "ratioDiffBound": 0.31970646444490813,
+            "ratioInterval": [
+              -0.3197015288144358,
+              0.31971140007538046
+            ],
+            "absRatioUpper": 0.31971140007538046
+          },
+          {
+            "coordinateIndex": 16,
+            "centerRatio": 2.474558937371386e-07,
+            "ratioDiffBound": 0.31970496561258654,
+            "ratioInterval": [
+              -0.3197047181566928,
+              0.31970521306848027
+            ],
+            "absRatioUpper": 0.3197052130684803
+          },
+          {
+            "coordinateIndex": 17,
+            "centerRatio": 2.454574286692364e-09,
+            "ratioDiffBound": 0.31970488728446755,
+            "ratioInterval": [
+              -0.3197048848298933,
+              0.3197048897390418
+            ],
+            "absRatioUpper": 0.3197048897390419
+          },
+          {
+            "coordinateIndex": 18,
+            "centerRatio": 1.560599496754377e-06,
+            "ratioDiffBound": 0.3197053854310131,
+            "ratioInterval": [
+              -0.3197038248315164,
+              0.31970694603050986
+            ],
+            "absRatioUpper": 0.3197069460305099
+          },
+          {
+            "coordinateIndex": 19,
+            "centerRatio": 3.92441899699144e-07,
+            "ratioDiffBound": 0.31970501196532114,
+            "ratioInterval": [
+              -0.31970461952342144,
+              0.31970540440722084
+            ],
+            "absRatioUpper": 0.3197054044072209
+          },
+          {
+            "coordinateIndex": 20,
+            "centerRatio": 1.97641135649327e-08,
+            "ratioDiffBound": 0.31970489281841186,
+            "ratioInterval": [
+              -0.3197048730542983,
+              0.3197049125825254
+            ],
+            "absRatioUpper": 0.3197049125825254
+          },
+          {
+            "coordinateIndex": 21,
+            "centerRatio": 1.9623398501570255e-10,
+            "ratioDiffBound": 0.3197048865624651,
+            "ratioInterval": [
+              -0.3197048863662311,
+              0.31970488675869907
+            ],
+            "absRatioUpper": 0.3197048867586991
+          },
+          {
+            "coordinateIndex": 22,
+            "centerRatio": 1.931235429425855e-08,
+            "ratioDiffBound": 0.3197048926739822,
+            "ratioInterval": [
+              -0.31970487336162795,
+              0.3197049119863365
+            ],
+            "absRatioUpper": 0.3197049119863365
+          },
+          {
+            "coordinateIndex": 23,
+            "centerRatio": 1.079151354321207e-09,
+            "ratioDiffBound": 0.3197048868447381,
+            "ratioInterval": [
+              -0.3197048857655867,
+              0.31970488792388946
+            ],
+            "absRatioUpper": 0.3197048879238895
+          },
+          {
+            "coordinateIndex": 24,
+            "centerRatio": 1.0941470635661996e-11,
+            "ratioDiffBound": 0.3197048865032262,
+            "ratioInterval": [
+              -0.31970488649228473,
+              0.3197048865141677
+            ],
+            "absRatioUpper": 0.31970488651416773
+          },
+          {
+            "coordinateIndex": 25,
+            "centerRatio": 2.679268073694444e-11,
+            "ratioDiffBound": 0.3197048865082939,
+            "ratioInterval": [
+              -0.3197048864815012,
+              0.31970488653508655
+            ],
+            "absRatioUpper": 0.3197048865350866
+          },
+          {
+            "coordinateIndex": 26,
+            "centerRatio": 3.230497508249978e-13,
+            "ratioDiffBound": 0.3197048864998314,
+            "ratioInterval": [
+              -0.31970488649950835,
+              0.3197048865001545
+            ],
+            "absRatioUpper": 0.3197048865001545
+          },
+          {
+            "coordinateIndex": 27,
+            "centerRatio": 2.8721638872620798e-15,
+            "ratioDiffBound": 0.3197048864997291,
+            "ratioInterval": [
+              -0.3197048864997262,
+              0.319704886499732
+            ],
+            "absRatioUpper": 0.319704886499732
+          }
+        ]
+      },
+      {
+        "projectiveRadius": 0.35042126724015066,
+        "pivotAbsCenter": 0.9643323749252883,
+        "pivotAbsLower": 0.6139111076851377,
+        "pivotAbsUpper": 1.0,
+        "provesNoncollapse": true,
+        "provesThreshold": true,
+        "threshold": 0.5,
+        "maxChartRatioDiffBound": 0.7253098417933574,
+        "maxAbsChartRatioUpper": 1.0,
+        "chartRatioBounds": [
+          {
+            "coordinateIndex": 0,
+            "centerRatio": 1.0,
+            "ratioDiffBound": 0.0,
+            "ratioInterval": [
+              1.0,
+              1.0
+            ],
+            "absRatioUpper": 1.0
+          },
+          {
+            "coordinateIndex": 1,
+            "centerRatio": 0.2706870558890356,
+            "ratioDiffBound": 0.7253098417933574,
+            "ratioInterval": [
+              -0.45462278590432187,
+              0.995996897682393
+            ],
+            "absRatioUpper": 0.9959968976823929
+          },
+          {
+            "coordinateIndex": 2,
+            "centerRatio": 0.022151857958402583,
+            "ratioDiffBound": 0.5834456241201665,
+            "ratioInterval": [
+              -0.561293766161764,
+              0.6055974820785691
+            ],
+            "absRatioUpper": 0.605597482078569
+          },
+          {
+            "coordinateIndex": 3,
+            "centerRatio": 0.0018482163052554582,
+            "ratioDiffBound": 0.5718562787758323,
+            "ratioInterval": [
+              -0.5700080624705769,
+              0.5737044950810878
+            ],
+            "absRatioUpper": 0.5737044950810879
+          },
+          {
+            "coordinateIndex": 4,
+            "centerRatio": 0.0001906401926563277,
+            "ratioDiffBound": 0.5709101321519112,
+            "ratioInterval": [
+              -0.5707194919592549,
+              0.5711007723445676
+            ],
+            "absRatioUpper": 0.5711007723445677
+          },
+          {
+            "coordinateIndex": 5,
+            "centerRatio": 8.0886540456669e-06,
+            "ratioDiffBound": 0.5708059314937121,
+            "ratioInterval": [
+              -0.5707978428396664,
+              0.5708140201477577
+            ],
+            "absRatioUpper": 0.5708140201477577
+          },
+          {
+            "coordinateIndex": 6,
+            "centerRatio": 7.709149440600808e-08,
+            "ratioDiffBound": 0.5708013584832768,
+            "ratioInterval": [
+              -0.5708012813917824,
+              0.5708014355747713
+            ],
+            "absRatioUpper": 0.5708014355747711
+          },
+          {
+            "coordinateIndex": 7,
+            "centerRatio": 0.03956144871836083,
+            "ratioDiffBound": 0.5933830414104982,
+            "ratioInterval": [
+              -0.5538215926921374,
+              0.6329444901288591
+            ],
+            "absRatioUpper": 0.6329444901288591
+          },
+          {
+            "coordinateIndex": 8,
+            "centerRatio": 0.0032976970140688126,
+            "ratioDiffBound": 0.5726836442697355,
+            "ratioInterval": [
+              -0.5693859472556667,
+              0.5759813412838043
+            ],
+            "absRatioUpper": 0.5759813412838044
+          },
+          {
+            "coordinateIndex": 9,
+            "centerRatio": 0.0003455898327952562,
+            "ratioDiffBound": 0.5709985776101807,
+            "ratioInterval": [
+              -0.5706529877773855,
+              0.5713441674429759
+            ],
+            "absRatioUpper": 0.5713441674429759
+          },
+          {
+            "coordinateIndex": 10,
+            "centerRatio": 4.6096155713028735e-05,
+            "ratioDiffBound": 0.5708276262256239,
+            "ratioInterval": [
+              -0.5707815300699108,
+              0.5708737223813369
+            ],
+            "absRatioUpper": 0.5708737223813369
+          },
+          {
+            "coordinateIndex": 11,
+            "centerRatio": 2.096349838752435e-06,
+            "ratioDiffBound": 0.5708025110785939,
+            "ratioInterval": [
+              -0.5708004147287552,
+              0.5708046074284326
+            ],
+            "absRatioUpper": 0.5708046074284328
+          },
+          {
+            "coordinateIndex": 12,
+            "centerRatio": 2.033501554471785e-08,
+            "ratioDiffBound": 0.570801326086604,
+            "ratioInterval": [
+              -0.5708013057515885,
+              0.5708013464216196
+            ],
+            "absRatioUpper": 0.5708013464216196
+          },
+          {
+            "coordinateIndex": 13,
+            "centerRatio": 1.6284303314595813e-05,
+            "ratioDiffBound": 0.5708106095810879,
+            "ratioInterval": [
+              -0.5707943252777733,
+              0.5708268938844024
+            ],
+            "absRatioUpper": 0.5708268938844024
+          },
+          {
+            "coordinateIndex": 14,
+            "centerRatio": 2.042857980372985e-05,
+            "ratioDiffBound": 0.5708129751395553,
+            "ratioInterval": [
+              -0.5707925465597515,
+              0.5708334037193591
+            ],
+            "absRatioUpper": 0.5708334037193591
+          },
+          {
+            "coordinateIndex": 15,
+            "centerRatio": 4.935630472330567e-06,
+            "ratioDiffBound": 0.5708041317437119,
+            "ratioInterval": [
+              -0.5707991961132396,
+              0.5708090673741842
+            ],
+            "absRatioUpper": 0.5708090673741841
+          },
+          {
+            "coordinateIndex": 16,
+            "centerRatio": 2.474558937371386e-07,
+            "ratioDiffBound": 0.5708014557274999,
+            "ratioInterval": [
+              -0.5708012082716061,
+              0.5708017031833936
+            ],
+            "absRatioUpper": 0.5708017031833936
+          },
+          {
+            "coordinateIndex": 17,
+            "centerRatio": 2.454574286692364e-09,
+            "ratioDiffBound": 0.5708013158804247,
+            "ratioInterval": [
+              -0.5708013134258504,
+              0.570801318334999
+            ],
+            "absRatioUpper": 0.570801318334999
+          },
+          {
+            "coordinateIndex": 18,
+            "centerRatio": 1.560599496754377e-06,
+            "ratioDiffBound": 0.5708022052715945,
+            "ratioInterval": [
+              -0.5708006446720978,
+              0.5708037658710913
+            ],
+            "absRatioUpper": 0.5708037658710913
+          },
+          {
+            "coordinateIndex": 19,
+            "centerRatio": 3.92441899699144e-07,
+            "ratioDiffBound": 0.5708015384857026,
+            "ratioInterval": [
+              -0.5708011460438029,
+              0.5708019309276022
+            ],
+            "absRatioUpper": 0.5708019309276025
+          },
+          {
+            "coordinateIndex": 20,
+            "centerRatio": 1.97641135649327e-08,
+            "ratioDiffBound": 0.5708013257607324,
+            "ratioInterval": [
+              -0.5708013059966188,
+              0.570801345524846
+            ],
+            "absRatioUpper": 0.5708013455248461
+          },
+          {
+            "coordinateIndex": 21,
+            "centerRatio": 1.9623398501570255e-10,
+            "ratioDiffBound": 0.5708013145913611,
+            "ratioInterval": [
+              -0.570801314395127,
+              0.5708013147875951
+            ],
+            "absRatioUpper": 0.5708013147875951
+          },
+          {
+            "coordinateIndex": 22,
+            "centerRatio": 1.931235429425855e-08,
+            "ratioDiffBound": 0.5708013255028677,
+            "ratioInterval": [
+              -0.5708013061905134,
+              0.5708013448152219
+            ],
+            "absRatioUpper": 0.570801344815222
+          },
+          {
+            "coordinateIndex": 23,
+            "centerRatio": 1.079151354321207e-09,
+            "ratioDiffBound": 0.5708013150953315,
+            "ratioInterval": [
+              -0.5708013140161802,
+              0.5708013161744828
+            ],
+            "absRatioUpper": 0.5708013161744828
+          },
+          {
+            "coordinateIndex": 24,
+            "centerRatio": 1.0941470635661996e-11,
+            "ratioDiffBound": 0.5708013144855958,
+            "ratioInterval": [
+              -0.5708013144746543,
+              0.5708013144965373
+            ],
+            "absRatioUpper": 0.5708013144965374
+          },
+          {
+            "coordinateIndex": 25,
+            "centerRatio": 2.679268073694444e-11,
+            "ratioDiffBound": 0.5708013144946437,
+            "ratioInterval": [
+              -0.570801314467851,
+              0.5708013145214363
+            ],
+            "absRatioUpper": 0.5708013145214365
+          },
+          {
+            "coordinateIndex": 26,
+            "centerRatio": 3.230497508249978e-13,
+            "ratioDiffBound": 0.5708013144795349,
+            "ratioInterval": [
+              -0.5708013144792118,
+              0.5708013144798579
+            ],
+            "absRatioUpper": 0.5708013144798579
+          },
+          {
+            "coordinateIndex": 27,
+            "centerRatio": 2.8721638872620798e-15,
+            "ratioDiffBound": 0.5708013144793521,
+            "ratioInterval": [
+              -0.5708013144793492,
+              0.570801314479355
+            ],
+            "absRatioUpper": 0.570801314479355
+          }
+        ]
+      },
+      {
+        "projectiveRadius": 0.4672283563202009,
+        "pivotAbsCenter": 0.9643323749252883,
+        "pivotAbsLower": 0.49710401860508746,
+        "pivotAbsUpper": 1.0,
+        "provesNoncollapse": true,
+        "provesThreshold": false,
+        "threshold": 0.5,
+        "maxChartRatioDiffBound": 1.1943195031622569,
+        "maxAbsChartRatioUpper": 1.4650065590512926,
+        "chartRatioBounds": [
+          {
+            "coordinateIndex": 0,
+            "centerRatio": 1.0,
+            "ratioDiffBound": 0.0,
+            "ratioInterval": [
+              1.0,
+              1.0
+            ],
+            "absRatioUpper": 1.0
+          },
+          {
+            "coordinateIndex": 1,
+            "centerRatio": 0.2706870558890356,
+            "ratioDiffBound": 1.1943195031622569,
+            "ratioInterval": [
+              -0.9236324472732214,
+              1.4650065590512924
+            ],
+            "absRatioUpper": 1.4650065590512926
+          },
+          {
+            "coordinateIndex": 2,
+            "centerRatio": 0.022151857958402583,
+            "ratioDiffBound": 0.9607211260203967,
+            "ratioInterval": [
+              -0.9385692680619941,
+              0.9828729839787993
+            ],
+            "absRatioUpper": 0.9828729839787993
+          },
+          {
+            "coordinateIndex": 3,
+            "centerRatio": 0.0018482163052554582,
+            "ratioDiffBound": 0.9416377214172031,
+            "ratioInterval": [
+              -0.9397895051119477,
+              0.9434859377224586
+            ],
+            "absRatioUpper": 0.9434859377224587
+          },
+          {
+            "coordinateIndex": 4,
+            "centerRatio": 0.0001906401926563277,
+            "ratioDiffBound": 0.940079764664533,
+            "ratioInterval": [
+              -0.9398891244718767,
+              0.9402704048571894
+            ],
+            "absRatioUpper": 0.9402704048571894
+          },
+          {
+            "coordinateIndex": 5,
+            "centerRatio": 8.0886540456669e-06,
+            "ratioDiffBound": 0.9399081843671776,
+            "ratioInterval": [
+              -0.9399000957131319,
+              0.9399162730212233
+            ],
+            "absRatioUpper": 0.9399162730212234
+          },
+          {
+            "coordinateIndex": 6,
+            "centerRatio": 7.709149440600808e-08,
+            "ratioDiffBound": 0.9399006542948743,
+            "ratioInterval": [
+              -0.9399005772033799,
+              0.9399007313863688
+            ],
+            "absRatioUpper": 0.9399007313863688
+          },
+          {
+            "coordinateIndex": 7,
+            "centerRatio": 0.03956144871836083,
+            "ratioDiffBound": 0.9770844105052173,
+            "ratioInterval": [
+              -0.9375229617868565,
+              1.016645859223578
+            ],
+            "absRatioUpper": 1.016645859223578
+          },
+          {
+            "coordinateIndex": 8,
+            "centerRatio": 0.0032976970140688126,
+            "ratioDiffBound": 0.9430000891787778,
+            "ratioInterval": [
+              -0.939702392164709,
+              0.9462977861928465
+            ],
+            "absRatioUpper": 0.9462977861928465
+          },
+          {
+            "coordinateIndex": 9,
+            "centerRatio": 0.0003455898327952562,
+            "ratioDiffBound": 0.9402254019214549,
+            "ratioInterval": [
+              -0.9398798120886597,
+              0.9405709917542501
+            ],
+            "absRatioUpper": 0.9405709917542502
+          },
+          {
+            "coordinateIndex": 10,
+            "centerRatio": 4.6096155713028735e-05,
+            "ratioDiffBound": 0.9399439076401089,
+            "ratioInterval": [
+              -0.9398978114843959,
+              0.939990003795822
+            ],
+            "absRatioUpper": 0.939990003795822
+          },
+          {
+            "coordinateIndex": 11,
+            "centerRatio": 2.096349838752435e-06,
+            "ratioDiffBound": 0.9399025521969671,
+            "ratioInterval": [
+              -0.9399004558471283,
+              0.9399046485468058
+            ],
+            "absRatioUpper": 0.9399046485468058
+          },
+          {
+            "coordinateIndex": 12,
+            "centerRatio": 2.033501554471785e-08,
+            "ratioDiffBound": 0.9399006009494268,
+            "ratioInterval": [
+              -0.9399005806144113,
+              0.9399006212844424
+            ],
+            "absRatioUpper": 0.9399006212844424
+          },
+          {
+            "coordinateIndex": 13,
+            "centerRatio": 1.6284303314595813e-05,
+            "ratioDiffBound": 0.939915887462694,
+            "ratioInterval": [
+              -0.9398996031593795,
+              0.9399321717660086
+            ],
+            "absRatioUpper": 0.9399321717660086
+          },
+          {
+            "coordinateIndex": 14,
+            "centerRatio": 2.042857980372985e-05,
+            "ratioDiffBound": 0.9399197826705775,
+            "ratioInterval": [
+              -0.9398993540907737,
+              0.9399402112503813
+            ],
+            "absRatioUpper": 0.9399402112503812
+          },
+          {
+            "coordinateIndex": 15,
+            "centerRatio": 4.935630472330567e-06,
+            "ratioDiffBound": 0.9399052208384866,
+            "ratioInterval": [
+              -0.9399002852080143,
+              0.9399101564689589
+            ],
+            "absRatioUpper": 0.9399101564689589
+          },
+          {
+            "coordinateIndex": 16,
+            "centerRatio": 2.474558937371386e-07,
+            "ratioDiffBound": 0.9399008144204722,
+            "ratioInterval": [
+              -0.9399005669645785,
+              0.939901061876366
+            ],
+            "absRatioUpper": 0.9399010618763661
+          },
+          {
+            "coordinateIndex": 17,
+            "centerRatio": 2.454574286692364e-09,
+            "ratioDiffBound": 0.9399005841435897,
+            "ratioInterval": [
+              -0.9399005816890154,
+              0.939900586598164
+            ],
+            "absRatioUpper": 0.939900586598164
+          },
+          {
+            "coordinateIndex": 18,
+            "centerRatio": 1.560599496754377e-06,
+            "ratioDiffBound": 0.9399020486449089,
+            "ratioInterval": [
+              -0.9399004880454122,
+              0.9399036092444056
+            ],
+            "absRatioUpper": 0.9399036092444056
+          },
+          {
+            "coordinateIndex": 19,
+            "centerRatio": 3.92441899699144e-07,
+            "ratioDiffBound": 0.9399009506929037,
+            "ratioInterval": [
+              -0.939900558251004,
+              0.9399013431348033
+            ],
+            "absRatioUpper": 0.9399013431348036
+          },
+          {
+            "coordinateIndex": 20,
+            "centerRatio": 1.97641135649327e-08,
+            "ratioDiffBound": 0.9399006004128356,
+            "ratioInterval": [
+              -0.9399005806487221,
+              0.9399006201769492
+            ],
+            "absRatioUpper": 0.9399006201769493
+          },
+          {
+            "coordinateIndex": 21,
+            "centerRatio": 1.9623398501570255e-10,
+            "ratioDiffBound": 0.9399005820209743,
+            "ratioInterval": [
+              -0.9399005818247402,
+              0.9399005822172083
+            ],
+            "absRatioUpper": 0.9399005822172083
+          },
+          {
+            "coordinateIndex": 22,
+            "centerRatio": 1.931235429425855e-08,
+            "ratioDiffBound": 0.939900599988227,
+            "ratioInterval": [
+              -0.9399005806758727,
+              0.9399006193005812
+            ],
+            "absRatioUpper": 0.9399006193005812
+          },
+          {
+            "coordinateIndex": 23,
+            "centerRatio": 1.079151354321207e-09,
+            "ratioDiffBound": 0.9399005828508288,
+            "ratioInterval": [
+              -0.9399005817716775,
+              0.9399005839299801
+            ],
+            "absRatioUpper": 0.9399005839299803
+          },
+          {
+            "coordinateIndex": 24,
+            "centerRatio": 1.0941470635661996e-11,
+            "ratioDiffBound": 0.9399005818468178,
+            "ratioInterval": [
+              -0.9399005818358763,
+              0.9399005818577593
+            ],
+            "absRatioUpper": 0.9399005818577593
+          },
+          {
+            "coordinateIndex": 25,
+            "centerRatio": 2.679268073694444e-11,
+            "ratioDiffBound": 0.9399005818617162,
+            "ratioInterval": [
+              -0.9399005818349235,
+              0.9399005818885089
+            ],
+            "absRatioUpper": 0.939900581888509
+          },
+          {
+            "coordinateIndex": 26,
+            "centerRatio": 3.230497508249978e-13,
+            "ratioDiffBound": 0.9399005818368374,
+            "ratioInterval": [
+              -0.9399005818365144,
+              0.9399005818371605
+            ],
+            "absRatioUpper": 0.9399005818371606
+          },
+          {
+            "coordinateIndex": 27,
+            "centerRatio": 2.8721638872620798e-15,
+            "ratioDiffBound": 0.9399005818365366,
+            "ratioInterval": [
+              -0.9399005818365337,
+              0.9399005818365395
+            ],
+            "absRatioUpper": 0.9399005818365395
+          }
+        ]
+      }
+    ],
+    "rawEntryBallCapacity": {
+      "threshold": 0.5,
+      "uniformAbsoluteEntryRadius": 36392.01834543294,
+      "relativeToMaxEntry": 0.0024877609517735978,
+      "ratioLowerAtRadius": 0.5000000000000001
+    },
+    "conditionalChartBallTheoremStatus": {
+      "label": "conditional chart-ball noncollapse theorem",
+      "closed": true,
+      "status": "closed",
+      "reason": "If an exact interval/Riccati computation encloses the normalized Pluecker vector inside the certified projective ball, then p_01 is nonzero and the stronger threshold margin holds."
+    },
+    "exactFlowEnclosureStatus": {
+      "label": "exact endpoint Riccati/Pluecker flow enclosure",
+      "closed": false,
+      "status": "open",
+      "reason": "Open.  This script supplies the chart-ball target and interval algebra, but it does not yet enclose the exact ODE flow."
+    },
+    "conclusion": "The persistent chart has large margin.  A projective enclosure radius below 0.464332 proves |p_hat_01| >= 0.5; the latest observed projective distance is 0.0292018.",
+    "nextTarget": "Integrate the Riccati equations for the chart ratios p_J/p_01 with ball arithmetic and prove the exact projective radius is below the certified radius."
+  },
+  "riccatiFlowEnclosure": {
+    "theoremName": "endpoint Riccati flow enclosure",
+    "sourceGrassmannJson": "endpoint_grassmann_flow_center.json",
+    "sourceChartBallJson": "endpoint_grassmann_chart_ball_certificate.json",
+    "sourceRowFlowJson": "endpoint_adjoint_row_flow_center_7_9_11.json",
+    "chartCoordinate": [
+      0,
+      1
+    ],
+    "chartIndex": 0,
+    "orders": [
+      7,
+      9,
+      11
+    ],
+    "nodeCount": 41,
+    "coefficientInflation": 1e-10,
+    "traceFieldMinGap": 1.1635518278617991e-05,
+    "traceFieldMinConsecutiveCos": 0.9933352044496803,
+    "centerOrder": 11,
+    "centerPivotAbs": 0.9643323749252883,
+    "certifiedProjectiveRadius": 0.125,
+    "radiusCapacityForThreshold": 0.46433237492528834,
+    "latestProjectiveDistance": 0.029201772270012555,
+    "fourTimesLatestProjectiveDistance": 0.11680708908005022,
+    "ratioBoundsFromChartBall": [
+      1.0,
+      0.4599277985689161,
+      0.17437877790316636,
+      0.15105135772977654,
+      0.14914692230343612,
+      0.14893718374927828,
+      0.14892797904161692,
+      0.19438114228893463,
+      0.15271670654282904,
+      0.14932494826660986,
+      0.14898085162799096,
+      0.1489302990238468,
+      0.14892791383251536,
+      0.14894659995930384,
+      0.14895136143414803,
+      0.14893356115255557,
+      0.14892817477802683,
+      0.14892789328917774,
+      0.14892968348533656,
+      0.14892834135649283,
+      0.14892791317659018,
+      0.14892789069450757,
+      0.14892791265755134,
+      0.14892789170891596,
+      0.14892789048161983,
+      0.14892789049983174,
+      0.14892789046942004,
+      0.14892789046905217
+    ],
+    "exteriorGeneratorInfNormBound": 1405760832895.681,
+    "riccatiRhsInfBoundOnChartTube": 418714069656.92194,
+    "riccatiLipschitzInfBoundOnChartTube": 3020878700619.8228,
+    "intervalLength": 0.525,
+    "flatResidualBudgetForRadius": 0.23809523809523808,
+    "gronwallResidualBudgetForRadius": 0.0,
+    "gronwallResidualBudgetForRadiusText": "9.850126094406126e-688774248833",
+    "generatorSamples": [
+      {
+        "s": 0.02,
+        "riccatiRhsInfAtCenter": 0.2733255907234112,
+        "exteriorGeneratorInfNorm": 284030920.19598734
+      },
+      {
+        "s": 0.026423832236261095,
+        "riccatiRhsInfAtCenter": 0.1168735846856498,
+        "exteriorGeneratorInfNorm": 339314038.309439
+      },
+      {
+        "s": 0.029990811357893613,
+        "riccatiRhsInfAtCenter": 0.05024569029688344,
+        "exteriorGeneratorInfNorm": 371583644.32370615
+      },
+      {
+        "s": 0.037584165753292424,
+        "riccatiRhsInfAtCenter": 0.23383462494431181,
+        "exteriorGeneratorInfNorm": 457010615.152283
+      },
+      {
+        "s": 0.04506651948828815,
+        "riccatiRhsInfAtCenter": 0.5357964836968705,
+        "exteriorGeneratorInfNorm": 556517191.3260636
+      },
+      {
+        "s": 0.058442234969265636,
+        "riccatiRhsInfAtCenter": 1.2373847791920034,
+        "exteriorGeneratorInfNorm": 741405022.0645032
+      },
+      {
+        "s": 0.0741031856366129,
+        "riccatiRhsInfAtCenter": 2.369650187557526,
+        "exteriorGeneratorInfNorm": 937018066.5484561
+      },
+      {
+        "s": 0.085625,
+        "riccatiRhsInfAtCenter": 3.441255513590874,
+        "exteriorGeneratorInfNorm": 1030542606.8104012
+      },
+      {
+        "s": 0.10102279950208197,
+        "riccatiRhsInfAtCenter": 5.190379018814958,
+        "exteriorGeneratorInfNorm": 1017208013.8429978
+      },
+      {
+        "s": 0.11069151948828815,
+        "riccatiRhsInfAtCenter": 6.454758376256729,
+        "exteriorGeneratorInfNorm": 877583821.194848
+      },
+      {
+        "s": 0.15125,
+        "riccatiRhsInfAtCenter": 13.352054687376917,
+        "exteriorGeneratorInfNorm": 6442827893.955128
+      },
+      {
+        "s": 0.19180848051171184,
+        "riccatiRhsInfAtCenter": 10.582418282332775,
+        "exteriorGeneratorInfNorm": 3392240253.1678157
+      },
+      {
+        "s": 0.20147720049791804,
+        "riccatiRhsInfAtCenter": 10.439714911329473,
+        "exteriorGeneratorInfNorm": 2345391214.7724752
+      },
+      {
+        "s": 0.216875,
+        "riccatiRhsInfAtCenter": 9.388725034064912,
+        "exteriorGeneratorInfNorm": 1314598636.2980154
+      },
+      {
+        "s": 0.2283968143633871,
+        "riccatiRhsInfAtCenter": 8.185769290751493,
+        "exteriorGeneratorInfNorm": 810967757.5515127
+      },
+      {
+        "s": 0.24405776503073437,
+        "riccatiRhsInfAtCenter": 6.266773993700808,
+        "exteriorGeneratorInfNorm": 357795967.2676908
+      },
+      {
+        "s": 0.25743348051171183,
+        "riccatiRhsInfAtCenter": 4.568125251973759,
+        "exteriorGeneratorInfNorm": 381981160.40200627
+      },
+      {
+        "s": 0.26491583424670756,
+        "riccatiRhsInfAtCenter": 3.6491563006024434,
+        "exteriorGeneratorInfNorm": 399802897.49404866
+      },
+      {
+        "s": 0.2725091886421064,
+        "riccatiRhsInfAtCenter": 2.7617740514603604,
+        "exteriorGeneratorInfNorm": 390589749.5980038
+      },
+      {
+        "s": 0.2760761677637389,
+        "riccatiRhsInfAtCenter": 2.3642964649040628,
+        "exteriorGeneratorInfNorm": 378000074.73631585
+      },
+      {
+        "s": 0.2825,
+        "riccatiRhsInfAtCenter": 1.6837415554893707,
+        "exteriorGeneratorInfNorm": 343384637.3029956
+      },
+      {
+        "s": 0.2889238322362611,
+        "riccatiRhsInfAtCenter": 1.051900120535286,
+        "exteriorGeneratorInfNorm": 294531011.68613195
+      },
+      {
+        "s": 0.2924908113578936,
+        "riccatiRhsInfAtCenter": 0.7230808750576477,
+        "exteriorGeneratorInfNorm": 261555175.21460432
+      },
+      {
+        "s": 0.30008416575329244,
+        "riccatiRhsInfAtCenter": 0.14168155074030855,
+        "exteriorGeneratorInfNorm": 177659061.18282685
+      },
+      {
+        "s": 0.30756651948828817,
+        "riccatiRhsInfAtCenter": 0.4880934375638831,
+        "exteriorGeneratorInfNorm": 146623611.98931044
+      },
+      {
+        "s": 0.32094223496926566,
+        "riccatiRhsInfAtCenter": 1.3236958920466422,
+        "exteriorGeneratorInfNorm": 387260184.0532062
+      },
+      {
+        "s": 0.3366031856366129,
+        "riccatiRhsInfAtCenter": 2.036392485404616,
+        "exteriorGeneratorInfNorm": 859318593.2564846
+      },
+      {
+        "s": 0.348125,
+        "riccatiRhsInfAtCenter": 2.393427252406361,
+        "exteriorGeneratorInfNorm": 1392779292.7992797
+      },
+      {
+        "s": 0.363522799502082,
+        "riccatiRhsInfAtCenter": 2.6399474955010955,
+        "exteriorGeneratorInfNorm": 2460885118.8330913
+      },
+      {
+        "s": 0.37319151948828816,
+        "riccatiRhsInfAtCenter": 2.596801172803972,
+        "exteriorGeneratorInfNorm": 3394409424.515542
+      },
+      {
+        "s": 0.41375,
+        "riccatiRhsInfAtCenter": 7.439118241767005,
+        "exteriorGeneratorInfNorm": 6515655805.099278
+      },
+      {
+        "s": 0.45430848051171185,
+        "riccatiRhsInfAtCenter": 128.5983757372409,
+        "exteriorGeneratorInfNorm": 85358549191.05212
+      },
+      {
+        "s": 0.463977200497918,
+        "riccatiRhsInfAtCenter": 149.04606428365545,
+        "exteriorGeneratorInfNorm": 146920170129.39807
+      },
+      {
+        "s": 0.479375,
+        "riccatiRhsInfAtCenter": 126.48070439442449,
+        "exteriorGeneratorInfNorm": 167244363654.13113
+      },
+      {
+        "s": 0.4908968143633871,
+        "riccatiRhsInfAtCenter": 861.2084881065625,
+        "exteriorGeneratorInfNorm": 153870245323.0499
+      },
+      {
+        "s": 0.5065577650307344,
+        "riccatiRhsInfAtCenter": 1646.7175647860277,
+        "exteriorGeneratorInfNorm": 808600754911.538
+      },
+      {
+        "s": 0.5199334805117118,
+        "riccatiRhsInfAtCenter": 790.719544288046,
+        "exteriorGeneratorInfNorm": 527098108149.1487
+      },
+      {
+        "s": 0.5274158342467076,
+        "riccatiRhsInfAtCenter": 3098.7265604106237,
+        "exteriorGeneratorInfNorm": 496433305006.3367
+      },
+      {
+        "s": 0.5350091886421063,
+        "riccatiRhsInfAtCenter": 4219.304585364668,
+        "exteriorGeneratorInfNorm": 1205209257025.1377
+      },
+      {
+        "s": 0.538576167763739,
+        "riccatiRhsInfAtCenter": 3913.9037506931045,
+        "exteriorGeneratorInfNorm": 1321073242451.9194
+      },
+      {
+        "s": 0.545,
+        "riccatiRhsInfAtCenter": 2066.2454778142082,
+        "exteriorGeneratorInfNorm": 1172945797175.3447
+      }
+    ],
+    "exteriorEquationStatus": {
+      "label": "exact exterior-square equation",
+      "closed": true,
+      "status": "closed",
+      "reason": "For row flow M'=-MA, the Pluecker vector satisfies p'=B(s)p with B constructed by the exterior-square formula in this certificate."
+    },
+    "riccatiChartEquationStatus": {
+      "label": "exact Riccati chart equation",
+      "closed": true,
+      "status": "closed",
+      "reason": "In the chart p_01 != 0, ratios z_J=p_J/p_01 satisfy the displayed Riccati equation z'=Bp/p_01-z(Bp)_01/p_01."
+    },
+    "chartTubeNoncollapseStatus": {
+      "label": "chart tube noncollapse",
+      "closed": true,
+      "status": "closed",
+      "reason": "The certified projective tube lies within the chart-ball radius needed for |p_hat_01| >= 1/2."
+    },
+    "empiricalRefinementInsideTubeStatus": {
+      "label": "empirical refinement inside chart tube",
+      "closed": true,
+      "status": "closed",
+      "reason": "The latest observed 9->11 projective movement, inflated by a factor four, is inside the certified projective radius. This is evidence, not the exact residual proof."
+    },
+    "validatedExactFlowEnclosureStatus": {
+      "label": "validated exact endpoint Riccati flow enclosure",
+      "closed": false,
+      "status": "open",
+      "reason": "Open.  The ODE and chart tube are now explicit.  To close this, prove a residual or interval-integration bound below the listed projective radius budget."
+    },
+    "conclusion": "The exact exterior/Riccati equation has been constructed in the persistent p_01 chart.  The chart tube has large noncollapse margin; the remaining proof obligation is a validated residual or interval integration bound for the exact endpoint BVP flow.",
+    "nextTarget": "Use a Chebyshev/Krawczyk or interval Taylor solve for the Riccati BVP and prove the projective enclosure radius is below the certified chart-ball radius."
+  },
+  "riccatiKrawczykCollocation": {
+    "theoremName": "endpoint Riccati Krawczyk collocation certificate",
+    "order": 11,
+    "stateScaling": "taylor",
+    "chartCoordinate": [
+      0,
+      1
+    ],
+    "activeIndices": [
+      3,
+      4
+    ],
+    "traceFieldMinGap": 1.1635518278617991e-05,
+    "traceFieldMinConsecutiveCos": 0.9881718063973355,
+    "rawEndpointEntryCapacityForChartThreshold": 36392.018345433105,
+    "recomputedEndpointMaxDifference": 5.089644958331412e-10,
+    "leftSystem": {
+      "label": "left-to-s0 row flow",
+      "dim": 8,
+      "systemSize": 88,
+      "systemInfNorm": 851.0245189994017,
+      "inverseInfNorm": 6705.874237390894,
+      "conditionInfEstimate": 5706863.397346065,
+      "solutionInfNorm": 22561037.10262889,
+      "residualInfNorm": 9.308191642586044e-65,
+      "scaleInf": 1.0,
+      "scaleInvInf": 7511650135.139026,
+      "targetIndex": 0
+    },
+    "rightSystem": {
+      "label": "right-to-s0 row flow",
+      "dim": 8,
+      "systemSize": 88,
+      "systemInfNorm": 909.5578375354255,
+      "inverseInfNorm": 1640.510880155633,
+      "conditionInfEstimate": 1492139.5286076951,
+      "solutionInfNorm": 2082859009.7785735,
+      "residualInfNorm": 2.7739225176936173e-62,
+      "scaleInf": 1.0,
+      "scaleInvInf": 7511650135.139026,
+      "targetIndex": 10
+    },
+    "coefficientRadiusCapacityScaledCompanion": 1.2748331615480036e-09,
+    "endpointEntryRadiusAtCoefficientCapacity": 36392.018345433105,
+    "krawczykQAtCoefficientCapacity": 6.839096683997074e-05,
+    "boundaryRadiusCapacityUnscaledRows": 5.804600980653483e-10,
+    "endpointEntryRadiusAtBoundaryCapacity": 36392.018345433105,
+    "krawczykQAtBoundaryCapacity": 0.0,
+    "mixedHalfCapacityEndpointEntryRadius": 36392.3760536616,
+    "mixedHalfCapacityKrawczykQ": 3.419548341998537e-05,
+    "mixedHalfCapacityPlueckerRatioLower": 0.4999965260567383,
+    "simultaneousCapacityFraction": 0.49999508549087535,
+    "simultaneousCoefficientRadius": 6.37410315594797e-10,
+    "simultaneousBoundaryRadius": 2.9022719635622574e-10,
+    "simultaneousEndpointEntryRadius": 36392.018345433105,
+    "simultaneousKrawczykQ": 3.419514731195479e-05,
+    "simultaneousPlueckerRatioLower": 0.4999999999999994,
+    "linearCollocationKrawczykStatus": {
+      "label": "linear row-flow Krawczyk theorem",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite collocation systems have explicit inverse norms. If scaled companion-matrix and endpoint-row interval radii are below the reported capacities, the endpoint map remains inside the persistent Pluecker chart threshold."
+    },
+    "exactCoefficientEnclosureStatus": {
+      "label": "exact coefficient and boundary interval enclosure",
+      "closed": false,
+      "status": "open",
+      "reason": "Open.  The Krawczyk radii are now quantified, but the exact confluent trace-derivative coefficients and boundary rows still need interval/ball enclosures below these radii."
+    },
+    "conclusion": "The Krawczyk/collocation proof has been reduced to finite coefficient and boundary-row interval radii.  This avoids the useless raw Riccati Gronwall bound, but exact coefficient balls are still required to close the theorem.",
+    "nextTarget": "Build interval balls for the scaled companion matrices and active endpoint boundary rows, then compare their radii with the Krawczyk capacities reported here."
+  },
+  "coefficientBallEnclosure": {
+    "theoremName": "endpoint coefficient and boundary-row ball enclosure",
+    "sourceKrawczykJson": "endpoint_riccati_krawczyk_collocation.json",
+    "order": 11,
+    "stateScaling": "taylor",
+    "baseDps": 70,
+    "strictDps": 90,
+    "baseMatrixOrder": 70,
+    "strictMatrixOrder": 90,
+    "matrixRmax": 12.0,
+    "safetyFactor": 16.0,
+    "roundingOnly": true,
+    "sampleRelativeRadius": 1e-40,
+    "sampleAbsoluteRadius": 1e-45,
+    "activeIndices": [
+      3,
+      4
+    ],
+    "baseTraceFieldMinGap": 1.1635518278617991e-05,
+    "strictTraceFieldMinGap": null,
+    "baseTraceFieldMinConsecutiveCos": 0.9881718063973355,
+    "strictTraceFieldMinConsecutiveCos": null,
+    "scaledCompanionMaxDiff": 6.799784268707628e-38,
+    "leftCompanionMaxDiff": 0.0,
+    "rightCompanionMaxDiff": 0.0,
+    "boundaryRowMaxDiff": 1.280276913612685e-33,
+    "leftBoundaryRowMaxDiff": 0.0,
+    "rightBoundaryRowMaxDiff": 0.0,
+    "scaledCompanionBallRadius": 1.0879654829932205e-36,
+    "boundaryRowBallRadius": 2.048443061780296e-32,
+    "scaledCompanionCapacity": 1.2748331615480036e-09,
+    "boundaryRowCapacity": 5.804600980653483e-10,
+    "scaledCompanionRadiusOverCapacity": 8.534179340550936e-28,
+    "boundaryRowRadiusOverCapacity": 3.528998924487109e-23,
+    "scaledCompanionMaxAbs": 679.9784268707629,
+    "boundaryRowMaxAbs": 12802769.13612685,
+    "scaledCompanionEnclosureStatus": {
+      "label": "scaled companion matrix ball below Krawczyk capacity",
+      "closed": true,
+      "status": "closed",
+      "reason": "Closed when the safety-inflated refinement ball for every scaled companion entry is below the Krawczyk coefficient radius capacity."
+    },
+    "boundaryRowEnclosureStatus": {
+      "label": "active endpoint boundary-row ball below Krawczyk capacity",
+      "closed": true,
+      "status": "closed",
+      "reason": "Closed when the safety-inflated refinement ball for every active endpoint boundary row entry is below the Krawczyk boundary radius capacity."
+    },
+    "validatedKrawczykCoefficientInputStatus": {
+      "label": "validated Krawczyk coefficient input",
+      "closed": true,
+      "status": "closed",
+      "reason": "This closes the finite coefficient-input layer conditional on the stated sample/refinement ball enclosure model.  A fully formal proof would replace this model with interval quadrature tail bounds for the confluent integral."
+    },
+    "conclusion": "The exact objects needed by the Krawczyk proof are now compared against stricter confluent computations.  Passing radii mean the scaled companion matrices and active endpoint rows are inside the Krawczyk budgets.",
+    "nextTarget": "If this passes, state the endpoint full-rank theorem conditional on the validated confluent quadrature enclosure; if it fails, increase dps/matrix order or derive analytic quadrature tails."
+  },
+  "sampledCenterStabilityStatus": {
+    "label": "sampled finite-difference endpoint center stability",
+    "closed": false,
+    "status": "open",
+    "reason": "Stable only if mesh-refinement endpoint maps remain within a small constant factor.  They currently vary by many orders of magnitude."
+  },
+  "exactSegmentCenterStabilityStatus": {
+    "label": "exact-segment derivative endpoint center stability",
+    "closed": false,
+    "status": "open",
+    "reason": "Stable only if exact-derivative segment refinements remain within a small constant factor.  Current piecewise-constant propagation still varies by many orders of magnitude."
+  },
+  "rankBallCenterReadyStatus": {
+    "label": "rank-ball center ready",
+    "closed": false,
+    "status": "open",
+    "reason": "A rank-ball proof needs a stable center before interval radii can be meaningful.  Current sampled and exact-segment centers are not stable enough; Chebyshev centers are tracked separately."
+  },
+  "chebyshevCenterStabilityStatus": {
+    "label": "Chebyshev endpoint center stability",
+    "closed": false,
+    "status": "open",
+    "reason": "Closed only if all recorded Chebyshev refinement differences fall below the rank margin."
+  },
+  "magnusCenterStabilityStatus": {
+    "label": "Magnus endpoint center stability",
+    "closed": false,
+    "status": "open",
+    "reason": "Closed only if all recorded Magnus refinement differences fall below the rank margin."
+  },
+  "rowFlowMinorStabilityStatus": {
+    "label": "adjoint row-flow minor stability",
+    "closed": false,
+    "status": "open",
+    "reason": "Closed only if the same transported-row 2x2 minor persists and changes by less than 25 percent across refinements."
+  },
+  "grassmannProjectiveStabilityStatus": {
+    "label": "normalized Grassmann projective stability",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed at the numerical-center level if a persistent Pluecker chart stays away from zero and the tail projective comparisons are below tolerance.  This is not yet an interval enclosure of the exact endpoint flow."
+  },
+  "grassmannChartBallStatus": {
+    "label": "persistent Pluecker chart ball theorem",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed only as interval algebra: if the exact normalized Pluecker vector is enclosed in the stated projective ball, then the chart minor stays bounded away from zero."
+  },
+  "riccatiFlowEquationStatus": {
+    "label": "exact exterior/Riccati flow equation and tube",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed when the exterior-square ODE, Riccati chart equation, and chart-tube noncollapse check are all recorded.  This still does not prove the exact endpoint BVP flow lies in the tube."
+  },
+  "riccatiKrawczykCollocationStatus": {
+    "label": "Riccati-chart Krawczyk collocation reduction",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed as a finite interval-collocation reduction.  Exact coefficient and endpoint-row interval balls still need to be proved below the reported Krawczyk capacities."
+  },
+  "coefficientBallEnclosureStatus": {
+    "label": "coefficient and boundary-row ball below Krawczyk capacity",
+    "closed": true,
+    "status": "closed",
+    "reason": "Closed under the stated sample/refinement ball model when the scaled companion and active boundary-row radii are below the Krawczyk capacities."
+  },
+  "conclusion": "The desired endpoint-map rank proof cannot be closed from the current sampled-flow center.  Chebyshev collocation greatly improves the scale and gives rank-two centers, but the recorded 5->7 and 7->9 differences remain above the rank margin.  The two-point Magnus step is worse, blowing up under 2->4 refinement.  Adjoint row-flow propagation identifies the same best minor across refinements, but the raw determinant is not stable.  The normalized exterior/Grassmann diagnostic removes the raw scale and finds a persistent affine chart.  The chart-ball algebra now gives the exact projective radius needed for noncollapse.  The exterior/Riccati equations have been constructed, the Krawczyk/collocation reduction gives explicit coefficient and endpoint-row radius budgets, and the finite sample-ball enclosure is below those budgets with large slack. The last numerical rigor item is replacing the sample-ball model with analytic interval quadrature tails for the confluent integrals, or returning to obstruction annihilation.",
+  "nextTarget": "Replace the coefficient sample-ball model with formal interval quadrature/tail bounds for the confluent integrals."
+}

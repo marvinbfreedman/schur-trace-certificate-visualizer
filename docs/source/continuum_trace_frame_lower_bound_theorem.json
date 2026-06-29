@@ -11,9 +11,9 @@
   ],
   "observedFiniteFrameFloor": 293.1151510088239,
   "observedFiniteFrameMaxResidual": 1.0,
-  "observedTraceMeshFrameMinDrift": 0.7171290456408642,
+  "observedTraceMeshFrameMinDrift": 0.0,
   "observedTraceMeshDensityDrift": 0.0,
-  "explicitContinuumGammaLower": 82.91376250306405,
+  "explicitContinuumGammaLower": -167559.49603433046,
   "finiteFrameIntervalCertificateClosed": true,
   "traceQuadratureIntervalCertificateClosed": true,
   "sourceSideNoncollapseStatus": {
@@ -54,9 +54,9 @@
   },
   "explicitNumericGammaStatus": {
     "label": "explicit rigorous numeric gamma_delta",
-    "closed": true,
-    "status": "closed",
-    "reason": "The finite interval trace-frame certificate gives gamma_N^->0.  The trace quadrature interval theorem controls Gamma-Gamma_h relatively in the finite frame metric with relative error below one.  Therefore the continuum trace frame has gamma_delta >= 8.291376250306e+01."
+    "closed": false,
+    "status": "open",
+    "reason": "The qualitative gamma_delta>0 proof is closed, but the available finite frame and quadrature certificates do not yet combine to a positive explicit numerical lower bound."
   },
   "proof": [
     "Let H_delta be the finite-dimensional active source spectral space for the compact source operator S=Ehat^*Ehat.",
@@ -66,7 +66,7 @@
     "Because H_delta is finite dimensional and a -> Lambda_a(f) is continuous, positive quadrature rules converge uniformly on the compact family q_f(a)=|Lambda_a(f)|^2.  The discrete weighted frame matrices converge to the continuum frame matrix.",
     "For all sufficiently fine trace meshes, the discrete smallest frame eigenvalue is at least gamma_delta/2.  The sampled trace correction right inverse is therefore bounded by sqrt(2/gamma_delta)."
   ],
-  "formalConclusion": "There exists an explicit certified lower bound gamma_delta >= 8.291376250306e+01 such that int_I |Lambda_a(f)|^2 da >= gamma_delta ||f||_A^2 for every f in H_delta.  The sampled trace correction right inverse is therefore bounded on the active finite-dimensional trace block.",
+  "formalConclusion": "There exists gamma_delta>0 such that int_I |Lambda_a(f)|^2 da >= gamma_delta ||f||_A^2 for every f in H_delta.  The corresponding sampled weighted trace frames have a positive lower bound for all sufficiently fine meshes, giving a bounded sampled-trace correction right inverse on the active finite-dimensional trace block.",
   "remainingAnalyticGap": null,
-  "remainingNumericalGap": null
+  "remainingNumericalGap": "Only an explicit numerical gamma_delta remains open.  The qualitative continuum lower bound and quadrature consistency are closed by compactness/injectivity."
 }

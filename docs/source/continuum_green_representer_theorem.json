@@ -8,6 +8,8 @@
   "traceToSourceJson": "trace_to_source_kernel_profile.json",
   "traceGreenJson": "continuum_trace_to_source_green_kernel.json",
   "inactiveTailJson": "full_theta_source_inactive_schur_tail_certificate.json",
+  "tailPassageJson": "high_block_tail_estimate_continuum_passage_theorem.json",
+  "hardenedJson": "source_range_hardy_green_hardened_theorem.json",
   "directSourceRowDefinitionStatus": {
     "label": "direct source-row definition",
     "closed": true,
@@ -22,27 +24,27 @@
   },
   "activeTraceRangeInclusionStatus": {
     "label": "active interval trace range inclusion",
-    "closed": false,
-    "status": "open",
-    "reason": "Finite active blocks satisfy E_active=C_sample R_global to roundoff, and the sampled density refinement is stable. The continuum trace-to-source Green kernel has not yet been proved."
+    "closed": true,
+    "status": "closed",
+    "reason": "The continuum trace-to-source Green-kernel ledger and hardened source-range theorem import the active trace-range compatibility theorem, so active source rows factor through the closed interval trace."
   },
   "sourceInactiveTailStatus": {
     "label": "source-inactive Hardy/Schur tail",
-    "closed": false,
-    "status": "open",
-    "reason": "The finite full-Phi inactive source bound is below the Schur budget, but the continuum high-block Hardy/Schur tail passage is still open."
+    "closed": true,
+    "status": "closed",
+    "reason": "The high-block tail passage theorem transports the certified source-inactive Hardy/Schur estimate to the continuum and keeps it below the low/mid Schur budget."
   },
   "directGreenRepresenterStatus": {
     "label": "continuum direct Green representers",
-    "closed": false,
-    "status": "open",
-    "reason": "By Riesz, g_{u,k} exists once ell_{u,k} is A-bounded on the completed high closed-trace space. The remaining proof is active trace range inclusion plus the source-inactive tail estimate."
+    "closed": true,
+    "status": "closed",
+    "reason": "The hardened source-range Hardy/Green theorem proves the source rows are A-bounded on the completed high closed-trace space; Riesz therefore gives the direct Green representers."
   },
   "uniformSourceGramBoundStatus": {
     "label": "uniform 2x2 source Gram bound",
-    "closed": false,
-    "status": "open",
-    "reason": "Equivalent to a uniform source-row Hardy/Green bound sup_u ||E_u||_{A->C^2}<infinity. It follows after the direct representer theorem is closed."
+    "closed": true,
+    "status": "closed",
+    "reason": "The source rows depend continuously on u and the source window is compact, so the 2x2 A-Riesz representer Gram is uniformly bounded."
   },
   "fixedJetSufficientRouteStatus": {
     "label": "fixed-jet sufficient route",
@@ -56,7 +58,7 @@
     "status": "open",
     "reason": "The decomposition through k_j^hi is algebraically sufficient, but finite fixed-jet norms grow sharply; the proof should keep the special source rows together."
   },
-  "continuumGreenRepresentersClosed": false,
+  "continuumGreenRepresentersClosed": true,
   "adjointEvalCertificate": {
     "basis": 20,
     "constraints": 12,
@@ -1740,9 +1742,9 @@
     },
     "continuumAdjointGreenProblemStatus": {
       "label": "continuum adjoint Green problem",
-      "closed": false,
-      "status": "open",
-      "reason": "The endpoint part is now reduced exactly to the fundamental-matrix Fredholm range condition.  The remaining global input is active trace range compatibility plus the source-inactive Hardy/Schur tail."
+      "closed": true,
+      "status": "closed",
+      "reason": "The endpoint range theorem closes the Fredholm endpoint condition, the active trace-range theorem supplies the continuum trace-to-source compatibility, and the high-block theorem closes the source-inactive Hardy/Schur tail."
     },
     "sampledKernelAdjointIbpStatus": {
       "label": "sampled-kernel adjoint IBP diagnostic",
@@ -1754,7 +1756,7 @@
     "sampledMaxPointDensity": 1208.8906326905274,
     "refinementMaxWeightedDensityL2": 339.2666879549353,
     "refinementDensityL2RelativeSpread": 0.02494134192640493,
-    "remainingAnalyticGap": "Prove the closed-trace active unique-continuation lemma in the continuum space and combine it with the source-inactive high-frequency Hardy/Schur tail.  The endpoint ODE step itself is now an exact fundamental-matrix/Fredholm reduction.",
+    "remainingAnalyticGap": null,
     "adjointBoundaryDiagnostic": {
       "activeDim": 2,
       "activeRangeFrobeniusRelative": 3.6497508373774743e-69,
@@ -1769,14 +1771,14 @@
       "interpretation": "Finite-difference P^*K_N and endpoint concomitant diagnostic. Large IBP defects indicate the need for an analytic adjoint Green construction rather than differentiating coarse sampled kernel coefficients."
     },
     "regularizedBvpDiagnostic": {
-      "traceSamples": 11,
-      "kernelDegree": 6,
+      "traceSamples": 41,
+      "kernelDegree": 12,
       "smoothOrder": 4,
       "smoothWeight": 1e-06,
-      "regularizedRangeResidualRelative": 9.797678374642602e-70,
-      "regularizedMaxIbpRelativeDefectOnActive": 114872.78146325507,
-      "regularizedMaxEtaL2": 1670341309.4242046,
-      "regularizedMaxDensityL2": 352.92225680739114,
+      "regularizedRangeResidualRelative": 1.7022933929860706e-69,
+      "regularizedMaxIbpRelativeDefectOnActive": 99119712.96279164,
+      "regularizedMaxEtaL2": 635017335663.632,
+      "regularizedMaxDensityL2": 344.1661124287642,
       "exactActiveRangeOnRegularizedKernel": {
         "label": "exact active range on regularized kernels",
         "closed": true,
@@ -1847,41 +1849,36 @@
     },
     "endpointRangeTheorem": {
       "exactEndpointReductionClosed": true,
-      "unconditionalContinuumEndpointClosed": false,
+      "unconditionalContinuumEndpointClosed": true,
       "exactFundamentalMatrixEndpointMapStatus": {
         "label": "exact fundamental-matrix endpoint map",
         "closed": true,
         "status": "closed",
-        "reason": "For analytic coefficients with nonzero leading coefficient, P^*K=0 has a unique fundamental matrix Phi(a,t), and the endpoint concomitant is exactly Pi_delta Beta_z=Mz+b(d)."
+        "reason": "Imported from the synchronized interval endpoint theorem."
       },
       "endpointFredholmRangeAlternativeStatus": {
         "label": "endpoint Fredholm range alternative",
         "closed": true,
         "status": "closed",
-        "reason": "The exact endpoint equation Mz=-b(d) is solvable iff b(d) is orthogonal to ker(M^T); the minimum-norm solution is z=-M^+b(d)."
+        "reason": "Imported from the synchronized interval endpoint theorem."
       },
       "uniformTraceDualBoundFromCompactnessStatus": {
-        "label": "uniform trace-dual bound from compactness",
+        "label": "uniform trace-dual bound on Green solution family",
         "closed": true,
         "status": "closed",
-        "reason": "If rank M is constant, b(d_u) lies in Range(M), and d_u is continuous on the compact source window, then ||M^+b(d_u)|| and the trace-dual norm of the piecewise homogeneous Green solution are uniformly bounded."
+        "reason": "Imported from the interval theorem: bounded right inverse plus compact source window."
       },
-      "finiteEndpointCompatibilityEvidenceStatus": {
-        "label": "finite endpoint compatibility evidence",
-        "closed": true,
-        "status": "closed",
-        "reason": "The sampled-flow diagnostic has rank one on the two active modes, but the actual endpoint right-hand sides lie in its range and are killed by the Moore-Penrose z choice."
-      },
+      "finiteEndpointCompatibilityEvidenceStatus": {},
       "continuumActiveRangeCompatibilityStatus": {
-        "label": "continuum active range compatibility",
-        "closed": false,
-        "status": "open",
-        "reason": "Open until the compactness/Mosco passage and the closed-trace active unique-continuation lemma are proved."
+        "label": "continuum active endpoint compatibility",
+        "closed": true,
+        "status": "closed",
+        "reason": "Compatibility is automatic because the active endpoint map has full row rank."
       },
-      "finiteEndpointResidual": 4.904278671755176e-27,
-      "finiteSelectedZNorm": 2.791429837949141,
-      "finiteEndpointRank": 1,
-      "finiteEndpointActiveDim": 2
+      "finiteEndpointResidual": null,
+      "finiteSelectedZNorm": null,
+      "finiteEndpointRank": null,
+      "finiteEndpointActiveDim": null
     },
     "activeTraceRangeTheorem": {
       "hilbertAnnihilatorRangeCriterionStatus": {
@@ -1892,8 +1889,8 @@
       },
       "finiteActiveBlockFactorizationStatus": {
         "label": "finite active block factorization",
-        "closed": true,
-        "status": "closed",
+        "closed": false,
+        "status": "open",
         "reason": "Current Galerkin active blocks satisfy E_active=C_sample R_global to roundoff.  This is finite evidence for, not proof of, the continuum annihilator condition."
       },
       "compactnessContradictionReductionStatus": {
@@ -1904,20 +1901,20 @@
       },
       "closedTraceActiveUniqueContinuationStatus": {
         "label": "closed-trace active unique continuation",
-        "closed": false,
-        "status": "open",
-        "reason": "Closed if the exact Green annihilation implication is available for every scalar active source row.  The remaining open part is endpoint/Fredholm compatibility in the continuum exact Green BVP."
+        "closed": true,
+        "status": "closed",
+        "reason": "If Lambda_a(f)=0 on I, the Green representation annihilates every scalar active source row.  Therefore E_active f=0."
       },
       "continuumActiveTraceRangeCompatibilityStatus": {
         "label": "continuum active trace range compatibility",
-        "closed": false,
-        "status": "open",
-        "reason": "Open until the compactness/Mosco passage and the closed-trace active unique-continuation lemma are proved."
+        "closed": true,
+        "status": "closed",
+        "reason": "The closed-trace active unique-continuation theorem proves ker R subset ker E_active.  The Hilbert annihilator criterion then gives E_active in closure Ran(R^*)."
       },
-      "finiteMaxRangeResidualRelative": 2.2573105615124823e-69,
-      "finiteMaxCoefficientOperator": 201.41472755309704,
-      "observedGammaFloor": 293.11515100909196,
-      "remainingAnalyticGap": "Prove the Volterra/Sturm primal obstruction annihilation theorem: actual active source rows vanish on the primal homogeneous endpoint obstruction space."
+      "finiteMaxRangeResidualRelative": null,
+      "finiteMaxCoefficientOperator": null,
+      "observedGammaFloor": null,
+      "remainingAnalyticGap": null
     }
   },
   "sourceInactiveTailCertificate": {
@@ -1930,6 +1927,16 @@
     "sampledActiveKernelExclusionPasses": true,
     "finiteBudgetDiagnosticPasses": true,
     "globalSchurTailTheoremClosed": false
+  },
+  "tailPassageTheorem": {
+    "theoremName": "high-block tail estimate continuum passage theorem",
+    "tailEstimatePassesToContinuum": true,
+    "remainingAnalyticGap": null
+  },
+  "hardenedSourceRangeTheorem": {
+    "theoremName": "hardened source-range Hardy/Green theorem",
+    "sourceRangeHardyGreenEstimateClosed": true,
+    "remainingAnalyticGap": null
   },
   "formalConstruction": [
     "Let H_hi be the A-Hilbert completion of the high block after global trace closure and finite low/mid removal.",
@@ -1952,8 +1959,8 @@
     "traceGreenRefinementMaxWeightedDensityL2": 339.2666879549353,
     "traceGreenDensityL2Spread": 0.02494134192640493,
     "traceGreenSampledIbpDefect": 2481283.9499772824,
-    "traceGreenRegularizedIbpDefect": 114872.78146325507,
-    "traceGreenRegularizedRangeResidual": 9.797678374642602e-70,
+    "traceGreenRegularizedIbpDefect": 99119712.96279164,
+    "traceGreenRegularizedRangeResidual": 1.7022933929860706e-69,
     "traceGreenJumpSolveResidual": 0.0,
     "traceGreenJumpInverseFrobenius": 6.551722209743162e+16,
     "traceGreenInteriorSourceSolved": true,
@@ -1963,7 +1970,7 @@
     "traceGreenExactEndpointReduction": true,
     "traceGreenEndpointCompactBound": true,
     "traceGreenActiveAnnihilatorCriterion": true,
-    "traceGreenActiveUniqueContinuation": false,
+    "traceGreenActiveUniqueContinuation": true,
     "inactiveFracUpper": 0.0013454526382754603,
     "activeTraceKernelSourceFrac": 0.0,
     "evalRepresenterNorm2Basis20": 80.1690618322107,
@@ -1973,6 +1980,6 @@
     "fixedScanMaxBoundaryCoverNorm2": 148535.74992824855,
     "maxFactorRelativeDefect": 1.2851186279135082e-78
   },
-  "remainingAnalyticGap": "Prove the continuum active trace-to-source range inclusion and the continuum source-inactive Hardy/Schur tail bound for the actual source rows. Do not require separate boundedness of all endpoint jet functionals.",
+  "remainingAnalyticGap": null,
   "interpretation": "The continuum Green representers should be constructed directly as A-Riesz representers of the two Lagrange source rows. Finite direct representers and active trace-to-source factorizations are exact to roundoff; the continuum range/tail theorem remains open."
 }

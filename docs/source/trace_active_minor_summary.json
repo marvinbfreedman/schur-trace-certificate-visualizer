@@ -1,11 +1,11 @@
 {
   "inputs": [
-    "trace_active_minor_basis22_exclude_s0.json",
     "trace_active_minor_scan_t9.json",
-    "trace_active_minor_scan_t13.json"
+    "trace_active_minor_scan_t13.json",
+    "trace_active_minor_certificate.json"
   ],
   "rowCount": 5,
-  "minBestAbsMinor": 4.355505059299606e-07,
+  "minBestAbsMinor": 4.6250348724903294e-07,
   "rows": [
     {
       "basis": 18,
@@ -60,13 +60,13 @@
       "traceCount": 9,
       "activeDim": 3,
       "frameMin": 2874982.3289243444,
-      "bestAbsMinor": 4.355505059299606e-07,
+      "bestAbsMinor": 4.6250348724903294e-07,
       "traceCenters": [
+        0.02,
         0.085625,
-        0.348125,
-        0.545
+        0.2825
       ],
-      "sourceFile": "trace_active_minor_basis22_exclude_s0.json"
+      "sourceFile": "trace_active_minor_scan_t9.json"
     }
   ],
   "interpretation": "Nonzero active trace-response minors prove finite sampled injectivity.  The continuum theorem should prove nonvanishing of the exterior trace determinant on the limiting active space."

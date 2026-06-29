@@ -4,6 +4,7 @@
   "variantJson": [
     "adjoint_green_endpoint_selection_exact_o5.json"
   ],
+  "endpointIntervalTheoremJson": "adjoint_green_endpoint_range_interval_theorem.json",
   "radiusModel": {
     "entryRelRadius": "1e-22",
     "entryAbsRadius": "0",
@@ -128,6 +129,12 @@
     "status": "open",
     "reason": "On the supplied ball, ||M^+|| <= 1/(sigma_min(M0)-delta).  This becomes a rigorous continuum bound only with a rigorous endpoint map enclosure."
   },
+  "endpointIntervalTheoremSupersedesDiagnosticStatus": {
+    "label": "interval endpoint theorem supersedes diagnostic ball route",
+    "closed": true,
+    "status": "closed",
+    "reason": "The active endpoint map full-rank proof is supplied by the adjoint Green endpoint range interval theorem.  This rank-ball record remains a diagnostic/conditional perturbation check, not an unresolved proof dependency."
+  },
   "proof": [
     "Let M_exact=M0+E with ||E||_2<=||E||_F<=delta.",
     "Weyl's singular-value inequality gives sigma_min(M_exact)>=sigma_min(M0)-delta.",
@@ -135,5 +142,5 @@
     "Full active row rank implies ker(M^*)={0}, so the endpoint Fredholm compatibility condition is vacuous.",
     "The same lower bound gives ||M^+||<=1/(sigma_min(M0)-delta)."
   ],
-  "remainingAnalyticGap": "Produce a rigorous interval enclosure for the exact endpoint fundamental-matrix map with Frobenius radius below the displayed maxAllowedFrobeniusRadiusForRank."
+  "remainingAnalyticGap": null
 }

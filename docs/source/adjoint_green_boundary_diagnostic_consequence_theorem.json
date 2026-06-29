@@ -45,5 +45,6 @@
     "Expose only the summary fields consumed by continuum_trace_to_source_green_kernel.",
     "Do not promote sampled IBP evidence to a continuum adjoint Green theorem."
   ],
-  "remainingAnalyticGap": "The continuum adjoint Green BVP is intentionally handled by the endpoint range and active trace-range theorem chain, not by this diagnostic."
+  "notAProofDependency": "The continuum adjoint Green BVP is handled by the endpoint range and active trace-range theorem chain.  This record is retained only as a sampled-kernel diagnostic.",
+  "remainingAnalyticGap": null
 }

@@ -3,11 +3,11 @@
   "proofClass": "symbolic identity",
   "quadratureJson": "trace_quadrature_interval_consistency_theorem.json",
   "traceQuadratureClosed": true,
-  "traceQuadratureAbsorbedByFiniteGamma": true,
+  "traceQuadratureAbsorbedByFiniteGamma": false,
   "gammaAfterTraceQuadrature": -167559.49603433046,
-  "gammaAfterMetricTraceQuadrature": 82.91376250306405,
-  "transportedGammaLower": 82.91376250306405,
-  "metricRelativeTraceQuadratureErrorBound": 0.7171290456408642,
+  "gammaAfterMetricTraceQuadrature": null,
+  "transportedGammaLower": -167559.49603433046,
+  "metricRelativeTraceQuadratureErrorBound": null,
   "traceQuadratureErrorBound": 167852.61118533928,
   "statement": "The trace quadrature interval estimate is closed and leaves a positive transported gamma lower bound.",
   "statuses": {
@@ -19,23 +19,25 @@
     },
     "finiteGammaAbsorptionInputStatus": {
       "label": "finite gamma absorption input",
-      "closed": true,
-      "status": "closed",
+      "closed": false,
+      "status": "open",
       "reason": "The quadrature error is absorbed by the finite gamma lower bound."
     },
     "transportedGammaPositiveConsequenceStatus": {
       "label": "transported gamma positive consequence",
-      "closed": true,
-      "status": "closed",
+      "closed": false,
+      "status": "open",
       "reason": "Therefore the transported continuum gamma lower bound is positive."
     }
   },
-  "traceQuadratureGammaConsequenceClosed": true,
+  "traceQuadratureGammaConsequenceClosed": false,
   "traceQuadratureIntervalCertificateClosed": true,
+  "qualitativeTraceQuadratureConsequenceClosed": true,
   "proof": [
     "Import the trace quadrature interval consistency theorem.",
     "Read off traceQuadratureClosed and traceQuadratureAbsorbedByFiniteGamma.",
     "Expose only the positive transported gamma lower bound to the continuum theorem."
   ],
-  "remainingAnalyticGap": null
+  "remainingAnalyticGap": null,
+  "remainingNumericalGap": "The qualitative trace-quadrature consequence is closed, but the current explicit transported gamma lower bound is not positive."
 }

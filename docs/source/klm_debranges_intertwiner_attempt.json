@@ -50,41 +50,36 @@
   "canonicalHardyImage": {
     "available": true,
     "closed": true,
-    "exactRelativeError": 1.5801908504997367e-15,
+    "exactRelativeError": 1.5559812608700275e-15,
     "branchContraction": {
       "available": true,
-      "plusEigenCutoff": 0.0,
+      "plusEigenCutoff": 1.4846549586302128e-13,
       "resolvedRank": 5,
-      "maxGeneralizedEigenvalue": 0.9999999999996788,
-      "minGeneralizedEigenvalue": 0.7612087818302057,
+      "maxGeneralizedEigenvalue": 0.9999999999996765,
+      "minGeneralizedEigenvalue": 0.7612087818301968,
       "eigenvalues": [
-        0.7612087818302057,
-        0.7612087818302063,
-        0.9982835161182477,
-        0.9982835161182482,
-        0.9999966591027046,
-        0.9999966591027062,
-        0.9999999981731462,
-        0.9999999981731469,
-        0.999999999999678,
-        0.9999999999996788
+        0.7612087818301968,
+        0.9982835161182328,
+        0.9999966591027014,
+        0.9999999981731503,
+        0.9999999999996765
       ],
       "sampleContractionHolds": true,
-      "sampleMargin": 3.211875210240578e-13
+      "sampleMargin": 3.235189893757706e-13
     }
   },
   "directAndClosedConeBridgeAttempt": {
     "available": true,
     "directKlmPullbackClosed": false,
     "closedPositiveConeBridgeClosed": true,
-    "nextProofTarget": "Apply the de Branges/Hermite-Biehler conclusion for E_omega(z)=Xi(z+i omega) and record the RH-side endpoint passage."
+    "nextProofTarget": "Apply the de Branges/Hermite-Biehler endpoint passage for E_omega(z)=Xi(z+i omega)."
   },
   "augmentedClosedConeTheorem": {
     "available": true,
     "bridgeClosed": true,
     "transformClosed": true,
     "sampleConstants": null,
-    "nextProofTarget": "Apply the de Branges/Hermite-Biehler conclusion for E_omega(z)=Xi(z+i omega) and record the RH-side endpoint passage."
+    "nextProofTarget": "Apply the de Branges/Hermite-Biehler endpoint passage for E_omega(z)=Xi(z+i omega)."
   },
   "statuses": {
     "klmInputStatus": {
@@ -122,11 +117,11 @@
       "closed": false,
       "status": "open",
       "reason": "The KLM-to-de Branges closed-cone bridge is now available, but the final RH-side endpoint/Hermite-Biehler passage is tracked as a separate theorem.",
-      "blocker": "Apply the de Branges/Hermite-Biehler conclusion for E_omega(z)=Xi(z+i omega) and record the RH-side endpoint passage."
+      "blocker": "Apply the de Branges/Hermite-Biehler endpoint passage for E_omega(z)=Xi(z+i omega)."
     }
   },
   "transformClosed": true,
   "endpointClosureClosed": true,
   "rhClosed": false,
-  "nextProofTarget": "Apply the de Branges/Hermite-Biehler conclusion for E_omega(z)=Xi(z+i omega) and record the RH-side endpoint passage."
+  "nextProofTarget": "Apply the de Branges/Hermite-Biehler endpoint passage for E_omega(z)=Xi(z+i omega)."
 }

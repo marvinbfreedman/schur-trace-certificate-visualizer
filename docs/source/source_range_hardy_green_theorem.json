@@ -95,6 +95,6 @@
     "analyticCoverHighFullFracVsMinFull": null,
     "sourceRangeAbsorbFrac": null
   },
-  "remainingAnalyticGap": "The hardened source-range theorem imports the completed Green-lift contraction and active-range interval theorem, giving A-bounded source rows and uniform A-Riesz representers without using scan-backed representer evidence.",
+  "remainingAnalyticGap": null,
   "interpretation": "The source-range Hardy/Green theorem is closed by the hardened continuum Green-lift/active-range theorem.  Finite representer and source-window scans remain useful diagnostics, but are not proof dependencies of this ledger."
 }

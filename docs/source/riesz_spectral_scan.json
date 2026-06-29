@@ -11,7 +11,7 @@
       "kerMin": 2.650459226269166e-06,
       "energyLow2": 0.9189162110063674,
       "witnessLow2": 0.9996963953616628,
-      "energyTop3": 0.9814964868712684,
+      "energyTop3": 0.9814964868712683,
       "energyEffectiveRank": 1.7394571866193598,
       "topEnergyModes": [
         {
@@ -67,8 +67,8 @@
       "kerMin": 7.961713716783178e-08,
       "energyLow2": 0.919660216178021,
       "witnessLow2": 0.9997413787674602,
-      "energyTop3": 0.9696405432550309,
-      "energyEffectiveRank": 2.0661268199851524,
+      "energyTop3": 0.969640543255031,
+      "energyEffectiveRank": 2.066126819985153,
       "topEnergyModes": [
         {
           "mode": 1,
@@ -123,7 +123,7 @@
       "kerMin": 6.842608720338264e-09,
       "energyLow2": 0.04235338010752762,
       "witnessLow2": 0.9667786117662409,
-      "energyTop3": 0.9511318224047188,
+      "energyTop3": 0.9511318224047187,
       "energyEffectiveRank": 2.887340729296844,
       "topEnergyModes": [
         {
@@ -180,7 +180,7 @@
       "energyLow2": 0.08593974920572237,
       "witnessLow2": 0.9871721152218771,
       "energyTop3": 0.7904018457051465,
-      "energyEffectiveRank": 4.324976702295294,
+      "energyEffectiveRank": 4.324976702295295,
       "topEnergyModes": [
         {
           "mode": 3,
