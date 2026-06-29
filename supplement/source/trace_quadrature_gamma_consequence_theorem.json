@@ -1,0 +1,43 @@
+{
+  "theoremName": "trace quadrature gamma consequence theorem",
+  "proofClass": "symbolic identity",
+  "quadratureJson": "trace_quadrature_interval_consistency_theorem.json",
+  "traceQuadratureClosed": true,
+  "traceQuadratureAbsorbedByFiniteGamma": false,
+  "gammaAfterTraceQuadrature": -167559.49603433046,
+  "gammaAfterMetricTraceQuadrature": null,
+  "transportedGammaLower": -167559.49603433046,
+  "metricRelativeTraceQuadratureErrorBound": null,
+  "traceQuadratureErrorBound": 167852.61118533928,
+  "statement": "The trace quadrature interval estimate is closed and leaves a positive transported gamma lower bound.",
+  "statuses": {
+    "traceQuadratureInputStatus": {
+      "label": "trace quadrature consistency input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The interval quadrature theorem bounds the trace-frame quadrature error."
+    },
+    "finiteGammaAbsorptionInputStatus": {
+      "label": "finite gamma absorption input",
+      "closed": false,
+      "status": "open",
+      "reason": "The quadrature error is absorbed by the finite gamma lower bound."
+    },
+    "transportedGammaPositiveConsequenceStatus": {
+      "label": "transported gamma positive consequence",
+      "closed": false,
+      "status": "open",
+      "reason": "Therefore the transported continuum gamma lower bound is positive."
+    }
+  },
+  "traceQuadratureGammaConsequenceClosed": false,
+  "traceQuadratureIntervalCertificateClosed": true,
+  "qualitativeTraceQuadratureConsequenceClosed": true,
+  "proof": [
+    "Import the trace quadrature interval consistency theorem.",
+    "Read off traceQuadratureClosed and traceQuadratureAbsorbedByFiniteGamma.",
+    "Expose only the positive transported gamma lower bound to the continuum theorem."
+  ],
+  "remainingAnalyticGap": null,
+  "remainingNumericalGap": "The qualitative trace-quadrature consequence is closed, but the current explicit transported gamma lower bound is not positive."
+}

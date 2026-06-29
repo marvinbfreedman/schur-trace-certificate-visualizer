@@ -1,0 +1,30 @@
+{
+  "title": "Companion source archive for Finite-core Volterra reductions for a Weyl-positive Riemann phase kernel",
+  "upload_type": "dataset",
+  "publication_date": "2026-06-19",
+  "creators": [
+    {
+      "name": "Freedman, Marvin B.",
+      "affiliation": "Independent Researcher"
+    }
+  ],
+  "description": "Source-only companion archive containing Python verification scripts, theorem JSON ledgers, dependency-audit artifacts, TeX source, build logs, publication audit files, and text-based regeneration materials associated with the manuscript Finite-core Volterra reductions for a Weyl-positive Riemann phase kernel. Binary generated outputs, PDFs, images, compressed archives, and cache directories are intentionally excluded.",
+  "keywords": [
+    "Riemann hypothesis",
+    "Weyl positivity",
+    "Volterra operators",
+    "KLM positivity",
+    "de Branges",
+    "reproducibility archive",
+    "source code",
+    "theorem ledgers"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://doi.org/10.5281/zenodo.20746138",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint"
+    }
+  ],
+  "license": "cc-by-4.0"
+}

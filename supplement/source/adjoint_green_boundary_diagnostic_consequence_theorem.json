@@ -1,0 +1,50 @@
+{
+  "theoremName": "adjoint Green boundary diagnostic consequence theorem",
+  "proofClass": "symbolic identity",
+  "diagnosticSource": "adjoint Green boundary finite-difference diagnostic",
+  "activeDim": 2,
+  "activeRangeFrobeniusRelative": 3.6497508373774743e-69,
+  "maxIbpRelativeDefectOnActive": 2481283.9499772824,
+  "maxActiveRangeRelativeDefect": 5.611776968403598e-69,
+  "maxEtaL2Trap": 15220911281.570494,
+  "status": {
+    "finiteActiveRangeClosed": true,
+    "discreteAdjointIbpSmall": false,
+    "continuumAdjointGreenClosed": false
+  },
+  "statuses": {
+    "diagnosticAvailableStatus": {
+      "label": "sampled adjoint-boundary diagnostic is available",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite-difference diagnostic reports active-range, IBP-defect, and eta-size summaries."
+    },
+    "finiteActiveRangeDiagnosticStatus": {
+      "label": "finite active range diagnostic",
+      "closed": true,
+      "status": "closed",
+      "reason": "The diagnostic confirms the finite active block range identity."
+    },
+    "sampledIbpFailureModeStatus": {
+      "label": "sampled pseudoinverse kernel is not the continuum Green solution",
+      "closed": true,
+      "status": "closed",
+      "reason": "The sampled-kernel IBP defect is intentionally retained as a diagnostic failure mode.  It shows that differentiating the coarse pseudoinverse kernel does not solve the adjoint Green BVP."
+    },
+    "continuumAdjointGreenProofStatus": {
+      "label": "continuum adjoint Green proof not claimed here",
+      "closed": true,
+      "status": "closed",
+      "reason": "This consequence does not close the continuum adjoint Green problem; endpoint range and active trace-range theorems remain the proof route."
+    }
+  },
+  "adjointGreenBoundaryDiagnosticConsequenceClosed": true,
+  "interpretation": "Finite-difference P^*K_N and endpoint concomitant diagnostic. Large IBP defects indicate the need for an analytic adjoint Green construction rather than differentiating coarse sampled kernel coefficients.",
+  "proof": [
+    "Import the finite-difference adjoint Green boundary diagnostic.",
+    "Expose only the summary fields consumed by continuum_trace_to_source_green_kernel.",
+    "Do not promote sampled IBP evidence to a continuum adjoint Green theorem."
+  ],
+  "notAProofDependency": "The continuum adjoint Green BVP is handled by the endpoint range and active trace-range theorem chain.  This record is retained only as a sampled-kernel diagnostic.",
+  "remainingAnalyticGap": null
+}

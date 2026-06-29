@@ -1,0 +1,36 @@
+{
+  "theoremName": "Xi augmented trace limit-identification consequence theorem",
+  "proofClass": "symbolic identity",
+  "traceConvergenceJson": "xi_augmented_trace_convergence_theorem.json",
+  "statement": "Strong graph-dual convergence of the finite augmented traces R_aug,N to the closed trace R_aug identifies the augmented trace coordinate of weak graph limits in the liminf representative compactness argument.",
+  "statuses": {
+    "closedAugmentedTraceConvergenceInputStatus": {
+      "label": "closed augmented trace convergence input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the Xi augmented trace convergence theorem: R_aug,N converges to the closed augmented trace R_aug in the transported graph-dual topology."
+    },
+    "augmentedTraceGraphConvergenceInputStatus": {
+      "label": "augmented trace graph convergence input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The same theorem exports convergence in the completed augmented trace graph topology."
+    },
+    "traceLimitIdentificationStatus": {
+      "label": "trace limit identification",
+      "closed": true,
+      "status": "closed",
+      "reason": "For bounded representative sequences with weak graph limits, the strong graph-dual trace convergence identifies the limiting augmented trace coordinate."
+    }
+  },
+  "closedTraceConvergenceClosed": true,
+  "augmentedTraceGraphConvergenceClosed": true,
+  "traceLimitIdentificationClosed": true,
+  "proof": [
+    "Import closed augmented trace convergence.",
+    "Import augmented trace graph convergence.",
+    "Apply these convergences to the weak graph limit supplied by the liminf representative compactness argument.",
+    "Expose only trace-limit identification to downstream quotient-liminf code."
+  ],
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,43 @@
+{
+  "theoremName": "full-theta source noncollapse terminal consequence theorem",
+  "proofClass": "symbolic identity",
+  "omega": null,
+  "L": null,
+  "basis": null,
+  "activeDimension": 2,
+  "activeEigenvaluesS8": [
+    11489025587.757864,
+    140116882778.8568
+  ],
+  "spectralGapToComplementS8": 11489014207.3242,
+  "lowerBoundAfterContinuumAndTail": 15164652572018.725,
+  "totalContinuumErrorBound": 188255959.690444,
+  "totalProjectorAlpha": 0.0655429460851155,
+  "fullThetaSourceNoncollapseIntervalTheoremClosed": true,
+  "fullPhiContinuumSourceNoncollapsePasses": true,
+  "rieszProjectorStabilityStatus": {
+    "label": "active Riesz projector stability",
+    "closed": true,
+    "status": "closed",
+    "reason": "The full source noncollapse theorem closes the Riesz projector stability status."
+  },
+  "fullThetaSourceNoncollapseStatus": {
+    "label": "full-Phi active source noncollapse",
+    "closed": true,
+    "status": "closed",
+    "reason": "The full source noncollapse theorem proves the full-Phi active rank survives."
+  },
+  "positiveGapStatus": {
+    "label": "positive source spectral gap and post-tail lower bound",
+    "closed": true,
+    "status": "closed",
+    "reason": "The imported source theorem reports positive spectral gap and post-tail lower response margin."
+  },
+  "fullThetaSourceNoncollapseConsequenceClosed": true,
+  "proof": [
+    "Import the full-theta source noncollapse interval theorem.",
+    "Read off the Riesz projector stability status and positive gap/margin scalars.",
+    "Export only the source spectral-gap contract needed by the high-block source spectral-gap theorem."
+  ],
+  "remainingAnalyticGap": null
+}

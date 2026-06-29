@@ -1,0 +1,35 @@
+{
+  "theoremName": "endpoint coefficient interval enclosure consequence theorem",
+  "proofClass": "symbolic identity",
+  "scaledCompanionIntervalStatus": {
+    "label": "scaled companion interval enclosure",
+    "closed": true,
+    "status": "closed",
+    "reason": "The scaled companion coefficients are enclosed below the finite Krawczyk capacity."
+  },
+  "boundaryRowIntervalStatus": {
+    "label": "boundary row interval enclosure",
+    "closed": true,
+    "status": "closed",
+    "reason": "The active endpoint boundary rows are enclosed below the finite Krawczyk capacity."
+  },
+  "simultaneousKrawczykInputStatus": {
+    "label": "simultaneous Krawczyk input",
+    "closed": true,
+    "status": "closed",
+    "reason": "The simultaneous coefficient and boundary-row interval budgets close."
+  },
+  "fullRankShortcutStatus": {
+    "label": "full-rank shortcut",
+    "closed": true,
+    "status": "closed",
+    "reason": "The interval coefficient enclosures fit inside the full-rank shortcut capacity."
+  },
+  "scaledCompanionIntervalRadius": 7.750705213816742e-51,
+  "boundaryRowIntervalRadius": 1.5480151266054574e-46,
+  "scaledCompanionCapacity": 1.2748331615480036e-09,
+  "boundaryRowCapacity": 5.804600980653483e-10,
+  "coefficientRadiusScale": 7.750705213816742e-51,
+  "endpointCoefficientIntervalEnclosureClosed": true,
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,42 @@
+{
+  "theoremName": "augmented trace liminf representative compactness consequence theorem",
+  "proofClass": "symbolic identity",
+  "representativeCompactnessJson": "augmented_trace_liminf_representative_compactness_theorem.json",
+  "statement": "The augmented trace liminf representative compactness theorem supplies the representative compactness and trace-identification consequence needed by the quotient liminf theorem.",
+  "statuses": {
+    "weakRepresentativeCompactnessStatus": {
+      "label": "weak representative compactness",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the augmented trace liminf representative compactness theorem."
+    },
+    "traceLimitIdentificationStatus": {
+      "label": "trace limit identification",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the augmented trace liminf representative compactness theorem."
+    },
+    "representativeCompactnessAndTraceIdentificationStatus": {
+      "label": "representative compactness and trace identification",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the augmented trace liminf representative compactness theorem."
+    },
+    "representativeCompactnessConsequenceStatus": {
+      "label": "representative compactness consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Bounded near-minimizing finite representatives have weak graph limits whose augmented traces identify the limiting trace coordinate."
+    }
+  },
+  "representativeCompactnessAndTraceIdentificationClosed": true,
+  "weakRepresentativeCompactnessClosed": true,
+  "traceLimitIdentificationClosed": true,
+  "representativeCompactnessConsequenceClosed": true,
+  "proof": [
+    "Import the augmented trace liminf representative compactness theorem.",
+    "Extract the representative compactness and trace-identification conclusion.",
+    "Expose only that consequence to the augmented trace quotient liminf theorem."
+  ],
+  "remainingAnalyticGap": null
+}

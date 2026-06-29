@@ -1,0 +1,43 @@
+{
+  "theoremName": "endpoint Riccati Krawczyk capacity consequence theorem",
+  "proofClass": "symbolic identity",
+  "krawczykJson": "endpoint_riccati_krawczyk_collocation.json",
+  "coefficientRadiusCapacityScaledCompanion": 1.2748331615480036e-09,
+  "boundaryRadiusCapacityUnscaledRows": 5.804600980653483e-10,
+  "simultaneousCapacityFraction": 0.49999508549087535,
+  "endpointEntryRadiusCapacity": 36392.018345433105,
+  "actualKrawczykQ": null,
+  "endpointRiccatiKrawczykCapacityConsequenceClosed": true,
+  "statuses": {
+    "coefficientCapacityStatus": {
+      "label": "positive scaled companion coefficient capacity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Riccati/Krawczyk collocation certificate reports a positive coefficient capacity."
+    },
+    "boundaryCapacityStatus": {
+      "label": "positive active boundary-row capacity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Riccati/Krawczyk collocation certificate reports a positive boundary-row capacity."
+    },
+    "simultaneousCapacityStatus": {
+      "label": "positive simultaneous Krawczyk capacity fraction",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Riccati/Krawczyk collocation certificate reports a positive simultaneous perturbation fraction."
+    },
+    "endpointChartCapacityStatus": {
+      "label": "positive endpoint-entry chart capacity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The Riccati/Krawczyk collocation certificate reports a positive endpoint-entry chart radius."
+    }
+  },
+  "proof": [
+    "Import the finite endpoint Riccati/Krawczyk collocation certificate.",
+    "Read off the positive coefficient, boundary, simultaneous, and endpoint-entry capacities.",
+    "Export only those capacities to the endpoint coefficient interval enclosure."
+  ],
+  "remainingAnalyticGap": null
+}

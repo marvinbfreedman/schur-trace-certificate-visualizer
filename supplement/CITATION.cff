@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "RH Weyl/Volterra Companion Supplement"
+message: "If you use this supplement, please cite the associated Zenodo record and manuscript."
+type: dataset
+authors:
+  - family-names: Freedman
+    given-names: Marvin B.
+    affiliation: Independent Researcher
+version: "math-supplement-layout-20260628"
+date-released: "2026-06-28"
+keywords:
+  - Riemann hypothesis
+  - Riemann xi-function
+  - Weyl positivity
+  - Volterra kernels
+  - de Branges spaces
+  - KLM condition
+  - reproducibility
+license: "CC-BY-4.0"
+repository-code: "https://zenodo.org/records/20897437"

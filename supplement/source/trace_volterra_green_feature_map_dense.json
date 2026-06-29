@@ -1,0 +1,90 @@
+{
+  "theoremName": "Volterra/Green feature-map identification",
+  "featureDefinitions": {
+    "greenMinimizer": "f_x=Jx-A^+Bx",
+    "A_s_u": "Psi(s+u)/Psi(s)",
+    "B_sigma": "exp(0.5*sigma*omega*(s+u))*A_s(u)",
+    "M_sigma_x": "int f_x(s) B_sigma(s,u) ds",
+    "N_sigma_x": "int (s+u) f_x(s) B_sigma(s,u) ds",
+    "G_sigma_plus_x": "sqrt(w_sigma/4)*(M_sigma_x+N_sigma_x)",
+    "G_sigma_minus_x": "sqrt(w_sigma/4)*(M_sigma_x-N_sigma_x)"
+  },
+  "exactVolterraIdentity": "D_trace(x,y)=1/2 sum_sigma w_sigma int [M_sigma_x N_sigma_y + N_sigma_x M_sigma_y] du",
+  "signedFeatureIdentity": "D_trace(x,y)=sum_sigma int [G_sigma_plus_x G_sigma_plus_y - G_sigma_minus_x G_sigma_minus_y] du",
+  "signedSquareIdentity": "M_x N_y + N_x M_y = 1/2[(M_x+N_x)(M_y+N_y) - (M_x-N_x)(M_y-N_y)]",
+  "statuses": {
+    "greenMinimizerFeatureDefinitionStatus": {
+      "label": "Green minimizer Volterra feature definition",
+      "closed": true,
+      "status": "closed",
+      "reason": "For trace x, use the Euler-Lagrange minimizer f_x and define M_{sigma,x}, N_{sigma,x} by the direct reduced Volterra formula."
+    },
+    "volterraMomentRepresentationStatus": {
+      "label": "Volterra moment representation of D_trace",
+      "closed": true,
+      "status": "closed",
+      "reason": "The identity D_trace(x,y)=1/2 sum int(M_x N_y+N_x M_y) is the direct Volterra formula restricted to Green minimizers; the finite check agrees with the Schur matrix built from the same direct Volterra operator within the displayed quadrature tolerance."
+    },
+    "signedSquareCompletionStatus": {
+      "label": "signed Volterra square completion",
+      "closed": true,
+      "status": "closed",
+      "reason": "Pointwise, M_xN_y+N_xM_y equals one half of a plus-square kernel minus a minus-square kernel."
+    },
+    "positiveGreenGramStatus": {
+      "label": "honest positive Volterra/Green Gram square",
+      "closed": false,
+      "status": "open",
+      "reason": "The explicit Volterra features give a signed Krein square, not yet an honest Hilbert square.  A constrained moment positivity theorem is still needed to remove or dominate the minus-square part on Green minimizers.",
+      "blocker": "Prove that the negative square component is dominated by the positive component on the Euler-Lagrange Green-minimizer trace family, equivalently prove positivity of the Volterra moment operator on that constrained image."
+    }
+  },
+  "finiteCheck": {
+    "basis": 8,
+    "constraints": 5,
+    "kernelSource": "direct_volterra",
+    "traceRank": 5,
+    "traceNullity": 3,
+    "sOrder": 80,
+    "uOrder": 220,
+    "uMax": 10.0,
+    "directKernelMin": 9.150635862650793e-12,
+    "directKernelMax": 0.2495074528792845,
+    "referenceGramMin": 9.274934493180946e-05,
+    "referenceGramMax": 0.2556688326541605,
+    "directVsReferenceGramRelative": 0.2617162664918883,
+    "schurMin": 2.94175111037545e-09,
+    "schurMax": 0.015173892572275097,
+    "volterraMomentMin": 2.941751855265477e-09,
+    "volterraMomentMax": 0.015173892572406828,
+    "momentVsSchurFrobenius": 2.525896490697586e-13,
+    "momentVsSchurRelative": 1.6437327817901338e-11,
+    "signedSquareIdentityFrobenius": 4.591087352488748e-18,
+    "plusMin": 6.8102574541504586e-09,
+    "minusMin": 2.9433775033528383e-09,
+    "plusTrace": 0.036089292408415914,
+    "minusTrace": 0.018113386658345935,
+    "branchRows": [
+      {
+        "sigma": -1,
+        "momentMin": -1.4930879663217673e-08,
+        "momentMax": 0.0032131425562022557,
+        "plusTrace": 0.008693254746277726,
+        "minusTrace": 0.005222500296562847
+      },
+      {
+        "sigma": 1,
+        "momentMin": 2.973496867278646e-09,
+        "momentMax": 0.01208985197228771,
+        "plusTrace": 0.02739603766213819,
+        "minusTrace": 0.012890886361783087
+      }
+    ],
+    "finiteVolterraRepresentationClosed": true,
+    "honestPositiveSquareClosed": false
+  },
+  "referenceGramDiagnostic": "The optional gram_matrix comparison is diagnostic only.  The feature identity is checked against the direct Volterra operator because that is the continuum formula being identified.",
+  "continuumPositiveSquareClosed": false,
+  "correctedConclusion": "The explicit continuum Volterra/Green feature candidates are identified by applying the direct Volterra transform to the Euler-Lagrange Green minimizers.  They reproduce D_trace as a Volterra moment form, and finite quadrature verifies the identity. However, the resulting square completion is signed, so the honest positive Hilbert Gram square is still equivalent to the remaining constrained Volterra moment positivity theorem.",
+  "nextProofTarget": "Prove constrained positivity of the signed Volterra moment form on the Green-minimizer trace image, or find an additional transform that converts the signed plus/minus square into a single positive Hilbert square."
+}

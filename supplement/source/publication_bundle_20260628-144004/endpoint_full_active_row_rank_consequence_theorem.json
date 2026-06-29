@@ -1,0 +1,60 @@
+{
+  "theoremName": "endpoint full active row rank consequence theorem",
+  "proofClass": "symbolic identity",
+  "conditionMatrixOrder": 200,
+  "controlledQuadratureOrder": 200,
+  "activeIndices": [
+    3,
+    4
+  ],
+  "endpointIntervalMargins": {
+    "actualKrawczykQ": 1.0938554638804267e-19,
+    "scaledCompanionRadiusOverSimultaneousBudget": 3.1988616802888144e-15,
+    "boundaryRowRadiusOverSimultaneousBudget": 3.122484815877811e-15,
+    "endpointRadiusOverChartCapacity": 3.16061191846505e-15,
+    "allMarginsBelowOne": true
+  },
+  "statuses": {
+    "endpointCoefficientInputStatus": {
+      "label": "synchronized endpoint coefficient input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The synchronized 200-point endpoint certificate closes center synchronization, analytic companion input, analytic boundary input, and the Krawczyk input, with all reported margin ratios below one."
+    },
+    "persistentPlueckerChartStatus": {
+      "label": "persistent Pluecker chart remains nonzero",
+      "closed": true,
+      "status": "closed",
+      "reason": "The exact endpoint map remains inside the certified persistent Pluecker chart because the endpoint-radius budget is below chart capacity."
+    },
+    "endpointFullActiveRowRankStatus": {
+      "label": "endpoint map has full active row rank",
+      "closed": true,
+      "status": "closed",
+      "reason": "Nonvanishing of the active Pluecker coordinate gives full row rank for the exact active endpoint map."
+    },
+    "endpointMapOntoActiveRowsStatus": {
+      "label": "endpoint map is onto active rows",
+      "closed": true,
+      "status": "closed",
+      "reason": "A finite-dimensional linear map with full active row rank is surjective onto the active row space."
+    },
+    "boundedEndpointRightInverseStatus": {
+      "label": "bounded endpoint right inverse",
+      "closed": true,
+      "status": "closed",
+      "reason": "Surjectivity in finite dimension gives a bounded right inverse.  The bound is controlled by the same certified Pluecker separation margin."
+    }
+  },
+  "persistentPlueckerChartClosed": true,
+  "endpointFullActiveRowRankClosed": true,
+  "endpointMapOntoActiveRowsClosed": true,
+  "boundedEndpointRightInverseClosed": true,
+  "proof": [
+    "Import the synchronized 200-point coefficient/Krawczyk certificate.",
+    "Check the companion, boundary, Krawczyk, and Pluecker margin ratios are below one.",
+    "Conclude the exact endpoint map stays in the persistent Pluecker chart.",
+    "Read off full active row rank, surjectivity onto active endpoint rows, and a bounded right inverse."
+  ],
+  "remainingAnalyticGap": null
+}

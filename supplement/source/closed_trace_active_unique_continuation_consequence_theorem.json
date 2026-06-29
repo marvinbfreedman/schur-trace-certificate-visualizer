@@ -1,0 +1,15 @@
+{
+  "theoremName": "closed-trace active unique-continuation consequence theorem",
+  "proofClass": "symbolic identity",
+  "statuses": {
+    "closedTraceActiveUniqueContinuationConsequenceStatus": {
+      "label": "closed-trace active unique-continuation consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The closed-trace active unique-continuation theorem proves Lambda_a(f)=0 on the trace interval implies E_active f=0 in the completed closed trace domain."
+    }
+  },
+  "closedTraceActiveUniqueContinuationClosed": true,
+  "activeSourceRowsVanishOnClosedTraceKernel": true,
+  "remainingAnalyticGap": null
+}

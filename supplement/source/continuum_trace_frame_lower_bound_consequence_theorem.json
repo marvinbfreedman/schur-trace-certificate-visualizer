@@ -1,0 +1,41 @@
+{
+  "theoremName": "continuum trace-frame lower-bound terminal consequence theorem",
+  "proofClass": "symbolic identity",
+  "activeDimension": 2,
+  "explicitContinuumGammaLower": 82.91376250306405,
+  "observedFiniteFrameFloor": 293.1151510088239,
+  "observedTraceMeshFrameMinDrift": 0.7171290456408642,
+  "finiteFrameIntervalCertificateClosed": true,
+  "traceQuadratureIntervalCertificateClosed": true,
+  "continuumTraceFrameLowerBoundStatus": {
+    "label": "continuum L2 trace-frame lower bound",
+    "closed": true,
+    "status": "closed",
+    "reason": "The full continuum trace-frame theorem proves gamma_delta > 0."
+  },
+  "traceQuadratureConsistencyStatus": {
+    "label": "trace quadrature consistency",
+    "closed": true,
+    "status": "closed",
+    "reason": "The full continuum trace-frame theorem imports the interval quadrature consistency input."
+  },
+  "boundedSampledTraceCorrectionStatus": {
+    "label": "bounded sampled-trace correction right inverse",
+    "closed": true,
+    "status": "closed",
+    "reason": "The lower frame bound and quadrature consistency give bounded sampled-trace correction."
+  },
+  "explicitNumericGammaStatus": {
+    "label": "explicit rigorous numeric gamma_delta",
+    "closed": true,
+    "status": "closed",
+    "reason": "The interval finite-frame and quadrature certificates leave a positive transported gamma."
+  },
+  "continuumTraceFrameLowerBoundConsequenceClosed": true,
+  "proof": [
+    "Import the full continuum trace-frame lower-bound theorem.",
+    "Read off the three terminal trace-frame statuses used by high-block tail passage.",
+    "Export no active-range, source-rank, finite-frame, or quadrature proof internals upstream."
+  ],
+  "remainingAnalyticGap": null
+}

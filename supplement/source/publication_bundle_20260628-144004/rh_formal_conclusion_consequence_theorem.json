@@ -1,0 +1,48 @@
+{
+  "theoremName": "RH formal conclusion consequence theorem",
+  "proofClass": "symbolic identity",
+  "source": "RH/de Branges bridge ledger",
+  "statuses": {
+    "formalRhConclusionInputStatus": {
+      "label": "formal RH conclusion input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full RH/de Branges bridge ledger records the formal RH conclusion as closed."
+    },
+    "rhConclusionInputStatus": {
+      "label": "RH conclusion input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full RH/de Branges bridge ledger records rhClosed=true."
+    },
+    "endpointPassageInputStatus": {
+      "label": "endpoint passage input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full RH/de Branges bridge ledger records the shifted-Xi endpoint passage as closed."
+    },
+    "formalConclusionConsequenceStatus": {
+      "label": "formal conclusion consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Only the terminal formal conclusion flags are exported as the audit root."
+    }
+  },
+  "endpointPassageClosed": true,
+  "formalRhClosed": true,
+  "rhClosed": true,
+  "independentRhProofVetted": false,
+  "caution": "The formal ledger is closed, but this does not substitute for publication-grade independent verification of the imported KLM/Weyl, augmented repair, and closed-cone bridge certificates.",
+  "nextProofTarget": "Audit remaining non-endpoint proof layers, starting with the high-block exhaustion theorem and its regularizer/source-tail inputs.",
+  "proof": [
+    "Import the full RH/de Branges bridge ledger.",
+    "Export only the terminal formal conclusion flags for the top-level audit root."
+  ],
+  "notExportedHere": [
+    "uniform omega KLM/Weyl input",
+    "external equivalence audit summary",
+    "shifted-Xi zero-location consequence",
+    "full proof ledger evidence"
+  ],
+  "remainingAnalyticGap": null
+}

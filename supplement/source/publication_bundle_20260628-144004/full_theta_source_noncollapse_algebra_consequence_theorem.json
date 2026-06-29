@@ -1,0 +1,62 @@
+{
+  "theoremName": "full-theta source noncollapse algebra consequence theorem",
+  "proofClass": "symbolic identity",
+  "activeDimension": 2,
+  "activeEigenvaluesS8": [
+    11489025587.757864,
+    140116882778.8568
+  ],
+  "finiteActiveResponseSingularValuesS8": [
+    1206605105217492.0,
+    5.360235441045838e+17
+  ],
+  "sourceQuadratureErrorBound": 188255959.690444,
+  "omittedTailDeltaSBound": 2.5985037269540472e-22,
+  "totalContinuumErrorBound": 188255959.690444,
+  "spectralGapToComplementS8": 11489014207.3242,
+  "totalProjectorAlpha": 0.0655429460851155,
+  "finiteRankMarginS8": 1206605105217492.0,
+  "angleFactorLowerBound": 0.997849749320249,
+  "complementResponseOperatorNorm": 1.8138427095631724e+16,
+  "lowerBoundAfterContinuumAndTail": 15164652572018.725,
+  "d2SourceGramIntervalEnvelope": 1738008439275864.5,
+  "trapezoidFactor": 1.0831705729166666e-07,
+  "tailBoundClosed": true,
+  "totalGapConditionPasses": true,
+  "sourceQuadratureConsequenceClosed": true,
+  "statuses": {
+    "constantsInputStatus": {
+      "label": "closed source quadrature constants",
+      "closed": true,
+      "status": "closed",
+      "reason": "The imported constants theorem has closed the source perturbation and theta-tail bounds."
+    },
+    "gapStabilityStatus": {
+      "label": "rank stability gap inequality",
+      "closed": true,
+      "status": "closed",
+      "reason": "The perturbation is less than one quarter of the active/complement gap, so the active Riesz subspace is stable."
+    },
+    "finiteActiveRankStatus": {
+      "label": "finite active response rank",
+      "closed": true,
+      "status": "closed",
+      "reason": "The two finite active response singular values and rank margin are positive."
+    },
+    "fullThetaSourceNoncollapseStatus": {
+      "label": "full-Phi source noncollapse algebra consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The gap-stability inequality and positive response margin imply rank(LE^*|U_delta)=2."
+    }
+  },
+  "formalProof": [
+    "The source perturbation bound is below one quarter of the active/complement gap.",
+    "Davis-Kahan/Riesz stability keeps a two-dimensional active source subspace.",
+    "The finite active response has positive smallest singular value and positive rank margin.",
+    "The transported active response therefore remains rank two for the full-Phi source model."
+  ],
+  "fullThetaSourceNoncollapseAlgebraClosed": true,
+  "fullPhiContinuumSourceNoncollapsePasses": true,
+  "nextProofTarget": "Import this symbolic implication in the full-theta source noncollapse theorem."
+}

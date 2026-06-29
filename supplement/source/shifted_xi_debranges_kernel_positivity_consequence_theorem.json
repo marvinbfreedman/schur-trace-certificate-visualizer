@@ -1,0 +1,42 @@
+{
+  "theoremName": "shifted Xi de Branges kernel positivity consequence theorem",
+  "proofClass": "symbolic identity",
+  "source": "shifted Xi de Branges kernel positivity theorem",
+  "omegaRange": "0 < omega < 1/2",
+  "kernel": "K_{E_omega}, E_omega(z)=Xi(z+i omega)",
+  "statuses": {
+    "shiftedXiKernelPositivityInputStatus": {
+      "label": "shifted-Xi de Branges kernel positivity input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full shifted-Xi kernel positivity theorem proves positive definiteness on finite upper-half-plane evaluation sets."
+    },
+    "finiteGramSummaryStatus": {
+      "label": "finite Gram positivity summary",
+      "closed": true,
+      "status": "closed",
+      "reason": "The lower theorem records the finite evaluation Gram positivity input."
+    },
+    "augmentedRepairSummaryStatus": {
+      "label": "augmented repair closure summary",
+      "closed": true,
+      "status": "closed",
+      "reason": "The lower theorem records the continuum augmented repair closure input."
+    }
+  },
+  "shiftedXiDeBrangesKernelPositiveConsequenceClosed": true,
+  "shiftedXiDeBrangesKernelPositiveClosed": true,
+  "finiteEvaluationGramPositive": true,
+  "continuumAugmentedRepairClosed": true,
+  "proof": [
+    "Import the full shifted-Xi de Branges kernel positivity theorem.",
+    "Export only the terminal positivity statement used by endpoint zero exclusion."
+  ],
+  "notExportedHere": [
+    "finite theta pullback construction",
+    "augmented trace convergence",
+    "repair positivity",
+    "closed-cone limiting argument"
+  ],
+  "remainingAnalyticGap": null
+}

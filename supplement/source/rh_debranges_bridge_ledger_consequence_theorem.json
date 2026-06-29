@@ -1,0 +1,21 @@
+{
+  "theoremName": "RH/de Branges bridge ledger consequence theorem",
+  "proofClass": "symbolic identity",
+  "statuses": {
+    "rhBridgeLedgerConsequenceStatus": {
+      "label": "RH/de Branges bridge ledger consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The RH/de Branges bridge ledger records the formal implication from the all-omega KLM/Weyl positive-type input and shifted-Xi endpoint zero-location consequence to the RH-side conclusion."
+    }
+  },
+  "formalRhClosed": true,
+  "conditionalRhClosed": true,
+  "rhBridgeLedgerClosed": true,
+  "proof": [
+    "Import the detailed RH/de Branges bridge ledger.",
+    "Export only the terminal formal RH bridge consequence needed by the external audit."
+  ],
+  "remainingAnalyticGap": null,
+  "nextProofTarget": null
+}

@@ -1,0 +1,35 @@
+{
+  "theoremName": "augmented trace quotient liminf consequence theorem",
+  "proofClass": "symbolic identity",
+  "quotientLiminfJson": "augmented_trace_quotient_liminf_theorem.json",
+  "statement": "The augmented trace quotient liminf theorem supplies the quotient lower-bound consequence needed by the two-sided quotient bounds theorem.",
+  "statuses": {
+    "traceQuotientLiminfStatus": {
+      "label": "trace quotient liminf",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the augmented trace quotient liminf theorem."
+    },
+    "finiteQuotientLowerBoundStatus": {
+      "label": "finite quotient lower bound",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the augmented trace quotient liminf theorem."
+    },
+    "traceQuotientLiminfConsequenceStatus": {
+      "label": "trace quotient liminf consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The transported trace quotient lower bound is available upstream."
+    }
+  },
+  "traceQuotientLiminfClosed": true,
+  "finiteQuotientLowerBoundClosed": true,
+  "traceQuotientLiminfConsequenceClosed": true,
+  "proof": [
+    "Import the augmented trace quotient liminf theorem.",
+    "Extract the trace quotient lower-bound conclusion.",
+    "Expose only that consequence to the two-sided quotient bounds theorem."
+  ],
+  "remainingAnalyticGap": null
+}

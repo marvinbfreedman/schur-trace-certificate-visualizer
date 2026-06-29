@@ -1,0 +1,261 @@
+{
+  "theoremName": "regularized finite adjoint Green BVP model",
+  "basis": 18,
+  "traceSamples": 41,
+  "kernelDegree": 12,
+  "smoothOrder": 4,
+  "smoothWeight": 1e-06,
+  "interval": [
+    0.02,
+    0.545
+  ],
+  "activeDim": 2,
+  "activeFloor": 182.85135401773348,
+  "rawGridRangeResidualRelative": 1.8147258681240715e-69,
+  "regularizedRangeResidualRelative": 1.7022933929860706e-69,
+  "regularizedMaxIbpRelativeDefectOnActive": 99119712.96279164,
+  "regularizedMaxEtaL2": 635017335663.632,
+  "regularizedMaxDensityL2": 344.1661124287642,
+  "traceFieldMinGap": 1.1635518278617991e-05,
+  "traceFieldMinConsecutiveCos": 0.9968021941985705,
+  "maxCenterMismatch": 0.0,
+  "rows": [
+    {
+      "sourceNode": 0.08,
+      "component": "boundary",
+      "rangeRelativeDefect": 1.1058947619683283e-69,
+      "ibpRelativeDefectOnActive": 71369129.02307832,
+      "etaL2Trap": 48978789022.59008,
+      "densityL2Trap": 26.81656239229896,
+      "densityMaxAbs": 100.65450152208331,
+      "coefficientL2": 26.325242641358667,
+      "leftBoundaryRowNorm": 45709286.875115655,
+      "rightBoundaryRowNorm": 2076905650.0023885
+    },
+    {
+      "sourceNode": 0.08,
+      "component": "adjointEval",
+      "rangeRelativeDefect": 8.690659224608946e-70,
+      "ibpRelativeDefectOnActive": 99119712.96279164,
+      "etaL2Trap": 635017335663.632,
+      "densityL2Trap": 344.1661124287642,
+      "densityMaxAbs": 1332.6824108478654,
+      "coefficientL2": 337.56190163897094,
+      "leftBoundaryRowNorm": 596706547.4909956,
+      "rightBoundaryRowNorm": 26854866244.225548
+    },
+    {
+      "sourceNode": 0.135,
+      "component": "boundary",
+      "rangeRelativeDefect": 3.842646163682783e-70,
+      "ibpRelativeDefectOnActive": 71711493.6461298,
+      "etaL2Trap": 49238056412.74321,
+      "densityL2Trap": 26.95365979567223,
+      "densityMaxAbs": 101.22382684884559,
+      "coefficientL2": 26.45943183548081,
+      "leftBoundaryRowNorm": 45956627.45579925,
+      "rightBoundaryRowNorm": 2087804008.313868
+    },
+    {
+      "sourceNode": 0.135,
+      "component": "adjointEval",
+      "rangeRelativeDefect": 1.275466908922975e-69,
+      "ibpRelativeDefectOnActive": 99119712.96279164,
+      "etaL2Trap": 627347422966.5098,
+      "densityL2Trap": 340.00918018867367,
+      "densityMaxAbs": 1316.5859089570763,
+      "coefficientL2": 333.48473685930435,
+      "leftBoundaryRowNorm": 589499362.9496883,
+      "rightBoundaryRowNorm": 26530505840.15745
+    },
+    {
+      "sourceNode": 0.19,
+      "component": "boundary",
+      "rangeRelativeDefect": 2.482080005875441e-70,
+      "ibpRelativeDefectOnActive": 72057000.42281204,
+      "etaL2Trap": 49430605915.252594,
+      "densityL2Trap": 27.05419967844915,
+      "densityMaxAbs": 101.65631410286444,
+      "coefficientL2": 26.55773043257663,
+      "leftBoundaryRowNorm": 46141743.78833417,
+      "rightBoundaryRowNorm": 2095872537.767498
+    },
+    {
+      "sourceNode": 0.19,
+      "component": "adjointEval",
+      "rangeRelativeDefect": 1.0529178228281936e-69,
+      "ibpRelativeDefectOnActive": 99119712.96279164,
+      "etaL2Trap": 618663118559.0139,
+      "densityL2Trap": 335.3024688609391,
+      "densityMaxAbs": 1298.3605486647884,
+      "coefficientL2": 328.86834271450135,
+      "leftBoundaryRowNorm": 581338985.2570978,
+      "rightBoundaryRowNorm": 26163246837.623737
+    },
+    {
+      "sourceNode": 0.245,
+      "component": "boundary",
+      "rangeRelativeDefect": 2.176999731319363e-70,
+      "ibpRelativeDefectOnActive": 72403442.01562713,
+      "etaL2Trap": 49553596426.23493,
+      "densityL2Trap": 27.11667838040234,
+      "densityMaxAbs": 101.94573390431755,
+      "coefficientL2": 26.618666562867006,
+      "leftBoundaryRowNorm": 46261926.850329325,
+      "rightBoundaryRowNorm": 2100991787.3466496
+    },
+    {
+      "sourceNode": 0.245,
+      "component": "adjointEval",
+      "rangeRelativeDefect": 5.809030627994953e-70,
+      "ibpRelativeDefectOnActive": 99119712.96279164,
+      "etaL2Trap": 609046047142.7125,
+      "densityL2Trap": 330.0902173263582,
+      "densityMaxAbs": 1278.1776320724744,
+      "coefficientL2": 323.75610918454294,
+      "leftBoundaryRowNorm": 572302114.6718273,
+      "rightBoundaryRowNorm": 25756541143.083866
+    },
+    {
+      "sourceNode": 0.3,
+      "component": "boundary",
+      "rangeRelativeDefect": 7.942154252424024e-70,
+      "ibpRelativeDefectOnActive": 72748794.55088978,
+      "etaL2Trap": 49604977725.00129,
+      "densityL2Trap": 27.140022228704396,
+      "densityMaxAbs": 102.08750320010535,
+      "coefficientL2": 26.641190235285052,
+      "leftBoundaryRowNorm": 46315208.80428454,
+      "rightBoundaryRowNorm": 2103075787.7482207
+    },
+    {
+      "sourceNode": 0.3,
+      "component": "adjointEval",
+      "rangeRelativeDefect": 1.1003522851426305e-69,
+      "ibpRelativeDefectOnActive": 99119712.96279164,
+      "etaL2Trap": 598583343074.0323,
+      "densityL2Trap": 324.4196505834092,
+      "densityMaxAbs": 1256.2200241472283,
+      "coefficientL2": 318.19435506641554,
+      "leftBoundaryRowNorm": 562470628.7081919,
+      "rightBoundaryRowNorm": 25314073666.154774
+    },
+    {
+      "sourceNode": 0.355,
+      "component": "boundary",
+      "rangeRelativeDefect": 1.689015581081409e-70,
+      "ibpRelativeDefectOnActive": 73091222.97790973,
+      "etaL2Trap": 49583492623.84087,
+      "densityL2Trap": 27.123587989425502,
+      "densityMaxAbs": 102.07869537893801,
+      "coefficientL2": 26.624673719179526,
+      "leftBoundaryRowNorm": 46300365.843321286,
+      "rightBoundaryRowNorm": 2102072127.6158788
+    },
+    {
+      "sourceNode": 0.355,
+      "component": "adjointEval",
+      "rangeRelativeDefect": 2.2775288772027986e-70,
+      "ibpRelativeDefectOnActive": 99119712.96279164,
+      "etaL2Trap": 587365812323.9612,
+      "densityL2Trap": 318.33998356885843,
+      "densityMaxAbs": 1232.678295309004,
+      "coefficientL2": 312.231350910426,
+      "leftBoundaryRowNorm": 551929854.9854497,
+      "rightBoundaryRowNorm": 24839684588.9356
+    },
+    {
+      "sourceNode": 0.41,
+      "component": "boundary",
+      "rangeRelativeDefect": 6.720438806580622e-70,
+      "ibpRelativeDefectOnActive": 73429082.7147105,
+      "etaL2Trap": 49488662567.68212,
+      "densityL2Trap": 27.06715440742386,
+      "densityMaxAbs": 101.91801528667342,
+      "coefficientL2": 26.568903189558394,
+      "leftBoundaryRowNorm": 46216905.43123048,
+      "rightBoundaryRowNorm": 2097961330.829708
+    },
+    {
+      "sourceNode": 0.41,
+      "component": "adjointEval",
+      "rangeRelativeDefect": 1.1301274865084472e-69,
+      "ibpRelativeDefectOnActive": 99119712.96279164,
+      "etaL2Trap": 575486171373.5363,
+      "densityL2Trap": 311.9014666759542,
+      "densityMaxAbs": 1207.747025479537,
+      "coefficientL2": 305.91638285396687,
+      "leftBoundaryRowNorm": 540766916.3712579,
+      "rightBoundaryRowNorm": 24337294888.94468
+    },
+    {
+      "sourceNode": 0.465,
+      "component": "boundary",
+      "rangeRelativeDefect": 1.9696003831296745e-70,
+      "ibpRelativeDefectOnActive": 73760918.13049187,
+      "etaL2Trap": 49320758097.36107,
+      "densityL2Trap": 26.97090561222601,
+      "densityMaxAbs": 101.60574200146947,
+      "coefficientL2": 26.474062399692734,
+      "leftBoundaryRowNorm": 46065039.24945546,
+      "rightBoundaryRowNorm": 2090755594.9202218
+    },
+    {
+      "sourceNode": 0.465,
+      "component": "adjointEval",
+      "rangeRelativeDefect": 7.847203833864181e-70,
+      "ibpRelativeDefectOnActive": 99119712.96279164,
+      "etaL2Trap": 563037405044.2969,
+      "densityL2Trap": 305.154495732884,
+      "densityMaxAbs": 1181.6213577347428,
+      "coefficientL2": 299.2988796786155,
+      "leftBoundaryRowNorm": 529069187.88471264,
+      "rightBoundaryRowNorm": 23810836891.81305
+    },
+    {
+      "sourceNode": 0.52,
+      "component": "boundary",
+      "rangeRelativeDefect": 1.7022933929860706e-69,
+      "ibpRelativeDefectOnActive": 74085458.37725617,
+      "etaL2Trap": 49080756012.17664,
+      "densityL2Trap": 26.835407392679908,
+      "densityMaxAbs": 101.14364314130971,
+      "coefficientL2": 26.34070936546556,
+      "leftBoundaryRowNorm": 45845643.56416857,
+      "rightBoundaryRowNorm": 2080496968.446957
+    },
+    {
+      "sourceNode": 0.52,
+      "component": "adjointEval",
+      "rangeRelativeDefect": 1.3106462354775988e-69,
+      "ibpRelativeDefectOnActive": 99119712.96279164,
+      "etaL2Trap": 550111277256.4617,
+      "densityL2Trap": 298.14880486485833,
+      "densityMaxAbs": 1154.4938728996756,
+      "coefficientL2": 292.42762116040507,
+      "leftBoundaryRowNorm": 516922897.30093515,
+      "rightBoundaryRowNorm": 23264191291.287334
+    }
+  ],
+  "statuses": {
+    "exactActiveRangeOnRegularizedKernel": {
+      "label": "exact active range on regularized kernels",
+      "closed": true,
+      "status": "closed",
+      "reason": "Polynomial densities solve the two active moment equations."
+    },
+    "regularizedAdjointIbpSmall": {
+      "label": "regularized adjoint IBP diagnostic",
+      "closed": false,
+      "status": "open",
+      "reason": "Tests whether the smooth finite kernels behave like solutions of P^*K=eta with matched endpoint concomitant."
+    },
+    "continuumBvpClosed": {
+      "label": "continuum adjoint BVP compactness",
+      "closed": false,
+      "status": "open",
+      "reason": "Still requires a uniform norm bound and convergence of the regularized kernels in the trace-dual topology."
+    }
+  },
+  "interpretation": "This is the finite regularized replacement for differentiating the raw pseudoinverse trace coefficients.  A stable small IBP defect under degree/sample refinement would be the next numerical signal for the continuum adjoint Green proof."
+}

@@ -1,0 +1,21 @@
+{
+  "theoremName": "high-block tail passage bridge consequence theorem",
+  "proofClass": "symbolic identity",
+  "normalizedEpsilonDelta": 0.0013454526382754603,
+  "finiteLowMidSchurBudget": 0.005730309711103612,
+  "absorptionSlack": 0.004384857072828152,
+  "tailEstimatePassesToContinuum": true,
+  "conditionalHighBlockExhaustionClosed": true,
+  "highBlockTailPassageBridgeConsequenceStatus": {
+    "label": "high-block tail passage bridge consequence",
+    "closed": true,
+    "status": "closed",
+    "reason": "The high-block exhaustion consequence closes the continuum tail-passage contract needed by the global bridge."
+  },
+  "remainingAnalyticGaps": [],
+  "proof": [
+    "Import the high-block exhaustion terminal consequence.",
+    "Read off the closed tail-passage and conditional exhaustion flags.",
+    "Export only the bridge-facing scalar/status contract."
+  ]
+}

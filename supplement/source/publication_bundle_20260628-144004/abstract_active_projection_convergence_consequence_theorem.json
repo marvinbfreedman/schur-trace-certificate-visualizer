@@ -1,0 +1,30 @@
+{
+  "theoremName": "abstract active projection convergence consequence theorem",
+  "proofClass": "symbolic identity",
+  "statement": "The compact-source spectral projection theorem implies norm convergence of active Riesz projections and, by subtraction from the identity, norm convergence of inactive projections.",
+  "statuses": {
+    "activeRieszProjectionConvergenceStatus": {
+      "label": "active Riesz projection convergence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the compact-source spectral projection theorem: the isolated active source cluster has stable Riesz projections and active/inactive splitting."
+    },
+    "inactiveProjectionConvergenceStatus": {
+      "label": "inactive projection convergence",
+      "closed": true,
+      "status": "closed",
+      "reason": "If P_active,N -> P_active in norm, then I-P_active,N -> I-P_active in norm with the same norm error."
+    }
+  },
+  "activeRieszProjectionConvergenceClosed": true,
+  "inactiveProjectionConvergenceClosed": true,
+  "compactSourceRieszProjectionConvergenceClosed": true,
+  "sourceActiveInactiveSplittingStabilityClosed": true,
+  "proof": [
+    "Import compact-source Riesz projection convergence.",
+    "Import stability of the active/inactive source splitting.",
+    "Subtract active projections from the identity to get inactive projection convergence.",
+    "Expose only the projection-convergence consequence needed by the min-max tail passage."
+  ],
+  "remainingAnalyticGap": null
+}

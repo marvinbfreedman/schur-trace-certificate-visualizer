@@ -1,0 +1,20 @@
+{
+  "theoremName": "Weyl symbol coordinate-kernel transport consequence theorem",
+  "proofClass": "symbolic identity",
+  "statuses": {
+    "weylSymbolKernelTransportConsequenceStatus": {
+      "label": "Weyl symbol to coordinate-kernel transport consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "In the fixed Weyl convention, the coordinate kernel quadratic form is exactly the Weyl operator quadratic form <Op^W(sigma_omega)f,f> on the test domain."
+    }
+  },
+  "weylSymbolKernelTransportClosed": true,
+  "coordinateKernelQuadraticFormTransportClosed": true,
+  "proof": [
+    "Import the full Weyl symbol coordinate-kernel transport theorem.",
+    "Export only the terminal transport consequence needed by the external foundation."
+  ],
+  "remainingAnalyticGap": null,
+  "nextProofTarget": null
+}

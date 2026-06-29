@@ -1,0 +1,50 @@
+{
+  "theoremName": "continuum trace-to-source Green diagnostic consequence theorem",
+  "proofClass": "symbolic identity",
+  "traceGreenJson": "continuum_trace_to_source_green_kernel.json",
+  "statement": "The continuum trace-to-source Green kernel ledger supplies finite active-range, sampled-density, density-stability, and Lagrange identity diagnostics used only as imported signals by the canonical boundary comparison.  The full continuum trace-to-source theorem remains open below this diagnostic consequence.",
+  "statuses": {
+    "finiteActiveRangeIdentityStatus": {
+      "label": "finite active range identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the continuum trace-to-source Green kernel ledger."
+    },
+    "sampledGreenDensityStatus": {
+      "label": "sampled Green density",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the continuum trace-to-source Green kernel ledger."
+    },
+    "traceGridDensityStabilityStatus": {
+      "label": "trace-grid density stability",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the continuum trace-to-source Green kernel ledger."
+    },
+    "lagrangeAdjointIdentityStatus": {
+      "label": "Lagrange adjoint identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the continuum trace-to-source Green kernel ledger."
+    },
+    "traceToSourceDiagnosticConsequenceStatus": {
+      "label": "trace-to-source diagnostic consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The finite/sampled diagnostic signals are available for audit display without importing the open continuum Green theorem as a closed dependency."
+    }
+  },
+  "finiteActiveRangeIdentityClosed": true,
+  "sampledGreenDensityClosed": true,
+  "traceGridDensityStabilityClosed": true,
+  "lagrangeAdjointIdentityClosed": true,
+  "traceToSourceDiagnosticConsequenceClosed": true,
+  "continuumTraceToSourceClosed": false,
+  "remainingAnalyticGap": null,
+  "proof": [
+    "Import the continuum trace-to-source Green kernel ledger.",
+    "Extract only closed finite/sampled diagnostic signals used for importedSignals.",
+    "Do not promote the open continuum trace-to-source theorem."
+  ]
+}

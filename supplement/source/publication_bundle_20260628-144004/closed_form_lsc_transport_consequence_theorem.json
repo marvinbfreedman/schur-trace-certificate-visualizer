@@ -1,0 +1,38 @@
+{
+  "theoremName": "closed-form LSC transport consequence theorem",
+  "proofClass": "symbolic identity",
+  "closedFormLscJson": "closed_form_lsc_transport_theorem.json",
+  "statement": "The closed-form lower-semicontinuity transport theorem supplies the closed lower-envelope identification and transported LSC form facts needed by the augmented nonnegative closed-form limit theorem.",
+  "statuses": {
+    "closedLowerEnvelopeIdentificationStatus": {
+      "label": "closed lower-envelope identification",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the closed-form LSC transport theorem."
+    },
+    "closedFormTransportStatus": {
+      "label": "closed-form LSC transport",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the closed-form LSC transport theorem."
+    },
+    "closedFormLscTransportConsequenceStatus": {
+      "label": "closed-form LSC transport consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Together these facts identify the completed lower envelope used by the nonnegative closed-form limit theorem."
+    }
+  },
+  "closedLowerEnvelopeIdentifiedClosed": true,
+  "closedLowerEnvelopeLscClosed": true,
+  "lowerSemicontinuityClosed": true,
+  "closedFormTransportClosed": true,
+  "closedFormLscTransportConsequenceClosed": true,
+  "proof": [
+    "Import the closed-form LSC transport theorem.",
+    "Extract the closed lower-envelope identification.",
+    "Extract the transported closed lower-semicontinuity conclusion.",
+    "Expose only these consequences to the augmented nonnegative closed-form limit theorem."
+  ],
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,45 @@
+{
+  "theoremName": "high-block min-max tail consequence theorem",
+  "proofClass": "symbolic identity",
+  "minmaxTailJson": "high_block_minmax_tail_input_theorem.json",
+  "normalizedEpsilonDelta": 0.0013454526382754603,
+  "finiteLowMidSchurBudget": 0.005730309711103612,
+  "absorptionSlack": 0.004384857072828152,
+  "statement": "The high-block min-max tail input theorem supplies the final inactive-tail passage consequence needed by the continuum high-block tail estimate theorem.",
+  "statuses": {
+    "highBlockMinmaxTailPassageStatus": {
+      "label": "high-block min-max tail passage",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the high-block min-max tail input theorem."
+    },
+    "abstractMinmaxTailPassageStatus": {
+      "label": "abstract min-max tail passage",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the high-block min-max tail input theorem."
+    },
+    "tailEstimateContinuumPassageStatus": {
+      "label": "tail estimate continuum passage",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the high-block min-max tail input theorem."
+    },
+    "highBlockMinmaxTailConsequenceStatus": {
+      "label": "high-block min-max tail consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Together these flags give the min-max tail input used upstream."
+    }
+  },
+  "highBlockMinmaxTailPassageClosed": true,
+  "abstractMinmaxTailPassageClosed": true,
+  "tailEstimatePassesToContinuum": true,
+  "highBlockMinmaxTailConsequenceClosed": true,
+  "proof": [
+    "Import the high-block min-max tail input theorem.",
+    "Extract only the final min-max/tail-passage consequences used upstream.",
+    "Expose these consequences to the high-block tail-estimate continuum-passage theorem."
+  ],
+  "remainingAnalyticGap": null
+}

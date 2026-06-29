@@ -1,0 +1,382 @@
+{
+  "sMin": 0.02,
+  "sMax": 0.545,
+  "requestedS0": 0.2825,
+  "actualS0": 0.2825,
+  "samples": 17,
+  "jetOrder": 9,
+  "stencilWidth": 17,
+  "localStep": 0.005,
+  "localPoints": 17,
+  "maxTraceQ": 8,
+  "tValues": [
+    0.08,
+    0.24,
+    0.4,
+    0.52
+  ],
+  "traceMinGap": 9.499588438798588e-05,
+  "traceMinConsecutiveCos": 0.9999237817726879,
+  "rows": [
+    {
+      "t": 0.08,
+      "maxTraceQ": 0,
+      "generators": 1,
+      "relativeResidual": 0.9631007712046358,
+      "residualNorm": 0.4002998225461432,
+      "targetNorm": 0.4156364884283631,
+      "alphaNorm": 0.574089397574895,
+      "alphaMaxAbs": 0.574089397574895
+    },
+    {
+      "t": 0.08,
+      "maxTraceQ": 1,
+      "generators": 2,
+      "relativeResidual": 0.9602674656777193,
+      "residualNorm": 0.3991221973862909,
+      "targetNorm": 0.4156364884283631,
+      "alphaNorm": 1.4646834514211586,
+      "alphaMaxAbs": 1.3858194760001707
+    },
+    {
+      "t": 0.08,
+      "maxTraceQ": 2,
+      "generators": 3,
+      "relativeResidual": 0.9542082574259204,
+      "residualNorm": 0.39660376934585706,
+      "targetNorm": 0.4156364884283631,
+      "alphaNorm": 4.614439360871131,
+      "alphaMaxAbs": 4.5867122703637
+    },
+    {
+      "t": 0.08,
+      "maxTraceQ": 3,
+      "generators": 4,
+      "relativeResidual": 0.8971493005176737,
+      "residualNorm": 0.37288798486312813,
+      "targetNorm": 0.4156364884283631,
+      "alphaNorm": 122.79762201692878,
+      "alphaMaxAbs": 119.87012114524194
+    },
+    {
+      "t": 0.08,
+      "maxTraceQ": 4,
+      "generators": 5,
+      "relativeResidual": 0.5713725892024388,
+      "residualNorm": 0.23748329656032335,
+      "targetNorm": 0.4156364884283631,
+      "alphaNorm": 517.7279433929866,
+      "alphaMaxAbs": 510.303223483835
+    },
+    {
+      "t": 0.08,
+      "maxTraceQ": 5,
+      "generators": 6,
+      "relativeResidual": 0.541191049539862,
+      "residualNorm": 0.22493874739960854,
+      "targetNorm": 0.4156364884283631,
+      "alphaNorm": 812.2744439538458,
+      "alphaMaxAbs": 809.0159034786674
+    },
+    {
+      "t": 0.08,
+      "maxTraceQ": 6,
+      "generators": 7,
+      "relativeResidual": 0.06907062557879692,
+      "residualNorm": 0.028708272269121426,
+      "targetNorm": 0.4156364884283631,
+      "alphaNorm": 164.50698810254917,
+      "alphaMaxAbs": 145.9755816701941
+    },
+    {
+      "t": 0.08,
+      "maxTraceQ": 7,
+      "generators": 8,
+      "relativeResidual": 0.02315501329718948,
+      "residualNorm": 0.00962406841635589,
+      "targetNorm": 0.4156364884283631,
+      "alphaNorm": 622.0070779695616,
+      "alphaMaxAbs": 538.843469926219
+    },
+    {
+      "t": 0.08,
+      "maxTraceQ": 8,
+      "generators": 9,
+      "relativeResidual": 0.0015146433448782056,
+      "residualNorm": 0.0006295410410865675,
+      "targetNorm": 0.4156364884283631,
+      "alphaNorm": 400.69500081010403,
+      "alphaMaxAbs": 298.75046221781486
+    },
+    {
+      "t": 0.24,
+      "maxTraceQ": 0,
+      "generators": 1,
+      "relativeResidual": 0.9604369568829612,
+      "residualNorm": 0.39403668377247103,
+      "targetNorm": 0.41026813988009453,
+      "alphaNorm": 0.5863743915399859,
+      "alphaMaxAbs": 0.5863743915399859
+    },
+    {
+      "t": 0.24,
+      "maxTraceQ": 1,
+      "generators": 2,
+      "relativeResidual": 0.9580327145141688,
+      "residualNorm": 0.39305029972800565,
+      "targetNorm": 0.41026813988009453,
+      "alphaNorm": 1.268750374941823,
+      "alphaMaxAbs": 1.193456221846133
+    },
+    {
+      "t": 0.24,
+      "maxTraceQ": 2,
+      "generators": 3,
+      "relativeResidual": 0.9514366663501678,
+      "residualNorm": 0.39034415131720146,
+      "targetNorm": 0.41026813988009453,
+      "alphaNorm": 4.972905454731698,
+      "alphaMaxAbs": 4.949507906765521
+    },
+    {
+      "t": 0.24,
+      "maxTraceQ": 3,
+      "generators": 4,
+      "relativeResidual": 0.8948132860323023,
+      "residualNorm": 0.3671133824004676,
+      "targetNorm": 0.41026813988009453,
+      "alphaNorm": 121.01095819132186,
+      "alphaMaxAbs": 118.15226758871177
+    },
+    {
+      "t": 0.24,
+      "maxTraceQ": 4,
+      "generators": 5,
+      "relativeResidual": 0.5707762899664939,
+      "residualNorm": 0.23417132677221492,
+      "targetNorm": 0.41026813988009453,
+      "alphaNorm": 509.4388118248584,
+      "alphaMaxAbs": 502.12820541652275
+    },
+    {
+      "t": 0.24,
+      "maxTraceQ": 5,
+      "generators": 6,
+      "relativeResidual": 0.5406327118861793,
+      "residualNorm": 0.22180437706387385,
+      "targetNorm": 0.41026813988009453,
+      "alphaNorm": 799.8488554587096,
+      "alphaMaxAbs": 796.6442867771005
+    },
+    {
+      "t": 0.24,
+      "maxTraceQ": 6,
+      "generators": 7,
+      "relativeResidual": 0.0690027231389949,
+      "residualNorm": 0.028309618868896595,
+      "targetNorm": 0.41026813988009453,
+      "alphaNorm": 162.76815116834098,
+      "alphaMaxAbs": 144.09101640282128
+    },
+    {
+      "t": 0.24,
+      "maxTraceQ": 7,
+      "generators": 8,
+      "relativeResidual": 0.02315471408487499,
+      "residualNorm": 0.009499641477057086,
+      "targetNorm": 0.41026813988009453,
+      "alphaNorm": 612.2631992186791,
+      "alphaMaxAbs": 530.19302996938
+    },
+    {
+      "t": 0.24,
+      "maxTraceQ": 8,
+      "generators": 9,
+      "relativeResidual": 0.001517697200938382,
+      "residualNorm": 0.0006226628075302159,
+      "targetNorm": 0.41026813988009453,
+      "alphaNorm": 394.56937510271035,
+      "alphaMaxAbs": 293.20618749025743
+    },
+    {
+      "t": 0.4,
+      "maxTraceQ": 0,
+      "generators": 1,
+      "relativeResidual": 0.9581415156116158,
+      "residualNorm": 0.3885735833998757,
+      "targetNorm": 0.4055492608018716,
+      "alphaNorm": 0.5958587473019367,
+      "alphaMaxAbs": 0.5958587473019367
+    },
+    {
+      "t": 0.4,
+      "maxTraceQ": 1,
+      "generators": 2,
+      "relativeResidual": 0.9560993579907014,
+      "residualNorm": 0.38774538788627294,
+      "targetNorm": 0.4055492608018716,
+      "alphaNorm": 1.0962440794685084,
+      "alphaMaxAbs": 1.0238272383224818
+    },
+    {
+      "t": 0.4,
+      "maxTraceQ": 2,
+      "generators": 3,
+      "relativeResidual": 0.9490098149921901,
+      "residualNorm": 0.3848702289638036,
+      "targetNorm": 0.4055492608018716,
+      "alphaNorm": 5.284768701871547,
+      "alphaMaxAbs": 5.264347436640469
+    },
+    {
+      "t": 0.4,
+      "maxTraceQ": 3,
+      "generators": 4,
+      "relativeResidual": 0.8927974766433205,
+      "residualNorm": 0.36207335669847485,
+      "targetNorm": 0.4055492608018716,
+      "alphaNorm": 119.42188858714366,
+      "alphaMaxAbs": 116.62393432403431
+    },
+    {
+      "t": 0.4,
+      "maxTraceQ": 4,
+      "generators": 5,
+      "relativeResidual": 0.5703231884106578,
+      "residualNorm": 0.2312941474781088,
+      "targetNorm": 0.4055492608018716,
+      "alphaNorm": 502.1598365610097,
+      "alphaMaxAbs": 494.94799959827066
+    },
+    {
+      "t": 0.4,
+      "maxTraceQ": 5,
+      "generators": 6,
+      "relativeResidual": 0.540199873149196,
+      "residualNorm": 0.21907765924092124,
+      "targetNorm": 0.4055492608018716,
+      "alphaNorm": 789.0199193590147,
+      "alphaMaxAbs": 785.8626905948989
+    },
+    {
+      "t": 0.4,
+      "maxTraceQ": 6,
+      "generators": 7,
+      "relativeResidual": 0.06895307289318843,
+      "residualNorm": 0.027963867741850137,
+      "targetNorm": 0.4055492608018716,
+      "alphaNorm": 161.2731528528944,
+      "alphaMaxAbs": 142.45771771374396
+    },
+    {
+      "t": 0.4,
+      "maxTraceQ": 7,
+      "generators": 8,
+      "relativeResidual": 0.02315771178075454,
+      "residualNorm": 0.009391592894547798,
+      "targetNorm": 0.4055492608018716,
+      "alphaNorm": 603.7968585827714,
+      "alphaMaxAbs": 522.6724713298291
+    },
+    {
+      "t": 0.4,
+      "maxTraceQ": 8,
+      "generators": 9,
+      "relativeResidual": 0.0015205481366656725,
+      "residualNorm": 0.0006166571728384267,
+      "targetNorm": 0.4055492608018716,
+      "alphaNorm": 389.2450269758522,
+      "alphaMaxAbs": 288.38287814738163
+    },
+    {
+      "t": 0.52,
+      "maxTraceQ": 0,
+      "generators": 1,
+      "relativeResidual": 0.9568047413958042,
+      "residualNorm": 0.38505777329144303,
+      "targetNorm": 0.40244133064152016,
+      "alphaNorm": 0.6004547424894394,
+      "alphaMaxAbs": 0.6004547424894394
+    },
+    {
+      "t": 0.52,
+      "maxTraceQ": 1,
+      "generators": 2,
+      "relativeResidual": 0.9549780935901879,
+      "residualNorm": 0.38432265471793736,
+      "targetNorm": 0.40244133064152016,
+      "alphaNorm": 0.9894502599209513,
+      "alphaMaxAbs": 0.9186704047723497
+    },
+    {
+      "t": 0.52,
+      "maxTraceQ": 2,
+      "generators": 3,
+      "relativeResidual": 0.9475773962912435,
+      "residualNorm": 0.3813443082492751,
+      "targetNorm": 0.40244133064152016,
+      "alphaNorm": 5.471405079512703,
+      "alphaMaxAbs": 5.452503969145705
+    },
+    {
+      "t": 0.52,
+      "maxTraceQ": 3,
+      "generators": 4,
+      "relativeResidual": 0.8916341484059026,
+      "residualNorm": 0.3588304331298901,
+      "targetNorm": 0.40244133064152016,
+      "alphaNorm": 118.37524479467046,
+      "alphaMaxAbs": 115.61615831600633
+    },
+    {
+      "t": 0.52,
+      "maxTraceQ": 4,
+      "generators": 5,
+      "relativeResidual": 0.5701234831705381,
+      "residualNorm": 0.22944125319712966,
+      "targetNorm": 0.40244133064152016,
+      "alphaNorm": 497.4537761927069,
+      "alphaMaxAbs": 490.30493819146886
+    },
+    {
+      "t": 0.52,
+      "maxTraceQ": 5,
+      "generators": 6,
+      "relativeResidual": 0.5400014694898995,
+      "residualNorm": 0.2173189099298914,
+      "targetNorm": 0.40244133064152016,
+      "alphaNorm": 782.0589285398479,
+      "alphaMaxAbs": 778.9322165465016
+    },
+    {
+      "t": 0.52,
+      "maxTraceQ": 6,
+      "generators": 7,
+      "relativeResidual": 0.06893313706535388,
+      "residualNorm": 0.02774154340587531,
+      "targetNorm": 0.40244133064152016,
+      "alphaNorm": 160.30140983487811,
+      "alphaMaxAbs": 141.40349039321404
+    },
+    {
+      "t": 0.52,
+      "maxTraceQ": 7,
+      "generators": 8,
+      "relativeResidual": 0.02316290852804171,
+      "residualNorm": 0.009321711729552921,
+      "targetNorm": 0.40244133064152016,
+      "alphaNorm": 598.3793441384229,
+      "alphaMaxAbs": 517.8634546203539
+    },
+    {
+      "t": 0.52,
+      "maxTraceQ": 8,
+      "generators": 9,
+      "relativeResidual": 0.0015224689967437452,
+      "residualNorm": 0.000612704448910013,
+      "targetNorm": 0.40244133064152016,
+      "alphaNorm": 385.8310291259771,
+      "alphaMaxAbs": 285.31821480772436
+    }
+  ]
+}

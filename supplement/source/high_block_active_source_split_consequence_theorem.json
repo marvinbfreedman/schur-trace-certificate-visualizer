@@ -1,0 +1,28 @@
+{
+  "theoremName": "high-block active source split consequence theorem",
+  "proofClass": "symbolic identity",
+  "statement": "The high-block spectral projection input theorem identifies a stable active top-two source subspace and the corresponding inactive complement for the high-block source model.",
+  "statuses": {
+    "highBlockSpectralProjectionInputStatus": {
+      "label": "high-block spectral projection input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the high-block spectral projection theorem: compact compression, source gap, and abstract Riesz projection stability close the high-block source split."
+    },
+    "activeInactiveSourceSplitStatus": {
+      "label": "stable active/inactive source split",
+      "closed": true,
+      "status": "closed",
+      "reason": "The active top-two source subspace and inactive orthogonal complement are stable for the high-block min-max tail comparison."
+    }
+  },
+  "highBlockSpectralProjectionClosed": true,
+  "activeInactiveSourceSplitClosed": true,
+  "sourceActiveInactiveSplittingStabilityClosed": true,
+  "proof": [
+    "Import the high-block spectral projection theorem.",
+    "Read off stable active/inactive source splitting.",
+    "Expose only this split consequence to the high-block min-max tail input theorem."
+  ],
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,50 @@
+{
+  "theoremName": "source-inactive tail constants consequence theorem",
+  "proofClass": "symbolic identity",
+  "basis": 22,
+  "sourceWindow": [
+    0.08,
+    0.52
+  ],
+  "globalTraceRatio": 0.75,
+  "finiteSourceTop": 140116882778.8568,
+  "finiteInactiveLambda3": 11380.43366571316,
+  "operatorPerturbationEta": 188255959.690444,
+  "absoluteTailBound": 188267340.12410972,
+  "sourceTopLower": 139928626819.16638,
+  "normalizedEpsilonDelta": 0.0013454526382754603,
+  "finiteLowMidSchurBudget": 0.005730309711103612,
+  "absorptionSlack": 0.004384857072828152,
+  "epsilonOverBudget": 0.23479579745373602,
+  "minMaxProofInCertifiedSourceModel": true,
+  "sourceInactiveTailConstantsClosed": true,
+  "sourceInactiveTailDominationConstantsClosed": true,
+  "absorbableByFiniteLowMidBlock": true,
+  "statuses": {
+    "constantsInputStatus": {
+      "label": "source-inactive constants input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The detailed constants theorem supplies the normalized inactive-tail source constant."
+    },
+    "absorptionInequalityStatus": {
+      "label": "inactive tail absorbed by low/mid Schur budget",
+      "closed": true,
+      "status": "closed",
+      "reason": "The normalized inactive-tail constant is strictly below the finite low/mid Schur budget."
+    },
+    "tailConstantsConsequenceStatus": {
+      "label": "terminal source-inactive tail constants consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The high-block theorem may use the exported constants and strict absorption slack."
+    }
+  },
+  "formalProof": [
+    "Import the certified normalized inactive-tail constant.",
+    "Import the certified finite low/mid Schur absorption budget.",
+    "Check the strict scalar inequality normalizedEpsilonDelta < finiteLowMidSchurBudget.",
+    "Export the constants as the terminal input contract for the high-block exhaustion theorem."
+  ],
+  "nextProofTarget": "Use this terminal constants consequence in high_block_exhaustion_theorem."
+}

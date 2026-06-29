@@ -1,0 +1,44 @@
+{
+  "theoremName": "symbolic Hardy multiplier theorem",
+  "proofClass": "symbolic identity",
+  "multiplier": "kappa(s,u)=(1-s-u)/(1+s+u)",
+  "domain": "s>=0, u>=0",
+  "statuses": {
+    "commonLiftedVolterraAtomStatus": {
+      "label": "common lifted Volterra atom",
+      "closed": true,
+      "status": "closed",
+      "reason": "The plus and minus branch features differ only by the scalar factors 1+s+u and 1-s-u; the Volterra atom A(s,u), test f(s), branch weight, and measure factor are common."
+    },
+    "liftedHardyMultiplierIdentityStatus": {
+      "label": "lifted Hardy multiplier identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "Because the common atom is shared, F_-(s,u)=kappa(s,u)F_+(s,u) with kappa(s,u)=(1-s-u)/(1+s+u) wherever s,u>=0."
+    },
+    "pointwiseHardyMultiplierStatus": {
+      "label": "pointwise Hardy multiplier contraction",
+      "closed": true,
+      "status": "closed",
+      "reason": "For s,u>=0, 1+s+u>0 and |1-s-u|<=1+s+u.  Therefore |kappa(s,u)|<=1 on the Volterra quadrant."
+    },
+    "compressedMultiplierAlgebraStatus": {
+      "label": "compressed multiplier algebra",
+      "closed": true,
+      "status": "closed",
+      "reason": "After applying the Volterra integration map C and Green lift E, the signed branch transport has the algebraic form C K E, where K is multiplication by kappa.  Contractivity of the compressed map is a separate closed-form Green theorem."
+    }
+  },
+  "liftedHardyMultiplierIdentityClosed": true,
+  "pointwiseHardyMultiplierClosed": true,
+  "compressedMultiplierAlgebraClosed": true,
+  "kappaAbsBound": 1,
+  "proof": [
+    "Write the lifted plus feature as F_+=(1+s+u)A(s,u)f(s).",
+    "Write the lifted minus feature as F_-=(1-s-u)A(s,u)f(s).",
+    "Divide by the common factor to get F_-=kappa F_+.",
+    "Since s,u>=0, |1-s-u|<=1+s+u, hence |kappa|<=1.",
+    "The integrated branch map is therefore C K E at the algebraic level."
+  ],
+  "remainingAnalyticGap": null
+}

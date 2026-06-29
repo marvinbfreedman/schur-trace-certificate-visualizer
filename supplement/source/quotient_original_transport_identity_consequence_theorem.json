@@ -1,0 +1,19 @@
+{
+  "theoremName": "quotient/original transport identity consequence theorem",
+  "proofClass": "symbolic identity",
+  "transportSource": "quotient original transport identity theorem",
+  "statuses": {
+    "transportIdentityStatus": {
+      "label": "quotient/original transport identity",
+      "closed": true,
+      "status": "closed",
+      "reason": "The imported transport identity theorem closes parity reduction, primitive mixed-derivative transport, Volterra/log normalization, and form-core closure."
+    }
+  },
+  "quotientOriginalTransportIdentityClosed": true,
+  "proof": [
+    "Import the closed quotient/original transport identity theorem.",
+    "Expose only the transport-identity flag consumed by the publication lift theorem."
+  ],
+  "remainingAnalyticGap": null
+}

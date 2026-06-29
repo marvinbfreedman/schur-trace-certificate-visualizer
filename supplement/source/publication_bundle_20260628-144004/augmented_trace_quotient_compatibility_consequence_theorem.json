@@ -1,0 +1,35 @@
+{
+  "theoremName": "augmented trace quotient compatibility consequence theorem",
+  "proofClass": "symbolic identity",
+  "traceQuotientJson": "augmented_trace_quotient_compatibility_theorem.json",
+  "statement": "The augmented trace quotient compatibility theorem supplies the transported quotient compatibility consequence needed by null-fiber repair compatibility.",
+  "statuses": {
+    "traceQuotientCompatibilityStatus": {
+      "label": "trace quotient compatibility",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the augmented trace quotient compatibility theorem."
+    },
+    "finiteTraceQuotientNormConvergenceStatus": {
+      "label": "finite trace quotient norm convergence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the augmented trace quotient compatibility theorem."
+    },
+    "traceQuotientCompatibilityConsequenceStatus": {
+      "label": "trace quotient compatibility consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Finite trace equivalence is identified with the completed transported quotient space X_aug."
+    }
+  },
+  "traceQuotientCompatibilityClosed": true,
+  "finiteTraceQuotientNormConvergenceClosed": true,
+  "traceQuotientCompatibilityConsequenceClosed": true,
+  "proof": [
+    "Import the augmented trace quotient compatibility theorem.",
+    "Extract the transported trace quotient compatibility conclusion.",
+    "Expose only that consequence to null-fiber repair compatibility."
+  ],
+  "remainingAnalyticGap": null
+}

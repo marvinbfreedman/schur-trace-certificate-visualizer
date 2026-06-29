@@ -1,0 +1,47 @@
+{
+  "theoremName": "global Schur tail finite-budget consequence theorem",
+  "proofClass": "symbolic identity",
+  "bridgeJson": "global_weyl_volterra_schur_bridge.json",
+  "sourceInactiveTailBudgetDiagnostic": {
+    "basis": 16,
+    "start": 5,
+    "fraction": 0.005730309711103612,
+    "tail": {
+      "start": 5,
+      "operatorTail": 5.846813734453223e-09,
+      "operatorFrac": 0.005730309711103612,
+      "scalarTail": 5.846813734453223e-09,
+      "scalarFrac": 0.005730309711103612,
+      "slack": 1.0
+    }
+  },
+  "finiteSchurTailBudgetDiagnostic": {
+    "basis": 16,
+    "start": 5,
+    "fraction": 0.005730309711103612,
+    "tail": {
+      "start": 5,
+      "operatorTail": 5.846813734453223e-09,
+      "operatorFrac": 0.005730309711103612,
+      "scalarTail": 5.846813734453223e-09,
+      "scalarFrac": 0.005730309711103612,
+      "slack": 1.0
+    }
+  },
+  "sourceInactiveTailBudgetFraction": 0.005730309711103612,
+  "sourceInactiveTailBudgetConsequenceClosed": true,
+  "statuses": {
+    "sourceInactiveTailBudgetDiagnosticStatus": {
+      "label": "source-inactive finite Schur-tail budget diagnostic",
+      "closed": true,
+      "status": "closed",
+      "reason": "The global bridge records a positive finite diagnostic fraction for the nonzero source-inactive operator tail."
+    }
+  },
+  "proof": [
+    "Import the global Weyl/Volterra Schur bridge ledger.",
+    "Extract the finiteDiagnostic.bestObservedNonzeroOperatorTail record for the source-inactive tail item.",
+    "Export only that finite diagnostic budget to the source-inactive Schur-tail certificate."
+  ],
+  "remainingAnalyticGap": null
+}

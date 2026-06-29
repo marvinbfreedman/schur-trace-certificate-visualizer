@@ -1,0 +1,46 @@
+{
+  "theoremName": "Volterra/Green feature-map consequence theorem",
+  "proofClass": "symbolic identity",
+  "featureSource": "trace Volterra Green feature-map ledger",
+  "featureDefinitions": {
+    "greenMinimizer": "f_x=Jx-A^+Bx",
+    "A_s_u": "Psi(s+u)/Psi(s)",
+    "B_sigma": "exp(0.5*sigma*omega*(s+u))*A_s(u)",
+    "M_sigma_x": "int f_x(s) B_sigma(s,u) ds",
+    "N_sigma_x": "int (s+u) f_x(s) B_sigma(s,u) ds",
+    "G_sigma_plus_x": "sqrt(w_sigma/4)*(M_sigma_x+N_sigma_x)",
+    "G_sigma_minus_x": "sqrt(w_sigma/4)*(M_sigma_x-N_sigma_x)"
+  },
+  "exactVolterraIdentity": "D_trace(x,y)=1/2 sum_sigma w_sigma int [M_sigma_x N_sigma_y + N_sigma_x M_sigma_y] du",
+  "signedFeatureIdentity": "D_trace(x,y)=sum_sigma int [G_sigma_plus_x G_sigma_plus_y - G_sigma_minus_x G_sigma_minus_y] du",
+  "signedSquareIdentity": "M_x N_y + N_x M_y = 1/2[(M_x+N_x)(M_y+N_y) - (M_x-N_x)(M_y-N_y)]",
+  "statuses": {
+    "greenMinimizerFeatureDefinitionStatus": {
+      "label": "Green minimizer Volterra feature definition",
+      "closed": true,
+      "status": "closed",
+      "reason": "The full feature-map ledger defines M, N, and G_+/G_- on Euler-Lagrange Green minimizers."
+    },
+    "volterraMomentRepresentationStatus": {
+      "label": "Volterra moment representation of D_trace",
+      "closed": true,
+      "status": "closed",
+      "reason": "The trace Schur form equals the explicit Volterra moment form on Green-minimizer traces."
+    },
+    "signedSquareCompletionStatus": {
+      "label": "signed Volterra square completion",
+      "closed": true,
+      "status": "closed",
+      "reason": "The elementary pointwise identity rewrites MN+NM as plus-square minus minus-square."
+    }
+  },
+  "volterraGreenFeatureConsequenceClosed": true,
+  "greenFeatureIdentificationClosed": true,
+  "notClaimedHere": "This consequence does not claim the open honest positive Volterra/Green Gram square from the full feature-map ledger.",
+  "proof": [
+    "Import the closed Volterra moment representation on Green minimizers.",
+    "Import the closed signed square completion identity.",
+    "Expose only the feature-identification facts used by the D_q vanishing theorem."
+  ],
+  "remainingAnalyticGap": null
+}

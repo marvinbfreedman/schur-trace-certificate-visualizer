@@ -1,0 +1,29 @@
+{
+  "theoremName": "completed Volterra tail positivity consequence theorem",
+  "proofClass": "symbolic identity",
+  "tailPositiveJson": "volterra_tail_positive_form_theorem.json",
+  "omegaIndependent": true,
+  "statement": "The positive Volterra tail form theorem supplies the completed-domain nonnegative diagonal Volterra tail consequence used by the augmented repair transport-limit theorem.",
+  "statuses": {
+    "volterraTailPositiveFormStatus": {
+      "label": "positive completed Volterra tail form",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the positive Volterra tail form theorem."
+    },
+    "volterraTailPositiveConsequenceStatus": {
+      "label": "completed Volterra tail positivity consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The completed-domain diagonal Volterra tail form is nonnegative and may be added to the transported augmented repair form."
+    }
+  },
+  "volterraTailPositiveFormClosed": true,
+  "completedVolterraTailPositiveConsequenceClosed": true,
+  "proof": [
+    "Import the positive Volterra tail form theorem.",
+    "Extract only the completed-domain nonnegative tail-form consequence.",
+    "Expose that consequence to the augmented repair transport-limit theorem."
+  ],
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,27 @@
+{
+  "theoremName": "abstract min-max tail passage consequence theorem",
+  "proofClass": "symbolic identity",
+  "statement": "The abstract min-max tail passage theorem implies that the finite inactive-tail inequality transports to the continuum closed high block under the convergent source projection model.",
+  "statuses": {
+    "abstractMinmaxTailPassageInputStatus": {
+      "label": "abstract min-max tail passage input",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the abstract min-max tail passage theorem: the Courant-Fischer/recovery-sequence passage is closed."
+    },
+    "continuumInactiveTailPassageStatus": {
+      "label": "continuum inactive-tail passage",
+      "closed": true,
+      "status": "closed",
+      "reason": "Therefore the high-block finite inactive-tail bound is eligible to pass to the continuum closed high block once the model-specific finite constants and spectral split are supplied."
+    }
+  },
+  "abstractMinmaxTailPassageClosed": true,
+  "continuumInactiveTailPassageClosed": true,
+  "spectralMinmaxPassageClosed": true,
+  "proof": [
+    "Import the final closed Courant-Fischer/min-max tail passage from the abstract theorem.",
+    "Expose only this passage consequence for model-specific high-block assembly."
+  ],
+  "remainingAnalyticGap": null
+}

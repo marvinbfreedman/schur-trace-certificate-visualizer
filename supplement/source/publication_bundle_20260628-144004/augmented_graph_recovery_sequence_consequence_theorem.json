@@ -1,0 +1,35 @@
+{
+  "theoremName": "augmented graph recovery sequence consequence theorem",
+  "proofClass": "symbolic identity",
+  "graphRecoveryJson": "augmented_graph_recovery_sequence_theorem.json",
+  "statement": "The augmented graph recovery theorem supplies the graph-norm recovery sequence consequence needed by augmented trace recovery.",
+  "statuses": {
+    "graphRecoverySequenceStatus": {
+      "label": "graph recovery sequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the augmented graph recovery sequence theorem."
+    },
+    "finiteCoreRecoveryStatus": {
+      "label": "finite core recovery",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the augmented graph recovery sequence theorem."
+    },
+    "graphRecoveryConsequenceStatus": {
+      "label": "graph recovery consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Finite core functions recover completed graph-domain vectors."
+    }
+  },
+  "graphRecoverySequenceClosed": true,
+  "finiteCoreRecoveryClosed": true,
+  "graphRecoverySequenceConsequenceClosed": true,
+  "proof": [
+    "Import the augmented graph recovery sequence theorem.",
+    "Extract the graph-norm recovery conclusion.",
+    "Expose only that consequence to the augmented trace recovery theorem."
+  ],
+  "remainingAnalyticGap": null
+}

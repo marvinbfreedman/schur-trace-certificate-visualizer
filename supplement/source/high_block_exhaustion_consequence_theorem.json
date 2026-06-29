@@ -1,0 +1,29 @@
+{
+  "theoremName": "high-block exhaustion terminal consequence theorem",
+  "proofClass": "symbolic identity",
+  "normalizedEpsilonDelta": 0.0013454526382754603,
+  "finiteLowMidSchurBudget": 0.005730309711103612,
+  "absorptionSlack": 0.004384857072828152,
+  "tailEstimatePassesToContinuum": true,
+  "conditionalHighBlockExhaustionClosed": true,
+  "statuses": {
+    "compactExhaustionInputStatus": {
+      "label": "compact-exhaustion consequence input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The compact-exhaustion consequence supplies the closed high-block exhaustion implication."
+    },
+    "tailPassageConsequenceStatus": {
+      "label": "continuum tail-passage terminal consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The continuum high-block tail estimate may be used by quotient Schur assembly without importing the full high-block proof ledger."
+    }
+  },
+  "proof": [
+    "Import the compact-exhaustion consequence theorem.",
+    "Read off the terminal continuum tail-passage conclusion.",
+    "Export only the high-block exhaustion contract used by quotient assembly."
+  ],
+  "remainingAnalyticGap": null
+}

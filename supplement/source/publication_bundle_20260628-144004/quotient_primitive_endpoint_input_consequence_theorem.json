@@ -1,0 +1,20 @@
+{
+  "theoremName": "quotient primitive endpoint input consequence theorem",
+  "proofClass": "symbolic identity",
+  "endpointInputSource": "quotient primitive endpoint input theorem",
+  "statuses": {
+    "primitiveEndpointInputStatus": {
+      "label": "primitive endpoint compatibility input for quotient lift",
+      "closed": true,
+      "status": "closed",
+      "reason": "The imported quotient primitive endpoint input theorem closes the endpoint compatibility input used by the lift."
+    }
+  },
+  "quotientPrimitiveEndpointInputClosed": true,
+  "primitiveEndpointCompatibilityClosed": true,
+  "proof": [
+    "Import the quotient primitive endpoint input theorem.",
+    "Expose only the closed endpoint-input flag consumed by the publication lift theorem."
+  ],
+  "remainingAnalyticGap": null
+}

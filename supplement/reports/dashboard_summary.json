@@ -1,0 +1,616 @@
+{
+  "source_dir": "/Users/mbf_mini/p3/temp/schur-trace-certificate-visualizer/supplement/source",
+  "totals": {
+    "theorem": 293,
+    "certificate": 16,
+    "scan": 66,
+    "other": 25,
+    "load_error": 0
+  },
+  "theorems": {
+    "total": 293,
+    "closed": 293,
+    "open": 0,
+    "proof_classes": {
+      "unknown": 117,
+      "symbolic identity": 111,
+      "analytic proof": 33,
+      "interval/ball certificate": 13,
+      "abstract functional analytic lemma": 9,
+      "analytic proof with interval/ball certificate inputs": 2,
+      "analytic proof wrapper": 2,
+      "interval/ball certificate with symbolic cone algebra": 1,
+      "symbolic identity with interval/ball certificate inputs": 1,
+      "symbolic consequence": 1,
+      "deterministic high-precision finite certificate": 1,
+      "symbolic finite Schur identity with interval/ball certificate inputs": 1,
+      "symbolic finite consequence wrapper": 1
+    },
+    "status_counts": {
+      "closed": 618,
+      "open": 42
+    },
+    "open_items": []
+  },
+  "certificates": [
+    {
+      "file": "adjoint_eval_representer_certificate.json",
+      "basis": 20,
+      "rank": 12,
+      "nullity": 8,
+      "positiveModes": 8,
+      "constraints": 12,
+      "evalRangeRelativeDefect": 1.3675188064772776e-80,
+      "maxFactorRelativeDefect": 5.196439781691699e-81
+    },
+    {
+      "file": "aux_regularizer_certificate.json",
+      "basis": 20,
+      "rank": 12,
+      "nullity": 8,
+      "positiveModes": 8,
+      "constraints": 12,
+      "evalRangeRelativeDefect": null,
+      "maxFactorRelativeDefect": null
+    },
+    {
+      "file": "boundary_row_representer_certificate.json",
+      "basis": 20,
+      "rank": 12,
+      "nullity": 8,
+      "positiveModes": 8,
+      "constraints": 12,
+      "evalRangeRelativeDefect": null,
+      "maxFactorRelativeDefect": 1.974491209389988e-80
+    },
+    {
+      "file": "closed_trace_hardy_green_certificate.json",
+      "basis": 20,
+      "rank": 12,
+      "nullity": 8,
+      "positiveModes": 8,
+      "constraints": 12,
+      "evalRangeRelativeDefect": null,
+      "maxFactorRelativeDefect": null
+    },
+    {
+      "file": "douglas_top_vector.json",
+      "basis": 16,
+      "rank": 8,
+      "nullity": 8,
+      "positiveModes": null,
+      "constraints": 8,
+      "evalRangeRelativeDefect": null,
+      "maxFactorRelativeDefect": null
+    },
+    {
+      "file": "lagrange_commuted_kernel_energy.json",
+      "basis": 18,
+      "rank": 11,
+      "nullity": 7,
+      "positiveModes": 7,
+      "constraints": 11,
+      "evalRangeRelativeDefect": null,
+      "maxFactorRelativeDefect": null
+    },
+    {
+      "file": "lagrange_energy_control_certificate.json",
+      "basis": 16,
+      "rank": 10,
+      "nullity": 6,
+      "positiveModes": 6,
+      "constraints": 10,
+      "evalRangeRelativeDefect": null,
+      "maxFactorRelativeDefect": null
+    },
+    {
+      "file": "lagrange_graph_energy_bridge.json",
+      "basis": 18,
+      "rank": 11,
+      "nullity": 7,
+      "positiveModes": 7,
+      "constraints": 11,
+      "evalRangeRelativeDefect": null,
+      "maxFactorRelativeDefect": null
+    },
+    {
+      "file": "lagrange_graph_energy_bridge_b20_m6.json",
+      "basis": 20,
+      "rank": 12,
+      "nullity": 8,
+      "positiveModes": 8,
+      "constraints": 12,
+      "evalRangeRelativeDefect": null,
+      "maxFactorRelativeDefect": null
+    },
+    {
+      "file": "lagrange_hardy_graph_certificate.json",
+      "basis": 18,
+      "rank": 11,
+      "nullity": 7,
+      "positiveModes": 7,
+      "constraints": 11,
+      "evalRangeRelativeDefect": null,
+      "maxFactorRelativeDefect": null
+    },
+    {
+      "file": "lagrange_split_control_b20_m6.json",
+      "basis": 20,
+      "rank": 12,
+      "nullity": 8,
+      "positiveModes": 8,
+      "constraints": 12,
+      "evalRangeRelativeDefect": null,
+      "maxFactorRelativeDefect": null
+    },
+    {
+      "file": "lagrange_split_control_certificate.json",
+      "basis": 16,
+      "rank": 10,
+      "nullity": 6,
+      "positiveModes": 6,
+      "constraints": 10,
+      "evalRangeRelativeDefect": null,
+      "maxFactorRelativeDefect": null
+    },
+    {
+      "file": "riesz_spectral_profile.json",
+      "basis": 16,
+      "rank": 8,
+      "nullity": 8,
+      "positiveModes": null,
+      "constraints": 8,
+      "evalRangeRelativeDefect": null,
+      "maxFactorRelativeDefect": null
+    },
+    {
+      "file": "source_window_derivative_scan.json",
+      "basis": 20,
+      "rank": 12,
+      "nullity": 8,
+      "positiveModes": 8,
+      "constraints": 12,
+      "evalRangeRelativeDefect": null,
+      "maxFactorRelativeDefect": null
+    },
+    {
+      "file": "source_window_lipschitz_scan.json",
+      "basis": 20,
+      "rank": 12,
+      "nullity": 8,
+      "positiveModes": 8,
+      "constraints": 12,
+      "evalRangeRelativeDefect": null,
+      "maxFactorRelativeDefect": null
+    },
+    {
+      "file": "source_window_regularizer_scan.json",
+      "basis": 20,
+      "rank": 12,
+      "nullity": 8,
+      "positiveModes": 8,
+      "constraints": 12,
+      "evalRangeRelativeDefect": null,
+      "maxFactorRelativeDefect": null
+    }
+  ],
+  "scans": [
+    {
+      "file": "adjoint_green_boundary_diagnostic.json",
+      "num_rows": 18,
+      "gap": 0.00013804714056792953,
+      "status": {
+        "finiteActiveRangeClosed": true,
+        "discreteAdjointIbpSmall": false,
+        "continuumAdjointGreenClosed": false
+      }
+    },
+    {
+      "file": "closed_trace_local_ode_obstruction.json",
+      "num_rows": 3,
+      "gap": 0.00013804714056792953,
+      "status": null
+    },
+    {
+      "file": "commuted_compact_obstruction.json",
+      "num_rows": 4,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "commuted_source_certificate.json",
+      "num_rows": 5,
+      "gap": null,
+      "status": null,
+      "gamma2_max": 3.751400988508445e-05
+    },
+    {
+      "file": "determinant_gap_bound_diagnostic.json",
+      "num_rows": 4,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "determinant_gap_bound_diagnostic_0348_q68.json",
+      "num_rows": 4,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "douglas_top_vector_scan.json",
+      "num_rows": 4,
+      "gap": null,
+      "status": null,
+      "kMin_min": -1.7980434645664276e-13,
+      "kMin_max": 2.650459226269511e-06,
+      "gamma2_max": 1.35806833298925e-06
+    },
+    {
+      "file": "endpoint_trace_refinement_scan.json",
+      "num_rows": 8,
+      "gap": null,
+      "status": null,
+      "gamma2_max": 5.0310466453995605e-05
+    },
+    {
+      "file": "fixed_representer_theorem_scan.json",
+      "num_rows": 3,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "full_theta_source_inactive_schur_tail_certificate.json",
+      "num_rows": 1,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "global_trace_active_gap_scan.json",
+      "num_rows": 36,
+      "gap": 0.00013804714056792953,
+      "status": null
+    },
+    {
+      "file": "global_trace_active_range_inclusion.json",
+      "num_rows": 1,
+      "gap": 0.00013804714056792953,
+      "status": null
+    },
+    {
+      "file": "global_trace_kills_local_bad_modes.json",
+      "num_rows": 3,
+      "gap": 0.00013804714056792953,
+      "status": null
+    },
+    {
+      "file": "global_trace_observability_gap.json",
+      "num_rows": 3,
+      "gap": 0.00013804714056792953,
+      "status": null
+    },
+    {
+      "file": "global_trace_source_observability_scan.json",
+      "num_rows": 3,
+      "gap": 0.00013804714056792953,
+      "status": null
+    },
+    {
+      "file": "hardy_witness_profile.json",
+      "num_rows": 0,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "high_frequency_tail_refinement.json",
+      "num_rows": 4,
+      "gap": null,
+      "status": null,
+      "gamma2_max": 3.751400988508445e-05
+    },
+    {
+      "file": "high_frequency_tail_refinement_b18.json",
+      "num_rows": 1,
+      "gap": null,
+      "status": null,
+      "gamma2_max": 1.2168287311611528e-06
+    },
+    {
+      "file": "lagrange_commuted_dominance_summary.json",
+      "num_rows": 20,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "lagrange_split_basis_scan.json",
+      "num_rows": 4,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "local_trace_tower_representer_scan.json",
+      "num_rows": 3,
+      "gap": 0.00013804714056792953,
+      "status": null
+    },
+    {
+      "file": "local_trace_tower_source_row_scan.json",
+      "num_rows": 3,
+      "gap": 0.00013804714056792953,
+      "status": null
+    },
+    {
+      "file": "noncollapse_kernel_source_gap.json",
+      "num_rows": 4,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "projective_determinant_stability.json",
+      "num_rows": 4,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "projective_determinant_stability_0348_q68.json",
+      "num_rows": 4,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "projective_response_column_convergence.json",
+      "num_rows": 4,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "riesz_spectral_scan.json",
+      "num_rows": 4,
+      "gap": null,
+      "status": null,
+      "kMin_min": 1.8483932225723395e-10,
+      "kMin_max": 2.650459226269166e-06,
+      "gamma2_max": 1.3580683329997357e-06
+    },
+    {
+      "file": "source_concomitant_membership.json",
+      "num_rows": 20,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "source_envelope_tail_b20.json",
+      "num_rows": 1,
+      "gap": null,
+      "status": null,
+      "gamma2_max": 1.4055348674882143e-07
+    },
+    {
+      "file": "source_envelope_tail_certificate.json",
+      "num_rows": 5,
+      "gap": null,
+      "status": null,
+      "gamma2_max": 3.751400988508445e-05
+    },
+    {
+      "file": "source_packet_tracking.json",
+      "num_rows": 5,
+      "gap": null,
+      "status": null,
+      "gamma2_max": 3.751400988508445e-05
+    },
+    {
+      "file": "source_side_noncollapse.json",
+      "num_rows": 4,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "source_side_quadrature_refinement.json",
+      "num_rows": 6,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "source_side_quadrature_refinement_g65.json",
+      "num_rows": 1,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "source_side_rank_perturbation_certificate.json",
+      "num_rows": 4,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "source_side_stability.json",
+      "num_rows": 4,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "source_window_refinement_scan.json",
+      "num_rows": 9,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "spectral_tail_moment_certificate.json",
+      "num_rows": 4,
+      "gap": null,
+      "status": null,
+      "gamma2_max": 3.751400988508445e-05
+    },
+    {
+      "file": "sturm_feature_span_probe.json",
+      "num_rows": 2,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "sturm_feature_span_probe_q10_r6.json",
+      "num_rows": 2,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "sturm_feature_span_probe_q4.json",
+      "num_rows": 2,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "sturm_feature_span_probe_q6.json",
+      "num_rows": 2,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "sturm_feature_span_probe_q8.json",
+      "num_rows": 2,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "three_part_hardy_green_basis16_low8.json",
+      "num_rows": 1,
+      "gap": null,
+      "status": null,
+      "gamma2_max": 6.900309694881411e-08
+    },
+    {
+      "file": "three_part_hardy_green_certificate.json",
+      "num_rows": 4,
+      "gap": null,
+      "status": null,
+      "gamma2_max": 1.3580683329997357e-06
+    },
+    {
+      "file": "trace_active_derivative_rank.json",
+      "num_rows": 3,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "trace_active_derivative_rank_scan.json",
+      "num_rows": 4,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "trace_active_derivative_rank_scan_b24.json",
+      "num_rows": 1,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "trace_active_derivative_rank_scan_top2.json",
+      "num_rows": 4,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "trace_active_minor_basis22_exclude_s0.json",
+      "num_rows": 1,
+      "gap": 0.00013804714056792953,
+      "status": null
+    },
+    {
+      "file": "trace_active_minor_certificate.json",
+      "num_rows": 1,
+      "gap": 0.00013804714056792953,
+      "status": null
+    },
+    {
+      "file": "trace_active_minor_scan_t13.json",
+      "num_rows": 2,
+      "gap": 0.00013804714056792953,
+      "status": null
+    },
+    {
+      "file": "trace_active_minor_scan_t9.json",
+      "num_rows": 3,
+      "gap": 0.00013804714056792953,
+      "status": null
+    },
+    {
+      "file": "trace_active_minor_summary.json",
+      "num_rows": 5,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "trace_concomitant_exact_derivatives.json",
+      "num_rows": 44,
+      "gap": 0.00013804714056792953,
+      "status": null
+    },
+    {
+      "file": "trace_concomitant_membership.json",
+      "num_rows": 44,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "trace_concomitant_membership_q10_s21.json",
+      "num_rows": 44,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "trace_concomitant_membership_q8.json",
+      "num_rows": 36,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "trace_concomitant_membership_q8_local005.json",
+      "num_rows": 36,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "trace_concomitant_membership_q8_s21.json",
+      "num_rows": 36,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "trace_lagrange_adjoint_control.json",
+      "num_rows": 4,
+      "gap": 0.00013804714056792953,
+      "status": null
+    },
+    {
+      "file": "trace_resolution_certificate.json",
+      "num_rows": 3,
+      "gap": null,
+      "status": null
+    },
+    {
+      "file": "trace_to_source_kernel_refinement.json",
+      "num_rows": 7,
+      "gap": 0.00013804714056792953,
+      "status": null
+    },
+    {
+      "file": "trace_weighted_frame_basis22.json",
+      "num_rows": 1,
+      "gap": 0.00013804714056792953,
+      "status": null
+    },
+    {
+      "file": "trace_weighted_frame_basis_scan.json",
+      "num_rows": 4,
+      "gap": 0.00013804714056792953,
+      "status": null
+    },
+    {
+      "file": "windowed_hardy_green_scan.json",
+      "num_rows": 4,
+      "gap": null,
+      "status": null
+    }
+  ],
+  "neg_eigenvalue_scans": 0
+}

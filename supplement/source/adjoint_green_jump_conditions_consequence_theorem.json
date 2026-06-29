@@ -1,0 +1,18 @@
+{
+  "theoremName": "adjoint Green jump conditions consequence theorem",
+  "proofClass": "symbolic identity",
+  "statuses": {
+    "jumpConditionsConsequenceStatus": {
+      "label": "adjoint Green jump conditions consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The distributional adjoint Green jump theorem supplies the interior source jump law and solves the interior source equation used by the endpoint range theorem."
+    }
+  },
+  "theoremClosed": true,
+  "closedStatements": {
+    "interiorSourceSolved": true
+  },
+  "interiorSourceSolvedClosed": true,
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,35 @@
+{
+  "theoremName": "augmented trace quotient limsup consequence theorem",
+  "proofClass": "symbolic identity",
+  "quotientLimsupJson": "augmented_trace_quotient_limsup_theorem.json",
+  "statement": "The augmented trace quotient limsup theorem supplies the quotient upper-bound consequence needed by the two-sided quotient bounds theorem.",
+  "statuses": {
+    "traceQuotientLimsupStatus": {
+      "label": "trace quotient limsup",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the augmented trace quotient limsup theorem."
+    },
+    "finiteQuotientUpperBoundStatus": {
+      "label": "finite quotient upper bound",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the augmented trace quotient limsup theorem."
+    },
+    "traceQuotientLimsupConsequenceStatus": {
+      "label": "trace quotient limsup consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The transported trace quotient upper bound is available upstream."
+    }
+  },
+  "traceQuotientLimsupClosed": true,
+  "finiteQuotientUpperBoundClosed": true,
+  "traceQuotientLimsupConsequenceClosed": true,
+  "proof": [
+    "Import the augmented trace quotient limsup theorem.",
+    "Extract the trace quotient upper-bound conclusion.",
+    "Expose only that consequence to the two-sided quotient bounds theorem."
+  ],
+  "remainingAnalyticGap": null
+}

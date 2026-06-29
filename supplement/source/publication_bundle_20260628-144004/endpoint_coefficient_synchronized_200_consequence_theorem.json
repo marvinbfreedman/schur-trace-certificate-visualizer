@@ -1,0 +1,34 @@
+{
+  "theoremName": "synchronized 200-point endpoint coefficient consequence theorem",
+  "proofClass": "symbolic identity",
+  "centerSynchronizationStatus": {
+    "label": "synchronized 200-point center",
+    "closed": true,
+    "status": "closed",
+    "reason": "The synchronized 200-point endpoint center is the certified center used by downstream interval inputs."
+  },
+  "analyticCompanionInputStatus": {
+    "label": "analytic companion coefficient interval input",
+    "closed": true,
+    "status": "closed",
+    "reason": "The scaled companion coefficients are enclosed inside the Krawczyk input budget."
+  },
+  "analyticBoundaryInputStatus": {
+    "label": "analytic active boundary row interval input",
+    "closed": true,
+    "status": "closed",
+    "reason": "The active endpoint boundary rows are enclosed inside the Krawczyk input budget."
+  },
+  "synchronizedKrawczykInputStatus": {
+    "label": "synchronized Krawczyk input",
+    "closed": true,
+    "status": "closed",
+    "reason": "The synchronized interval inputs close the persistent Grassmann/Krawczyk chart certificate."
+  },
+  "actualKrawczykQ": 1.0938554638804267e-19,
+  "endpointRadiusOverChartCapacity": 3.16061191846505e-15,
+  "scaledCompanionRadiusOverSimultaneousBudget": 3.1988616802888144e-15,
+  "boundaryRowRadiusOverSimultaneousBudget": 3.122484815877811e-15,
+  "endpointCoefficientSynchronized200Closed": true,
+  "remainingAnalyticGap": null
+}

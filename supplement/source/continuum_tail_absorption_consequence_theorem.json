@@ -1,0 +1,38 @@
+{
+  "theoremName": "source-inactive continuum tail absorption consequence theorem",
+  "proofClass": "symbolic identity",
+  "continuumTailEstimateProved": true,
+  "absorptionCertificatePasses": true,
+  "epsilonDeltaUpper": 0.0013454526382754603,
+  "finiteLowMidSchurBudget": 0.005730309711103612,
+  "absorptionSlack": 0.004384857072828152,
+  "epsilonOverBudget": 0.23479579745373602,
+  "sourceGrid": 257,
+  "basis": 22,
+  "globalTraceRatio": 0.75,
+  "activeTraceKernelSourceFrac": 0.0,
+  "fullTraceKernelSourceFrac": 1.2741783685754282e-07,
+  "inactiveTraceKernelSourceFrac": 1.0231606015355223e-13,
+  "continuumInactiveTopUpper": 0.0013454526382754603,
+  "finiteInactiveTop": 8.122100235183388e-08,
+  "continuumErrorBound": 188255959.690444,
+  "conditionalTheorem": "The continuum high-frequency Hardy/Schur estimate ||(I-P_delta)E_Phi f||^2 <= epsilon_delta <A f,f> on H_M cap ker R_global is imported from the high-block tail passage theorem when available.  The finite low/mid Schur block absorbs this source-inactive tail because epsilonDeltaUpper < finiteLowMidSchurBudget.",
+  "remainingAnalyticGap": null,
+  "tailAbsorptionConsequenceStatus": {
+    "label": "source-inactive tail absorption consequence",
+    "closed": true,
+    "status": "closed",
+    "reason": "The absorption certificate reports positive slack between the inactive epsilon upper bound and the finite low/mid Schur budget."
+  },
+  "tailAbsorptionConsequenceClosed": true,
+  "proof": [
+    "Import the continuum tail absorption certificate.",
+    "Read off the absorption pass flag and scalar slack.",
+    "Export only the absorption summary used by the global bridge."
+  ],
+  "omittedRawPayloads": [
+    "raw inactive-tail certificate pointer",
+    "source/trace row table",
+    "full source-inactive tail certificate payload"
+  ]
+}

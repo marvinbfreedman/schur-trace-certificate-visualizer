@@ -1,0 +1,31 @@
+{
+  "theoremName": "adjoint Green endpoint range interval consequence theorem",
+  "proofClass": "symbolic identity",
+  "exactFundamentalMatrixEndpointMapStatus": {
+    "label": "exact fundamental-matrix endpoint map",
+    "closed": true,
+    "status": "closed",
+    "reason": "The endpoint range theorem reduces active endpoint compatibility to the finite endpoint map."
+  },
+  "endpointFredholmRangeAlternativeStatus": {
+    "label": "endpoint Fredholm range alternative",
+    "closed": true,
+    "status": "closed",
+    "reason": "The endpoint range theorem identifies solvability with the finite Fredholm range condition."
+  },
+  "endpointGreenBvpSolvabilityStatus": {
+    "label": "endpoint Green BVP solvability",
+    "closed": true,
+    "status": "closed",
+    "reason": "The synchronized endpoint interval certificate makes the active endpoint Fredholm obstruction vacuous."
+  },
+  "uniformTraceDualBoundFromCompactnessStatus": {
+    "label": "uniform trace-dual endpoint bound",
+    "closed": true,
+    "status": "closed",
+    "reason": "The endpoint range theorem supplies the uniform trace-dual bound needed for closure."
+  },
+  "theoremClosed": true,
+  "unconditionalContinuumEndpointClosed": true,
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,99 @@
+========================================================================
+RH WEYL-POSITIVE VERIFICATION — CERTIFICATE DASHBOARD
+Source: /Users/mbf_mini/p3/temp/schur-trace-certificate-visualizer/supplement/source
+========================================================================
+
+OVERALL LEDGER
+----------------------------------------
+  Total JSON files:    400
+  Theorem records:     293
+  Certificate records: 16
+  Scan/diagnostic:     66
+  Other:               25
+  Load errors:         0
+
+THEOREMS
+----------------------------------------
+  Total:  293
+  Closed: 293  (100.0%)
+  Open:   0
+
+  Proof classes:
+      117  unknown
+      111  symbolic identity
+       33  analytic proof
+       13  interval/ball certificate
+        9  abstract functional analytic lemma
+        2  analytic proof with interval/ball certificate inputs
+        2  analytic proof wrapper
+        1  interval/ball certificate with symbolic cone algebra
+        1  symbolic identity with interval/ball certificate inputs
+        1  symbolic consequence
+        1  deterministic high-precision finite certificate
+        1  symbolic finite Schur identity with interval/ball certificate inputs
+        1  symbolic finite consequence wrapper
+
+NUMERICAL CERTIFICATES
+----------------------------------------
+  File                                                 rank null  pos   evalDefect  factorDefect
+  ------------------------------------------------------------------------------------------
+  adjoint_eval_representer                               12    8    8     1.37e-80      5.20e-81
+  aux_regularizer                                        12    8    8            —             —
+  boundary_row_representer                               12    8    8            —      1.97e-80
+  closed_trace_hardy_green                               12    8    8            —             —
+  douglas_top_vector                                      8    8    —            —             —
+  lagrange_commuted_kernel_energy                        11    7    7            —             —
+  lagrange_energy_control                                10    6    6            —             —
+  lagrange_graph_energy_bridge                           11    7    7            —             —
+  lagrange_graph_energy_bridge_b20_m6                    12    8    8            —             —
+  lagrange_hardy_graph                                   11    7    7            —             —
+  lagrange_split_control_b20_m6                          12    8    8            —             —
+  lagrange_split_control                                 10    6    6            —             —
+  riesz_spectral_profile                                  8    8    —            —             —
+  source_window_derivative_scan                          12    8    8            —             —
+  source_window_lipschitz_scan                           12    8    8            —             —
+  source_window_regularizer_scan                         12    8    8            —             —
+
+SCAN / DIAGNOSTIC RESULTS
+----------------------------------------
+  Total scan files: 66
+  Files with negative inertia: 0
+  Files with explicit 'gap' field set: 18
+
+  Kernel-minimum scans (2 files):
+  File                                                          kMin_min       kMin_max
+  -------------------------------------------------------------------------------------
+  douglas_top_vector_scan                                      -1.80e-13       2.65e-06
+  riesz_spectral_scan                                           1.85e-10       2.65e-06
+
+OTHER JSON FILES
+----------------------------------------
+  full_theta_interval_propagation.json  keys: ['L', 'activeEigenvaluesS8', 'basis', 'complementTopEigenvalueS8', 'deltaEOperatorBound', 'deltaSOperatorBound']
+  full_theta_source_quadrature_certificate.json  keys: ['L', 'activeEigenvaluesS8', 'angleFactorLowerBound', 'basis', 'complementResponseOperatorNorm', 'complementTopEigenvalueS8']
+  full_theta_source_tail_certificate.json  keys: ['L', 'activePlane', 'basis', 'fullNmax', 'interpretation', 'omega']
+  full_theta_tail_relative_certificate.json  keys: ['L', 'activeSourcePlane', 'alpha3', 'basis', 'fullNmax', 'gapAtS0']
+  global_weyl_volterra_schur_bridge.json  keys: ['bridgeName', 'bridgePasses', 'closedInputs', 'externalEquivalenceAudit', 'globalSchurTheoremClosed', 'highBlockExhaustionJson']
+  lagrange_commuted_basis_scan.json  keys: ['L', 'bases', 'constraintMode', 'constraintRatio', 'cutoffs', 'interpretation']
+  lagrange_commuted_basis_scan_b20.json  keys: ['L', 'bases', 'constraintMode', 'constraintRatio', 'cutoffs', 'interpretation']
+  lagrange_commuted_basis_scan_b20_m12.json  keys: ['L', 'bases', 'constraintMode', 'constraintRatio', 'cutoffs', 'interpretation']
+  lagrange_commuted_basis_scan_quick.json  keys: ['L', 'bases', 'constraintMode', 'constraintRatio', 'cutoffs', 'interpretation']
+  lambda_differential_closure.json  keys: ['expectedRank', 'h', 'jetOrder', 'maxClosureMaxAbsByQ', 'maxClosureNormByQ', 'maxQ']
+  lambda_field_derivative_bounds.json  keys: ['coefficients', 'h', 'minConsecutiveCos', 'minGap', 'oneDimensional', 'sMax']
+  publication_bundle_manifest.json  keys: ['archive', 'bundle_dir', 'included_files', 'note', 'stamp']
+  source_quadrature_bernstein_bound_rho2.json  keys: ['L', 'basis', 'bernsteinTailEnvelope', 'bernsteinTailFactor', 'bernsteinTotalEnvelope', 'chebDegree']
+  source_quadrature_chebyshev_ball_d32_g129.json  keys: ['L', 'ballChebyshevEnvelope', 'basis', 'chebDegree', 'coefficientMaxWidth', 'finiteCoefficientEnvelope']
+  source_quadrature_chebyshev_envelope_d16_g129.json  keys: ['L', 'basis', 'chebDegree', 'chebyshevEnvelope', 'frobeniusEnvelope', 'gapAtS0']
+  source_quadrature_chebyshev_envelope_d32_g129.json  keys: ['L', 'basis', 'chebDegree', 'chebyshevEnvelope', 'frobeniusEnvelope', 'gapAtS0']
+  source_quadrature_complex_ball_bernstein_rho2.json  keys: ['L', 'allowedMrhoForTarget', 'arcRows', 'arcs', 'basis', 'bernsteinTailEnvelope']
+  source_quadrature_error_bound.json  keys: ['L', 'bOperatorNorm', 'bTargetRelative', 'basis', 'bbStarErrorBound', 'bbStarFourthDerivativeEnvelope']
+  source_quadrature_error_bound_e9.json  keys: ['L', 'bOperatorNorm', 'bTargetRelative', 'basis', 'bbStarErrorBound', 'bbStarFourthDerivativeEnvelope']
+  source_quadrature_error_bound_g65_e9.json  keys: ['L', 'bOperatorNorm', 'bTargetRelative', 'basis', 'bbStarErrorBound', 'bbStarFourthDerivativeEnvelope']
+  source_quadrature_interval_envelope_s16.json  keys: ['L', 'basis', 'gapAtS0', 'interpretation', 'intervalRows', 'intervalSecondDerivativeEnvelope']
+  source_side_riesz_rank_theorem.json  keys: ['L', 'activeDimByTol', 'activeEigenvalues', 'activeFloor', 'activeTol', 'basis']
+  trace_active_minor_landscape.json  keys: ['L', 'activeDim', 'activeFloor', 'activeSourceEigenvalues', 'activeTol', 'allowedTraceCenters']
+  trace_to_source_kernel_profile.json  keys: ['L', 'activeDim', 'activeFloor', 'activeTol', 'basis', 'coefficientFrobenius']
+  visual_data.json  keys: ['defectFamily', 'douglasScan', 'explain', 'jet', 'meta', 'quotient']
+
+========================================================================
+Summary: 293/293 theorems closed, 16 certificates, 0 scans with negative eigenvalues, 0 open gaps remaining.
+========================================================================

@@ -10,6 +10,14 @@ Live artifact:
 - Latest snapshot: https://marvinbfreedman.github.io/schur-trace-certificate-visualizer/source/visual_snapshots/20260628-144016/visual_explainer.html
 - Visual data: https://marvinbfreedman.github.io/schur-trace-certificate-visualizer/source/visual_data.json
 
+Full reproducibility supplement:
+
+- Curated source package: [`supplement/`](supplement/)
+- Python quick start: [`supplement/QUICKSTART.md`](supplement/QUICKSTART.md)
+- Reproducibility notes: [`supplement/REPRODUCIBILITY.md`](supplement/REPRODUCIBILITY.md)
+- Current status: [`supplement/STATUS.md`](supplement/STATUS.md)
+- Dashboard report: [`supplement/reports/dashboard.txt`](supplement/reports/dashboard.txt)
+
 ## RH Weyl-Positive Companion Source Bundle
 
 Date: 2026-06-19
@@ -118,7 +126,7 @@ http://127.0.0.1:8765/visual/visual_explainer.html
 
 ## Published Paths
 
-- `docs/source/visual_explainer.html`
+- [`docs/source/visual_explainer.html`](https://marvinbfreedman.github.io/schur-trace-certificate-visualizer/source/visual_explainer.html)
 - `docs/source/visual_snapshot_slideshow.html`
 - `docs/source/visual_data.json`
 - `docs/source/rounded_ball_krawczyk_enclosure.svg`

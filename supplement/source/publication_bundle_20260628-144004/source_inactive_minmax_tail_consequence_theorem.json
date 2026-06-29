@@ -1,0 +1,57 @@
+{
+  "theoremName": "source-inactive min-max tail consequence theorem",
+  "proofClass": "symbolic identity",
+  "basis": 22,
+  "sourceWindow": [
+    0.08,
+    0.52
+  ],
+  "globalTraceRatio": 0.75,
+  "finiteSourceTop": 140116882778.8568,
+  "finiteInactiveLambda3": 11380.43366571316,
+  "operatorPerturbationEta": 188255959.690444,
+  "absoluteTailBound": 188267340.12410972,
+  "sourceTopLower": 139928626819.16638,
+  "normalizedEpsilonDelta": 0.0013454526382754603,
+  "finiteLowMidSchurBudget": 0.005730309711103612,
+  "absorptionSlack": 0.004384857072828152,
+  "epsilonOverBudget": 0.23479579745373602,
+  "minMaxProofInCertifiedSourceModel": true,
+  "absorbableByFiniteLowMidBlock": true,
+  "continuumHighBlockExhaustionImported": true,
+  "continuumHighBlockExhaustionProvedHere": true,
+  "sourceInactiveMinmaxTailConsequenceClosed": true,
+  "statuses": {
+    "minmaxTailInputStatus": {
+      "label": "source-inactive min-max input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The detailed min-max theorem proves the normalized source-inactive tail estimate in the certified source model."
+    },
+    "lowMidAbsorptionStatus": {
+      "label": "low/mid Schur absorption",
+      "closed": true,
+      "status": "closed",
+      "reason": "The normalized inactive-tail constant is strictly below the finite low/mid Schur budget."
+    },
+    "continuumHighBlockStatus": {
+      "label": "continuum high-block passage",
+      "closed": true,
+      "status": "closed",
+      "reason": "The high-block exhaustion theorem has transported the min-max estimate to the continuum closed high block."
+    },
+    "sourceInactiveMinmaxTailConsequenceStatus": {
+      "label": "source-inactive min-max tail consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "The synchronized active-range theorem may use the inactive-tail bound and absorption slack."
+    }
+  },
+  "formalProof": [
+    "Import the detailed source-inactive min-max tail theorem.",
+    "Read off epsilon_delta, the low/mid Schur budget, and the positive slack.",
+    "Import the continuum high-block exhaustion flag.",
+    "Export the inactive-tail domination contract used by active/inactive source assembly."
+  ],
+  "nextProofTarget": "Use this terminal consequence in synchronized_active_range_interval_theorem."
+}

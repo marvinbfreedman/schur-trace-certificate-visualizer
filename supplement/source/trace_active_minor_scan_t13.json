@@ -1,0 +1,137 @@
+{
+  "omega": 0.49,
+  "L": 2.0,
+  "s0": 0.2825,
+  "basisList": [
+    18,
+    20
+  ],
+  "traceCount": 13,
+  "lambda0": -0.00012862612661029079,
+  "lambda1": 9.42101395763874e-06,
+  "gap": 0.00013804714056792953,
+  "e8AtS0": -0.17949627136147217,
+  "lambdaDerivatives": [
+    -0.00012862612661029079,
+    0.0012586353561607226,
+    -0.010569790654668558,
+    0.08131470927283976,
+    -0.48480406794895253,
+    0.3262134539749114,
+    33.05440359008409,
+    -172.53886154243878,
+    -11867.497399991053,
+    225121.96880967333,
+    3735520.511510404,
+    -308912314.588315,
+    3399472962.8393655,
+    369400519027.39575,
+    -16726614828278.037,
+    -133545146978831.05,
+    5.480905836994158e+16
+  ],
+  "rows": [
+    {
+      "basis": 18,
+      "traceCount": 13,
+      "activeTol": 1e-08,
+      "activeFloor": 182.85135401773348,
+      "activeDim": 2,
+      "activeSourceEigenvalues": [
+        226461.95322692656,
+        18285135401.77335
+      ],
+      "traceCenters": [
+        0.02,
+        0.06375,
+        0.1075,
+        0.15125,
+        0.195,
+        0.23875,
+        0.2825,
+        0.32625,
+        0.37,
+        0.41375,
+        0.4575,
+        0.50125,
+        0.545
+      ],
+      "weightedColumnNorms": [
+        203.14452647370928,
+        1668.2201815511237
+      ],
+      "weightedFrameEigenvalues": [
+        293.11515100909196,
+        2823933.1576196826
+      ],
+      "normalizedFrameEigenvalues": [
+        0.003610192372405516,
+        1.9963898076275945
+      ],
+      "bestNormalizedMinor": {
+        "rowIndices": [
+          1,
+          8
+        ],
+        "traceCenters": [
+          0.06375,
+          0.37
+        ],
+        "determinant": -0.018740172500082187,
+        "absDeterminant": 0.018740172500082187
+      },
+      "interpretation": "A nonzero bestNormalizedMinor proves finite sampled trace injectivity on this active block.  The normalized minor removes irrelevant scaling of the active basis vectors."
+    },
+    {
+      "basis": 20,
+      "traceCount": 13,
+      "activeTol": 1e-08,
+      "activeFloor": 3509.5540150085676,
+      "activeDim": 2,
+      "activeSourceEigenvalues": [
+        8128880.388973607,
+        350955401500.85675
+      ],
+      "traceCenters": [
+        0.02,
+        0.06375,
+        0.1075,
+        0.15125,
+        0.195,
+        0.23875,
+        0.2825,
+        0.32625,
+        0.37,
+        0.41375,
+        0.4575,
+        0.50125,
+        0.545
+      ],
+      "weightedColumnNorms": [
+        15294.735562843336,
+        60151.138881972416
+      ],
+      "weightedFrameEigenvalues": [
+        7489.958402092469,
+        3852080954.7772365
+      ],
+      "normalizedFrameEigenvalues": [
+        1.7044209445419617e-05,
+        1.9999829557905546
+      ],
+      "bestNormalizedMinor": {
+        "rowIndices": [
+          1,
+          6
+        ],
+        "traceCenters": [
+          0.06375,
+          0.2825
+        ],
+        "determinant": -0.0017398684153853087,
+        "absDeterminant": 0.0017398684153853087
+      },
+      "interpretation": "A nonzero bestNormalizedMinor proves finite sampled trace injectivity on this active block.  The normalized minor removes irrelevant scaling of the active basis vectors."
+    }
+  ]
+}

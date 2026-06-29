@@ -1,0 +1,370 @@
+{
+  "source": "source_envelope_tail_certificate.json",
+  "model": "endpoint_b",
+  "kind": "tilde3",
+  "omega": 0.49,
+  "L": 2.0,
+  "significantThreshold": 0.05,
+  "spectralThresholds": [
+    1e-06,
+    1e-05,
+    0.0001,
+    0.001,
+    0.01,
+    0.1
+  ],
+  "rows": [
+    {
+      "basis": 12,
+      "constraints": 8,
+      "rank": 8,
+      "nullity": 4,
+      "positiveModes": 4,
+      "gamma2": 3.751400988508445e-05,
+      "totalScalarFrac": 1.0703948194062465,
+      "peakMode": 2,
+      "peakLambda": 0.009515206779150296,
+      "peakShare": 0.6013757655854887,
+      "centerMode": 1.3552726379554043,
+      "widthMode": 0.9681556231427129,
+      "lambdaGeometricCenter": 0.0016591826013987328,
+      "widthLogLambda": 2.649267151606843,
+      "significantThreshold": 0.05,
+      "firstSignificantMode": 0,
+      "lastSignificantMode": 3,
+      "significantModes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "tailAfterSignificantStart": 4,
+      "tailAfterSignificantOperatorFrac": 0.0,
+      "tailAfterSignificantScalarFrac": 0.0,
+      "tailCutoffScalar05": 4,
+      "tailCutoffOperator05": 4,
+      "lambdaCutoffScalar05": null,
+      "lambdaCutoffOperator05": null,
+      "spectralTails": [
+        {
+          "lambdaThreshold": 1e-06,
+          "start": 0,
+          "operatorFrac": 1.0,
+          "scalarFrac": 1.0703948194062465
+        },
+        {
+          "lambdaThreshold": 1e-05,
+          "start": 0,
+          "operatorFrac": 1.0,
+          "scalarFrac": 1.0703948194062465
+        },
+        {
+          "lambdaThreshold": 0.0001,
+          "start": 1,
+          "operatorFrac": 0.7067919682367362,
+          "scalarFrac": 0.7439869107239849
+        },
+        {
+          "lambdaThreshold": 0.001,
+          "start": 2,
+          "operatorFrac": 0.6530254950082283,
+          "scalarFrac": 0.6540328327060031
+        },
+        {
+          "lambdaThreshold": 0.01,
+          "start": 3,
+          "operatorFrac": 0.052657067120514475,
+          "scalarFrac": 0.052657067120514475
+        },
+        {
+          "lambdaThreshold": 0.1,
+          "start": 3,
+          "operatorFrac": 0.052657067120514475,
+          "scalarFrac": 0.052657067120514475
+        }
+      ]
+    },
+    {
+      "basis": 14,
+      "constraints": 9,
+      "rank": 9,
+      "nullity": 5,
+      "positiveModes": 5,
+      "gamma2": 3.724994952481239e-06,
+      "totalScalarFrac": 1.3728756756078742,
+      "peakMode": 0,
+      "peakLambda": 1.907883806550173e-06,
+      "peakShare": 0.4589633553709147,
+      "centerMode": 1.5236816949721235,
+      "widthMode": 1.2724018159994148,
+      "lambdaGeometricCenter": 0.00016362286910562778,
+      "widthLogLambda": 3.6110055934784335,
+      "significantThreshold": 0.05,
+      "firstSignificantMode": 0,
+      "lastSignificantMode": 3,
+      "significantModes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "tailAfterSignificantStart": 4,
+      "tailAfterSignificantOperatorFrac": 0.023612393361949976,
+      "tailAfterSignificantScalarFrac": 0.023612393361949976,
+      "tailCutoffScalar05": 4,
+      "tailCutoffOperator05": 4,
+      "lambdaCutoffScalar05": 0.15438986306522187,
+      "lambdaCutoffOperator05": 0.15438986306522187,
+      "spectralTails": [
+        {
+          "lambdaThreshold": 1e-06,
+          "start": 0,
+          "operatorFrac": 1.0,
+          "scalarFrac": 1.3728756756078742
+        },
+        {
+          "lambdaThreshold": 1e-05,
+          "start": 1,
+          "operatorFrac": 0.7266336429323625,
+          "scalarFrac": 0.9139123202369596
+        },
+        {
+          "lambdaThreshold": 0.0001,
+          "start": 2,
+          "operatorFrac": 0.586110747614899,
+          "scalarFrac": 0.7203662146268928
+        },
+        {
+          "lambdaThreshold": 0.001,
+          "start": 3,
+          "operatorFrac": 0.4295971652824259,
+          "scalarFrac": 0.43393460817040247
+        },
+        {
+          "lambdaThreshold": 0.01,
+          "start": 4,
+          "operatorFrac": 0.023612393361949976,
+          "scalarFrac": 0.023612393361949976
+        },
+        {
+          "lambdaThreshold": 0.1,
+          "start": 4,
+          "operatorFrac": 0.023612393361949976,
+          "scalarFrac": 0.023612393361949976
+        }
+      ]
+    },
+    {
+      "basis": 16,
+      "constraints": 10,
+      "rank": 10,
+      "nullity": 6,
+      "positiveModes": 6,
+      "gamma2": 1.020331191370662e-06,
+      "totalScalarFrac": 1.0353356278683825,
+      "peakMode": 1,
+      "peakLambda": 3.294719577854136e-06,
+      "peakShare": 0.3877947797548973,
+      "centerMode": 1.4785530187678528,
+      "widthMode": 1.0584451277121745,
+      "lambdaGeometricCenter": 9.256928180644585e-06,
+      "widthLogLambda": 3.280108481200003,
+      "significantThreshold": 0.05,
+      "firstSignificantMode": 0,
+      "lastSignificantMode": 3,
+      "significantModes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "tailAfterSignificantStart": 4,
+      "tailAfterSignificantOperatorFrac": 0.03821667068670987,
+      "tailAfterSignificantScalarFrac": 0.038274699194062844,
+      "tailCutoffScalar05": 4,
+      "tailCutoffOperator05": 4,
+      "lambdaCutoffScalar05": 0.009537771047940648,
+      "lambdaCutoffOperator05": 0.009537771047940648,
+      "spectralTails": [
+        {
+          "lambdaThreshold": 1e-06,
+          "start": 1,
+          "operatorFrac": 0.8257279931419282,
+          "scalarFrac": 0.8509655936062506
+        },
+        {
+          "lambdaThreshold": 1e-05,
+          "start": 2,
+          "operatorFrac": 0.44583947893578024,
+          "scalarFrac": 0.4631708138513532
+        },
+        {
+          "lambdaThreshold": 0.0001,
+          "start": 3,
+          "operatorFrac": 0.16492869301168286,
+          "scalarFrac": 0.17265720165993717
+        },
+        {
+          "lambdaThreshold": 0.001,
+          "start": 4,
+          "operatorFrac": 0.03821667068670987,
+          "scalarFrac": 0.038274699194062844
+        },
+        {
+          "lambdaThreshold": 0.01,
+          "start": 5,
+          "operatorFrac": 0.005730309711103612,
+          "scalarFrac": 0.005730309711103612
+        },
+        {
+          "lambdaThreshold": 0.1,
+          "start": 5,
+          "operatorFrac": 0.005730309711103612,
+          "scalarFrac": 0.005730309711103612
+        }
+      ]
+    },
+    {
+      "basis": 18,
+      "constraints": 11,
+      "rank": 11,
+      "nullity": 7,
+      "positiveModes": 7,
+      "gamma2": 1.2168287311611528e-06,
+      "totalScalarFrac": 1.010747732372915,
+      "peakMode": 2,
+      "peakLambda": 3.1062737654730576e-06,
+      "peakShare": 0.4672080242673836,
+      "centerMode": 2.4497113278794553,
+      "widthMode": 1.2339094857022428,
+      "lambdaGeometricCenter": 8.071506340441995e-06,
+      "widthLogLambda": 3.7002774557343394,
+      "significantThreshold": 0.05,
+      "firstSignificantMode": 1,
+      "lastSignificantMode": 5,
+      "significantModes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "tailAfterSignificantStart": 6,
+      "tailAfterSignificantOperatorFrac": 0.013705128336362617,
+      "tailAfterSignificantScalarFrac": 0.013705128336362617,
+      "tailCutoffScalar05": 6,
+      "tailCutoffOperator05": 6,
+      "lambdaCutoffScalar05": 0.1543899343461991,
+      "lambdaCutoffOperator05": 0.1543899343461991,
+      "spectralTails": [
+        {
+          "lambdaThreshold": 1e-06,
+          "start": 2,
+          "operatorFrac": 0.8124844116816573,
+          "scalarFrac": 0.8149271778784177
+        },
+        {
+          "lambdaThreshold": 1e-05,
+          "start": 3,
+          "operatorFrac": 0.34682157359398064,
+          "scalarFrac": 0.34771915361103417
+        },
+        {
+          "lambdaThreshold": 0.0001,
+          "start": 4,
+          "operatorFrac": 0.19136379772903145,
+          "scalarFrac": 0.1918055793518357
+        },
+        {
+          "lambdaThreshold": 0.001,
+          "start": 5,
+          "operatorFrac": 0.10247302104196562,
+          "scalarFrac": 0.10247801806669507
+        },
+        {
+          "lambdaThreshold": 0.01,
+          "start": 6,
+          "operatorFrac": 0.013705128336362617,
+          "scalarFrac": 0.013705128336362617
+        },
+        {
+          "lambdaThreshold": 0.1,
+          "start": 6,
+          "operatorFrac": 0.013705128336362617,
+          "scalarFrac": 0.013705128336362617
+        }
+      ]
+    },
+    {
+      "basis": 20,
+      "constraints": 12,
+      "rank": 12,
+      "nullity": 8,
+      "positiveModes": 8,
+      "gamma2": 1.4055348674882143e-07,
+      "totalScalarFrac": 1.4141900739550046,
+      "peakMode": 3,
+      "peakLambda": 3.619305237322144e-06,
+      "peakShare": 0.6404152364870687,
+      "centerMode": 3.6335552427918767,
+      "widthMode": 1.287539534199391,
+      "lambdaGeometricCenter": 1.8401684221777732e-05,
+      "widthLogLambda": 3.5344352549178306,
+      "significantThreshold": 0.05,
+      "firstSignificantMode": 2,
+      "lastSignificantMode": 6,
+      "significantModes": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "tailAfterSignificantStart": 7,
+      "tailAfterSignificantOperatorFrac": 0.016073525195118066,
+      "tailAfterSignificantScalarFrac": 0.016073525195118066,
+      "tailCutoffScalar05": 7,
+      "tailCutoffOperator05": 7,
+      "lambdaCutoffScalar05": 0.1543899487639319,
+      "lambdaCutoffOperator05": 0.1543899487639319,
+      "spectralTails": [
+        {
+          "lambdaThreshold": 1e-06,
+          "start": 3,
+          "operatorFrac": 0.9305965634639113,
+          "scalarFrac": 1.2559332865786428
+        },
+        {
+          "lambdaThreshold": 1e-05,
+          "start": 4,
+          "operatorFrac": 0.4381962251245778,
+          "scalarFrac": 0.6155180500915741
+        },
+        {
+          "lambdaThreshold": 0.0001,
+          "start": 5,
+          "operatorFrac": 0.18393072671922817,
+          "scalarFrac": 0.3143667729370912
+        },
+        {
+          "lambdaThreshold": 0.001,
+          "start": 6,
+          "operatorFrac": 0.17326927992764532,
+          "scalarFrac": 0.17382804141221056
+        },
+        {
+          "lambdaThreshold": 0.01,
+          "start": 7,
+          "operatorFrac": 0.016073525195118066,
+          "scalarFrac": 0.016073525195118066
+        },
+        {
+          "lambdaThreshold": 0.1,
+          "start": 7,
+          "operatorFrac": 0.016073525195118066,
+          "scalarFrac": 0.016073525195118066
+        }
+      ]
+    }
+  ]
+}

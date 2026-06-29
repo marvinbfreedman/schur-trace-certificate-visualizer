@@ -1,0 +1,42 @@
+{
+  "theoremName": "synchronized active-range interval terminal consequence theorem",
+  "proofClass": "symbolic identity",
+  "activeRangeJson": "synchronized_active_range_interval_theorem.json",
+  "endpointGreenBvpSolvabilityStatus": {
+    "label": "endpoint Green BVP solvability consequence",
+    "closed": true,
+    "status": "closed",
+    "reason": "The full active-range interval theorem closes endpoint Green BVP solvability."
+  },
+  "closedTraceActiveAnnihilationStatus": {
+    "label": "closed trace annihilates active source",
+    "closed": true,
+    "status": "closed",
+    "reason": "The full active-range interval theorem proves ker R_global annihilates E_active."
+  },
+  "activeRangeInclusionStatus": {
+    "label": "E_active in closure Range(R_global^*)",
+    "closed": true,
+    "status": "closed",
+    "reason": "The full active-range interval theorem proves the Hilbert annihilator/range inclusion."
+  },
+  "sourceInactiveTailDominationStatus": {
+    "label": "source-inactive min-max tail domination",
+    "closed": true,
+    "status": "closed",
+    "reason": "The full active-range interval theorem imports the source-inactive tail consequence."
+  },
+  "fullContinuumCombinedSourceBoundStatus": {
+    "label": "full continuum active range plus inactive tail",
+    "closed": true,
+    "status": "closed",
+    "reason": "The full active-range interval theorem combines active annihilation with the inactive tail bound."
+  },
+  "synchronizedActiveRangeIntervalConsequenceClosed": true,
+  "proof": [
+    "Import the full synchronized active-range interval theorem.",
+    "Read off active annihilation, active range inclusion, and inactive-tail domination.",
+    "Export only the terminal active/inactive source contract used by high-block tail passage."
+  ],
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,28 @@
+{
+  "theoremName": "endpoint eigenrow interval propagation 200 consequence theorem",
+  "proofClass": "symbolic identity",
+  "centerSynchronizationStatus": {
+    "label": "center synchronization",
+    "closed": true,
+    "status": "closed",
+    "reason": "The 200-point eigenrow propagation certificate uses the synchronized quadrature center."
+  },
+  "eigenrowTraceTargetStatus": {
+    "label": "eigenrow trace target",
+    "closed": true,
+    "status": "closed",
+    "reason": "The propagated eigenrow derivatives meet the trace-radius target."
+  },
+  "eigenrowTaylorKrawczykStatus": {
+    "label": "eigenrow Taylor/Krawczyk propagation",
+    "closed": true,
+    "status": "closed",
+    "reason": "The eigenrow Taylor recurrence is enclosed by the Krawczyk certificate."
+  },
+  "conditionMatrixOrder": 200,
+  "controlledQuadratureOrder": 200,
+  "maxDerivativeEntryRadius": 4.447376894052536e-29,
+  "maxDerivativeEntryRadiusText": "4.447376894052536e-29",
+  "endpointEigenrowPropagation200Closed": true,
+  "remainingAnalyticGap": null
+}

@@ -1,0 +1,28 @@
+{
+  "theoremName": "abstract Mosco projection consequence theorem",
+  "proofClass": "symbolic identity",
+  "abstractProjectionJson": "abstract_mosco_projection_convergence_theorem.json",
+  "statement": "The abstract Mosco projection theorem implies strong convergence of the Hilbert orthogonal projections for Mosco-convergent closed subspaces.",
+  "statuses": {
+    "abstractMoscoProjectionInputStatus": {
+      "label": "abstract Mosco projection theorem input",
+      "closed": true,
+      "status": "closed",
+      "reason": "The abstract theorem proves strong projection convergence."
+    },
+    "strongProjectionConvergenceStatus": {
+      "label": "strong projection convergence consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "This is the only abstract functional-analytic conclusion needed by the high-block Mosco projection input theorem."
+    }
+  },
+  "strongProjectionConvergenceClosed": true,
+  "moscoProjectionConvergenceClosed": true,
+  "proof": [
+    "Import the abstract Mosco projection convergence theorem.",
+    "Read off strong Hilbert projection convergence.",
+    "Expose only that consequence to model-specific high-block code."
+  ],
+  "remainingAnalyticGap": null
+}

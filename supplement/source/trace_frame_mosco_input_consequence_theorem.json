@@ -1,0 +1,45 @@
+{
+  "theoremName": "trace-frame Mosco input consequence theorem",
+  "proofClass": "symbolic identity",
+  "traceFrameJson": "continuum_trace_frame_lower_bound_theorem.json",
+  "explicitContinuumGammaLower": 82.91376250306405,
+  "activeDimension": 2,
+  "statement": "The continuum trace-frame lower-bound theorem supplies the model-specific trace-frame inputs needed for high-block Mosco projection convergence: a positive continuum trace-frame lower bound, quadrature consistency, and a bounded sampled correction right inverse.",
+  "statuses": {
+    "continuumTraceFrameLowerBoundStatus": {
+      "label": "continuum trace-frame lower bound",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the continuum trace-frame theorem."
+    },
+    "traceQuadratureConsistencyStatus": {
+      "label": "trace quadrature consistency",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the continuum trace-frame theorem."
+    },
+    "boundedSampledTraceCorrectionStatus": {
+      "label": "bounded sampled-trace correction",
+      "closed": true,
+      "status": "closed",
+      "reason": "Imported from the continuum trace-frame theorem."
+    },
+    "traceFrameMoscoInputConsequenceStatus": {
+      "label": "trace-frame Mosco input consequence",
+      "closed": true,
+      "status": "closed",
+      "reason": "Together these three facts give the model-specific high-block recovery and closed-trace compatibility input."
+    }
+  },
+  "traceFrameMoscoInputClosed": true,
+  "continuumTraceFrameLowerBoundClosed": true,
+  "traceQuadratureConsistencyClosed": true,
+  "boundedSampledTraceCorrectionClosed": true,
+  "proof": [
+    "Import the continuum trace-frame lower bound.",
+    "Import trace quadrature consistency on the active block.",
+    "Import the bounded sampled-trace correction right inverse.",
+    "Expose only these three inputs to the high-block Mosco projection theorem."
+  ],
+  "remainingAnalyticGap": null
+}
