@@ -34,6 +34,13 @@ def matrix_to_float(mat):
     return [[f(mat[i, j]) for j in range(mat.cols)] for i in range(mat.rows)]
 
 
+def load_optional(path: str):
+    source = Path(path)
+    if not source.exists():
+        return None
+    return json.loads(source.read_text(encoding="utf-8"))
+
+
 def main() -> None:
     mp.mp.dps = 50
     n = 9
@@ -167,6 +174,59 @@ def main() -> None:
             ),
         },
     }
+
+    crossing_cover = load_optional(
+        "endpoint_eigenrow_between_node_crossing_cover_q40.json"
+    )
+    crossing_inclusion = load_optional(
+        "endpoint_crossing_continuous_residual_inclusion_certificate.json"
+    )
+    crossing_theorem = load_optional(
+        "endpoint_crossing_continuum_promotion_theorem.json"
+    )
+    endpoint_theorem = load_optional(
+        "endpoint_undivided_dae_flow_interval_theorem.json"
+    )
+    if crossing_cover and crossing_inclusion and crossing_theorem:
+        data["endpointCrossing"] = {
+            "interval": crossing_cover["domain"]["parameterInterval"],
+            "zeroBracket": crossing_inclusion["domain"]["crossingRootBracket"],
+            "degree": crossing_cover["settings"]["degree"],
+            "diskCount": len(crossing_cover["disks"]),
+            "disks": [
+                {
+                    "center": row["center"],
+                    "realCell": row["realCell"],
+                    "solutionRadius": row["solutionRadius"],
+                    "q0CauchyRadius": row["derivativeEnclosures"][0][
+                        "cauchyErrorRadius"
+                    ],
+                    "q8CauchyRadius": row["derivativeEnclosures"][8][
+                        "cauchyErrorRadius"
+                    ],
+                }
+                for row in crossing_cover["disks"]
+            ],
+            "scaledConstants": crossing_inclusion["scaledConstants"],
+            "radiiPolynomial": crossing_inclusion["radiiPolynomial"],
+            "coverClosed": crossing_cover[
+                "betweenNodeEigenrowDerivativeCoverClosed"
+            ],
+            "continuousInclusionClosed": crossing_inclusion[
+                "continuousCrossingResidualInclusionClosed"
+            ],
+            "crossingPromotionClosed": crossing_theorem[
+                "exactCrossingContinuumPromotionClosed"
+            ],
+            "globalEndpointClosed": bool(
+                endpoint_theorem
+                and endpoint_theorem.get("exactContinuumTheoremClosed", False)
+            ),
+            "remainingScope": (
+                "Exact regular-piece propagation and transport into the restricted "
+                "active endpoint minor remain separate."
+            ),
+        }
 
     Path("visual_data.json").write_text(json.dumps(data, indent=2), encoding="utf-8")
     print("wrote visual_data.json")

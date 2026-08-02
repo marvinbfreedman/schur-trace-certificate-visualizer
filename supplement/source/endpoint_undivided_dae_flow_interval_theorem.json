@@ -1,0 +1,61 @@
+{
+  "theoremName": "undivided DAE graph and endpoint-flow collocation interval theorem",
+  "proofClass": "Arb interval collocation/Krawczyk theorem",
+  "proofArtifact": "endpoint_undivided_dae_flow_interval_theorem.md",
+  "dependencies": [
+    "endpoint_undivided_dae_krawczyk_enclosure.json",
+    "endpoint_undivided_flow_endpoint_krawczyk.json",
+    "endpoint_crossing_continuum_promotion_theorem.json"
+  ],
+  "domain": [
+    0.02,
+    0.545
+  ],
+  "equations": {
+    "graph": "a8(q' + qB + (qb)q) + c7 q + d = 0",
+    "inducedFlow": "G' = (B+bq)G",
+    "endpointMap": "M = C_R T(q_R)G_R - C_L T(q_L)G_L"
+  },
+  "finitePolynomialUndividedFlowStatus": {
+    "label": "undivided graph and induced flow in the named polynomial collocation model",
+    "closed": true,
+    "status": "closed",
+    "reason": "Every graph and induced-flow collocation box has an outward-rounded Arb Krawczyk self-map, including the chart containing the zero of a8."
+  },
+  "finitePolynomialEndpointRankStatus": {
+    "label": "restricted active endpoint map has full row rank in the polynomial collocation model",
+    "closed": true,
+    "status": "closed",
+    "reason": "The interval endpoint matrix has a 2 by 2 minor whose Arb ball excludes zero."
+  },
+  "exactEigenrowCoefficientCoverStatus": {
+    "label": "exact continuum coefficient field lies in the polynomial field balls",
+    "closed": false,
+    "status": "open",
+    "reason": "Requires a uniform between-node Bernstein/Cauchy enclosure for e^(q)(s), q<=8; pointwise node balls alone do not prove this inclusion."
+  },
+  "exactCrossingContinuumPromotionStatus": {
+    "label": "exact continuum promotion through the simple endpoint crossing",
+    "closed": true,
+    "status": "closed",
+    "reason": "The exact derivative cover, singular inverse theorem, and concrete radii polynomial all close on the crossing interval."
+  },
+  "exactContinuumPromotionStatus": {
+    "label": "exact Riemann-kernel undivided flow and endpoint rank",
+    "closed": false,
+    "status": "open",
+    "reason": "The finite polynomial theorem and the exact singular-crossing promotion are closed. Full endpoint promotion still requires exact regular-piece propagation and certification of the restricted active endpoint minor."
+  },
+  "bestFiniteEndpointMinor": {
+    "columns": [
+      0,
+      1
+    ],
+    "interval": "[250055428.2464440 +/- 2.67e-8]",
+    "absoluteLower": 250055428.246444
+  },
+  "finitePolynomialCollocationTheoremClosed": true,
+  "finitePolynomialTheoremClosed": true,
+  "exactCrossingContinuumPromotionClosed": true,
+  "exactContinuumTheoremClosed": false
+}

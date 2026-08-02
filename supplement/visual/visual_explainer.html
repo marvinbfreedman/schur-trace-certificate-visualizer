@@ -593,6 +593,33 @@
         <table id="sourceQuadratureErrorTable" style="margin-top:10px"></table>
         <table id="sourceQuadratureEnvelopeTable" style="margin-top:10px"></table>
         <table id="closedTraceOdeObstructionTable" style="margin-top:10px"></table>
+        <h2 style="margin-top:16px">Exact Between-Node Crossing</h2>
+        <p>
+          The normalized endpoint eigenrow is enclosed between collocation
+          nodes on eight overlapping complex disks. The undivided graph
+          equation then crosses the simple zero of <code>a8</code> inside a
+          certified continuous solution tube.
+        </p>
+        <div class="grid">
+          <div class="span-6">
+            <canvas id="endpointCrossingCauchyChart" class="small-chart" width="560" height="260"></canvas>
+            <div class="legend">
+              <span class="key" style="color: var(--blue)"><span class="swatch"></span>log10 q=8 Cauchy radius</span>
+              <span class="key" style="color: var(--red)"><span class="swatch"></span>log10 eigenpair tube radius</span>
+              <span class="key" style="color: var(--amber)"><span class="swatch"></span>simple crossing</span>
+            </div>
+          </div>
+          <div class="span-6">
+            <canvas id="endpointCrossingBudgetChart" class="small-chart" width="560" height="260"></canvas>
+            <div class="legend">
+              <span class="key" style="color: var(--blue)"><span class="swatch"></span>residual eta</span>
+              <span class="key" style="color: var(--purple)"><span class="swatch"></span>linear term</span>
+              <span class="key" style="color: var(--amber)"><span class="swatch"></span>quadratic term</span>
+              <span class="key" style="color: var(--green)"><span class="swatch"></span>certified slack</span>
+            </div>
+          </div>
+        </div>
+        <table id="endpointCrossingTable" style="margin-top:10px"></table>
         <h2 style="margin-top:16px">Endpoint Grassmann Flow</h2>
         <p>
           The endpoint map is still badly scaled in raw coordinates, so the
@@ -922,6 +949,58 @@
           ctx.fill();
         }
       }
+    }
+
+    function drawCrossingBudget(data) {
+      const canvas = document.getElementById("endpointCrossingBudgetChart");
+      if (!canvas || !data) return;
+      const { ctx, w, h } = setupCanvas(canvas);
+      const r = data.radiiPolynomial || {};
+      const rho = Number(r.selectedRadius || 0);
+      const parts = [
+        { label: "eta", value: Number(r.eta || 0), color: colors.blue },
+        { label: "kappa*rho", value: Number(r.kappa || 0) * rho, color: colors.purple },
+        { label: "nu*rho^2", value: Number(r.nu || 0) * rho * rho, color: colors.amber }
+      ];
+      const used = parts.reduce((sum, row) => sum + row.value, 0);
+      const slack = Math.max(0, rho - used);
+      parts.push({ label: "slack", value: slack, color: colors.green });
+
+      const left = 46;
+      const right = 18;
+      const plotW = w - left - right;
+      const barY = 70;
+      const barH = 54;
+      ctx.clearRect(0, 0, w, h);
+      ctx.font = "12px ui-monospace, monospace";
+      ctx.fillStyle = colors.ink;
+      ctx.textAlign = "left";
+      ctx.fillText("invariant-ball budget", left, 30);
+
+      let cursor = left;
+      for (const part of parts) {
+        const width = rho > 0 ? plotW * part.value / rho : 0;
+        ctx.fillStyle = part.color;
+        ctx.fillRect(cursor, barY, width, barH);
+        cursor += width;
+      }
+      ctx.strokeStyle = colors.ink;
+      ctx.lineWidth = 1.5;
+      ctx.strokeRect(left, barY, plotW, barH);
+
+      const contraction = Number(r.contractionBound || 0);
+      const gaugeY = 182;
+      ctx.fillStyle = "rgba(40,105,216,.16)";
+      ctx.fillRect(left, gaugeY, plotW, 18);
+      ctx.fillStyle = contraction < 1 ? colors.green : colors.red;
+      ctx.fillRect(left, gaugeY, plotW * Math.min(contraction, 1), 18);
+      ctx.strokeStyle = colors.ink;
+      ctx.strokeRect(left, gaugeY, plotW, 18);
+      ctx.fillStyle = colors.muted;
+      ctx.fillText(`contraction ${sci(contraction)} < 1`, left, gaugeY - 12);
+      ctx.textAlign = "right";
+      ctx.fillText(`rho ${sci(rho)}`, w - right, barY - 12);
+      ctx.fillText(`used ${sci(used)}`, w - right, barY + barH + 20);
     }
 
     function drawSignedHeatmap(canvasId, matrix) {
@@ -4003,6 +4082,49 @@
           { color: colors.red, points: normPoints(findRow(0.30, "adjointEval")) },
           { color: colors.green, points: normPoints(findRow(0.08, "adjointEval")) }
         ]);
+      }
+
+      if (data.endpointCrossing) {
+        const crossing = data.endpointCrossing;
+        const disks = crossing.disks || [];
+        const root = crossing.zeroBracket || [];
+        const rootMid = root.length === 2
+          ? (Number(root[0]) + Number(root[1])) / 2
+          : 0;
+        drawLineChart("endpointCrossingCauchyChart", [
+          {
+            color: colors.blue,
+            points: disks.map(row => ({
+              x: Number(row.center),
+              y: Math.log10(Math.max(Number(row.q8CauchyRadius), 1e-300))
+            }))
+          },
+          {
+            color: colors.red,
+            points: disks.map(row => ({
+              x: Number(row.center),
+              y: Math.log10(Math.max(Number(row.solutionRadius), 1e-300))
+            }))
+          }
+        ], rootMid ? [{ x: rootMid, color: colors.amber }] : []);
+        drawCrossingBudget(crossing);
+
+        const constants = crossing.scaledConstants || {};
+        const radii = crossing.radiiPolynomial || {};
+        const rows = [
+          ["layer", "status", "quantity", "certified value"],
+          ["between-node cover", crossing.coverClosed ? "closed" : "open", `${crossing.diskCount} disks`, `degree ${crossing.degree}`],
+          ["continuous inclusion", crossing.continuousInclusionClosed ? "closed" : "open", "exact residual", sci(constants.exactUndividedResidualUpper)],
+          ["crossing promotion", crossing.crossingPromotionClosed ? "closed" : "open", "contraction", sci(radii.contractionBound)],
+          ["singular coefficient", "bounded", "|alpha| lower", sci(constants.alphaAbsLower)],
+          ["singular inverse", "bounded", "p lower", sci(constants.pLower)],
+          ["solution tube", radii.invariantBall ? "invariant" : "open", "selected radius", sci(radii.selectedRadius)],
+          ["global endpoint", crossing.globalEndpointClosed ? "closed" : "open", "remaining", crossing.remainingScope]
+        ];
+        document.getElementById("endpointCrossingTable").innerHTML = rows.map((row, idx) => {
+          const tag = idx === 0 ? "th" : "td";
+          return `<tr>${row.map(value => `<${tag}>${value}</${tag}>`).join("")}</tr>`;
+        }).join("");
       }
 
       if (data.endpointGrassmann) {

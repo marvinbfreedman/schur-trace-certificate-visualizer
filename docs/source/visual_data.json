@@ -351,5 +351,127 @@
     "jetMatrix": "A jet matrix records all derivatives of a kernel at one point. The entry (i,j) is partial_s^i partial_t^j K(s0,s0)/(i!j!). If the kernel were positive, every such matrix would be positive semidefinite.",
     "lambda": "The lowest eigenvector of the 9-jet matrix gives a local linear test Lambda_a(f)=sum e_k(a) f^(k)(a)/k!.  The active endpoint obstruction is the moving family of these tests.",
     "schur": "R collects the Lambda_a traces.  Splitting functions into ker R and its orthogonal complement turns the proof into a Schur/Douglas range problem."
+  },
+  "endpointCrossing": {
+    "interval": [
+      0.15125,
+      0.19180848051171184
+    ],
+    "zeroBracket": [
+      0.164595,
+      0.164598
+    ],
+    "degree": 40,
+    "diskCount": 8,
+    "disks": [
+      {
+        "center": 0.15125,
+        "realCell": [
+          0.14795,
+          0.15455
+        ],
+        "solutionRadius": 2.4049748715984064e-20,
+        "q0CauchyRadius": 2.4049748715984064e-20,
+        "q8CauchyRadius": 343337.2728329041
+      },
+      {
+        "center": 0.15704406864453027,
+        "realCell": [
+          0.15374406864453027,
+          0.16034406864453027
+        ],
+        "solutionRadius": 4.269058813490742e-21,
+        "q0CauchyRadius": 4.269058813490742e-21,
+        "q8CauchyRadius": 60945.62682948226
+      },
+      {
+        "center": 0.16283813728906052,
+        "realCell": [
+          0.15953813728906052,
+          0.16613813728906052
+        ],
+        "solutionRadius": 9.14093709508037e-22,
+        "q0CauchyRadius": 9.14093709508037e-22,
+        "q8CauchyRadius": 13049.718109013536
+      },
+      {
+        "center": 0.1686322059335908,
+        "realCell": [
+          0.1653322059335908,
+          0.1719322059335908
+        ],
+        "solutionRadius": 2.2843104740582195e-22,
+        "q0CauchyRadius": 2.2843104740582195e-22,
+        "q8CauchyRadius": 3261.110699030004
+      },
+      {
+        "center": 0.17442627457812104,
+        "realCell": [
+          0.17112627457812105,
+          0.17772627457812104
+        ],
+        "solutionRadius": 6.498057239005235e-23,
+        "q0CauchyRadius": 6.498057239005235e-23,
+        "q8CauchyRadius": 927.6709197669799
+      },
+      {
+        "center": 0.18022034322265132,
+        "realCell": [
+          0.17692034322265132,
+          0.18352034322265132
+        ],
+        "solutionRadius": 2.063832247524723e-23,
+        "q0CauchyRadius": 2.063832247524723e-23,
+        "q8CauchyRadius": 294.6353177398459
+      },
+      {
+        "center": 0.1860144118671816,
+        "realCell": [
+          0.1827144118671816,
+          0.1893144118671816
+        ],
+        "solutionRadius": 7.257099428675345e-24,
+        "q0CauchyRadius": 7.257099428675345e-24,
+        "q8CauchyRadius": 103.60327485927611
+      },
+      {
+        "center": 0.19180848051171184,
+        "realCell": [
+          0.18850848051171185,
+          0.19510848051171184
+        ],
+        "solutionRadius": 2.7769053871873363e-24,
+        "q0CauchyRadius": 2.7769053871873363e-24,
+        "q8CauchyRadius": 39.64345464941329
+      }
+    ],
+    "scaledConstants": {
+      "BInfNorm": 120.0,
+      "bInfNorm": 140.0,
+      "qCandidateSup": 0.19800063732114354,
+      "graphNodalRadius": 7.142857142857142e-63,
+      "crossingHalfLengthFromRoot": 0.02721348051171184,
+      "alphaInterval": [
+        "-3.44193287122236326770174356732373046874999999999999999999999999999999999999998727E-5",
+        "-2.64333488206231961460101457867626953124999999999999999999999999999999999999998723E-5"
+      ],
+      "alphaAbsLower": 2.6433348820623196e-05,
+      "pLower": 7.274171471595764,
+      "exactUndividedResidualUpper": 3.000250996637842e-06
+    },
+    "radiiPolynomial": {
+      "eta": 0.015603494324270264,
+      "kappa": 0.6563411236401312,
+      "nu": 1.04751098775071,
+      "discriminant": 0.052722096293011805,
+      "selectedRadius": 0.10887327253846917,
+      "contractionBound": 0.8844330221529794,
+      "invariantBall": true
+    },
+    "coverClosed": true,
+    "continuousInclusionClosed": true,
+    "crossingPromotionClosed": true,
+    "globalEndpointClosed": false,
+    "remainingScope": "Exact regular-piece propagation and transport into the restricted active endpoint minor remain separate."
   }
 }

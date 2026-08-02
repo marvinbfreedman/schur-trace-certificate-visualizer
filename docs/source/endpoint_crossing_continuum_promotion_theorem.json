@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "theoremName": "exact between-node promotion of the undivided endpoint crossing graph",
+  "proofClass": "analytic proof plus interval/ball certificate",
+  "proofArtifact": "endpoint_crossing_continuum_promotion_theorem.md",
+  "statement": "On the certified crossing interval, the exact normalized negative eigenrow derivatives e^(q), 0<=q<=8, lie in the displayed overlapping Bernstein/Cauchy cells, and the exact undivided graph DAE has a unique bounded solution in the certified scaled sup-norm tube.",
+  "domain": {
+    "parameterInterval": [
+      0.15125,
+      0.19180848051171184
+    ],
+    "state": "bounded seven-plane Riccati graph row in Taylor-scaled sup norm",
+    "scope": "exact crossing interval only; regular-piece propagation and the restricted active endpoint minor remain separate obligations"
+  },
+  "dependencies": [
+    "endpoint_eigenrow_between_node_crossing_cover_q40.json",
+    "continuous_undivided_dae_residual_inclusion_theorem.json",
+    "endpoint_crossing_continuous_residual_inclusion_certificate.json"
+  ],
+  "betweenNodeDerivativeCoverStatus": {
+    "label": "exact finite between-node eigenrow derivative cover",
+    "closed": true,
+    "status": "closed",
+    "reason": "Every local radii polynomial closes and the closed cells cover the interval."
+  },
+  "continuousResidualInclusionStatus": {
+    "label": "exact continuous crossing residual-to-solution inclusion",
+    "closed": true,
+    "status": "closed",
+    "reason": "The exact coefficient cover and scaled singular radii polynomial close."
+  },
+  "radiiPolynomial": {
+    "eta": 0.015603494324270264,
+    "kappa": 0.6563411236401312,
+    "nu": 1.04751098775071,
+    "discriminant": 0.052722096293011805,
+    "selectedRadius": 0.10887327253846917,
+    "contractionBound": 0.8844330221529794,
+    "invariantBall": true
+  },
+  "scaledConstants": {
+    "BInfNorm": 120.0,
+    "bInfNorm": 140.0,
+    "qCandidateSup": 0.19800063732114354,
+    "graphNodalRadius": 7.142857142857142e-63,
+    "crossingHalfLengthFromRoot": 0.02721348051171184,
+    "alphaInterval": [
+      "-3.44193287122236326770174356732373046874999999999999999999999999999999999999998727E-5",
+      "-2.64333488206231961460101457867626953124999999999999999999999999999999999999998723E-5"
+    ],
+    "alphaAbsLower": 2.6433348820623196e-05,
+    "pLower": 7.274171471595764,
+    "exactUndividedResidualUpper": 3.000250996637842e-06
+  },
+  "exactCrossingContinuumPromotionClosed": true,
+  "exactCrossingContinuumPromotionStatus": {
+    "label": "exact continuum promotion through the simple endpoint crossing",
+    "closed": true,
+    "status": "closed",
+    "reason": "The exact derivative cover, singular inverse theorem, and concrete radii polynomial all close on the crossing interval."
+  },
+  "fullEndpointPropagationClosed": false,
+  "fullEndpointPropagationStatus": {
+    "label": "global exact propagation to both endpoint boundary maps",
+    "closed": false,
+    "status": "open",
+    "reason": "This theorem closes the singular crossing only; it does not certify the two regular pieces or the final active endpoint minor."
+  }
+}

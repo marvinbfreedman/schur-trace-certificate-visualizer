@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "theoremName": "exact continuous residual inclusion in the scaled endpoint crossing chart",
+  "proofClass": "interval/ball certificate plus analytic residual inclusion",
+  "statement": "The exact undivided endpoint graph DAE on the crossing interval has a unique bounded solution in the displayed scaled sup-norm tube about the certified Chebyshev graph whenever the final status is closed.",
+  "domain": {
+    "interval": [
+      0.15125,
+      0.19180848051171184
+    ],
+    "stateScaling": "Taylor diagonal scale radius^j/j!",
+    "scaleRadius": 0.05,
+    "cellSubdivisions": 32,
+    "crossingRootBracket": [
+      0.164595,
+      0.164598
+    ]
+  },
+  "dependencies": [
+    "endpoint_eigenrow_between_node_crossing_cover_q40.json",
+    "endpoint_undivided_dae_krawczyk_enclosure.json",
+    "endpoint_dae_transmission_theorem.json",
+    "continuous_undivided_dae_residual_inclusion_theorem.json"
+  ],
+  "scaledConstants": {
+    "BInfNorm": 120.0,
+    "bInfNorm": 140.0,
+    "qCandidateSup": 0.19800063732114354,
+    "graphNodalRadius": 7.142857142857142e-63,
+    "crossingHalfLengthFromRoot": 0.02721348051171184,
+    "alphaInterval": [
+      "-3.44193287122236326770174356732373046874999999999999999999999999999999999999998727E-5",
+      "-2.64333488206231961460101457867626953124999999999999999999999999999999999999998723E-5"
+    ],
+    "alphaAbsLower": 2.6433348820623196e-05,
+    "pLower": 7.274171471595764,
+    "exactUndividedResidualUpper": 3.000250996637842e-06
+  },
+  "radiiPolynomial": {
+    "eta": 0.015603494324270264,
+    "kappa": 0.6563411236401312,
+    "nu": 1.04751098775071,
+    "discriminant": 0.052722096293011805,
+    "selectedRadius": 0.10887327253846917,
+    "contractionBound": 0.8844330221529794,
+    "invariantBall": true
+  },
+  "cells": [
+    {
+      "interval": [
+        0.15125,
+        0.15455
+      ],
+      "qScaledUpper": 0.19800063732114354,
+      "exactResidualUpper": 2.6037278162314486e-06
+    },
+    {
+      "interval": [
+        0.15374406864453027,
+        0.16034406864453027
+      ],
+      "qScaledUpper": 0.1960388473661054,
+      "exactResidualUpper": 2.7087062549878446e-06
+    },
+    {
+      "interval": [
+        0.15953813728906052,
+        0.16613813728906052
+      ],
+      "qScaledUpper": 0.19144283481420915,
+      "exactResidualUpper": 2.7713666903564792e-06
+    },
+    {
+      "interval": [
+        0.1653322059335908,
+        0.1719322059335908
+      ],
+      "qScaledUpper": 0.18680294795574312,
+      "exactResidualUpper": 2.830084611225448e-06
+    },
+    {
+      "interval": [
+        0.17112627457812105,
+        0.17772627457812104
+      ],
+      "qScaledUpper": 0.18212509134821445,
+      "exactResidualUpper": 2.8835036974630024e-06
+    },
+    {
+      "interval": [
+        0.17692034322265132,
+        0.18352034322265132
+      ],
+      "qScaledUpper": 0.1774163786858248,
+      "exactResidualUpper": 2.9309457933048287e-06
+    },
+    {
+      "interval": [
+        0.1827144118671816,
+        0.1893144118671816
+      ],
+      "qScaledUpper": 0.17268118341973948,
+      "exactResidualUpper": 2.9713451494752774e-06
+    },
+    {
+      "interval": [
+        0.18850848051171185,
+        0.19180848051171184
+      ],
+      "qScaledUpper": 0.1679255415387406,
+      "exactResidualUpper": 3.000250996637842e-06
+    }
+  ],
+  "continuousCrossingResidualInclusionClosed": true,
+  "continuousCrossingResidualInclusionStatus": {
+    "label": "exact continuous crossing residual-to-solution inclusion",
+    "closed": true,
+    "status": "closed",
+    "reason": "The exact coefficient cover and scaled singular radii polynomial close."
+  }
+}

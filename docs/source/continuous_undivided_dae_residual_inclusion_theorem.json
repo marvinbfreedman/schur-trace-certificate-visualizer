@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "theoremName": "continuous residual-to-solution inclusion for the undivided endpoint graph DAE",
+  "proofClass": "analytic proof",
+  "statement": "Let qhat be a C1 approximate solution of the undivided graph DAE. On regular intervals the stated Gronwall radius encloses an exact solution. Across a simple zero a=(s-s*)alpha with p=c/alpha>=p0>0, every positive root interval of the stated singular radii polynomial contains a unique bounded exact graph solution.",
+  "domain": {
+    "unknown": "q in C^1(J; R^7) on regular pieces and q continuous/bounded with x q' continuous at the crossing",
+    "coefficientSpace": "a,c,d continuous; alpha,p continuous at the simple crossing; B fixed",
+    "norm": "componentwise vector sup norm and induced matrix infinity norm",
+    "crossingSelection": "the unique bounded solution germ; evaluating the exact equation at x=0 gives c(s*)q(s*)+d(s*)=0"
+  },
+  "equation": "a(q' + q B + (q b) q) + c q + d = 0",
+  "regularEstimate": {
+    "hypotheses": [
+      "|a| >= a0 > 0",
+      "||qhat|| <= Q",
+      "undivided residual ||r|| <= epsilon",
+      "incoming exact error <= deltaBoundary"
+    ],
+    "ballDependentLipschitz": "L(rho)=||B||+|c/a|_sup+2||b||(Q+rho)",
+    "sufficientInequality": "exp(L(rho)*ell)*(deltaBoundary + ell*epsilon/a0) <= rho",
+    "conclusion": "an exact solution with the same incoming datum lies in the rho sup ball about qhat"
+  },
+  "crossingEstimate": {
+    "factorization": "x=s-s*, a=x alpha, p=c/alpha",
+    "hypotheses": [
+      "|alpha| >= alpha0 > 0",
+      "p >= p0 > 0 on both half intervals",
+      "||qhat|| <= Q",
+      "undivided residual ||r|| <= epsilon"
+    ],
+    "eta": "epsilon/(alpha0*p0)",
+    "kappa": "h*(||B||+2*||b||*Q)/p0",
+    "nu": "2*h*||b||/p0",
+    "sufficientInequalities": [
+      "eta+kappa*rho+nu*rho^2 < rho",
+      "kappa+2*nu*rho < 1"
+    ],
+    "conclusion": "a unique bounded exact solution lies in the rho sup ball about qhat on |s-s*|<=h"
+  },
+  "proof": {
+    "regular": "Subtract the exact and approximate equations, divide only where |a|>=a0, bound the graph nonlinearity by (||B||+2||b||(Q+rho))||w||, and apply the variation-of-constants formula and Gronwall's inequality.",
+    "crossing": "After a=x alpha, the error equation is (x d/dx+p)w=-r/alpha-x[N(qhat+w)-N(qhat)]. On either half interval the integrating factor mu(x)=exp(int p(t)dt/t) gives ||(x d/dx+p)^(-1)||<=1/p0 on bounded functions. The displayed radii and derivative inequalities make the fixed-point map invariant and contractive. The complementary homogeneous solution is mu^(-1) and is unbounded, so boundedness supplies uniqueness and transmission through x=0. The common limiting value automatically satisfies the exact algebraic equation at the crossing; the approximate graph need not satisfy it exactly because its mismatch is part of r."
+  },
+  "algebraChecks": {
+    "differenceIdentity": true,
+    "regularGronwallKernelPositive": true,
+    "singularIntegratingFactorKernelPositive": true,
+    "singularInverseNormAtMostOneOverP0": true,
+    "nonlinearGraphLipschitzBound": true,
+    "boundedSolutionExcludesSingularHomogeneousMode": true
+  },
+  "continuousResidualInclusionTheoremClosed": true,
+  "continuousResidualInclusionStatus": {
+    "label": "abstract continuous undivided residual-to-solution inclusion",
+    "closed": true,
+    "status": "closed",
+    "reason": "The integrating-factor and Gronwall estimates prove the stated conditional theorem."
+  },
+  "specificEndpointApplicationClosed": false,
+  "specificEndpointApplicationStatus": {
+    "label": "specific exact endpoint DAE residual inclusion",
+    "closed": false,
+    "status": "open",
+    "reason": "Requires full between-node exact coefficient cells and interval evaluation of epsilon, alpha0, p0, Q, and boundary radii."
+  }
+}
