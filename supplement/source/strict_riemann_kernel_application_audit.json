@@ -1,0 +1,88 @@
+{
+  "theoremName": "strict Riemann-kernel continuum application audit",
+  "proofClass": "fail-closed analytic proof audit",
+  "target": "Exact common A-space, active Green factorization, uniform inactive source estimate, and continuum spectral projection identification",
+  "primaryEvidence": {
+    "finiteEndpointCoefficientInputClosed": true,
+    "exactVolterraFormClosabilityClosed": true,
+    "exactVolterraFormNonnegativityOpen": true,
+    "exactVolterraFormNonnegativityDisproved": true,
+    "exactSignedFeatureCriterionClosed": true,
+    "legacyCollocationExactCoefficientStatusOpen": true,
+    "exactEndpointFlowExplicitlyDisclaimed": false,
+    "finiteUndividedPolynomialKrawczykClosed": true,
+    "onlyDiscreteCollocationResidualFound": true,
+    "validatedResidualPropagationTheoremClosed": true,
+    "validatedExactFlowOpen": false,
+    "continuousBetweenNodeResidualTailInclusionsClosed": true,
+    "continuousGlobalKrawczykSelfMapClosed": true,
+    "continuousEndpointIdentityContained": true,
+    "continuousExactRightInverseClosed": true,
+    "sourceHardyGreenEstimateOpen": true,
+    "sourceRepresenterTheoremOpen": true,
+    "sourceCompactnessOpen": true,
+    "abstractSourceCompactnessTheoremClosed": true,
+    "abstractMoscoQDeltaTheoremClosed": true,
+    "continuumQDeltaIdentificationOpen": true,
+    "primaryContinuumTailPassageOpen": true,
+    "broadHighBlockWrapperClaimsClosed": false,
+    "highBlockStatusContradiction": false
+  },
+  "acceptedPartialResults": [
+    "The abstract Hilbert-space spectral tail estimate and Riesz-projection continuity theorem are valid once their hypotheses hold.",
+    "The synchronized endpoint coefficient perturbation is far inside the finite collocation Krawczyk capacity.",
+    "The active Green/Lagrange factorization theorem is valid conditional on an exact endpoint BVP solution with the stated bounds."
+  ],
+  "rejectedPromotions": [
+    "finite Galerkin PSD implies nonnegative continuum form",
+    "finite collocation solve implies enclosure of the exact ODE flow",
+    "continuous source coefficients imply A-bounded source rows",
+    "wrapper booleans imply Mosco/operator-norm convergence"
+  ],
+  "obligations": {
+    "exactVolterraFormClosability": {
+      "label": "closability of the exact endpoint-B Volterra form",
+      "closed": true,
+      "refuted": false,
+      "status": "proved",
+      "reason": "The exact endpoint-B kernel is continuous and Hilbert--Schmidt; its bounded form and every dense-core restriction are closable.",
+      "requiredProof": "Closed by exact_volterra_form_closability_theorem.md."
+    },
+    "exactVolterraFormNonnegativity": {
+      "label": "nonnegativity of the exact Volterra form on the closed-trace core",
+      "closed": false,
+      "refuted": true,
+      "status": "disproved",
+      "reason": "An outward-rounded endpoint-B kernel direction supported strictly outside the trace interval has a negative quadratic form. Smooth mollification gives f in N_0 with a_B[f]<0.",
+      "requiredProof": "The present obligation cannot be proved: reformulate the form, trace, or domain to exclude the certified exterior negative direction."
+    },
+    "endpointExactFlow": {
+      "label": "exact endpoint fundamental flow and active singular-value bound",
+      "closed": true,
+      "refuted": false,
+      "status": "proved",
+      "reason": "The exact coefficient disks, continuous local residual/tail inclusions, independently reset induced-flow transitions, and weighted global BVP Krawczyk self-map close. The endpoint balls contain both columns of I_2, proving the stronger right-inverse claim.",
+      "requiredProof": "Closed by endpoint_global_dae_right_inverse_continuum_certificate.json."
+    },
+    "compactLipschitzSource": {
+      "label": "compact and Lipschitz continuum source operator in H_A",
+      "closed": false,
+      "refuted": false,
+      "status": "open",
+      "reason": "The proposed positive A-Hilbert space is unavailable because its defining endpoint-B form is negative on N_0.",
+      "requiredProof": "Prove the special source-row estimate ||E_u f||^2<=eta(u)a[f] on ker R with locally bounded eta, and prove the corresponding representers are norm-Lipschitz in u."
+    },
+    "galerkinQDelta": {
+      "label": "Galerkin-to-continuum identification of Q_delta",
+      "closed": false,
+      "refuted": false,
+      "status": "open",
+      "reason": "The continuum A-space and its Q_delta projection are not defined on the stated model after the defining form is refuted.",
+      "requiredProof": "Prove Mosco convergence of the actual closed-trace high blocks and operator-norm convergence of the compact source compressions; then apply Riesz-projection continuity across a certified spectral gap."
+    }
+  },
+  "riemannKernelApplicationClosed": false,
+  "riemannKernelApplicationRefutedAsStated": true,
+  "riemannKernelApplicationStatus": "refuted-as-stated",
+  "nextProofTarget": "The present obligation cannot be proved: reformulate the form, trace, or domain to exclude the certified exterior negative direction."
+}

@@ -1,13 +1,16 @@
 cff-version: 1.2.0
-title: "RH Weyl/Volterra Companion Supplement"
-message: "If you use this supplement, please cite the associated Zenodo record and manuscript."
+title: "Companion source archive for Finite-core Volterra reductions for a Weyl-positive Riemann phase kernel"
+message: "Please cite the versioned Zenodo source record and the associated manuscript."
 type: dataset
 authors:
   - family-names: Freedman
     given-names: Marvin B.
     affiliation: Independent Researcher
-version: "math-supplement-layout-20260628"
-date-released: "2026-06-28"
+version: "2.2.0"
+date-released: "2026-08-14"
+doi: "10.5281/zenodo.21936544"
+url: "https://doi.org/10.5281/zenodo.21936544"
+repository-code: "https://github.com/marvinbfreedman/schur-trace-certificate-visualizer"
 keywords:
   - Riemann hypothesis
   - Riemann xi-function
@@ -17,4 +20,13 @@ keywords:
   - KLM condition
   - reproducibility
 license: "CC-BY-4.0"
-repository-code: "https://zenodo.org/records/20897437"
+preferred-citation:
+  type: article
+  title: "Finite-core Volterra reductions for a Weyl-positive Riemann phase kernel"
+  authors:
+    - family-names: Freedman
+      given-names: Marvin B.
+      affiliation: Independent Researcher
+  version: "2.1.0"
+  date-published: "2026-08-14"
+  doi: "10.5281/zenodo.21936429"

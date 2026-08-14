@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "theoremName": "augmented-form Riemann-kernel replacement theorem",
+  "proofClass": "analytic coercive-form replacement with fail-closed imported premises",
+  "proofArtifact": "riemann_kernel_augmented_replacement_theorem.md",
+  "dependencies": [
+    "exact_volterra_form_closability_theorem.json",
+    "endpoint_kb_closed_trace_counterexample_certificate.json",
+    "augmented_moving_trace_bessel_theorem.json",
+    "augmented_mosco_limsup_theorem.json",
+    "augmented_mosco_liminf_theorem.json",
+    "endpoint_global_dae_right_inverse_continuum_certificate.json"
+  ],
+  "scope": {
+    "ambientSpace": "V_rep=H^8(0,L)",
+    "trace": "R f(a)=Lambda_a(f), a in I=[0.02,0.545]",
+    "closedTraceHighBlock": "H_rep=ker(R) intersect F_M^{perp,a_rep}",
+    "replacementForm": "a_rep[f]=a_B[f]+(1+||K_B||_HS)||f||_2^2+sum_{k=1}^8||D^k f||_2^2",
+    "sourceWindow": [
+      0.08,
+      0.52
+    ],
+    "sourceJetOrder": 7,
+    "sourceOperatorRankUpper": 9,
+    "galerkinSpaces": "nested finite spans of an a_rep-orthonormal basis of H_rep",
+    "deltaDefinition": "lambda_min^+(E*E)/2 when E*E is nonzero; otherwise 1"
+  },
+  "statuses": {
+    "originalCounterexampleAcknowledgedStatus": {
+      "label": "original endpoint-B nonnegativity obstruction is acknowledged",
+      "closed": true,
+      "status": "proved",
+      "reason": "The replacement is enabled only after importing the certified smooth N_0 negative direction."
+    },
+    "augmentedCoerciveFormStatus": {
+      "label": "H8-augmented endpoint-B form is positive, coercive, and closed",
+      "closed": true,
+      "status": "proved",
+      "reason": "Adding (1+||K_B||_HS)||f||_2^2 and derivative energies through order eight dominates the bounded signed kernel form and gives a norm equivalent to H8."
+    },
+    "closedMovingTraceStatus": {
+      "label": "moving eighth-order trace is bounded with closed kernel",
+      "closed": true,
+      "status": "proved",
+      "reason": "The normalized eigenrow Cauchy-Schwarz estimate bounds R:H8->L2(I); therefore ker R and its finite-codimensional high block are closed."
+    },
+    "nonvacuousHighBlockStatus": {
+      "label": "the augmented closed-trace high block is infinite-dimensional",
+      "closed": true,
+      "status": "proved",
+      "reason": "Smooth functions supported in the exterior interval (0.545,L) lie in ker R; intersecting this infinite-dimensional subspace with the orthogonal complement of finite-dimensional F_M leaves an infinite-dimensional subspace."
+    },
+    "compactLipschitzSourceStatus": {
+      "label": "special source family is finite-rank, compact, and norm-Lipschitz",
+      "closed": true,
+      "status": "proved",
+      "reason": "The source rows use only the fixed jets D^j f(s0), 0<=j<=7. H8 trace boundedness and analytic source coefficients give uniform/Lipschitz Riesz rows; their range lies in the span of eight boundary coefficient functions and one evaluation coefficient function."
+    },
+    "intrinsicMoscoStatus": {
+      "label": "intrinsic conforming Galerkin exhaustion is Mosco convergent",
+      "closed": true,
+      "status": "proved",
+      "reason": "Finite spans of an orthonormal basis of the closed augmented high block are nested and dense, giving Mosco limsup and liminf and strong projection convergence."
+    },
+    "sourceOperatorNormConsistencyStatus": {
+      "label": "compressed source operators converge in norm",
+      "closed": true,
+      "status": "proved",
+      "reason": "Strong Galerkin projections converge uniformly after composition with the finite-rank source operator."
+    },
+    "adaptiveExactSpectralGapStatus": {
+      "label": "replacement delta lies in an exact source spectral gap",
+      "closed": true,
+      "status": "proved",
+      "reason": "For nonzero finite-rank S=E*E use delta_rep=lambda_min^+(S)/2; if S=0 use delta_rep=1. In either case delta_rep is in the resolvent."
+    },
+    "continuumQDeltaIdentificationStatus": {
+      "label": "replacement Galerkin Q_delta converges to the continuum projection",
+      "closed": true,
+      "status": "proved",
+      "reason": "Norm convergence of the finite-rank compressions and the exact adaptive gap give norm convergence of the Riesz projections."
+    },
+    "exactEndpointFlowStatus": {
+      "label": "exact continuous endpoint right inverse remains available",
+      "closed": true,
+      "status": "proved",
+      "reason": "Imported from the exact residual/tail global boundary-value Krawczyk certificate."
+    }
+  },
+  "originalApplicationStillRefuted": true,
+  "replacementIsNotOriginalQuotientClaim": true,
+  "augmentedReplacementFormClosed": true,
+  "augmentedHighBlockNonvacuous": true,
+  "augmentedCompactLipschitzSourceClosed": true,
+  "augmentedContinuumQDeltaIdentificationClosed": true,
+  "augmentedRiemannKernelReplacementClosed": true,
+  "remainingAnalyticGap": null,
+  "nonImplication": "Closure of this replacement does not prove positivity of the original endpoint-B form and does not restore the original Weyl/KLM or RH claim."
+}

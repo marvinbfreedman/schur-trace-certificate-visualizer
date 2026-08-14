@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "theoremName": "exact augmented-to-zeta transfer theorem",
+  "proofClass": "fail-closed exact identity and quantitative inertia gate",
+  "proofArtifact": "augmented_to_zeta_transfer_theorem.md",
+  "dependencies": [
+    "riemann_kernel_augmented_replacement_theorem.json",
+    "strict_riemann_kernel_application_audit.json",
+    "augmented_to_zeta_exact_identity.json",
+    "augmented_negative_direction_reachability_audit.json",
+    "quantitative_weil_inertia_theorem.json",
+    "quantitative_zeta_zero_conclusion_theorem.json"
+  ],
+  "requiredIdentity": "W_zeta(x)=a_rep[Jx]-R[Jx]+B(x)",
+  "requiredFields": {
+    "J": "exact zeta/Weil pullback with source, target, and closure topology",
+    "R": "(1+||K_B||_HS)||Jx||_2^2+sum_{k=1}^8||D^k Jx||_2^2",
+    "B": "complete endpoint, primitive-prefix, completion, and theta-tail terms"
+  },
+  "statuses": {
+    "augmentedReplacementInputStatus": {
+      "label": "augmented H8 replacement theorem",
+      "closed": true,
+      "status": "proved",
+      "reason": "The coercive replacement is valid but explicitly has no original-Weyl or RH implication by itself."
+    },
+    "refutedOriginalPremiseAcknowledgedStatus": {
+      "label": "original endpoint-B premise is acknowledged as refuted",
+      "closed": true,
+      "status": "proved",
+      "reason": "The transfer may not reuse or rename the disproved nonnegativity premise."
+    },
+    "preciseZetaWeilPullbackStatus": {
+      "label": "precise zeta/Weil pullback J and its domain",
+      "closed": false,
+      "status": "open",
+      "reason": "J must be defined as an exact operator on a specified zeta test space, not inferred from finite kernel matches."
+    },
+    "exactDomainClosureStatus": {
+      "label": "source/target domains and closure topologies match exactly",
+      "closed": false,
+      "status": "open",
+      "reason": "Trace-range density and entrywise kernel convergence do not establish H8 pullback closure."
+    },
+    "regularizerAccountingStatus": {
+      "label": "added H8 regularizer is exactly identified and subtracted",
+      "closed": false,
+      "status": "open",
+      "reason": "Every L2 and derivative term added to a_rep must be transported and accounted for on range J."
+    },
+    "boundaryTailAccountingStatus": {
+      "label": "all boundary and tail terms are exact",
+      "closed": false,
+      "status": "open",
+      "reason": "No endpoint, primitive-prefix, theta-tail, or completion term may be hidden in wrapper flags."
+    },
+    "exactAugmentedToZetaIdentityStatus": {
+      "label": "W_zeta=a_rep[Jx]-R[Jx]+B(x)",
+      "closed": false,
+      "status": "open",
+      "reason": "The identity closes only after the operator, domain, regularizer, and boundary/tail obligations all close."
+    },
+    "negativeDirectionReachabilityStatus": {
+      "label": "certified negative direction is reachable or exactly excluded",
+      "closed": false,
+      "status": "open",
+      "reason": "The current reachability audit is unresolved in the H8 transfer topology."
+    },
+    "quantitativeInertiaStatus": {
+      "label": "finite-height negative-index bound and asymptotic passage",
+      "closed": false,
+      "status": "open",
+      "reason": "A signed form requires a quantitative inertia theorem rather than an all-or-nothing positivity wrapper."
+    },
+    "concreteZetaConclusionStatus": {
+      "label": "specific unconditional zeta conclusion",
+      "closed": false,
+      "status": "open",
+      "reason": "Closure requires an explicit zero-location or zero-proportion theorem, not an internal form statement."
+    }
+  },
+  "augmentedReplacementInputClosed": true,
+  "originalApplicationStillRefuted": true,
+  "refutedPremiseNotReused": true,
+  "preciseZetaWeilPullbackClosed": false,
+  "exactPullbackDomainClosureClosed": false,
+  "regularizerAccountingClosed": false,
+  "boundaryTailAccountingClosed": false,
+  "exactAugmentedToZetaIdentityClosed": false,
+  "negativeDirectionReachabilityResolved": false,
+  "quantitativeInertiaTheoremClosed": false,
+  "concreteZetaConclusionClosed": false,
+  "augmentedToZetaTransferClosed": false,
+  "transferStatus": "open",
+  "specificZetaConclusion": null,
+  "remainingAnalyticGap": "Exact J/domain identity, negative-direction reachability, quantitative inertia, and a concrete unconditional zeta conclusion are not all closed.",
+  "nonImplication": "The coercive augmented-form theorem alone does not imply original Weil positivity, a zero proportion, or RH."
+}

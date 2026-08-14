@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Schur Trace Certificate Visualizer</title>
-  <meta name="description" content="Static visual explainer for endpoint trace, Schur certificate, Krawczyk enclosure, and snapshot verification artifacts.">
+  <meta name="description" content="Static visual explainer and fail-closed audit mirror for endpoint trace, Schur, Krawczyk, and Riemann-kernel verification artifacts.">
   <!-- Clarity tracking code for https://marvinbfreedman.github.io/schur-trace-certificate-visualizer/ -->
   <script>
     (function(c,l,a,r,i,t,y){
@@ -22,6 +22,9 @@
       --muted: #5c6678;
       --line: #d9dfeb;
       --blue: #2869d8;
+      --warning-bg: #fff6e8;
+      --warning-line: #e5a84b;
+      --warning-ink: #6e4200;
     }
     * { box-sizing: border-box; }
     body {
@@ -38,7 +41,7 @@
     .card {
       border: 1px solid var(--line);
       border-radius: 24px;
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.92);
       box-shadow: 0 24px 80px rgba(24, 32, 47, 0.12);
       padding: clamp(24px, 5vw, 56px);
     }
@@ -56,17 +59,18 @@
       line-height: 0.96;
       letter-spacing: -0.05em;
     }
-    p {
-      max-width: 760px;
-      color: var(--muted);
-      font-size: 18px;
+    h2 { margin: 0 0 8px; font-size: 21px; }
+    p { max-width: 760px; color: var(--muted); font-size: 18px; }
+    .status {
+      margin-top: 28px;
+      border: 1px solid var(--warning-line);
+      border-radius: 16px;
+      padding: 20px;
+      background: var(--warning-bg);
+      color: var(--warning-ink);
     }
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 32px;
-    }
+    .status p { margin: 0; color: var(--warning-ink); font-size: 16px; }
+    .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
     a {
       display: inline-flex;
       align-items: center;
@@ -79,18 +83,9 @@
       font-weight: 700;
       background: #fff;
     }
-    a.primary {
-      border-color: var(--blue);
-      background: var(--blue);
-      color: #fff;
-    }
-    .note {
-      margin-top: 32px;
-      border-top: 1px solid var(--line);
-      padding-top: 20px;
-      font-size: 14px;
-      color: var(--muted);
-    }
+    a.primary { border-color: var(--blue); background: var(--blue); color: #fff; }
+    .note { margin-top: 32px; border-top: 1px solid var(--line); padding-top: 20px; font-size: 14px; color: var(--muted); }
+    .note a { min-height: auto; border: 0; padding: 0; background: transparent; color: var(--blue); }
   </style>
 </head>
 <body>
@@ -99,17 +94,32 @@
       <div class="eyebrow">Mathematical verification artifact</div>
       <h1>Schur trace certificate visualizer</h1>
       <p>
-        A static, inspectable visual explainer for endpoint trace certificates, Krawczyk enclosure diagnostics,
-        spectral profiles, and reproducible visual snapshots. The artifact is published as raw GitHub Pages output
-        so every JSON-backed panel can be opened directly in a browser.
+        A static, inspectable visual explainer for endpoint trace certificates,
+        Krawczyk diagnostics, spectral profiles, and reproducible snapshots.
       </p>
+
+      <div class="status" role="note" aria-label="Current mathematical status">
+        <h2>Current fail-closed status</h2>
+        <p>
+          The strict RH audit reports <strong>not established</strong>. The original
+          Riemann-kernel application is <strong>refuted as stated</strong>; the coercive
+          augmented replacement does not reinstate it, and the exact zeta transfer and
+          limiting spectral threshold-buffer gates remain open. No proof of the
+          Riemann hypothesis is claimed.
+        </p>
+      </div>
+
       <div class="links">
         <a class="primary" href="source/visual_explainer.html">Open visual explainer</a>
-        <a href="source/visual_snapshot_slideshow.html">Open snapshot slideshow</a>
-        <a href="source/visual_data.json">View visual data JSON</a>
+        <a href="source/strict_rh_prize_proof_audit.json">Strict RH audit</a>
+        <a href="source/strict_riemann_kernel_application_audit.json">Application audit</a>
+        <a href="https://doi.org/10.5281/zenodo.21936429">Manuscript v2.1.0</a>
+        <a href="https://doi.org/10.5281/zenodo.21936544">Source v2.2.0</a>
       </div>
+
       <div class="note">
-        Direct explainer URL: <code>source/visual_explainer.html</code>
+        Historical visual snapshots are non-controlling. Release date: 2026-08-14.
+        See the <a href="https://github.com/marvinbfreedman/schur-trace-certificate-visualizer/blob/main/supplement/STATUS.md">current status ledger</a>.
       </div>
     </section>
   </main>
