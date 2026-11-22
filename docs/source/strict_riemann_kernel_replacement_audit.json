@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "theoremName": "strict augmented-form Riemann-kernel replacement audit",
+  "proofClass": "fail-closed replacement audit",
+  "replacementTheorem": "riemann_kernel_augmented_replacement_theorem.json",
+  "originalAudit": "strict_riemann_kernel_application_audit.json",
+  "replacementTheoremAccepted": true,
+  "originalCounterexamplePreserved": true,
+  "replacementScope": {
+    "ambientSpace": "V_rep=H^8(0,L)",
+    "trace": "R f(a)=Lambda_a(f), a in I=[0.02,0.545]",
+    "closedTraceHighBlock": "H_rep=ker(R) intersect F_M^{perp,a_rep}",
+    "replacementForm": "a_rep[f]=a_B[f]+(1+||K_B||_HS)||f||_2^2+sum_{k=1}^8||D^k f||_2^2",
+    "sourceWindow": [
+      0.08,
+      0.52
+    ],
+    "sourceJetOrder": 7,
+    "sourceOperatorRankUpper": 9,
+    "galerkinSpaces": "nested finite spans of an a_rep-orthonormal basis of H_rep",
+    "deltaDefinition": "lambda_min^+(E*E)/2 when E*E is nonzero; otherwise 1"
+  },
+  "replacementRiemannKernelApplicationClosed": true,
+  "replacementRiemannKernelApplicationStatus": "proved",
+  "originalRiemannKernelApplicationStatus": "refuted-as-stated",
+  "nonImplication": "Closure of this replacement does not prove positivity of the original endpoint-B form and does not restore the original Weyl/KLM or RH claim.",
+  "remainingAnalyticGap": null
+}

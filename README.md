@@ -1,153 +1,60 @@
 # Schur Trace Certificate Visualizer
 
-Static GitHub Pages companion archive for the endpoint trace / Schur certificate
-visual explainer from the RH Weyl-positive verification work.
+Static GitHub Pages visualizer and curated audit mirror for the manuscript
+**Finite-core Volterra reductions for a Weyl-positive Riemann phase kernel**.
 
-Live artifact:
+## Current releases
 
-- Visual explainer: https://marvinbfreedman.github.io/schur-trace-certificate-visualizer/source/visual_explainer.html
-- Snapshot slideshow: https://marvinbfreedman.github.io/schur-trace-certificate-visualizer/source/visual_snapshot_slideshow.html
-- Latest snapshot: https://marvinbfreedman.github.io/schur-trace-certificate-visualizer/source/visual_snapshots/20260628-144016/visual_explainer.html
-- Visual data: https://marvinbfreedman.github.io/schur-trace-certificate-visualizer/source/visual_data.json
+- Manuscript v2.1.0: [doi:10.5281/zenodo.21936429](https://doi.org/10.5281/zenodo.21936429)
+- Companion source archive v2.2.0: [doi:10.5281/zenodo.21936544](https://doi.org/10.5281/zenodo.21936544)
+- Manuscript concept DOI: [doi:10.5281/zenodo.20746137](https://doi.org/10.5281/zenodo.20746137)
+- Source-archive concept DOI: [doi:10.5281/zenodo.20757731](https://doi.org/10.5281/zenodo.20757731)
 
-Full reproducibility supplement:
+The Zenodo source archive is the canonical frozen release. This repository
+keeps the static visualizer and a small, review-critical subset of the current
+audit artifacts; it intentionally does not duplicate the full archive.
 
-- Curated source package: [`supplement/`](supplement/)
-- Python quick start: [`supplement/QUICKSTART.md`](supplement/QUICKSTART.md)
-- Reproducibility notes: [`supplement/REPRODUCIBILITY.md`](supplement/REPRODUCIBILITY.md)
-- Current status: [`supplement/STATUS.md`](supplement/STATUS.md)
-- Dashboard report: [`supplement/reports/dashboard.txt`](supplement/reports/dashboard.txt)
+## Current mathematical status
 
-## RH Weyl-Positive Companion Source Bundle
+The v2.1.0/v2.2.0 release is explicitly fail-closed:
 
-Date: 2026-06-19
+- the strict RH root audit reports **not established**;
+- the original Riemann-kernel application is **refuted as stated** because its
+  closed-trace nonnegativity premise is disproved;
+- the coercive \(H^8\)-augmented form closes only the altered-form replacement
+  audit and does not reinstate the original Weyl/KLM or RH claim;
+- the exact augmented-to-zeta transfer and the limiting spectral
+  threshold-buffer route remain **open**.
 
-This repository publishes the static visualizer and machine-readable source
-artifacts for an AI-assisted RH verification system. The underlying companion
-bundle is organized as verification infrastructure: Python theorem generators,
-certificate builders, scan diagnostics, JSON ledgers, dashboard summaries, and
-an orchestrator for reproducible validation runs.
+Accordingly, this repository and the associated releases do **not** claim a
+proof of the Riemann hypothesis. Historical snapshots and aggregate dashboard
+counts are non-controlling; the strict root and application audits control.
 
-The project used AI as a research accelerator for exploring reductions and proof
-routes, but kept the final ledger status grounded in deterministic Python checks,
-machine-readable certificates, explicit pass/fail fields, and reproducible
-reports. The workflow is close to evaluation-pipeline thinking: structured
-artifacts, provenance, orchestration, dashboards, and auditable closure criteria
-over a large artifact graph.
+Reviewer starting points:
 
-## Latest Dashboard Status
+- [Standalone 14-node endpoint-B checker](docs/source/endpoint-b/verify_endpoint_b.py) and [reproduction instructions](docs/source/endpoint-b/README.txt)
+- [`supplement/STATUS.md`](supplement/STATUS.md)
+- [`strict_rh_prize_proof_audit.json`](supplement/source/strict_rh_prize_proof_audit.json)
+- [`strict_riemann_kernel_application_audit.json`](supplement/source/strict_riemann_kernel_application_audit.json)
+- [`augmented_to_zeta_transfer_theorem.json`](supplement/source/augmented_to_zeta_transfer_theorem.json)
+- [`limiting_prime_side_threshold_buffer_theorem.json`](supplement/source/limiting_prime_side_threshold_buffer_theorem.json)
 
-- The original companion dashboard reported 280/291 theorem records closed, with
-  11 open gaps remaining.
-- The regenerated `reports/dashboard_after_open12.json` reports 293/293 theorem
-  records closed after additional closure/consequence ledgers were added.
-- The archive contains 48,000+ generated source, ledger, certificate, report,
-  and snapshot artifacts in the source bundle.
+## Visualizer
 
-This is a source-only companion publication for the manuscript
-`rh_weyl_positive_draft.tex` and the frozen submission bundle
-`submission_bundle_20260618-probe3`.
+- [Visual explainer](https://marvinbfreedman.github.io/schur-trace-certificate-visualizer/source/visual_explainer.html)
+- [Snapshot slideshow](https://marvinbfreedman.github.io/schur-trace-certificate-visualizer/source/visual_snapshot_slideshow.html)
+- [June 28 historical snapshot](https://marvinbfreedman.github.io/schur-trace-certificate-visualizer/source/visual_snapshots/20260628-144016/visual_explainer.html)
+- [Visual data](https://marvinbfreedman.github.io/schur-trace-certificate-visualizer/source/visual_data.json)
 
-## Python Quick Start
+The visualizer presents finite certificate and diagnostic material. It is not a
+terminal proof audit and must be read together with the current fail-closed
+ledgers above.
 
-These commands apply to the full companion source bundle, not only the static
-GitHub Pages subset in `docs/`.
+## Repository layout
 
-Check Python:
+- `docs/`: GitHub Pages output and current controlling JSON mirrors.
+- `supplement/`: curated human-readable status and audit mirrors.
+- Zenodo v2.2.0: complete source-only reproducibility archive, including Python,
+  theorem ledgers, deterministic outputs, manuscript TeX, and Lean sources.
 
-```bash
-python3 --version
-```
-
-Python 3.10 or newer is recommended. Most ledger-reading commands use only the
-Python standard library. Numerical scripts may use `numpy`, `scipy`, `mpmath`,
-and `matplotlib`.
-
-Install common dependencies when running the full source bundle:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python3 -m pip install -r requirements.txt
-```
-
-Read the ledger dashboard:
-
-```bash
-python3 rh_dashboard.py
-python3 rh_dashboard.py --output reports/dashboard.txt --json-out reports/dashboard_summary.json
-```
-
-Expected regenerated status from the current archive:
-
-- 293 theorem records are detected.
-- 293 theorem records are marked closed.
-- 0 theorem-ledger gaps remain open.
-- 16 numerical certificates are detected.
-- No scan file reports negative inertia/eigenvalue evidence.
-
-Preview which scripts would still run without overwriting existing JSON:
-
-```bash
-python3 rh_orchestrator.py --dry-run --skip-existing
-```
-
-Run unpaired entry-point scripts with a timeout:
-
-```bash
-python3 rh_orchestrator.py --skip-existing --workers 8 --timeout 120
-```
-
-Useful filtered runs:
-
-```bash
-python3 rh_orchestrator.py --filter scan --dry-run
-python3 rh_orchestrator.py --filter certificate --dry-run
-python3 rh_orchestrator.py --filter theorem --dry-run
-python3 rh_orchestrator.py --filter certificate --workers 8 --timeout 120
-python3 rh_orchestrator.py --filter scan --workers 8 --timeout 120
-```
-
-The orchestrator sets `PYTHONPATH=source/` and runs each entry-point script in
-its own subprocess.
-
-To open the visual explainer locally from a source bundle, use an HTTP server so
-the JSON data can be fetched:
-
-```bash
-python3 -m http.server 8765
-```
-
-Then visit:
-
-```text
-http://127.0.0.1:8765/visual/visual_explainer.html
-```
-
-## Published Paths
-
-- [`docs/source/visual_explainer.html`](https://marvinbfreedman.github.io/schur-trace-certificate-visualizer/source/visual_explainer.html)
-- `docs/source/visual_snapshot_slideshow.html`
-- `docs/source/visual_data.json`
-- `docs/source/rounded_ball_krawczyk_enclosure.svg`
-- `docs/source/visual_snapshots/`
-
-## Contents
-
-- Static HTML visual explainer and snapshot slideshow.
-- Theorem and certificate JSON ledgers used by the visualizer.
-- Publication audit ledgers and dependency graph artifacts.
-- Text/HTML regeneration and visual-explainer materials.
-- Historical text-only visual snapshot JSON/HTML artifacts.
-
-## Excluded Intentionally
-
-- PDFs and generated binary build products.
-- Images and screenshots outside the static visualizer assets.
-- Zip/tar archives.
-- Python caches and endpoint cache directories.
-
-This repo intentionally serves raw static output from `docs/` with
-`docs/.nojekyll`. It is a companion research/reproducibility archive, not the
-arXiv TeX submission source. The arXiv-facing TeX/PDF pair remains in
-`submission_bundle_20260618-probe3`.
+Release date: 2026-08-14.

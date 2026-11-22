@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "theoremName": "strict augmented-to-zeta transfer audit",
+  "proofClass": "fail-closed exact transfer audit",
+  "transferTheorem": "augmented_to_zeta_transfer_theorem.json",
+  "transferTheoremAccepted": false,
+  "augmentedToZetaTransferStatus": "open",
+  "specificZetaConclusion": null,
+  "remainingAnalyticGap": "Exact J/domain identity, negative-direction reachability, quantitative inertia, and a concrete unconditional zeta conclusion are not all closed."
+}

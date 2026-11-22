@@ -1,0 +1,79 @@
+{
+  "theoremName": "strict RH prize-proof root audit",
+  "proofClass": "fail-closed root analytic audit",
+  "terminalClaim": "The submitted argument establishes the Riemann Hypothesis.",
+  "acceptanceRule": "Every independent strict audit must be accepted; wrapper JSON, finite evidence, and numerical scans do not count.",
+  "nodes": {
+    "activeTraceCoefficients": {
+      "audit": "active_trace_coefficient_consistency_audit.json",
+      "acceptedFlag": "coefficientFieldConsistent",
+      "accepted": true,
+      "status": "proved",
+      "refuted": false,
+      "target": "Resolve the active-window trace-coefficient contradiction with an interval enclosure or a coordinate-free proof.",
+      "nextProofTarget": null,
+      "contradictions": []
+    },
+    "riemannKernelContinuumApplication": {
+      "audit": "strict_riemann_kernel_application_audit.json",
+      "acceptedFlag": "riemannKernelApplicationClosed",
+      "accepted": false,
+      "status": "refuted-premise",
+      "refuted": true,
+      "target": "Do not reuse the refuted endpoint-B positivity premise; require an exact augmented-to-zeta transfer or a quantitative signed-inertia theorem.",
+      "nextProofTarget": "Do not reuse the refuted endpoint-B positivity premise; require an exact augmented-to-zeta transfer or a quantitative signed-inertia theorem.",
+      "contradictions": []
+    },
+    "quotientOriginalLift": {
+      "audit": "strict_quotient_to_original_weyl_lift_audit.json",
+      "acceptedFlag": "strictProofAccepted",
+      "accepted": false,
+      "status": "open",
+      "refuted": false,
+      "target": "Identify the original Weyl quadratic form with the closed quotient form.",
+      "nextProofTarget": "Derive the parity, primitive mixed-derivative, and Volterra/log form identity on C_c^infinity tests with all normalizations fixed.",
+      "contradictions": [
+        {
+          "present": true,
+          "wrapper": "primitive_endpoint_compatibility_theorem.json",
+          "primaryAudit": "primitive_boundary_transport_audit.py",
+          "description": "The wrapper reports D_q=0 as closed, while the primary boundary audit explicitly states that D_q=0 on the primitive trace image has not been proved."
+        }
+      ]
+    },
+    "uniformOmega": {
+      "audit": "strict_uniform_omega_coverage_audit.json",
+      "acceptedFlag": "strictCoverageAccepted",
+      "accepted": false,
+      "status": "open",
+      "refuted": false,
+      "target": "Prove the required positivity mechanism for every 0<|omega|<1/2.",
+      "nextProofTarget": "Verify a uniform super-exponential theta/Volterra envelope on each compact omega interval.",
+      "contradictions": [
+        {
+          "description": "The uniform-omega wrapper is closed while the manuscript records stress-value evidence and no strict compact-parameter proof manifest.",
+          "wrapper": "uniform_omega_weyl_klm_bridge.json"
+        }
+      ]
+    },
+    "klmDeBranges": {
+      "audit": "strict_klm_debranges_bridge_audit.json",
+      "acceptedFlag": "strictBridgeAccepted",
+      "accepted": false,
+      "status": "open",
+      "refuted": false,
+      "target": "Give a non-circular KLM/Weyl-to-de Branges pullback or closed-cone limit.",
+      "nextProofTarget": "Prove the canonical shifted-Xi Hardy branch Gram identity with the exact normalization.",
+      "contradictions": [
+        {
+          "description": "The augmented closed-cone wrapper is closed although the direct intertwiner diagnostic reports no exact finite pullback and no strict non-circular proof manifest exists.",
+          "wrapper": "klm_debranges_augmented_closed_cone_theorem.json",
+          "diagnostic": "klm_debranges_intertwiner_attempt.json"
+        }
+      ]
+    }
+  },
+  "rhConclusionAccepted": false,
+  "rhConclusionStatus": "not established",
+  "nextProofTarget": "Do not reuse the refuted endpoint-B positivity premise; require an exact augmented-to-zeta transfer or a quantitative signed-inertia theorem."
+}

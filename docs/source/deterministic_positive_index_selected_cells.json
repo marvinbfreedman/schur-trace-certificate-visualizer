@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "theoremName": "deterministic positive-index lower bounds at selected variable-buffer cells",
+  "proofClass": "fail-closed hash-bound deterministic inertia audit",
+  "pythonExecutable": "/Users/mbf_mini/.pyenv/versions/3.11.9/bin/python3.11",
+  "pythonInvocationRequired": ".venv/bin/python deterministic_positive_index_selected_cells.py",
+  "arbPrecisionBits": 256,
+  "dependencies": [
+    "optimize_tail_buffer_kappa099.json",
+    "variable_tail_buffer_lean_audit.json"
+  ],
+  "dependencyHashes": {
+    "optimize_tail_buffer_kappa099.json": "df04c509fb6f9c76ed45eba88a77596b5a8b1b40828e5867b0d6df216c1fe0bc",
+    "variable_tail_buffer_lean_audit.json": "ef448e78adf143171b536f85e593c414d90594bce89edc18a1752560e4bfe5fe"
+  },
+  "certificateArtifact": null,
+  "certificateArtifactSha256": null,
+  "continuationGateExact": "0.92812517591985291144",
+  "targetSemantics": "Require n_+ > gate*N_upper + endpoint_upper, so the endpoint-adjusted density is strictly above the gate.",
+  "cells": [
+    {
+      "T": 2045558,
+      "betaExact": "7/10",
+      "D": 26156,
+      "thetaUpper": {
+        "arbBall": "[0.07472658219557070179710000277191690410623 +/- 2.41e-42]",
+        "lowerBall": "[0.07472658219557070179710000277191690410623 +/- 2.41e-42]",
+        "upperBall": "[0.07472658219557070179710000277191690410623 +/- 2.41e-42]"
+      },
+      "matrixDimension": 4091116,
+      "zeroCountUpper": {
+        "arbBall": "[4258226.014443759954033220234100034568016 +/- 4.75e-34]",
+        "lowerBall": "[4258226.014443759954033220234100034568016 +/- 4.75e-34]",
+        "upperBall": "[4258226.014443759954033220234100034568016 +/- 4.75e-34]"
+      },
+      "endpointCountUpper": {
+        "arbBall": "[108599.2593387269970230194729357412507839 +/- 4.33e-35]",
+        "lowerBall": "[108599.2593387269970230194729357412507839 +/- 4.33e-35]",
+        "upperBall": "[108599.2593387269970230194729357412507839 +/- 4.33e-35]"
+      },
+      "requiredPositiveIndexLowerBound": 4060767,
+      "requiredFractionOfMatrixDimension": 0.9925817307551289,
+      "availableDeterministicPositiveIndexLowerBound": 0,
+      "certificateAccepted": false,
+      "cellClosed": false,
+      "denseHermitianTriangleEntries": 8368617108286,
+      "denseRealMidpointStorageAt8Bytes": "60.890 TiB",
+      "denseRealIntervalStorageAt16Bytes": "121.779 TiB",
+      "scalableCertificateNeeded": "A structured deterministic inertia theorem or hash-bound structured LDL factorization; dense entrywise intervals are infeasible."
+    },
+    {
+      "T": 4091116,
+      "betaExact": "7/10",
+      "D": 42491,
+      "thetaUpper": {
+        "arbBall": "[0.04151559887505752527933567920838574343252 +/- 2.00e-42]",
+        "lowerBall": "[0.04151559887505752527933567920838574343252 +/- 2.00e-42]",
+        "upperBall": "[0.04151559887505752527933567920838574343252 +/- 2.00e-42]"
+      },
+      "matrixDimension": 8629041,
+      "zeroCountUpper": {
+        "arbBall": "[8967751.900373469648924498794610149730049 +/- 4.00e-34]",
+        "lowerBall": "[8967751.900373469648924498794610149730049 +/- 4.00e-34]",
+        "upperBall": "[8967751.900373469648924498794610149730049 +/- 4.00e-34]"
+      },
+      "endpointCountUpper": {
+        "arbBall": "[185772.4028184667626969878836233026319192 +/- 7.17e-36]",
+        "lowerBall": "[185772.4028184667626969878836233026319192 +/- 7.17e-36]",
+        "upperBall": "[185772.4028184667626969878836233026319192 +/- 7.17e-36]"
+      },
+      "requiredPositiveIndexLowerBound": 8508969,
+      "requiredFractionOfMatrixDimension": 0.9860851281156272,
+      "availableDeterministicPositiveIndexLowerBound": 0,
+      "certificateAccepted": false,
+      "cellClosed": false,
+      "denseHermitianTriangleEntries": 37230178604361,
+      "denseRealMidpointStorageAt8Bytes": "270.885 TiB",
+      "denseRealIntervalStorageAt16Bytes": "541.770 TiB",
+      "scalableCertificateNeeded": "A structured deterministic inertia theorem or hash-bound structured LDL factorization; dense entrywise intervals are infeasible."
+    }
+  ],
+  "variableBufferConcreteTransferClosed": false,
+  "twoSelectedDeterministicBoundsClosed": false,
+  "continuationAuthorized": false,
+  "classification": "open-scalable-deterministic-inertia-certificate",
+  "status": "open",
+  "remainingGap": "Produce a scalable deterministic positive-index certificate for each actual shifted matrix and close the generalized BlockInputs/TailInputs producers. Raw SLQ, Ritz samples, and floating quadrature are rejected.",
+  "nonClaim": "The safe default lower bound is zero. Storage estimates diagnose the dense certificate format; they are not an impossibility theorem for structured certification."
+}

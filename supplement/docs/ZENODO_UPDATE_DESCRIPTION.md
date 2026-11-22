@@ -1,31 +1,24 @@
-# Suggested Zenodo Description
+# Published Zenodo Releases
 
-Repository-style companion source archive for **Finite-core Volterra reductions
-for a Weyl-positive Riemann phase kernel**.
+## Manuscript v2.1.0
 
-This version reorganizes the companion materials into a math-supplement layout
-with a README, quick-start instructions, reproducibility notes, dashboard
-reports, source scripts, theorem/certificate JSON ledgers, and a lightweight
-visual explainer.  The package includes `rh_dashboard.py` for summarizing the
-proof ledger and `rh_orchestrator.py` for running source entry-point scripts in
-parallel.
+**Finite-core Volterra reductions for a Weyl-positive Riemann phase kernel**
 
-Dashboard summary for this archive:
+[doi:10.5281/zenodo.21936429](https://doi.org/10.5281/zenodo.21936429)
 
-- 400 JSON files loaded by the current dashboard;
-- 293 theorem ledgers;
-- 293 theorem ledgers marked closed;
-- 0 open theorem-ledger gaps;
-- 16 numerical certificates;
-- 66 scan/diagnostic records;
-- no scan reports negative inertia/eigenvalue evidence.
+Concept DOI: [doi:10.5281/zenodo.20746137](https://doi.org/10.5281/zenodo.20746137)
 
-This is a reduction/certificate and reproducibility supplement.  It is intended
-to make the proof architecture and closure ledger auditable; it does not by
-itself replace external mathematical review of the manuscript.
+## Companion source archive v2.2.0
 
-Recommended resource type: **Dataset**.
+**Companion source archive for Finite-core Volterra reductions for a
+Weyl-positive Riemann phase kernel**
 
-Suggested version: **v1.1.0** or **v2.0.0**, depending on whether this is a
-minor reorganization of the existing source archive or a major replacement
-layout.
+[doi:10.5281/zenodo.21936544](https://doi.org/10.5281/zenodo.21936544)
+
+Concept DOI: [doi:10.5281/zenodo.20757731](https://doi.org/10.5281/zenodo.20757731)
+
+The source archive contains 1,369 files and is the canonical reproducibility
+release. It is explicitly fail-closed: the original Riemann-kernel application
+is refuted as stated, the coercive augmented result is limited to its
+reformulated replacement audit, and the exact augmented-to-zeta transfer and
+limiting spectral threshold-buffer route remain open. No proof of RH is claimed.
