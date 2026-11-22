@@ -82,6 +82,9 @@
     }
 
     .span-12 { grid-column: span 12; }
+    .current-status { margin-bottom: 16px; border-top: 3px solid var(--amber); }
+    .current-status p { max-width: 85ch; color: var(--ink); }
+    .current-status nav { display: flex; flex-wrap: wrap; gap: 6px 18px; }
     .span-7 { grid-column: span 7; }
     .span-5 { grid-column: span 5; }
     .span-6 { grid-column: span 6; }
@@ -257,15 +260,34 @@
   </header>
 
   <main class="wrap">
-    <section class="grid">
+    <section class="panel current-status" aria-labelledby="current-status">
+      <h2 id="current-status">The original endpoint-B argument fails</h2>
+      <p>
+        A 14-node certificate gives a strictly negative value for the exact endpoint-B form.
+        The kernel is continuous, so smoothing the witness gives a negative direction with zero
+        trace. On every nonempty trace fiber that admits this direction, the energy is unbounded
+        below and the proposed minimum does not exist.
+      </p>
+      <p>
+        The regularized form has a minimizer. Its transfer to the zeta problem remains open.
+        This work leaves the Riemann hypothesis unproved.
+      </p>
+      <nav aria-label="Evidence for the correction">
+        <a href="endpoint-b/verify_endpoint_b.py" download>Download the 14-node checker</a>
+        <a href="endpoint-b/requirements.txt" download>Python requirements</a>
+        <a href="endpoint-b/README.txt">Run instructions</a>
+        <a href="strict_riemann_kernel_application_audit.json">Endpoint-B application audit</a>
+        <a href="strict_rh_prize_proof_audit.json">RH audit</a>
+      </nav>
+    </section>
+    <section class="grid" id="diagnostics" aria-label="Diagnostic plots and finite tests">
       <div class="panel span-12">
-        <h2>What We Are Doing</h2>
+        <h2>What the finite tests measured</h2>
         <p>
-          We are studying whether a Weyl/Volterra kernel is positive. The endpoint
-          model has a tiny negative direction. The moving trace
-          <code>Lambda_a(f)</code> detects that direction. If we remove functions
-          with nonzero endpoint trace, the remaining form becomes positive in the
-          finite tests.
+          In the finite endpoint models shown below, the moving trace
+          <code>Lambda_a(f)</code> detected a negative direction, and the restricted
+          matrices tested positive. The 14-node witness above lies outside the active
+          trace interval and shows why that conclusion fails on the full closed-trace core.
         </p>
         <div class="diagram">
           <div class="block">
@@ -288,8 +310,8 @@
           <div class="arrow">-></div>
           <div class="block">
             <strong>Schur / Douglas test</strong>
-            Prove <code>|b(n,u)|^2 <= C a(n,n)||u||^2</code> and positivity on
-            <code>ker R</code>.
+            The original argument required <code>|b(n,u)|^2 <= C a(n,n)||u||^2</code>
+            and nonnegativity on <code>ker R</code>. The witness disproves the latter premise.
           </div>
         </div>
       </div>
@@ -297,9 +319,8 @@
       <div class="panel span-12">
         <h2>Proof Audit Image Board</h2>
         <p>
-          These pictures summarize the current publication audit: which proof
-          links are riskiest, what kind of evidence each link uses, and how the
-          reachable theorem graph fans out from the RH/de Branges bridge ledger.
+          These plots show dependencies and evidence types in the publication ledger.
+          The application and RH audits linked above give the conclusions.
         </p>
         <div class="grid">
           <div class="span-6">
@@ -4859,9 +4880,11 @@
         window.addEventListener("resize", () => render(data));
       })
       .catch(err => {
-        document.getElementById("meta").textContent = "Could not load visual_data.json";
-        document.querySelector("main").innerHTML =
-          `<div class="panel"><h2>Data load failed</h2><p>${err.message}</p></div>`;
+        document.getElementById("meta").textContent = "Diagnostic plots unavailable";
+        const detail = document.createElement("p");
+        detail.className = "panel span-12";
+        detail.textContent = `Could not display the diagnostic plots. ${err.message}`;
+        document.getElementById("diagnostics").replaceChildren(detail);
       });
   </script>
 </body>

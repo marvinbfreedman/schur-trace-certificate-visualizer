@@ -23,6 +23,12 @@ on the stated closed-trace core. Two unrelated application obligations also
 remain open: compact/Lipschitz continuum source control and exact
 Galerkin-to-continuum identification.
 
+The [standalone checker](../docs/source/endpoint-b/verify_endpoint_b.py)
+certifies a strictly negative value on 14 exterior nodes. By continuity,
+smoothing the witness gives a negative direction with zero trace. On each
+nonempty trace fiber that admits this direction, the energy is unbounded
+below. [Reproduction instructions](../docs/source/endpoint-b/README.txt)
+
 ## Replacement result
 
 The altered-form replacement augments the form with a coercive \(H^8\)

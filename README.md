@@ -32,6 +32,7 @@ counts are non-controlling; the strict root and application audits control.
 
 Reviewer starting points:
 
+- [Standalone 14-node endpoint-B checker](docs/source/endpoint-b/verify_endpoint_b.py) and [reproduction instructions](docs/source/endpoint-b/README.txt)
 - [`supplement/STATUS.md`](supplement/STATUS.md)
 - [`strict_rh_prize_proof_audit.json`](supplement/source/strict_rh_prize_proof_audit.json)
 - [`strict_riemann_kernel_application_audit.json`](supplement/source/strict_riemann_kernel_application_audit.json)
